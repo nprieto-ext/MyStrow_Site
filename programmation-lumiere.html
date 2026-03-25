@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmation Lumière : Timeline et Séquences DMX | MyStrow</title>
+  <meta name="description" content="Créez vos shows lumière sur une timeline visuelle avec MyStrow. Keyframes, clips éditables, synchronisation avec votre musique. Programmation lumière simplifiée.">
+  <link rel="canonical" href="https://mystrow.fr/programmation-lumiere">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystrow.fr/programmation-lumiere">
+  <meta property="og:title" content="Programmation Lumière : Timeline et Séquences DMX | MyStrow">
+  <meta property="og:description" content="Créez vos shows lumière sur une timeline visuelle avec MyStrow. Keyframes, clips éditables, synchronisation avec votre musique. Programmation lumière simplifiée.">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Programmation Lumière : Timeline et Séquences DMX | MyStrow">
+  <meta name="twitter:description" content="Créez vos shows lumière sur une timeline visuelle avec MyStrow. Keyframes, clips éditables, synchronisation avec votre musique. Programmation lumière simplifiée.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows, macOS",
+    "description": "Logiciel de programmation lumière avec timeline visuelle, keyframes DMX, clips éditables et synchronisation musicale pour spectacles et événements.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "featureList": [
+      "Timeline lumière visuelle",
+      "Keyframes de couleur et intensité",
+      "Clips éditables par glisser-déposer",
+      "Synchronisation avec playlist audio",
+      "Export et import de shows",
+      "Visualisation en temps réel"
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Programmation Lumière", "item": "https://mystrow.fr/programmation-lumiere" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 76px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .hero-section { padding: 100px 0 80px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 24px; }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 80px 0; }
+    .section-bg { background: var(--bg2); padding: 80px 0; }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 48px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 24px; margin-bottom: 10px; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--text); text-decoration: none; letter-spacing: 1px; }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { color: var(--muted); font-size: 12px; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .other-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+    .other-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .other-card:hover { border-color: var(--accent); }
+    .other-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .other-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.75; }
+    .prose p { margin-bottom: 16px; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    /* Timeline mockup */
+    .timeline-mock { background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 32px; overflow: hidden; }
+    .timeline-ruler { display: flex; gap: 0; margin-bottom: 12px; }
+    .ruler-tick { flex: 1; font-size: 10px; color: var(--muted); text-align: center; border-left: 1px solid rgba(226,206,22,0.1); padding: 2px 0; }
+    .timeline-track { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .track-label { font-size: 11px; color: var(--muted); width: 60px; flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; }
+    .track-row { flex: 1; height: 28px; background: rgba(255,255,255,0.02); border-radius: 4px; position: relative; overflow: hidden; display: flex; gap: 3px; padding: 3px; }
+    .clip { height: 100%; border-radius: 3px; flex-shrink: 0; }
+    .clip-yellow { background: rgba(226,206,22,0.35); flex: 2; }
+    .clip-blue { background: rgba(59,130,246,0.4); flex: 1.5; }
+    .clip-red { background: rgba(239,68,68,0.4); flex: 1; }
+    .clip-purple { background: rgba(168,85,247,0.4); flex: 1.8; }
+    .clip-green { background: rgba(34,197,94,0.4); flex: 1.2; }
+    .playhead { position: absolute; left: 35%; top: 0; bottom: 0; width: 2px; background: var(--accent); pointer-events: none; }
+    @media (max-width: 680px) { .feat-grid { grid-template-columns: 1fr; } nav { padding: 0 20px; } .nav-links { display: none; } .two-col { grid-template-columns: 1fr; } .other-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .other-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Mega menu */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-links">
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#fonctionnalites">Fonctionnalités <span class="nav-chevron">▾</span></a>
+        <div class="nav-mega">
+          <a class="mega-item" href="logiciel-lumiere-dmx-ia.html">
+            <div class="mega-icon">⚡</div>
+            <div>
+              <div class="mega-title">Logiciel Lumière DMX</div>
+              <div class="mega-desc">PC + Node DMX. Contrôle total de votre scène en temps réel.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="controleur-akai-apc-mini.html">
+            <div class="mega-icon">🎹</div>
+            <div>
+              <div class="mega-title">AKAI APC mini mk2</div>
+              <div class="mega-desc">Conçu et optimisé pour l'AKAI. Chaque pad, chaque fader a sa correspondance.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="ia-lumiere.html">
+            <div class="mega-icon">✨</div>
+            <div>
+              <div class="mega-title">IA Lumière</div>
+              <div class="mega-desc">L'IA prend le contrôle de toute la scène ou vous aide à programmer vos shows.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="programmation-lumiere.html">
+            <div class="mega-icon">🎬</div>
+            <div>
+              <div class="mega-title">Programmation Lumière</div>
+              <div class="mega-desc">Timeline visuelle, keyframes, clips éditables. Composez vos shows à l'avance.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="player-audio-video.html">
+            <div class="mega-icon">🎵</div>
+            <div>
+              <div class="mega-title">Player audio &amp; vidéo</div>
+              <div class="mega-desc">Playlist et projections gérées depuis la même interface. Tout en un.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="plan-de-scene.html">
+            <div class="mega-icon">🗺️</div>
+            <div>
+              <div class="mega-title">Plan de scène interactif</div>
+              <div class="mega-desc">Visualisez et contrôlez vos groupes de projecteurs d'un clic ou d'un fader.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <a href="telecharger.html" class="btn-primary">Télécharger ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        &nbsp;/&nbsp;
+        <span>Programmation Lumière</span>
+      </nav>
+      <div class="hero-badge">Timeline · Keyframes · Shows</div>
+      <h1>Programmation<br><em>Lumière</em></h1>
+      <p class="hero-sub">Composez vos shows à l'avance sur une timeline visuelle. Keyframes de couleur et d'intensité, clips éditables, synchronisation parfaite avec votre musique.</p>
+      <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-primary" target="_blank" rel="noopener noreferrer">Télécharger gratuitement ↓</a>
+    </div>
+  </section>
+
+  <!-- LA TIMELINE MYSTROW -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Éditeur de shows</div>
+      <h2>La timeline MyStrow</h2>
+      <div class="two-col">
+        <div class="prose">
+          <p>La timeline de MyStrow organise vos séquences DMX sous forme de clips colorés sur des pistes correspondant chacune à un groupe de projecteurs, comme un éditeur vidéo dédié à la lumière.</p>
+          <p>Chaque clip contient ses propres keyframes. Un keyframe définit couleur (RGB/RGBW), intensité et courbe d'interpolation à un instant T. La règle temporelle graduée à la milliseconde permet une synchronisation précise avec votre musique.</p>
+          <p>Le glisser-déposer permet de déplacer, étirer et réorganiser les clips. Les clips peuvent être dupliqués pour réutiliser des séquences identiques à différents moments du show.</p>
+        </div>
+        <div>
+          <div class="timeline-mock">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;">TIMELINE · SHOW EN COURS</div>
+            <div class="timeline-ruler">
+              <div class="ruler-tick">0:00</div>
+              <div class="ruler-tick">0:30</div>
+              <div class="ruler-tick">1:00</div>
+              <div class="ruler-tick">1:30</div>
+              <div class="ruler-tick">2:00</div>
+            </div>
+            <div class="timeline-track">
+              <div class="track-label">GRP A</div>
+              <div class="track-row">
+                <div class="clip clip-yellow"></div>
+                <div class="clip clip-blue"></div>
+                <div class="clip clip-red"></div>
+                <div class="clip clip-yellow"></div>
+                <div class="playhead"></div>
+              </div>
+            </div>
+            <div class="timeline-track">
+              <div class="track-label">GRP B</div>
+              <div class="track-row">
+                <div class="clip clip-purple"></div>
+                <div class="clip clip-green"></div>
+                <div class="clip clip-blue"></div>
+                <div class="clip clip-purple"></div>
+                <div class="playhead"></div>
+              </div>
+            </div>
+            <div class="timeline-track">
+              <div class="track-label">GRP C</div>
+              <div class="track-row">
+                <div class="clip clip-red"></div>
+                <div class="clip clip-yellow"></div>
+                <div class="clip clip-green"></div>
+                <div class="clip clip-blue"></div>
+                <div class="playhead"></div>
+              </div>
+            </div>
+            <div class="timeline-track">
+              <div class="track-label">GRP E</div>
+              <div class="track-row">
+                <div class="clip clip-green"></div>
+                <div class="clip clip-red"></div>
+                <div class="clip clip-purple"></div>
+                <div class="clip clip-green"></div>
+                <div class="playhead"></div>
+              </div>
+            </div>
+            <div class="timeline-track">
+              <div class="track-label">GRP F</div>
+              <div class="track-row">
+                <div class="clip clip-blue"></div>
+                <div class="clip clip-purple"></div>
+                <div class="clip clip-yellow"></div>
+                <div class="clip clip-red"></div>
+                <div class="playhead"></div>
+              </div>
+            </div>
+          </div>
+          <div class="badge-row">
+            <span class="badge">Glisser-déposer</span>
+            <span class="badge">Multi-pistes</span>
+            <span class="badge">Milliseconde</span>
+            <span class="badge">Prévisualisation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEAT GRID -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-tag">Fonctionnalités</div>
+      <h2>Tout pour composer des shows lumière professionnels</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">📎</div>
+          <h3>Clips éditables</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Redimensionnez, déplacez, dupliquez vos clips par glisser-déposer. Chaque clip contient autant de keyframes que nécessaire et s'enchaîne avec des transitions fluides.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🔑</div>
+          <h3>Keyframes précis</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Chaque keyframe capture couleur RGB/RGBW, intensité de 0 à 100% et type d'interpolation. Les transitions sont calculées et jouées en temps réel.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎵</div>
+          <h3>Synchronisation musicale</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">La timeline lumière est attachée à chaque média. Quand un morceau démarre, MyStrow charge automatiquement les séquences correspondantes. Pas de décalage, la lumière suit la musique.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">💾</div>
+          <h3>Import &amp; Export</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Vos shows sont sauvegardés au format .tui (JSON), attachés au média correspondant. Partagez-les entre collègues ou rechargez-les en un clic sur n'importe quel poste MyStrow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUALISATION TEMPS RÉEL -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Retour visuel</div>
+      <h2>Visualisation en temps réel</h2>
+      <div class="two-col">
+        <div class="prose">
+          <p>Chaque modification de keyframe est immédiatement répercutée sur les projecteurs physiques. Pas de prévisualisation séparée : la communication Art-Net est active en permanence, même en mode édition.</p>
+          <p>Le plan de scène interactif (panneau latéral ou plein écran) affiche vos projecteurs en temps réel selon les valeurs DMX envoyées, pour vérifier vos séquences sans être sur scène.</p>
+        </div>
+        <div>
+          <div class="highlight-box">
+            <h3>Modes de programmation disponibles</h3>
+            <ul class="check-list">
+              <li>Mode Manuel : contrôle direct AKAI ou UI</li>
+              <li>Mode IA Lumière : éclairage réactif au son</li>
+              <li>Mode Programme : keyframes pré-enregistrés</li>
+              <li>Mode Play Lumière : timeline synchronisée</li>
+              <li>Enregistrement live des actions Manuel</li>
+              <li>Combinaison de plusieurs modes par morceau</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-tag">Workflow</div>
+      <h2>De la répétition au spectacle</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🎬</div>
+          <h3>Enregistrement live</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Activez l'enregistrement et jouez en mode Manuel avec l'AKAI. Chaque action est capturée en keyframes sur la timeline, donnant une base de programmation issue de vraies décisions artistiques.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✏️</div>
+          <h3>Édition et affinage</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Corrigez les timings, ajustez les couleurs, lissez les transitions. Zoomez jusqu'à la milliseconde pour positionner vos keyframes avec précision, puis relancez la lecture pour valider.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">📋</div>
+          <h3>Organisation de la playlist</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Organisez médias et shows dans l'ordre du spectacle. Chaque entrée a son propre mode lumière et ses paramètres. La lumière s'adapte automatiquement à chaque changement de morceau.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">▶️</div>
+          <h3>Lecture en spectacle</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Lancez la playlist en mode Play Lumière. MyStrow joue les séquences synchronisées avec chaque morceau. Vous gardez la main à tout moment via l'AKAI ou un autre mode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap">
+      <div class="section-tag">Démarrer</div>
+      <h2>Créez votre premier show lumière</h2>
+      <p>Téléchargez MyStrow et commencez à programmer vos séquences lumière sur la timeline visuelle. Aucune formation requise.</p>
+      <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-primary" target="_blank" rel="noopener noreferrer">Télécharger MyStrow ↓</a>
+    </div>
+  </section>
+
+  <!-- AUTRES FONCTIONNALITÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Explorer</div>
+      <h2>Autres fonctionnalités</h2>
+      <div class="other-grid">
+        <a href="logiciel-lumiere-dmx-ia.html" class="other-card">
+          <h3>Logiciel Lumière DMX</h3>
+          <p>Logiciel DMX Art-Net pour contrôler tous vos projecteurs LED, lyres et PAR depuis votre PC en temps réel.</p>
+        </a>
+        <a href="controleur-akai-apc-mini.html" class="other-card">
+          <h3>Contrôleur AKAI APC mini</h3>
+          <p>Pilotez vos lumières avec la grille 8×8 pads LED et les 9 faders. Intégration native et prise en main immédiate.</p>
+        </a>
+        <a href="ia-lumiere.html" class="other-card">
+          <h3>IA Lumière</h3>
+          <p>Éclairage automatique et intelligent. L'IA analyse le son et génère des ambiances lumineuses cohérentes autonomement.</p>
+        </a>
+        <a href="player-audio-video.html" class="other-card">
+          <h3>Player Audio &amp; Vidéo</h3>
+          <p>Gérez votre playlist et vos projections depuis la même interface. Son, image et lumière réunis en un seul logiciel.</p>
+        </a>
+        <a href="plan-de-scene.html" class="other-card">
+          <h3>Plan de Scène Interactif</h3>
+          <p>Visualisez et contrôlez vos projecteurs sur un plan de scène interactif. Groupes, zones et patch DMX en temps réel.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+  <nav class="footer-links">
+    <a href="telecharger.html">Téléchargement</a>
+    <a href="index.html#tarifs">Tarifs</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+</body>
+</html>

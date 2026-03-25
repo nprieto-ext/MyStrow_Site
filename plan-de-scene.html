@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan de Scène Lumière Interactif : Visualisez vos Projecteurs | MyStrow</title>
+  <meta name="description" content="Visualisez et contrôlez vos projecteurs sur un plan de scène interactif avec MyStrow. 6 groupes (A à F). Patch DMX visuel en temps réel.">
+  <link rel="canonical" href="https://mystrow.fr/plan-de-scene">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystrow.fr/plan-de-scene">
+  <meta property="og:title" content="Plan de Scène Lumière Interactif : Visualisez vos Projecteurs | MyStrow">
+  <meta property="og:description" content="Visualisez et contrôlez vos projecteurs sur un plan de scène interactif avec MyStrow. 6 groupes (A à F). Patch DMX visuel en temps réel.">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plan de Scène Lumière Interactif : Visualisez vos Projecteurs | MyStrow">
+  <meta name="twitter:description" content="Visualisez et contrôlez vos projecteurs sur un plan de scène interactif avec MyStrow. 6 groupes (A à F). Patch DMX visuel en temps réel.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows, macOS",
+    "description": "Logiciel de contrôle lumière avec plan de scène interactif. Visualisation et contrôle de 6 groupes de projecteurs DMX (A à F) en temps réel.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "featureList": [
+      "Plan de scène interactif",
+      "6 groupes de projecteurs",
+      "Retour visuel couleur temps réel",
+      "Patch DMX personnalisable",
+      "Contrôle par groupe depuis le plan",
+      "Visualisation indépendante de la régie"
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Plan de Scène", "item": "https://mystrow.fr/plan-de-scene" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 76px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
+    .hero-section { padding: 100px 0 80px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 24px; }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 80px 0; }
+    .section-bg { background: var(--bg2); padding: 80px 0; }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 48px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 24px; margin-bottom: 10px; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--text); text-decoration: none; letter-spacing: 1px; }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { color: var(--muted); font-size: 12px; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .other-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+    .other-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .other-card:hover { border-color: var(--accent); }
+    .other-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .other-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.75; }
+    .prose p { margin-bottom: 16px; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    /* Scene mockup */
+    .scene-mock { background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .scene-stage { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 16px; position: relative; min-height: 200px; }
+    .scene-label { font-size: 10px; color: var(--muted); text-align: center; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; margin-bottom: 10px; }
+    .projector-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+    .projector { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .proj-body { width: 28px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 8px; color: rgba(0,0,0,0.7); font-weight: 700; }
+    .proj-beam { width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; }
+    .proj-beam.down { border-top: 14px solid; }
+    .proj-beam.up { border-bottom: 14px solid; }
+    .proj-label { font-size: 9px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; }
+    .proj-yellow .proj-body { background: rgba(226,206,22,0.7); }
+    .proj-yellow .proj-beam { border-top-color: rgba(226,206,22,0.25); }
+    .proj-blue .proj-body { background: rgba(59,130,246,0.7); }
+    .proj-blue .proj-beam { border-top-color: rgba(59,130,246,0.2); }
+    .proj-red .proj-body { background: rgba(239,68,68,0.7); }
+    .proj-red .proj-beam { border-top-color: rgba(239,68,68,0.2); }
+    .proj-purple .proj-body { background: rgba(168,85,247,0.7); }
+    .proj-purple .proj-beam { border-top-color: rgba(168,85,247,0.2); }
+    .proj-green .proj-body { background: rgba(34,197,94,0.7); }
+    .proj-green .proj-beam { border-top-color: rgba(34,197,94,0.2); }
+    .proj-orange .proj-body { background: rgba(249,115,22,0.7); }
+    .proj-orange .proj-beam { border-top-color: rgba(249,115,22,0.2); }
+    .scene-audience { font-size: 10px; color: var(--muted); text-align: center; margin-top: 10px; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
+    /* Groupes grid */
+    .groups-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+    .group-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .group-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .group-color-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+    .group-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .group-addr { font-size: 11px; color: var(--accent); font-family: 'Barlow Condensed', sans-serif; margin-top: 8px; }
+    .pfe-wrap { background: #060604; border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    #pfe-solo-canvas { display: block; width: 100%; height: auto; border-radius: 6px; }
+    @media (max-width: 680px) { .feat-grid { grid-template-columns: 1fr; } nav { padding: 0 20px; } .nav-links { display: none; } .two-col { grid-template-columns: 1fr; } .other-grid { grid-template-columns: 1fr; } .groups-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) { .other-grid { grid-template-columns: repeat(2, 1fr); } .groups-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Mega menu */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-links">
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#fonctionnalites">Fonctionnalités <span class="nav-chevron">▾</span></a>
+        <div class="nav-mega">
+          <a class="mega-item" href="logiciel-lumiere-dmx-ia.html">
+            <div class="mega-icon">⚡</div>
+            <div>
+              <div class="mega-title">Logiciel Lumière DMX</div>
+              <div class="mega-desc">PC + Node DMX. Contrôle total de votre scène en temps réel.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="controleur-akai-apc-mini.html">
+            <div class="mega-icon">🎹</div>
+            <div>
+              <div class="mega-title">AKAI APC mini mk2</div>
+              <div class="mega-desc">Conçu et optimisé pour l'AKAI. Chaque pad, chaque fader a sa correspondance.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="ia-lumiere.html">
+            <div class="mega-icon">✨</div>
+            <div>
+              <div class="mega-title">IA Lumière</div>
+              <div class="mega-desc">L'IA prend le contrôle de toute la scène ou vous aide à programmer vos shows.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="programmation-lumiere.html">
+            <div class="mega-icon">🎬</div>
+            <div>
+              <div class="mega-title">Programmation Lumière</div>
+              <div class="mega-desc">Timeline visuelle, keyframes, clips éditables. Composez vos shows à l'avance.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="player-audio-video.html">
+            <div class="mega-icon">🎵</div>
+            <div>
+              <div class="mega-title">Player audio &amp; vidéo</div>
+              <div class="mega-desc">Playlist et projections gérées depuis la même interface. Tout en un.</div>
+            </div>
+          </a>
+          <a class="mega-item" href="plan-de-scene.html">
+            <div class="mega-icon">🗺️</div>
+            <div>
+              <div class="mega-title">Plan de scène interactif</div>
+              <div class="mega-desc">Visualisez et contrôlez vos groupes de projecteurs d'un clic ou d'un fader.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <a href="telecharger.html" class="btn-primary">Télécharger ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        &nbsp;/&nbsp;
+        <span>Plan de Scène Interactif</span>
+      </nav>
+      <div class="hero-badge">Visualisation · Groupes · Temps réel</div>
+      <h1>Plan de Scène<br><em>Interactif</em></h1>
+      <p class="hero-sub">Visualisez l'intégralité de votre scène sur un plan interactif. Contrôlez chaque groupe de projecteurs d'un clic ou d'un fader. Le retour visuel couleur reflète l'état réel de la lumière en temps réel.</p>
+      <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-primary" target="_blank" rel="noopener noreferrer">Télécharger gratuitement ↓</a>
+    </div>
+  </section>
+
+  <!-- UN PLAN DE SCÈNE VISUEL -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Visualisation</div>
+      <h2>Un plan de scène visuel et interactif</h2>
+      <div class="two-col">
+        <div class="prose">
+          <p>Le plan de scène est une représentation graphique de votre installation, affichée dans l'interface principale. Chaque projecteur y est représenté par une icône dont la couleur reflète exactement la valeur DMX envoyée en temps réel.</p>
+          <p>Sans être sur scène, vous savez en un coup d'œil quel projecteur est allumé et si les groupes répondent correctement. Organisé selon les 6 groupes (A à F), le plan peut être adapté à votre configuration réelle.</p>
+          <p>Cliquez sur un groupe pour le sélectionner et lui appliquer couleur ou intensité directement. Le plan devient une interface de contrôle alternative à l'AKAI, idéale lors des phases de préparation.</p>
+        </div>
+        <div>
+          <div class="pfe-wrap">
+            <div style="font-size:11px;color:var(--muted);margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;">PLAN DE FEU · TEMPS RÉEL</div>
+            <canvas id="pfe-solo-canvas" width="480" height="320"></canvas>
+          </div>
+          <div class="badge-row" style="margin-top:12px;">
+            <span class="badge">Temps réel · 25 fps</span>
+            <span class="badge">Faisceaux animés</span>
+            <span class="badge">6 groupes A à F</span>
+            <span class="badge">Lyres + PAR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEAT GRID -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-tag">Fonctionnalités</div>
+      <h2>Tout pour visualiser et contrôler votre installation</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🗂️</div>
+          <h3>Groupes de projecteurs</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Le plan de scène organise vos appareils en 6 groupes (A à F) correspondant aux positions classiques de l'éclairage de spectacle. Sélectionnez un groupe entier d'un clic pour lui appliquer couleur et intensité simultanément.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎯</div>
+          <h3>Contrôle par zone</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Cliquez sur une zone pour sélectionner le groupe, puis modifiez couleur et intensité depuis les curseurs adjacents. Plus intuitif que des sliders DMX abstraits.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎨</div>
+          <h3>Retour visuel temps réel</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">La couleur de chaque icône est mise à jour en continu selon les valeurs DMX réelles, que la source soit l'AKAI, l'IA Lumière ou la timeline, à 25 fps.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">⚙️</div>
+          <h3>Patch personnalisable</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Le patch DMX est entièrement personnalisable. MyStrow propose un patch automatique (adresses 1, 11, 21…) que vous pouvez ajuster manuellement pour correspondre à votre installation. Le patch est sauvegardé dans le fichier de show.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LES GROUPES MYSTROW -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Architecture lumière</div>
+      <h2>Les 6 groupes de projecteurs MyStrow</h2>
+      <p style="color:var(--muted);font-size:15px;max-width:680px;margin-bottom:8px;">MyStrow organise l'éclairage en 6 groupes (A à F) correspondant aux positions standards de la technique lumière spectacle, pour une prise en main immédiate.</p>
+      <div class="groups-grid">
+        <div class="group-card">
+          <div class="group-name"><span class="group-color-dot" style="background:#E2CE16;"></span>Groupe A</div>
+          <div class="group-desc">Projecteurs côté salle, éclairant les artistes de face. Lumière principale de visage, essentielle pour la lisibilité et l'expression.</div>
+          <div class="group-addr">Adresses DMX : 1, 11, 21…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-name"><span class="group-color-dot" style="background:#a855f7;"></span>Groupe B</div>
+          <div class="group-desc">Projecteurs en douche dans les cintres. Éclairage vertical modelant la silhouette et créant de la profondeur.</div>
+          <div class="group-addr">Adresses DMX : 31, 41…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-name"><span class="group-color-dot" style="background:#22c55e;"></span>Groupe C</div>
+          <div class="group-desc">Deuxième zone de douches pour des éclairages différents en profondeur de scène. Idéal pour les shows avec plusieurs zones de jeu.</div>
+          <div class="group-addr">Adresses DMX : 51, 61…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-name"><span class="group-color-dot" style="background:#f97316;"></span>Groupe D</div>
+          <div class="group-desc">Troisième zone de douches pour les scènes profondes ou les installations nécessitant une couverture complète en hauteur.</div>
+          <div class="group-addr">Adresses DMX : 71, 81…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-name"><span class="group-color-dot" style="background:#ef4444;"></span>Groupe E</div>
+          <div class="group-desc">Projecteurs latéraux créant du relief, des ombres dramatiques et des effets de sculpture sur les artistes et les décors.</div>
+          <div class="group-addr">Adresses DMX : 91, 101…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-name"><span class="group-color-dot" style="background:#3b82f6;"></span>Groupe F</div>
+          <div class="group-desc">Contre-jours en fond de scène éclairant les artistes par l'arrière. Créent des effets de silhouette et des ambiances dramatiques.</div>
+          <div class="group-addr">Adresses DMX : 111, 121…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USAGE PRATIQUE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-tag">Pratique</div>
+      <h2>Le plan de scène en situation réelle</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🔧</div>
+          <h3>Phase de montage &amp; câblage</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Cliquez sur un groupe, envoyez une couleur vive : si le projecteur s'allume, l'adresse et le câblage sont corrects. Le patch visuel est votre outil de diagnostic.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎭</div>
+          <h3>Mise en lumière &amp; réglages</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Manipulez les groupes depuis le plan pour tester couleurs et combinaisons. La vue globale permet de voir l'équilibre chromatique et d'ajuster les niveaux par groupe sans quitter l'interface.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">📊</div>
+          <h3>Monitoring en spectacle</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">En spectacle, le plan sert de monitoring passif : une vue synthétique permanente de l'état de toute l'installation, sans distraire du tableau de bord principal.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🖥️</div>
+          <h3>Second écran dédié</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Avec deux écrans, ouvrez le plan en plein écran sur le second moniteur pour une vue dédiée de l'installation, pendant que l'interface de contrôle occupe le premier écran.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap">
+      <div class="section-tag">Démarrer</div>
+      <h2>Visualisez votre scène en temps réel</h2>
+      <p>Téléchargez MyStrow et découvrez le plan de scène interactif. Contrôlez vos 6 groupes (A à F) depuis un plan visuel synchronisé avec votre lumière.</p>
+      <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-primary" target="_blank" rel="noopener noreferrer">Télécharger MyStrow ↓</a>
+    </div>
+  </section>
+
+  <!-- AUTRES FONCTIONNALITÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Explorer</div>
+      <h2>Autres fonctionnalités</h2>
+      <div class="other-grid">
+        <a href="logiciel-lumiere-dmx-ia.html" class="other-card">
+          <h3>Logiciel Lumière DMX</h3>
+          <p>Logiciel DMX Art-Net pour contrôler tous vos projecteurs LED, lyres et PAR depuis votre PC en temps réel.</p>
+        </a>
+        <a href="controleur-akai-apc-mini.html" class="other-card">
+          <h3>Contrôleur AKAI APC mini</h3>
+          <p>Pilotez vos lumières avec la grille 8×8 pads LED et les 9 faders. Intégration native et prise en main immédiate.</p>
+        </a>
+        <a href="ia-lumiere.html" class="other-card">
+          <h3>IA Lumière</h3>
+          <p>Éclairage automatique et intelligent. L'IA analyse le son et génère des ambiances lumineuses cohérentes autonomement.</p>
+        </a>
+        <a href="programmation-lumiere.html" class="other-card">
+          <h3>Programmation Lumière</h3>
+          <p>Timeline visuelle, keyframes, clips éditables. Composez vos shows à l'avance et synchronisez-les avec votre musique.</p>
+        </a>
+        <a href="player-audio-video.html" class="other-card">
+          <h3>Player Audio &amp; Vidéo</h3>
+          <p>Gérez votre playlist et vos projections depuis la même interface. Son, image et lumière réunis en un seul logiciel.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+  <nav class="footer-links">
+    <a href="telecharger.html">Téléchargement</a>
+    <a href="index.html#tarifs">Tarifs</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+/* Plan de feu interactif (standalone) */
+const PFE_GROUPS = [
+  { name: 'FACE',  color: '#ff8844', n: 4, lyre: false,
+    pos: (i, n) => [0.20 + i * 0.60 / Math.max(n - 1, 1), 0.80] },
+  { name: 'DCH 1', color: '#44cc88', n: 2, lyre: false,
+    pos: (i)    => [0.24 + i * 0.08, 0.50] },
+  { name: 'DCH 2', color: '#ffcc44', n: 2, lyre: false,
+    pos: (i)    => [0.46 + i * 0.08, 0.50] },
+  { name: 'DCH 3', color: '#ff4488', n: 2, lyre: false,
+    pos: (i)    => [0.68 + i * 0.08, 0.50] },
+  { name: 'LAT',   color: '#aa55ff', n: 2, lyre: false,
+    pos: (i)    => [i === 0 ? 0.07 : 0.93, 0.40] },
+  { name: 'LYRE',  color: '#E2CE16', n: 4, lyre: true,
+    pos: (i, n) => [0.12 + i * 0.76 / Math.max(n - 1, 1), 0.07] },
+];
+
+const PHASES = [0.0, 1.1, 2.4, 0.7, 1.8, 3.1];
+
+function hexRgbPfe(hex) {
+  return { r: parseInt(hex.slice(1,3),16), g: parseInt(hex.slice(3,5),16), b: parseInt(hex.slice(5,7),16) };
+}
+
+const pfCanvas = document.getElementById('pfe-solo-canvas');
+const pfCtx    = pfCanvas.getContext('2d');
+let   animT    = 0;
+
+function drawPfe() {
+  const W = pfCanvas.width, H = pfCanvas.height;
+
+  pfCtx.fillStyle = '#060604';
+  pfCtx.fillRect(0, 0, W, H);
+
+  const sg = pfCtx.createLinearGradient(0, H * 0.6, 0, H);
+  sg.addColorStop(0, 'rgba(0,0,0,0)');
+  sg.addColorStop(1, 'rgba(226,206,22,0.025)');
+  pfCtx.fillStyle = sg;
+  pfCtx.fillRect(0, 0, W, H);
+
+  // Niveaux auto-animés par groupe
+  const gLevels = PFE_GROUPS.map((g, gi) =>
+    0.50 + 0.45 * Math.abs(Math.sin(animT * 0.35 + PHASES[gi]))
+  );
+
+  // 1ère passe : faisceaux lyres
+  PFE_GROUPS.forEach((grp, gi) => {
+    if (!grp.lyre) return;
+    const lvl = gLevels[gi];
+    const rgb = hexRgbPfe(grp.color);
+    for (let j = 0; j < grp.n; j++) {
+      const [nx, ny] = grp.pos(j, grp.n);
+      const x = nx * W, y = ny * H + 8;
+      const floorY = H * 0.60;
+      const panOffset = Math.sin(animT * 0.75 + j * Math.PI * 0.5) * 50 * lvl;
+      const targetX = x + panOffset;
+      const spread  = 22 + 55 * lvl;
+      const bGrad = pfCtx.createLinearGradient(x, y, targetX, floorY);
+      bGrad.addColorStop(0,   `rgba(${rgb.r},${rgb.g},${rgb.b},${0.70 * lvl})`);
+      bGrad.addColorStop(0.5, `rgba(${rgb.r},${rgb.g},${rgb.b},${0.25 * lvl})`);
+      bGrad.addColorStop(1,   `rgba(${rgb.r},${rgb.g},${rgb.b},0)`);
+      pfCtx.beginPath();
+      pfCtx.moveTo(x - 2, y);
+      pfCtx.lineTo(x + 2, y);
+      pfCtx.lineTo(targetX + spread, floorY);
+      pfCtx.lineTo(targetX - spread, floorY);
+      pfCtx.closePath();
+      pfCtx.fillStyle = bGrad;
+      pfCtx.fill();
+    }
+  });
+
+  // 2ème passe : fixtures
+  PFE_GROUPS.forEach((grp, gi) => {
+    const lvl = gLevels[gi];
+    const rgb = hexRgbPfe(grp.color);
+    for (let j = 0; j < grp.n; j++) {
+      const [nx, ny] = grp.pos(j, grp.n);
+      const x = nx * W, y = ny * H;
+      const r = 7;
+      // Halo
+      const glowR = r + 22 * lvl;
+      const grad  = pfCtx.createRadialGradient(x, y, 0, x, y, glowR);
+      grad.addColorStop(0,    `rgba(${rgb.r},${rgb.g},${rgb.b},${0.75 * lvl})`);
+      grad.addColorStop(0.35, `rgba(${rgb.r},${rgb.g},${rgb.b},${0.32 * lvl})`);
+      grad.addColorStop(1,    `rgba(${rgb.r},${rgb.g},${rgb.b},0)`);
+      pfCtx.beginPath();
+      pfCtx.arc(x, y, glowR, 0, Math.PI * 2);
+      pfCtx.fillStyle = grad;
+      pfCtx.fill();
+      // Cercle
+      pfCtx.beginPath();
+      pfCtx.arc(x, y, r, 0, Math.PI * 2);
+      pfCtx.fillStyle = `rgba(${rgb.r},${rgb.g},${rgb.b},${0.6 * lvl})`;
+      pfCtx.fill();
+      pfCtx.beginPath();
+      pfCtx.arc(x, y, r, 0, Math.PI * 2);
+      pfCtx.strokeStyle = grp.color;
+      pfCtx.lineWidth   = 1.5;
+      pfCtx.globalAlpha = 0.45 + 0.55 * lvl;
+      pfCtx.stroke();
+      pfCtx.globalAlpha = 1;
+    }
+  });
+
+  // Labels
+  pfCtx.font = '700 8px "Barlow Condensed", Inter, sans-serif';
+  pfCtx.textAlign = 'center';
+  PFE_GROUPS.forEach((grp, gi) => {
+    const lvl = gLevels[gi];
+    pfCtx.fillStyle = lvl > 0.08 ? grp.color : 'rgba(120,115,100,0.45)';
+    let cx = 0, cy = 0;
+    for (let j = 0; j < grp.n; j++) { const [nx, ny] = grp.pos(j, grp.n); cx += nx; cy += ny; }
+    cx = (cx / grp.n) * W;
+    cy = (cy / grp.n) * H;
+    pfCtx.fillText(grp.name, cx, cy < H * 0.45 ? cy - 13 : cy + 19);
+  });
+}
+
+function tickPfe() {
+  animT += 0.018;
+  drawPfe();
+  requestAnimationFrame(tickPfe);
+}
+requestAnimationFrame(tickPfe);
+</script>
+
+</body>
+</html>

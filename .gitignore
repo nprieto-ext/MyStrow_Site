@@ -1,0 +1,14 @@
+# Fichiers de conversion (scripts locaux, pas du site)
+*.bat
+
+# Vidéos brutes non référencées dans les pages
+*.mp4
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.log
