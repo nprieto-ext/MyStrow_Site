@@ -1,0 +1,35 @@
+Options -Indexes
+
+# -------------------------------------------------------
+# HTTPS + www → non-www
+# -------------------------------------------------------
+RewriteEngine On
+
+# HTTP → HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# www → non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# -------------------------------------------------------
+# Clean URLs : retire l'extension .html
+# -------------------------------------------------------
+
+# Si le fichier existe tel quel, on le sert directement
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Si le répertoire existe, on le sert directement
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Sinon : essaie d'ajouter .html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# -------------------------------------------------------
+# Page 404 custom
+# -------------------------------------------------------
+ErrorDocument 404 /404.html
