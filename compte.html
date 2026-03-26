@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Compte | MyStrow</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://mystrow.fr/compte">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.12);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e; --red: #ef4444;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* NAV */
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 16px; }
+    .user-email { font-size: 12px; color: var(--muted); display: none; }
+    .btn-logout { background: transparent; border: 1px solid rgba(255,255,255,0.12); color: var(--muted); padding: 8px 18px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: border-color 0.2s, color 0.2s; display: none; }
+    .btn-logout:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* LAYOUT */
+    main { flex: 1; padding: 60px 28px 80px; max-width: 860px; margin: 0 auto; width: 100%; }
+
+    /* LOGIN */
+    .login-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; }
+    .login-card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 48px 44px; width: 100%; max-width: 440px; }
+    .login-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 1px; margin-bottom: 6px; }
+    .login-title em { font-style: normal; color: var(--accent); }
+    .login-sub { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+    .form-group label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; }
+    .form-group input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 16px; color: var(--text); font-family: 'Inter', sans-serif; font-size: 14px; outline: none; transition: border-color 0.18s; width: 100%; }
+    .form-group input:focus { border-color: var(--accent); }
+    .form-group input::placeholder { color: var(--muted); }
+    .btn-full { width: 100%; background: var(--accent); color: #0c0b00; border: none; padding: 13px 24px; border-radius: 999px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: opacity 0.2s; margin-top: 4px; }
+    .btn-full:hover { opacity: 0.88; }
+    .btn-full:disabled { opacity: 0.4; cursor: not-allowed; }
+    .login-error { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 8px; padding: 11px 14px; font-size: 13px; color: #f87171; margin-top: 12px; display: none; }
+    .forgot-link { text-align: center; margin-top: 18px; font-size: 12px; color: var(--muted); }
+    .forgot-link a { color: var(--accent); text-decoration: none; cursor: pointer; }
+    .forgot-link a:hover { text-decoration: underline; }
+    .reset-ok { text-align: center; font-size: 13px; color: var(--green); margin-top: 10px; display: none; }
+
+    /* ACCOUNT */
+    .account-wrap { display: none; }
+    .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(38px, 5vw, 60px); line-height: 1; letter-spacing: 1px; margin-bottom: 8px; }
+    .page-title em { font-style: normal; color: var(--accent); }
+    .page-sub { font-size: 14px; color: var(--muted); margin-bottom: 48px; }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+
+    /* CARDS */
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; margin-bottom: 20px; }
+    .card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; margin-bottom: 20px; letter-spacing: 0.3px; }
+    .card-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .card-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .card-row:first-of-type { padding-top: 0; }
+    .row-label { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .row-value { font-size: 14px; font-weight: 600; text-align: right; }
+
+    /* BADGE */
+    .badge { display: inline-block; padding: 3px 12px; border-radius: 999px; font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+    .badge-active { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); color: var(--green); }
+    .badge-expired { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); color: #f87171; }
+    .badge-trial { background: rgba(226,206,22,0.1); border: 1px solid var(--accent-border); color: var(--accent); }
+    .badge-monthly { background: rgba(99,91,255,0.1); border: 1px solid rgba(99,91,255,0.3); color: #a5b4fc; }
+    .badge-annual { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); color: var(--green); }
+    .badge-lifetime { background: rgba(226,206,22,0.1); border: 1px solid var(--accent-border); color: var(--accent); }
+
+    /* MACHINES */
+    .machine-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .machine-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .machine-item:first-child { padding-top: 0; }
+    .machine-info { display: flex; flex-direction: column; gap: 3px; }
+    .machine-name { font-size: 14px; font-weight: 600; }
+    .machine-date { font-size: 12px; color: var(--muted); }
+    .machine-icon { font-size: 22px; margin-right: 12px; flex-shrink: 0; }
+    .machine-left { display: flex; align-items: center; }
+    .btn-revoke { background: transparent; border: 1px solid rgba(239,68,68,0.3); color: #f87171; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: background 0.2s, border-color 0.2s; white-space: nowrap; }
+    .btn-revoke:hover { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.6); }
+    .btn-revoke:disabled { opacity: 0.4; cursor: not-allowed; }
+    .no-machines { font-size: 13px; color: var(--muted); padding: 8px 0; }
+
+    /* BILLING BUTTONS */
+    .billing-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+    .btn-portal { background: var(--accent); color: #0c0b00; border: none; padding: 13px 28px; border-radius: 999px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: opacity 0.2s; text-align: center; }
+    .btn-portal:hover { opacity: 0.88; }
+    .btn-portal:disabled { opacity: 0.4; cursor: not-allowed; }
+    .billing-note { font-size: 12px; color: var(--muted); line-height: 1.6; margin-top: 4px; }
+    .upgrade-hint { background: var(--accent-glow); border: 1px solid var(--accent-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px; font-size: 13px; line-height: 1.6; display: none; }
+    .upgrade-hint strong { color: var(--accent); }
+
+    /* LOADING */
+    .loading-wrap { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
+    .spinner { width: 32px; height: 32px; border: 3px solid rgba(226,206,22,0.15); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 28px 40px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--text); text-decoration: none; letter-spacing: 1px; }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); font-size: 12px; text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { color: var(--muted); font-size: 11px; }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .login-card { padding: 36px 24px; }
+      main { padding: 40px 20px 60px; }
+      .card { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-right">
+      <span class="user-email" id="nav-email"></span>
+      <button class="btn-logout" id="btn-logout" onclick="logout()">Déconnexion</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- LOADING -->
+  <div class="loading-wrap" id="view-loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="login-wrap" id="view-login" style="display:none">
+    <div class="login-card">
+      <div class="login-title">Mon <em>Compte</em></div>
+      <p class="login-sub">Connectez-vous pour gérer votre licence et votre abonnement.</p>
+      <div class="form-group">
+        <label for="l-email">Email</label>
+        <input type="email" id="l-email" placeholder="vous@exemple.fr" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="l-pass">Mot de passe</label>
+        <input type="password" id="l-pass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')login()">
+      </div>
+      <div class="login-error" id="login-error"></div>
+      <button class="btn-full" id="btn-login" onclick="login()">Se connecter →</button>
+      <div class="forgot-link">
+        <a onclick="sendReset()">Mot de passe oublié ?</a>
+      </div>
+      <div class="reset-ok" id="reset-ok">Email de réinitialisation envoyé ✓</div>
+    </div>
+  </div>
+
+  <!-- ACCOUNT -->
+  <div class="account-wrap" id="view-account">
+    <div class="section-tag">Espace client</div>
+    <h1 class="page-title">Mon <em>Compte</em></h1>
+    <p class="page-sub" id="account-email-sub"></p>
+
+    <!-- LICENCE -->
+    <div class="card">
+      <div class="card-title">Licence</div>
+      <div class="card-row">
+        <span class="row-label">Statut</span>
+        <span class="row-value" id="lic-status">—</span>
+      </div>
+      <div class="card-row">
+        <span class="row-label">Plan</span>
+        <span class="row-value" id="lic-plan">—</span>
+      </div>
+      <div class="card-row">
+        <span class="row-label">Expiration</span>
+        <span class="row-value" id="lic-expiry">—</span>
+      </div>
+    </div>
+
+    <!-- MACHINES -->
+    <div class="card">
+      <div class="card-title">Ordinateurs actifs <span style="font-size:13px;font-weight:400;color:var(--muted)" id="machine-count"></span></div>
+      <div id="machines-list"><span class="no-machines">Chargement…</span></div>
+    </div>
+
+    <!-- FACTURATION -->
+    <div class="card" id="card-billing" style="display:none">
+      <div class="card-title">Abonnement &amp; Facturation</div>
+      <div class="upgrade-hint" id="upgrade-hint">
+        💡 Vous êtes sur le plan <strong>mensuel</strong>. Passez à l'<strong>annuel</strong> pour économiser jusqu'à 30 % — gérable directement depuis le portail Stripe.
+      </div>
+      <div class="billing-actions">
+        <button class="btn-portal" id="btn-portal" onclick="openPortal()">
+          Gérer mon abonnement →
+        </button>
+        <p class="billing-note">Modifier votre plan, consulter vos factures, résilier votre abonnement — tout se passe dans le portail Stripe sécurisé.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+  <nav class="footer-links">
+    <a href="telecharger.html">Téléchargement</a>
+    <a href="index.html#tarifs">Tarifs</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+const FB_API_KEY    = "AIzaSyAQjGJXGCSWzOE-wvKXh6sbZy6JDhL8tqA";
+const FB_PROJECT    = "mystrow-907be";
+const CF_BASE       = "https://us-central1-mystrow-907be.cloudfunctions.net";
+const FS_BASE       = `https://firestore.googleapis.com/v1/projects/${FB_PROJECT}/databases/(default)/documents`;
+
+let _idToken  = null;
+let _uid      = null;
+let _userData = null;
+
+// ── Firestore value parser ──────────────────────────────────────────────────
+function fsVal(field) {
+  if (!field) return null;
+  if ('stringValue'    in field) return field.stringValue;
+  if ('integerValue'   in field) return parseInt(field.integerValue);
+  if ('doubleValue'    in field) return field.doubleValue;
+  if ('booleanValue'   in field) return field.booleanValue;
+  if ('timestampValue' in field) return new Date(field.timestampValue).getTime() / 1000;
+  if ('nullValue'      in field) return null;
+  if ('arrayValue'     in field) return (field.arrayValue.values || []).map(fsVal);
+  if ('mapValue'       in field) {
+    const r = {};
+    for (const [k, v] of Object.entries(field.mapValue.fields || {})) r[k] = fsVal(v);
+    return r;
+  }
+  return null;
+}
+function fsDoc(doc) {
+  const r = {};
+  for (const [k, v] of Object.entries(doc.fields || {})) r[k] = fsVal(v);
+  return r;
+}
+
+// ── Session locale ──────────────────────────────────────────────────────────
+function saveSession(token, uid, email, expiresIn) {
+  const exp = Date.now() + parseInt(expiresIn) * 1000;
+  localStorage.setItem('ms_token', token);
+  localStorage.setItem('ms_uid',   uid);
+  localStorage.setItem('ms_email', email);
+  localStorage.setItem('ms_exp',   exp);
+}
+function loadSession() {
+  const exp = parseInt(localStorage.getItem('ms_exp') || '0');
+  if (Date.now() > exp) { clearSession(); return false; }
+  _idToken = localStorage.getItem('ms_token');
+  _uid     = localStorage.getItem('ms_uid');
+  return !!(_idToken && _uid);
+}
+function clearSession() {
+  ['ms_token','ms_uid','ms_email','ms_exp'].forEach(k => localStorage.removeItem(k));
+  _idToken = null; _uid = null;
+}
+
+// ── Vues ────────────────────────────────────────────────────────────────────
+function showView(name) {
+  ['loading','login','account'].forEach(v =>
+    document.getElementById(`view-${v}`).style.display = v === name ? '' : 'none'
+  );
+  if (name === 'account') document.getElementById('view-account').style.display = 'block';
+}
+
+// ── Init ────────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', async () => {
+  showView('loading');
+  if (loadSession()) {
+    showNav();
+    await loadAccount();
+    showView('account');
+  } else {
+    showView('login');
+  }
+});
+
+function showNav() {
+  const email = localStorage.getItem('ms_email') || '';
+  document.getElementById('nav-email').textContent = email;
+  document.getElementById('nav-email').style.display = 'block';
+  document.getElementById('btn-logout').style.display = 'block';
+}
+
+// ── Login ───────────────────────────────────────────────────────────────────
+async function login() {
+  const email = document.getElementById('l-email').value.trim();
+  const pass  = document.getElementById('l-pass').value;
+  const errEl = document.getElementById('login-error');
+  const btn   = document.getElementById('btn-login');
+
+  errEl.style.display = 'none';
+  if (!email || !pass) {
+    errEl.textContent = 'Renseignez votre email et mot de passe.';
+    errEl.style.display = 'block'; return;
+  }
+
+  btn.disabled = true; btn.textContent = 'Connexion…';
+
+  try {
+    const res = await fetch(
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FB_API_KEY}`,
+      { method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ email, password: pass, returnSecureToken: true }) }
+    );
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error?.message || 'Erreur');
+
+    saveSession(data.idToken, data.localId, data.email, data.expiresIn);
+    _idToken = data.idToken; _uid = data.localId;
+    showNav();
+    showView('loading');
+    await loadAccount();
+    showView('account');
+  } catch (err) {
+    const msg = err.message === 'INVALID_PASSWORD' || err.message === 'EMAIL_NOT_FOUND'
+      ? 'Email ou mot de passe incorrect.'
+      : err.message === 'TOO_MANY_ATTEMPTS_TRY_LATER'
+      ? 'Trop de tentatives. Réessayez plus tard.'
+      : 'Connexion impossible. Vérifiez vos identifiants.';
+    errEl.textContent = msg;
+    errEl.style.display = 'block';
+    btn.disabled = false; btn.textContent = 'Se connecter →';
+  }
+}
+
+// ── Mot de passe oublié ──────────────────────────────────────────────────────
+async function sendReset() {
+  const email = document.getElementById('l-email').value.trim();
+  if (!email) {
+    const e = document.getElementById('login-error');
+    e.textContent = 'Entrez votre email ci-dessus pour recevoir le lien.';
+    e.style.display = 'block'; return;
+  }
+  await fetch(
+    `https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=${FB_API_KEY}`,
+    { method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ requestType: 'PASSWORD_RESET', email }) }
+  );
+  document.getElementById('reset-ok').style.display = 'block';
+}
+
+// ── Logout ───────────────────────────────────────────────────────────────────
+function logout() {
+  clearSession();
+  document.getElementById('nav-email').style.display = 'none';
+  document.getElementById('btn-logout').style.display = 'none';
+  document.getElementById('l-email').value = '';
+  document.getElementById('l-pass').value = '';
+  showView('login');
+}
+
+// ── Chargement données compte ────────────────────────────────────────────────
+async function loadAccount() {
+  try {
+    const res = await fetch(`${FS_BASE}/licenses/${_uid}`, {
+      headers: { 'Authorization': `Bearer ${_idToken}` }
+    });
+    if (!res.ok) throw new Error('Lecture impossible');
+    const raw = await res.json();
+    _userData = fsDoc(raw);
+    renderAccount(_userData);
+  } catch (e) {
+    console.error('[Compte]', e);
+  }
+}
+
+// ── Rendu ────────────────────────────────────────────────────────────────────
+function renderAccount(d) {
+  const email = localStorage.getItem('ms_email') || '';
+  document.getElementById('account-email-sub').textContent = email;
+
+  // Statut
+  const now = Date.now() / 1000;
+  const expiry = d.expiry_utc || 0;
+  const plan   = (d.plan || 'trial').toLowerCase();
+  const active = plan === 'lifetime' || expiry > now;
+
+  const statusEl = document.getElementById('lic-status');
+  if (active) {
+    statusEl.innerHTML = '<span class="badge badge-active">Active</span>';
+  } else {
+    statusEl.innerHTML = '<span class="badge badge-expired">Expirée</span>';
+  }
+
+  // Plan
+  const planEl = document.getElementById('lic-plan');
+  const planLabels = { monthly: 'Mensuel', annual: 'Annuel', lifetime: 'À vie', trial: 'Essai gratuit' };
+  const planClass  = { monthly: 'badge-monthly', annual: 'badge-annual', lifetime: 'badge-lifetime', trial: 'badge-trial' };
+  planEl.innerHTML = `<span class="badge ${planClass[plan] || 'badge-trial'}">${planLabels[plan] || plan}</span>`;
+
+  // Expiry
+  const expiryEl = document.getElementById('lic-expiry');
+  if (plan === 'lifetime') {
+    expiryEl.textContent = 'Illimitée';
+  } else if (expiry) {
+    const d2 = new Date(expiry * 1000);
+    const diff = Math.ceil((expiry - now) / 86400);
+    const dateStr = d2.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    expiryEl.textContent = diff > 0 ? `${dateStr} (dans ${diff} j)` : dateStr;
+    if (!active) expiryEl.style.color = '#f87171';
+  } else {
+    expiryEl.textContent = '—';
+  }
+
+  // Machines
+  const machines = d.machines || [];
+  document.getElementById('machine-count').textContent = `(${machines.length}/2)`;
+  const listEl = document.getElementById('machines-list');
+
+  if (machines.length === 0) {
+    listEl.innerHTML = '<span class="no-machines">Aucun ordinateur activé.</span>';
+  } else {
+    listEl.innerHTML = machines.map(m => {
+      const label = m.label || m.id || 'Ordinateur';
+      const date  = m.activated_at
+        ? new Date(m.activated_at * 1000).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })
+        : '';
+      return `
+        <div class="machine-item" id="machine-${CSS.escape(m.id)}">
+          <div class="machine-left">
+            <span class="machine-icon">💻</span>
+            <div class="machine-info">
+              <span class="machine-name">${label}</span>
+              ${date ? `<span class="machine-date">Activé le ${date}</span>` : ''}
+            </div>
+          </div>
+          <button class="btn-revoke" onclick="revokeMachine('${m.id}', this)">Révoquer</button>
+        </div>`;
+    }).join('');
+  }
+
+  // Facturation Stripe
+  const hasStripe = !!d.stripe_customer_id;
+  const billingCard = document.getElementById('card-billing');
+  if (hasStripe) {
+    billingCard.style.display = 'block';
+    if (plan === 'monthly') {
+      document.getElementById('upgrade-hint').style.display = 'block';
+    }
+  }
+}
+
+// ── Révoquer machine ─────────────────────────────────────────────────────────
+async function revokeMachine(machineId, btn) {
+  if (!confirm('Révoquer cet ordinateur ? MyStrow ne pourra plus s'y connecter.')) return;
+  btn.disabled = true; btn.textContent = 'Révocation…';
+
+  try {
+    const res = await fetch(`${CF_BASE}/revoke_machine_web`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${_idToken}` },
+      body: JSON.stringify({ machine_id: machineId })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Erreur');
+
+    // Retirer visuellement
+    const el = document.getElementById(`machine-${CSS.escape(machineId)}`);
+    if (el) el.remove();
+
+    // Mettre à jour le compteur
+    const remaining = document.querySelectorAll('.machine-item').length;
+    document.getElementById('machine-count').textContent = `(${remaining}/2)`;
+    if (remaining === 0) {
+      document.getElementById('machines-list').innerHTML = '<span class="no-machines">Aucun ordinateur activé.</span>';
+    }
+  } catch (e) {
+    btn.disabled = false; btn.textContent = 'Révoquer';
+    alert('Impossible de révoquer : ' + e.message);
+  }
+}
+
+// ── Portail Stripe ───────────────────────────────────────────────────────────
+async function openPortal() {
+  const btn = document.getElementById('btn-portal');
+  btn.disabled = true; btn.textContent = 'Redirection…';
+
+  try {
+    const res = await fetch(`${CF_BASE}/create_portal_session`, {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${_idToken}` }
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Erreur');
+    window.location.href = data.url;
+  } catch (e) {
+    btn.disabled = false; btn.textContent = 'Gérer mon abonnement →';
+    alert('Impossible d\'ouvrir le portail : ' + e.message);
+  }
+}
+</script>
+</body>
+</html>
