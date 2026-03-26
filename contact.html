@@ -383,8 +383,6 @@ async function submitForm() {
   btn.disabled = true;
   btn.textContent = 'Envoi en cours…';
 
-  const data = new FormData(document.querySelector('#form-fields').closest('.contact-form'));
-  // reconstruct from inputs since no real <form> tag
   const body = new URLSearchParams({
     name: document.getElementById('f-name').value,
     email: document.getElementById('f-email').value,
