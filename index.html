@@ -976,7 +976,6 @@
 
       <!-- Contrôleur — switchable -->
       <div class="synop-node" id="synop-ctrl-node">
-        <div class="synop-price" id="synop-ctrl-price">~80 €</div>
         <div class="synop-ctrl-states">
           <!-- State 0 : AKAI APC mini mk2 -->
           <div class="synop-ctrl-state active">
@@ -1052,7 +1051,6 @@
 
       <!-- PC / MyStrow -->
       <div class="synop-node synop-accent">
-        <div class="synop-price">16,58 €<span>/mois</span></div>
         <div class="synop-icon">
           <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
             <!-- Écran -->
@@ -1086,7 +1084,6 @@
 
       <!-- Boîtier Node -->
       <div class="synop-node">
-        <div class="synop-price">~80 €</div>
         <div class="synop-icon">
           <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
             <rect x="5" y="11" width="36" height="22" rx="5" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
@@ -1193,7 +1190,7 @@
           <li>Patch entièrement personnalisable</li>
           <li>Visualisation en temps réel</li>
           <li>Librairie de +700 fixtures intégrée</li>
-          <li>Modes DMX 3CH, 4CH, 5CH, 6CH</li>
+          <li>Compatible tout projecteur (PAR LED, Lyres, Barre LED, Stroboscope, Machine à fumée…)</li>
           <li>Adressage automatique par groupe</li>
         </ul>
       </div>
@@ -1212,12 +1209,11 @@
     <div class="feature-split rev">
       <div class="fs-txt">
         <p class="section-tag">Programmation simplifiée</p>
-        <h2 id="timeline-title">Programmez.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">Timeline, keyframes, clips. À la milliseconde.</span></h2>
-        <p>Composez vos séquences lumière sur une timeline visuelle. Créez des clips colorés, définissez des keyframes d'intensité et synchronisez chaque effet avec précision sur votre musique.</p>
+        <h2 id="timeline-title">Programmez.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">Timeline, clips. À la milliseconde.</span></h2>
+        <p>Composez vos séquences lumière sur une timeline visuelle. Créez des clips colorés et synchronisez chaque effet avec précision sur votre musique.</p>
         <ul class="check-list">
           <li>Visualisation en temps réel</li>
           <li>Clips éditables par glisser-déposer</li>
-          <li>Keyframes de couleur et d'intensité</li>
           <li>Synchronisation parfaite avec votre playlist</li>
           <li>Importation et exportation de votre montage</li>
         </ul>
@@ -1927,17 +1923,16 @@ requestAnimationFrame(tick);
 /* SYNOPTIQUE — SWITCHER CONTRÔLEUR */
 (function() {
   const CTRL_STATES = [
-    { name: 'AKAI APC mini mk2',   sub: 'Contrôleur MIDI',   price: '~80 €',  proto: 'USB' },
-    { name: 'StreamDeck / Elgato', sub: 'Contrôleur Stream', price: '~199 €', proto: 'USB' },
-    { name: 'Zappette',            sub: 'Télécommande IR',   price: '~15 €',  proto: 'USB' },
-    { name: 'Clavier & Souris',    sub: 'Clavier · Souris',  price: '',        proto: 'USB' },
+    { name: 'AKAI APC mini mk2',   sub: 'Contrôleur MIDI',   proto: 'USB' },
+    { name: 'StreamDeck / Elgato', sub: 'Contrôleur Stream', proto: 'USB' },
+    { name: 'Zappette',            sub: 'Télécommande IR',   proto: 'USB' },
+    { name: 'Clavier & Souris',    sub: 'Clavier · Souris',  proto: 'USB' },
   ];
   let cur = 0;
   const stateEls = document.querySelectorAll('.synop-ctrl-state');
   const dotEls   = document.querySelectorAll('.synop-nav-dot');
   const nameEl   = document.getElementById('synop-ctrl-name');
   const subEl    = document.getElementById('synop-ctrl-sub');
-  const priceEl  = document.getElementById('synop-ctrl-price');
   const protoEl  = document.getElementById('synop-ctrl-proto');
 
   function switchTo(idx) {
@@ -1949,17 +1944,12 @@ requestAnimationFrame(tick);
     const s = CTRL_STATES[cur];
     nameEl.textContent  = s.name;
     subEl.textContent   = s.sub;
-    priceEl.textContent = s.price;
     protoEl.textContent = s.proto;
   }
 
   dotEls.forEach(d => d.addEventListener('click', () => {
-    clearInterval(timer);
     switchTo(parseInt(d.dataset.idx));
-    timer = setInterval(() => switchTo((cur + 1) % CTRL_STATES.length), 3200);
   }));
-
-  let timer = setInterval(() => switchTo((cur + 1) % CTRL_STATES.length), 3200);
 })();
 
 /* FAQ ACCORDION */
