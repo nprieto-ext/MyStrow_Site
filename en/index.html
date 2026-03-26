@@ -548,7 +548,6 @@
 
       <!-- Controller — switchable -->
       <div class="synop-node" id="synop-ctrl-node">
-        <div class="synop-price" id="synop-ctrl-price">~€80</div>
         <div class="synop-ctrl-states">
           <div class="synop-ctrl-state active">
             <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
@@ -619,7 +618,6 @@
 
       <!-- PC / MyStrow -->
       <div class="synop-node synop-accent">
-        <div class="synop-price">€16.58<span>/mo</span></div>
         <div class="synop-icon">
           <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
             <rect x="7" y="6" width="32" height="22" rx="2.5" stroke="rgba(226,206,22,0.7)" stroke-width="1.5" fill="rgba(226,206,22,0.06)"/>
@@ -647,7 +645,6 @@
 
       <!-- DMX Node -->
       <div class="synop-node">
-        <div class="synop-price">~€80</div>
         <div class="synop-icon">
           <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
             <rect x="5" y="11" width="36" height="22" rx="5" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
@@ -752,7 +749,7 @@
           <li>Fully customizable patch</li>
           <li>Real-time visualization</li>
           <li>700+ fixture library built in</li>
-          <li>DMX modes: 3CH, 4CH, 5CH, 6CH</li>
+          <li>Compatible with all fixtures (PAR LED, Moving Heads, LED Bars, Strobes, Fog Machines…)</li>
           <li>Automatic addressing per group</li>
         </ul>
       </div>
@@ -771,12 +768,11 @@
     <div class="feature-split rev">
       <div class="fs-txt">
         <p class="section-tag">Simplified programming</p>
-        <h2 id="timeline-title">Program.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">Timeline, keyframes, clips. Down to the millisecond.</span></h2>
-        <p>Compose your light sequences on a visual timeline. Create colored clips, set intensity keyframes and synchronize every effect with precision to your music.</p>
+        <h2 id="timeline-title">Program.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">Timeline, clips. Down to the millisecond.</span></h2>
+        <p>Compose your light sequences on a visual timeline. Create colored clips and synchronize every effect with precision to your music.</p>
         <ul class="check-list">
           <li>Real-time visualization</li>
           <li>Drag-and-drop editable clips</li>
-          <li>Color and intensity keyframes</li>
           <li>Perfect sync with your playlist</li>
           <li>Import and export your edits</li>
         </ul>
@@ -1252,29 +1248,26 @@ requestAnimationFrame(tick);
 /* SIGNAL CHAIN — CONTROLLER SWITCHER */
 (function() {
   const CTRL_STATES = [
-    { name: 'AKAI APC mini mk2',   sub: 'MIDI Controller',    price: '~€80',  proto: 'USB' },
-    { name: 'StreamDeck / Elgato', sub: 'Stream Controller',  price: '~€199', proto: 'USB' },
-    { name: 'IR Remote',           sub: 'IR Remote',          price: '~€15',  proto: 'USB' },
-    { name: 'Keyboard & Mouse',    sub: 'Keyboard · Mouse',   price: '',      proto: 'USB' },
+    { name: 'AKAI APC mini mk2',   sub: 'MIDI Controller',   proto: 'USB' },
+    { name: 'StreamDeck / Elgato', sub: 'Stream Controller', proto: 'USB' },
+    { name: 'IR Remote',           sub: 'IR Remote',         proto: 'USB' },
+    { name: 'Keyboard & Mouse',    sub: 'Keyboard · Mouse',  proto: 'USB' },
   ];
   let cur = 0;
   const stateEls = document.querySelectorAll('.synop-ctrl-state');
   const dotEls   = document.querySelectorAll('.synop-nav-dot');
   const nameEl   = document.getElementById('synop-ctrl-name');
   const subEl    = document.getElementById('synop-ctrl-sub');
-  const priceEl  = document.getElementById('synop-ctrl-price');
   const protoEl  = document.getElementById('synop-ctrl-proto');
   function switchTo(idx) {
     stateEls[cur].classList.remove('active'); dotEls[cur].classList.remove('active'); cur = idx;
     stateEls[cur].classList.add('active'); dotEls[cur].classList.add('active');
     const s = CTRL_STATES[cur];
-    nameEl.textContent = s.name; subEl.textContent = s.sub; priceEl.textContent = s.price; protoEl.textContent = s.proto;
+    nameEl.textContent = s.name; subEl.textContent = s.sub; protoEl.textContent = s.proto;
   }
   dotEls.forEach(d => d.addEventListener('click', () => {
-    clearInterval(timer); switchTo(parseInt(d.dataset.idx));
-    timer = setInterval(() => switchTo((cur + 1) % CTRL_STATES.length), 3200);
+    switchTo(parseInt(d.dataset.idx));
   }));
-  let timer = setInterval(() => switchTo((cur + 1) % CTRL_STATES.length), 3200);
 })();
 
 /* FAQ ACCORDION */
