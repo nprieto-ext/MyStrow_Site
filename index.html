@@ -184,8 +184,8 @@
       height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto;
       gap: 32px;
     }
-    .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-    .nav-logo img { height: 26px; display: block; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
     .nav-center {
       display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center;
     }
@@ -781,9 +781,7 @@
 <!-- NAV -->
 <header>
   <nav aria-label="Navigation principale">
-    <a href="/" class="nav-logo" aria-label="MyStrow — Accueil">
-      <img src="logo-blanc.webp" alt="MyStrow" height="26">
-    </a>
+    <a href="/" class="nav-logo" aria-label="MyStrow — Accueil">MY<em>STROW</em></a>
     <div class="nav-center nav-desktop">
       <div class="nav-dropdown-wrap">
         <a href="#fonctionnalites">Fonctionnalités <span class="nav-chevron">▾</span></a>
