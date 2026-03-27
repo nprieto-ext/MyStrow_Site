@@ -467,7 +467,7 @@ function renderAccount(d) {
 
 // ── Révoquer machine ─────────────────────────────────────────────────────────
 async function revokeMachine(machineId, btn) {
-  if (!confirm('Révoquer cet ordinateur ? MyStrow ne pourra plus s'y connecter.')) return;
+  if (!confirm("Révoquer cet ordinateur ? MyStrow ne pourra plus s'y connecter.")) return;
   btn.disabled = true; btn.textContent = 'Révocation…';
 
   try {
