@@ -206,15 +206,6 @@
       <div id="machines-list"><span class="no-machines">Chargement…</span></div>
     </div>
 
-    <!-- ADMIN -->
-    <div class="card" id="card-admin" style="display:none">
-      <div class="card-title">Administration</div>
-      <div class="card-row">
-        <span class="row-label">Abonnés newsletter</span>
-        <span class="row-value" id="nl-count" style="font-size:22px;font-weight:700;color:var(--accent)">—</span>
-      </div>
-    </div>
-
     <!-- FACTURATION -->
     <div class="card" id="card-billing" style="display:none">
       <div class="card-title">Abonnement &amp; Facturation</div>
@@ -406,27 +397,10 @@ async function loadAccount() {
   }
 }
 
-// ── Stats newsletter (admin uniquement) ──────────────────────────────────────
-const ADMIN_EMAIL = 'nicop421@gmail.com';
-async function loadNewsletterStats() {
-  try {
-    const res = await fetch(`${CF_BASE}/get_newsletter_stats`, {
-      headers: { 'Authorization': `Bearer ${_idToken}` }
-    });
-    const data = await res.json();
-    if (data.ok) {
-      document.getElementById('card-admin').style.display = '';
-      document.getElementById('nl-count').textContent = data.total;
-    }
-  } catch (e) { /* silencieux */ }
-}
-
 // ── Rendu ────────────────────────────────────────────────────────────────────
 function renderAccount(d) {
   const email = localStorage.getItem('ms_email') || '';
   document.getElementById('account-email-sub').textContent = email;
-
-  if (email === ADMIN_EMAIL) loadNewsletterStats();
 
   // Statut
   const now = Date.now() / 1000;
