@@ -285,6 +285,59 @@
       </div>
     </div>
   </section>
+
+<!-- NEWSLETTER -->
+<section aria-labelledby="newsletter-title-contact-en" style="padding:80px 28px;text-align:center;background:var(--bg);border-top:1px solid var(--border);">
+  <div class="wrap" style="max-width:580px">
+    <div style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;
+                background:var(--accent-dim);border:1px solid var(--accent-border);border-radius:14px;
+                font-size:24px;margin-bottom:22px;">✉</div>
+    <p class="section-tag">Newsletter</p>
+    <h2 id="newsletter-title-contact-en" style="font-size:clamp(26px,4vw,40px);margin-bottom:14px;line-height:1.2">Stay in the loop</h2>
+    <p style="color:var(--muted);font-size:16px;margin-bottom:40px;line-height:1.75;max-width:460px;margin-left:auto;margin-right:auto">
+      New features, lighting tips and MyStrow updates —<br>straight to your inbox. No spam, unsubscribe anytime.
+    </p>
+    <form id="nl-form-contact-en" novalidate style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;max-width:500px;margin-left:auto;margin-right:auto;">
+      <input id="nl-email-contact-en" type="email" placeholder="your@email.com" autocomplete="email" required
+        style="flex:1;min-width:220px;padding:14px 18px;background:#111;color:var(--text);
+               border:1px solid #2a2a2a;border-radius:10px;font-size:15px;outline:none;
+               font-family:inherit;transition:border-color 0.2s,box-shadow 0.2s;"
+        onfocus="this.style.borderColor='var(--accent)';this.style.boxShadow='0 0 0 3px var(--accent-dim)'"
+        onblur="this.style.borderColor='#2a2a2a';this.style.boxShadow='none'">
+      <button type="submit"
+        style="padding:14px 30px;background:var(--accent);color:#0c0b00;border:none;border-radius:10px;
+               font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;
+               transition:opacity 0.2s,transform 0.1s;"
+        onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'"
+        onmousedown="this.style.transform='scale(0.97)'" onmouseup="this.style.transform='scale(1)'">
+        Subscribe →
+      </button>
+    </form>
+    <p id="nl-msg-contact-en" style="min-height:24px;font-size:14px;font-weight:500;"></p>
+    <p style="color:#444;font-size:12px;margin-top:16px">
+      By subscribing, you agree to our <a href="privacy.html" style="color:#555;text-decoration:underline;text-underline-offset:3px;">privacy policy</a>.
+    </p>
+  </div>
+  <script>
+  (function(){
+    var form=document.getElementById('nl-form-contact-en'),msg=document.getElementById('nl-msg-contact-en'),input=document.getElementById('nl-email-contact-en');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var email=input.value.trim();
+      if(!email||!email.includes('@')){msg.style.color='#ff5555';msg.textContent='Invalid email address.';return;}
+      var btn=form.querySelector('button');btn.disabled=true;btn.textContent='…';msg.textContent='';
+      fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,lang:'en'})})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d.ok){msg.style.color='var(--accent)';msg.textContent='✓  Subscribed — see you soon!';input.value='';btn.textContent='✓ Subscribed';}
+        else{msg.style.color='#ff5555';msg.textContent=d.error||'Something went wrong.';btn.disabled=false;btn.textContent='Subscribe →';}
+      })
+      .catch(function(){msg.style.color='#ff5555';msg.textContent='Network error, please retry.';btn.disabled=false;btn.textContent='Subscribe →';});
+    });
+  })();
+  </script>
+</section>
+
 </main>
 
 <footer>
