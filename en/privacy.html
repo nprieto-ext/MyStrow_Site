@@ -256,11 +256,10 @@ function handleNewsletter(e) {
   btn.textContent = '✓';
   btn.style.background = '#44cc88';
   btn.disabled = true;
-  // Brevo / Sendinblue subscription endpoint (remplacer par ton URL)
-  fetch('https://api.brevo.com/v3/contacts', {
+  fetch('https://sibforms.com/serve/VOTRE_ID_FORMULAIRE', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'api-key': 'BREVO_API_KEY' },
-    body: JSON.stringify({ email: email, listIds: [2], updateEnabled: true })
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: 'EMAIL=' + encodeURIComponent(email) + '&OPT_IN=1'
   }).catch(function(){});
 }
 </script>
