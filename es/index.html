@@ -24,7 +24,7 @@
   <meta property="og:title" content="MyStrow: Control Your Stage Lights Like a Pro">
   <meta property="og:description" content="Control your fixtures, sync with music via AI, create stunning shows. AKAI APC mini controller included. Gratis para empezar.">
   <meta property="og:image" content="https://mystrow.fr/og-image.webp">
-  <meta property="og:locale" content="es_ES">>
+  <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="MyStrow">
 
   <!-- Twitter Card -->
@@ -392,7 +392,58 @@
     .synop-nav-dot:hover { background: rgba(226,206,22,0.08); color: var(--text); border-color: rgba(226,206,22,0.3); }
     .synop-nav-dot.active { background: rgba(226,206,22,0.12); border-color: var(--accent); color: var(--accent); }
     @media (max-width: 860px) { .synop-chain { flex-direction: column; gap: 0; } .synop-connector { flex-direction: row; padding: 4px 0; gap: 8px; } .synop-line { width: 2px; height: 44px; } .synop-line::after { right: -4px; top: auto; bottom: -6px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid rgba(226,206,22,0.35); border-bottom: none; } .synop-dot { width: 2px; height: 10px; left: 0; animation-name: synop-flow-v; } @keyframes synop-flow-v { 0% { top: -10px; opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { top: 46px; opacity: 0; } } }
-  </style>
+  
+    /* Lang dropdown */
+    .lang-selector { position: relative; display: inline-flex; }
+    .lang-selector-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px; padding: 5px 10px; color: var(--muted);
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      cursor: pointer; transition: all 0.18s; white-space: nowrap;
+      font-family: inherit;
+    }
+    .lang-selector-btn:hover,
+    .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
+    .lang-chevron { font-size:9px; opacity:.5; margin-left:2px; transition: transform .18s; display:inline-block; }
+    .lang-selector:hover .lang-chevron,
+    .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
+    .lang-dropdown {
+      display: none; position: absolute; top: calc(100% + 7px); right: 0;
+      background: #141414; border: 1px solid #2a2a2a; border-radius: 8px;
+      padding: 6px 0; min-width: 110px; z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    }
+    .lang-selector:hover .lang-dropdown,
+    .lang-selector:focus-within .lang-dropdown { display: block; }
+    .lang-dropdown a, .lang-dropdown span {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 14px; font-size: 12px; font-weight: 600;
+      color: var(--muted); text-decoration: none; letter-spacing: 1px;
+      transition: color .15s, background .15s; white-space: nowrap;
+    }
+    .lang-dropdown a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
+    .lang-dropdown span { color: var(--accent); cursor: default; }
+
+    /* Footer newsletter */
+    .footer-newsletter { display: flex; flex-direction: column; gap: 8px; }
+    .footer-newsletter p { color: var(--muted); font-size: 12px; margin:0; }
+    .newsletter-form { display: flex; gap: 6px; }
+    .newsletter-form input {
+      background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px;
+      padding: 7px 12px; color: var(--text); font-size: 12px; outline: none;
+      transition: border-color .18s; width: 170px;
+    }
+    .newsletter-form input:focus { border-color: var(--accent); }
+    .newsletter-form input::placeholder { color: #555; }
+    .newsletter-form button {
+      background: var(--accent); color: #000; border: none;
+      border-radius: 6px; padding: 7px 14px; font-size: 12px;
+      font-weight: 700; cursor: pointer; white-space: nowrap;
+      transition: background .18s;
+    }
+    .newsletter-form button:hover { background: #ffd700; }
+</style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
@@ -425,17 +476,19 @@
       <a href="#faq">FAQ</a>
     </div>
     <div class="nav-right">
-      <div class="lang-switch">
-        <a href="../index.html" class="lang-btn">FR</a>
-        <span class="lang-sep">|</span>
-        <a href="../en/index.html" class="lang-btn">EN</a>
-        <span class="lang-sep">|</span>
-        <a href="../de/index.html" class="lang-btn">DE</a>
-        <span class="lang-sep">|</span>
-        <span class="lang-btn active">ES</span>
-        <span class="lang-sep">|</span>
-        <a href="../pt/index.html" class="lang-btn">PT</a>
+      <div class="lang-selector" tabindex="0">
+      <button class="lang-selector-btn" aria-label="Language">
+        <svg style="width:13px;height:13px;opacity:.6;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        ES <span class="lang-chevron">&#9660;</span>
+      </button>
+      <div class="lang-dropdown">
+        <a href="../index.html">🇫🇷 FR</a>
+        <a href="../en/index.html">🇬🇧 EN</a>
+        <a href="../de/index.html">🇩🇪 DE</a>
+        <span>🇪🇸 ES</span>
+        <a href="../pt/index.html">🇵🇹 PT</a>
       </div>
+    </div>
       <a href="https://mystrow.fr/compte" class="nav-signin nav-desktop" target="_blank" rel="noopener noreferrer">Sign in</a>
       <a href="#download" class="btn-nav-cta">Descargar ↓</a>
     </div>
@@ -1366,5 +1419,23 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 </script>
 
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  btn.textContent = '✓';
+  btn.style.background = '#44cc88';
+  btn.disabled = true;
+  // Brevo / Sendinblue subscription endpoint (remplacer par ton URL)
+  fetch('https://api.brevo.com/v3/contacts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'api-key': 'BREVO_API_KEY' },
+    body: JSON.stringify({ email: email, listIds: [2], updateEnabled: true })
+  }).catch(function(){});
+}
+</script>
 </body>
 </html>
