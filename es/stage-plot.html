@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>AKAI APC mini mk2 Controller with MyStrow: Complete Guide | MyStrow</title>
-  <meta name="description" content="MyStrow is designed for the AKAI APC mini mk2. Control your stage lights with the 8×8 LED pad grid and 9 faders. Plug and play, immediate setup.">
-  <link rel="canonical" href="https://mystrow.fr/en/akai-apc-mini-controller">
-  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/controleur-akai-apc-mini">
-  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/akai-apc-mini-controller">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="AKAI APC mini mk2 Controller with MyStrow: Complete Guide | MyStrow">
-  <meta property="og:description" content="MyStrow is designed for the AKAI APC mini mk2. Control your stage lights with the 8×8 LED pad grid and 9 faders. Plug and play, immediate setup.">
-  <meta property="og:url" content="https://mystrow.fr/en/akai-apc-mini-controller">
+  <title>Interactive Plano de escena: Visualize Your Fixtures | MyStrow</title>
+  <meta name="description" content="Visualize and control your fixtures on an interactive stage plot with MyStrow. 6 groups (A to F). Real-time visual DMX patch.">
+  <link rel="canonical" href="https://mystrow.fr/es/stage-plot">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/plan-de-scene">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/es/stage-plot">
+  <meta property="og:locale" content="es_ES">>
+  <meta property="og:title" content="Interactive Plano de escena: Visualize Your Fixtures | MyStrow">
+  <meta property="og:description" content="Visualize and control your fixtures on an interactive stage plot with MyStrow. 6 groups (A to F). Real-time visual DMX patch.">
+  <meta property="og:url" content="https://mystrow.fr/es/stage-plot">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyStrow","url":"https://mystrow.fr/en/akai-apc-mini-controller","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","description":"DMX lighting software natively designed for the AKAI APC mini mk2. Full MIDI mapping, LED feedback, plug and play.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["AKAI APC mini mk2 native support","64 LED pad grid mapping","9 intensity faders","Live flash/strobe/chase effects","Built-in AKAI simulator","Zero configuration plug and play"]}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyStrow","url":"https://mystrow.fr/en/stage-plot","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","description":"DMX lighting software with interactive stage plot. Visualize and control your 6 fixture groups (A to F) in real time with color feedback at 25 fps.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Interactive stage plot","6 fixture groups A to F","Real-time color feedback","Visual DMX patch","25 fps refresh","Customizable addressing"]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mystrow.fr/en/"},{"@type":"ListItem","position":2,"name":"AKAI APC mini mk2 Controller","item":"https://mystrow.fr/en/akai-apc-mini-controller"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mystrow.fr/en/"},{"@type":"ListItem","position":2,"name":"Interactive Plano de escena","item":"https://mystrow.fr/en/stage-plot"}]}
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -106,19 +106,14 @@
     .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
     .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
     .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
-    /* MIDI table */
-    .midi-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 13px; }
-    .midi-table th { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
-    .midi-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--muted); font-size: 13px; vertical-align: top; }
-    .midi-table td:first-child { color: var(--text); font-weight: 500; }
-    .midi-table tr:last-child td { border-bottom: none; }
-    /* Setup steps */
-    .setup-steps { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-    .setup-step { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid rgba(226,206,22,0.06); }
-    .setup-step:last-child { border-bottom: none; }
-    .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-glow); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; color: var(--accent); flex-shrink: 0; }
-    .step-content h3 { font-size: 16px; margin-bottom: 8px; }
-    .step-content p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+    /* Group grid */
+    .group-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 32px; }
+    .group-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+    .group-label { display: inline-block; font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--accent); margin-bottom: 6px; }
+    .group-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 8px; }
+    .group-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 10px; }
+    .group-addr { font-size: 11px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; }
+    @media (max-width: 680px) { .group-grid { grid-template-columns: 1fr 1fr; } }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
@@ -136,32 +131,32 @@
     <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
     <div class="nav-links">
       <div class="nav-dropdown-wrap">
-        <a href="index.html#features">Features <span class="nav-chevron">▾</span></a>
+        <a href="index.html#features">Funciones <span class="nav-chevron">▾</span></a>
         <div class="nav-mega">
-          <a class="mega-item" href="dmx-lighting-software.html"><div class="mega-icon">⚡</div><div><div class="mega-title">DMX Lighting Software</div><div class="mega-desc">PC + DMX Node. Full control of your stage in real time.</div></div></a>
-          <a class="mega-item" href="akai-apc-mini-controller.html"><div class="mega-icon">🎹</div><div><div class="mega-title">AKAI APC mini mk2</div><div class="mega-desc">Built for the AKAI. Every pad, every fader has its direct mapping.</div></div></a>
-          <a class="mega-item" href="ai-lighting.html"><div class="mega-icon">✨</div><div><div class="mega-title">AI Lighting</div><div class="mega-desc">AI takes control of the whole stage or helps you program your shows.</div></div></a>
-          <a class="mega-item" href="light-programming.html"><div class="mega-icon">🎬</div><div><div class="mega-title">Light Programming</div><div class="mega-desc">Visual timeline, keyframes, editable clips. Compose your shows in advance.</div></div></a>
+          <a class="mega-item" href="dmx-lighting-software.html"><div class="mega-icon">⚡</div><div><div class="mega-title">Software de iluminación DMX</div><div class="mega-desc">PC + Nodo DMX. Control total de tu escenario en tiempo real.</div></div></a>
+          <a class="mega-item" href="akai-apc-mini-controller.html"><div class="mega-icon">🎹</div><div><div class="mega-title">AKAI APC mini mk2</div><div class="mega-desc">Diseñado para el AKAI. Cada pad y cada fader con su asignación directa.</div></div></a>
+          <a class="mega-item" href="ai-lighting.html"><div class="mega-icon">✨</div><div><div class="mega-title">Iluminación con IA</div><div class="mega-desc">La IA controla el escenario completo o te ayuda a programar tus shows.</div></div></a>
+          <a class="mega-item" href="light-programming.html"><div class="mega-icon">🎬</div><div><div class="mega-title">Programación de luces</div><div class="mega-desc">Timeline visual, keyframes, clips editables. Compón tus shows con antelación.</div></div></a>
           <a class="mega-item" href="audio-video-player.html"><div class="mega-icon">🎵</div><div><div class="mega-title">Audio &amp; Video Player</div><div class="mega-desc">Playlist and projections managed from the same interface. All in one.</div></div></a>
-          <a class="mega-item" href="stage-plot.html"><div class="mega-icon">🗺️</div><div><div class="mega-title">Interactive Stage Plot</div><div class="mega-desc">Visualize and control your fixture groups with a click or a fader.</div></div></a>
+          <a class="mega-item" href="stage-plot.html"><div class="mega-icon">🗺️</div><div><div class="mega-title">Plano de escena interactivo</div><div class="mega-desc">Visualiza y controla tus grupos de focos con un clic o un fader.</div></div></a>
         </div>
       </div>
-      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#pricing">Precios</a>
       <a href="index.html#faq">FAQ</a>
     </div>
     <div class="nav-right">
       <div class="lang-switch">
-        <a href="../controleur-akai-apc-mini.html" class="lang-btn">FR</a>
+        <a href="../plan-de-scene.html" class="lang-btn">FR</a>
         <span class="lang-sep">|</span>
-        <span class="lang-btn active">EN</span>
+        <a href="../en/stage-plot.html" class="lang-btn">EN</a>
         <span class="lang-sep">|</span>
-        <a href="../de/akai-apc-mini-controller.html" class="lang-btn">DE</a>
+        <a href="../de/stage-plot.html" class="lang-btn">DE</a>
         <span class="lang-sep">|</span>
-        <a href="../es/akai-apc-mini-controller.html" class="lang-btn">ES</a>
+        <span class="lang-btn active">ES</span>
         <span class="lang-sep">|</span>
-        <a href="../pt/akai-apc-mini-controller.html" class="lang-btn">PT</a>
+        <a href="../pt/stage-plot.html" class="lang-btn">PT</a>
       </div>
-      <a href="download.html" class="btn-primary">Download ↓</a>
+      <a href="download.html" class="btn-primary">Descargar ↓</a>
     </div>
   </nav>
 </header>
@@ -172,168 +167,138 @@
   <section class="hero-section">
     <div class="wrap">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> &rsaquo; <span>AKAI APC mini mk2 Controller</span>
+        <a href="index.html">Inicio</a> &rsaquo; <span>Plano de escena interactivo</span>
       </div>
-      <div class="hero-badge">MIDI Controller · Native Integration</div>
-      <h1>AKAI APC mini mk2 <em>&amp; MyStrow</em></h1>
-      <p class="hero-sub">MyStrow was designed to work hand in hand with the AKAI APC mini mk2. Every pad, every fader, every button has its direct mapping in the software.</p>
-      <a href="download.html" class="btn-primary">Download MyStrow ↓</a>
-      <img src="../akai.webp" alt="AKAI APC mini mk2 with MyStrow" style="width:100%;border-radius:14px;margin-top:48px;border:1px solid var(--border)">
+      <div class="hero-badge">Visualization · Groups · Real-time</div>
+      <h1>Interactive<br><em>Plano de escena</em></h1>
+      <p class="hero-sub">Visualize your entire stage on an interactive plot. Control each fixture group with a click or a fader. The color feedback reflects the actual light state in real time.</p>
+      <a href="download.html" class="btn-primary">Download for free ↓</a>
     </div>
   </section>
 
-  <!-- INTEGRATION -->
+  <!-- VISUALIZATION -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Integration</div>
-      <h2>Native Integration Designed for Live Performance</h2>
+      <div class="section-tag">Visualization</div>
+      <h2>A Visual and Interactive Plano de escena</h2>
       <div class="prose">
-        <p>The 8×8 pad grid is mapped to your fixture colors. Click a pad to change the color, move the faders for intensity. The FX buttons on the right trigger chase, strobe, rainbow and more.</p>
+        <p>The stage plot is a graphical representation of your installation, displayed in the main interface. Each fixture is represented by an icon whose color exactly reflects the DMX value sent in real time.</p>
+        <p>Without being on stage, you can tell at a glance which fixture is on and whether the groups are responding correctly. Organized into 6 groups (A to F), the plot can be adapted to your actual configuration.</p>
+        <p>Click a group to select it and apply color or intensity directly. The plot becomes an alternative control interface to the AKAI, StreamDeck or tablet, ideal during preparation phases.</p>
       </div>
       <div class="badge-row">
-        <span class="badge">MIDI USB</span>
-        <span class="badge">64 LED pads</span>
-        <span class="badge">9 faders</span>
-        <span class="badge">Plug &amp; play</span>
-        <span class="badge">Bidirectional</span>
+        <span class="badge">Real-time</span>
+        <span class="badge">25 fps</span>
+        <span class="badge">Animated beams</span>
+        <span class="badge">6 groups A to F</span>
         <span class="badge">4 Art-Net universes</span>
+        <span class="badge">Moving heads + PARs</span>
       </div>
     </div>
   </section>
 
-  <!-- MAPPING -->
+  <!-- FEATURES -->
   <section class="section">
     <div class="wrap">
-      <div class="section-tag">MIDI Mapping</div>
-      <h2>Every AKAI Element Has Its Role</h2>
+      <div class="section-tag">Features</div>
+      <h2>Everything to Visualize and Control Your Installation</h2>
       <div class="feat-grid">
         <div class="feat-item">
-          <div class="feat-icon">🟡</div>
-          <h3>Multicolor LED Pads</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">The 64 pads of the 8×8 grid are each mapped to a color, an effect or a preset light scene. Their LED feedback always matches the current light state on stage. Visual navigation is immediate.</p>
+          <div class="feat-icon">🗺️</div>
+          <h3>Fixture Groups</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">The stage plot organizes your fixtures into 6 groups (A to F) corresponding to classic stage lighting positions. Select an entire group with one click to apply color and intensity simultaneously.</p>
         </div>
         <div class="feat-item">
-          <div class="feat-icon">🎚️</div>
-          <h3>Intensity Faders</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">The 9 vertical faders control the intensity of each fixture group. Fader 9 (rightmost) is the master fader. The first 8 correspond to groups A through F and configured zones.</p>
-        </div>
-        <div class="feat-item">
-          <div class="feat-icon">🔇</div>
-          <h3>Mute Buttons</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Below each fader is a dedicated mute button. Pressing a mute button instantly cuts the DMX output of the corresponding group, without modifying stored values. Ideal for quick blackouts during a show.</p>
+          <div class="feat-icon">🎯</div>
+          <h3>Zone Control</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Click a zone to select the group, then modify color and intensity from the adjacent sliders. More intuitive than abstract DMX sliders.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">⚡</div>
-          <h3>Live Effects</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">The right-column buttons trigger instant effects: flash (maximum intensity pulse), strobe (adjustable rapid blinking), chase (automatic sweep between groups). These effects are non-destructive and don't modify your stored fixture state.</p>
+          <h3>Real-time Feedback</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Each icon's color is continuously updated based on actual DMX values, whether the source is the AKAI, AI Lighting or the timeline, at 25 fps.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🔧</div>
+          <h3>Customizable Patch</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">DMX patch is fully customizable. MyStrow offers automatic patch (addresses 1, 11, 21…) that you can manually adjust to match your installation. Supports up to 4 Art-Net universes (2,048 channels). Patch is saved in the show file.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MIDI REFERENCE TABLE -->
+  <!-- 6 GROUPS -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Reference</div>
-      <h2>Complete MIDI Mapping Table</h2>
-      <table class="midi-table">
-        <thead>
-          <tr>
-            <th>AKAI Element</th>
-            <th>MIDI Note / CC</th>
-            <th>Function in MyStrow</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>8×8 grid pads (rows 1–8)</td>
-            <td>Note On/Off · 0–63</td>
-            <td>Color or light scene selection</td>
-          </tr>
-          <tr>
-            <td>Right-column pads (8 buttons)</td>
-            <td>Note On · 82–89</td>
-            <td>Flash, strobe, chase effect triggers</td>
-          </tr>
-          <tr>
-            <td>Faders 1–8</td>
-            <td>CC · 48–55</td>
-            <td>Fixture group intensity</td>
-          </tr>
-          <tr>
-            <td>Fader 9 (master)</td>
-            <td>CC · 56</td>
-            <td>Master intensity</td>
-          </tr>
-          <tr>
-            <td>Mute buttons 1–8</td>
-            <td>Note On · 100–107</td>
-            <td>Mute/unmute fixture groups</td>
-          </tr>
-          <tr>
-            <td>Pad LED feedback</td>
-            <td>Note On (output)</td>
-            <td>Reflects active fixture colors</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="section-tag">Lighting Architecture</div>
+      <h2>MyStrow's 6 Fixture Groups</h2>
+      <p style="color:var(--muted);font-size:15px;margin-bottom:8px;">MyStrow organizes lighting into 6 groups (A to F) corresponding to standard stage lighting positions, for immediate setup.</p>
+      <div class="group-grid">
+        <div class="group-card">
+          <div class="group-label">A</div>
+          <div class="group-name">Front Light</div>
+          <div class="group-desc">Front-of-house fixtures lighting artists from the front. Main face light, essential for readability and expression.</div>
+          <div class="group-addr">DMX: 1, 11, 21…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-label">B</div>
+          <div class="group-name">Downstage Wash 1</div>
+          <div class="group-desc">Overhead wash fixtures creating vertical modeling and depth. Shapes silhouette from above.</div>
+          <div class="group-addr">DMX: 31, 41…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-label">C</div>
+          <div class="group-name">Downstage Wash 2</div>
+          <div class="group-desc">Second wash zone for different lighting in stage depth. Ideal for shows with multiple playing areas.</div>
+          <div class="group-addr">DMX: 51, 61…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-label">D</div>
+          <div class="group-name">Downstage Wash 3</div>
+          <div class="group-desc">Third wash zone for deep stages or installations requiring full overhead coverage.</div>
+          <div class="group-addr">DMX: 71, 81…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-label">E</div>
+          <div class="group-name">Side Light</div>
+          <div class="group-desc">Side fixtures creating relief, dramatic shadows and sculpting effects on artists and sets.</div>
+          <div class="group-addr">DMX: 91, 101…</div>
+        </div>
+        <div class="group-card">
+          <div class="group-label">F</div>
+          <div class="group-name">Back Light</div>
+          <div class="group-desc">Upstage back fixtures lighting artists from behind. Create silhouette effects and dramatic atmospheres.</div>
+          <div class="group-addr">DMX: 111, 121…</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- COMPATIBILITY -->
+  <!-- IN PRACTICE -->
   <section class="section">
     <div class="wrap">
-      <div class="section-tag">Compatibility</div>
-      <h2>Also Compatible with Other Control Surfaces</h2>
-      <div class="prose">
-        <p>The AKAI APC mini mk2 is the reference surface for MyStrow, but the software also works with mouse and keyboard via the graphical interface.</p>
-        <p>The built-in AKAI simulator reproduces the 8×8 pad grid and 9 faders on screen, letting you prepare your shows without a connected controller. Any standard MIDI controller is also compatible via remapping.</p>
-      </div>
-      <h3 style="margin-top:28px;">Other Control Methods</h3>
-      <ul class="check-list">
-        <li>Built-in AKAI simulator (mouse/touchscreen)</li>
-        <li>Keyboard shortcuts for quick actions</li>
-        <li>Any standard MIDI controller (remapping)</li>
-        <li>StreamDeck / Elgato (assignable shortcuts)</li>
-        <li>Touch interface on tablet or touchscreen</li>
-        <li>Programmatic control via timeline and sequences</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SETUP -->
-  <section class="section-bg">
-    <div class="wrap">
-      <div class="section-tag">Setup</div>
-      <h2>Connect the AKAI APC mini mk2 in 3 Steps</h2>
-      <div class="setup-steps">
-        <div class="setup-step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h3>Connect the controller</h3>
-            <p>Plug the AKAI APC mini mk2 into your computer via USB. No drivers to install on Windows 10/11 or macOS 12+: the controller is automatically recognized as a standard MIDI device.</p>
-          </div>
+      <div class="section-tag">Practical Use</div>
+      <h2>The Plano de escena in Real Situations</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🔌</div>
+          <h3>Setup &amp; Cabling Phase</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Click a group, send a bright color: if the fixture lights up, the address and cabling are correct. The visual patch is your diagnostic tool.</p>
         </div>
-        <div class="setup-step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h3>Launch MyStrow</h3>
-            <p>Start MyStrow. The software automatically detects the AKAI APC mini mk2 on startup and activates the MIDI interface. The pads light up according to the current state of your light program.</p>
-          </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎨</div>
+          <h3>Lighting &amp; Adjustments</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Manipulate groups from the plot to test colors and combinations. The global view lets you see color balance and adjust levels per group without leaving the interface.</p>
         </div>
-        <div class="setup-step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h3>Play</h3>
-            <p>Press a pad to change your fixture colors, move a fader to adjust intensity, use the right-side buttons to trigger your effects. Setup is immediate, even without prior training.</p>
-          </div>
+        <div class="feat-item">
+          <div class="feat-icon">👁️</div>
+          <h3>Show Monitoring</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">During the show, the plot serves as passive monitoring: a permanent summary view of the entire installation state, without distracting from the main control panel.</p>
         </div>
-        <div class="setup-step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h3>Zero configuration</h3>
-            <p>MIDI mapping is fully preconfigured for the AKAI APC mini mk2. No need to create MIDI scenes, configure channels or program macros. Everything is ready to use from the first connection.</p>
-          </div>
+        <div class="feat-item">
+          <div class="feat-icon">🖥️</div>
+          <h3>Dedicated Second Screen</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">With two screens, open the plot full screen on the second monitor for a dedicated installation view, while the control interface occupies the first screen.</p>
         </div>
       </div>
     </div>
@@ -343,8 +308,8 @@
   <div class="cta-block">
     <div class="wrap">
       <div class="section-tag">Get Started</div>
-      <h2>Download MyStrow and Light Up Your Stage</h2>
-      <p>Install MyStrow, connect your AKAI APC mini mk2 and take control of your fixtures in under 5 minutes.</p>
+      <h2>Visualize Your Stage in Real Time</h2>
+      <p>Download MyStrow and discover the interactive stage plot. Control your 6 groups (A to F) from a visual plot synchronized with your lights.</p>
       <a href="download.html" class="btn-primary">Download MyStrow ↓</a>
     </div>
   </div>
@@ -359,21 +324,21 @@
           <h3>⚡ DMX Lighting Software</h3>
           <p>Full DMX control from your PC. Art-Net protocol, 25 fps, multi-fixture support.</p>
         </a>
+        <a href="akai-apc-mini-controller.html" class="other-card">
+          <h3>🎹 AKAI APC mini Controller</h3>
+          <p>Every pad, every fader has its direct mapping. Built for live performance.</p>
+        </a>
         <a href="ai-lighting.html" class="other-card">
           <h3>✨ AI Lighting</h3>
           <p>AI takes control of the whole stage, reactive to music in real time.</p>
         </a>
         <a href="light-programming.html" class="other-card">
           <h3>🎬 Light Programming</h3>
-          <p>Visual timeline, keyframes, editable clips. Compose your shows in advance.</p>
+          <p>Timeline visual, keyframes, clips editables. Compón tus shows con antelación.</p>
         </a>
         <a href="audio-video-player.html" class="other-card">
           <h3>🎵 Audio &amp; Video Player</h3>
           <p>Playlist and projections managed from the same interface. All in one.</p>
-        </a>
-        <a href="stage-plot.html" class="other-card">
-          <h3>🗺️ Interactive Stage Plot</h3>
-          <p>Visualize and control your fixture groups with a click or a fader.</p>
         </a>
       </div>
     </div>
@@ -384,12 +349,12 @@
 <footer>
   <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
   <nav class="footer-links">
-    <a href="download.html">Download</a>
-    <a href="index.html#pricing">Pricing</a>
+    <a href="download.html">Descargar</a>
+    <a href="index.html#pricing">Precios</a>
     <a href="privacy.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Contacto</a>
   </nav>
-  <div class="footer-copy">&copy; 2026 MyStrow &middot; All rights reserved</div>
+  <div class="footer-copy">&copy; 2026 MyStrow &middot; Todos los derechos reservados</div>
 </footer>
 
 </body>
