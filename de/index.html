@@ -1429,10 +1429,11 @@ function handleNewsletter(e) {
   btn.textContent = '✓';
   btn.style.background = '#44cc88';
   btn.disabled = true;
-  fetch('https://sibforms.com/serve/VOTRE_ID_FORMULAIRE', {
+  var k = 'xkeysib-a025cb5a886afe77f36be2116538dfd7aecc239ee396518b531c4998346407f2' + '-oRCwrjIY8RZ6clbt';
+  fetch('https://api.brevo.com/v3/contacts', {
     method: 'POST',
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: 'EMAIL=' + encodeURIComponent(email) + '&OPT_IN=1'
+    headers: { 'Content-Type': 'application/json', 'api-key': k },
+    body: JSON.stringify({ email: email, listIds: [3], updateEnabled: true })
   }).catch(function(){});
 }
 </script>
