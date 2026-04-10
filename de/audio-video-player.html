@@ -89,13 +89,7 @@
     .cta-block { text-align: center; padding: 80px 0; }
     .cta-block h2 { margin-bottom: 16px; }
     .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
-    footer { border-top: 1px solid var(--border); padding: 32px 40px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
-    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--text); text-decoration: none; letter-spacing: 1px; }
-    .footer-logo em { color: var(--accent); font-style: normal; }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
-    .footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy { color: var(--muted); font-size: 12px; }
+
     .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .breadcrumb a { color: var(--muted); text-decoration: none; }
     .breadcrumb a:hover { color: var(--accent); }
@@ -189,36 +183,53 @@
     .lang-dropdown span { color: var(--accent); cursor: default; }
 
     /* Footer newsletter */
-        /* Newsletter strip */
-    .nl-strip {
+        
+    @media (max-width: 700px) {
+      .nl-strip { flex-direction: column; align-items: flex-start; padding: 36px 20px; }
+      .nl-form input[type="email"] { width: 160px; }
+    }
+    /* ── Footer ─────────────────────────────────────────── */
+    footer {
       border-top: 1px solid var(--border);
-      padding: 48px 32px;
+      padding: 32px 32px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer-main {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 32px;
+      gap: 24px;
       flex-wrap: wrap;
     }
-    .nl-strip-txt h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 28px;
-      letter-spacing: .5px;
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
       color: var(--text);
-      margin: 0 0 6px;
-      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 1px;
+      flex-shrink: 0;
     }
-    .nl-strip-txt h3 span { color: var(--accent); }
-    .nl-strip-txt p {
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
       color: var(--muted);
-      font-size: 14px;
-      margin: 0;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
     }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
     .nl-form {
       display: flex;
-      gap: 0;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
       transition: border-color .2s;
     }
@@ -226,21 +237,21 @@
     .nl-form input[type="email"] {
       background: #111;
       border: none;
-      padding: 13px 18px;
+      padding: 10px 16px;
       color: var(--text);
-      font-size: 14px;
+      font-size: 13px;
       outline: none;
-      width: 240px;
+      width: 200px;
     }
     .nl-form input[type="email"]::placeholder { color: #555; }
     .nl-form button {
       background: var(--accent);
       color: #000;
       border: none;
-      padding: 13px 22px;
+      padding: 10px 18px;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 800;
-      font-size: 15px;
+      font-size: 14px;
       letter-spacing: .5px;
       text-transform: uppercase;
       cursor: pointer;
@@ -248,19 +259,22 @@
       transition: background .18s;
     }
     .nl-form button:hover { background: #ffd700; }
-    .nl-msg {
-      font-size: 12px;
-      margin-top: 8px;
-      min-height: 16px;
-      text-align: right;
-    }
+    .nl-msg { font-size: 11px; min-height: 14px; }
     .nl-msg.ok  { color: var(--accent); }
     .nl-msg.err { color: #ff5555; }
-    @media (max-width: 700px) {
-      .nl-strip { flex-direction: column; align-items: flex-start; padding: 36px 20px; }
-      .nl-form input[type="email"] { width: 160px; }
+    .footer-copy {
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
     }
-</style>
+    @media (max-width: 780px) {
+      .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-nl { align-items: flex-start; }
+      .nl-form input[type="email"] { width: 150px; }
+    }
+    </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
@@ -493,26 +507,17 @@
 </main>
 
 <footer>
-  <div class="nl-strip">
-    <div class="nl-strip-txt">
-      <h3>Bleib auf dem <span>Laufenden</span></h3>
-      <p>Neuigkeiten und Updates direkt in dein Postfach.</p>
-    </div>
-    <div>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="download.html">Download</a><a href="#pricing">Preise</a><a href="privacy.html">Datenschutz</a><a href="contact.html">Kontakt</a></nav>
+    <div class="footer-nl">
       <form class="nl-form" onsubmit="handleNewsletter(event)">
-        <input type="email" id="nl-email" placeholder="Ihre E-Mail" required>
+        <input type="email" id="nl-email" placeholder="Ihre E-Mail-Adresse" required>
         <button type="submit">Abonnieren</button>
       </form>
       <div class="nl-msg" id="nl-msg"></div>
     </div>
   </div>
-<a href="index.html" class="footer-logo">MY<em>STROW</em></a>
-  <nav class="footer-links">
-    <a href="download.html">Herunterladen</a>
-    <a href="index.html#pricing">Preise</a>
-    <a href="privacy.html">Datenschutz</a>
-    <a href="contact.html">Kontakt</a>
-  </nav>
   <div class="footer-copy">© 2026 MyStrow · Alle Rechte vorbehalten</div>
 </footer>
 
