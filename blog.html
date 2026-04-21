@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Tutoriels DMX & Lumière | Blog MyStrow</title>
+  <meta name="description" content="Tutoriels vidéo, guides et conseils pour maîtriser le contrôle lumière DMX avec MyStrow. Débutants ou avancés — trouvez la ressource qu'il vous faut.">
+  <meta name="keywords" content="tutoriel MyStrow, guide DMX, blog lumière scène, contrôle projecteurs DMX, rec lumière, AKAI APC mini tutoriel">
+  <link rel="canonical" href="https://mystrow.fr/blog">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystrow.fr/blog">
+  <meta property="og:title" content="Tutoriels DMX & Lumière | Blog MyStrow">
+  <meta property="og:description" content="Guides vidéo et articles pour maîtriser MyStrow — du débutant au régisseur confirmé.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tutoriels DMX & Lumière | Blog MyStrow">
+  <meta name="twitter:description" content="Guides et tutoriels vidéo pour piloter vos projecteurs DMX avec MyStrow.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Tutoriels DMX & Lumière — Blog MyStrow",
+    "description": "Tutoriels vidéo et articles pratiques pour apprendre à contrôler vos projecteurs DMX avec MyStrow.",
+    "url": "https://mystrow.fr/blog",
+    "publisher": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "hasPart": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Débuter avec MyStrow : Tutoriel Complet pour Débutants DMX",
+        "url": "https://mystrow.fr/tutoriel-debuter-mystrow",
+        "datePublished": "2026-04-21",
+        "image": "https://img.youtube.com/vi/qo0ILuxyWXM/maxresdefault.jpg"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Automatiser ses Lumières DMX avec MyStrow — Rec Lumière",
+        "url": "https://mystrow.fr/automatisation-lumieres-dmx-mystrow",
+        "datePublished": "2026-04-21",
+        "image": "https://img.youtube.com/vi/2ko7SrMDM3s/maxresdefault.jpg"
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Tutoriels", "item": "https://mystrow.fr/blog" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-dim: rgba(226,206,22,0.10); --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+    /* NAV */
+    header { position: sticky; top: 0; z-index: 100; background: transparent; transition: background 0.35s, backdrop-filter 0.35s; }
+    header.scrolled { background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-center { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-center a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-center a:hover, .nav-center a.active { color: var(--accent); }
+    .nav-right { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+    .btn-nav-cta { padding: 9px 22px; border-radius: 999px; border: 1.5px solid var(--accent); background: var(--accent); color: #0c0b00; font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: opacity 0.18s; }
+    .btn-nav-cta:hover { opacity: 0.85; }
+    .nav-signin { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; text-decoration: none; transition: color 0.18s; }
+    .nav-signin:hover { color: #fff; }
+
+    /* HERO BLOG */
+    .blog-hero {
+      padding: 100px 28px 72px;
+      text-align: center;
+      position: relative;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(226,206,22,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    .blog-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(42px, 6vw, 72px); line-height: 1; letter-spacing: 1px; margin-bottom: 20px; }
+    .blog-hero h1 em { font-style: normal; color: var(--accent); }
+    .blog-hero p { color: var(--muted); font-size: 17px; max-width: 540px; margin: 0 auto; }
+
+    /* ARTICLES GRID */
+    .articles-section { padding: 64px 0 100px; }
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 32px; margin-top: 48px; }
+
+    .article-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+      display: flex; flex-direction: column;
+    }
+    .article-card:hover {
+      border-color: rgba(226,206,22,0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(226,206,22,0.07);
+    }
+    .article-thumb {
+      position: relative;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #0a0908;
+    }
+    .article-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .article-card:hover .article-thumb img { transform: scale(1.04); }
+    .article-thumb-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(8,8,7,0.7) 100%);
+    }
+    .play-badge {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(226,206,22,0.92); display: flex; align-items: center; justify-content: center;
+      font-size: 20px; line-height: 1;
+      box-shadow: 0 4px 24px rgba(226,206,22,0.4);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .article-card:hover .play-badge { transform: translate(-50%, -50%) scale(1.12); background: var(--accent); }
+
+    .article-body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
+    .article-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .article-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; background: var(--accent-dim); border: 1px solid var(--accent-border); padding: 3px 10px; border-radius: 20px; }
+    .article-date { font-size: 12px; color: var(--muted); }
+    .article-body h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.2; margin-bottom: 12px; letter-spacing: 0.3px; }
+    .article-body p { font-size: 14px; color: var(--muted); line-height: 1.7; flex: 1; }
+    .article-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      margin-top: 22px; font-size: 13px; font-weight: 600; color: var(--accent);
+      font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .article-cta svg { transition: transform 0.2s; }
+    .article-card:hover .article-cta svg { transform: translateX(4px); }
+
+    /* CATEGORIES */
+    .categories-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+    .cat-pill {
+      padding: 6px 18px; border-radius: 999px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+      font-family: 'Barlow Condensed', sans-serif;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+    }
+    .cat-pill.active { background: var(--accent); color: #0c0b00; border: 1px solid var(--accent); }
+    .cat-pill:not(.active) { background: transparent; color: var(--muted); border: 1px solid rgba(255,255,255,0.12); }
+    .cat-pill:not(.active):hover { border-color: var(--accent); color: var(--accent); }
+
+    /* CTA BAS */
+    .blog-cta {
+      background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      padding: 72px 28px; text-align: center;
+    }
+    .blog-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; margin-bottom: 12px; }
+    .blog-cta p { color: var(--muted); margin-bottom: 28px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 12px 28px; border-radius: 7px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.86; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 40px; text-align: center; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; max-width: 1080px; margin: 0 auto 16px; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--text); text-decoration: none; letter-spacing: 1px; }
+    .footer-logo em { color: var(--accent); font-style: normal; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 0.18s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { color: var(--muted); font-size: 12px; text-align: center; max-width: 1080px; margin: 0 auto; }
+
+    @media (max-width: 700px) {
+      nav { padding: 0 20px; gap: 16px; }
+      .nav-center { display: none; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .blog-hero { padding: 80px 20px 52px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="site-header">
+  <nav aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo" aria-label="MyStrow — Accueil">MY<em>STROW</em></a>
+    <div class="nav-center">
+      <a href="index.html#fonctionnalites">Fonctionnalités</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="blog.html" class="active">Tutoriels</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://mystrow.fr/compte" class="nav-signin" target="_blank" rel="noopener noreferrer">Connexion</a>
+      <a href="telecharger.html" class="btn-nav-cta">Télécharger ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <p class="section-tag">Ressources</p>
+  <h1>Tutoriels <em>MyStrow</em></h1>
+  <p>Guides vidéo et articles pratiques pour maîtriser le contrôle lumière DMX — du premier patch à l'automatisation complète de vos shows.</p>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-section">
+  <div class="wrap">
+
+    <!-- Filtres -->
+    <div class="categories-bar">
+      <span class="cat-pill active">Tous</span>
+      <a href="#" class="cat-pill" onclick="return false">Débutant</a>
+      <a href="#" class="cat-pill" onclick="return false">DMX</a>
+      <a href="#" class="cat-pill" onclick="return false">Automatisation</a>
+      <a href="#" class="cat-pill" onclick="return false">Rec Lumière</a>
+    </div>
+
+    <div class="articles-grid">
+
+      <!-- Article 1 : Débuter -->
+      <a class="article-card" href="tutoriel-debuter-mystrow.html">
+        <div class="article-thumb">
+          <img src="https://img.youtube.com/vi/qo0ILuxyWXM/maxresdefault.jpg"
+               alt="Tutoriel MyStrow débutant — débuter le DMX"
+               loading="lazy" width="1280" height="720">
+          <div class="article-thumb-overlay"></div>
+          <div class="play-badge">▶</div>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="article-tag">Débutant · DMX</span>
+            <span class="article-date">21 avril 2026</span>
+          </div>
+          <h2>Débuter avec MyStrow : Tutoriel Complet pour Débutants DMX</h2>
+          <p>Patch, groupes de projecteurs, AKAI APC mini, couleurs en temps réel — tout pour réaliser votre premier show lumière en partant de zéro.</p>
+          <span class="article-cta">
+            Lire le guide
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Article 2 : Automatisation -->
+      <a class="article-card" href="automatisation-lumieres-dmx-mystrow.html">
+        <div class="article-thumb">
+          <img src="https://img.youtube.com/vi/2ko7SrMDM3s/maxresdefault.jpg"
+               alt="Automatiser ses lumières DMX avec Rec Lumière MyStrow"
+               loading="lazy" width="1280" height="720">
+          <div class="article-thumb-overlay"></div>
+          <div class="play-badge">▶</div>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="article-tag">Automatisation · Rec Lumière</span>
+            <span class="article-date">21 avril 2026</span>
+          </div>
+          <h2>Automatiser ses Lumières DMX avec MyStrow — Rec Lumière & Timeline</h2>
+          <p>Enregistrez votre jeu live en mode Rec Lumière, éditez les clips sur la timeline et rejouez un show identique à chaque représentation.</p>
+          <span class="article-cta">
+            Lire le guide
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blog-cta">
+  <div class="wrap">
+    <h2>Prêt à prendre le contrôle de votre scène ?</h2>
+    <p>Téléchargez MyStrow gratuitement et commencez à contrôler vos projecteurs DMX en quelques minutes.</p>
+    <a href="telecharger.html" class="btn-primary">Télécharger MyStrow gratuitement ↓</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="telecharger.html">Téléchargement</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="blog.html">Tutoriels</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <p class="footer-copy">© 2026 MyStrow · Tous droits réservés</p>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Débuter avec MyStrow : Tutoriel Complet pour Débutants DMX | MyStrow</title>
+  <meta name="description" content="Apprenez à contrôler vos lumières DMX avec MyStrow en partant de zéro. Patch, groupes, AKAI APC mini, couleurs et premier show — tout dans ce guide vidéo pour débutants.">
+  <meta name="keywords" content="tutoriel MyStrow débutant, débuter DMX, logiciel lumière DMX débutant, contrôle projecteurs débutant, AKAI APC mini tutoriel, guide lumière scène">
+  <link rel="canonical" href="https://mystrow.fr/tutoriel-debuter-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/tutoriel-debuter-mystrow">
+  <meta property="og:title" content="Débuter avec MyStrow : Tutoriel Complet pour Débutants DMX">
+  <meta property="og:description" content="Apprenez à contrôler vos lumières DMX avec MyStrow en partant de zéro. Patch, groupes, AKAI APC mini, couleurs et premier show — tout dans ce guide vidéo.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="article:published_time" content="2026-04-21">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Débuter avec MyStrow : Tutoriel DMX Débutant">
+  <meta name="twitter:description" content="Patch, groupes, AKAI APC mini, couleurs — tout pour contrôler vos lumières DMX avec MyStrow dès le premier jour.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Débuter avec MyStrow : Tutoriel Complet pour Débutants DMX",
+    "description": "Guide pas à pas pour apprendre à contrôler vos projecteurs DMX avec MyStrow. Patch, groupes, AKAI APC mini, couleurs et premier show lumière.",
+    "image": "https://mystrow.fr/og-image.webp",
+    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-04-21",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/tutoriel-debuter-mystrow" },
+    "url": "https://mystrow.fr/tutoriel-debuter-mystrow",
+    "keywords": ["MyStrow", "DMX débutant", "tutoriel lumière", "AKAI APC mini", "contrôle projecteurs DMX"],
+    "video": {
+      "@type": "VideoObject",
+      "name": "Débuter le DMX FACILEMENT (Tutoriel MYSTROW pour débutant)",
+      "embedUrl": "https://www.youtube.com/embed/qo0ILuxyWXM",
+      "url": "https://youtu.be/qo0ILuxyWXM",
+      "thumbnailUrl": "https://img.youtube.com/vi/qo0ILuxyWXM/maxresdefault.jpg",
+      "uploadDate": "2026-04-21"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Tutoriels", "item": "https://mystrow.fr/tutoriel-debuter-mystrow" },
+      { "@type": "ListItem", "position": 3, "name": "Débuter avec MyStrow", "item": "https://mystrow.fr/tutoriel-debuter-mystrow" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); margin: 40px 0; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 14px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--border); margin-top: 40px; gap: 16px; flex-wrap: wrap; }
+    .article-nav a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 0.18s; }
+    .article-nav a:hover { color: var(--accent); }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    /* Lang dropdown */
+    .lang-selector { position: relative; display: inline-flex; }
+    .lang-selector-btn { display: flex; align-items: center; gap: 6px; background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 5px 10px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
+    .lang-selector-btn:hover, .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
+    .lang-chevron { font-size:9px; opacity:.5; margin-left:2px; transition: transform .18s; display:inline-block; }
+    .lang-selector:hover .lang-chevron, .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
+    .lang-dropdown { display: none; position: absolute; top: calc(100% + 7px); right: 0; background: #141414; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px 0; min-width: 110px; z-index: 999; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+    .lang-selector:hover .lang-dropdown, .lang-selector:focus-within .lang-dropdown { display: block; }
+    .lang-dropdown a, .lang-dropdown span { display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color .15s, background .15s; white-space: nowrap; }
+    .lang-dropdown a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
+    .lang-dropdown span { color: var(--accent); cursor: default; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .btn-primary { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-links">
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#fonctionnalites">Fonctionnalités <span class="nav-chevron">▾</span></a>
+        <div class="nav-mega">
+          <a class="mega-item" href="logiciel-lumiere-dmx-ia.html">
+            <div class="mega-icon">⚡</div>
+            <div><div class="mega-title">Logiciel Lumière DMX</div><div class="mega-desc">PC + Node DMX. Contrôle total de votre scène en temps réel.</div></div>
+          </a>
+          <a class="mega-item" href="controleur-akai-apc-mini.html">
+            <div class="mega-icon">🎹</div>
+            <div><div class="mega-title">AKAI APC mini mk2</div><div class="mega-desc">Conçu et optimisé pour l'AKAI. Chaque pad, chaque fader a sa correspondance.</div></div>
+          </a>
+          <a class="mega-item" href="ia-lumiere.html">
+            <div class="mega-icon">✨</div>
+            <div><div class="mega-title">IA Lumière</div><div class="mega-desc">L'IA prend le contrôle de toute la scène ou vous aide à programmer vos shows.</div></div>
+          </a>
+          <a class="mega-item" href="programmation-lumiere.html">
+            <div class="mega-icon">🎬</div>
+            <div><div class="mega-title">Programmation Lumière</div><div class="mega-desc">Timeline visuelle, keyframes, clips éditables. Composez vos shows à l'avance.</div></div>
+          </a>
+          <a class="mega-item" href="player-audio-video.html">
+            <div class="mega-icon">🎵</div>
+            <div><div class="mega-title">Player audio &amp; vidéo</div><div class="mega-desc">Playlist et projections gérées depuis la même interface. Tout en un.</div></div>
+          </a>
+          <a class="mega-item" href="plan-de-scene.html">
+            <div class="mega-icon">🗺️</div>
+            <div><div class="mega-title">Plan de scène interactif</div><div class="mega-desc">Visualisez et contrôlez vos groupes de projecteurs d'un clic ou d'un fader.</div></div>
+          </a>
+        </div>
+      </div>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-selector" tabindex="0">
+        <button class="lang-selector-btn" aria-label="Language">
+          <svg style="width:13px;height:13px;opacity:.6;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          FR <span class="lang-chevron">&#9660;</span>
+        </button>
+        <div class="lang-dropdown">
+          <span>🇫🇷</span>
+          <a href="en/index.html">🇬🇧</a>
+          <a href="de/index.html">🇩🇪</a>
+          <a href="es/index.html">🇪🇸</a>
+          <a href="pt/index.html">🇵🇹</a>
+        </div>
+      </div>
+      <a href="telecharger.html" class="btn-primary">Télécharger ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a> &nbsp;/&nbsp;
+        <a href="#">Tutoriels</a> &nbsp;/&nbsp;
+        <span>Débuter avec MyStrow</span>
+      </nav>
+      <div class="hero-badge">📹 Tutoriel vidéo · Débutant</div>
+      <h1>Débuter avec<br><em>MyStrow</em></h1>
+      <p class="hero-sub">Vous n'avez jamais touché à un logiciel DMX ? Ce guide vidéo vous accompagne de l'installation à votre premier show lumière — pas à pas, sans jargon technique inutile.</p>
+      <div class="hero-meta">
+        <span>Par <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Publié le <strong>21 avril 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lecture : <strong>8 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#video" class="btn-primary">Regarder la vidéo ▶</a>
+        <a href="telecharger.html" class="btn-outline">Télécharger MyStrow ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO PROSE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Introduction</div>
+      <h2>Contrôler ses lumières n'a jamais été aussi simple</h2>
+      <div class="prose">
+        <p>Le DMX est le protocole standard du secteur de l'éclairage scénique. Utilisé dans tous les concerts, spectacles et événements professionnels depuis les années 90, il permet à un seul logiciel de piloter des centaines de projecteurs simultanément. Mais jusqu'ici, prendre en main un logiciel DMX demandait souvent des heures de formation et une interface cryptique.</p>
+        <p><strong>MyStrow change ça.</strong> Conçu dès le départ pour les régisseurs son &amp; lumière qui gèrent tout seuls, les musiciens qui souhaitent gérer leur propre éclairage, et les débutants qui n'ont aucun bagage technique, MyStrow rend le contrôle DMX intuitif, visuel et immédiat.</p>
+        <p>Dans ce tutoriel, on vous montre exactement comment démarrer : installer le logiciel, configurer le patch DMX, allumer vos premiers projecteurs et créer votre première ambiance lumineuse.</p>
+      </div>
+
+      <!-- VIDEO EMBED -->
+      <div id="video" class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/qo0ILuxyWXM"
+          title="Débuter le DMX FACILEMENT — Tutoriel MyStrow pour débutant"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="badge-row">
+        <span class="badge">🎯 Niveau : Débutant</span>
+        <span class="badge">⏱ Durée vidéo : ~15 min</span>
+        <span class="badge">💻 Windows &amp; macOS</span>
+        <span class="badge">🆓 Gratuit pour démarrer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉTAPES -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Guide pas à pas</div>
+      <h2>Ce que vous allez apprendre</h2>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Installer MyStrow et le connecter à votre matériel</h3>
+            <p>Téléchargez et installez MyStrow en moins de 2 minutes. Le logiciel détecte automatiquement votre interface réseau Art-Net ou votre boîtier USB-DMX ENTTEC. Aucun driver supplémentaire requis pour le mode Art-Net — branchez votre Node DMX, entrez son IP et c'est parti.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Comprendre les groupes de projecteurs</h3>
+            <p>MyStrow organise vos projecteurs en 6 groupes logiques : Face, Douche 1, Douche 2, Douche 3, Latéral et Contre. Cette organisation reflète le positionnement réel sur scène. Chaque groupe correspond à une colonne de pads sur l'AKAI APC mini et à un fader de niveau.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Configurer le patch DMX</h3>
+            <p>Le patch associe chaque projecteur physique à une adresse DMX. Dans MyStrow, le patch automatique assigne les adresses 1, 11, 21, 31… avec 10 canaux par projecteur — vous pouvez personnaliser chaque adresse, l'univers Art-Net, le profil de canaux (3CH / 5CH / RGBW…) et le mode des lyres directement depuis l'interface de patch.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Piloter avec l'AKAI APC mini</h3>
+            <p>L'AKAI APC mini mk2 est le contrôleur physique optimisé pour MyStrow. La grille 8×8 de pads LED correspond aux groupes et aux couleurs. Les 9 faders verticaux règlent le niveau de chaque groupe et le master. Branchez-le en USB et MyStrow le reconnaît instantanément, sans configuration.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h3>Choisir des couleurs et lancer votre premier show</h3>
+            <p>Chaque pad de la grille déclenche une couleur sur le groupe correspondant. Montez les faders pour allumer vos projecteurs et regardez votre scène s'illuminer en temps réel. Le plan de scène interactif vous donne un retour visuel immédiat depuis votre écran.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h3>Ajouter de la musique et sauvegarder</h3>
+            <p>Importez vos morceaux dans le séquenceur MyStrow. Chaque entrée de la playlist peut avoir son propre mode lumière, ses couleurs préférées et sa configuration. Sauvegardez votre show au format .tui et rechargez-le en un clic lors du prochain concert.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QU'IL VOUS FAUT -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Matériel recommandé</div>
+      <h2>Ce qu'il vous faut pour commencer</h2>
+      <div class="two-col">
+        <div>
+          <div class="highlight-box">
+            <h3>Minimum absolu</h3>
+            <ul class="check-list">
+              <li>Un PC Windows 10/11 ou Mac (macOS 12+)</li>
+              <li>MyStrow installé (gratuit pour démarrer)</li>
+              <li>Un boîtier réseau Art-Net <em>ou</em> un ENTTEC Open DMX USB</li>
+              <li>Au moins un projecteur LED DMX</li>
+              <li>Un câble DMX XLR mâle → femelle</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="highlight-box" style="border-color:rgba(226,206,22,0.4);">
+            <h3>Setup recommandé</h3>
+            <ul class="check-list">
+              <li>AKAI APC mini mk2 (intégration native MyStrow)</li>
+              <li>Node DMX réseau (ElectroConcept, Enttec Pro…)</li>
+              <li>6 groupes de projecteurs LED RGB ou RGBW</li>
+              <li>Câble Ethernet du node vers votre ordinateur</li>
+              <li>Un switch réseau si plusieurs nodes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;" class="prose">
+        <p>Vous n'avez pas encore l'AKAI ? MyStrow fonctionne parfaitement sans contrôleur physique. L'interface logicielle (plan de scène cliquable, faders virtuels) vous donne un contrôle total depuis votre écran. L'AKAI ajoute simplement le plaisir du contrôle physique en direct, idéal pour les shows live.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FONCTIONNALITÉS CLÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Fonctionnalités découvertes dans ce tutoriel</div>
+      <h2>Les bases de MyStrow</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">⚡</div>
+          <h3>Sortie DMX Art-Net</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">MyStrow envoie du DMX à 25 images par seconde sur jusqu'à 4 univers Art-Net (2 048 canaux). Compatible avec tous les nodes DMX réseau du marché. Zéro latence perceptible.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎹</div>
+          <h3>Contrôleur AKAI intégré</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">L'AKAI APC mini mk2 est reconnu automatiquement. Les pads allument les couleurs, les faders règlent les niveaux par groupe. Les boutons Mute coupent chaque groupe indépendamment.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🗺️</div>
+          <h3>Plan de scène interactif</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Visualisez vos projecteurs en temps réel. Cliquez sur chaque groupe pour régler couleur et niveau. Le plan de scène reflète exactement ce que reçoivent vos projecteurs physiques.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎵</div>
+          <h3>Player audio intégré</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Importez vos morceaux (MP3, WAV, FLAC…) directement dans MyStrow. La playlist gère l'enchaînement des morceaux et le changement automatique de configuration lumière associée.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✨</div>
+          <h3>IA Lumière réactive</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Activez le mode IA Lumière et laissez MyStrow analyser votre musique en temps réel pour générer des ambiances lumineuses cohérentes, sans programmer une seule séquence.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">💾</div>
+          <h3>Sauvegarde complète</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Sauvegardez votre show entier dans un fichier .tui qui contient la playlist, le patch DMX, les configurations et les séquences enregistrées. Tout se recharge instantanément.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Questions fréquentes</div>
+      <h2>Débutant DMX : vos questions</h2>
+      <div style="display:flex;flex-direction:column;gap:20px;margin-top:36px;">
+        <div class="feat-item">
+          <h3>Je n'ai jamais fait de DMX — est-ce que MyStrow est fait pour moi ?</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-top:8px;">Oui, c'est exactement pour vous. MyStrow a été conçu pour les musiciens, artistes et régisseurs qui s'occupent du son <em>et</em> de la lumière seuls. La courbe d'apprentissage est courte : la plupart des utilisateurs allument leurs premiers projecteurs dans les 30 minutes suivant l'installation.</p>
+        </div>
+        <div class="feat-item">
+          <h3>J'ai des projecteurs LED basiques — ça marche quand même ?</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-top:8px;">Absolument. MyStrow supporte les profils 3CH (RGB), 4CH (RGBD), 5CH, 6CH, RGBW, et des profils personnalisables pour chaque modèle de projecteur. Si votre appareil fait du DMX, MyStrow le contrôle.</p>
+        </div>
+        <div class="feat-item">
+          <h3>Puis-je utiliser MyStrow sans AKAI APC mini ?</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-top:8px;">Oui. L'interface graphique permet de tout contrôler à la souris. En bonus, MyStrow supporte également les tablettes tactiles (simulateur AKAI à l'écran) et le Stream Deck. L'AKAI reste la meilleure expérience live, mais ce n'est pas un prérequis.</p>
+        </div>
+        <div class="feat-item">
+          <h3>MyStrow fonctionne-t-il sur Mac ?</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-top:8px;">Oui — MyStrow est compatible Windows 10/11 et macOS 12 (Monterey) et versions ultérieures. La version Mac est distribuée séparément. Les deux versions partagent le même format de show .tui.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">Prêt à démarrer ?</div>
+      <h2>Votre premier show lumière vous attend</h2>
+      <p>Téléchargez MyStrow gratuitement et suivez ce tutoriel en parallèle pour allumer vos projecteurs dès aujourd'hui. Aucune formation préalable requise.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-primary" target="_blank" rel="noopener noreferrer">Télécharger MyStrow ↓</a>
+        <a href="automatisation-lumieres-dmx-mystrow.html" class="btn-outline">Article suivant : Automatiser ses lumières →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Continuer</div>
+      <h2>Articles et ressources liés</h2>
+      <div class="related-grid">
+        <a href="automatisation-lumieres-dmx-mystrow.html" class="related-card">
+          <div class="rc-tag">Tutoriel · Intermédiaire</div>
+          <h3>Automatiser ses lumières DMX — Rec Lumière avec MyStrow</h3>
+          <p>Enregistrez vos actions en direct et transformez-les en séquences reproductibles à l'infini. Le guide complet du Rec Lumière.</p>
+        </a>
+        <a href="programmation-lumiere.html" class="related-card">
+          <div class="rc-tag">Fonctionnalité</div>
+          <h3>Programmation lumière et timeline</h3>
+          <p>Composez vos shows à l'avance sur une timeline visuelle avec keyframes, clips éditables et synchronisation musicale.</p>
+        </a>
+        <a href="ia-lumiere.html" class="related-card">
+          <div class="rc-tag">Fonctionnalité</div>
+          <h3>IA Lumière réactive au son</h3>
+          <p>Laissez l'intelligence artificielle analyser votre musique et générer des ambiances lumineuses en temps réel, sans programmation.</p>
+        </a>
+        <a href="controleur-akai-apc-mini.html" class="related-card">
+          <div class="rc-tag">Matériel</div>
+          <h3>Contrôleur AKAI APC mini mk2</h3>
+          <p>Découvrez l'intégration native du contrôleur physique le plus utilisé avec MyStrow. Pads, faders, boutons mute — tout est mappé.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="telecharger.html">Téléchargement</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'fr' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+</body>
+</html>
