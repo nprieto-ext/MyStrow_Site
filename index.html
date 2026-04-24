@@ -64,9 +64,9 @@
       "Sauvegarde shows au format .tui"
     ],
     "offers": [
-      { "@type": "Offer", "name": "Mensuel", "price": "24.00", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Annuel",  "price": "199.00", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "À vie",   "price": "349.00", "priceCurrency": "EUR" }
+      { "@type": "Offer", "name": "Mensuel",  "price": "19.99",  "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Annuel",  "price": "119.88", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Lifetime","price": "239.99", "priceCurrency": "EUR" }
     ]
   }
   </script>
@@ -639,6 +639,15 @@
     .btn-full.primary:hover { opacity: 0.86; }
     .btn-full.outline:hover { border-color: var(--accent); color: var(--accent); }
 
+    /* Toggle mensuel / annuel */
+    .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 0; margin: 18px 0 4px; }
+    .toggle-btn { padding: 5px 16px; font-size: 11px; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.14); font-family: 'Inter', sans-serif; transition: all 0.18s; background: transparent; color: var(--muted); }
+    .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+    .toggle-btn:last-child  { border-radius: 0 6px 6px 0; }
+    .toggle-btn.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .saving-pill { background: #22c55e; color: #000; font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 20px; margin-left: 8px; display: none; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; white-space: nowrap; }
+    .saving-pill.visible { display: inline-flex; align-items: center; }
+
     /* FAQ */
     .faq-list { max-width: 720px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--border); }
@@ -978,13 +987,14 @@
           </a>
         </div>
       </div>
-      <a href="#tarifs">Tarifs</a>
+      <a href="tarifs.html">Tarifs</a>
       <a href="#faq">FAQ</a>
       <a href="blog.html">Tutoriels</a>
     </div>
     <div class="nav-right">
             <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
       <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg></a>
+      <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
       <div class="lang-selector" tabindex="0">
       <button class="lang-selector-btn" aria-label="Language">
         <svg style="width:13px;height:13px;opacity:.6;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -1445,9 +1455,9 @@
       <!-- GRATUIT -->
       <div class="price-card">
         <div class="price-name">Gratuit</div>
-        <div class="price-desc">Idéal pour découvrir MyStrow</div>
+        <div class="price-desc">Essai 14 jours · aucune carte requise</div>
         <div class="price-amount" style="font-size:42px;margin:18px 0 2px">Gratuit</div>
-        <div class="price-period">pour toujours · aucune carte requise</div>
+        <div class="price-period">accès complet pendant 14 jours</div>
         <ul class="price-features">
           <li>Contrôle lumière en temps réel</li>
           <li>Player audio &amp; vidéo</li>
@@ -1458,31 +1468,21 @@
         <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-full outline" target="_blank" rel="noopener noreferrer">Télécharger MyStrow</a>
       </div>
 
-      <!-- MENSUEL -->
-      <div class="price-card">
-        <div class="price-name">Mensuel</div>
-        <div class="price-desc">Pour les techniciens &amp; petites productions</div>
-        <div class="price-amount"><sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span></div>
-        <div class="price-period">HT / mois · sans engagement</div>
-        <ul class="price-features">
-          <li>Contrôle lumière en temps réel</li>
-          <li>Player audio &amp; vidéo</li>
-          <li>IA Lumière avancée</li>
-          <li>Programmation Lumière</li>
-          <li>Sortie DMX</li>
-          <li>Activation sur 2 machines</li>
-          <li>Mises à jour incluses</li>
-        </ul>
-        <a href="https://buy.stripe.com/5kQcMXeNn7FeaxabN208g03" class="btn-full outline" target="_blank" rel="noopener noreferrer">S'abonner à MyStrow PRO</a>
-      </div>
-
-      <!-- ANNUEL -->
+      <!-- PRO — toggle mensuel / annuel -->
       <div class="price-card featured">
         <div class="popular-badge">Le plus populaire</div>
-        <div class="price-name">Annuel</div>
-        <div class="price-desc">Pour les professionnels &amp; régisseurs</div>
-        <div class="price-amount"><sup>€</sup>199<span style="font-size:0.55em;vertical-align:super">,99</span></div>
-        <div class="price-period">HT / an · soit 16,67 €/mois</div>
+        <div class="price-name">Pro</div>
+        <div class="price-desc">Pour les techniciens &amp; régisseurs</div>
+
+        <div class="billing-toggle">
+          <button class="toggle-btn"        id="toggle-monthly" onclick="setPricing(false)">Mensuel</button>
+          <button class="toggle-btn active" id="toggle-annual"  onclick="setPricing(true)">Annuel</button>
+          <span class="saving-pill visible" id="saving-pill">−50%</span>
+        </div>
+
+        <div class="price-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period" id="pro-period">TTC / mois · facturé 119,88 €/an</div>
+
         <ul class="price-features">
           <li>Contrôle lumière en temps réel</li>
           <li>Player audio &amp; vidéo</li>
@@ -1492,7 +1492,26 @@
           <li>Activation sur 2 machines</li>
           <li>Mises à jour incluses</li>
         </ul>
-        <a href="https://buy.stripe.com/3cI3cngVvf7G34IcR608g04" class="btn-full primary" target="_blank" rel="noopener noreferrer">S'abonner à MyStrow PRO</a>
+        <a id="pro-cta" href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" class="btn-full primary" target="_blank" rel="noopener noreferrer">S'abonner à MyStrow PRO</a>
+      </div>
+
+      <!-- LIFETIME -->
+      <div class="price-card">
+        <div class="price-name">Lifetime</div>
+        <div class="price-desc">Accès à vie · paiement unique</div>
+        <div class="price-amount"><sup>€</sup>239<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period">TTC · une seule fois · accès à vie</div>
+        <ul class="price-features">
+          <li>Contrôle lumière en temps réel</li>
+          <li>Player audio &amp; vidéo</li>
+          <li>IA Lumière avancée</li>
+          <li>Programmation Lumière</li>
+          <li>Sortie DMX</li>
+          <li>Activation sur 2 machines</li>
+          <li>Mises à jour incluses 1 an</li>
+          <li>Aucun abonnement · jamais</li>
+        </ul>
+        <a href="https://buy.stripe.com/dRm8wH7kV7Fe5cQ2cs08g06" class="btn-full outline" target="_blank" rel="noopener noreferrer">Acheter Lifetime</a>
       </div>
 
     </div>
@@ -1698,7 +1717,7 @@
     <p style="color:var(--muted);margin-bottom:38px;font-size:17px">Rejoignez les régisseurs lumière qui font confiance à MyStrow pour leurs shows.</p>
     <div class="hero-ctas" style="justify-content:center">
       <a id="dl-btn-cta" href="#" class="btn-primary" style="padding:14px 36px;font-size:16px;">Télécharger Gratuitement ↓</a>
-      <a href="#tarifs" class="btn-outline" style="padding:14px 36px;font-size:16px;">Voir les tarifs</a>
+      <a href="tarifs.html" class="btn-outline" style="padding:14px 36px;font-size:16px;">Voir les tarifs</a>
     </div>
     <p class="hero-meta" style="margin-top:18px">Gratuit pour démarrer<span>·</span>Aucune carte bancaire requise<span>·</span>Windows &amp; macOS</p>
   </div>
@@ -1710,7 +1729,7 @@
 <footer>
   <div class="footer-main">
     <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
-    <nav class="footer-links" aria-label="Footer"><a href="telecharger.html">Téléchargement</a><a href="#tarifs">Tarifs</a><a href="blog.html">Tutoriels</a><a href="confidentialite.html">Confidentialité</a><a href="contact.html">Contact</a></nav>
+    <nav class="footer-links" aria-label="Footer"><a href="telecharger.html">Téléchargement</a><a href="tarifs.html">Tarifs</a><a href="blog.html">Tutoriels</a><a href="confidentialite.html">Confidentialité</a><a href="contact.html">Contact</a></nav>
     <div class="footer-nl">
       <form class="nl-form" onsubmit="handleNewsletter(event)">
         <input type="email" id="nl-email" placeholder="Votre adresse email" required>
@@ -1722,6 +1741,7 @@
   <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
     <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
     <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
   </div>
   <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
 </footer>
@@ -2256,6 +2276,31 @@ document.querySelectorAll('.faq-item').forEach(item => {
 </script>
 
 
+<script>
+var STRIPE_MONTHLY = 'https://buy.stripe.com/5kQcMXeNn7FeaxabN208g03';
+var STRIPE_ANNUAL  = 'https://buy.stripe.com/dRm4greNn0cM48MbN208g05';
+function setPricing(annual) {
+  var priceEl  = document.getElementById('pro-price');
+  var periodEl = document.getElementById('pro-period');
+  var ctaEl    = document.getElementById('pro-cta');
+  var pillEl   = document.getElementById('saving-pill');
+  var btnM     = document.getElementById('toggle-monthly');
+  var btnA     = document.getElementById('toggle-annual');
+  if (annual) {
+    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'TTC / mois · facturé 119,88 €/an';
+    ctaEl.href = STRIPE_ANNUAL;
+    pillEl.classList.add('visible');
+    btnM.classList.remove('active'); btnA.classList.add('active');
+  } else {
+    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'TTC / mois · sans engagement';
+    ctaEl.href = STRIPE_MONTHLY;
+    pillEl.classList.remove('visible');
+    btnM.classList.add('active'); btnA.classList.remove('active');
+  }
+}
+</script>
 <script>
 function handleNewsletter(e) {
   e.preventDefault();

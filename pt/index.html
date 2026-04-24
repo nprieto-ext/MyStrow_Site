@@ -41,31 +41,9 @@
 
   <!-- JSON-LD : SoftwareApplication -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "MyStrow",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Windows 10, Windows 11, macOS 12+",
-    "description": "Professional DMX lighting control software. Control your fixtures from a computer, sync with audio via AI, create sequences on a visual timeline.",
-    "url": "https://mystrow.fr/en/",
-    "downloadUrl": "https://mystrow.fr/en/download",
-    "screenshot": "https://mystrow.fr/og-image.webp",
-    "softwareVersion": "3.0",
-    "featureList": [
-      "Professional DMX lighting control",
-      "AKAI APC mini controller — 8×8 LED grid",
-      "6 fixture groups (A to F)",
-      "Sound-reactive AI Lighting (AudioColorAI)",
-      "Timeline editor with keyframes",
-      "Integrated audio and video player",
-      "Interactive visual stage plot",
-      "Show saving in .tui format"
-    ],
-    "offers": [
-      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Mensal", "price": "24.00", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Anual",  "price": "199.00", "priceCurrency": "EUR" }
+  { "@type": "Offer", "name": "Monthly",  "price": "19.99",  "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Annual",   "price": "119.88", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Lifetime", "price": "239.99", "priceCurrency": "EUR" }
     ]
   }
   </script>
@@ -334,6 +312,16 @@
     .btn-full.outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
     .btn-full.primary:hover { opacity: 0.86; }
     .btn-full.outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Toggle mensuel / annuel */
+    .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 0; margin: 18px 0 4px; }
+    .toggle-btn { padding: 5px 16px; font-size: 11px; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.14); font-family: 'Inter', sans-serif; transition: all 0.18s; background: transparent; color: var(--muted); }
+    .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+    .toggle-btn:last-child  { border-radius: 0 6px 6px 0; }
+    .toggle-btn.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .saving-pill { background: #22c55e; color: #000; font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 20px; margin-left: 8px; display: none; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; white-space: nowrap; }
+    .saving-pill.visible { display: inline-flex; align-items: center; }
+
 
     .faq-list { max-width: 720px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--border); }
@@ -996,59 +984,69 @@
     <p class="section-tag">Preços</p>
     <h2 id="pricing-title">Simple and transparent</h2>
     <p class="section-sub" style="margin:0 auto 56px">Start for free, upgrade when you're ready.</p>
-    <div class="pricing-grid">
+        <div class="pricing-grid">
 
       <!-- FREE -->
       <div class="price-card">
-        <div class="price-name">Free</div>
-        <div class="price-desc">Ideal for discovering MyStrow</div>
-        <div class="price-amount" style="font-size:42px;margin:18px 0 2px">Free</div>
-        <div class="price-period">forever · no credit card required</div>
+        <div class="price-name">Grátis</div>
+        <div class="price-desc">Teste 14 dias · sem cartão de crédito</div>
+        <div class="price-amount" style="font-size:42px;margin:18px 0 2px">Grátis</div>
+        <div class="price-period">14 dias de acesso completo</div>
         <ul class="price-features">
-          <li>Real-time lighting control</li>
-          <li>Audio &amp; video player</li>
-          <li>Advanced AI Lighting</li>
-          <li>Programação de luzes</li>
-          <li class="off">No DMX output</li>
+          <li>Controlo de luz em tempo real</li>
+          <li>Leitor de áudio &amp; vídeo</li>
+          <li>IA de iluminação avançada</li>
+          <li>Programação de luz</li>
+          <li class="off">Sem saída DMX</li>
         </ul>
-        <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-full outline" target="_blank" rel="noopener noreferrer">Download MyStrow</a>
+        <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-full outline" target="_blank" rel="noopener noreferrer">Baixar MyStrow</a>
       </div>
 
-      <!-- MONTHLY -->
-      <div class="price-card">
-        <div class="price-name">Mensal</div>
-        <div class="price-desc">For technicians &amp; small productions</div>
-        <div class="price-amount"><sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">.99</span></div>
-        <div class="price-period">excl. VAT / month · no commitment</div>
-        <ul class="price-features">
-          <li>Real-time lighting control</li>
-          <li>Audio &amp; video player</li>
-          <li>Advanced AI Lighting</li>
-          <li>Programação de luzes</li>
-          <li>DMX output</li>
-          <li>Activation on 2 machines</li>
-          <li>Atualizações incluídas</li>
-        </ul>
-        <a href="https://buy.stripe.com/5kQcMXeNn7FeaxabN208g03" class="btn-full outline" target="_blank" rel="noopener noreferrer">Subscribe to MyStrow PRO</a>
-      </div>
-
-      <!-- ANNUAL -->
+      <!-- PRO — toggle -->
       <div class="price-card featured">
-        <div class="popular-badge">Most popular</div>
-        <div class="price-name">Anual</div>
-        <div class="price-desc">For professionals &amp; operators</div>
-        <div class="price-amount"><sup>€</sup>199<span style="font-size:0.55em;vertical-align:super">.99</span></div>
-        <div class="price-period">excl. VAT / year · €16.67/month</div>
+        <div class="popular-badge">POPULAR</div>
+        <div class="price-name">Pro</div>
+        <div class="price-desc">Para técnicos &amp; operadores</div>
+
+        <div class="billing-toggle">
+          <button class="toggle-btn"        id="toggle-monthly" onclick="setPricing(false)">Mensal</button>
+          <button class="toggle-btn active" id="toggle-annual"  onclick="setPricing(true)">Anual</button>
+          <span class="saving-pill visible" id="saving-pill">−50%</span>
+        </div>
+
+        <div class="price-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period" id="pro-period">IVA incl. / mês · faturado 119,88 €/ano</div>
+
         <ul class="price-features">
-          <li>Real-time lighting control</li>
-          <li>Audio &amp; video player</li>
-          <li>Advanced AI Lighting</li>
-          <li>Programação de luzes</li>
-          <li>DMX output</li>
-          <li>Activation on 2 machines</li>
+          <li>Controlo de luz em tempo real</li>
+          <li>Leitor de áudio &amp; vídeo</li>
+          <li>IA de iluminação avançada</li>
+          <li>Programação de luz</li>
+          <li>Saída DMX</li>
+          <li>Ativação em 2 máquinas</li>
           <li>Atualizações incluídas</li>
         </ul>
-        <a href="https://buy.stripe.com/3cI3cngVvf7G34IcR608g04" class="btn-full primary" target="_blank" rel="noopener noreferrer">Subscribe to MyStrow PRO</a>
+        <a id="pro-cta" href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" class="btn-full primary" target="_blank" rel="noopener noreferrer">Assinar MyStrow PRO</a>
+      </div>
+
+      <!-- LIFETIME -->
+      <div class="price-card">
+        <div class="popular-badge" style="background:var(--muted);color:#fff">MELHOR PREÇO</div>
+        <div class="price-name">Lifetime</div>
+        <div class="price-desc">Acesso vitalício · pagamento único</div>
+        <div class="price-amount"><sup>€</sup>239<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period">IVA incl. · pagamento único · acesso vitalício</div>
+        <ul class="price-features">
+          <li>Controlo de luz em tempo real</li>
+          <li>Leitor de áudio &amp; vídeo</li>
+          <li>IA de iluminação avançada</li>
+          <li>Programação de luz</li>
+          <li>Saída DMX</li>
+          <li>Ativação em 2 máquinas</li>
+          <li>1 ano de atualizações incluídas</li>
+          <li>Sem subscrição · nunca</li>
+        </ul>
+        <a href="https://buy.stripe.com/dRm8wH7kV7Fe5cQ2cs08g06" class="btn-full outline" target="_blank" rel="noopener noreferrer">Comprar Lifetime</a>
       </div>
 
     </div>
@@ -1506,6 +1504,31 @@ document.querySelectorAll('.faq-item').forEach(item => {
 </script>
 
 
+<script>
+var STRIPE_MONTHLY = 'https://buy.stripe.com/5kQcMXeNn7FeaxabN208g03';
+var STRIPE_ANNUAL  = 'https://buy.stripe.com/dRm4greNn0cM48MbN208g05';
+function setPricing(annual) {
+  var priceEl  = document.getElementById('pro-price');
+  var periodEl = document.getElementById('pro-period');
+  var ctaEl    = document.getElementById('pro-cta');
+  var pillEl   = document.getElementById('saving-pill');
+  var btnM     = document.getElementById('toggle-monthly');
+  var btnA     = document.getElementById('toggle-annual');
+  if (annual) {
+    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'IVA incl. / mês · faturado 119,88 euros/ano';
+    ctaEl.href = STRIPE_ANNUAL;
+    pillEl.classList.add('visible');
+    btnM.classList.remove('active'); btnA.classList.add('active');
+  } else {
+    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'IVA incl. / mês · sem compromisso';
+    ctaEl.href = STRIPE_MONTHLY;
+    pillEl.classList.remove('visible');
+    btnM.classList.add('active'); btnA.classList.remove('active');
+  }
+}
+</script>
 <script>
 function handleNewsletter(e) {
   e.preventDefault();
