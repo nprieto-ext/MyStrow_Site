@@ -5,6 +5,9 @@ Options -Indexes
 # -------------------------------------------------------
 RewriteEngine On
 
+# Redirect old slugs
+RewriteRule ^programmation-dmx-avec-mystrow(/.*)?$ /programmation-lumiere [R=301,L]
+
 # HTTP → HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
