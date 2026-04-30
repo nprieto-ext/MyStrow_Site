@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Importer un Fixture DMX dans MyStrow — Bibliothèque + QLC+ | MyStrow</title>
+  <meta name="description" content="MyStrow intègre plus de 5 000 fixtures DMX. Si le vôtre est absent, importez un fichier XML depuis FixtureShare MA Lighting ou créez votre propre profil en quelques clics.">
+  <meta name="keywords" content="fixture DMX MyStrow, importer fixture DMX, profil DMX projecteur, QLC+ fixture XML, FixtureShare MA Lighting, créer fixture DMX, bibliothèque fixture DMX, xmlp fixture">
+  <link rel="canonical" href="https://mystrow.fr/importer-fixture-dmx-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/importer-fixture-dmx-mystrow">
+  <meta property="og:title" content="Importer un Fixture DMX dans MyStrow — 5 000+ profils intégrés">
+  <meta property="og:description" content="MyStrow intègre plus de 5 000 fixtures DMX. Importez un profil XML depuis FixtureShare ou créez le vôtre en quelques clics.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="article:published_time" content="2026-04-30">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Importer un Fixture DMX dans MyStrow">
+  <meta name="twitter:description" content="5 000+ fixtures intégrés. Si le vôtre est absent : FixtureShare XML ou création manuelle en quelques clics.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Importer un Fixture DMX dans MyStrow — Bibliothèque de 5 000+ profils",
+    "description": "MyStrow intègre plus de 5 000 fixtures DMX. Si le vôtre est absent, importez un fichier XML depuis FixtureShare MA Lighting ou créez votre propre profil en quelques clics.",
+    "image": "https://mystrow.fr/og-image.webp",
+    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
+    "datePublished": "2026-04-30",
+    "dateModified": "2026-04-30",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/importer-fixture-dmx-mystrow" },
+    "url": "https://mystrow.fr/importer-fixture-dmx-mystrow",
+    "keywords": ["fixture DMX", "importer fixture DMX", "profil DMX", "QLC+ XML", "FixtureShare", "MyStrow"]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Tutoriels", "item": "https://mystrow.fr/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Importer un fixture DMX", "item": "https://mystrow.fr/importer-fixture-dmx-mystrow" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .btn-primary { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-links">
+      <div class="nav-dropdown-wrap">
+        <a href="index.html#fonctionnalites">Fonctionnalités <span class="nav-chevron">▾</span></a>
+        <div class="nav-mega">
+          <a class="mega-item" href="logiciel-lumiere-dmx-ia.html">
+            <div class="mega-icon">⚡</div>
+            <div><div class="mega-title">Logiciel Lumière DMX</div><div class="mega-desc">PC + Node DMX. Contrôle total de votre scène en temps réel.</div></div>
+          </a>
+          <a class="mega-item" href="controleur-akai-apc-mini.html">
+            <div class="mega-icon">🎹</div>
+            <div><div class="mega-title">AKAI APC mini mk2</div><div class="mega-desc">Conçu et optimisé pour l'AKAI. Chaque pad, chaque fader a sa correspondance.</div></div>
+          </a>
+          <a class="mega-item" href="ia-lumiere.html">
+            <div class="mega-icon">✨</div>
+            <div><div class="mega-title">IA Lumière</div><div class="mega-desc">L'IA prend le contrôle de toute la scène ou vous aide à programmer vos shows.</div></div>
+          </a>
+          <a class="mega-item" href="programmation-lumiere.html">
+            <div class="mega-icon">🎬</div>
+            <div><div class="mega-title">Programmation Lumière</div><div class="mega-desc">Timeline visuelle, keyframes, clips éditables. Composez vos shows à l'avance.</div></div>
+          </a>
+          <a class="mega-item" href="player-audio-video.html">
+            <div class="mega-icon">🎵</div>
+            <div><div class="mega-title">Player audio &amp; vidéo</div><div class="mega-desc">Playlist et projections gérées depuis la même interface. Tout en un.</div></div>
+          </a>
+          <a class="mega-item" href="plan-de-scene.html">
+            <div class="mega-icon">🗺️</div>
+            <div><div class="mega-title">Plan de scène interactif</div><div class="mega-desc">Visualisez et contrôlez vos groupes de projecteurs d'un clic ou d'un fader.</div></div>
+          </a>
+        </div>
+      </div>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="blog.html">Tutoriels</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg></a>
+      <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      <a href="telecharger.html" class="btn-primary">Télécharger ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a> &nbsp;/&nbsp;
+        <a href="blog.html">Tutoriels</a> &nbsp;/&nbsp;
+        <span>Importer un fixture DMX</span>
+      </nav>
+      <div class="hero-badge">📦 Guide pratique · Fixtures DMX</div>
+      <h1>Fixtures <em>DMX</em><br>dans MyStrow</h1>
+      <p class="hero-sub">MyStrow intègre une bibliothèque de plus de 5 000 fixtures. Si votre projecteur n'y est pas, deux solutions simples : récupérer le profil XML sur internet ou créer le vôtre en quelques clics.</p>
+      <div class="hero-meta">
+        <span>Par <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Publié le <strong>30 avril 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lecture : <strong>5 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#solution-1" class="btn-primary">Trouver mon fixture →</a>
+        <a href="telecharger.html" class="btn-outline">Télécharger MyStrow ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHIFFRES + INTRO -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Bibliothèque intégrée</div>
+      <h2>5 000+ profils prêts à l'emploi</h2>
+      <div class="prose">
+        <p>Un <strong>fixture DMX</strong> (ou profil de projecteur) décrit exactement comment votre appareil fonctionne : combien de canaux il utilise, ce que chaque canal contrôle (rouge, vert, bleu, strobe, pan, tilt…), et dans quel ordre. Sans ce profil, le logiciel ne peut pas envoyer les bonnes valeurs à votre matériel.</p>
+        <p>MyStrow embarque directement <strong>plus de 5 000 profils de projecteurs</strong> couvrant les grandes marques du marché — Chauvet, ADJ, Eurolite, Stairville, Robe, Martin, Showtec, Varytec, et des centaines d'autres. La grande majorité des projecteurs courants sont déjà là, sans rien à installer.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-block">
+          <div class="stat-num">5 000+</div>
+          <div class="stat-label">Fixtures intégrés</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Marques couvertes</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Installation requise</div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>Pour utiliser un fixture intégré, rendez-vous dans le <strong>Panneau Admin → Bibliothèque de fixtures</strong>, tapez le nom ou la marque de votre appareil dans la barre de recherche, et ajoutez-le à votre patch en un clic.</p>
+        <p>Si votre modèle exact n'est pas trouvé, ne paniquez pas — la suite de cet article vous montre comment résoudre ça rapidement.</p>
+      </div>
+
+      <div class="badge-row">
+        <span class="badge">📋 Formats supportés : XML, XMLP (QLC+)</span>
+        <span class="badge">🔍 Recherche par marque ou modèle</span>
+        <span class="badge">⚡ Import instantané</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION 1 : FIXTURESHARE -->
+  <section id="solution-1" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Solution 1 — La plus simple</div>
+      <h2>Télécharger un profil XML sur FixtureShare</h2>
+      <div class="prose">
+        <p>La ressource la plus complète et la plus fiable pour trouver un fixture DMX gratuit, c'est <strong>FixtureShare</strong>, la base de données officielle de MA Lighting — l'un des fabricants de consoles les plus respectés du secteur.</p>
+      </div>
+
+      <div class="highlight-box">
+        <h3>FixtureShare MA Lighting</h3>
+        <p style="color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:16px;">Des milliers de fichiers XML de fixtures vérifiés, organisés par marque et modèle. Téléchargement gratuit, sans compte.</p>
+        <a href="https://fixtureshare.malighting.com/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:13px;">Ouvrir FixtureShare ↗</a>
+      </div>
+
+      <div class="step-list" style="margin-top:40px;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Rechercher votre projecteur</h3>
+            <p>Sur <a href="https://fixtureshare.malighting.com/" target="_blank" rel="noopener noreferrer">fixtureshare.malighting.com</a>, tapez la marque ou le modèle de votre projecteur dans la barre de recherche. Vous obtiendrez une liste de fichiers correspondants avec leur version et leur date de mise à jour.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Télécharger le fichier XML</h3>
+            <p>Cliquez sur le fixture qui correspond le mieux à votre appareil (vérifiez le nombre de canaux et le mode DMX dans la description). Téléchargez le fichier — il porte l'extension <strong>.xml</strong> ou parfois <strong>.xmlp</strong>. Les deux formats sont supportés par MyStrow.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Importer dans MyStrow</h3>
+            <p>Dans MyStrow, allez dans <strong>Panneau Admin → Bibliothèque de fixtures → Importer</strong> (ou utilisez le menu Fichier → Importer fixture). Sélectionnez votre fichier XML ou XMLP téléchargé. Le fixture apparaît immédiatement dans votre bibliothèque, prêt à être utilisé dans votre patch.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:36px;">
+        <p><strong>Conseil :</strong> Si votre projecteur a plusieurs modes (3 canaux, 5 canaux, 8 canaux…), cherchez le fichier qui contient tous les modes. Dans MyStrow, vous choisirez le mode actif directement dans les paramètres du projecteur lors du patch.</p>
+      </div>
+
+      <div class="lock-box">
+        <p><strong>🔒 Fichier XMLP verrouillé ?</strong> Certains fichiers .xmlp distribués par GrandMA3 sont dans un format propriétaire chiffré et ne peuvent pas être ouverts. MyStrow vous l'indiquera avec un message clair. Dans ce cas, cherchez le même fixture au format .xml (non chiffré) sur FixtureShare — il est presque toujours disponible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION 2 : CRÉER SON FIXTURE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Solution 2 — Pour les cas spéciaux</div>
+      <h2>Créer son propre fixture dans MyStrow</h2>
+      <div class="prose">
+        <p>Vous avez un projecteur exotique, un appareil sur mesure, ou une machine dont le manuel ne corresponds à aucun profil existant ? MyStrow inclut un <strong>éditeur de fixtures</strong> qui vous permet de définir vos propres profils canal par canal, sans quitter l'application.</p>
+      </div>
+
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Ouvrir l'éditeur de fixtures</h3>
+            <p>Dans MyStrow, allez dans <strong>Panneau Admin → Bibliothèque de fixtures → Nouveau fixture</strong> (ou cliquez sur le bouton « + »). L'éditeur s'ouvre avec un profil vierge.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Renseigner les informations de base</h3>
+            <p>Saisissez le nom du fabricant, le nom du modèle, et sélectionnez le type d'appareil (PAR LED, lyre, barre LED, stroboscope…). Ces informations serviront à retrouver le fixture dans la bibliothèque.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Définir les canaux DMX</h3>
+            <p>Ouvrez le manuel de votre projecteur à la page du tableau des canaux DMX. Pour chaque canal, indiquez à quoi il correspond : Dimmer, Rouge, Vert, Bleu, Blanc, Ambre, Strobe, Pan, Tilt… MyStrow dispose d'une liste prédéfinie de types de canaux couvrant tous les usages courants.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Sauvegarder et utiliser</h3>
+            <p>Cliquez sur <strong>Enregistrer</strong>. Votre fixture personnalisé est instantanément disponible dans la bibliothèque, au même titre que les 5 000 fixtures intégrés. Vous pouvez aussi l'exporter en fichier .xml pour le partager ou le sauvegarder.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Astuce :</strong> Consultez le manuel de votre projecteur à la section <em>"DMX Channel Configuration"</em> ou <em>"Mode d'emploi DMX"</em>. Tous les projecteurs DMX disposent d'un tableau indiquant le canal, sa fonction et les plages de valeurs (0-255). C'est tout ce dont vous avez besoin pour créer le profil.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉCAPITULATIF -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Récapitulatif</div>
+      <h2>Quelle option choisir ?</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🔍</div>
+          <h3>Chercher dans la bibliothèque intégrée</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Premier réflexe à avoir. Avec 5 000+ fixtures couvrant les grandes marques du marché, votre projecteur est très probablement déjà là. Zéro manipulation requise.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🌐</div>
+          <h3>Télécharger depuis FixtureShare</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">La meilleure option si le fixture n'est pas intégré. Base de données gratuite, vaste, maintenue par MA Lighting. Téléchargez le XML et importez-le en moins d'une minute.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✏️</div>
+          <h3>Créer son propre profil</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Pour les appareils introuvables en ligne, les prototypes ou les configurations sur mesure. Il vous suffit du manuel du projecteur et de 5 minutes dans l'éditeur MyStrow.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">📁</div>
+          <h3>Formats supportés</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">MyStrow accepte les fichiers <strong>.xml</strong> (QLC+, MA Lighting) et <strong>.xmlp</strong> (QLC+ compressé), ainsi que le format natif <strong>.mystrow</strong>. Importation depuis le menu ou par glisser-déposer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">Prêt à patcher ?</div>
+      <h2>Votre projecteur mérite le bon profil</h2>
+      <p>Téléchargez MyStrow gratuitement et commencez avec les 5 000+ fixtures intégrés. Votre matériel sera opérationnel en quelques minutes.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-primary" target="_blank" rel="noopener noreferrer">Télécharger MyStrow ↓</a>
+        <a href="tutoriel-debuter-mystrow.html" class="btn-outline">Guide débutant : débuter avec MyStrow →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Continuer</div>
+      <h2>Articles et ressources liés</h2>
+      <div class="related-grid">
+        <a href="tutoriel-debuter-mystrow.html" class="related-card">
+          <div class="rc-tag">Tutoriel · Débutant</div>
+          <h3>Débuter avec MyStrow — Patch, groupes et premier show</h3>
+          <p>Guide pas à pas pour allumer vos premiers projecteurs DMX avec MyStrow, de l'installation à votre première ambiance lumineuse.</p>
+        </a>
+        <a href="automatisation-lumieres-dmx-mystrow.html" class="related-card">
+          <div class="rc-tag">Tutoriel · Intermédiaire</div>
+          <h3>Automatiser ses lumières DMX — Rec Lumière avec MyStrow</h3>
+          <p>Enregistrez vos actions en direct et transformez-les en séquences reproductibles à l'infini.</p>
+        </a>
+        <a href="programmation-lumiere.html" class="related-card">
+          <div class="rc-tag">Fonctionnalité</div>
+          <h3>Programmation lumière et timeline</h3>
+          <p>Composez vos shows à l'avance sur une timeline visuelle avec keyframes, clips éditables et synchronisation musicale.</p>
+        </a>
+        <a href="plan-de-scene.html" class="related-card">
+          <div class="rc-tag">Fonctionnalité</div>
+          <h3>Plan de scène interactif</h3>
+          <p>Visualisez vos groupes de projecteurs en temps réel et contrôlez chaque zone d'un simple clic.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="telecharger.html">Téléchargement</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="blog.html">Tutoriels</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'fr' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+</body>
+</html>
