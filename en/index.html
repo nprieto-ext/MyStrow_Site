@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1002,7 +1002,7 @@
           <li>Light Programming</li>
           <li class="off">No DMX output</li>
         </ul>
-        <a href="https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe" class="btn-full outline" target="_blank" rel="noopener noreferrer">Download MyStrow</a>
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-full outline" target="_blank" rel="noopener noreferrer">Download MyStrow</a>
       </div>
 
       <!-- PRO — toggle -->
@@ -1463,8 +1463,8 @@ requestAnimationFrame(tick);
 (function() {
   const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
   const url   = isMac
-    ? 'https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Installer.dmg'
-    : 'https://github.com/nprieto-ext/MAESTRO/releases/latest/download/MyStrow_Setup.exe';
+    ? 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=mac'
+    : 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
   const label = isMac ? 'Download for macOS ↗' : 'Download for Windows ↗';
   document.querySelectorAll('#dl-btn-hero, #dl-btn-cta').forEach(btn => {
     btn.href = url; btn.textContent = label; btn.target = '_blank'; btn.rel = 'noopener noreferrer';
