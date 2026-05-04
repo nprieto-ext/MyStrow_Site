@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Shop MyStrow — Le setup complet pour contrôler vos lumières DMX</title>
+  <meta name="description" content="2 produits suffisent pour piloter une scène avec MyStrow : l'AKAI APC mini mk2 et une interface DMX (Node ArtNet ou USB/DMX). Liens affiliés Amazon.">
+  <link rel="canonical" href="https://mystrow.fr/shop">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystrow.fr/shop">
+  <meta property="og:title" content="Shop MyStrow — Le setup complet">
+  <meta property="og:description" content="2 produits suffisent : AKAI APC mini mk2 + interface DMX. Téléchargez MyStrow gratuitement.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-4G9MXM0ENS");</script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --border: rgba(226,206,22,0.14);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
+
+    /* ── NAV ── */
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.active { color: var(--accent); }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero { padding: 72px 0 48px; }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px,6vw,80px); line-height: 0.92; letter-spacing: 1px; margin-bottom: 18px; }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero-sub { font-size: 16px; color: var(--muted); max-width: 500px; line-height: 1.65; margin-bottom: 20px; }
+
+    /* ── SETUP CHAIN ── */
+    .setup-chain { display: flex; align-items: center; gap: 0; background: var(--bg2); border: 1px solid var(--accent-border); border-radius: 12px; padding: 16px 24px; width: fit-content; margin-bottom: 56px; }
+    .chain-item { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 800; color: var(--text); letter-spacing: 0.3px; }
+    .chain-item.hl { color: var(--accent); }
+    .chain-arrow { font-size: 12px; color: rgba(226,206,22,0.3); margin: 0 12px; }
+    .chain-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; background: var(--accent-glow); border: 1px solid var(--accent-border); color: var(--accent); border-radius: 4px; padding: 1px 6px; margin-left: 6px; vertical-align: middle; }
+
+    /* ── PRODUIT 1 : AKAI ── */
+    .product-akai {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      background: var(--bg3); border: 1px solid var(--accent-border);
+      border-radius: 16px; overflow: hidden; margin-bottom: 20px;
+    }
+    .product-akai-visual {
+      background: linear-gradient(135deg, #111000 0%, #1e1a00 60%, #0d0c00 100%);
+      display: flex; align-items: center; justify-content: center;
+      min-height: 340px; font-size: 90px; position: relative;
+    }
+    .product-akai-visual::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 45% 55%, rgba(226,206,22,0.18) 0%, transparent 65%);
+    }
+    .product-akai-body { padding: 40px 36px; display: flex; flex-direction: column; gap: 18px; }
+    .prod-step { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); }
+    .prod-title { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; color: var(--text); line-height: 1.1; }
+    .prod-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .prod-features { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .prod-features li { display: flex; gap: 10px; font-size: 13px; color: rgba(244,241,232,0.7); }
+    .prod-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .prod-features li.highlight { color: var(--text); font-weight: 600; }
+    .btn-amazon-main {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--accent); color: #0c0b00;
+      border-radius: 10px; padding: 14px 24px;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 800;
+      letter-spacing: 0.5px; text-decoration: none;
+      transition: opacity 0.18s, transform 0.12s; margin-top: auto;
+    }
+    .btn-amazon-main:hover { opacity: 0.86; transform: scale(1.02); }
+
+    /* ── PRODUIT 2 : Interface DMX ── */
+    .product-dmx { background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin-bottom: 20px; }
+    .dmx-header { padding: 28px 32px 0; }
+    .dmx-options { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; padding: 20px 24px 28px; align-items: stretch; }
+
+    .dmx-option {
+      background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px; padding: 24px 20px;
+      display: flex; flex-direction: column; gap: 12px;
+      transition: border-color 0.2s;
+    }
+    .dmx-option:hover { border-color: rgba(255,255,255,0.14); }
+    .dmx-option.pro { border-color: rgba(0,212,255,0.2); }
+    .dmx-option.pro:hover { border-color: rgba(0,212,255,0.4); }
+    .dmx-option.simple { border-color: rgba(160,100,255,0.2); }
+    .dmx-option.simple:hover { border-color: rgba(160,100,255,0.4); }
+
+    .dmx-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; width: fit-content; }
+    .dmx-option-emoji { font-size: 36px; line-height: 1; }
+    .dmx-option-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.15; }
+    .dmx-option-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+    .dmx-option-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .dmx-tag { font-size: 11px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.8px; padding: 3px 9px; border-radius: 4px; }
+
+    .ou-separator {
+      display: flex; align-items: center; justify-content: center;
+      padding: 0 16px;
+    }
+    .ou-badge {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--bg); border: 2px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 800;
+      color: var(--muted); letter-spacing: 1px; text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .btn-amazon-sub {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      border-radius: 8px; padding: 11px 16px;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800;
+      letter-spacing: 0.5px; text-decoration: none;
+      transition: opacity 0.18s; margin-top: auto;
+    }
+    .btn-amazon-sub:hover { opacity: 0.75; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer { font-size: 12px; color: #444; text-align: center; margin-bottom: 80px; line-height: 1.6; }
+    .disclaimer a { color: #555; text-decoration: underline; }
+
+    /* ── SECTION LOGICIEL ── */
+    .software-section { border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 0; }
+    .software-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .software-left h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px,4vw,52px); font-weight: 800; line-height: 1.05; margin-bottom: 16px; }
+    .software-left h2 em { font-style: normal; color: var(--accent); }
+    .software-left p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; max-width: 420px; }
+    .dl-buttons { display: flex; flex-direction: column; gap: 12px; }
+    .btn-dl-win, .btn-dl-mac {
+      display: flex; align-items: center; gap: 14px;
+      border-radius: 10px; padding: 14px 20px; text-decoration: none;
+      transition: opacity 0.18s, transform 0.12s; font-family: 'Inter', sans-serif;
+    }
+    .btn-dl-win:hover, .btn-dl-mac:hover { opacity: 0.88; transform: translateX(3px); }
+    .btn-dl-win { background: var(--accent); color: #0c0b00; }
+    .btn-dl-mac { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: var(--text); }
+    .dl-icon { font-size: 22px; flex-shrink: 0; }
+    .dl-label { font-size: 12px; font-weight: 600; opacity: 0.7; }
+    .dl-name { font-size: 15px; font-weight: 700; }
+    .software-right { display: flex; flex-direction: column; gap: 14px; }
+    .feature-row {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--bg3); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px; padding: 16px 18px;
+    }
+    .feature-row-icon { font-size: 22px; flex-shrink: 0; }
+    .feature-row-title { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; color: var(--text); margin-bottom: 3px; }
+    .feature-row-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .price-note { text-align: center; margin-top: 10px; }
+    .price-note a { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
+    .price-note a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 40px 0 24px; }
+    .footer-main { max-width: 1000px; margin: 0 auto; padding: 0 28px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; max-width: 1000px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+
+    @media (max-width: 768px) {
+      .product-akai { grid-template-columns: 1fr; }
+      .product-akai-visual { min-height: 180px; }
+      .dmx-options { grid-template-columns: 1fr; }
+      .ou-separator { padding: 12px 0; }
+      .software-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; } .nav-links { display: none; } .btn-primary { display: none; }
+      .footer-main { flex-direction: column; gap: 20px; } .footer-nl { align-items: flex-start; }
+      .setup-chain { flex-direction: column; gap: 6px; }
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-links">
+      <a href="logiciel-lumiere-dmx-ia.html">Fonctionnalités</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="blog.html">Blog</a>
+      <a href="shop.html" class="active">Shop</a>
+    </div>
+    <div class="nav-right">
+      <a href="telecharger.html" class="btn-primary">Télécharger ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="wrap">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a> &nbsp;/&nbsp; <span>Shop</span>
+      </nav>
+      <div class="section-tag">Le setup complet</div>
+      <h1>2 produits.<br><em>C'est tout.</em></h1>
+      <p class="hero-sub">Un contrôleur AKAI et une interface DMX. C'est tout ce qu'il faut pour piloter une scène entière avec MyStrow.</p>
+
+      <!-- Chaîne setup -->
+      <div class="setup-chain">
+        <span class="chain-item hl">🎹 AKAI APC mini mk2</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-item hl">💻 MyStrow</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-item">📡 Node ArtNet <span class="chain-badge">ou</span> 🔌 USB/DMX</span>
+        <span class="chain-arrow">→</span>
+        <span class="chain-item">Projecteurs DMX</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom: 24px;">
+    <div class="wrap">
+
+      <!-- ═══ PRODUIT 1 — AKAI ═══ -->
+      <div class="product-akai">
+        <div class="product-akai-visual">🎹</div>
+        <div class="product-akai-body">
+          <div>
+            <div class="prod-step">Produit 1 · Obligatoire</div>
+            <div class="prod-title">AKAI APC<br>mini mk2</div>
+          </div>
+          <p class="prod-desc">MyStrow est entièrement conçu autour de ce contrôleur. Chaque pad de la grille 8×8 correspond à une couleur ou une mémoire. Les 9 faders gèrent l'intensité groupe par groupe. Retour LED en temps réel.</p>
+          <ul class="prod-features">
+            <li class="highlight">Intégration native dans MyStrow — plug &amp; play</li>
+            <li class="highlight">Grille 8×8 pads LED multicolore</li>
+            <li class="highlight">9 faders + boutons mute</li>
+            <li>Connexion USB (alim fournie)</li>
+            <li>Compact, tient dans un sac de cours</li>
+          </ul>
+          <a href="https://amzn.to/3PhCmBO" target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon-main">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg>
+            Voir sur Amazon ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- ═══ PRODUIT 2 — Interface DMX (choix) ═══ -->
+      <div class="product-dmx">
+        <div class="dmx-header">
+          <div class="prod-step">Produit 2 · Au choix</div>
+          <div class="prod-title" style="font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;color:var(--text);line-height:1.1;margin:6px 0 4px;">Interface DMX</div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.6;max-width:560px;">Les deux options transmettent le signal DMX à vos projecteurs. Choisissez selon votre installation et votre budget — une seule suffit.</p>
+        </div>
+
+        <div class="dmx-options">
+
+          <!-- Option A : Node ArtNet -->
+          <div class="dmx-option pro">
+            <div class="dmx-badge" style="background:rgba(0,212,255,0.08);color:#00d4ff;border:1px solid rgba(0,212,255,0.2);">Installation fixe · Pro</div>
+            <div class="dmx-option-emoji">📡</div>
+            <div class="dmx-option-title">Node ArtNet DMX</div>
+            <p class="dmx-option-desc">Passe par le réseau RJ45. Plus stable sur scène, zéro latence. Le choix pour les clubs, salles de spectacle et installations permanentes.</p>
+            <div class="dmx-option-tags">
+              <span class="dmx-tag" style="background:rgba(0,212,255,0.06);color:#00d4ff;border:1px solid rgba(0,212,255,0.15);">Réseau RJ45</span>
+              <span class="dmx-tag" style="background:rgba(0,212,255,0.06);color:#00d4ff;border:1px solid rgba(0,212,255,0.15);">XLR DMX512</span>
+              <span class="dmx-tag" style="background:rgba(0,212,255,0.06);color:#00d4ff;border:1px solid rgba(0,212,255,0.15);">Très stable</span>
+            </div>
+            <a href="https://amzn.to/4tQKRCM" target="_blank" rel="noopener noreferrer sponsored"
+               class="btn-amazon-sub"
+               style="background:rgba(0,212,255,0.08);color:#00d4ff;border:1px solid rgba(0,212,255,0.25);">
+              Voir sur Amazon ↗
+            </a>
+          </div>
+
+          <!-- OU -->
+          <div class="ou-separator">
+            <div class="ou-badge">OU</div>
+          </div>
+
+          <!-- Option B : USB/DMX -->
+          <div class="dmx-option simple">
+            <div class="dmx-badge" style="background:rgba(160,100,255,0.08);color:#a064ff;border:1px solid rgba(160,100,255,0.2);">Mobile · Débutants</div>
+            <div class="dmx-option-emoji">🔌</div>
+            <div class="dmx-option-title">Interface USB/DMX</div>
+            <p class="dmx-option-desc">Branchement direct en USB sur le PC. Idéal pour démarrer, les petites installations et les shows itinérants. Économique et simple.</p>
+            <div class="dmx-option-tags">
+              <span class="dmx-tag" style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);">USB direct</span>
+              <span class="dmx-tag" style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);">XLR DMX512</span>
+              <span class="dmx-tag" style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);">Économique</span>
+            </div>
+            <a href="https://amzn.to/4n7cDbH" target="_blank" rel="noopener noreferrer sponsored"
+               class="btn-amazon-sub"
+               style="background:rgba(160,100,255,0.08);color:#a064ff;border:1px solid rgba(160,100,255,0.25);">
+              Voir sur Amazon ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="disclaimer">
+        * Liens affiliés Amazon — si vous achetez via ces liens, on perçoit une petite commission sans aucun surcoût pour vous. Le prix est identique à celui affiché sur Amazon. Merci pour votre soutien !
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ═══ SECTION LOGICIEL ═══ -->
+  <section class="software-section" style="background: var(--bg2);">
+    <div class="wrap">
+      <div class="software-grid">
+
+        <div class="software-left">
+          <div class="section-tag">Le logiciel</div>
+          <h2>MyStrow.<br><em>Gratuit pour démarrer.</em></h2>
+          <p>Contrôle lumière DMX en temps réel, IA réactive, timeline, player audio/vidéo. Compatible Windows &amp; macOS. Aucune carte bancaire pour démarrer.</p>
+          <div class="dl-buttons">
+            <a href="https://download-redirect-2gdol7vjca-uc.a.run.app?p=win" class="btn-dl-win">
+              <span class="dl-icon">🪟</span>
+              <div>
+                <div class="dl-label">Télécharger pour</div>
+                <div class="dl-name">Windows 10 / 11</div>
+              </div>
+            </a>
+            <a href="https://download-redirect-2gdol7vjca-uc.a.run.app?p=mac" class="btn-dl-mac">
+              <span class="dl-icon">🍎</span>
+              <div>
+                <div class="dl-label">Télécharger pour</div>
+                <div class="dl-name">macOS 12+</div>
+              </div>
+            </a>
+          </div>
+          <div class="price-note" style="text-align:left;margin-top:16px;">
+            <a href="tarifs.html">Voir les tarifs et la licence complète →</a>
+          </div>
+        </div>
+
+        <div class="software-right">
+          <div class="feature-row">
+            <div class="feature-row-icon">🎹</div>
+            <div>
+              <div class="feature-row-title">Intégration AKAI native</div>
+              <p class="feature-row-desc">Chaque pad, chaque fader a sa correspondance directe. Rétroéclairage LED en temps réel depuis MyStrow.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row-icon">✨</div>
+            <div>
+              <div class="feature-row-title">IA Lumière réactive</div>
+              <p class="feature-row-desc">L'IA analyse la musique et pilote toute la scène automatiquement. Zéro programmation pour démarrer.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row-icon">🎬</div>
+            <div>
+              <div class="feature-row-title">Timeline &amp; Séquenceur</div>
+              <p class="feature-row-desc">Programmez vos shows lumière sur une timeline visuelle. Keyframes, clips éditables, synchronisation musicale.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-row-icon">🎵</div>
+            <div>
+              <div class="feature-row-title">Player Audio &amp; Vidéo</div>
+              <p class="feature-row-desc">Playlist, projection et lumière gérées depuis une seule interface. Son, image et scène réunis.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="telecharger.html">Téléchargement</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="blog.html">Blog</a>
+      <a href="shop.html">Shop</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://subscribe-newsletter-2gdol7vjca-uc.a.run.app', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'fr' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+</body>
+</html>
