@@ -78,11 +78,16 @@
     .product-akai-visual {
       background: linear-gradient(135deg, #111000 0%, #1e1a00 60%, #0d0c00 100%);
       display: flex; align-items: center; justify-content: center;
-      min-height: 340px; font-size: 90px; position: relative;
+      min-height: 340px; position: relative; overflow: hidden;
     }
     .product-akai-visual::before {
       content: ''; position: absolute; inset: 0;
       background: radial-gradient(circle at 45% 55%, rgba(226,206,22,0.18) 0%, transparent 65%);
+    }
+    .product-akai-visual img {
+      width: 100%; height: 100%; object-fit: contain;
+      padding: 28px; position: relative; z-index: 1;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6));
     }
     .product-akai-body { padding: 40px 36px; display: flex; flex-direction: column; gap: 18px; }
     .prod-step { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); }
@@ -121,6 +126,7 @@
 
     .dmx-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; width: fit-content; }
     .dmx-option-emoji { font-size: 36px; line-height: 1; }
+    .dmx-option-img { width: 100%; max-height: 130px; object-fit: contain; border-radius: 8px; background: rgba(255,255,255,0.03); padding: 10px; }
     .dmx-option-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: var(--text); line-height: 1.15; }
     .dmx-option-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
     .dmx-option-tags { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -311,7 +317,9 @@
 
       <!-- ═══ PRODUIT 1 — AKAI ═══ -->
       <div class="product-akai">
-        <div class="product-akai-visual">🎹</div>
+        <div class="product-akai-visual">
+          <img src="shop/Akai.jpg" alt="AKAI APC mini mk2">
+        </div>
         <div class="product-akai-body">
           <div>
             <div class="prod-step">Produit 1 · Recommandé</div>
@@ -358,7 +366,7 @@
           <!-- Option A : Node ArtNet -->
           <div class="dmx-option pro">
             <div class="dmx-badge" style="background:rgba(0,212,255,0.08);color:#00d4ff;border:1px solid rgba(0,212,255,0.2);">Installation fixe · Pro</div>
-            <div class="dmx-option-emoji">📡</div>
+            <img src="shop/Node.jpg" alt="Node ArtNet DMX" class="dmx-option-img">
             <div class="dmx-option-title">Node ArtNet DMX</div>
             <p class="dmx-option-desc">Passe par le réseau RJ45. Plus stable sur scène, zéro latence. Le choix pour les clubs, salles de spectacle et installations permanentes.</p>
             <div class="dmx-option-tags">
@@ -381,7 +389,7 @@
           <!-- Option B : USB/DMX -->
           <div class="dmx-option simple">
             <div class="dmx-badge" style="background:rgba(160,100,255,0.08);color:#a064ff;border:1px solid rgba(160,100,255,0.2);">Mobile · Débutants</div>
-            <div class="dmx-option-emoji">🔌</div>
+            <img src="shop/UsbDmx.jpg" alt="Interface USB/DMX" class="dmx-option-img">
             <div class="dmx-option-title">Interface USB/DMX</div>
             <p class="dmx-option-desc">Branchement direct en USB sur le PC. Idéal pour démarrer, les petites installations et les shows itinérants. Économique et simple.</p>
             <div class="dmx-option-tags">
