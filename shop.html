@@ -183,6 +183,42 @@
     .price-note a { font-size: 13px; color: var(--accent); text-decoration: none; font-weight: 600; }
     .price-note a:hover { text-decoration: underline; }
 
+    /* ── PRICING ── */
+    .pricing-section { padding: 80px 0; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+    .pricing-card {
+      background: var(--bg3); border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 28px 24px; display: flex; flex-direction: column; gap: 0;
+      position: relative; transition: border-color 0.2s;
+    }
+    .pricing-card:hover { border-color: rgba(255,255,255,0.14); }
+    .pricing-card.best { border: 2px solid var(--accent); background: rgba(226,206,22,0.03); }
+    .pricing-badge-top { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; width: fit-content; margin-bottom: 14px; }
+    .badge-popular { background: var(--accent); color: #0c0b00; }
+    .badge-value { background: rgba(255,255,255,0.08); color: var(--muted); }
+    .pricing-plan { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: var(--text); }
+    .pricing-desc { font-size: 12px; color: var(--muted); margin-bottom: 16px; margin-top: 2px; }
+    .pricing-amount { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; color: var(--text); margin: 4px 0 2px; }
+    .pricing-amount sup { font-size: 22px; vertical-align: super; font-family: 'Barlow Condensed', sans-serif; }
+    .pricing-period { font-size: 11px; color: var(--muted); margin-bottom: 20px; }
+    .pricing-feats { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; flex: 1; }
+    .pricing-feats li { font-size: 12px; color: rgba(244,241,232,0.65); display: flex; gap: 8px; align-items: flex-start; }
+    .pricing-feats li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .pricing-feats li.off { color: rgba(122,117,112,0.45); }
+    .pricing-feats li.off::before { content: '✕'; color: rgba(122,117,112,0.35); }
+    .btn-pricing {
+      display: block; text-align: center; border-radius: 8px; padding: 11px 16px;
+      font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: 0.3px;
+      text-decoration: none; transition: opacity 0.18s; margin-top: auto;
+    }
+    .btn-pricing.primary { background: var(--accent); color: #0c0b00; }
+    .btn-pricing.outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
+    .btn-pricing:hover { opacity: 0.82; }
+    .pricing-note { text-align: center; margin-top: 18px; font-size: 12px; color: var(--muted); }
+    .pricing-note a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .pricing-note a:hover { text-decoration: underline; }
+    @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } }
+
     /* ── FOOTER ── */
     footer { border-top: 1px solid var(--border); padding: 40px 0 24px; }
     .footer-main { max-width: 1000px; margin: 0 auto; padding: 0 28px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
@@ -372,9 +408,6 @@
               </div>
             </a>
           </div>
-          <div class="price-note" style="text-align:left;margin-top:16px;">
-            <a href="tarifs.html">Voir les tarifs et la licence complète →</a>
-          </div>
         </div>
 
         <div class="software-right">
@@ -409,6 +442,70 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION TARIFS ═══ -->
+  <section class="pricing-section">
+    <div class="wrap">
+      <div class="section-tag">Licences</div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.05;margin-bottom:8px;">Choisissez votre formule</h2>
+      <p style="font-size:14px;color:var(--muted);max-width:480px;">Commencez gratuitement, aucune carte requise. Passez au Pro ou Lifetime quand vous êtes prêt.</p>
+
+      <div class="pricing-grid">
+
+        <!-- GRATUIT -->
+        <div class="pricing-card">
+          <div class="pricing-plan">Gratuit</div>
+          <div class="pricing-desc">Essai 14 jours · aucune carte requise</div>
+          <div class="pricing-amount" style="font-size:38px;">Gratuit</div>
+          <div class="pricing-period">accès complet pendant 14 jours</div>
+          <ul class="pricing-feats">
+            <li>Contrôle lumière en temps réel</li>
+            <li>Player audio &amp; vidéo</li>
+            <li>IA Lumière avancée</li>
+            <li>Programmation Lumière</li>
+            <li class="off">Sans sortie DMX</li>
+            <li class="off">Sans support</li>
+          </ul>
+          <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" target="_blank" rel="noopener noreferrer" class="btn-pricing outline">Télécharger gratuitement</a>
+        </div>
+
+        <!-- PRO -->
+        <div class="pricing-card best">
+          <div class="pricing-badge-top badge-popular">Le plus populaire</div>
+          <div class="pricing-plan">Pro</div>
+          <div class="pricing-desc">Pour les techniciens &amp; régisseurs</div>
+          <div class="pricing-amount"><sup>€</sup>9<span style="font-size:0.5em;vertical-align:super">,99</span></div>
+          <div class="pricing-period">TTC / mois · facturé 119,88 €/an</div>
+          <ul class="pricing-feats">
+            <li>Tout du plan Gratuit</li>
+            <li><strong style="color:var(--text)">Sortie DMX complète</strong></li>
+            <li>Activation sur 2 machines</li>
+            <li>Mises à jour incluses</li>
+            <li>Support par email</li>
+          </ul>
+          <a href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" target="_blank" rel="noopener noreferrer" class="btn-pricing primary">S'abonner Pro →</a>
+        </div>
+
+        <!-- LIFETIME -->
+        <div class="pricing-card">
+          <div class="pricing-badge-top badge-value">Meilleur prix</div>
+          <div class="pricing-plan">Lifetime</div>
+          <div class="pricing-desc">Accès à vie · paiement unique</div>
+          <div class="pricing-amount"><sup>€</sup>239<span style="font-size:0.5em;vertical-align:super">,99</span></div>
+          <div class="pricing-period">TTC · une seule fois · à vie</div>
+          <ul class="pricing-feats">
+            <li>Tout du plan Pro</li>
+            <li>Mises à jour 1 an incluses</li>
+            <li><strong style="color:var(--text)">Aucun abonnement · jamais</strong></li>
+          </ul>
+          <a href="https://buy.stripe.com/dRm8wH7kV7Fe5cQ2cs08g06" target="_blank" rel="noopener noreferrer" class="btn-pricing outline">Acheter Lifetime →</a>
+        </div>
+
+      </div>
+
+      <p class="pricing-note">🔒 Paiement sécurisé Stripe &nbsp;·&nbsp; <a href="tarifs.html">Voir tous les détails et la FAQ →</a></p>
     </div>
   </section>
 
