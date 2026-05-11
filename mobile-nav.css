@@ -33,22 +33,21 @@
 .nb-overlay {
   display: none;
   position: fixed;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: 997;
   background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 }
 .nb-overlay.nb-open { display: block; animation: nbFade 0.18s ease; }
 @keyframes nbFade { from { opacity: 0; } to { opacity: 1; } }
 
-/* Panel */
+/* Panel — position: fixed pour ne pas dépendre de l'overlay comme bloc contenant */
 .nb-panel {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0;
   background: #0a0908;
   border-bottom: 1px solid rgba(226,206,22,0.18);
   animation: nbSlide 0.22s ease;
+  z-index: 998;
 }
 @keyframes nbSlide { from { transform: translateY(-10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 

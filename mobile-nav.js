@@ -76,21 +76,19 @@
           '</button>' +
         '</div>' +
         '<nav class="nb-links">' + linksHtml + '</nav>' +
-        '<div class="nb-foot">' +
-          '<a href="telecharger.html" class="nb-dl">Télécharger MyStrow ↓</a>' +
-        '</div>' +
       '</div>';
 
     document.body.appendChild(overlay);
 
     function open() {
       overlay.classList.add('nb-open');
-      document.body.style.overflow = 'hidden';
+      // Bloquer le scroll sur <html> (pas <body>) — iOS Safari fixe position: fixed sur body
+      document.documentElement.style.overflow = 'hidden';
       burger.setAttribute('aria-expanded', 'true');
     }
     function close() {
       overlay.classList.remove('nb-open');
-      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
       burger.setAttribute('aria-expanded', 'false');
     }
 
