@@ -1463,7 +1463,7 @@ requestAnimationFrame(tick);
 (function() {
   const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
   const url   = isMac
-    ? 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=mac'
+    ? 'download.html'
     : 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
   const label = isMac ? 'Download for macOS ↗' : 'Download for Windows ↗';
   document.querySelectorAll('#dl-btn-hero, #dl-btn-cta').forEach(btn => {
