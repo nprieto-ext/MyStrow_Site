@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Blog MyStrow — Tutoriels, guides et actualités DMX</title>
-  <meta name="description" content="Guides, tutoriels et actus MyStrow. Comment configurer votre AKAI APC mini, programmer vos shows lumière, choisir votre interface DMX.">
+  <title>Tutoriels MyStrow — Guides DMX pas à pas</title>
+  <meta name="description" content="Tutoriels vidéo MyStrow : débuter en DMX, automatiser vos lumières, créer vos séquences, comprendre les câbles et les univers DMX.">
   <link rel="canonical" href="https://mystrow.fr/blog">
   <link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog">
   <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mystrow.fr/blog">
-  <meta property="og:title" content="Blog MyStrow — Tutoriels lumière DMX">
-  <meta property="og:description" content="Guides, tutoriels et actus MyStrow. Apprenez à maîtriser votre éclairage de scène.">
+  <meta property="og:title" content="Tutoriels MyStrow — Guides DMX pas à pas">
+  <meta property="og:description" content="Tutoriels vidéo MyStrow : débuter en DMX, automatiser vos lumières, créer vos séquences.">
   <meta property="og:image" content="https://mystrow.fr/og-image.webp">
   <meta property="og:site_name" content="MyStrow">
 
@@ -60,34 +60,20 @@
     .hero h1 em { font-style: normal; color: var(--accent); }
     .hero-sub { font-size: 16px; color: var(--muted); max-width: 520px; line-height: 1.65; }
 
-    .filters { display: flex; gap: 10px; flex-wrap: wrap; margin: 40px 0 32px; }
-    .filter-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--muted); border-radius: 999px; padding: 7px 18px; cursor: pointer; transition: all 0.18s; }
-    .filter-btn:hover { border-color: rgba(226,206,22,0.3); color: var(--text); }
-    .filter-btn.active { background: var(--accent-glow); border-color: var(--accent-border); color: var(--accent); }
-
-    .featured-post { background: var(--bg3); border: 1px solid var(--accent-border); border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 40px; transition: border-color 0.2s; text-decoration: none; color: inherit; }
-    .featured-post:hover { border-color: rgba(226,206,22,0.45); }
-    .featured-post-img { background: linear-gradient(135deg, #0d0c09 0%, #1a1800 50%, #0d0c09 100%); display: flex; align-items: center; justify-content: center; min-height: 280px; font-size: 80px; position: relative; overflow: hidden; }
-    .featured-post-img::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 40% 50%, rgba(226,206,22,0.12) 0%, transparent 70%); }
-    .featured-post-body { padding: 36px 32px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
-    .post-category { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); }
-    .post-title { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 800; color: var(--text); line-height: 1.15; }
-    .post-excerpt { font-size: 14px; color: var(--muted); line-height: 1.65; }
-    .post-meta { display: flex; align-items: center; gap: 16px; font-size: 12px; color: #444; }
-    .post-tag { background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); color: var(--accent); border-radius: 4px; padding: 2px 8px; font-size: 10px; font-family: 'Barlow Condensed',sans-serif; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
-    .post-read-btn { display: inline-flex; align-items: center; gap: 7px; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 800; color: var(--accent); text-decoration: none; letter-spacing: 0.5px; border: 1px solid rgba(226,206,22,0.3); border-radius: 8px; padding: 10px 18px; width: fit-content; transition: background 0.18s; }
-    .post-read-btn:hover { background: rgba(226,206,22,0.08); }
-
-    .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 80px; }
-    .post-card { background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s; text-decoration: none; color: inherit; }
-    .post-card:hover { border-color: rgba(226,206,22,0.25); transform: translateY(-2px); }
-    .post-card-thumb { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 48px; position: relative; overflow: hidden; }
-    .post-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
-    .post-card-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: var(--text); line-height: 1.2; }
-    .post-card-excerpt { font-size: 13px; color: var(--muted); line-height: 1.55; flex: 1; }
-    .post-card-footer { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-top: 1px solid rgba(255,255,255,0.05); }
-    .post-card-date { font-size: 11px; color: #444; }
-    .post-card-arrow { font-size: 13px; color: var(--accent); font-weight: 700; }
+    .tuto-card { display: flex; flex-direction: column; background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; text-decoration: none; color: var(--text); transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s; }
+    .tuto-card:hover { border-color: rgba(226,206,22,0.45); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    .tuto-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #0a0908; }
+    .tuto-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .tuto-thumb-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(8,8,7,0.6) 100%); }
+    .tuto-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 52px; height: 52px; border-radius: 50%; background: rgba(226,206,22,0.9); display: flex; align-items: center; justify-content: center; font-size: 20px; transition: background 0.18s, transform 0.18s; }
+    .tuto-card:hover .tuto-play { background: var(--accent); transform: translate(-50%,-50%) scale(1.1); }
+    .tuto-body { padding: 24px 26px 28px; flex: 1; display: flex; flex-direction: column; }
+    .tuto-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .tuto-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; background: rgba(226,206,22,0.10); border: 1px solid rgba(226,206,22,0.22); padding: 2px 9px; border-radius: 20px; }
+    .tuto-date { font-size: 12px; color: var(--muted); }
+    .tuto-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; line-height: 1.2; margin-bottom: 10px; letter-spacing: 0.3px; }
+    .tuto-desc { font-size: 13px; color: var(--muted); line-height: 1.7; flex: 1; }
+    .tuto-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 12px; font-weight: 600; color: var(--accent); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; text-transform: uppercase; }
 
     footer { border-top: 1px solid var(--border); padding: 40px 0 24px; }
     .footer-main { max-width: 1080px; margin: 0 auto; padding: 0 28px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
@@ -108,7 +94,6 @@
     .nl-msg.err { color: #ff5555; }
     .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; max-width: 1080px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
 
-    @media (max-width: 768px) { .featured-post { grid-template-columns: 1fr; } .featured-post-img { min-height: 160px; } }
     @media (max-width: 680px) { nav { padding: 0 14px; gap: 8px; } .nav-links { display: none; } .btn-primary { display: none; } .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; } .footer-nl { align-items: flex-start; } }
   </style>
 <link rel="stylesheet" href="mobile-nav.css">
@@ -135,132 +120,91 @@
   <section class="hero">
     <div class="wrap">
       <nav class="breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a> &nbsp;/&nbsp; <span>Blog</span>
+        <a href="index.html">Accueil</a> &nbsp;/&nbsp; <span>Tutoriels &amp; Guides</span>
       </nav>
-      <div class="section-tag">Guides &amp; Tutoriels</div>
-      <h1>Le blog <em>MyStrow.</em></h1>
-      <p class="hero-sub">Tutoriels, guides matériel, astuces de pro et actus du logiciel. Tout ce qu'il faut savoir pour maîtriser votre éclairage de scène.</p>
+      <div class="section-tag">Tutoriels &amp; Guides</div>
+      <h1>Apprends à maîtriser <em>MyStrow.</em></h1>
+      <p class="hero-sub">Vidéos pas à pas — du premier câblage DMX au show entièrement automatisé.</p>
     </div>
   </section>
 
-  <section style="padding: 0 0 80px;">
+  <section style="padding: 0 0 100px;">
     <div class="wrap">
 
-      <div class="filters">
-        <button class="filter-btn active" onclick="filterPosts('all', this)">Tout</button>
-        <button class="filter-btn" onclick="filterPosts('tuto', this)">Tutoriels</button>
-        <button class="filter-btn" onclick="filterPosts('materiel', this)">Matériel</button>
-        <button class="filter-btn" onclick="filterPosts('setup', this)">Setup &amp; Config</button>
-        <button class="filter-btn" onclick="filterPosts('actu', this)">Actus MyStrow</button>
-      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:28px">
 
-      <!-- Article à la une -->
-      <a href="tutoriel-debuter-mystrow.html" class="featured-post" data-cat="tuto">
-        <div class="featured-post-img">🎬</div>
-        <div class="featured-post-body">
-          <div class="post-category">Tutoriel · À la une</div>
-          <div class="post-title">Débuter avec MyStrow — Le guide complet de A à Z</div>
-          <p class="post-excerpt">Installation, premier branchement MIDI, patch DMX, votre premier show en 20 minutes. Le guide qu'on aurait aimé avoir au début.</p>
-          <div class="post-meta">
-            <span>Mai 2026</span>
-            <span class="post-tag">Débutants</span>
-            <span class="post-tag">AKAI</span>
+        <!-- Tuto 1 -->
+        <a href="tutoriel-debuter-mystrow.html" class="tuto-card">
+          <div class="tuto-thumb">
+            <img src="https://img.youtube.com/vi/qo0ILuxyWXM/maxresdefault.jpg" alt="Tutoriel débutant MyStrow" loading="lazy">
+            <div class="tuto-thumb-overlay"></div>
+            <div class="tuto-play">▶</div>
           </div>
-          <span class="post-read-btn">Lire l'article →</span>
-        </div>
-      </a>
-
-      <!-- Grille articles -->
-      <div class="posts-grid" id="posts-grid">
-
-        <a href="controleur-akai-apc-mini.html" class="post-card" data-cat="materiel">
-          <div class="post-card-thumb" style="background: linear-gradient(135deg, #1a1800, #0d0c09);">🎹</div>
-          <div class="post-card-body">
-            <div class="post-category">Matériel</div>
-            <div class="post-card-title">AKAI APC mini mk2 — Tout ce que vous devez savoir</div>
-            <p class="post-card-excerpt">Pads, faders, boutons mute : comment MyStrow exploite chaque composant du contrôleur AKAI. Revue complète et guide de configuration.</p>
-          </div>
-          <div class="post-card-footer">
-            <span class="post-card-date">Avril 2026</span>
-            <span class="post-card-arrow">→</span>
+          <div class="tuto-body">
+            <div class="tuto-meta">
+              <span class="tuto-badge">Débutant · DMX</span>
+              <span class="tuto-date">Avr 2026</span>
+            </div>
+            <div class="tuto-title">Débuter avec MyStrow : Tutoriel Complet pour Débutants DMX</div>
+            <p class="tuto-desc">Patch, groupes de projecteurs, AKAI APC mini, couleurs en temps réel — tout pour réaliser votre premier show lumière en partant de zéro.</p>
+            <span class="tuto-link">Lire le guide →</span>
           </div>
         </a>
 
-        <a href="boutique.html" class="post-card" data-cat="materiel">
-          <div class="post-card-thumb" style="background: linear-gradient(135deg, #0a1a1a, #080807);">📡</div>
-          <div class="post-card-body">
-            <div class="post-category" style="color:#00d4ff;">Matériel</div>
-            <div class="post-card-title">Node ArtNet vs Interface USB/DMX — Lequel choisir ?</div>
-            <p class="post-card-excerpt">On compare les deux solutions pour connecter MyStrow à vos projecteurs DMX. Budget, stabilité, installation fixe ou mobile.</p>
+        <!-- Tuto 2 -->
+        <a href="automatisation-lumieres-dmx-mystrow.html" class="tuto-card">
+          <div class="tuto-thumb">
+            <img src="https://img.youtube.com/vi/2ko7SrMDM3s/maxresdefault.jpg" alt="Automatiser ses lumières DMX avec MyStrow" loading="lazy">
+            <div class="tuto-thumb-overlay"></div>
+            <div class="tuto-play">▶</div>
           </div>
-          <div class="post-card-footer">
-            <span class="post-card-date">Avril 2026</span>
-            <span class="post-card-arrow">→</span>
-          </div>
-        </a>
-
-        <a href="ia-lumiere.html" class="post-card" data-cat="tuto">
-          <div class="post-card-thumb" style="background: linear-gradient(135deg, #0d0a00, #1a1200);">✨</div>
-          <div class="post-card-body">
-            <div class="post-category">Tutoriel</div>
-            <div class="post-card-title">IA Lumière — Comment l'activer et la configurer</div>
-            <p class="post-card-excerpt">Le mode IA de MyStrow pilote automatiquement votre scène en analysant la musique. Voici comment le paramétrer pour chaque type d'événement.</p>
-          </div>
-          <div class="post-card-footer">
-            <span class="post-card-date">Mars 2026</span>
-            <span class="post-card-arrow">→</span>
+          <div class="tuto-body">
+            <div class="tuto-meta">
+              <span class="tuto-badge">Automatisation · Rec</span>
+              <span class="tuto-date">Avr 2026</span>
+            </div>
+            <div class="tuto-title">Automatiser ses Lumières DMX avec MyStrow — Rec Lumière &amp; Timeline</div>
+            <p class="tuto-desc">Enregistrez votre jeu live en mode Rec Lumière, éditez les clips sur la timeline et rejouez un show identique à chaque représentation.</p>
+            <span class="tuto-link">Lire le guide →</span>
           </div>
         </a>
 
-        <a href="programmation-lumiere.html" class="post-card" data-cat="tuto">
-          <div class="post-card-thumb" style="background: linear-gradient(135deg, #060a12, #0a0d18);">🎬</div>
-          <div class="post-card-body">
-            <div class="post-category">Tutoriel</div>
-            <div class="post-card-title">Créer votre premier show sur la timeline</div>
-            <p class="post-card-excerpt">Timeline, clips, keyframes : apprenez à programmer un show lumière complet synchronisé à votre musique. Pas à pas avec captures d'écran.</p>
+        <!-- Tuto 3 -->
+        <a href="creer-sequences-lumiere-mystrow.html" class="tuto-card">
+          <div class="tuto-thumb">
+            <img src="https://img.youtube.com/vi/GJefcGGsKxI/maxresdefault.jpg" alt="Créer et enregistrer ses séquences lumière MyStrow" loading="lazy">
+            <div class="tuto-thumb-overlay"></div>
+            <div class="tuto-play">▶</div>
           </div>
-          <div class="post-card-footer">
-            <span class="post-card-date">Mars 2026</span>
-            <span class="post-card-arrow">→</span>
-          </div>
-        </a>
-
-        <a href="plan-de-scene.html" class="post-card" data-cat="setup">
-          <div class="post-card-thumb" style="background: linear-gradient(135deg, #080d08, #0a120a);">🗺️</div>
-          <div class="post-card-body">
-            <div class="post-category" style="color:#22c55e;">Setup</div>
-            <div class="post-card-title">Patch DMX et plan de scène — Guide pas à pas</div>
-            <p class="post-card-excerpt">Comment patcher vos projecteurs, créer vos groupes, et configurer le plan de scène interactif de MyStrow pour votre installation.</p>
-          </div>
-          <div class="post-card-footer">
-            <span class="post-card-date">Février 2026</span>
-            <span class="post-card-arrow">→</span>
+          <div class="tuto-body">
+            <div class="tuto-meta">
+              <span class="tuto-badge">Séquences · Timeline</span>
+              <span class="tuto-date">Avr 2026</span>
+            </div>
+            <div class="tuto-title">Créer et Enregistrer ses Séquences Lumière avec MyStrow</div>
+            <p class="tuto-desc">Rec Lumière en direct ou programmation sur timeline — créez des shows lumière reproductibles à l'infini, synchronisés au millième de seconde avec votre musique.</p>
+            <span class="tuto-link">Lire le guide →</span>
           </div>
         </a>
 
-        <a href="tarifs.html" class="post-card" data-cat="actu">
-          <div class="post-card-thumb" style="background: linear-gradient(135deg, #0d0c09, #1a1800);">🚀</div>
-          <div class="post-card-body">
-            <div class="post-category">Actu MyStrow</div>
-            <div class="post-card-title">MyStrow v3 — Toutes les nouveautés</div>
-            <p class="post-card-excerpt">Nouvelles fixtures GDTF, éditeur d'effets, plan de scène 3D, corrections et améliorations. Tout ce qui change dans cette mise à jour majeure.</p>
+        <!-- Tuto 4 — Bases du DMX en 5 minutes -->
+        <a href="https://youtu.be/cXyJaINXok8" target="_blank" rel="noopener noreferrer" class="tuto-card">
+          <div class="tuto-thumb">
+            <img src="https://img.youtube.com/vi/cXyJaINXok8/maxresdefault.jpg" alt="Les bases du DMX en 5 minutes avec MyStrow" loading="lazy">
+            <div class="tuto-thumb-overlay"></div>
+            <div class="tuto-play">▶</div>
           </div>
-          <div class="post-card-footer">
-            <span class="post-card-date">Janvier 2026</span>
-            <span class="post-card-arrow">→</span>
+          <div class="tuto-body">
+            <div class="tuto-meta">
+              <span class="tuto-badge">DMX · Câblage</span>
+              <span class="tuto-date">Mai 2026</span>
+            </div>
+            <div class="tuto-title">Les Bases du DMX en 5 Minutes — Câbles, Univers &amp; Branchements</div>
+            <p class="tuto-desc">Tu débutes en DMX et tu comprends rien aux câbles, aux univers ou aux branchements ? Comment fonctionne une chaîne DMX, comment brancher tes projecteurs, comment patcher — en 5 minutes chrono.</p>
+            <span class="tuto-link">Voir la vidéo →</span>
           </div>
         </a>
 
-      </div>
-
-      <!-- CTA boutique -->
-      <div style="background:var(--bg3);border:1px solid var(--accent-border);border-radius:14px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-        <div>
-          <div class="section-tag" style="margin-bottom:8px;">Matériel recommandé</div>
-          <p style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);line-height:1.2;">AKAI, Node ArtNet, Interface USB/DMX —<br><span style="color:var(--accent);">le setup complet.</span></p>
-          <p style="font-size:13px;color:var(--muted);margin-top:8px;">Liens affiliés Amazon — aucun surcoût pour vous.</p>
-        </div>
-        <a href="boutique.html" style="background:var(--accent);color:#0c0b00;border-radius:10px;padding:13px 28px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-decoration:none;white-space:nowrap;transition:opacity .18s;flex-shrink:0;" onmouseover="this.style.opacity='.86'" onmouseout="this.style.opacity='1'">Voir la boutique →</a>
       </div>
 
     </div>
@@ -277,7 +221,7 @@
       <a href="blog.html">Blog</a>
       <a href="boutique.html">Boutique</a>
       <a href="confidentialite.html">Confidentialité</a>
-      <a href="contact.html">Contact</a><a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="footer-nl">
       <form class="nl-form" onsubmit="handleNewsletter(event)">
@@ -296,13 +240,6 @@
 </footer>
 
 <script>
-function filterPosts(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('#posts-grid .post-card, .featured-post').forEach(el => {
-    el.style.display = (cat === 'all' || el.dataset.cat === cat) ? '' : 'none';
-  });
-}
 function handleNewsletter(e) {
   e.preventDefault();
   var email = document.getElementById('nl-email').value;
