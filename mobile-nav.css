@@ -112,3 +112,86 @@
   transition: opacity 0.18s;
 }
 .nb-dl:hover { opacity: 0.85; }
+
+/* Extra section — langue + réseaux */
+.nb-extra {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.nb-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a7570;
+  margin-bottom: 4px;
+}
+.nb-langs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.nb-lang-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a7570 !important;
+  text-decoration: none !important;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.nb-lang-link:hover { color: #E2CE16 !important; background: rgba(226,206,22,0.06); border-color: rgba(226,206,22,0.25); }
+.nb-lang-cur {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(226,206,22,0.08);
+  border: 1px solid rgba(226,206,22,0.3);
+  font-size: 13px;
+  font-weight: 700;
+  color: #E2CE16;
+}
+.nb-socials {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.nb-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #7a7570 !important;
+  text-decoration: none !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.nb-social:hover { color: #f4f1e8 !important; background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
+.nb-social--discord:hover { color: #5865F2 !important; border-color: rgba(88,101,242,0.4); background: rgba(88,101,242,0.08); }
+
+/* Sur mobile : cache les socials + lang-selector dans la nav (ils sont dans le hamburger) */
+@media (max-width: 680px) {
+  .nav-right > a,
+  .lang-selector { display: none !important; }
+}
+
+/* Panel scrollable si contenu long */
+.nb-panel {
+  max-height: 100dvh;
+  overflow-y: auto;
+}
