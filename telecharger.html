@@ -467,5 +467,35 @@ function handleNewsletter(e) {
 }
 </script>
 <script src="mobile-nav.js"></script>
+<script>
+(function(){
+  if(!/Mac/.test(navigator.platform||'')&&!/Mac/.test(navigator.userAgent||''))return;
+  var aS=document.querySelector('a[href$="p=mac"]');
+  var aI=document.querySelector('a[href*="mac_intel"]');
+  if(!aS||!aI)return;
+  var labels={fr:'✓ Recommandé pour votre Mac',en:'✓ Recommended for your Mac',de:'✓ Empfohlen für Ihren Mac',es:'✓ Recomendado para tu Mac',pt:'✓ Recomendado para o seu Mac'};
+  var lang=(document.documentElement.lang||'fr').split('-')[0];
+  var txt=labels[lang]||labels.en;
+  function mark(winner,loser){
+    var b=document.createElement('div');
+    b.textContent=txt;
+    b.style.cssText='font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px;color:#4caf50;';
+    winner.parentNode.insertBefore(b,winner);
+    loser.style.opacity='0.35';
+    loser.onmouseover=loser.onmouseout=null;
+  }
+  if(navigator.userAgentData&&navigator.userAgentData.getHighEntropyValues){
+    navigator.userAgentData.getHighEntropyValues(['architecture']).then(function(u){
+      if(u.architecture==='arm')mark(aS,aI);
+      else if(u.architecture==='x86')mark(aI,aS);
+    }).catch(function(){});
+    return;
+  }
+  try{
+    var gl=document.createElement('canvas').getContext('webgl');
+    if(gl){var ext=gl.getExtension('WEBGL_debug_renderer_info');if(ext){var r=gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)||'';if(/Apple M\d/i.test(r))mark(aS,aI);else if(/Intel|AMD/i.test(r))mark(aI,aS);}}
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
