@@ -1,26 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Interactive Bühnenplan: Visualize Your Fixtures | MyStrow</title>
-  <meta name="description" content="Visualize and Steuerung your Scheinwerfers on an interactive Bühnenplan with MyStrow. 6 Gruppes (A to F). Real-time visual DMX Patch.">
+  <title>Interaktiver Bühnenplan: Scheinwerfer visualisieren und steuern | MyStrow</title>
+  <meta name="description" content="Visualisieren und steuern Sie Ihre Scheinwerfer auf einem interaktiven Bühnenplan mit MyStrow. 6 Gruppen (A bis F). Echtzeit-DMX-Patch mit visuellem Feedback.">
   <link rel="canonical" href="https://mystrow.fr/de/stage-plot">
   <link rel="alternate" hreflang="fr" href="https://mystrow.fr/plan-de-scene">
-  <link rel="alternate" hreflang="en" href="https://mystrow.fr/de/stage-plot">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/stage-plot">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/stage-plot">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/stage-plot">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/stage-plot">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Interactive Bühnenplan: Visualize Your Fixtures | MyStrow">
-  <meta property="og:description" content="Visualize and Steuerung your Scheinwerfers on an interactive Bühnenplan with MyStrow. 6 Gruppes (A to F). Real-time visual DMX Patch.">
+  <meta property="og:title" content="Interaktiver Bühnenplan: Scheinwerfer visualisieren und steuern | MyStrow">
+  <meta property="og:description" content="Visualisieren und steuern Sie Ihre Scheinwerfer auf einem interaktiven Bühnenplan mit MyStrow. 6 Gruppen (A bis F). Echtzeit-DMX-Patch mit visuellem Feedback.">
   <meta property="og:url" content="https://mystrow.fr/de/stage-plot">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyStrow","url":"https://mystrow.fr/en/stage-plot","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","description":"DMX lighting software with interactive Bühnenplan. Visualize and Steuerung your 6 Scheinwerfer Gruppes (A to F) in Echtzeit with color feedback at 25 fps.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Interactive Bühnenplan","6 Scheinwerfer Gruppes A to F","Real-time color feedback","Visual DMX Patch","25 fps refresh","Customizable addressing"]}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyStrow","url":"https://mystrow.fr/de/stage-plot","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","description":"DMX-Beleuchtungssoftware mit interaktivem Bühnenplan. Visualisieren und steuern Sie Ihre 6 Scheinwerfergruppen (A bis F) in Echtzeit mit visuellem Farb-Feedback bei 25 fps.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Interaktiver Bühnenplan","6 Scheinwerfergruppen A bis F","Echtzeit-Farb-Feedback","Visueller DMX-Patch","25 fps Bildwiederholrate","Anpassbare Adressierung"]}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mystrow.fr/en/"},{"@type":"ListItem","position":2,"name":"Interactive Bühnenplan","item":"https://mystrow.fr/en/stage-plot"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://mystrow.fr/de/"},{"@type":"ListItem","position":2,"name":"Interaktiver Bühnenplan","item":"https://mystrow.fr/de/stage-plot"}]}
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -108,7 +111,7 @@
     .Gruppe-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 10px; }
     .Gruppe-addr { font-size: 11px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; }
     @media (max-width: 680px) { .Gruppe-grid { grid-template-columns: 1fr 1fr; } }
-  
+
     /* Lang dropdown */
     .lang-selector { position: relative; display: inline-flex; }
     .lang-selector-btn {
@@ -142,7 +145,7 @@
     .lang-dropdown span { color: var(--accent); cursor: default; }
 
     /* Footer newsletter */
-        
+
     @media (max-width: 700px) {
       .nl-strip { flex-direction: column; align-items: flex-start; padding: 36px 20px; }
       .nl-form input[type="email"] { width: 160px; }
@@ -254,11 +257,11 @@
       <div class="nav-dropdown-wrap">
         <a href="index.html#features">Funktionen <span class="nav-chevron">▾</span></a>
         <div class="nav-mega">
-          <a class="mega-item" href="dmx-lighting-software.html"><div class="mega-icon">⚡</div><div><div class="mega-title">DMX-Beleuchtungssoftware</div><div class="mega-desc">PC + DMX Node. Volle Kontrolle über Ihre Bühne in Echtzeit.</div></div></a>
-          <a class="mega-item" href="akai-apc-mini-Steuerungler.html"><div class="mega-icon">🎹</div><div><div class="mega-title">Matériel compatible</div><div class="mega-desc">Entwickelt für das AKAI. Jedes Pad, jeder Fader direkt zugeordnet.</div></div></a>
+          <a class="mega-item" href="dmx-lighting-software.html"><div class="mega-icon">⚡</div><div><div class="mega-title">DMX-Beleuchtungssoftware</div><div class="mega-desc">PC + DMX-Node. Volle Kontrolle über Ihre Bühne in Echtzeit.</div></div></a>
+          <a class="mega-item" href="akai-apc-mini-controller.html"><div class="mega-icon">🎹</div><div><div class="mega-title">Kompatible Hardware</div><div class="mega-desc">Entwickelt für das AKAI. Jedes Pad, jeder Fader direkt zugeordnet.</div></div></a>
           <a class="mega-item" href="ai-lighting.html"><div class="mega-icon">✨</div><div><div class="mega-title">KI-Beleuchtung</div><div class="mega-desc">KI übernimmt die Bühne oder hilft Ihnen, Shows zu programmieren.</div></div></a>
           <a class="mega-item" href="light-programming.html"><div class="mega-icon">🎬</div><div><div class="mega-title">Lichtprogrammierung</div><div class="mega-desc">Visuelle Timeline, Keyframes, editierbare Clips. Shows im Voraus komponieren.</div></div></a>
-          <a class="mega-item" href="audio-video-player.html"><div class="mega-icon">🎵</div><div><div class="mega-title">Audio &amp; Video Player</div><div class="mega-desc">Playlist and projections managed from the same interface. All in one.</div></div></a>
+          <a class="mega-item" href="audio-video-player.html"><div class="mega-icon">🎵</div><div><div class="mega-title">Audio &amp; Video Player</div><div class="mega-desc">Playlist und Projektionen aus einer einzigen Oberfläche verwaltet.</div></div></a>
           <a class="mega-item" href="stage-plot.html"><div class="mega-icon">🗺️</div><div><div class="mega-title">Interaktiver Bühnenplan</div><div class="mega-desc">Scheinwerfergruppen mit einem Klick oder Fader visualisieren und steuern.</div></div></a>
         </div>
       </div>
@@ -294,30 +297,30 @@
       <div class="breadcrumb">
         <a href="index.html">Startseite</a> &rsaquo; <span>Interaktiver Bühnenplan</span>
       </div>
-      <div class="hero-badge">Visualization · Groups · Real-time</div>
-      <h1>Interactive<br><em>Bühnenplan</em></h1>
-      <p class="hero-sub">Visualize your entire stage on an interactive plot. Control each Scheinwerfer Gruppe with a klicken or a Fader. The color feedback reflects the actual light state in Echtzeit.</p>
-      <a href="download.html" class="btn-primary">Download for free ↓</a>
+      <div class="hero-badge">Visualisierung · Gruppen · Echtzeit</div>
+      <h1>Interaktiver<br><em>Bühnenplan</em></h1>
+      <p class="hero-sub">Visualisieren Sie Ihre gesamte Bühne auf einem interaktiven Plan. Steuern Sie jede Scheinwerfergruppe per Klick oder Fader. Das Farb-Feedback spiegelt den tatsächlichen Lichtzustand in Echtzeit wider.</p>
+      <a href="download.html" class="btn-primary">Kostenlos herunterladen ↓</a>
     </div>
   </section>
 
   <!-- VISUALIZATION -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Visualization</div>
-      <h2>A Visual and Interactive Bühnenplan</h2>
+      <div class="section-tag">Visualisierung</div>
+      <h2>Ein visueller und interaktiver Bühnenplan</h2>
       <div class="prose">
-        <p>The Bühnenplan is a graphical representation of your installation, displayed in the main interface. Each Scheinwerfer is represented by an icon whose color exactly reflects the DMX value sent in Echtzeit.</p>
-        <p>Without being on stage, you can tell at a glance which Scheinwerfer is on and whether the Gruppes are responding correctly. Organized into 6 Gruppes (A to F), the plot can be adapted to your actual configuration.</p>
-        <p>Click a Gruppe to select it and apply color or intensity directly. The plot becomes an alternative Steuerung interface to the AKAI, StreamDeck or tablet, ideal during preparation phases.</p>
+        <p>Der Bühnenplan ist eine grafische Darstellung Ihrer Installation, die in der Hauptoberfläche angezeigt wird. Jeder Scheinwerfer wird durch ein Symbol dargestellt, dessen Farbe genau den in Echtzeit gesendeten DMX-Wert widerspiegelt.</p>
+        <p>Ohne auf der Bühne zu sein, erkennen Sie auf einen Blick, welcher Scheinwerfer eingeschaltet ist und ob die Gruppen korrekt reagieren. In 6 Gruppen (A bis F) unterteilt, lässt sich der Plan an Ihre tatsächliche Konfiguration anpassen.</p>
+        <p>Klicken Sie auf eine Gruppe, um sie auszuwählen, und wenden Sie Farbe oder Intensität direkt an. Der Plan wird zu einer alternativen Steuerungsoberfläche neben dem AKAI, StreamDeck oder Tablet — ideal in der Vorbereitungsphase.</p>
       </div>
       <div class="badge-row">
-        <span class="badge">Real-time</span>
+        <span class="badge">Echtzeit</span>
         <span class="badge">25 fps</span>
-        <span class="badge">Animated beams</span>
-        <span class="badge">6 Gruppes A to F</span>
-        <span class="badge">4 Art-Net universes</span>
-        <span class="badge">Moving heads + PARs</span>
+        <span class="badge">Animierte Lichtstrahlen</span>
+        <span class="badge">6 Gruppen A bis F</span>
+        <span class="badge">4 Art-Net-Universen</span>
+        <span class="badge">Moving Heads + PAR</span>
       </div>
     </div>
   </section>
@@ -325,28 +328,28 @@
   <!-- FEATURES -->
   <section class="section">
     <div class="wrap">
-      <div class="section-tag">Features</div>
-      <h2>Everything to Visualize and Control Your Installation</h2>
+      <div class="section-tag">Funktionen</div>
+      <h2>Alles, um Ihre Installation zu visualisieren und zu steuern</h2>
       <div class="feat-grid">
         <div class="feat-item">
           <div class="feat-icon">🗺️</div>
-          <h3>Fixture Groups</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">The Bühnenplan organizes your Scheinwerfers into 6 Gruppes (A to F) corresponding to classic stage lighting positions. Select an entire Gruppe with one klicken to apply color and intensity simultaneously.</p>
+          <h3>Scheinwerfergruppen</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Der Bühnenplan organisiert Ihre Scheinwerfer in 6 Gruppen (A bis F), die den klassischen Bühnenlichtpositionen entsprechen. Wählen Sie eine gesamte Gruppe mit einem Klick aus, um Farbe und Intensität gleichzeitig anzuwenden.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">🎯</div>
-          <h3>Zone Control</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Click a zone to select the Gruppe, then modify color and intensity from the adjacent sliders. More intuitive than abstract DMX sliders.</p>
+          <h3>Zonensteuerung</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Klicken Sie auf eine Zone, um die Gruppe auszuwählen, und ändern Sie dann Farbe und Intensität über die angrenzenden Regler. Intuitiver als abstrakte DMX-Schieberegler.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">⚡</div>
-          <h3>Real-time Feedback</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Each icon's color is continuously updated based on actual DMX values, whether the source is the AKAI, AI Lighting or the timeline, at 25 fps.</p>
+          <h3>Echtzeit-Feedback</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Die Farbe jedes Symbols wird kontinuierlich anhand der tatsächlichen DMX-Werte aktualisiert, unabhängig davon, ob die Quelle das AKAI, die KI-Beleuchtung oder die Timeline ist — bei 25 fps.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">🔧</div>
-          <h3>Customizable Patch</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">DMX Patch is fully customizable. MyStrow offers automatic Patch (addresses 1, 11, 21…) that you can manually adjust to match your installation. Supports up to 4 Art-Net universes (2,048 Kanals). Patch is saved in the show file.</p>
+          <h3>Anpassbarer Patch</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Der DMX-Patch ist vollständig anpassbar. MyStrow bietet automatischen Patch (Adressen 1, 11, 21…), den Sie manuell anpassen können, um Ihrer Installation zu entsprechen. Unterstützt bis zu 4 Art-Net-Universen (2.048 Kanäle). Der Patch wird in der Show-Datei gespeichert.</p>
         </div>
       </div>
     </div>
@@ -355,44 +358,44 @@
   <!-- 6 GROUPS -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Lighting Architecture</div>
-      <h2>MyStrow's 6 Fixture Groups</h2>
-      <p style="color:var(--muted);font-size:15px;margin-bottom:8px;">MyStrow organizes lighting into 6 Gruppes (A to F) corresponding to standard stage lighting positions, for immediate setup.</p>
+      <div class="section-tag">Lichtarchitektur</div>
+      <h2>Die 6 Scheinwerfergruppen von MyStrow</h2>
+      <p style="color:var(--muted);font-size:15px;margin-bottom:8px;">MyStrow organisiert die Beleuchtung in 6 Gruppen (A bis F), die den Standard-Bühnenlichtpositionen entsprechen — für eine sofortige Einrichtung.</p>
       <div class="Gruppe-grid">
         <div class="Gruppe-card">
           <div class="Gruppe-label">A</div>
-          <div class="Gruppe-name">Front Light</div>
-          <div class="Gruppe-desc">Front-of-house Scheinwerfers lighting artists from the front. Main face light, essential for readability and expression.</div>
+          <div class="Gruppe-name">Frontlicht</div>
+          <div class="Gruppe-desc">Scheinwerfer im Zuschauerraum, die die Künstler von vorne beleuchten. Hauptgesichtslicht, unverzichtbar für Lesbarkeit und Ausdruck.</div>
           <div class="Gruppe-addr">DMX: 1, 11, 21…</div>
         </div>
         <div class="Gruppe-card">
           <div class="Gruppe-label">B</div>
-          <div class="Gruppe-name">Downstage Wash 1</div>
-          <div class="Gruppe-desc">Overhead wash Scheinwerfers creating vertical modeling and depth. Shapes silhouette from above.</div>
+          <div class="Gruppe-name">Oberlicht 1</div>
+          <div class="Gruppe-desc">Overhead-Wash-Scheinwerfer, die vertikale Modellierung und Tiefe erzeugen. Formt die Silhouette von oben.</div>
           <div class="Gruppe-addr">DMX: 31, 41…</div>
         </div>
         <div class="Gruppe-card">
           <div class="Gruppe-label">C</div>
-          <div class="Gruppe-name">Downstage Wash 2</div>
-          <div class="Gruppe-desc">Second wash zone for different lighting in stage depth. Ideal for shows with multiple playing areas.</div>
+          <div class="Gruppe-name">Oberlicht 2</div>
+          <div class="Gruppe-desc">Zweite Wash-Zone für unterschiedliche Beleuchtung in der Bühnentiefe. Ideal für Shows mit mehreren Spielbereichen.</div>
           <div class="Gruppe-addr">DMX: 51, 61…</div>
         </div>
         <div class="Gruppe-card">
           <div class="Gruppe-label">D</div>
-          <div class="Gruppe-name">Downstage Wash 3</div>
-          <div class="Gruppe-desc">Third wash zone for deep stages or installations requiring full overhead coverage.</div>
+          <div class="Gruppe-name">Oberlicht 3</div>
+          <div class="Gruppe-desc">Dritte Wash-Zone für tiefe Bühnen oder Installationen, die eine vollständige Overhead-Abdeckung erfordern.</div>
           <div class="Gruppe-addr">DMX: 71, 81…</div>
         </div>
         <div class="Gruppe-card">
           <div class="Gruppe-label">E</div>
-          <div class="Gruppe-name">Side Light</div>
-          <div class="Gruppe-desc">Side Scheinwerfers creating relief, dramatic shadows and sculpting effects on artists and sets.</div>
+          <div class="Gruppe-name">Seitenlicht</div>
+          <div class="Gruppe-desc">Seitliche Scheinwerfer, die Relief, dramatische Schatten und skulpturale Effekte auf Künstler und Bühnenbild erzeugen.</div>
           <div class="Gruppe-addr">DMX: 91, 101…</div>
         </div>
         <div class="Gruppe-card">
           <div class="Gruppe-label">F</div>
-          <div class="Gruppe-name">Back Light</div>
-          <div class="Gruppe-desc">Upstage back Scheinwerfers lighting artists from behind. Create silhouette effects and dramatic atmospheres.</div>
+          <div class="Gruppe-name">Gegenlicht</div>
+          <div class="Gruppe-desc">Scheinwerfer im Bühnenhintergrund, die Künstler von hinten beleuchten. Erzeugen Silhouetteneffekte und dramatische Atmosphären.</div>
           <div class="Gruppe-addr">DMX: 111, 121…</div>
         </div>
       </div>
@@ -402,28 +405,28 @@
   <!-- IN PRACTICE -->
   <section class="section">
     <div class="wrap">
-      <div class="section-tag">Practical Use</div>
-      <h2>The Bühnenplan in Real Situations</h2>
+      <div class="section-tag">Praktische Anwendung</div>
+      <h2>Der Bühnenplan in realen Situationen</h2>
       <div class="feat-grid">
         <div class="feat-item">
           <div class="feat-icon">🔌</div>
-          <h3>Setup &amp; Cabling Phase</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Click a Gruppe, send a bright color: if the Scheinwerfer lights up, the address and cabling are correct. The visual Patch is your diagnostic tool.</p>
+          <h3>Aufbau &amp; Verkabelungsphase</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Klicken Sie auf eine Gruppe, senden Sie eine helle Farbe: wenn der Scheinwerfer aufleuchtet, sind Adresse und Verkabelung korrekt. Der visuelle Patch ist Ihr Diagnosewerkzeug.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">🎨</div>
-          <h3>Lighting &amp; Adjustments</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Manipulate Gruppes from the plot to test colors and combinations. The global view lets you see color balance and adjust levels per Gruppe without leaving the interface.</p>
+          <h3>Beleuchtung &amp; Anpassungen</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Bearbeiten Sie Gruppen im Plan, um Farben und Kombinationen zu testen. Die Gesamtansicht ermöglicht es Ihnen, das Farbgleichgewicht zu beurteilen und die Intensitäten pro Gruppe anzupassen, ohne die Oberfläche zu verlassen.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">👁️</div>
-          <h3>Show Monitoring</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">During the show, the plot serves as passive monitoring: a permanent summary view of the entire installation state, without distracting from the main Steuerung panel.</p>
+          <h3>Show-Überwachung</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Während der Show dient der Plan als passive Überwachung: eine permanente Zusammenfassungsansicht des gesamten Installationszustands, ohne vom Hauptsteuerungspanel abzulenken.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">🖥️</div>
-          <h3>Dedicated Second Screen</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">With two screens, open the plot full screen on the second monitor for a dedicated installation view, while the Steuerung interface occupies the first screen.</p>
+          <h3>Dedizierter zweiter Bildschirm</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Mit zwei Bildschirmen öffnen Sie den Plan im Vollbildmodus auf dem zweiten Monitor für eine dedizierte Installationsansicht, während die Steuerungsoberfläche den ersten Bildschirm belegt.</p>
         </div>
       </div>
     </div>
@@ -432,38 +435,38 @@
   <!-- CTA -->
   <div class="cta-block">
     <div class="wrap">
-      <div class="section-tag">Get Started</div>
-      <h2>Visualize Your Stage in Real Time</h2>
-      <p>Download MyStrow and discover the interactive Bühnenplan. Control your 6 Gruppes (A to F) from a visual plot synchronized with your lights.</p>
-      <a href="download.html" class="btn-primary">Download MyStrow ↓</a>
+      <div class="section-tag">Jetzt starten</div>
+      <h2>Visualisieren Sie Ihre Bühne in Echtzeit</h2>
+      <p>Laden Sie MyStrow herunter und entdecken Sie den interaktiven Bühnenplan. Steuern Sie Ihre 6 Gruppen (A bis F) von einem visuellen Plan aus, der mit Ihren Scheinwerfern synchronisiert ist.</p>
+      <a href="download.html" class="btn-primary">MyStrow herunterladen ↓</a>
     </div>
   </div>
 
   <!-- EXPLORE -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Explore</div>
-      <h2>Discover All Features</h2>
+      <div class="section-tag">Entdecken</div>
+      <h2>Alle Funktionen entdecken</h2>
       <div class="other-grid">
         <a href="dmx-lighting-software.html" class="other-card">
-          <h3>⚡ DMX Lighting Software</h3>
-          <p>Full DMX Steuerung from your PC. Art-Net protocol, 25 fps, multi-Scheinwerfer support.</p>
+          <h3>⚡ DMX-Beleuchtungssoftware</h3>
+          <p>Vollständige DMX-Steuerung von Ihrem PC. Art-Net-Protokoll, 25 fps, Unterstützung mehrerer Scheinwerfer.</p>
         </a>
-        <a href="akai-apc-mini-Steuerungler.html" class="other-card">
+        <a href="akai-apc-mini-controller.html" class="other-card">
           <h3>🎹 AKAI APC mini Controller</h3>
-          <p>Every pad, every Fader has its direct mapping. Built for live performance.</p>
+          <p>Jedes Pad, jeder Fader hat seine direkte Zuordnung. Entwickelt für den Live-Einsatz.</p>
         </a>
         <a href="ai-lighting.html" class="other-card">
-          <h3>✨ AI Lighting</h3>
-          <p>AI takes Steuerung of the whole stage, reactive to music in Echtzeit.</p>
+          <h3>✨ KI-Beleuchtung</h3>
+          <p>Die KI übernimmt die gesamte Bühne, reaktiv auf Musik in Echtzeit.</p>
         </a>
         <a href="light-programming.html" class="other-card">
-          <h3>🎬 Light Programming</h3>
+          <h3>🎬 Lichtprogrammierung</h3>
           <p>Visuelle Timeline, Keyframes, editierbare Clips. Shows im Voraus komponieren.</p>
         </a>
         <a href="audio-video-player.html" class="other-card">
           <h3>🎵 Audio &amp; Video Player</h3>
-          <p>Playlist and projections managed from the same interface. All in one.</p>
+          <p>Playlist und Projektionen aus einer einzigen Oberfläche verwaltet. Alles in einem.</p>
         </a>
       </div>
     </div>
