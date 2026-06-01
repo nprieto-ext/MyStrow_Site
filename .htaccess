@@ -7,6 +7,7 @@ RewriteEngine On
 
 # Redirect old slugs
 RewriteRule ^programmation-dmx-avec-mystrow(/.*)?$ /programmation-lumiere [R=301,L]
+RewriteRule ^synchroniser-mystrow-platine-dj(/.*)?$ /synchroniser-mystrow-logiciel-dj [R=301,L]
 
 # HTTP → HTTPS
 RewriteCond %{HTTPS} off
