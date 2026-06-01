@@ -132,6 +132,18 @@
     .os-panel.active { display: block; animation: fade 0.25s ease; }
     @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
+    /* Software chooser */
+    .chooser-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .sw-tabs { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .sw-tab { background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.4px; padding: 10px 20px; border-radius: 999px; cursor: pointer; transition: all 0.18s; }
+    .sw-tab:hover { border-color: rgba(226,206,22,0.45); }
+    .sw-tab.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .sw-panel { display: none; }
+    .sw-panel.active { display: block; animation: fade 0.25s ease; }
+    .sub-method { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 21px; color: var(--accent); margin: 40px 0 4px; }
+    .os-pc .mac-only { display: none !important; }
+    .os-mac .pc-only { display: none !important; }
+
     /* Steps */
     .step-list { display: flex; flex-direction: column; gap: 24px; margin-top: 28px; }
     .step { display: flex; gap: 18px; align-items: flex-start; }
@@ -146,6 +158,10 @@
     .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
     .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
     .note-box strong { color: var(--text); }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .check-list li strong { color: var(--text); }
 
     /* Comparison table */
     .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
@@ -351,151 +367,187 @@
       </div>
 
       <div class="note-box">
-        <p>💡 <strong>Tous les logiciels n'envoient pas de MIDI Clock.</strong> <strong>Traktor</strong> et <strong>VirtualDJ</strong> savent le faire (VirtualDJ fonctionne très bien via loopMIDI). <strong>rekordbox</strong> et <strong>Serato</strong>, non : pour eux on utilise la capture du son ou un pont « Ableton Link → MIDI ». Et les applis de simple lecture — <strong>Spotify, KaraFun, YouTube…</strong> — n'ont aucun tempo à transmettre : elles sortent le son de façon classique et passent donc forcément par la <strong>capture du son</strong>. On détaille tout ça plus bas.</p>
+        <p>💡 <strong>Laquelle choisir ? Ça dépend de votre logiciel.</strong> Certains savent envoyer leur tempo à MyStrow, d'autres non :</p>
+        <ul class="check-list" style="margin-top:14px;">
+          <li><strong>Traktor &amp; VirtualDJ</strong> — envoient leur tempo → <strong>MIDI Clock</strong>, synchro parfaite.</li>
+          <li><strong>rekordbox &amp; Serato</strong> — n'envoient pas de tempo → <strong>capture du son</strong> (ou un pont « Ableton Link → MIDI »).</li>
+          <li><strong>Spotify, KaraFun, YouTube…</strong> — ce sont de simples lecteurs, sans tempo à transmettre → <strong>capture du son</strong>.</li>
+        </ul>
+        <p style="margin-top:14px;margin-bottom:0;">Pas de panique : juste en dessous, vous choisissez votre ordinateur puis votre logiciel, et MyStrow vous donne directement les bonnes étapes.</p>
       </div>
     </div>
   </section>
 
-  <!-- GUIDE AVEC TOGGLE PC / MAC -->
+  <!-- GUIDE : SÉLECTEUR ORDINATEUR + LOGICIEL -->
   <section class="section-bg" id="guide">
     <div class="wrap-narrow">
-      <div style="text-align:center;margin-bottom:34px;">
+      <div style="text-align:center;margin-bottom:36px;">
         <div class="section-tag" style="margin-bottom:8px;">Le guide pas à pas</div>
-        <h2 style="margin-bottom:22px;">Choisissez votre système</h2>
+        <h2 style="margin-bottom:10px;">Choisissez votre système &amp; votre logiciel</h2>
+        <p class="prose" style="margin-bottom:26px;">Sélectionnez votre ordinateur, puis le logiciel que vous utilisez : MyStrow vous affiche directement les bonnes étapes.</p>
+
+        <div class="chooser-label">1 · Votre ordinateur</div>
         <div class="os-tabs">
           <button class="os-tab active" data-os="pc">💻 PC / Windows</button>
           <button class="os-tab" data-os="mac">🍎 Mac</button>
         </div>
-      </div>
 
-      <!-- ============ PANEL PC ============ -->
-      <div class="os-panel active" id="panel-pc">
-
-        <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">Méthode 1 — Capture du son (recommandée pour débuter)</h3>
-        <p class="prose" style="margin-bottom:0;">Sur Windows, MyStrow capte directement la sortie audio grâce au <strong>loopback WASAPI</strong> intégré. Aucun logiciel supplémentaire à installer.</p>
-
-        <div class="step-list">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <h3>Ouvrez le mode LIVE</h3>
-              <p>Dans MyStrow, passez le séquenceur en mode <strong>IA Lumière / LIVE</strong>.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <h3>Choisissez votre sortie comme source</h3>
-              <p>Dans la liste des sources audio, sélectionnez votre périphérique de sortie (vos enceintes, ou directement votre platine si elle a sa propre carte son). MyStrow capte le signal et commence à détecter les beats.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <h3>Aucun signal ? Vérifiez la sortie</h3>
-              <p>Si l'indicateur reste muet, c'est que le son sort sur une autre carte. Sélectionnez explicitement la <strong>sortie de votre platine</strong> dans la liste, ou activez le <code>Mixage stéréo</code> dans les paramètres son de Windows.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="note-box">
-          <p>🎧 <strong>Carte son type DDJ-400 :</strong> votre logiciel DJ envoie le son directement sur la platine, pas sur la sortie Windows par défaut. Pensez donc à sélectionner la <strong>DDJ-400 comme source</strong> dans MyStrow. Si votre logiciel tourne en <strong>ASIO exclusif</strong>, le son contourne Windows et la capture devient impossible — passez alors au MIDI Clock ci-dessous.</p>
-        </div>
-
-        <h3 style="font-size:24px;color:var(--accent);margin:48px 0 4px;">Méthode 2 — MIDI Clock (calage parfait)</h3>
-        <p class="prose" style="margin-bottom:0;">Pour relier votre logiciel DJ à MyStrow sur le même PC, il faut un <strong>port MIDI virtuel</strong>.</p>
-
-        <div class="step-list">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <h3>Installez loopMIDI</h3>
-              <p>Téléchargez <strong>loopMIDI</strong> (gratuit, de Tobias Erichsen) et créez un port nommé <code>MyStrow</code>. MyStrow sait aussi le configurer automatiquement pour vous.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <h3>Envoyez le MIDI Clock depuis votre logiciel</h3>
-              <p><strong>Traktor :</strong> Preferences → <em>Controller Manager</em> → Add → Generic MIDI, réglez l'<em>Out-Port</em> sur <code>MyStrow</code>. Puis Preferences → <em>External Sync</em> → cochez <em>Enable MIDI Clock</em>. Enfin, dans le panneau <strong>MASTER CLOCK</strong> (icône métronome en haut à gauche), cliquez sur le bouton <em>MIDI Start</em> (il devient bleu).</p>
-              <p style="margin-top:10px;"><strong>VirtualDJ :</strong> dans les réglages, activez l'envoi du <em>MIDI Clock</em> et choisissez le port <code>MyStrow</code> comme sortie. Testé et fonctionnel via loopMIDI — le BPM de VirtualDJ pilote directement MyStrow.</p>
-              <p style="margin-top:10px;"><strong>rekordbox / Serato :</strong> pas de MIDI Clock natif. Activez <strong>Ableton Link</strong> et utilisez un pont « Link → MIDI Clock » (ex. l'outil communautaire <em>Rekordbox-Midi-Clock</em>) en lui faisant émettre l'horloge sur le port <code>MyStrow</code>.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <h3>Sélectionnez « MIDI Clock » dans MyStrow</h3>
-              <p>En mode LIVE, choisissez la source <strong>MIDI Clock</strong>. MyStrow se cale automatiquement sur le BPM reçu — beats et tempo parfaitement synchronisés.</p>
-            </div>
-          </div>
+        <div class="chooser-label" style="margin-top:24px;">2 · Votre logiciel</div>
+        <div class="sw-tabs">
+          <button class="sw-tab active" data-sw="traktor">Traktor</button>
+          <button class="sw-tab" data-sw="virtualdj">VirtualDJ</button>
+          <button class="sw-tab" data-sw="rekordbox">rekordbox / Serato</button>
+          <button class="sw-tab" data-sw="player">Spotify · KaraFun · autre</button>
         </div>
       </div>
 
-      <!-- ============ PANEL MAC ============ -->
-      <div class="os-panel" id="panel-mac">
+      <div id="guide-content" class="os-pc">
 
-        <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">Méthode 1 — Capture du son (via BlackHole)</h3>
-        <p class="prose" style="margin-bottom:0;">macOS n'a pas de capture interne du son comme Windows. On installe donc un <strong>pilote audio virtuel gratuit</strong> qui sert de pont. Le standard est <strong>BlackHole</strong> (ou l'application payante <em>Loopback</em> de Rogue Amoeba).</p>
-
-        <div class="step-list">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <h3>Installez BlackHole 2ch</h3>
-              <p>Téléchargez et installez <strong>BlackHole 2ch</strong> (gratuit). Il apparaît ensuite comme un périphérique audio.</p>
+        <!-- ============ TRAKTOR ============ -->
+        <div class="sw-panel active" id="sw-traktor">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">Traktor — synchro parfaite en MIDI Clock</h3>
+          <p class="prose" style="margin-bottom:0;">Traktor envoie son tempo nativement : c'est le plus précis. On le relie à MyStrow via un petit port MIDI virtuel.</p>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Créez le port MIDI virtuel « MyStrow »</h3>
+                <p class="pc-only">Installez <strong>loopMIDI</strong> (gratuit, de Tobias Erichsen) et créez un port nommé <code>MyStrow</code>. MyStrow sait aussi le configurer pour vous.</p>
+                <p class="mac-only">Sur Mac, c'est intégré : ouvrez <strong>Configuration audio et MIDI</strong> → menu <em>Fenêtre</em> → <em>Afficher le studio MIDI</em> → double-cliquez sur <strong>IAC Driver</strong> → cochez <em>« L'appareil est en ligne »</em> et nommez un bus <code>MyStrow</code>.</p>
+              </div>
             </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <h3>Créez un périphérique multi-sortie</h3>
-              <p>Ouvrez <strong>Configuration audio et MIDI</strong> → créez un <em>Périphérique de sortie multiple</em> regroupant vos <strong>enceintes</strong> + <strong>BlackHole</strong>. Réglez la sortie de votre logiciel DJ (ou du système) sur ce périphérique : vous entendez le son ET il est routé vers BlackHole.</p>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Activez le MIDI Clock dans Traktor</h3>
+                <p>Preferences → <em>Controller Manager</em> → <em>Add → Generic MIDI</em>, réglez l'<em>Out-Port</em> sur <code class="pc-only">MyStrow</code><code class="mac-only">IAC — MyStrow</code>. Puis Preferences → <em>External Sync</em> → cochez <em>Enable MIDI Clock</em>. Enfin, dans le panneau <strong>MASTER CLOCK</strong> (icône métronome en haut à gauche), cliquez sur le bouton <em>MIDI Start</em> (il devient bleu).</p>
+              </div>
             </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <h3>Choisissez BlackHole comme source</h3>
-              <p>En mode LIVE de MyStrow, sélectionnez <strong>BlackHole 2ch</strong> comme source d'entrée. MyStrow capte le son et détecte les beats automatiquement.</p>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choisissez « MIDI Clock » dans MyStrow</h3>
+                <p>Passez MyStrow en mode <strong>LIVE</strong> et sélectionnez la source <strong>MIDI Clock</strong>. C'est calé sur le BPM de Traktor — beats et tempo parfaitement synchronisés.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="note-box">
-          <p>🎧 <strong>Carte son type DDJ-400 :</strong> routez le master vers BlackHole via le périphérique multi-sortie, ou sélectionnez directement la platine comme entrée si elle en expose une. L'idée reste la même : amener le son jusqu'à MyStrow.</p>
-        </div>
-
-        <h3 style="font-size:24px;color:var(--accent);margin:48px 0 4px;">Méthode 2 — MIDI Clock (avec le bus IAC intégré)</h3>
-        <p class="prose" style="margin-bottom:0;">Bonne nouvelle : sur Mac, le port MIDI virtuel est <strong>déjà intégré</strong> à macOS (le « bus IAC »). Rien à installer.</p>
-
-        <div class="step-list">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <h3>Activez le bus IAC</h3>
-              <p>Ouvrez <strong>Configuration audio et MIDI</strong> → menu <em>Fenêtre</em> → <em>Afficher le studio MIDI</em>. Double-cliquez sur <strong>IAC Driver</strong>, cochez <em>« L'appareil est en ligne »</em> et créez/renommez un bus en <code>MyStrow</code>.</p>
+        <!-- ============ VIRTUALDJ ============ -->
+        <div class="sw-panel" id="sw-virtualdj">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">VirtualDJ — MIDI Clock (testé &amp; fonctionnel)</h3>
+          <p class="prose" style="margin-bottom:0;">VirtualDJ envoie son tempo à MyStrow via un port MIDI virtuel. Trois étapes, et c'est parti.</p>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Créez le port MIDI virtuel « MyStrow »</h3>
+                <p class="pc-only">Installez <strong>loopMIDI</strong> (gratuit) et créez un port nommé <code>MyStrow</code>.</p>
+                <p class="mac-only">Sur Mac, c'est intégré : <strong>Configuration audio et MIDI</strong> → <em>Fenêtre</em> → <em>Afficher le studio MIDI</em> → double-cliquez sur <strong>IAC Driver</strong> → cochez <em>« L'appareil est en ligne »</em> et nommez un bus <code>MyStrow</code>.</p>
+              </div>
             </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <h3>Envoyez le MIDI Clock depuis votre logiciel</h3>
-              <p><strong>Traktor :</strong> Preferences → <em>Controller Manager</em> → Generic MIDI, <em>Out-Port</em> = <code>IAC — MyStrow</code>. Puis <em>External Sync</em> → <em>Enable MIDI Clock</em>, et le bouton <em>MIDI Start</em> dans le panneau MASTER CLOCK.</p>
-              <p style="margin-top:10px;"><strong>VirtualDJ :</strong> dans les réglages, activez l'envoi du <em>MIDI Clock</em> vers le bus IAC <code>MyStrow</code>. Le BPM de VirtualDJ pilote directement MyStrow.</p>
-              <p style="margin-top:10px;"><strong>rekordbox / Serato :</strong> pas de MIDI Clock natif. Activez <strong>Ableton Link</strong> et utilisez un pont « Link → MIDI Clock » en sortie sur le bus IAC <code>MyStrow</code>.</p>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Activez la sortie horloge dans VirtualDJ</h3>
+                <p>Ouvrez les réglages de VirtualDJ → onglet <strong>Contrôleurs</strong> → sélectionnez <strong>MyStrow</strong> dans la liste → activez <strong>Sortie Horloge MIDI</strong>. Et c'est parti : VirtualDJ envoie son tempo.</p>
+              </div>
             </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <h3>Sélectionnez « MIDI Clock » dans MyStrow</h3>
-              <p>En mode LIVE, choisissez la source <strong>MIDI Clock</strong>. MyStrow lit le bus IAC et se synchronise sur le BPM de votre logiciel.</p>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choisissez « MIDI Clock » dans MyStrow</h3>
+                <p>Passez MyStrow en mode <strong>LIVE</strong> et sélectionnez la source <strong>MIDI Clock</strong>. Le BPM de VirtualDJ pilote directement vos lumières.</p>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- ============ REKORDBOX / SERATO ============ -->
+        <div class="sw-panel" id="sw-rekordbox">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">rekordbox / Serato</h3>
+          <p class="prose" style="margin-bottom:0;">Ces deux logiciels <strong>n'envoient pas</strong> de tempo (MIDI Clock). Deux solutions : la plus simple, capter le son ; la plus précise, ajouter un petit pont « Ableton Link → MIDI ».</p>
+
+          <div class="sub-method">Solution A — Capter le son (recommandé)</div>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Préparez la capture du son</h3>
+                <p class="pc-only">Sur Windows, rien à installer : MyStrow capte la sortie audio grâce au <strong>loopback WASAPI</strong> intégré.</p>
+                <p class="mac-only">Sur Mac, installez le pilote audio virtuel gratuit <strong>BlackHole 2ch</strong>, puis créez un <em>Périphérique de sortie multiple</em> (Configuration audio et MIDI) regroupant vos <strong>enceintes + BlackHole</strong>. Envoyez le son du logiciel sur ce périphérique : vous l'entendez ET il part vers BlackHole.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Choisissez la source dans MyStrow</h3>
+                <p>En mode <strong>LIVE</strong>, sélectionnez <span class="pc-only">votre sortie (ou directement votre platine) comme source</span><span class="mac-only"><strong>BlackHole 2ch</strong> comme source d'entrée</span>. MyStrow détecte les beats tout seul.</p>
+              </div>
+            </div>
+          </div>
+          <div class="note-box">
+            <p>🎧 <strong>Carte son type DDJ-400 :</strong> le son sort par la platine, pas par la sortie par défaut de l'ordinateur. Sélectionnez donc <span class="pc-only">la <strong>DDJ-400 comme source</strong> dans MyStrow (si votre logiciel tourne en <strong>ASIO exclusif</strong>, la capture devient impossible — utilisez alors la Solution B)</span><span class="mac-only">la platine, ou routez son master vers BlackHole via le périphérique multi-sortie</span>.</p>
+          </div>
+
+          <div class="sub-method">Solution B — MIDI Clock via un pont Ableton Link</div>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Créez le port MIDI virtuel « MyStrow »</h3>
+                <p class="pc-only">Installez <strong>loopMIDI</strong> et créez un port nommé <code>MyStrow</code>.</p>
+                <p class="mac-only">Activez le bus <strong>IAC</strong> intégré à macOS et nommez un bus <code>MyStrow</code> (via Configuration audio et MIDI → Studio MIDI → IAC Driver).</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Activez Ableton Link + le pont</h3>
+                <p>Activez <strong>Ableton Link</strong> dans rekordbox / Serato, puis lancez un pont « Link → MIDI Clock » (ex. l'outil communautaire <em>Rekordbox-Midi-Clock</em>) et faites-lui émettre l'horloge sur le port <code class="pc-only">MyStrow</code><code class="mac-only">IAC — MyStrow</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choisissez « MIDI Clock » dans MyStrow</h3>
+                <p>En mode <strong>LIVE</strong>, sélectionnez la source <strong>MIDI Clock</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SPOTIFY / KARAFUN / AUTRE ============ -->
+        <div class="sw-panel" id="sw-player">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">Spotify, KaraFun, YouTube… ou tout autre lecteur</h3>
+          <p class="prose" style="margin-bottom:0;">Ces applis sortent simplement le son, sans tempo à transmettre. MyStrow <strong>écoute ce son</strong> et détecte les beats tout seul. C'est la méthode la plus simple : zéro réglage de tempo.</p>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Lancez votre musique normalement</h3>
+                <p>Jouez votre titre dans Spotify, KaraFun, YouTube ou votre lecteur habituel, sur la sortie audio classique de l'ordinateur.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Préparez la capture du son</h3>
+                <p class="pc-only">Sur Windows, rien à installer : MyStrow capte la sortie audio grâce au <strong>loopback WASAPI</strong> intégré.</p>
+                <p class="mac-only">Sur Mac, installez le pilote audio virtuel gratuit <strong>BlackHole 2ch</strong>, puis créez un <em>Périphérique de sortie multiple</em> (enceintes + BlackHole) dans Configuration audio et MIDI, et envoyez le son du système dessus.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choisissez la source dans MyStrow</h3>
+                <p>En mode <strong>LIVE</strong>, sélectionnez <span class="pc-only">votre sortie audio comme source</span><span class="mac-only"><strong>BlackHole 2ch</strong> comme source d'entrée</span>. Les lumières suivent la musique automatiquement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
     </div>
   </section>
 
@@ -649,15 +701,30 @@ function handleNewsletter(e) {
   }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
 }
 
-// Toggle PC / Mac
+// Sélecteurs : ordinateur (PC/Mac) + logiciel
 (function () {
-  var tabs = document.querySelectorAll('.os-tab');
-  tabs.forEach(function (tab) {
+  var content = document.getElementById('guide-content');
+
+  // 1 · Ordinateur → bascule la classe os-pc / os-mac sur le conteneur
+  var osTabs = document.querySelectorAll('.os-tab');
+  osTabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       var os = tab.getAttribute('data-os');
-      tabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
-      document.getElementById('panel-pc').classList.toggle('active', os === 'pc');
-      document.getElementById('panel-mac').classList.toggle('active', os === 'mac');
+      osTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+      content.classList.toggle('os-pc', os === 'pc');
+      content.classList.toggle('os-mac', os === 'mac');
+    });
+  });
+
+  // 2 · Logiciel → affiche le panneau correspondant
+  var swTabs = document.querySelectorAll('.sw-tab');
+  swTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var sw = tab.getAttribute('data-sw');
+      swTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+      document.querySelectorAll('.sw-panel').forEach(function (p) {
+        p.classList.toggle('active', p.id === 'sw-' + sw);
+      });
     });
   });
 })();
