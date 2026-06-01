@@ -340,7 +340,7 @@
           <div class="m-icon">🔊</div>
           <span class="m-tag">Le plus simple</span>
           <h3>Capture du son</h3>
-          <p>MyStrow « écoute » la sortie audio de votre ordinateur et détecte tout seul les beats, l'énergie et les sections du morceau. Aucun réglage de tempo, ça marche avec n'importe quelle source — y compris Spotify ou un fichier.</p>
+          <p>MyStrow « écoute » la sortie audio de votre ordinateur et détecte tout seul les beats, l'énergie et les sections du morceau. Aucun réglage de tempo, ça marche avec n'importe quelle source — <strong>Spotify, KaraFun</strong>, YouTube ou un simple fichier audio.</p>
         </div>
         <div class="method-card">
           <div class="m-icon">🎛️</div>
@@ -351,7 +351,7 @@
       </div>
 
       <div class="note-box">
-        <p>💡 <strong>Tous les logiciels n'envoient pas de MIDI Clock.</strong> Seul <strong>Traktor</strong> le fait nativement. rekordbox et Serato ne savent pas le faire seuls : pour eux, on utilise soit la capture du son, soit un pont « Ableton Link → MIDI ». On détaille tout ça plus bas.</p>
+        <p>💡 <strong>Tous les logiciels n'envoient pas de MIDI Clock.</strong> <strong>Traktor</strong> et <strong>VirtualDJ</strong> savent le faire (VirtualDJ fonctionne très bien via loopMIDI). <strong>rekordbox</strong> et <strong>Serato</strong>, non : pour eux on utilise la capture du son ou un pont « Ableton Link → MIDI ». Et les applis de simple lecture — <strong>Spotify, KaraFun, YouTube…</strong> — n'ont aucun tempo à transmettre : elles sortent le son de façon classique et passent donc forcément par la <strong>capture du son</strong>. On détaille tout ça plus bas.</p>
       </div>
     </div>
   </section>
@@ -418,6 +418,7 @@
             <div class="step-body">
               <h3>Envoyez le MIDI Clock depuis votre logiciel</h3>
               <p><strong>Traktor :</strong> Preferences → <em>Controller Manager</em> → Add → Generic MIDI, réglez l'<em>Out-Port</em> sur <code>MyStrow</code>. Puis Preferences → <em>External Sync</em> → cochez <em>Enable MIDI Clock</em>. Enfin, dans le panneau <strong>MASTER CLOCK</strong> (icône métronome en haut à gauche), cliquez sur le bouton <em>MIDI Start</em> (il devient bleu).</p>
+              <p style="margin-top:10px;"><strong>VirtualDJ :</strong> dans les réglages, activez l'envoi du <em>MIDI Clock</em> et choisissez le port <code>MyStrow</code> comme sortie. Testé et fonctionnel via loopMIDI — le BPM de VirtualDJ pilote directement MyStrow.</p>
               <p style="margin-top:10px;"><strong>rekordbox / Serato :</strong> pas de MIDI Clock natif. Activez <strong>Ableton Link</strong> et utilisez un pont « Link → MIDI Clock » (ex. l'outil communautaire <em>Rekordbox-Midi-Clock</em>) en lui faisant émettre l'horloge sur le port <code>MyStrow</code>.</p>
             </div>
           </div>
@@ -481,6 +482,7 @@
             <div class="step-body">
               <h3>Envoyez le MIDI Clock depuis votre logiciel</h3>
               <p><strong>Traktor :</strong> Preferences → <em>Controller Manager</em> → Generic MIDI, <em>Out-Port</em> = <code>IAC — MyStrow</code>. Puis <em>External Sync</em> → <em>Enable MIDI Clock</em>, et le bouton <em>MIDI Start</em> dans le panneau MASTER CLOCK.</p>
+              <p style="margin-top:10px;"><strong>VirtualDJ :</strong> dans les réglages, activez l'envoi du <em>MIDI Clock</em> vers le bus IAC <code>MyStrow</code>. Le BPM de VirtualDJ pilote directement MyStrow.</p>
               <p style="margin-top:10px;"><strong>rekordbox / Serato :</strong> pas de MIDI Clock natif. Activez <strong>Ableton Link</strong> et utilisez un pont « Link → MIDI Clock » en sortie sur le bus IAC <code>MyStrow</code>.</p>
             </div>
           </div>
@@ -531,13 +533,13 @@
             </tr>
             <tr>
               <td><strong>VirtualDJ</strong></td>
-              <td><span class="no">✕ Non</span></td>
-              <td>Capture du son (le plus simple) — détection auto des beats.</td>
+              <td><span class="yes">✅ Oui</span></td>
+              <td>MIDI Clock via loopMIDI (testé et fonctionnel), ou capture du son.</td>
             </tr>
             <tr>
-              <td><strong>Spotify / fichier / autre</strong></td>
+              <td><strong>Spotify, KaraFun, YouTube…</strong></td>
               <td><span class="no">—</span></td>
-              <td>Capture du son. MyStrow détecte tout sans réglage.</td>
+              <td>Sortie audio classique : <strong>capture du son</strong>. MyStrow détecte tout sans réglage.</td>
             </tr>
           </tbody>
         </table>
@@ -545,8 +547,8 @@
 
       <div class="highlight-box">
         <h3>En résumé</h3>
-        <p><strong>Pour démarrer vite (soirée, mariage, bar) :</strong> la capture du son. Zéro configuration, ça marche avec n'importe quelle musique.<br>
-        <strong>Pour un calage parfait (club, scène, gros show) :</strong> le MIDI Clock, idéalement avec Traktor qui l'envoie nativement. Sur Mac, c'est encore plus simple grâce au bus IAC intégré.</p>
+        <p><strong>Pour démarrer vite (soirée, mariage, bar) :</strong> la capture du son. Zéro configuration, ça marche avec n'importe quelle musique — y compris Spotify, KaraFun ou YouTube en sortie classique.<br>
+        <strong>Pour un calage parfait (club, scène, gros show) :</strong> le MIDI Clock, avec <strong>Traktor</strong> ou <strong>VirtualDJ</strong> (les deux l'envoient sans problème via loopMIDI). Sur Mac, c'est encore plus simple grâce au bus IAC intégré.</p>
       </div>
     </div>
   </section>
