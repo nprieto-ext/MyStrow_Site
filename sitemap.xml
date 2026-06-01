@@ -133,6 +133,70 @@
     <lastmod>2026-04-09</lastmod>
   </url>
 
+  <!-- Blog & tutoriels (FR) -->
+  <url>
+    <loc>https://mystrow.fr/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/synchroniser-mystrow-logiciel-dj</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/patcher-programmer-lyres-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/creer-sequences-lumiere-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/importer-fixture-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/tutoriel-debuter-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/automatisation-lumieres-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+
   <!-- EN pages -->
   <url>
     <loc>https://mystrow.fr/en/</loc>
