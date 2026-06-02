@@ -120,30 +120,10 @@
           '</button>' +
         '</div>' +
         '<nav class="nb-links">' + linksHtml + '</nav>' +
-        '<div class="nb-foot">' +
-          '<a class="nb-dl" id="nb-dl-btn" href="#">Télécharger MyStrow</a>' +
-        '</div>' +
         '<div class="nb-extra">' + langHtml + socialsHtml + '</div>' +
       '</div>';
 
     document.body.appendChild(overlay);
-
-    // ── OS-aware download button ──────────────────────────────────────────
-    var dlBtn = overlay.querySelector('#nb-dl-btn');
-    if (dlBtn) {
-      var isMacMob = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
-      var depth = location.pathname.split('/').filter(function(s) { return s !== ''; }).length;
-      var prefix = depth > 1 ? '../' : '';
-      if (!isMacMob) {
-        dlBtn.textContent = '↓ Télécharger pour Windows';
-        dlBtn.href = 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
-        dlBtn.target = '_blank';
-        dlBtn.rel = 'noopener noreferrer';
-      } else {
-        dlBtn.textContent = '↓ Télécharger pour macOS';
-        dlBtn.href = prefix + 'telecharger.html';
-      }
-    }
 
     function open() {
       overlay.classList.add('nb-open');
@@ -162,7 +142,7 @@
     });
     overlay.querySelector('.nb-close').addEventListener('click', close);
     overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
-    overlay.querySelectorAll('.nb-link, .nb-dl').forEach(function (a) {
+    overlay.querySelectorAll('.nb-link').forEach(function (a) {
       a.addEventListener('click', close);
     });
   }

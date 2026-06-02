@@ -149,34 +149,14 @@
 }
 .nb-link.nb-active::before { height: 60%; }
 
-/* ── Bouton télécharger ── */
-.nb-foot { padding: 16px 20px 4px; }
-.nb-dl {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(180deg, #efdb20 0%, #E2CE16 100%);
-  color: #0c0b00 !important;
-  text-decoration: none !important;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  padding: 15px 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(226,206,22,0.22);
-  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
-}
-.nb-dl:hover, .nb-dl:active { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(226,206,22,0.3); }
-
-/* ── Bas : langues + réseaux (collé en bas) ── */
+/* ── Bas : langues + réseaux (collé en bas, centré) ── */
 .nb-extra {
   margin-top: auto;
   padding: 22px 22px calc(24px + env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 18px;
 }
 .nb-section-label {
@@ -187,8 +167,9 @@
   text-transform: uppercase;
   color: #6f6a63;
   margin-bottom: 8px;
+  text-align: center;
 }
-.nb-langs { display: flex; gap: 7px; flex-wrap: wrap; }
+.nb-langs { display: flex; gap: 7px; flex-wrap: wrap; justify-content: center; }
 .nb-lang-link, .nb-lang-cur {
   display: inline-flex;
   align-items: center;
@@ -214,7 +195,7 @@
   color: #E2CE16;
 }
 
-.nb-socials { display: flex; gap: 9px; flex-wrap: wrap; }
+.nb-socials { display: flex; gap: 9px; flex-wrap: wrap; justify-content: center; }
 .nb-social {
   display: inline-flex;
   align-items: center;
