@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -308,7 +308,7 @@
       </nav>
       <div class="section-tag">Support</div>
       <h1>Contact <em>us</em></h1>
-      <p class="hero-sub">A question, a licence issue or a bug to report? Two channels available depending on your need — we respond.</p>
+      <p class="hero-sub">¿Una pregunta, un problema de licencia o un bug que reportar? Dos canales disponibles según tu necesidad: te respondemos.</p>
 
       <div class="form-wrap">
         <!-- EMAIL SUPPORT -->
@@ -322,8 +322,8 @@
         <!-- FORM -->
         <div class="contact-form">
           <div>
-            <div class="contact-icon" style="font-size:22px;margin-bottom:10px">🐛 &nbsp;Bug / Suggestion / Idea</div>
-            <p style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6">A reproducible bug or an improvement idea? Describe it here — we read every message.</p>
+            <div class="contact-icon" style="font-size:22px;margin-bottom:10px">🐛 &nbsp;Bug / Sugerencia / Idea</div>
+            <p style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6">¿Un bug reproducible o una idea de mejora? Descríbelo aquí: leemos todos los mensajes.</p>
           </div>
           <div id="form-fields">
             <div class="form-row">
@@ -342,25 +342,25 @@
                 <option value="" disabled selected>Choose…</option>
                 <option value="Bug">🐛 Bug</option>
                 <option value="Suggestion">💡 Suggestion</option>
-                <option value="Feature idea">✨ Feature idea</option>
+                <option value="Feature idea">✨ Idea de función</option>
                 <option value="Otro">Otro</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="f-version">MyStrow version <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+              <label for="f-version">Versión de MyStrow <span style="color:var(--muted);font-weight:400">(optional)</span></label>
               <input type="text" id="f-version" name="version" placeholder="e.g. 3.0.63">
             </div>
             <div class="form-group">
               <label for="f-message">Description</label>
               <textarea id="f-message" name="message" placeholder="For a bug: steps to reproduce, expected behavior…&#10;For an idea: context, use case…" required></textarea>
             </div>
-            <div class="form-error" id="form-error">An error occurred. Please try again or write directly to nicolas@mystrow.fr</div>
+            <div class="form-error" id="form-error">Se ha producido un error. Inténtalo de nuevo o escribe directamente a nicolas@mystrow.fr</div>
             <button type="button" class="form-submit" id="form-btn" onclick="submitForm()">Send →</button>
           </div>
           <div class="form-success" id="form-success">
             <div class="success-icon">✅</div>
             <h3>Thanks!</h3>
-            <p>Message received. We'll get back to you shortly.</p>
+            <p>Mensaje recibido. Te responderemos en breve.</p>
           </div>
         </div>
       </div>
@@ -372,47 +372,47 @@
     <div class="wrap">
       <div class="section-tag" style="text-align:center">FAQ</div>
       <h2 style="text-align:center">Preguntas frecuentes</h2>
-      <p style="text-align:center;color:var(--muted);font-size:15px;margin:0 auto 48px;max-width:560px">Everything you need to know before getting started.</p>
+      <p style="text-align:center;color:var(--muted);font-size:15px;margin:0 auto 48px;max-width:560px">Todo lo que necesitas saber antes de empezar.</p>
       <div class="faq-list">
         <div class="faq-item">
-          <div class="faq-q">What hardware do I need to use MyStrow?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">A Windows 10/11 or macOS 11+ PC with a network card (built-in RJ45 or USB-RJ45 adapter), an Art-Net DMX node (configured to IP 2.0.0.15) connected to the PC via ethernet cable, and your DMX fixtures. The AKAI APC mini mk2 controller is recommended for live — a built-in simulator makes it completely optional.</div>
+          <div class="faq-q">¿Qué material necesito para usar MyStrow?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Un PC con Windows 10/11 o macOS 11+ con tarjeta de red (RJ45 integrado o adaptador USB-RJ45), un nodo DMX Art-Net (configurado en la IP 2.0.0.15) conectado al PC por cable ethernet, y tus fixtures DMX. El controlador AKAI APC mini mk2 se recomienda para el directo: un simulador integrado lo hace totalmente opcional.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How do I configure the DMX node?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">MyStrow uses the Art-Net protocol — an open standard (UDP port 6454) supported by the vast majority of DMX nodes on the market. Any Art-Net-compatible node works: Enttec ODE, LumenRadio, Artnet4, and many others. Simply configure your node to IP 2.0.0.15 and connect it to your PC via ethernet. MyStrow detects it automatically on startup.</div>
+          <div class="faq-q">¿Cómo configuro el nodo DMX?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">MyStrow utiliza el protocolo Art-Net, un estándar abierto (puerto UDP 6454) compatible con la gran mayoría de nodos DMX del mercado. Funciona con cualquier nodo compatible con Art-Net: Enttec ODE, LumenRadio, Artnet4 y muchos otros. Solo tienes que configurar tu nodo en la IP 2.0.0.15 y conectarlo a tu PC por ethernet. MyStrow lo detecta automáticamente al arrancar.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">My PC doesn't have an RJ45 port — what should I do?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">If your PC has no built-in RJ45 network port (common on modern laptops), a USB-to-RJ45 adapter is sufficient. These dongles are automatically recognized by Windows and macOS without additional drivers and allow you to connect your Art-Net DMX node to your PC in seconds.</div>
+          <div class="faq-q">Mi PC no tiene puerto RJ45, ¿qué hago?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Si tu PC no tiene puerto de red RJ45 integrado (habitual en los portátiles modernos), basta con un adaptador USB a RJ45. Estos adaptadores son reconocidos automáticamente por Windows y macOS sin drivers adicionales y te permiten conectar tu nodo DMX Art-Net al PC en segundos.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How does the AI analyze my music?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">In AI Lighting mode, MyStrow analyzes in real time the rhythm, frequencies and energy of your music and automatically generates colors, intensities and transitions across your 6 fixture groups. No programming required — plug in, start playback, and the lights adapt.</div>
+          <div class="faq-q">¿Cómo analiza la IA mi música?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">En modo IA Luz, MyStrow analiza en tiempo real el ritmo, las frecuencias y la energía de tu música y genera automáticamente colores, intensidades y transiciones en tus 6 grupos de fixtures. Sin programación: conecta, dale al play y las luces se adaptan.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Is there any latency between music and lights?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">Not perceptible. MyStrow sends DMX frames at 25 fps via a dedicated timer. Latency between audio and DMX commands is under 5ms thanks to the Qt Multimedia engine.</div>
+          <div class="faq-q">¿Hay latencia entre la música y las luces?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">No perceptible. MyStrow envía frames DMX a 25 fps mediante un temporizador dedicado. La latencia entre el audio y los comandos DMX es inferior a 5 ms gracias al motor Qt Multimedia.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Which audio and video formats are supported?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">Audio: MP3, WAV, FLAC, AAC, OGG. Video: MP4, MOV, AVI, MKV — projected full-screen on a second monitor. You can also insert manual pauses or timed tempos in your playlist.</div>
+          <div class="faq-q">¿Qué formatos de audio y vídeo son compatibles?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Audio: MP3, WAV, FLAC, AAC, OGG. Vídeo: MP4, MOV, AVI, MKV, proyectado a pantalla completa en un segundo monitor. También puedes insertar pausas manuales o tempos programados en tu playlist.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Is the AKAI APC mini controller required?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">No. MyStrow is fully controllable by keyboard (Space for play/pause, PageUp/PageDown to navigate) and mouse. A built-in AKAI simulator is included in the interface. The physical controller offers the optimal live experience but remains optional.</div>
+          <div class="faq-a">No. MyStrow es totalmente controlable con teclado (Espacio para play/pausa, PageUp/PageDown para navegar) y ratón. La interfaz incluye un simulador AKAI integrado. El controlador físico ofrece la experiencia óptima en directo, pero sigue siendo opcional.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How many fixtures can I control?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">MyStrow organizes your fixtures into 6 independently controllable groups (A to F). It supports up to 4 Art-Net DMX universes — 2,048 channels total. Addressing is automatic (channels 1, 11, 21…) and fully customizable.</div>
+          <div class="faq-q">¿Cuántas fixtures puedo controlar?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">MyStrow organiza tus fixtures en 6 grupos controlables de forma independiente (de la A a la F). Admite hasta 4 universos DMX Art-Net: 2.048 canales en total. El direccionamiento es automático (canales 1, 11, 21…) y totalmente personalizable.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Can I save and reuse my shows?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">Yes. MyStrow saves your shows in a .tui file: playlist, light sequences, timeline keyframes and patch settings all included. Transfer it to another machine and get exactly the same result.</div>
+          <div class="faq-q">¿Puedo guardar y reutilizar mis shows?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Sí. MyStrow guarda tus shows en un archivo .tui: playlist, secuencias de luz, keyframes de la línea de tiempo y ajustes de patch, todo incluido. Transfiérelo a otra máquina y obtén exactamente el mismo resultado.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">Does MyStrow work offline?<span class="faq-arrow" aria-hidden="true">+</span></div>
-          <div class="faq-a">Yes. MyStrow runs entirely locally — DMX communication passes through the local network via Art-Net (UDP). No internet connection is required during a show. A connection is only needed for initial licence activation and automatic updates.</div>
+          <div class="faq-q">¿Funciona MyStrow sin conexión?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Sí. MyStrow funciona totalmente en local: la comunicación DMX pasa por la red local mediante Art-Net (UDP). No se necesita conexión a internet durante un show. Solo hace falta conexión para la activación inicial de la licencia y las actualizaciones automáticas.</div>
         </div>
       </div>
     </div>
@@ -425,9 +425,9 @@
                 background:var(--accent-dim);border:1px solid var(--accent-border);border-radius:14px;
                 font-size:24px;margin-bottom:22px;">✉</div>
     <p class="section-tag">Newsletter</p>
-    <h2 id="newsletter-title-contact-en" style="font-size:clamp(26px,4vw,40px);margin-bottom:14px;line-height:1.2">Stay in the loop</h2>
+    <h2 id="newsletter-title-contact-en" style="font-size:clamp(26px,4vw,40px);margin-bottom:14px;line-height:1.2">Mantente al día</h2>
     <p style="color:var(--muted);font-size:16px;margin-bottom:40px;line-height:1.75;max-width:460px;margin-left:auto;margin-right:auto">
-      New features, lighting tips and MyStrow updates —<br>straight to your inbox. No spam, unsubscribe anytime.
+      Novedades, consejos de iluminación y actualizaciones de MyStrow —<br>directamente en tu bandeja de entrada. Sin spam, cancela cuando quieras.
     </p>
     <form id="nl-form-contact-en" novalidate style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;max-width:500px;margin-left:auto;margin-right:auto;">
       <input id="nl-email-contact-en" type="email" placeholder="your@email.com" autocomplete="email" required
@@ -447,7 +447,7 @@
     </form>
     <p id="nl-msg-contact-en" style="min-height:24px;font-size:14px;font-weight:500;"></p>
     <p style="color:#444;font-size:12px;margin-top:16px">
-      By subscribing, you agree to our <a href="privacy.html" style="color:#555;text-decoration:underline;text-underline-offset:3px;">privacy policy</a>.
+      Al suscribirte, aceptas nuestra <a href="privacy.html" style="color:#555;text-decoration:underline;text-underline-offset:3px;">política de privacidad</a>.
     </p>
   </div>
   <script>
