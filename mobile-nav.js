@@ -52,13 +52,13 @@
       var flagMap = {'🇫🇷':'FR','🇬🇧':'EN','🇩🇪':'DE','🇪🇸':'ES','🇵🇹':'PT'};
       var items = langDropdown.querySelectorAll('a, span');
       var langLinks = Array.from(items).map(function(item) {
-        var flag = item.textContent.trim();
-        var code = flagMap[flag] || flag;
-        var label = flag + ' <b style="font-size:11px;letter-spacing:.5px">' + code + '</b>';
+        var raw = item.textContent.trim();
+        var m = raw.match(/[A-Za-z]{2}/);
+        var code = flagMap[raw] || (m ? m[0].toUpperCase() : raw);   // code seul, sans drapeau
         if (item.tagName === 'SPAN') {
-          return '<span class="nb-lang-cur">' + label + '</span>';
+          return '<span class="nb-lang-cur">' + code + '</span>';
         }
-        return '<a href="' + item.getAttribute('href') + '" class="nb-lang-link">' + label + '</a>';
+        return '<a href="' + item.getAttribute('href') + '" class="nb-lang-link">' + code + '</a>';
       });
       if (langLinks.length) {
         langHtml = '<div class="nb-section-label">Langue</div><div class="nb-langs">' + langLinks.join('') + '</div>';
