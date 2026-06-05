@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarifs MyStrow — Gratuit, Pro & Lifetime | Logiciel lumière DMX</title>
-  <meta name="description" content="Tarifs MyStrow : essai gratuit 14 jours, abonnement Pro 9,99 €/mois (annuel) ou 19,99 €/mois, ou Lifetime 239,99 € paiement unique. Sortie DMX professionnelle incluse.">
+  <meta name="description" content="Tarifs MyStrow : essai gratuit 14 jours, abonnement Pro 11,99 €/mois (annuel) ou 23,99 €/mois, ou Lifetime 287,99 € paiement unique. Sortie DMX professionnelle incluse.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mystrow.fr/tarifs.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mystrow.fr/tarifs.html">
   <meta property="og:title" content="Tarifs MyStrow — Gratuit, Pro & Lifetime">
-  <meta property="og:description" content="Essai gratuit 14 jours · Pro 9,99 €/mois · Lifetime 239,99 € · Sortie DMX incluse dès le plan Pro.">
+  <meta property="og:description" content="Essai gratuit 14 jours · Pro 11,99 €/mois · Lifetime 287,99 € · Sortie DMX incluse dès le plan Pro.">
   <meta property="og:image" content="https://mystrow.fr/og-image.webp">
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -215,8 +215,8 @@
       <div class="popular-badge">Le plus populaire</div>
       <div class="price-name">Pro</div>
       <div class="price-desc">Pour les techniciens &amp; régisseurs</div>
-      <div class="price-amount" id="tp-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span></div>
-      <div class="price-period" id="tp-period">TTC / mois · facturé 119,88 €/an</div>
+      <div class="price-amount" id="tp-price"><sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+      <div class="price-period" id="tp-period">TTC / mois · facturé 143,86 €/an</div>
       <ul class="price-features">
         <li>Contrôle lumière en temps réel</li>
         <li>Player audio &amp; vidéo</li>
@@ -236,7 +236,7 @@
       <div class="popular-badge" style="background:var(--muted);color:#fff">MEILLEUR PRIX</div>
       <div class="price-name">Lifetime</div>
       <div class="price-desc">Accès à vie · paiement unique</div>
-      <div class="price-amount"><sup>€</sup>239<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+      <div class="price-amount"><sup>€</sup>287<span style="font-size:0.55em;vertical-align:super">,99</span></div>
       <div class="price-period">TTC · une seule fois · accès à vie</div>
       <ul class="price-features">
         <li>Contrôle lumière en temps réel</li>
@@ -322,7 +322,7 @@
 
       <div class="faq-item">
         <div class="faq-q">Quelle est la différence entre Mensuel et Annuel ?<span class="faq-arrow">+</span></div>
-        <div class="faq-a">Le plan Mensuel est à 19,99 € TTC/mois, sans engagement — résiliable à tout moment. Le plan Annuel est à 9,99 € TTC/mois (facturé 119,88 €/an en une fois), soit 50% d'économie. Les deux plans incluent exactement les mêmes fonctionnalités.</div>
+        <div class="faq-a">Le plan Mensuel est à 23,99 € TTC/mois, sans engagement — résiliable à tout moment. Le plan Annuel est à 11,99 € TTC/mois (facturé 143,86 €/an en une fois), soit 50% d'économie. Les deux plans incluent exactement les mêmes fonctionnalités.</div>
       </div>
 
       <div class="faq-item">
@@ -386,13 +386,13 @@ function setGlobalPricing(annual) {
   var btnM     = document.getElementById('gtog-monthly');
   var btnA     = document.getElementById('gtog-annual');
   if (annual) {
-    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'TTC / mois · facturé 119,88 €/an';
+    priceEl.innerHTML = '<sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'TTC / mois · facturé 143,86 €/an';
     ctaEl.href = STRIPE_ANNUAL;
     noteEl.innerHTML = '🎉&nbsp; Économisez 50% avec l\'abonnement annuel';
     btnM.classList.remove('active'); btnA.classList.add('active');
   } else {
-    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    priceEl.innerHTML = '<sup>€</sup>23<span style="font-size:0.55em;vertical-align:super">,99</span>';
     periodEl.textContent = 'TTC / mois · sans engagement';
     ctaEl.href = STRIPE_MONTHLY;
     noteEl.textContent = '';

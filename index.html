@@ -64,9 +64,9 @@
       "Sauvegarde shows au format .tui"
     ],
     "offers": [
-      { "@type": "Offer", "name": "Mensuel",  "price": "19.99",  "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Annuel",  "price": "119.88", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Lifetime","price": "239.99", "priceCurrency": "EUR" }
+      { "@type": "Offer", "name": "Mensuel",  "price": "23.99",  "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Annuel",  "price": "143.86", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Lifetime","price": "287.99", "priceCurrency": "EUR" }
     ]
   }
   </script>
@@ -1486,8 +1486,8 @@
           <span class="saving-pill visible" id="saving-pill">−50%</span>
         </div>
 
-        <div class="price-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span></div>
-        <div class="price-period" id="pro-period">TTC / mois · facturé 119,88 €/an</div>
+        <div class="price-amount" id="pro-price"><sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period" id="pro-period">TTC / mois · facturé 143,86 €/an</div>
 
         <ul class="price-features">
           <li>Contrôle lumière en temps réel</li>
@@ -1505,7 +1505,7 @@
       <div class="price-card">
         <div class="price-name">Lifetime</div>
         <div class="price-desc">Accès à vie · paiement unique</div>
-        <div class="price-amount"><sup>€</sup>239<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-amount"><sup>€</sup>287<span style="font-size:0.55em;vertical-align:super">,99</span></div>
         <div class="price-period">TTC · une seule fois · accès à vie</div>
         <ul class="price-features">
           <li>Contrôle lumière en temps réel</li>
@@ -2343,13 +2343,13 @@ function setPricing(annual) {
   var btnM     = document.getElementById('toggle-monthly');
   var btnA     = document.getElementById('toggle-annual');
   if (annual) {
-    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'TTC / mois · facturé 119,88 €/an';
+    priceEl.innerHTML = '<sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'TTC / mois · facturé 143,86 €/an';
     ctaEl.href = STRIPE_ANNUAL;
     pillEl.classList.add('visible');
     btnM.classList.remove('active'); btnA.classList.add('active');
   } else {
-    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    priceEl.innerHTML = '<sup>€</sup>23<span style="font-size:0.55em;vertical-align:super">,99</span>';
     periodEl.textContent = 'TTC / mois · sans engagement';
     ctaEl.href = STRIPE_MONTHLY;
     pillEl.classList.remove('visible');

@@ -43,9 +43,9 @@
 
   <!-- JSON-LD : SoftwareApplication -->
   <script type="application/ld+json">
-  { "@type": "Offer", "name": "Monthly",  "price": "19.99",  "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Annual",   "price": "119.88", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Lifetime", "price": "239.99", "priceCurrency": "EUR" }
+  { "@type": "Offer", "name": "Monthly",  "price": "23.99",  "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Annual",   "price": "143.86", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Lifetime", "price": "287.99", "priceCurrency": "EUR" }
     ]
   }
   </script>
@@ -1019,8 +1019,8 @@
           <span class="saving-pill visible" id="saving-pill">−50%</span>
         </div>
 
-        <div class="price-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span></div>
-        <div class="price-period" id="pro-period">IVA incl. / mes · facturado 119,88 €/año</div>
+        <div class="price-amount" id="pro-price"><sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period" id="pro-period">IVA incl. / mes · facturado 143,86 €/año</div>
 
         <ul class="price-features">
           <li>Control de luz en tiempo real</li>
@@ -1039,7 +1039,7 @@
         <div class="popular-badge" style="background:var(--muted);color:#fff">MEJOR PRECIO</div>
         <div class="price-name">Lifetime</div>
         <div class="price-desc">Acceso de por vida · pago único</div>
-        <div class="price-amount"><sup>€</sup>239<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-amount"><sup>€</sup>287<span style="font-size:0.55em;vertical-align:super">,99</span></div>
         <div class="price-period">IVA incl. · una sola vez · acceso de por vida</div>
         <ul class="price-features">
           <li>Control de luz en tiempo real</li>
@@ -1520,13 +1520,13 @@ function setPricing(annual) {
   var btnM     = document.getElementById('toggle-monthly');
   var btnA     = document.getElementById('toggle-annual');
   if (annual) {
-    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'IVA incl. / mes · facturado 119,88 euros/ano';
+    priceEl.innerHTML = '<sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.textContent = 'IVA incl. / mes · facturado 143,86 euros/ano';
     ctaEl.href = STRIPE_ANNUAL;
     pillEl.classList.add('visible');
     btnM.classList.remove('active'); btnA.classList.add('active');
   } else {
-    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    priceEl.innerHTML = '<sup>€</sup>23<span style="font-size:0.55em;vertical-align:super">,99</span>';
     periodEl.textContent = 'IVA incl. / mes · sin compromiso';
     ctaEl.href = STRIPE_MONTHLY;
     pillEl.classList.remove('visible');
