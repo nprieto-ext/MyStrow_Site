@@ -153,6 +153,15 @@
   </url>
 
   <url>
+    <loc>https://mystrow.fr/sushi-z1-compatible-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-15</lastmod>
+  </url>
+
+  <url>
     <loc>https://mystrow.fr/patcher-programmer-lyres-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
