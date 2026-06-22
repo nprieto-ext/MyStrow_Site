@@ -59,7 +59,7 @@
       {
         "@type": "Question",
         "name": "Que equipamento preciso para usar o MyStrow?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Um PC com Windows 10/11 ou macOS 11+ com placa de rede (RJ45 integrado ou adaptador USB-RJ45), um nó DMX Art-Net ligado ao PC via cabo ethernet, e os seus projetores DMX. O controlador AKAI APC mini mk2 é recomendado para uso em direto — um simulador integrado torna-o completamente opcional." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Um PC com Windows 10/11 ou macOS 11+ com uma porta USB ou de rede, um nó DMX Art-Net ligado ao PC via cabo ethernet, e os seus projetores DMX. O controlador AKAI APC mini mk2 é recomendado para uso em direto — um simulador integrado torna-o completamente opcional." }
       },
       {
         "@type": "Question",
@@ -69,7 +69,7 @@
       {
         "@type": "Question",
         "name": "O meu PC não tem porta RJ45 — o que devo fazer?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Um adaptador USB para RJ45 é suficiente. Estes adaptadores são automaticamente reconhecidos pelo Windows e macOS sem necessidade de controladores adicionais." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Sem problema: o mais simples é a nossa interface USB Node DMX ArtNet, que liga diretamente a uma porta USB, sem placa de rede nem drivers. E se preferir um node Ethernet, basta um simples adaptador USB para RJ45, reconhecido automaticamente pelo Windows e macOS." }
       },
       {
         "@type": "Question",
@@ -661,7 +661,7 @@
       <div class="step">
         <div class="step-num">PASSO 01</div>
         <h3>Ligue o seu equipamento</h3>
-        <p>Ligue o seu <strong>AKAI APC Mini MK2</strong>, um Stream Deck, ou simplesmente use o teclado e o rato. O MyStrow deteta o seu equipamento automaticamente — ligue e está pronto.</p>
+        <p>Ligue o seu <strong>controlador MIDI</strong>, um Stream Deck, ou simplesmente use o teclado e o rato. O MyStrow deteta o seu equipamento automaticamente — ligue e está pronto.</p>
       </div>
       <div class="step">
         <div class="step-num">PASSO 02</div>
@@ -743,7 +743,7 @@
             </svg>
           </div>
         </div>
-        <div class="synop-name" id="synop-ctrl-name">AKAI APC mini mk2</div>
+        <div class="synop-name" id="synop-ctrl-name">AKAI / NOVATION</div>
         <div class="synop-sub" id="synop-ctrl-sub">Controlador MIDI</div>
       </div>
       <div class="synop-connector">
@@ -827,7 +827,7 @@
 
     </div>
     <div class="synop-nav-dots">
-      <div class="synop-nav-dot active" data-idx="0">AKAI APC mini</div>
+      <div class="synop-nav-dot active" data-idx="0">AKAI / NOVATION</div>
       <div class="synop-nav-dot" data-idx="1">StreamDeck</div>
       <div class="synop-nav-dot" data-idx="2">Telecomando IR</div>
       <div class="synop-nav-dot" data-idx="3">Teclado</div>
@@ -1100,7 +1100,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q">Que equipamento preciso para usar o MyStrow?<span class="faq-arrow" aria-hidden="true">+</span></div>
-        <div class="faq-a">Um PC com Windows 10/11 ou macOS 11+ com placa de rede (RJ45 integrado ou adaptador USB-RJ45), um nó DMX Art-Net (configurado para IP 2.0.0.15) ligado ao PC via cabo ethernet, e os seus projetores DMX. O controlador AKAI APC mini mk2 é recomendado para uso em direto — um simulador integrado torna-o completamente opcional.</div>
+        <div class="faq-a">Um PC com Windows 10/11 ou macOS 11+ com uma porta USB ou de rede, um nó DMX Art-Net (configurado para IP 2.0.0.15) ligado ao PC via cabo ethernet, e os seus projetores DMX. O controlador AKAI APC mini mk2 é recomendado para uso em direto — um simulador integrado torna-o completamente opcional.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Como configurar o nó DMX?<span class="faq-arrow" aria-hidden="true">+</span></div>
@@ -1108,7 +1108,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">O meu PC não tem porta RJ45 — o que devo fazer?<span class="faq-arrow" aria-hidden="true">+</span></div>
-        <div class="faq-a">Se o seu PC não tem porta de rede RJ45 integrada (comum em portáteis modernos), um adaptador USB para RJ45 é suficiente. Estes adaptadores são automaticamente reconhecidos pelo Windows e macOS sem controladores adicionais e permitem ligar o seu nó DMX Art-Net ao PC em segundos.</div>
+        <div class="faq-a">Sem problema: o mais simples é a nossa interface USB Node DMX ArtNet, que liga diretamente a uma porta USB, sem placa de rede nem drivers. E se preferir um node Ethernet, basta um simples adaptador USB para RJ45, reconhecido automaticamente pelo Windows e macOS.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Como é que a IA analisa a minha música?<span class="faq-arrow" aria-hidden="true">+</span></div>
@@ -1509,7 +1509,7 @@ requestAnimationFrame(tick);
 /* SIGNAL CHAIN — CONTROLLER SWITCHER */
 (function() {
   const CTRL_STATES = [
-    { name: 'AKAI APC mini mk2',   sub: 'MIDI Controller',   proto: 'USB' },
+    { name: 'AKAI / NOVATION',   sub: 'MIDI Controller',   proto: 'USB' },
     { name: 'StreamDeck / Elgato', sub: 'Stream Controller', proto: 'USB' },
     { name: 'IR Remote',           sub: 'IR Remote',         proto: 'USB' },
     { name: 'Keyboard & Mouse',    sub: 'Keyboard · Mouse',  proto: 'USB' },
