@@ -2,11 +2,49 @@
 (function () {
   'use strict';
   var KEY = 'mystrow_consent';
+  /* ID de projet Microsoft Clarity (clarity.microsoft.com) */
+  var CLARITY_ID = 'xemsgh2nyg';
 
   function _gtag() {
     if (typeof window.gtag === 'function') {
       window.gtag.apply(null, arguments);
     }
+  }
+
+  /* ── Analytics activées seulement après consentement ──────────────── */
+  var _analyticsOn = false;
+
+  function _loadClarity() {
+    if (!CLARITY_ID || CLARITY_ID === 'XXXXXXXXXX' || window.clarity) return;
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', CLARITY_ID);
+  }
+
+  function _trackConversions() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!a || !a.href) return;
+      var href = a.href;
+      if (href.indexOf('download_redirect') !== -1) {
+        var plat = /p=mac/.test(href) ? 'mac' : (/p=win/.test(href) ? 'windows' : 'autre');
+        _gtag('event', 'download_click', { platform: plat, link_url: href });
+      } else if (href.indexOf('buy.stripe.com') !== -1) {
+        var plan = /08g06/.test(href) ? 'lifetime' : 'pro';
+        _gtag('event', 'begin_checkout', { plan: plan, link_url: href });
+      } else if (href.indexOf('mailto:') === 0) {
+        _gtag('event', 'contact_click', {});
+      }
+    }, true);
+  }
+
+  function _enableAnalytics() {
+    if (_analyticsOn) return;
+    _analyticsOn = true;
+    _loadClarity();
+    _trackConversions();
   }
 
   function _grantAll() {
@@ -25,6 +63,7 @@
   function _accept() {
     try { localStorage.setItem(KEY, 'granted'); } catch(e) {}
     _grantAll();
+    _enableAnalytics();
     _hideBanner();
   }
 
@@ -71,7 +110,7 @@
         '#_mst_cb_ok,#_mst_cb_no{flex:1;padding:13px 10px;font-size:14px;text-align:center;}' +
       '}' +
       '</style>' +
-      '<p>🍪 Nous utilisons Google Analytics pour mesurer l\'audience du site, dans le respect de votre vie privée.' +
+      '<p>🍪 Nous utilisons Google Analytics et Microsoft Clarity pour mesurer l\'audience du site, dans le respect de votre vie privée.' +
       ' <a href="' + _privacyUrl() + '" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a></p>' +
       '<div class="cc-btns">' +
         '<button id="_mst_cb_no">Refuser</button>' +
@@ -88,6 +127,7 @@
 
   if (stored === 'granted') {
     _grantAll();
+    _enableAnalytics();
   } else if (stored === 'denied') {
     /* rester en denied — déjà configuré en default */
   } else {
