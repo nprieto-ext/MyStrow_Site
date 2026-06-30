@@ -271,15 +271,7 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
-    <div class="nav-right">
-      <span class="user-email" id="nav-email"></span>
-      <button class="btn-logout" id="btn-logout" onclick="logout()">Déconnexion</button>
-    </div>
-  </nav>
-</header>
+
 
 <main>
 
@@ -738,6 +730,7 @@ function handleNewsletter(e) {
   }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
 }
 </script>
+<script src="nav.js" defer></script>
 <script src="mobile-nav.js"></script>
 </body>
 </html>
