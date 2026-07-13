@@ -317,7 +317,7 @@
       <div class="section-tag">Côté ordinateur</div>
       <h2>3. Régler le PC en IP fixe</h2>
       <div class="prose">
-        <p>On préfère <strong>toujours une IP fixe</strong> sur le PC — c'est plus stable et plus fiable qu'une attribution automatique. Ouvrez les propriétés de votre carte réseau → <strong>Protocole Internet version 4 (TCP/IPv4)</strong> → <strong>Propriétés</strong>, cochez <strong>«&nbsp;Utiliser l'adresse IP suivante&nbsp;»</strong> et renseignez&nbsp;:</p>
+        <p>On préfère <strong>toujours une IP fixe</strong> sur le PC — c'est plus stable et plus fiable qu'une attribution automatique. Ouvrez les propriétés de la <strong>nouvelle carte réseau</strong> (celle qui apparaît quand vous branchez le node USB) → <strong>Protocole Internet version 4 (TCP/IPv4)</strong> → <strong>Propriétés</strong>, cochez <strong>«&nbsp;Utiliser l'adresse IP suivante&nbsp;»</strong> et renseignez&nbsp;:</p>
       </div>
       <div class="badge-row">
         <span class="badge">📍 Adresse IP : 2.0.0.1</span>
@@ -328,9 +328,6 @@
         <img src="proprietes-carte-reseau.webp" alt="Propriétés de la carte réseau Windows en IP fixe 2.0.0.1 pour un node Art-Net" style="width:100%;border-radius:12px;border:1px solid var(--border);">
         <figcaption style="color:var(--muted);font-size:13px;margin-top:10px;">Carte réseau du PC en IP fixe&nbsp;: 2.0.0.1 / 255.0.0.0, sans passerelle.</figcaption>
       </figure>
-      <div class="lock-box" style="margin-top:28px;">
-        <p><strong>⚠️ Le piège à éviter :</strong> le boîtier sort d'usine sur <strong>2.0.0.1</strong>. Comme on l'a déplacé sur <strong>2.0.0.15</strong> à l'étape 2, le PC peut rester sur <strong>2.0.0.1</strong> — les deux adresses sont différentes, aucun conflit. La règle&nbsp;: PC et node ne doivent <strong>jamais</strong> avoir la même adresse. À ne jamais utiliser non plus&nbsp;: <strong>2.0.0.0</strong> (réseau) et <strong>2.255.255.255</strong> (broadcast).</p>
-      </div>
     </div>
   </section>
 
