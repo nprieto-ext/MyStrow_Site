@@ -349,45 +349,6 @@
     </div>
   </section>
 
-  <!-- ETAPE 4 : VERIF + DEPANNAGE -->
-  <section class="section">
-    <div class="wrap-narrow">
-      <div class="section-tag">Validation</div>
-      <h2>5. Vérifier que tout fonctionne</h2>
-      <div class="step-list">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <h3>Ping du boîtier</h3>
-            <p>Invite de commande → <strong>ping 2.0.0.15</strong>. Le boîtier doit répondre (0&nbsp;% de perte).</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <h3>Adresse du PC</h3>
-            <p><strong>ipconfig</strong> → la carte réseau du node doit afficher une IPv4 en <strong>2.0.0.x</strong> (typiquement 2.0.0.2), masque 255.0.0.0.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <h3>Test final</h3>
-            <p>Dans MyStrow, l'indicateur DMX doit passer au <strong>vert</strong>. Montez un fader&nbsp;: vos projecteurs doivent s'allumer. 🎉</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="callout" style="margin-top:36px;">
-        <p><strong>Dépannage.</strong> «&nbsp;Connexion perdue&nbsp;» juste après avoir changé le Node IP&nbsp;? C'est normal, le boîtier a changé d'adresse → débranchez/rebranchez l'USB, fermez et rouvrez DMX TOOLS. Le node n'est plus détecté&nbsp;? Coupez l'alimentation (USB débranché 10&nbsp;s), rebranchez, puis <strong>ping 2.0.0.15</strong> et <strong>ping 2.0.0.1</strong> pour voir où il répond. PC en <strong>169.254.x.x</strong> ou DHCP à <strong>2.0.0.0</strong>&nbsp;? Le DHCP n'a pas donné d'adresse valide → remettez 2.0.0.2 et faites <strong>ipconfig /release</strong> puis <strong>ipconfig /renew</strong>.</p>
-      </div>
-
-      <div class="lock-box">
-        <p><strong>💡 En résumé :</strong> Node = <strong>2.0.0.15</strong>, PC = <strong>2.0.0.1</strong>, Masque = <strong>255.0.0.0</strong>, en <strong>DMX OUT / Univers 0</strong>. Réglé une seule fois, votre node USB est prêt : à chaque spectacle, il suffit de le brancher et de cliquer «&nbsp;Connecter&nbsp;».</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ARTICLES LIES -->
   <section class="section-bg">
     <div class="wrap-narrow">
