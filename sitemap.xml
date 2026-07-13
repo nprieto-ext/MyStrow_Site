@@ -189,6 +189,15 @@
   </url>
 
   <url>
+    <loc>https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+
+  <url>
     <loc>https://mystrow.fr/tutoriel-debuter-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
