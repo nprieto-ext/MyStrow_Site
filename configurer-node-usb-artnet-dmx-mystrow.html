@@ -286,7 +286,7 @@
           <div class="step-num">B</div>
           <div class="step-body">
             <h3>Réseau du boîtier</h3>
-            <p><strong>Node IP : 2.0.0.15</strong> (à changer — le boîtier sort d'usine sur 2.0.0.1). <strong>DHCP IP : 2.0.0.2</strong> (l'adresse attribuée à votre PC). <strong>Netmask : 255.0.0.0</strong>.</p>
+            <p><strong>Node IP : 2.0.0.15</strong> (à changer — le boîtier sort d'usine sur 2.0.0.1). <strong>DHCP IP : 2.0.0.2</strong> (réglage du boîtier ; côté PC on utilisera plutôt une IP fixe, voir étape 3). <strong>Netmask : 255.0.0.0</strong>.</p>
           </div>
         </div>
         <div class="step">
@@ -315,16 +315,21 @@
   <section class="section">
     <div class="wrap-narrow">
       <div class="section-tag">Côté ordinateur</div>
-      <h2>3. Vérifier le réseau du PC</h2>
+      <h2>3. Régler le PC en IP fixe</h2>
       <div class="prose">
-        <p>Le PC et le node doivent être sur le même réseau <strong>2.0.0.x</strong>, avec des adresses <strong>différentes</strong>. Le plus simple&nbsp;: laisser le serveur DHCP du boîtier attribuer <strong>2.0.0.2</strong> à votre PC (rien à faire de plus).</p>
+        <p>On préfère <strong>toujours une IP fixe</strong> sur le PC — c'est plus stable et plus fiable qu'une attribution automatique. Ouvrez les propriétés de votre carte réseau → <strong>Protocole Internet version 4 (TCP/IPv4)</strong> → <strong>Propriétés</strong>, cochez <strong>«&nbsp;Utiliser l'adresse IP suivante&nbsp;»</strong> et renseignez&nbsp;:</p>
       </div>
-      <div class="lock-box">
-        <p><strong>⚠️ Le piège à éviter :</strong> le boîtier sort d'usine sur <strong>2.0.0.1</strong>. Si votre PC est <em>aussi</em> sur 2.0.0.1, vous avez une <strong>collision d'adresse</strong> → «&nbsp;connexion perdue&nbsp;» dans DMX TOOLS. C'est pour ça qu'on met le node sur <strong>2.0.0.15</strong> et le PC sur <strong>2.0.0.2</strong> : deux adresses distinctes, plus de conflit.</p>
+      <div class="badge-row">
+        <span class="badge">📍 Adresse IP : 2.0.0.1</span>
+        <span class="badge">🎭 Masque : 255.0.0.0</span>
+        <span class="badge">🚫 Passerelle : vide</span>
       </div>
-      <div class="prose" style="margin-top:24px;">
-        <p>Si vous préférez une IP fixe, dans les propriétés de la carte réseau → <strong>Protocole Internet version 4 (TCP/IPv4)</strong>&nbsp;: Adresse IP <strong>2.0.0.2</strong>, Masque <strong>255.0.0.0</strong>, Passerelle <strong>vide</strong> (liaison directe, rien à router).</p>
-        <p>Deux adresses à ne <strong>jamais</strong> utiliser&nbsp;: <strong>2.0.0.0</strong> (adresse réseau) et <strong>2.255.255.255</strong> (broadcast) — ce ne sont pas des adresses d'appareil valides.</p>
+      <figure style="margin:32px 0 0;text-align:center;">
+        <img src="proprietes-carte-reseau.webp" alt="Propriétés de la carte réseau Windows en IP fixe 2.0.0.1 pour un node Art-Net" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+        <figcaption style="color:var(--muted);font-size:13px;margin-top:10px;">Carte réseau du PC en IP fixe&nbsp;: 2.0.0.1 / 255.0.0.0, sans passerelle.</figcaption>
+      </figure>
+      <div class="lock-box" style="margin-top:28px;">
+        <p><strong>⚠️ Le piège à éviter :</strong> le boîtier sort d'usine sur <strong>2.0.0.1</strong>. Comme on l'a déplacé sur <strong>2.0.0.15</strong> à l'étape 2, le PC peut rester sur <strong>2.0.0.1</strong> — les deux adresses sont différentes, aucun conflit. La règle&nbsp;: PC et node ne doivent <strong>jamais</strong> avoir la même adresse. À ne jamais utiliser non plus&nbsp;: <strong>2.0.0.0</strong> (réseau) et <strong>2.255.255.255</strong> (broadcast).</p>
       </div>
     </div>
   </section>
@@ -333,17 +338,16 @@
   <section class="section-bg">
     <div class="wrap-narrow">
       <div class="section-tag">Dans le logiciel</div>
-      <h2>4. Configurer MyStrow</h2>
+      <h2>4. Paramétrer la sortie dans MyStrow</h2>
       <div class="prose">
-        <p>Dans MyStrow, choisissez la sortie <strong>Art-Net</strong> et renseignez&nbsp;:</p>
+        <p>Ouvrez MyStrow et allez dans <strong>Connexion → Sortie DMX</strong>. La fenêtre <strong>«&nbsp;Paramétrer la sortie DMX&nbsp;»</strong> s'ouvre&nbsp;: choisissez l'onglet <strong>Sortie Node</strong> (boîtier réseau Art-Net — ElectroConcept, MA Lighting, etc.).</p>
       </div>
-      <div class="badge-row">
-        <span class="badge">🎯 IP cible : 2.0.0.15</span>
-        <span class="badge">🔢 Univers : 0</span>
-        <span class="badge">🔌 Port : 6454</span>
-      </div>
-      <div class="prose" style="margin-top:24px;">
-        <p>Cliquez sur <strong>Connecter</strong>. Comme <strong>2.0.0.15</strong> est la valeur par défaut de MyStrow, vous n'avez en général rien d'autre à changer.</p>
+      <figure style="margin:32px 0;text-align:center;">
+        <img src="parametrer-sortie-node-mystrow.webp" alt="Fenêtre Paramétrer la sortie DMX de MyStrow, onglet Sortie Node" style="width:100%;max-width:440px;border-radius:12px;border:1px solid var(--border);">
+        <figcaption style="color:var(--muted);font-size:13px;margin-top:10px;">MyStrow → Connexion → Sortie DMX → onglet <strong>Sortie Node</strong>.</figcaption>
+      </figure>
+      <div class="prose">
+        <p>Si le boîtier n'est pas encore détecté, cliquez sur <strong>⚙&nbsp;Configurer la connexion réseau</strong> (MyStrow peut régler la carte réseau à votre place — c'est l'équivalent automatique de l'étape 3). Une fois la carte réseau OK, cliquez sur <strong>Connecter</strong>. MyStrow cible <strong>2.0.0.15</strong> par défaut, vous n'avez rien d'autre à saisir.</p>
       </div>
     </div>
   </section>
@@ -382,7 +386,7 @@
       </div>
 
       <div class="lock-box">
-        <p><strong>💡 En résumé :</strong> Node = <strong>2.0.0.15</strong>, PC = <strong>2.0.0.2</strong>, Masque = <strong>255.0.0.0</strong>, en <strong>DMX OUT / Univers 0</strong>. Réglé une seule fois, votre node USB est prêt : à chaque spectacle, il suffit de le brancher et de cliquer «&nbsp;Connecter&nbsp;».</p>
+        <p><strong>💡 En résumé :</strong> Node = <strong>2.0.0.15</strong>, PC = <strong>2.0.0.1</strong>, Masque = <strong>255.0.0.0</strong>, en <strong>DMX OUT / Univers 0</strong>. Réglé une seule fois, votre node USB est prêt : à chaque spectacle, il suffit de le brancher et de cliquer «&nbsp;Connecter&nbsp;».</p>
       </div>
     </div>
   </section>
