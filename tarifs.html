@@ -54,12 +54,14 @@
     .page-hero p { color: var(--muted); font-size: 17px; max-width: 520px; margin: 0 auto; }
 
     /* ── Toggle global ── */
-    .global-toggle { display: flex; align-items: center; justify-content: center; gap: 0; margin: 40px auto 8px; }
-    .gtog-btn { padding: 8px 24px; font-size: 13px; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.14); font-family: 'Inter', sans-serif; transition: all 0.18s; background: transparent; color: var(--muted); }
-    .gtog-btn:first-child { border-radius: 8px 0 0 8px; }
-    .gtog-btn:last-child  { border-radius: 0 8px 8px 0; }
-    .gtog-btn.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
-    .saving-note { text-align: center; font-size: 12px; color: var(--green); font-weight: 600; min-height: 20px; margin-bottom: 32px; }
+    /* Toggle mensuel / annuel — intégré dans la card Pro */
+    .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 0; margin: 18px 0 4px; }
+    .toggle-btn { padding: 5px 16px; font-size: 11px; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.14); font-family: 'Inter', sans-serif; transition: all 0.18s; background: transparent; color: var(--muted); }
+    .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+    .toggle-btn:last-child  { border-radius: 0 6px 6px 0; }
+    .toggle-btn.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .saving-pill { background: #22c55e; color: #000; font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 20px; margin-left: 8px; display: none; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; white-space: nowrap; }
+    .saving-pill.visible { display: inline-flex; align-items: center; }
 
     /* ── Cards ── */
     .pricing-section { padding: 0 28px 80px; }
@@ -179,15 +181,6 @@
   <p>Commencez gratuitement. Passez au niveau supérieur quand vous êtes prêt. Aucune surprise.</p>
 </div>
 
-<!-- TOGGLE GLOBAL -->
-<div style="text-align:center">
-  <div class="global-toggle">
-    <button class="gtog-btn"        id="gtog-monthly" onclick="setGlobalPricing(false)">Mensuel</button>
-    <button class="gtog-btn active" id="gtog-annual"  onclick="setGlobalPricing(true)">Annuel</button>
-  </div>
-  <p class="saving-note" id="saving-note">🎉&nbsp; Économisez 50% avec l'abonnement annuel</p>
-</div>
-
 <!-- PRICING CARDS -->
 <section class="pricing-section">
   <div class="pricing-grid">
@@ -215,6 +208,13 @@
       <div class="popular-badge">Le plus populaire</div>
       <div class="price-name">Pro</div>
       <div class="price-desc">Pour les techniciens &amp; régisseurs</div>
+
+      <div class="billing-toggle">
+        <button class="toggle-btn"        id="tp-monthly" onclick="setGlobalPricing(false)">Mensuel</button>
+        <button class="toggle-btn active" id="tp-annual"  onclick="setGlobalPricing(true)">Annuel</button>
+        <span class="saving-pill visible" id="tp-pill">−50%</span>
+      </div>
+
       <div class="price-amount" id="tp-price"><sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span></div>
       <div class="price-period" id="tp-period">TTC / mois · facturé 143,86 €/an</div>
       <ul class="price-features">
@@ -382,20 +382,20 @@ function setGlobalPricing(annual) {
   var priceEl  = document.getElementById('tp-price');
   var periodEl = document.getElementById('tp-period');
   var ctaEl    = document.getElementById('tp-cta');
-  var noteEl   = document.getElementById('saving-note');
-  var btnM     = document.getElementById('gtog-monthly');
-  var btnA     = document.getElementById('gtog-annual');
+  var pillEl   = document.getElementById('tp-pill');
+  var btnM     = document.getElementById('tp-monthly');
+  var btnA     = document.getElementById('tp-annual');
   if (annual) {
     priceEl.innerHTML = '<sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span>';
     periodEl.textContent = 'TTC / mois · facturé 143,86 €/an';
     ctaEl.href = STRIPE_ANNUAL;
-    noteEl.innerHTML = '🎉&nbsp; Économisez 50% avec l\'abonnement annuel';
+    pillEl.classList.add('visible');
     btnM.classList.remove('active'); btnA.classList.add('active');
   } else {
     priceEl.innerHTML = '<sup>€</sup>23<span style="font-size:0.55em;vertical-align:super">,99</span>';
     periodEl.textContent = 'TTC / mois · sans engagement';
     ctaEl.href = STRIPE_MONTHLY;
-    noteEl.textContent = '';
+    pillEl.classList.remove('visible');
     btnM.classList.add('active'); btnA.classList.remove('active');
   }
 }
