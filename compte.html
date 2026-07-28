@@ -486,11 +486,30 @@ async function login() {
     await loadAccount();
     showView('account');
   } catch (err) {
-    const msg = err.message === 'INVALID_PASSWORD' || err.message === 'EMAIL_NOT_FOUND'
-      ? 'Email ou mot de passe incorrect.'
-      : err.message === 'TOO_MANY_ATTEMPTS_TRY_LATER'
-      ? 'Trop de tentatives. Réessayez plus tard.'
-      : 'Connexion impossible. Vérifiez vos identifiants.';
+    // INVALID_LOGIN_CREDENTIALS : code renvoyé par Firebase depuis l'activation
+    // de la protection contre l'énumération d'emails. Il a REMPLACÉ
+    // INVALID_PASSWORD et EMAIL_NOT_FOUND, que Firebase n'envoie plus.
+    // Sans lui, un simple mot de passe erroné tombait dans le message
+    // générique « Connexion impossible » — qui laisse croire à une panne du
+    // site alors qu'il suffit de réinitialiser son mot de passe.
+    // L'application desktop gère déjà ce code (firebase_client.py) : c'est le
+    // site qui n'avait pas suivi.
+    const code = err.message || '';
+    const msg =
+        (code === 'INVALID_LOGIN_CREDENTIALS' || code === 'INVALID_PASSWORD'
+         || code === 'EMAIL_NOT_FOUND')
+      ? 'Email ou mot de passe incorrect. Utilisez « Mot de passe oublié ? » ci-dessous.'
+      : code === 'TOO_MANY_ATTEMPTS_TRY_LATER'
+      ? 'Trop de tentatives. Réessayez dans quelques minutes.'
+      : code === 'USER_DISABLED'
+      ? 'Ce compte a été désactivé. Contactez le support.'
+      : code === 'INVALID_EMAIL'
+      ? 'Adresse email invalide.'
+      : code === 'Failed to fetch'
+      ? 'Serveur injoignable — vérifiez votre connexion internet.'
+      // Tout code inattendu est AFFICHÉ tel quel : un message générique rend
+      // le diagnostic impossible, aussi bien pour l'utilisateur que pour nous.
+      : `Connexion impossible (${code || 'erreur inconnue'}).`;
     errEl.textContent = msg;
     errEl.style.display = 'block';
     btn.disabled = false; btn.textContent = 'Se connecter →';
