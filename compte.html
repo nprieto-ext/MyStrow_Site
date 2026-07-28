@@ -271,7 +271,20 @@
 </head>
 <body>
 
-
+<!-- Barre du haut : son markup avait disparu de la page alors que showNav() et
+     logout() continuaient de l'adresser par id. Résultat : TypeError juste
+     APRÈS une connexion réussie, attrapée par le catch du formulaire, donc
+     affichée comme « Connexion impossible » — plus personne ne pouvait entrer
+     dans son compte. C'était aussi le seul endroit d'où se déconnecter. -->
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">MY<em>STROW</em></a>
+    <div class="nav-right">
+      <span class="user-email" id="nav-email"></span>
+      <button class="btn-logout" id="btn-logout" onclick="logout()">Déconnexion</button>
+    </div>
+  </nav>
+</header>
 
 <main>
 
@@ -448,11 +461,21 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
+// Décor de la barre du haut : accessoire, mais appelé en plein chemin de
+// connexion. Toute erreur ici remonte dans le catch de login() et se déguise
+// en « Connexion impossible ». Un bandeau absent ne doit JAMAIS empêcher
+// d'accéder à son compte : on ignore silencieusement les éléments manquants.
+function _navEl(id, display) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = display;
+  return el;
+}
+
 function showNav() {
   const email = localStorage.getItem('ms_email') || '';
-  document.getElementById('nav-email').textContent = email;
-  document.getElementById('nav-email').style.display = 'block';
-  document.getElementById('btn-logout').style.display = 'block';
+  const el = _navEl('nav-email', 'block');
+  if (el) el.textContent = email;
+  _navEl('btn-logout', 'block');
 }
 
 // ── Login ───────────────────────────────────────────────────────────────────
@@ -535,8 +558,8 @@ async function sendReset() {
 // ── Logout ───────────────────────────────────────────────────────────────────
 function logout() {
   clearSession();
-  document.getElementById('nav-email').style.display = 'none';
-  document.getElementById('btn-logout').style.display = 'none';
+  _navEl('nav-email', 'none');
+  _navEl('btn-logout', 'none');
   document.getElementById('l-email').value = '';
   document.getElementById('l-pass').value = '';
   showView('login');
