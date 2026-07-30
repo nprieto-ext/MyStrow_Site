@@ -203,7 +203,10 @@
       .setup-row { gap: 12px; }
       .setup-arrow { display: none; }
     }
-    @media (max-width: 900px) {
+    /* Borne basse indispensable : ce bloc est écrit APRÈS celui en 760 px et
+       gagnait donc sur les téléphones, qui se retrouvaient en 2 colonnes au
+       lieu d'une — d'où un débordement horizontal de la page. */
+    @media (min-width: 761px) and (max-width: 900px) {
       .feat-grid { grid-template-columns: repeat(2, 1fr); }
       .other-grid { grid-template-columns: repeat(2, 1fr); }
     }
