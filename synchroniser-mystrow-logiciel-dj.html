@@ -178,7 +178,7 @@
 
     /* Comparison table */
     .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
-    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 680px; }
     table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
     table.cmp tbody td { color: var(--muted); vertical-align: top; }
@@ -539,6 +539,7 @@
           <thead>
             <tr>
               <th>Logiciel</th>
+              <th>Compatible&nbsp;?</th>
               <th>MIDI Clock natif&nbsp;?</th>
               <th>Méthode recommandée</th>
             </tr>
@@ -547,25 +548,30 @@
             <tr>
               <td><strong>Traktor Pro</strong></td>
               <td><span class="yes">✅ Oui</span></td>
+              <td><span class="yes">✅ Oui</span></td>
               <td>MIDI Clock direct — le plus stable et le plus précis.</td>
             </tr>
             <tr>
               <td><strong>rekordbox</strong></td>
+              <td><span class="yes">✅ Oui</span></td>
               <td><span class="no">✕ Non</span></td>
               <td>Capture du son, ou pont Ableton Link → MIDI Clock.</td>
             </tr>
             <tr>
               <td><strong>Serato DJ</strong></td>
+              <td><span class="yes">✅ Oui</span></td>
               <td><span class="no">✕ Non</span></td>
               <td>Capture du son, ou pont Ableton Link → MIDI Clock.</td>
             </tr>
             <tr>
               <td><strong>VirtualDJ</strong></td>
               <td><span class="yes">✅ Oui</span></td>
+              <td><span class="yes">✅ Oui</span></td>
               <td>MIDI Clock via loopMIDI (testé et fonctionnel), ou capture du son.</td>
             </tr>
             <tr>
               <td><strong>Spotify, KaraFun, YouTube…</strong></td>
+              <td><span class="yes">✅ Oui</span></td>
               <td><span class="no">—</span></td>
               <td>Sortie audio classique : <strong>capture du son</strong>. MyStrow détecte tout sans réglage.</td>
             </tr>
