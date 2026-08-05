@@ -230,6 +230,46 @@
     .pick-ex { font-size: 11.5px; color: rgba(226,206,22,0.75); line-height: 1.45; margin-top: 2px; }
     .pick-grid.os .pick { flex-direction: row; align-items: center; gap: 12px; padding: 14px 18px; }
     .pick-grid.os .pick-t { font-size: 17px; }
+    .wiz-hint { font-size: 13px; color: var(--muted); line-height: 1.6; margin: -8px 0 16px; }
+
+    /* ── Vignettes « ce qui est inscrit sur le boîtier » ───────────────── */
+    .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(258px, 1fr)); gap: 12px; }
+    .pick.dev { padding: 13px 13px 14px; gap: 0; }
+    .dev-img { position: relative; display: block; border-radius: 9px; padding: 22px 14px 36px;
+      background: linear-gradient(158deg, #2b2924 0%, #1a1814 52%, #0e0d0b 100%);
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 6px 16px rgba(0,0,0,0.4);
+      overflow: hidden; transition: border-color .18s; }
+    .dev-mark { display: block; text-align: center; font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 16.5px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #e9e4d4; line-height: 1.2; overflow-wrap: anywhere;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.65); }
+    .dev-brand { display: block; text-align: center; font-size: 9px; letter-spacing: 1.3px;
+      text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 5px; overflow-wrap: anywhere; }
+    .dev-ports { position: absolute; left: 0; right: 0; bottom: 0; height: 28px;
+      display: flex; align-items: center; justify-content: center; gap: 11px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+      border-top: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.4); transition: color .18s; }
+    .dev-ports svg { width: 15px; height: 15px; display: block; }
+    .dev-ports::before, .dev-ports::after { content: ''; position: absolute; top: 50%; margin-top: -2.5px;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 32%, #6d6a62, #232019 72%); }
+    .dev-ports::before { left: 9px; }
+    .dev-ports::after { right: 9px; }
+    .dev-fam { display: block; margin-top: 10px; text-align: center;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px;
+      letter-spacing: .6px; color: rgba(226,206,22,0.8); }
+    .pick.dev[aria-checked="true"] .dev-img { border-color: rgba(226,206,22,0.4); }
+    .pick.dev[aria-checked="true"] .dev-ports { color: rgba(226,206,22,0.75); }
+    .pick.dev[aria-checked="true"] .dev-fam { color: var(--accent); }
+    .dev-else { margin-top: 22px; padding-top: 20px; border-top: 1px dashed rgba(255,255,255,0.1); }
+    .dev-else-q { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+    .dev-else-q strong { color: var(--text); }
+    .dev-else .note { margin-top: 12px; }
+    .proc-model { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px;
+      letter-spacing: .5px; color: var(--muted); }
+    .proc-model b { color: var(--text); font-weight: 700; }
+
     details.helper { margin-top: 14px; }
     details.helper > summary { cursor: pointer; list-style: none; font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
     details.helper > summary::-webkit-details-marker { display: none; }
@@ -376,7 +416,6 @@
         <a href="#config" class="btn-primary">Configurer ma sortie →</a>
         <a href="#depannage" class="btn-outline">Aller au dépannage ↓</a>
       </div>
-      <img src="node-usb-dmx-tuto.webp" alt="Interfaces DMX compatibles MyStrow — node USB Art-Net et boîtiers USB/DMX" width="1200" height="675" style="width:100%;height:auto;border-radius:16px;margin-top:36px;border:1px solid var(--border);">
     </div>
   </section>
 
@@ -389,7 +428,6 @@
         <div class="toc-title">Sommaire</div>
         <ol>
           <li><a href="#config">Configurateur</a></li>
-          <li><a href="#comparer">Comparer les interfaces</a></li>
           <li><a href="#univers">Univers &amp; aiguillage</a></li>
           <li><a href="#verifier">Vérifier que ça sort</a></li>
           <li><a href="#cablage">Câblage DMX</a></li>
@@ -408,41 +446,141 @@
             <p>Deux questions, puis la procédure exacte. Tout passe ensuite par une seule fenêtre dans le logiciel&nbsp;: <span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>.</p>
           </div>
 
+          <!-- Pictos de connectique, réutilisés par les vignettes de boîtiers -->
+          <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden">
+            <symbol id="ic-xlr" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="8.6" r="1.45" fill="currentColor"/>
+              <circle cx="9" cy="14" r="1.45" fill="currentColor"/>
+              <circle cx="15" cy="14" r="1.45" fill="currentColor"/>
+            </symbol>
+            <symbol id="ic-usb" viewBox="0 0 24 24">
+              <path d="M12 20.5V6.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M12 2.8l2.3 3.6H9.7z" fill="currentColor"/>
+              <path d="M12 14.4l4-3.1V8.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="7.6" r="1.5" fill="currentColor"/>
+              <path d="M12 17.2l-4-3.1v-1.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="6.7" y="9.6" width="2.7" height="2.7" fill="currentColor"/>
+            </symbol>
+            <symbol id="ic-rj45" viewBox="0 0 24 24">
+              <path d="M5.6 5.6h12.8v9.6H5.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M9.6 15.2v3.2h4.8v-3.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M8 7.8v3M10.6 7.8v3M13.4 7.8v3M16 7.8v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </symbol>
+          </svg>
+
           <div class="wiz">
-            <!-- Étape 1 : interface -->
+            <!-- Étape 1 : modèle inscrit sur le boîtier -->
             <div class="wiz-step" id="wiz-iface">
-              <div class="wiz-q" id="q-iface"><span class="wiz-n">1</span> Quelle interface avez-vous&nbsp;?</div>
-              <div class="pick-grid" role="radiogroup" aria-labelledby="q-iface">
-                <button type="button" class="pick" role="radio" aria-checked="false" data-iface="node">
-                  <span class="pick-ic" aria-hidden="true">🌐</span>
-                  <span class="pick-t">Node Art-Net</span>
-                  <span class="pick-d">Une prise RJ45 (réseau) et 1 à 4 sorties XLR.</span>
-                  <span class="pick-ex">USB NODE DMX ElectroConcept · ENTTEC ODE · DMXKing eDMX</span>
+              <div class="wiz-q" id="q-iface"><span class="wiz-n">1</span> Qu'est-ce qui est inscrit sur votre boîtier&nbsp;?</div>
+              <p class="wiz-hint">Retournez-le&nbsp;: le nom du modèle est imprimé sur le dessus ou sur la face des prises. Cliquez sur celui qui correspond.</p>
+              <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-usb-node" data-mark="USB NODE DMX">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">USB NODE DMX</span>
+                    <span class="dev-brand">www.electroconcept.fr</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Node Art-Net</span>
                 </button>
-                <button type="button" class="pick" role="radio" aria-checked="false" data-iface="pro">
-                  <span class="pick-ic" aria-hidden="true">🟢</span>
-                  <span class="pick-t">Interface USB « Pro »</span>
-                  <span class="pick-d">USB d'un côté, XLR de l'autre. Le boîtier fabrique lui-même le signal.</span>
-                  <span class="pick-ex">ENTTEC DMX USB Pro · Eurolite USB-DMX512 PRO MK2</span>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node4" data-mark="NODE 4 UNIVERS">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">NODE 4 UNIVERS</span>
+                    <span class="dev-brand">ElectroConcept</span>
+                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Node Art-Net</span>
                 </button>
-                <button type="button" class="pick" role="radio" aria-checked="false" data-iface="open">
-                  <span class="pick-ic" aria-hidden="true">🟡</span>
-                  <span class="pick-t">Adaptateur USB « open »</span>
-                  <span class="pick-d">Même allure, mais c'est l'ordinateur qui cadence le signal.</span>
-                  <span class="pick-ex">ENTTEC Open DMX USB · OPTO OPEN DMX · DMXKing UltraDMX Micro · clones FTDI</span>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="ec-opto" data-mark="OPTO OPEN DMX">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">OPTO OPEN DMX</span>
+                    <span class="dev-brand">www.electroconcept.fr</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Adaptateur USB «&nbsp;open&nbsp;»</span>
                 </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="pro" data-model="enttec-pro" data-mark="DMX USB PRO">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">DMX USB PRO</span>
+                    <span class="dev-brand">ENTTEC</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Interface USB «&nbsp;Pro&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="enttec-open" data-mark="OPEN DMX USB">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">OPEN DMX USB</span>
+                    <span class="dev-brand">ENTTEC</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Adaptateur USB «&nbsp;open&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="enttec-ode" data-mark="ODE Mk2">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">ODE&nbsp;/ ODE Mk2</span>
+                    <span class="dev-brand">ENTTEC</span>
+                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Node Art-Net</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="pro" data-model="eurolite-mk2" data-mark="USB-DMX512 PRO MK2">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">USB-DMX512 PRO MK2</span>
+                    <span class="dev-brand">Eurolite</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Interface USB «&nbsp;Pro&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="dmxking-edmx" data-mark="eDMX1 / eDMX2 PRO">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">eDMX1&nbsp;/ eDMX2 PRO</span>
+                    <span class="dev-brand">DMXKing</span>
+                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Node Art-Net</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="dmxking-ultra" data-mark="ultraDMX Micro">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">ultraDMX Micro</span>
+                    <span class="dev-brand">DMXKing</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Adaptateur USB «&nbsp;open&nbsp;»</span>
+                </button>
+
               </div>
-              <details class="helper">
-                <summary>Je ne sais pas ce que j'ai entre les mains</summary>
-                <div class="helper-body">
-                  <ul>
-                    <li><strong>Une prise RJ45 (réseau) sur le boîtier</strong> → c'est un <strong>Node Art-Net</strong>, même s'il est alimenté en USB.</li>
-                    <li><strong>Boîtier ElectroConcept</strong> → l'inscription se trouve juste au-dessus de la prise USB&nbsp;: «&nbsp;<strong>USB NODE DMX</strong>&nbsp;» = node, «&nbsp;<strong>OPTO OPEN DMX</strong>&nbsp;» = adaptateur open.</li>
-                    <li><strong>Uniquement USB + XLR, modèle inconnu</strong> → si la marque et le modèle contiennent «&nbsp;Pro&nbsp;» (ENTTEC DMX USB <em>Pro</em>, Eurolite USB-DMX512 <em>PRO</em> MK2), c'est une interface Pro. Sinon, partez sur <strong>adaptateur «&nbsp;open&nbsp;»</strong>&nbsp;: c'est le cas de l'immense majorité des boîtiers à moins de 60&nbsp;€.</li>
-                    <li><strong>Toujours un doute&nbsp;?</strong> Choisissez «&nbsp;open&nbsp;»&nbsp;: si le boîtier est en réalité un Pro, la sortie ne démarrera pas et il suffira de changer la ligne «&nbsp;Interface&nbsp;» dans le logiciel. Aucun risque pour le matériel.</li>
-                  </ul>
+
+              <!-- Boîtier absent de la liste : on choisit sur la connectique -->
+              <div class="dev-else">
+                <div class="dev-else-q">Un autre nom&nbsp;? Regardez alors les <strong>prises</strong> du boîtier&nbsp;:</div>
+                <div class="pick-grid" role="radiogroup" aria-label="Identifier le boîtier par sa connectique">
+                  <button type="button" class="pick" role="radio" aria-checked="false" data-iface="node" data-model="other-node" data-mark="boîtier avec prise réseau">
+                    <span class="pick-ic" aria-hidden="true">🌐</span>
+                    <span class="pick-t">Il y a une prise réseau RJ45</span>
+                    <span class="pick-d">C'est un Node Art-Net, même si le boîtier est alimenté en USB.</span>
+                  </button>
+                  <button type="button" class="pick" role="radio" aria-checked="false" data-iface="pro" data-model="other-pro" data-mark="interface USB « Pro »">
+                    <span class="pick-ic" aria-hidden="true">🟢</span>
+                    <span class="pick-t">USB + XLR, et «&nbsp;PRO&nbsp;» dans le nom</span>
+                    <span class="pick-d">Le boîtier fabrique lui-même les trames DMX&nbsp;: c'est une interface Pro.</span>
+                  </button>
+                  <button type="button" class="pick" role="radio" aria-checked="false" data-iface="open" data-model="other-open" data-mark="adaptateur USB « open »">
+                    <span class="pick-ic" aria-hidden="true">🟡</span>
+                    <span class="pick-t">USB + XLR, un autre nom</span>
+                    <span class="pick-d">Le cas de l'immense majorité des boîtiers à moins de 60&nbsp;€, et de tous les clones FTDI.</span>
+                  </button>
                 </div>
-              </details>
+                <div class="note">Vous hésitez entre les deux derniers&nbsp;? Prenez «&nbsp;<strong>open</strong>&nbsp;»&nbsp;: si le boîtier est en réalité un Pro, la sortie ne démarrera simplement pas et il suffira de changer la ligne «&nbsp;Interface&nbsp;» dans le logiciel. Aucun risque pour le matériel.</div>
+              </div>
             </div>
 
             <!-- Étape 2 : système -->
@@ -836,64 +974,10 @@
           </details>
         </section>
 
-        <!-- 2. COMPARER -->
-        <section id="comparer" class="doc-section">
-          <div class="section-tag">Avant d'acheter</div>
-          <h2><span class="h2-num">02</span> Comparer les trois familles</h2>
-          <div class="prose">
-            <p>Le choix se résume à une question&nbsp;: <strong>un seul univers à courte distance, ou plusieurs univers / une machine loin de la scène&nbsp;?</strong></p>
-          </div>
-
-          <div class="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Type d'interface</th>
-                  <th>Exemples</th>
-                  <th>Univers</th>
-                  <th>Stabilité</th>
-                  <th>Pour qui</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Interface USB «&nbsp;Pro&nbsp;»</strong><br>Le boîtier fabrique lui-même le signal DMX.</td>
-                  <td>ENTTEC DMX USB Pro<br>Eurolite USB-DMX512 PRO MK2</td>
-                  <td>1</td>
-                  <td><span class="tag-ok">Excellente</span><br>timings gérés par le boîtier</td>
-                  <td>Le choix par défaut&nbsp;: petit rig, bar, mariage, home studio. Rien à configurer, et le plus sûr sur Mac.</td>
-                </tr>
-                <tr>
-                  <td><strong>Adaptateur USB «&nbsp;open&nbsp;»</strong><br>C'est l'ordinateur qui cadence le signal.</td>
-                  <td>ENTTEC Open DMX USB<br>OPTO OPEN DMX (ElectroConcept)<br>DMXKing UltraDMX Micro</td>
-                  <td>1</td>
-                  <td><span class="tag-mid">Bonne</span><br>dépend de la machine</td>
-                  <td>Budget serré, dépannage, deuxième interface de secours.</td>
-                </tr>
-                <tr>
-                  <td><strong>Node Art-Net</strong><br>Passe par le réseau Ethernet.</td>
-                  <td>USB NODE DMX ElectroConcept<br>ENTTEC ODE Mk2<br>DMXKing eDMX1/eDMX2 PRO</td>
-                  <td>1 à 4 selon le modèle</td>
-                  <td><span class="tag-ok">Excellente</span><br>longues distances</td>
-                  <td>Plusieurs univers, lyres, régie éloignée du plateau, installations fixes.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="callout">
-            <p><strong>En pratique&nbsp;:</strong> moins d'une centaine de canaux&nbsp;? Une interface USB Pro suffit — brancher, choisir le port, connecter. Le node devient rentable dès que vous ajoutez des lyres (16 à 30 canaux pièce&nbsp;: un univers se sature vite) ou que le câble XLR devrait faire 40&nbsp;m jusqu'à la régie.</p>
-          </div>
-
-          <div class="prose" style="margin-top:26px;">
-            <p>Pas encore de boîtier&nbsp;? La <a href="shop.html">page matériel</a> liste les modèles testés avec MyStrow, du plus simple au node 4 univers.</p>
-          </div>
-        </section>
-
-        <!-- 3. UNIVERS -->
+        <!-- 2. UNIVERS -->
         <section id="univers" class="doc-section">
           <div class="section-tag">Plusieurs sorties</div>
-          <h2><span class="h2-num">03</span> Univers et aiguillage des sorties</h2>
+          <h2><span class="h2-num">02</span> Univers et aiguillage des sorties</h2>
           <div class="prose">
             <p>Un univers = 512 canaux = une ligne XLR. Au-delà — typiquement en ajoutant des lyres — il faut répartir les projecteurs sur plusieurs univers, donc un node à plusieurs sorties.</p>
             <p>Node connecté, la fenêtre de sortie DMX affiche le tableau <strong>Aiguillage des sorties</strong>&nbsp;: pour chaque prise physique du boîtier (DMX&nbsp;1 à DMX&nbsp;4), vous choisissez <strong>quel univers</strong> y est envoyé, ou <strong>Désactivé</strong>.</p>
@@ -934,10 +1018,10 @@
           </div>
         </section>
 
-        <!-- 4. VERIFIER -->
+        <!-- 3. VERIFIER -->
         <section id="verifier" class="doc-section">
           <div class="section-tag">Contrôle</div>
-          <h2><span class="h2-num">04</span> Vérifier que le DMX sort vraiment</h2>
+          <h2><span class="h2-num">03</span> Vérifier que le DMX sort vraiment</h2>
           <div class="prose">
             <p>Un statut vert veut dire «&nbsp;le boîtier est ouvert&nbsp;», pas «&nbsp;vos projecteurs reçoivent quelque chose&nbsp;». Le seul test qui compte est physique, et tient en quatre points.</p>
           </div>
@@ -953,10 +1037,10 @@
           </div>
         </section>
 
-        <!-- 5. CABLAGE -->
+        <!-- 4. CABLAGE -->
         <section id="cablage" class="doc-section">
           <div class="section-tag">Sur scène</div>
-          <h2><span class="h2-num">05</span> Câblage DMX&nbsp;: les règles qui évitent les pannes</h2>
+          <h2><span class="h2-num">04</span> Câblage DMX&nbsp;: les règles qui évitent les pannes</h2>
           <div class="prose">
             <p>Beaucoup de «&nbsp;bugs logiciels&nbsp;» sont des problèmes de ligne. Le DMX512 est un bus série&nbsp;: règles simples, mais strictes.</p>
           </div>
@@ -984,10 +1068,10 @@
           </div>
         </section>
 
-        <!-- 6. DEPANNAGE -->
+        <!-- 5. DEPANNAGE -->
         <section id="depannage" class="doc-section">
           <div class="section-tag">SOS</div>
-          <h2><span class="h2-num">06</span> Dépannage</h2>
+          <h2><span class="h2-num">05</span> Dépannage</h2>
           <div class="prose">
             <p>Les symptômes les plus fréquents, avec la cause à vérifier en premier.</p>
           </div>
@@ -1073,10 +1157,10 @@
           </div>
         </section>
 
-        <!-- 7. FAQ -->
+        <!-- 6. FAQ -->
         <section id="faq" class="doc-section">
           <div class="section-tag">Questions fréquentes</div>
-          <h2><span class="h2-num">07</span> FAQ</h2>
+          <h2><span class="h2-num">06</span> FAQ</h2>
           <div class="faq-list">
             <details class="faq">
               <summary>Quelle interface choisir pour débuter&nbsp;?</summary>
@@ -1204,10 +1288,13 @@ function handleNewsletter(e) {
   }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
 }
 
-/* ── Configurateur : interface × système → procédure ────────────────────
+/* ── Configurateur : modèle du boîtier × système → procédure ────────────
    Les 6 procédures sont dans le HTML (indexables, et lisibles sans JS) ;
    ce script se contente de n'en afficher qu'une. Le choix est mémorisé et
-   reflété dans l'URL : #node-macos, #pro-windows… donnent un lien direct. */
+   reflété dans l'URL : #node-macos, #pro-windows… donnent un lien direct.
+   Plusieurs modèles pointent vers la même famille (iface) : on retient en
+   plus le modèle choisi, pour cocher la bonne vignette et la rappeler en
+   tête de la procédure. */
 (function () {
   var procs = [].slice.call(document.querySelectorAll('.proc'));
   if (!procs.length) return;
@@ -1220,11 +1307,35 @@ function handleNewsletter(e) {
   var OSES   = ['windows', 'macos'];
   var STORE  = 'mystrow-dmx-setup';
 
-  var iface = '', os = '';
+  var iface = '', os = '', model = '';
+
+  function markOf(id) {
+    for (var i = 0; i < ifaceBtns.length; i++) {
+      if (ifaceBtns[i].dataset.model === id) return ifaceBtns[i].dataset.mark || '';
+    }
+    return '';
+  }
+
+  /* Rappelle en tête de procédure le boîtier annoncé par l'utilisateur. */
+  function stampModel(proc) {
+    var head = proc.querySelector('.proc-head');
+    if (!head) return;
+    var chip = head.querySelector('.proc-model');
+    var mark = markOf(model);
+    if (!mark) { if (chip) chip.remove(); return; }
+    if (!chip) {
+      chip = document.createElement('span');
+      chip.className = 'proc-model';
+      var reset = head.querySelector('.proc-reset');
+      head.insertBefore(chip, reset || null);
+    }
+    chip.innerHTML = 'Votre boîtier : <b></b>';
+    chip.querySelector('b').textContent = mark;
+  }
 
   function paint(scroll) {
     ifaceBtns.forEach(function (b) {
-      b.setAttribute('aria-checked', b.dataset.iface === iface ? 'true' : 'false');
+      b.setAttribute('aria-checked', (model && b.dataset.model === model) ? 'true' : 'false');
     });
     osBtns.forEach(function (b) {
       b.setAttribute('aria-checked', b.dataset.os === os ? 'true' : 'false');
@@ -1236,23 +1347,24 @@ function handleNewsletter(e) {
     empty.hidden = !!target;
 
     if (target) {
+      var el = document.getElementById(target);
+      if (el) stampModel(el);
       try {
-        localStorage.setItem(STORE, target);
+        localStorage.setItem(STORE, target + (model ? '|' + model : ''));
         if (history.replaceState) history.replaceState(null, '', '#' + target);
         else location.hash = target;
       } catch (e) {}
-      if (scroll) {
-        var el = document.getElementById(target);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (scroll && el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
   function apply(key, scroll) {
     if (!key) return false;
-    var parts = key.split('-');
+    var bits = key.split('|');
+    var parts = bits[0].split('-');
     if (IFACES.indexOf(parts[0]) < 0 || OSES.indexOf(parts[1]) < 0) return false;
     iface = parts[0]; os = parts[1];
+    model = (bits[1] && markOf(bits[1])) ? bits[1] : '';
     paint(scroll);
     return true;
   }
@@ -1260,6 +1372,7 @@ function handleNewsletter(e) {
   ifaceBtns.forEach(function (b) {
     b.addEventListener('click', function () {
       iface = b.dataset.iface;
+      model = b.dataset.model || '';
       paint(!!os);
     });
   });
@@ -1272,7 +1385,7 @@ function handleNewsletter(e) {
   });
   [].slice.call(document.querySelectorAll('.proc-reset')).forEach(function (b) {
     b.addEventListener('click', function () {
-      iface = ''; os = '';
+      iface = ''; os = ''; model = '';
       try { localStorage.removeItem(STORE); } catch (e) {}
       paint(false);
       document.getElementById('config').scrollIntoView({ behavior: 'smooth', block: 'start' });
