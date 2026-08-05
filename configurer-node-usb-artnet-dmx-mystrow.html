@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <title>Brancher sa sortie DMX avec MyStrow — Node Art-Net &amp; interfaces USB/DMX | MyStrow</title>
-  <meta name="description" content="Le guide complet de la sortie DMX avec MyStrow : choisir son interface, configurer un Node Art-Net (DMX TOOLS, IP fixe, univers), brancher une interface USB/DMX (ENTTEC Pro, Open DMX, Eurolite, DMXKing), vérifier la sortie et dépanner.">
-  <meta name="keywords" content="sortie DMX MyStrow, node Art-Net, interface USB DMX, ENTTEC DMX USB Pro, ENTTEC Open DMX USB, Eurolite USB-DMX512 PRO MK2, DMXKing UltraDMX Micro, OPTO OPEN DMX, DMX TOOLS ElectroConcept, Art-Net 2.0.0.15, univers DMX512">
+  <meta name="description" content="Choisissez votre interface (Node Art-Net, ENTTEC Pro, Open DMX), indiquez Windows ou macOS : la procédure exacte s'affiche, étape par étape. Plus le câblage, la vérification et le dépannage.">
+  <meta name="keywords" content="sortie DMX MyStrow, node Art-Net, interface USB DMX, ENTTEC DMX USB Pro, ENTTEC Open DMX USB, Eurolite USB-DMX512 PRO MK2, DMXKing UltraDMX Micro, OPTO OPEN DMX, DMX TOOLS ElectroConcept, Art-Net 2.0.0.15, DMX Mac, univers DMX512">
   <link rel="canonical" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow">
 
   <!-- hreflang -->
@@ -17,18 +17,18 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow">
   <meta property="og:title" content="Brancher sa sortie DMX avec MyStrow — Node Art-Net & interfaces USB/DMX">
-  <meta property="og:description" content="Choisir son interface, la configurer, vérifier que le DMX sort vraiment, et dépanner : le guide complet de la sortie DMX de MyStrow.">
+  <meta property="og:description" content="Votre interface + votre système = la procédure exacte. Node Art-Net, ENTTEC Pro, Open DMX, sur Windows comme sur macOS.">
   <meta property="og:image" content="https://mystrow.fr/node-usb-dmx-tuto.webp">
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="fr_FR">
   <meta property="article:published_time" content="2026-07-13">
-  <meta property="article:modified_time" content="2026-07-30">
+  <meta property="article:modified_time" content="2026-08-05">
   <meta property="article:author" content="MyStrow">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Brancher sa sortie DMX avec MyStrow — Node Art-Net & USB/DMX">
-  <meta name="twitter:description" content="Node Art-Net ou interface USB/DMX : le guide complet pour faire sortir le DMX de MyStrow.">
+  <meta name="twitter:description" content="Choisissez votre boîtier et votre système : la marche à suivre s'affiche, sans détour.">
   <meta name="twitter:image" content="https://mystrow.fr/node-usb-dmx-tuto.webp">
 
   <!-- Fonts -->
@@ -42,15 +42,15 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Brancher sa sortie DMX avec MyStrow — Node Art-Net et interfaces USB/DMX",
-    "description": "Guide complet de la sortie DMX de MyStrow : choix de l'interface, configuration d'un Node Art-Net, branchement d'une interface USB/DMX, vérification et dépannage.",
+    "description": "Guide de la sortie DMX de MyStrow : la procédure exacte pour chaque interface (Node Art-Net, ENTTEC Pro, Open DMX) sur Windows et sur macOS, plus le câblage, la vérification et le dépannage.",
     "image": "https://mystrow.fr/node-usb-dmx-tuto.webp",
     "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
     "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
     "datePublished": "2026-07-13",
-    "dateModified": "2026-07-30",
+    "dateModified": "2026-08-05",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow" },
     "url": "https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow",
-    "keywords": ["sortie DMX", "node Art-Net", "interface USB DMX", "ENTTEC DMX USB Pro", "ENTTEC Open DMX USB", "Eurolite USB-DMX512 PRO MK2", "DMXKing", "DMX TOOLS ElectroConcept", "MyStrow"]
+    "keywords": ["sortie DMX", "node Art-Net", "interface USB DMX", "ENTTEC DMX USB Pro", "ENTTEC Open DMX USB", "Eurolite USB-DMX512 PRO MK2", "DMXKing", "DMX TOOLS ElectroConcept", "DMX macOS", "MyStrow"]
   }
   </script>
 
@@ -76,7 +76,17 @@
       {
         "@type": "Question",
         "name": "Quelle interface DMX choisir pour débuter avec MyStrow ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Une interface USB/DMX à microcontrôleur (ENTTEC DMX USB Pro, Eurolite USB-DMX512 PRO MK2) est le choix le plus simple et le plus stable : rien à configurer côté réseau, on choisit le port et on clique sur Connecter. Un Node Art-Net devient intéressant dès qu'il faut plusieurs univers, de longues distances ou une machine éloignée de la scène." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Une interface USB à microcontrôleur (ENTTEC DMX USB Pro, Eurolite USB-DMX512 PRO MK2) : rien à configurer côté réseau, on choisit le port et on clique sur Connecter, et le boîtier fabrique lui-même les trames DMX. Un Node Art-Net devient intéressant dès qu'il faut plusieurs univers, de longues distances ou une machine éloignée de la scène." }
+      },
+      {
+        "@type": "Question",
+        "name": "Sur Mac, le node Art-Net ne répond jamais : pourquoi ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depuis macOS 14, une application doit être autorisée à parler au réseau local. Sans cette autorisation, macOS bloque l'Art-Net silencieusement : aucune erreur, le node ne répond simplement jamais. Activez MyStrow dans Réglages Système → Confidentialité et sécurité → Réseau local, et vérifiez que la carte Ethernet est en 2.0.0.1 / 255.0.0.0." }
+      },
+      {
+        "@type": "Question",
+        "name": "Où trouver le port COM d'une interface USB/DMX sur Mac ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sur macOS, les ports s'appellent /dev/cu.usbserial-XXXX (et non COM1, COM2 comme sur Windows). Le pilote FTDI est intégré à macOS : il n'y a rien à installer. Choisissez l'entrée /dev/cu.usbserial-… dans le menu Port COM de MyStrow, puis cliquez sur Connecter." }
       },
       {
         "@type": "Question",
@@ -86,7 +96,7 @@
       {
         "@type": "Question",
         "name": "Faut-il un switch ou un routeur pour utiliser un Node Art-Net ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Non. Un câble Ethernet direct entre l'ordinateur et le Node suffit (ou le câble USB pour un node alimenté et connecté en USB). Il faut simplement que la carte réseau du PC soit sur le même plan d'adressage que le node, par exemple 2.0.0.1 avec un masque 255.0.0.0 pour un node en 2.0.0.15." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. Un câble Ethernet direct entre l'ordinateur et le Node suffit. Il faut simplement que la carte réseau de l'ordinateur soit sur le même plan d'adressage que le node, par exemple 2.0.0.1 avec un masque 255.0.0.0 pour un node en 2.0.0.15." }
       },
       {
         "@type": "Question",
@@ -95,13 +105,8 @@
       },
       {
         "@type": "Question",
-        "name": "Les interfaces USB/DMX fonctionnent-elles sur Mac ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les interfaces à microcontrôleur (ENTTEC DMX USB Pro, Eurolite MK2) sont les plus fiables sur macOS car le boîtier génère lui-même les timings DMX. Les adaptateurs de type Open DMX fonctionnent aussi mais dépendent davantage de la machine." }
-      },
-      {
-        "@type": "Question",
         "name": "Le diagnostic est tout vert mais les projecteurs ne réagissent pas, pourquoi ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Un test qui ouvre sa propre sortie peut réussir alors que l'application n'émet rien : vérifiez que l'onglet actif de la fenêtre « Paramétrer la sortie DMX » correspond bien au matériel branché, et que vous avez cliqué sur Connecter. Vérifiez ensuite l'adressage des projecteurs et la terminaison de la ligne DMX." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Un test qui ouvre sa propre sortie peut réussir alors que l'application n'émet rien : vérifiez que l'onglet actif de la fenêtre « Paramétrer la sortie DMX » correspond bien au matériel branché, et que vous avez cliqué sur Connecter. Sur un adaptateur passif de type Open DMX, un boîtier muet malgré un diagnostic vert vient souvent des lignes de contrôle RTS/DTR : le test RTS/DTR de MyStrow balaie les quatre combinaisons et mémorise la bonne." }
       }
     ]
   }
@@ -121,7 +126,6 @@
     body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
     .wrap-wide { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
-    .wrap-narrow { max-width: 860px; margin: 0 auto; padding: 0 28px; }
     header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
     nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
     .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
@@ -140,16 +144,17 @@
     h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 38px); margin-bottom: 16px; line-height: 1.05; }
     h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
     h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .3px; margin-bottom: 8px; color: var(--text); }
-    .hero-section { padding: 72px 0 48px; }
+    .hero-section { padding: 72px 0 40px; }
     .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
     .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
     .hero-meta span { font-size: 12px; color: var(--muted); }
     .hero-meta strong { color: var(--accent); }
-    .hero-sub { font-size: 17px; color: var(--muted); max-width: 720px; margin-bottom: 32px; line-height: 1.65; }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 720px; margin-bottom: 30px; line-height: 1.65; }
     .section { padding: 64px 0; }
     .section-bg { background: var(--bg2); padding: 64px 0; }
     .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
     .prose p { margin-bottom: 20px; }
+    .prose p:last-child { margin-bottom: 0; }
     .prose strong { color: var(--text); font-weight: 600; }
     .prose a { color: var(--accent); text-decoration: none; }
     .prose a:hover { text-decoration: underline; }
@@ -160,19 +165,9 @@
     .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 32px; }
     .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
     .feat-icon { font-size: 26px; margin-bottom: 10px; }
-    .step-list { display: flex; flex-direction: column; gap: 26px; margin-top: 32px; }
-    .step { display: flex; gap: 20px; align-items: flex-start; }
-    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
-    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.7; }
-    .step-body p + p { margin-top: 10px; }
     .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
     .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
     .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
-    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 26px 30px; margin-top: 28px; }
-    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
     .cta-block { text-align: center; padding: 72px 0; }
     .cta-block h2 { margin-bottom: 16px; }
     .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
@@ -182,8 +177,6 @@
     .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
     .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
     .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
     .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 26px 0; }
     .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
     .callout strong { color: var(--text); }
@@ -218,22 +211,66 @@
     .tag-mid { color: var(--accent); font-weight: 600; }
     .tag-no { color: #ff8080; font-weight: 600; }
 
-    /* ── Chaîne du signal ──────────────────────────────────────────── */
-    .chain { display: flex; align-items: stretch; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
-    .chain-box { flex: 1; min-width: 150px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; text-align: center; }
-    .chain-box .ci { font-size: 24px; display: block; margin-bottom: 8px; }
-    .chain-box .ct { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; color: var(--text); letter-spacing: .3px; }
-    .chain-box .cd { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.45; }
-    .chain-arrow { align-self: center; color: rgba(226,206,22,0.5); font-size: 18px; }
+    /* ── CONFIGURATEUR ─────────────────────────────────────────────── */
+    .wiz { background: linear-gradient(180deg, rgba(226,206,22,0.05), rgba(226,206,22,0.015)); border: 1px solid var(--accent-border); border-radius: 16px; padding: 26px 26px 24px; margin-top: 26px; }
+    .wiz-step + .wiz-step { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .wiz-q { display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: .3px; margin-bottom: 16px; }
+    .wiz-n { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #000; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+    .wiz-step.is-locked { opacity: .38; }
+    .wiz-step.is-locked .pick { pointer-events: none; }
+    .pick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .pick-grid.os { grid-template-columns: repeat(2, 1fr); max-width: 560px; }
+    .pick { -webkit-appearance: none; appearance: none; text-align: left; font-family: inherit; color: var(--text); background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 15px; cursor: pointer; display: flex; flex-direction: column; gap: 5px; transition: border-color .18s, background .18s, box-shadow .18s; }
+    .pick:hover { border-color: rgba(226,206,22,0.5); background: rgba(255,255,255,0.05); }
+    .pick:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .pick[aria-checked="true"] { border-color: var(--accent); background: rgba(226,206,22,0.09); box-shadow: 0 0 0 1px var(--accent) inset; }
+    .pick-ic { font-size: 22px; line-height: 1; }
+    .pick-t { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: .2px; }
+    .pick-d { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .pick-ex { font-size: 11.5px; color: rgba(226,206,22,0.75); line-height: 1.45; margin-top: 2px; }
+    .pick-grid.os .pick { flex-direction: row; align-items: center; gap: 12px; padding: 14px 18px; }
+    .pick-grid.os .pick-t { font-size: 17px; }
+    details.helper { margin-top: 14px; }
+    details.helper > summary { cursor: pointer; list-style: none; font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+    details.helper > summary::-webkit-details-marker { display: none; }
+    details.helper > summary::before { content: '?'; width: 17px; height: 17px; border-radius: 50%; border: 1px solid var(--accent); font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    details.helper[open] > summary { margin-bottom: 10px; }
+    details.helper .helper-body { font-size: 13.5px; color: var(--muted); line-height: 1.7; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 16px 18px; }
+    details.helper .helper-body strong { color: var(--text); }
+    details.helper .helper-body ul { margin: 8px 0 0 18px; }
+    details.helper .helper-body li { margin-bottom: 6px; }
 
-    /* ── Choix de voie ─────────────────────────────────────────────── */
-    .path-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
-    .path-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 26px 26px 22px; display: flex; flex-direction: column; }
-    .path-card h3 { font-size: 19px; margin-bottom: 4px; }
-    .path-card .pc-sub { font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; margin-bottom: 14px; }
-    .path-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
-    .path-card .check-list { margin-top: 0; margin-bottom: 18px; }
-    .path-card a { margin-top: auto; align-self: flex-start; }
+    /* Résultat */
+    .proc-empty { margin-top: 26px; border: 1px dashed rgba(255,255,255,0.14); border-radius: 12px; padding: 26px; text-align: center; color: var(--muted); font-size: 14px; }
+    .proc { margin-top: 30px; scroll-margin-top: 96px; }
+    .proc-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--card); border: 1px solid var(--accent-border); border-radius: 12px 12px 0 0; border-bottom: none; padding: 16px 22px; }
+    .proc-head h3 { margin: 0; font-size: 19px; }
+    .proc-chip { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); background: rgba(226,206,22,0.1); border: 1px solid var(--accent-border); border-radius: 999px; padding: 3px 11px; }
+    .proc-body { border: 1px solid var(--border); border-radius: 0 0 12px 12px; padding: 26px 22px 24px; background: rgba(255,255,255,0.012); }
+    .proc-reset { margin-left: auto; font-size: 12px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: inherit; text-decoration: underline; padding: 0; }
+    .proc-reset:hover { color: var(--accent); }
+    .step-list { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 18px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 32px; height: 32px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body { min-width: 0; }
+    .step-body h4 { margin-bottom: 6px; font-size: 16px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .step-body p + p { margin-top: 8px; }
+    .step-body ul { margin: 8px 0 0 18px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .step-body li + li { margin-top: 4px; }
+    .step-body strong { color: var(--text); font-weight: 600; }
+    .step-body a { color: var(--accent); text-decoration: none; }
+    .step-body a:hover { text-decoration: underline; }
+    .path { display: inline-block; max-width: 100%; overflow-wrap: anywhere; font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 12.5px; background: rgba(226,206,22,0.08); border: 1px solid var(--accent-border); border-radius: 5px; padding: 2px 8px; color: var(--text); }
+    .kv { list-style: none; margin: 10px 0 0; display: grid; grid-template-columns: minmax(140px, max-content) 1fr; gap: 6px 18px; font-size: 13.5px; }
+    .kv dt { color: var(--muted); }
+    .kv dd { color: var(--text); font-weight: 600; font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 12.5px; }
+    .note { margin-top: 10px; font-size: 13px; line-height: 1.65; color: var(--muted); border-left: 2px solid rgba(255,255,255,0.14); padding-left: 12px; }
+    .note strong { color: var(--text); }
+    .note.warn { border-left-color: #ff8080; }
+    .note.warn strong { color: #ff8080; }
+    .note.ok { border-left-color: var(--green); }
+    .note.ok strong { color: var(--green); }
 
     /* ── FAQ ───────────────────────────────────────────────────────── */
     .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
@@ -243,27 +280,13 @@
     details.faq summary::after { content: '+'; color: var(--accent); font-size: 20px; font-weight: 400; flex-shrink: 0; }
     details.faq[open] summary::after { content: '−'; }
     details.faq p { color: var(--muted); font-size: 14px; line-height: 1.75; padding-bottom: 20px; margin: 0; }
-    details.faq p + p { padding-bottom: 20px; margin-top: -8px; }
 
-    figure.shot { margin: 28px 0 0; text-align: center; }
-    figure.shot img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); }
-    figure.shot figcaption { color: var(--muted); font-size: 13px; margin-top: 10px; line-height: 1.5; }
-    code { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 1px 6px; color: var(--text); }
-
-    /* Nav dropdown */
-    .nav-dropdown-wrap { position: relative; }
-    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
-    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
-    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
-    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
-    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
-    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
-    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
-    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
-    .mega-item:hover { background: rgba(226,206,22,0.06); }
-    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
-    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
-    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+    figure.shot { margin: 18px 0 0; }
+    figure.shot img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); display: block; }
+    figure.shot figcaption { color: var(--muted); font-size: 12.5px; margin-top: 8px; line-height: 1.5; }
+    .shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+    .shot-row figure.shot { margin: 0; }
+    code { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 0.92em; overflow-wrap: anywhere; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 1px 6px; color: var(--text); }
 
     footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
     .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
@@ -289,18 +312,22 @@
       .toc { position: static; border-left: none; border-bottom: 1px solid var(--border); padding: 0 0 20px; margin-bottom: 40px; }
       .toc ol { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px 24px; }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .pick-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 680px) {
       nav { padding: 0 14px; gap: 8px; }
       .nav-links { display: none; }
-      .btn-primary { display: none; }
       .feat-grid { grid-template-columns: 1fr; }
-      .two-col { grid-template-columns: 1fr; }
       .related-grid { grid-template-columns: 1fr; }
-      .path-grid { grid-template-columns: 1fr; }
       .toc ol { grid-template-columns: 1fr; }
-      .stat-row { gap: 16px; }
-      .chain-arrow { display: none; }
+      .shot-row { grid-template-columns: 1fr; }
+      .pick-grid.os { grid-template-columns: 1fr; }
+      .wiz { padding: 20px 16px; }
+      .proc-head { padding: 14px 16px; }
+      .proc-body { padding: 20px 14px; }
+      .step { gap: 12px; }
+      .kv { grid-template-columns: 1fr; gap: 2px; }
+      .kv dd { margin-bottom: 8px; }
       /* La barre de réseaux sociaux du pied de page est en flex sans retour à
          la ligne : elle imposait une largeur de ~511 px et rognait toute la
          page sur un téléphone. */
@@ -325,8 +352,6 @@
 </head>
 <body>
 
-
-
 <main>
 
   <!-- HERO -->
@@ -339,16 +364,16 @@
       </nav>
       <div class="hero-badge">🔌 Guide matériel · Sortie DMX</div>
       <h1>Brancher sa <em>sortie DMX</em><br>Node Art-Net &amp; interfaces USB</h1>
-      <p class="hero-sub">MyStrow parle à vos projecteurs par une seule et même fenêtre&nbsp;: <strong>Connexion → Sortie DMX</strong>. Derrière, deux familles de matériel — un <strong>Node Art-Net</strong> (réseau) ou une <strong>interface USB/DMX</strong> (ENTTEC, Eurolite, DMXKing, OPTO…). Ce guide couvre les deux, du choix du boîtier au premier fader qui monte, plus tout ce qui coince habituellement en route.</p>
+      <p class="hero-sub">Choisissez votre boîtier, puis Windows ou macOS&nbsp;: la marche à suivre exacte s'affiche, avec les valeurs à saisir et les pièges propres à votre système. Le reste de la page couvre le câblage, la vérification et le dépannage.</p>
       <div class="hero-meta">
         <span>Par <strong>MyStrow</strong></span>
         <span>·</span>
-        <span>Mis à jour le <strong>30 juillet 2026</strong></span>
+        <span>Mis à jour le <strong>5 août 2026</strong></span>
         <span>·</span>
-        <span>⏱ Lecture&nbsp;: <strong>12 min</strong></span>
+        <span>⏱ Installation&nbsp;: <strong>5 à 10 min</strong></span>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="#choisir" class="btn-primary">Choisir mon interface →</a>
+        <a href="#config" class="btn-primary">Configurer ma sortie →</a>
         <a href="#depannage" class="btn-outline">Aller au dépannage ↓</a>
       </div>
       <img src="node-usb-dmx-tuto.webp" alt="Interfaces DMX compatibles MyStrow — node USB Art-Net et boîtiers USB/DMX" width="1200" height="675" style="width:100%;height:auto;border-radius:16px;margin-top:36px;border:1px solid var(--border);">
@@ -363,10 +388,8 @@
       <aside class="toc" aria-label="Sommaire">
         <div class="toc-title">Sommaire</div>
         <ol>
-          <li><a href="#choisir">Quelle interface choisir</a></li>
-          <li><a href="#principe">Comment le signal circule</a></li>
-          <li><a href="#node">Voie A — Node Art-Net</a></li>
-          <li><a href="#usb">Voie B — Interface USB/DMX</a></li>
+          <li><a href="#config">Configurateur</a></li>
+          <li><a href="#comparer">Comparer les interfaces</a></li>
           <li><a href="#univers">Univers &amp; aiguillage</a></li>
           <li><a href="#verifier">Vérifier que ça sort</a></li>
           <li><a href="#cablage">Câblage DMX</a></li>
@@ -377,12 +400,448 @@
 
       <div>
 
-        <!-- 1. CHOISIR -->
-        <section id="choisir" class="doc-section">
-          <div class="section-tag">Le matériel</div>
-          <h2><span class="h2-num">01</span> Quelle interface choisir&nbsp;?</h2>
+        <!-- 1. CONFIGURATEUR -->
+        <section id="config" class="doc-section">
+          <div class="section-tag">Votre installation</div>
+          <h2><span class="h2-num">01</span> Configurateur&nbsp;: votre matériel, votre procédure</h2>
           <div class="prose">
-            <p>Un logiciel de lumière ne parle pas DMX tout seul&nbsp;: il lui faut un boîtier qui transforme les données de l'ordinateur en signal DMX512 sur XLR. MyStrow en gère deux familles, et le choix se résume à une question&nbsp;: <strong>un seul univers à courte distance, ou plusieurs univers / une machine loin de la scène&nbsp;?</strong></p>
+            <p>Deux questions, puis la procédure exacte. Tout passe ensuite par une seule fenêtre dans le logiciel&nbsp;: <span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>.</p>
+          </div>
+
+          <div class="wiz">
+            <!-- Étape 1 : interface -->
+            <div class="wiz-step" id="wiz-iface">
+              <div class="wiz-q" id="q-iface"><span class="wiz-n">1</span> Quelle interface avez-vous&nbsp;?</div>
+              <div class="pick-grid" role="radiogroup" aria-labelledby="q-iface">
+                <button type="button" class="pick" role="radio" aria-checked="false" data-iface="node">
+                  <span class="pick-ic" aria-hidden="true">🌐</span>
+                  <span class="pick-t">Node Art-Net</span>
+                  <span class="pick-d">Une prise RJ45 (réseau) et 1 à 4 sorties XLR.</span>
+                  <span class="pick-ex">USB NODE DMX ElectroConcept · ENTTEC ODE · DMXKing eDMX</span>
+                </button>
+                <button type="button" class="pick" role="radio" aria-checked="false" data-iface="pro">
+                  <span class="pick-ic" aria-hidden="true">🟢</span>
+                  <span class="pick-t">Interface USB « Pro »</span>
+                  <span class="pick-d">USB d'un côté, XLR de l'autre. Le boîtier fabrique lui-même le signal.</span>
+                  <span class="pick-ex">ENTTEC DMX USB Pro · Eurolite USB-DMX512 PRO MK2</span>
+                </button>
+                <button type="button" class="pick" role="radio" aria-checked="false" data-iface="open">
+                  <span class="pick-ic" aria-hidden="true">🟡</span>
+                  <span class="pick-t">Adaptateur USB « open »</span>
+                  <span class="pick-d">Même allure, mais c'est l'ordinateur qui cadence le signal.</span>
+                  <span class="pick-ex">ENTTEC Open DMX USB · OPTO OPEN DMX · DMXKing UltraDMX Micro · clones FTDI</span>
+                </button>
+              </div>
+              <details class="helper">
+                <summary>Je ne sais pas ce que j'ai entre les mains</summary>
+                <div class="helper-body">
+                  <ul>
+                    <li><strong>Une prise RJ45 (réseau) sur le boîtier</strong> → c'est un <strong>Node Art-Net</strong>, même s'il est alimenté en USB.</li>
+                    <li><strong>Boîtier ElectroConcept</strong> → l'inscription se trouve juste au-dessus de la prise USB&nbsp;: «&nbsp;<strong>USB NODE DMX</strong>&nbsp;» = node, «&nbsp;<strong>OPTO OPEN DMX</strong>&nbsp;» = adaptateur open.</li>
+                    <li><strong>Uniquement USB + XLR, modèle inconnu</strong> → si la marque et le modèle contiennent «&nbsp;Pro&nbsp;» (ENTTEC DMX USB <em>Pro</em>, Eurolite USB-DMX512 <em>PRO</em> MK2), c'est une interface Pro. Sinon, partez sur <strong>adaptateur «&nbsp;open&nbsp;»</strong>&nbsp;: c'est le cas de l'immense majorité des boîtiers à moins de 60&nbsp;€.</li>
+                    <li><strong>Toujours un doute&nbsp;?</strong> Choisissez «&nbsp;open&nbsp;»&nbsp;: si le boîtier est en réalité un Pro, la sortie ne démarrera pas et il suffira de changer la ligne «&nbsp;Interface&nbsp;» dans le logiciel. Aucun risque pour le matériel.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <!-- Étape 2 : système -->
+            <div class="wiz-step" id="wiz-os">
+              <div class="wiz-q" id="q-os"><span class="wiz-n">2</span> Sur quel ordinateur&nbsp;?</div>
+              <div class="pick-grid os" role="radiogroup" aria-labelledby="q-os">
+                <button type="button" class="pick" role="radio" aria-checked="false" data-os="windows">
+                  <span class="pick-ic" aria-hidden="true">🪟</span>
+                  <span class="pick-t">Windows</span>
+                </button>
+                <button type="button" class="pick" role="radio" aria-checked="false" data-os="macos">
+                  <span class="pick-ic" aria-hidden="true">🍎</span>
+                  <span class="pick-t">macOS</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="proc-empty" id="proc-empty" hidden>Sélectionnez une interface et un système pour afficher la procédure.</div>
+
+          <!-- ═══════════ PROCÉDURES ═══════════ -->
+          <div id="procs">
+
+            <!-- A. NODE + WINDOWS -->
+            <article class="proc" id="node-windows" data-iface="node" data-os="windows">
+              <div class="proc-head">
+                <h3>Node Art-Net</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Changer de matériel</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Brancher les deux câbles</h4>
+                      <p>Un câble <strong>RJ45 directement entre le PC et le node</strong> (pas de switch, pas de Wi-Fi), et l'alimentation&nbsp;: USB-B carré ou USB-C selon le modèle. Vérifiez que la LED du boîtier s'allume.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Régler le node dans son utilitaire</h4>
+                      <p>Pour les nodes ElectroConcept, boîtier branché et alimenté, ouvrez <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> et saisissez&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode : OUT · Universe OUT : 0 · Universe IN : 1 · OUT Mode : Fixed · FPS Fixed : 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP : 2.0.0.15 · DHCP IP : 2.0.0.2 · Netmask : 255.0.0.0</dd>
+                      </dl>
+                      <p>Validez, puis <strong>débranchez et rebranchez l'USB</strong>&nbsp;: le node repart sur sa nouvelle adresse. Il sort d'usine en 2.0.0.1, et 2.0.0.15 est l'adresse que MyStrow vise par défaut — en la respectant, vous n'aurez rien à saisir dans le logiciel.</p>
+                      <p>Sur un autre node (ENTTEC ODE, DMXKing eDMX…), l'utilitaire change mais les réglages sont les mêmes&nbsp;: <strong>protocole Art-Net</strong>, sortie en OUT, univers 0, IP 2.0.0.15 / masque 255.0.0.0.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="dmx-parameters-dmxtools.webp" alt="Onglet DMX Parameters de DMX TOOLS ElectroConcept" width="401" height="538" loading="lazy">
+                          <figcaption>Onglet <strong>DMX Parameters</strong>.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="network-parameters-dmxtools.webp" alt="Onglet Network Parameters de DMX TOOLS ElectroConcept" width="384" height="379" loading="lazy">
+                          <figcaption>Onglet <strong>Network Parameters</strong>.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Mettre la carte réseau du PC en 2.0.0.1</h4>
+                      <p>Dans MyStrow&nbsp;: <span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🌐 Sortie Node</strong>, bouton <strong>⚙️ Configurer la connexion réseau</strong>. L'assistant vérifie les câbles, liste les cartes Ethernet, et le bouton <strong>Configurer automatiquement ✓</strong> applique 2.0.0.1 / 255.0.0.0 sur celle que vous désignez.</p>
+                      <p>La configuration automatique demande les <strong>droits administrateur</strong>. Si elle échoue, l'assistant bascule sur la page manuelle&nbsp;: bouton <strong>🔑 Relancer en administrateur</strong>, ou réglage à la main — clic droit sur la carte ▸ Propriétés ▸ <strong>TCP/IPv4</strong> ▸ Propriétés ▸ «&nbsp;Utiliser l'adresse IP suivante&nbsp;» ▸ <strong>2.0.0.1</strong>, masque <strong>255.0.0.0</strong>, passerelle vide.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="proprietes-carte-reseau.webp" alt="Propriétés de la carte réseau Windows en IP fixe 2.0.0.1 pour un node Art-Net" loading="lazy">
+                          <figcaption>Le réglage manuel équivalent, dans Windows.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="parametrer-sortie-node-mystrow.webp" alt="Bouton Configurer la connexion réseau dans la fenêtre Paramétrer la sortie DMX de MyStrow" loading="lazy">
+                          <figcaption>Le bouton <strong>⚙️ Configurer la connexion réseau</strong> le fait à votre place.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Autoriser MyStrow dans le pare-feu</h4>
+                      <p>À la première émission, Windows affiche une demande d'autorisation&nbsp;: cochez <strong>Réseaux privés</strong> et validez. L'Art-Net part en UDP sur le port <code>6454</code>&nbsp;; refusée, la demande ne se represente pas et le node reste muet.</p>
+                      <div class="note">Déjà refusé par erreur&nbsp;? <strong>Pare-feu Windows Defender ▸ Autoriser une application</strong> ▸ cochez MyStrow pour les réseaux privés.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                      <h4>Connecter, puis aiguiller les sorties</h4>
+                      <p>Onglet <strong>🌐 Sortie Node</strong>&nbsp;: le statut passe au vert dès que le boîtier répond, puis cliquez sur <strong>🔌 Connecter</strong>. Dans le tableau <strong>Aiguillage des sorties</strong>, indiquez quel univers part sur quelle prise physique (voir <a href="#univers">Univers &amp; aiguillage</a>).</p>
+                      <div class="note ok"><strong>Contrôle rapide&nbsp;:</strong> <span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🌐 Test RJ45 (réseau / Node Art-Net)</span> vérifie la carte réseau, le ping et la réponse Art-Net du node.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>Wi-Fi&nbsp;: à éviter.</strong> L'Art-Net supporte mal les pertes de paquets et la latence variable d'un réseau sans fil — les lumières «&nbsp;accrochent&nbsp;». Le node en filaire, le Wi-Fi pour la tablette de contrôle.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- B. NODE + MACOS -->
+            <article class="proc" id="node-macos" data-iface="node" data-os="macos">
+              <div class="proc-head">
+                <h3>Node Art-Net</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Changer de matériel</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Brancher les deux câbles</h4>
+                      <p>Un câble <strong>RJ45 directement entre le Mac et le node</strong>, et l'alimentation (USB-B ou USB-C selon le modèle). Sans port Ethernet, utilisez un adaptateur USB-C → Ethernet&nbsp;: il apparaît comme une carte réseau à part entière.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Régler le node dans son utilitaire</h4>
+                      <p>Pour les nodes ElectroConcept, boîtier branché et alimenté, ouvrez <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> (Safari ou Chrome) et saisissez&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode : OUT · Universe OUT : 0 · Universe IN : 1 · OUT Mode : Fixed · FPS Fixed : 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP : 2.0.0.15 · DHCP IP : 2.0.0.2 · Netmask : 255.0.0.0</dd>
+                      </dl>
+                      <p>Validez, puis <strong>débranchez et rebranchez l'USB</strong>. 2.0.0.15 est l'adresse visée par défaut par MyStrow. Sur un autre node, les noms changent mais pas les valeurs&nbsp;: Art-Net, OUT, univers 0, 2.0.0.15 / 255.0.0.0.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="dmx-parameters-dmxtools.webp" alt="Onglet DMX Parameters de DMX TOOLS ElectroConcept" width="401" height="538" loading="lazy">
+                          <figcaption>Onglet <strong>DMX Parameters</strong>.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="network-parameters-dmxtools.webp" alt="Onglet Network Parameters de DMX TOOLS ElectroConcept" width="384" height="379" loading="lazy">
+                          <figcaption>Onglet <strong>Network Parameters</strong>.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Fixer l'IP du Mac à la main</h4>
+                      <p><span class="path">Réglages Système ▸ Réseau</span> ▸ sélectionnez l'interface <strong>Ethernet</strong> (ou l'adaptateur USB-C) ▸ <strong>Détails…</strong> ▸ onglet <strong>TCP/IP</strong> ▸ <em>Configurer IPv4</em>&nbsp;: <strong>Manuellement</strong>.</p>
+                      <dl class="kv">
+                        <dt>Adresse IP</dt><dd>2.0.0.1</dd>
+                        <dt>Masque de sous-réseau</dt><dd>255.0.0.0</dd>
+                        <dt>Routeur</dt><dd>(laisser vide)</dd>
+                      </dl>
+                      <p>Puis <strong>OK</strong> ▸ <strong>Appliquer</strong>. Dans MyStrow, le bouton <strong>📂 Ouvrir les connexions réseau</strong> de l'assistant amène directement sur ce panneau.</p>
+                      <div class="note warn"><strong>Sur Mac, pas de configuration automatique.</strong> Le bouton «&nbsp;Configurer automatiquement&nbsp;» de l'assistant s'appuie sur des commandes Windows&nbsp;: sur macOS, c'est la saisie manuelle ci-dessus qui fait foi.</div>
+                      <div class="note">Le Mac peut rester connecté au Wi-Fi pour Internet&nbsp;: le trafic vers 2.0.0.15 partira par l'Ethernet, qui porte le plan d'adressage 2.x.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Autoriser MyStrow sur le réseau local</h4>
+                      <p><span class="path">Réglages Système ▸ Confidentialité et sécurité ▸ Réseau local</span> ▸ activez <strong>MyStrow</strong>. macOS pose la question au premier lancement&nbsp;; si elle a été refusée, c'est ici qu'on la rattrape.</p>
+                      <div class="note warn"><strong>Le piège n°1 sur Mac.</strong> Sans cette autorisation, macOS bloque l'Art-Net <strong>en silence</strong>&nbsp;: aucune erreur, aucun message — le node ne répond simplement jamais et la sortie reste muette. Après activation, quittez et relancez MyStrow.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                      <h4>Connecter, puis aiguiller les sorties</h4>
+                      <p><span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🌐 Sortie Node</strong>&nbsp;: statut vert, puis <strong>🔌 Connecter</strong>. Réglez ensuite le tableau <strong>Aiguillage des sorties</strong> (voir <a href="#univers">Univers &amp; aiguillage</a>).</p>
+                      <div class="note ok"><strong>Contrôle rapide&nbsp;:</strong> <span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🌐 Test RJ45 (réseau / Node Art-Net)</span>.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>Wi-Fi&nbsp;: à éviter</strong> pour le node lui-même — pertes de paquets et latence variable font «&nbsp;accrocher&nbsp;» les lumières. Filaire pour le DMX, Wi-Fi pour la tablette de contrôle.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- C. PRO + WINDOWS -->
+            <article class="proc" id="pro-windows" data-iface="pro" data-os="windows">
+              <div class="proc-head">
+                <h3>Interface USB «&nbsp;Pro&nbsp;» (ENTTEC DMX USB Pro, Eurolite MK2)</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Changer de matériel</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Brancher avant d'ouvrir la fenêtre</h4>
+                      <p>Sur un <strong>port USB direct du PC</strong>, de préférence à l'arrière sur une tour&nbsp;; évitez les hubs non alimentés. Branchez avant d'ouvrir la fenêtre de sortie DMX, pour que le port soit déjà listé.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Vérifier le pilote</h4>
+                      <p>Ces boîtiers utilisent une puce FTDI&nbsp;: Windows installe le pilote tout seul dans la grande majorité des cas. Pour vérifier&nbsp;: <span class="path">Gestionnaire de périphériques ▸ Ports (COM et LPT)</span> — vous devez y voir une ligne du type <code>USB Serial Port (COM4)</code>.</p>
+                      <p>Rien n'apparaît, ou un point d'exclamation jaune&nbsp;? Installez le pilote <strong>VCP FTDI</strong> (ftdichip.com) ou celui du fabricant, puis rebranchez le boîtier.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Sélectionner et connecter</h4>
+                      <p><span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🔌 Sortie DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC DMX USB Pro&nbsp;» ou «&nbsp;Eurolite USB-DMX512 PRO (MK2)&nbsp;».</li>
+                        <li><strong>Port COM</strong>&nbsp;: celui de l'interface — les puces FTDI sont marquées d'une <strong>★</strong>. Le bouton <strong>↺</strong> relance la détection.</li>
+                        <li><strong>🔌 Connecter</strong>&nbsp;: c'est ce bouton, et lui seul, qui bascule réellement la sortie du logiciel. Ouvrir l'onglet ne suffit pas.</li>
+                      </ul>
+                      <div class="note">Rien à choisir côté protocole&nbsp;: MyStrow parle à ces boîtiers en protocole à paquets, c'est le microcontrôleur interne qui fabrique les trames DMX. C'est ce qui les rend aussi stables.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Vérifier</h4>
+                      <p>La <strong>LED du boîtier passe au vert</strong> quand la sortie est active. Pour aller plus loin&nbsp;: <span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB (interface DMX)</span> — l'assistant propose <strong>▶ Lancer le diagnostic</strong> (port, pilote, émission réelle) et <strong>💡 Test 100&nbsp;%</strong>, qui envoie un plein feu sur tous les canaux.</p>
+                      <div class="note warn"><strong>Un seul logiciel à la fois sur le boîtier.</strong> Un utilitaire du fabricant ou un autre logiciel de lumière qui tient le port rend la sortie erratique (clignotements, «&nbsp;port not open&nbsp;»). Fermez tout le reste avant de connecter.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- D. PRO + MACOS -->
+            <article class="proc" id="pro-macos" data-iface="pro" data-os="macos">
+              <div class="proc-head">
+                <h3>Interface USB «&nbsp;Pro&nbsp;» (ENTTEC DMX USB Pro, Eurolite MK2)</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Changer de matériel</button>
+              </div>
+              <div class="proc-body">
+                <div class="note ok" style="margin:0 0 22px;"><strong>C'est la solution la plus fiable sur Mac.</strong> Le boîtier génère lui-même le signal DMX&nbsp;: la sortie ne dépend ni de la charge de la machine, ni des pilotes installés.</div>
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Brancher avant d'ouvrir la fenêtre</h4>
+                      <p>Sur un port USB direct (ou un adaptateur USB-C de bonne qualité). Branchez avant d'ouvrir la fenêtre de sortie DMX.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>N'installez aucun pilote</h4>
+                      <p>macOS embarque son propre pilote FTDI. Le boîtier apparaît tout seul sous la forme <code>/dev/cu.usbserial-XXXXXXXX</code>.</p>
+                      <div class="note warn"><strong>N'ajoutez pas le pilote VCP de FTDI par-dessus&nbsp;:</strong> il double les ports et rend la sélection ambiguë. Si vous l'avez déjà installé, désinstallez-le avant de dépanner.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Sélectionner et connecter</h4>
+                      <p><span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🔌 Sortie DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC DMX USB Pro&nbsp;» ou «&nbsp;Eurolite USB-DMX512 PRO (MK2)&nbsp;».</li>
+                        <li><strong>Port COM</strong>&nbsp;: l'entrée <code>/dev/cu.usbserial-…</code> (marquée <strong>★</strong> pour les puces FTDI). Le bouton <strong>↺</strong> relance la détection. Le libellé «&nbsp;Port COM&nbsp;» est repris de Windows&nbsp;; sur Mac il désigne bien ces ports <code>cu.*</code>.</li>
+                        <li><strong>🔌 Connecter</strong> — c'est ce bouton qui bascule réellement la sortie.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Vérifier</h4>
+                      <p>La <strong>LED du boîtier passe au vert</strong>. Pour un test complet&nbsp;: <span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB (interface DMX)</span> ▸ <strong>▶ Lancer le diagnostic</strong>, puis <strong>💡 Test 100&nbsp;%</strong>.</p>
+                      <div class="note warn"><strong>Un seul logiciel à la fois sur le boîtier</strong>&nbsp;: fermez tout autre logiciel de lumière ou utilitaire du fabricant avant de connecter.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- E. OPEN + WINDOWS -->
+            <article class="proc" id="open-windows" data-iface="open" data-os="windows">
+              <div class="proc-head">
+                <h3>Adaptateur USB «&nbsp;open&nbsp;» (Open DMX, OPTO OPEN DMX, UltraDMX Micro, clones FTDI)</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Changer de matériel</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Brancher et installer le pilote FTDI</h4>
+                      <p>Port USB direct, pas de hub non alimenté. Windows pose en général le pilote tout seul&nbsp;; sinon, installez le pack <strong>FTDI (VCP + D2XX)</strong> depuis ftdichip.com, puis rebranchez.</p>
+                      <div class="note">Sur ces boîtiers passifs, MyStrow attaque la puce FTDI <strong>en direct (D2XX)</strong>, comme QLC+&nbsp;: c'est ce qui règle le Latency Timer à 1&nbsp;ms et produit un signal de synchronisation propre. Via le simple port série, le timing serait cassé et les projecteurs ignoreraient toutes les trames — sans la moindre erreur affichée.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Fermer tout ce qui tient la puce</h4>
+                      <p>Utilitaire du fabricant, autre logiciel de lumière, seconde instance de MyStrow&nbsp;: un seul programme peut ouvrir le boîtier. Deux, et la sortie devient erratique.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Sélectionner et connecter</h4>
+                      <p><span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🔌 Sortie DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC Open DMX USB&nbsp;», «&nbsp;OPTO OPEN DMX (ElectroConcept)&nbsp;», «&nbsp;DMXKing UltraDMX Micro&nbsp;», ou «&nbsp;Autre interface USB-DMX&nbsp;» pour tous les clones FTDI.</li>
+                        <li><strong>Port COM</strong>&nbsp;: les puces FTDI sont marquées d'une <strong>★</strong>. Bouton <strong>↺</strong> pour rescanner.</li>
+                        <li><strong>🔌 Connecter</strong>.</li>
+                      </ul>
+                      <div class="note">Une fois connecté, le port COM peut <strong>disparaître de la liste</strong>&nbsp;: c'est normal, la puce est réservée en accès direct. Elle réapparaît à la déconnexion.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Boîtier muet alors que tout est vert&nbsp;? Le test RTS/DTR</h4>
+                      <p><span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB (interface DMX)</span> ▸ <strong>🔌 Test RTS/DTR</strong>.</p>
+                      <p>Sur ces adaptateurs, la broche qui <em>autorise</em> l'émission RS485 est parfois câblée sur les lignes de contrôle RTS ou DTR — et celles-ci sont activées par défaut à l'ouverture du port, ce qui rend la sortie totalement muette, sans erreur. Le test balaie les quatre combinaisons, vous demandez laquelle allume les projecteurs, et le réglage est mémorisé.</p>
+                      <div class="note ok">Avant ça, faites le tour classique&nbsp;: <strong>💡 Test 100&nbsp;%</strong> pour envoyer un plein feu, master et faders montés, et un bouchon 120&nbsp;Ω en fin de ligne.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- F. OPEN + MACOS -->
+            <article class="proc" id="open-macos" data-iface="open" data-os="macos">
+              <div class="proc-head">
+                <h3>Adaptateur USB «&nbsp;open&nbsp;» (Open DMX, OPTO OPEN DMX, UltraDMX Micro, clones FTDI)</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Changer de matériel</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Brancher, ne rien installer</h4>
+                      <p>Port USB direct (ou adaptateur USB-C de qualité). macOS embarque son pilote FTDI&nbsp;: le boîtier apparaît sous la forme <code>/dev/cu.usbserial-XXXXXXXX</code>.</p>
+                      <div class="note warn"><strong>N'installez pas le pilote VCP de FTDI par-dessus celui d'Apple</strong>&nbsp;: il crée des ports en double et brouille la sélection.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Ce que fait MyStrow sur Mac</h4>
+                      <p>Sur macOS, l'accès direct à la puce (D2XX) n'est pas disponible&nbsp;: MyStrow passe par le port série et génère le signal de synchronisation DMX par bascule de débit. C'est la méthode qui fonctionne réellement sur Mac — la commande de break standard y réussit sans erreur mais ne produit aucun signal électrique valide, ce qui donne un boîtier parfaitement muet et un logiciel parfaitement vert.</p>
+                      <div class="note">Rien à régler&nbsp;: c'est automatique. Retenez juste que sur ce type de boîtier, <strong>la cadence dépend de la machine</strong> — en prestation, une interface Pro reste plus sûre.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Sélectionner et connecter</h4>
+                      <p><span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🔌 Sortie DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC Open DMX USB&nbsp;», «&nbsp;OPTO OPEN DMX (ElectroConcept)&nbsp;», «&nbsp;DMXKing UltraDMX Micro&nbsp;» ou «&nbsp;Autre interface USB-DMX&nbsp;».</li>
+                        <li><strong>Port COM</strong>&nbsp;: l'entrée <code>/dev/cu.usbserial-…</code>, marquée <strong>★</strong>. Bouton <strong>↺</strong> pour rescanner.</li>
+                        <li><strong>🔌 Connecter</strong>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Boîtier muet alors que tout est vert&nbsp;? Le test RTS/DTR</h4>
+                      <p><span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB (interface DMX)</span> ▸ <strong>🔌 Test RTS/DTR</strong>.</p>
+                      <p>La broche qui autorise l'émission RS485 est parfois câblée sur les lignes RTS ou DTR, activées par défaut à l'ouverture du port&nbsp;: sortie muette, aucune erreur. Le test balaie les quatre combinaisons et mémorise celle qui allume vos projecteurs.</p>
+                      <div class="note ok">Avant ça&nbsp;: <strong>💡 Test 100&nbsp;%</strong>, master et faders montés, bouchon 120&nbsp;Ω en fin de ligne.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /#procs -->
+
+          <details class="helper" style="margin-top:26px;">
+            <summary>Les bases, si les mots «&nbsp;canal&nbsp;», «&nbsp;univers&nbsp;» ou «&nbsp;Art-Net&nbsp;» ne vous parlent pas</summary>
+            <div class="helper-body">
+              <ul>
+                <li><strong>Canal</strong> — une valeur de 0 à 255. Un PAR LED simple en consomme 5 (dimmer, R, V, B, strobe), une lyre 16 ou plus.</li>
+                <li><strong>Univers</strong> — un paquet de <strong>512 canaux</strong>, soit une ligne DMX physique. Plus gros rig = deuxième univers = deuxième sortie.</li>
+                <li><strong>Adresse</strong> — le canal de départ réglé <em>sur le projecteur</em>. Il doit correspondre exactement au patch de MyStrow.</li>
+                <li><strong>Art-Net</strong> — du DMX transporté sur le réseau, en UDP sur le port <code>6454</code>. C'est ce que MyStrow envoie à un node.</li>
+              </ul>
+              <p style="margin-top:10px;">MyStrow réémet l'univers entier plusieurs dizaines de fois par seconde&nbsp;: c'est le fonctionnement normal du DMX. Un projecteur qui «&nbsp;garde&nbsp;» une couleur alors que tout est coupé n'est donc jamais un projecteur qui bug — c'est la sortie qui ne lui parle plus.</p>
+            </div>
+          </details>
+        </section>
+
+        <!-- 2. COMPARER -->
+        <section id="comparer" class="doc-section">
+          <div class="section-tag">Avant d'acheter</div>
+          <h2><span class="h2-num">02</span> Comparer les trois familles</h2>
+          <div class="prose">
+            <p>Le choix se résume à une question&nbsp;: <strong>un seul univers à courte distance, ou plusieurs univers / une machine loin de la scène&nbsp;?</strong></p>
           </div>
 
           <div class="table-scroll">
@@ -398,22 +857,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Interface USB à microcontrôleur</strong><br>Le boîtier fabrique lui-même le signal DMX.</td>
+                  <td><strong>Interface USB «&nbsp;Pro&nbsp;»</strong><br>Le boîtier fabrique lui-même le signal DMX.</td>
                   <td>ENTTEC DMX USB Pro<br>Eurolite USB-DMX512 PRO MK2</td>
                   <td>1</td>
                   <td><span class="tag-ok">Excellente</span><br>timings gérés par le boîtier</td>
-                  <td>Le choix par défaut&nbsp;: petit rig, bar, mariage, home studio. Rien à configurer.</td>
+                  <td>Le choix par défaut&nbsp;: petit rig, bar, mariage, home studio. Rien à configurer, et le plus sûr sur Mac.</td>
                 </tr>
                 <tr>
-                  <td><strong>Adaptateur USB « open »</strong><br>C'est l'ordinateur qui cadence le signal.</td>
+                  <td><strong>Adaptateur USB «&nbsp;open&nbsp;»</strong><br>C'est l'ordinateur qui cadence le signal.</td>
                   <td>ENTTEC Open DMX USB<br>OPTO OPEN DMX (ElectroConcept)<br>DMXKing UltraDMX Micro</td>
                   <td>1</td>
                   <td><span class="tag-mid">Bonne</span><br>dépend de la machine</td>
                   <td>Budget serré, dépannage, deuxième interface de secours.</td>
                 </tr>
                 <tr>
-                  <td><strong>Node Art-Net</strong><br>Passe par le réseau (Ethernet ou USB-réseau).</td>
-                  <td>Node USB DMX ElectroConcept<br>ENTTEC ODE Mk2<br>DMXKing eDMX1/eDMX2 PRO</td>
+                  <td><strong>Node Art-Net</strong><br>Passe par le réseau Ethernet.</td>
+                  <td>USB NODE DMX ElectroConcept<br>ENTTEC ODE Mk2<br>DMXKing eDMX1/eDMX2 PRO</td>
                   <td>1 à 4 selon le modèle</td>
                   <td><span class="tag-ok">Excellente</span><br>longues distances</td>
                   <td>Plusieurs univers, lyres, régie éloignée du plateau, installations fixes.</td>
@@ -423,255 +882,21 @@
           </div>
 
           <div class="callout">
-            <p><strong>En pratique&nbsp;:</strong> si vous débutez et que vous avez moins d'une centaine de canaux, prenez une interface USB à microcontrôleur — vous branchez, vous choisissez le port, vous cliquez sur Connecter. Le Node devient rentable dès que vous ajoutez des lyres (16 à 30 canaux pièce&nbsp;: on sature un univers vite) ou que le câble XLR devrait faire 40&nbsp;m jusqu'à la régie.</p>
-          </div>
-
-          <div class="path-grid">
-            <div class="path-card">
-              <h3>Node Art-Net</h3>
-              <div class="pc-sub">Voie A</div>
-              <p>Le boîtier reçoit de l'Art-Net par le réseau et le convertit en DMX sur ses sorties XLR. Il demande un réglage réseau une fois pour toutes.</p>
-              <ul class="check-list">
-                <li>Jusqu'à 4 univers sur un seul boîtier</li>
-                <li>Longueur de câble réseau, pas de contrainte USB</li>
-                <li>Aiguillage univers → sortie physique dans MyStrow</li>
-              </ul>
-              <a href="#node" class="btn-outline">Configurer un Node →</a>
-            </div>
-            <div class="path-card">
-              <h3>Interface USB/DMX</h3>
-              <div class="pc-sub">Voie B</div>
-              <p>Un simple câble USB d'un côté, du XLR de l'autre. Aucune configuration réseau, MyStrow détecte le protocole du boîtier tout seul.</p>
-              <ul class="check-list">
-                <li>Branché → port COM → Connecter</li>
-                <li>Compatible Windows et macOS</li>
-                <li>Diagnostic intégré en cas de doute</li>
-              </ul>
-              <a href="#usb" class="btn-outline">Configurer une interface USB →</a>
-            </div>
+            <p><strong>En pratique&nbsp;:</strong> moins d'une centaine de canaux&nbsp;? Une interface USB Pro suffit — brancher, choisir le port, connecter. Le node devient rentable dès que vous ajoutez des lyres (16 à 30 canaux pièce&nbsp;: un univers se sature vite) ou que le câble XLR devrait faire 40&nbsp;m jusqu'à la régie.</p>
           </div>
 
           <div class="prose" style="margin-top:26px;">
-            <p>Vous n'avez pas encore de boîtier&nbsp;? La <a href="shop.html">page matériel</a> liste les modèles testés avec MyStrow, du plus simple au node 4 univers.</p>
+            <p>Pas encore de boîtier&nbsp;? La <a href="shop.html">page matériel</a> liste les modèles testés avec MyStrow, du plus simple au node 4 univers.</p>
           </div>
         </section>
 
-        <!-- 2. PRINCIPE -->
-        <section id="principe" class="doc-section">
-          <div class="section-tag">Les bases</div>
-          <h2><span class="h2-num">02</span> Comment le signal circule</h2>
-          <div class="prose">
-            <p>Comprendre la chaîne évite 90&nbsp;% des heures perdues à chercher une panne&nbsp;: quand rien ne s'allume, il suffit de savoir <em>à quel maillon</em> regarder.</p>
-          </div>
-
-          <div class="chain">
-            <div class="chain-box">
-              <span class="ci">💻</span>
-              <div class="ct">MyStrow</div>
-              <div class="cd">calcule 512 valeurs de canal, en continu</div>
-            </div>
-            <div class="chain-arrow">→</div>
-            <div class="chain-box">
-              <span class="ci">🔌</span>
-              <div class="ct">L'interface</div>
-              <div class="cd">Node Art-Net ou boîtier USB/DMX</div>
-            </div>
-            <div class="chain-arrow">→</div>
-            <div class="chain-box">
-              <span class="ci">🔗</span>
-              <div class="ct">La ligne DMX</div>
-              <div class="cd">XLR en guirlande, d'un projecteur au suivant</div>
-            </div>
-            <div class="chain-arrow">→</div>
-            <div class="chain-box">
-              <span class="ci">💡</span>
-              <div class="ct">Les projecteurs</div>
-              <div class="cd">chacun écoute à partir de son adresse</div>
-            </div>
-          </div>
-
-          <div class="prose" style="margin-top:30px;">
-            <p>Trois notions suffisent pour la suite&nbsp;:</p>
-          </div>
-          <div class="feat-grid">
-            <div class="feat-item">
-              <div class="feat-icon">🎚️</div>
-              <h4>Le canal</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Une valeur de 0 à 255. Un PAR LED simple en consomme 5 (dimmer, R, V, B, strobe), une lyre 16 ou plus.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">🌌</div>
-              <h4>L'univers</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Un paquet de <strong>512 canaux</strong> = une ligne DMX physique. Rig plus gros&nbsp;? Il faut un deuxième univers, donc une deuxième sortie.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">📍</div>
-              <h4>L'adresse</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Le canal de départ réglé <em>sur le projecteur</em>. Elle doit correspondre exactement au patch de MyStrow.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">📡</div>
-              <h4>Art-Net</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Le DMX transporté sur le réseau, en UDP sur le port <code>6454</code>. C'est ce que MyStrow émet vers un node.</p></div>
-            </div>
-          </div>
-
-          <div class="callout">
-            <p><strong>À retenir&nbsp;:</strong> MyStrow réémet en permanence l'intégralité de l'univers, plusieurs dizaines de fois par seconde — c'est le fonctionnement normal du DMX. Un projecteur qui « garde » une couleur alors que vous avez tout coupé n'est donc jamais un projecteur qui bug&nbsp;: c'est la sortie qui ne lui parle plus.</p>
-          </div>
-        </section>
-
-        <!-- 3. NODE -->
-        <section id="node" class="doc-section">
-          <div class="section-tag">Voie A</div>
-          <h2><span class="h2-num">03</span> Configurer un Node Art-Net</h2>
-          <div class="prose">
-            <p>La procédure détaillée ci-dessous est celle du <strong>node USB ElectroConcept</strong> («&nbsp;USB NODE DMX&nbsp;»), le plus répandu chez les utilisateurs de MyStrow. Le principe reste le même sur tout autre node (ENTTEC ODE, DMXKing eDMX…), seul l'utilitaire de configuration change&nbsp;: <em>régler le node en Art-Net, lui donner une adresse IP, mettre le PC sur le même plan d'adressage</em>.</p>
-          </div>
-
-          <div class="step-list">
-            <div class="step">
-              <div class="step-num">1</div>
-              <div class="step-body">
-                <h3>Vérifier que c'est bien un node</h3>
-                <p>Sur les boîtiers ElectroConcept, l'inscription se trouve <strong>juste au-dessus de la prise USB</strong>. <strong>«&nbsp;USB NODE DMX&nbsp;»</strong> → c'est bien un node Art-Net, continuez ici. <strong>«&nbsp;OPTO OPEN DMX&nbsp;»</strong> → ce n'est pas un node mais une interface USB/DMX classique&nbsp;: allez directement à la <a href="#usb" style="color:var(--accent);text-decoration:none;">voie B</a>.</p>
-                <p>Branchez le boîtier et vérifiez qu'il est alimenté (LED active).</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <div class="step-body">
-                <h3>Régler le node dans DMX TOOLS</h3>
-                <p>La configuration passe par l'utilitaire web d'ElectroConcept, boîtier branché et alimenté. Onglet <strong>DMX Parameters</strong>&nbsp;: <strong>DMX Mode&nbsp;: OUT</strong> · <strong>Universe OUT&nbsp;: 0</strong> · <strong>Universe IN&nbsp;: 1</strong> · <strong>OUT Mode&nbsp;: Fixed</strong> · <strong>FPS Fixed&nbsp;: 40</strong>.</p>
-                <p>«&nbsp;OUT&nbsp;» signifie que c'est le PC qui envoie vers les projecteurs&nbsp;; «&nbsp;Universe OUT 0&nbsp;» correspond au premier univers émis par MyStrow.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <div class="step-body">
-                <h3>Donner une adresse au node</h3>
-                <p>Onglet <strong>Network Parameters</strong>&nbsp;: <strong>Node IP&nbsp;: 2.0.0.15</strong> (le boîtier sort d'usine en 2.0.0.1, il faut le changer), <strong>DHCP IP&nbsp;: 2.0.0.2</strong>, <strong>Netmask&nbsp;: 255.0.0.0</strong>. Validez, puis <strong>débranchez et rebranchez l'USB</strong> pour que le node reparte sur sa nouvelle adresse.</p>
-                <p>2.0.0.15 est l'adresse que MyStrow vise par défaut&nbsp;: en la respectant, vous n'aurez rien à saisir dans le logiciel.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">4</div>
-              <div class="step-body">
-                <h3>Mettre le PC en IP fixe</h3>
-                <p>Une IP fixe est toujours plus fiable qu'une attribution automatique. Propriétés de la <strong>carte réseau qui apparaît quand vous branchez le node</strong> → <strong>Protocole Internet version 4 (TCP/IPv4)</strong> → <strong>Propriétés</strong> → «&nbsp;Utiliser l'adresse IP suivante&nbsp;»&nbsp;: <strong>2.0.0.1</strong>, masque <strong>255.0.0.0</strong>, passerelle vide.</p>
-                <p>MyStrow sait le faire à votre place&nbsp;: bouton <strong>⚙ Configurer la connexion réseau</strong> dans la fenêtre de sortie DMX.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">5</div>
-              <div class="step-body">
-                <h3>Connecter dans MyStrow</h3>
-                <p><strong>Connexion → Sortie DMX</strong>, onglet <strong>Sortie Node</strong>. Le statut passe au vert quand le boîtier répond&nbsp;; cliquez sur <strong>Connecter</strong>. Rien d'autre à saisir&nbsp;: la cible 2.0.0.15 est le réglage par défaut.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-grid" style="margin-top:36px;">
-            <figure class="shot" style="margin:0;">
-              <img src="dmx-parameters-dmxtools.webp" alt="Onglet DMX Parameters de DMX TOOLS ElectroConcept" width="401" height="538" style="max-width:320px;">
-              <figcaption>Onglet <strong>DMX Parameters</strong>&nbsp;: OUT · Universe OUT 0 · Universe IN 1 · OUT Mode Fixed · FPS 40.</figcaption>
-            </figure>
-            <figure class="shot" style="margin:0;">
-              <img src="network-parameters-dmxtools.webp" alt="Onglet Network Parameters de DMX TOOLS ElectroConcept" width="384" height="379" style="max-width:320px;">
-              <figcaption>Onglet <strong>Network Parameters</strong>&nbsp;: Node IP 2.0.0.15, DHCP 2.0.0.2, Netmask 255.0.0.0.</figcaption>
-            </figure>
-          </div>
-
-          <div class="highlight-box">
-            <h3>DMX TOOLS — ElectroConcept</h3>
-            <p style="color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:16px;">L'utilitaire de configuration en ligne du node. Boîtier branché et alimenté en USB avant d'ouvrir la page.</p>
-            <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:13px;">Ouvrir DMX-tools.electroconcept.fr ↗</a>
-          </div>
-
-          <div class="feat-grid" style="margin-top:28px;">
-            <figure class="shot" style="margin:0;">
-              <img src="proprietes-carte-reseau.webp" alt="Propriétés de la carte réseau Windows en IP fixe 2.0.0.1 pour un node Art-Net">
-              <figcaption>Carte réseau du PC en IP fixe&nbsp;: 2.0.0.1 / 255.0.0.0, sans passerelle.</figcaption>
-            </figure>
-            <figure class="shot" style="margin:0;">
-              <img src="parametrer-sortie-node-mystrow.webp" alt="Bouton Configurer la connexion réseau dans la fenêtre Paramétrer la sortie DMX de MyStrow" style="max-width:440px;">
-              <figcaption>Boîtier non détecté&nbsp;? Le bouton <strong>⚙ Configurer la connexion réseau</strong> règle la carte réseau à votre place.</figcaption>
-            </figure>
-          </div>
-
-          <div class="callout">
-            <p><strong>Wi-Fi&nbsp;: à éviter.</strong> L'Art-Net supporte mal les pertes de paquets et la latence variable d'un réseau sans fil — on obtient des lumières qui «&nbsp;accrochent&nbsp;». Reliez le node en filaire, et gardez le Wi-Fi pour le contrôle à distance depuis une tablette.</p>
-          </div>
-        </section>
-
-        <!-- 4. USB -->
-        <section id="usb" class="doc-section">
-          <div class="section-tag">Voie B</div>
-          <h2><span class="h2-num">04</span> Configurer une interface USB/DMX</h2>
-          <div class="prose">
-            <p>Pas de réseau, pas d'adresse IP&nbsp;: on branche le boîtier, on choisit son port et on connecte. MyStrow gère les interfaces les plus courantes du marché et <strong>choisit tout seul le protocole de communication</strong> adapté au boîtier détecté — vous n'avez pas à savoir si le vôtre passe par un port série virtuel ou par le pilote FTDI direct.</p>
-          </div>
-
-          <div class="step-list">
-            <div class="step">
-              <div class="step-num">1</div>
-              <div class="step-body">
-                <h3>Brancher, puis ouvrir la fenêtre</h3>
-                <p>Branchez l'interface <strong>avant</strong> d'ouvrir la fenêtre, puis <strong>Connexion → Sortie DMX</strong> et cliquez sur l'onglet <strong>🔌 Sortie DMX USB</strong>.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <div class="step-body">
-                <h3>Choisir son modèle dans «&nbsp;Interface&nbsp;»</h3>
-                <p>Le menu propose&nbsp;: <strong>Eurolite USB-DMX512 PRO (MK2)</strong>, <strong>ENTTEC DMX USB Pro</strong>, <strong>ENTTEC Open DMX USB</strong>, <strong>OPTO OPEN DMX (ElectroConcept)</strong>, <strong>DMXKing UltraDMX Micro</strong> et <strong>Autre interface USB-DMX</strong>. Si votre boîtier n'est pas listé nommément, «&nbsp;Autre interface USB-DMX&nbsp;» convient à la grande majorité des clones à base de puce FTDI.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <div class="step-body">
-                <h3>Sélectionner le port</h3>
-                <p>Déroulez <strong>Port COM</strong> et prenez celui de l'interface. Le bouton <strong>↺</strong> relance la détection si vous venez de brancher le boîtier ou d'installer un pilote. Aucun port listé&nbsp;? Le pilote USB du boîtier n'est pas installé — voir le <a href="#depannage" style="color:var(--accent);text-decoration:none;">dépannage</a>.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">4</div>
-              <div class="step-body">
-                <h3>Connecter</h3>
-                <p>Cliquez sur <strong>🔌 Connecter</strong>&nbsp;: le voyant passe au vert et la sortie DMX démarre immédiatement. C'est ce bouton — et lui seul — qui bascule réellement la sortie du logiciel sur l'USB. Ouvrir l'onglet ne suffit pas.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feat-grid" style="margin-top:36px;">
-            <div class="feat-item">
-              <div class="feat-icon">🟢</div>
-              <h4>ENTTEC Pro &amp; Eurolite MK2</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Ces boîtiers embarquent un microcontrôleur qui fabrique le signal DMX à cadence régulière&nbsp;: c'est ce qui se fait de plus propre en USB, et le plus recommandé en prestation, Windows comme macOS. La LED de l'interface passe au vert quand la sortie est active.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">🟡</div>
-              <h4>Open DMX, OPTO OPEN DMX, clones FTDI</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Ici c'est l'ordinateur qui génère le timing du signal, à travers la puce FTDI. MyStrow attaque la puce en direct pour tenir une cadence stable. Ces boîtiers marchent très bien, mais sont plus sensibles à la machine et aux pilotes installés.</p></div>
-            </div>
-          </div>
-
-          <div class="callout">
-            <p><strong>Un seul logiciel à la fois sur le boîtier.</strong> Une interface USB/DMX ne peut être ouverte que par un programme&nbsp;: si un utilitaire du fabricant, un autre logiciel de lumière ou une seconde fenêtre de MyStrow tient le port, la sortie devient erratique (projecteurs qui clignotent, «&nbsp;port not open&nbsp;»). Fermez tout le reste avant de connecter.</p>
-          </div>
-
-          <div class="prose" style="margin-top:26px;">
-            <p>En cas de doute, le bouton <strong>🔬 Diagnostic</strong> de la fenêtre teste le port et signale les problèmes classiques (port occupé, pilote absent, boîtier muet).</p>
-          </div>
-        </section>
-
-        <!-- 5. UNIVERS -->
+        <!-- 3. UNIVERS -->
         <section id="univers" class="doc-section">
           <div class="section-tag">Plusieurs sorties</div>
-          <h2><span class="h2-num">05</span> Univers et aiguillage des sorties</h2>
+          <h2><span class="h2-num">03</span> Univers et aiguillage des sorties</h2>
           <div class="prose">
-            <p>Un univers = 512 canaux = une ligne XLR. Dès que le rig dépasse cette limite — typiquement en ajoutant des lyres — il faut répartir les projecteurs sur plusieurs univers, ce qui suppose un node à plusieurs sorties.</p>
-            <p>Quand un node est connecté, la fenêtre de sortie DMX affiche un tableau <strong>Aiguillage des sorties</strong>&nbsp;: pour chaque prise physique du boîtier (DMX&nbsp;1 à DMX&nbsp;4), vous choisissez <strong>quel univers</strong> y est envoyé, ou <strong>Désactivé</strong> pour éteindre la sortie.</p>
+            <p>Un univers = 512 canaux = une ligne XLR. Au-delà — typiquement en ajoutant des lyres — il faut répartir les projecteurs sur plusieurs univers, donc un node à plusieurs sorties.</p>
+            <p>Node connecté, la fenêtre de sortie DMX affiche le tableau <strong>Aiguillage des sorties</strong>&nbsp;: pour chaque prise physique du boîtier (DMX&nbsp;1 à DMX&nbsp;4), vous choisissez <strong>quel univers</strong> y est envoyé, ou <strong>Désactivé</strong>.</p>
           </div>
 
           <div class="table-scroll">
@@ -688,68 +913,68 @@
                 <tr>
                   <td>Doubler une ligne (miroir)</td>
                   <td>Deux sorties sur le <strong>même</strong> univers</td>
-                  <td>Le même signal part sur deux prises&nbsp;: pratique pour alimenter deux côtés de scène sans splitter.</td>
+                  <td>Le même signal part sur deux prises&nbsp;: deux côtés de scène sans splitter.</td>
                 </tr>
                 <tr>
                   <td>Isoler une ligne pendant les réglages</td>
                   <td>La sortie sur <strong>Désactivé</strong></td>
-                  <td>La prise n'émet plus rien, les autres continuent normalement.</td>
+                  <td>La prise n'émet plus rien, les autres continuent.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <figure class="shot">
-            <img src="aiguillage-sorties-node-mystrow.webp" alt="Tableau d'aiguillage des sorties DMX d'un node dans MyStrow" width="478" height="210" style="max-width:478px;">
-            <figcaption>Le tableau <strong>Aiguillage des sorties</strong>&nbsp;: chaque prise physique du node reçoit l'univers de votre choix, ou rien du tout.</figcaption>
+          <figure class="shot" style="max-width:478px;">
+            <img src="aiguillage-sorties-node-mystrow.webp" alt="Tableau d'aiguillage des sorties DMX d'un node dans MyStrow" width="478" height="210" loading="lazy">
+            <figcaption>Chaque prise physique du node reçoit l'univers de votre choix, ou rien du tout.</figcaption>
           </figure>
 
           <div class="callout">
-            <p><strong>Le patch reste maître.</strong> L'aiguillage ne change pas l'adressage&nbsp;: c'est dans le patch de MyStrow que chaque projecteur reçoit son univers et son adresse de départ. Deux appareils dont les plages d'adresses se chevauchent réagiront ensemble quoi que vous fassiez ici — la fonction <strong>⚡ Auto-adressage</strong> du patch règle ce cas en un clic.</p>
+            <p><strong>Le patch reste maître.</strong> L'aiguillage ne change pas l'adressage&nbsp;: c'est dans le patch que chaque projecteur reçoit son univers et son adresse de départ. Deux appareils dont les plages se chevauchent réagiront ensemble quoi qu'il arrive — la fonction <strong>⚡ Auto-adressage</strong> du patch règle ça en un clic.</p>
           </div>
         </section>
 
-        <!-- 6. VERIFIER -->
+        <!-- 4. VERIFIER -->
         <section id="verifier" class="doc-section">
           <div class="section-tag">Contrôle</div>
-          <h2><span class="h2-num">06</span> Vérifier que le DMX sort vraiment</h2>
+          <h2><span class="h2-num">04</span> Vérifier que le DMX sort vraiment</h2>
           <div class="prose">
-            <p>Un statut vert veut dire «&nbsp;le boîtier est ouvert&nbsp;», pas «&nbsp;vos projecteurs reçoivent quelque chose&nbsp;». Le seul test qui compte est physique, et il tient en quatre points.</p>
+            <p>Un statut vert veut dire «&nbsp;le boîtier est ouvert&nbsp;», pas «&nbsp;vos projecteurs reçoivent quelque chose&nbsp;». Le seul test qui compte est physique, et tient en quatre points.</p>
           </div>
           <ul class="check-list">
-            <li><span>Montez le <strong>master</strong> et le fader du groupe concerné&nbsp;: sans eux, tout le reste sort à zéro.</span></li>
-            <li><span>Envoyez un <strong>plein feu blanc</strong> sur un seul projecteur, celui qui est le plus près de l'interface.</span></li>
-            <li><span><strong>Laissez le test tourner plusieurs secondes.</strong> Un projecteur a besoin de recevoir plusieurs trames avant d'allumer&nbsp;; une impulsion d'une demi-seconde peut passer totalement inaperçue.</span></li>
+            <li><span>Montez le <strong>master</strong> et le fader du groupe concerné&nbsp;: sans eux, tout sort à zéro.</span></li>
+            <li><span>Envoyez un <strong>plein feu blanc</strong> sur un seul projecteur, le plus proche de l'interface.</span></li>
+            <li><span><strong>Laissez le test tourner plusieurs secondes.</strong> Un projecteur a besoin de recevoir plusieurs trames avant d'allumer&nbsp;; une impulsion d'une demi-seconde passe inaperçue.</span></li>
             <li><span>Regardez la <strong>LED de réception</strong> du projecteur ou du boîtier&nbsp;: elle clignote dès qu'un signal DMX valide arrive, même si l'adressage est faux.</span></li>
           </ul>
 
           <div class="callout">
-            <p><strong>Si la LED clignote mais que rien ne s'allume&nbsp;:</strong> le signal arrive, le problème est en aval — adresse du projecteur, univers, ou mode DMX du projecteur différent de celui déclaré dans le patch. <strong>Si elle ne clignote pas&nbsp;:</strong> le problème est en amont — interface, câble, ou sortie non connectée dans le logiciel.</p>
+            <p><strong>La LED clignote mais rien ne s'allume&nbsp;:</strong> le signal arrive, le problème est en aval — adresse du projecteur, univers, ou mode DMX différent de celui déclaré dans le patch. <strong>Elle ne clignote pas&nbsp;:</strong> le problème est en amont — interface, câble, ou sortie non connectée dans le logiciel.</p>
           </div>
         </section>
 
-        <!-- 7. CABLAGE -->
+        <!-- 5. CABLAGE -->
         <section id="cablage" class="doc-section">
           <div class="section-tag">Sur scène</div>
-          <h2><span class="h2-num">07</span> Câblage DMX&nbsp;: les règles qui évitent les pannes</h2>
+          <h2><span class="h2-num">05</span> Câblage DMX&nbsp;: les règles qui évitent les pannes</h2>
           <div class="prose">
-            <p>Beaucoup de «&nbsp;bugs logiciels&nbsp;» sont en réalité des problèmes de ligne. Le DMX512 est un bus série, avec des règles simples mais strictes.</p>
+            <p>Beaucoup de «&nbsp;bugs logiciels&nbsp;» sont des problèmes de ligne. Le DMX512 est un bus série&nbsp;: règles simples, mais strictes.</p>
           </div>
           <div class="feat-grid">
             <div class="feat-item">
               <div class="feat-icon">🔗</div>
               <h4>En guirlande, jamais en étoile</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Interface → projecteur 1 → projecteur 2 → … Un répartiteur passif (doubleur XLR) crée des réflexions et fait scintiller la ligne. Pour partir en plusieurs directions, il faut un <strong>splitter DMX actif</strong> ou une deuxième sortie de node.</p></div>
+              <div class="prose" style="font-size:14px;"><p style="margin:0;">Interface → projecteur 1 → projecteur 2 → … Un doubleur XLR passif crée des réflexions et fait scintiller la ligne. Pour partir en plusieurs directions&nbsp;: <strong>splitter DMX actif</strong> ou deuxième sortie de node.</p></div>
             </div>
             <div class="feat-item">
               <div class="feat-icon">🎯</div>
               <h4>Terminaison 120 Ω</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Un bouchon de terminaison sur la <strong>dernière</strong> machine de la ligne. Sans lui, ça marche… jusqu'au jour où ça scintille sans raison, en général le soir de la presta.</p></div>
+              <div class="prose" style="font-size:14px;"><p style="margin:0;">Un bouchon sur la <strong>dernière</strong> machine de la ligne. Sans lui, ça marche… jusqu'au jour où ça scintille sans raison, en général le soir de la presta.</p></div>
             </div>
             <div class="feat-item">
               <div class="feat-icon">🎛️</div>
               <h4>Câble DMX, pas câble micro</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Même prise XLR, impédance différente&nbsp;: 110&nbsp;Ω pour le DMX, contre 50 à 75&nbsp;Ω pour un câble micro. Ce dernier dépanne sur 3&nbsp;m et devient très aléatoire au-delà.</p></div>
+              <div class="prose" style="font-size:14px;"><p style="margin:0;">Même prise XLR, impédance différente&nbsp;: 110&nbsp;Ω pour le DMX contre 50 à 75&nbsp;Ω pour un câble micro. Ce dernier dépanne sur 3&nbsp;m et devient aléatoire au-delà.</p></div>
             </div>
             <div class="feat-item">
               <div class="feat-icon">📏</div>
@@ -759,102 +984,127 @@
           </div>
         </section>
 
-        <!-- 8. DEPANNAGE -->
+        <!-- 6. DEPANNAGE -->
         <section id="depannage" class="doc-section">
           <div class="section-tag">SOS</div>
-          <h2><span class="h2-num">08</span> Dépannage</h2>
+          <h2><span class="h2-num">06</span> Dépannage</h2>
           <div class="prose">
-            <p>Les symptômes les plus fréquents, du plus courant au plus rare, avec la cause à vérifier en premier.</p>
+            <p>Les symptômes les plus fréquents, avec la cause à vérifier en premier.</p>
           </div>
 
           <div class="table-scroll">
             <table>
               <thead>
-                <tr><th>Symptôme</th><th>Cause la plus probable</th><th>Solution</th></tr>
+                <tr><th>Symptôme</th><th>Système</th><th>Cause la plus probable</th><th>Solution</th></tr>
               </thead>
               <tbody>
                 <tr>
                   <td><strong>Rien ne s'allume, aucun voyant ne bouge</strong></td>
+                  <td>Les deux</td>
                   <td>Sortie jamais connectée, ou master / faders à zéro.</td>
-                  <td>Rouvrir <strong>Connexion → Sortie DMX</strong>, vérifier l'onglet actif et cliquer sur <strong>Connecter</strong>. Puis monter le master.</td>
+                  <td>Rouvrir <strong>Connexion ▸ Sortie DMX ▸ Paramétrer la sortie</strong>, vérifier l'onglet actif, cliquer sur <strong>🔌 Connecter</strong>, puis monter le master.</td>
                 </tr>
                 <tr>
-                  <td><strong>Tout est vert dans le logiciel, mais les projecteurs sont morts</strong></td>
-                  <td>La sortie active n'est pas celle du matériel branché&nbsp;: le logiciel émet en Art-Net alors que le boîtier est en USB (ou l'inverse).</td>
-                  <td>Vérifier <strong>quel onglet</strong> est actif dans la fenêtre de sortie, et reconnecter sur le bon. Un test qui ouvre sa propre sortie peut être vert alors que l'application n'émet rien.</td>
+                  <td><strong>Tout est vert, mais les projecteurs sont morts</strong></td>
+                  <td>Les deux</td>
+                  <td>La sortie active n'est pas celle du matériel branché&nbsp;: le logiciel émet en Art-Net alors que le boîtier est en USB, ou l'inverse.</td>
+                  <td>Vérifier <strong>quel onglet</strong> est actif et reconnecter sur le bon. Un test qui ouvre sa propre sortie peut être vert alors que l'application n'émet rien.</td>
                 </tr>
                 <tr>
-                  <td><strong>Aucun port COM proposé</strong></td>
-                  <td>Pilote USB de l'interface absent, ou câble USB de charge (sans fils de données).</td>
-                  <td>Installer le pilote du fabricant (puce FTDI dans la plupart des cas), rebrancher, puis <strong>↺</strong> pour rescanner. Essayer un autre câble et un port USB à l'arrière du PC.</td>
-                </tr>
-                <tr>
-                  <td><strong>Les projecteurs clignotent ou strobent tout seuls</strong></td>
-                  <td>Deux programmes écrivent sur le même boîtier, ou une ligne DMX non terminée.</td>
-                  <td>Fermer tout autre logiciel de lumière et les utilitaires du fabricant. Ajouter un bouchon 120 Ω en fin de ligne.</td>
-                </tr>
-                <tr>
-                  <td><strong>Un projecteur réagit quand j'en bouge un autre</strong></td>
-                  <td>Plages d'adresses qui se chevauchent.</td>
-                  <td>Réadresser&nbsp;: chaque appareil doit démarrer après la fin du précédent. Le <strong>⚡ Auto-adressage</strong> du patch le fait automatiquement.</td>
+                  <td><strong>Node&nbsp;: jamais de réponse, statut rouge</strong></td>
+                  <td>macOS</td>
+                  <td>Autorisation «&nbsp;Réseau local&nbsp;» refusée&nbsp;: macOS bloque l'Art-Net sans afficher d'erreur.</td>
+                  <td><strong>Réglages Système ▸ Confidentialité et sécurité ▸ Réseau local</strong> ▸ activer MyStrow, puis relancer le logiciel.</td>
                 </tr>
                 <tr>
                   <td><strong>Node&nbsp;: statut rouge, boîtier non détecté</strong></td>
-                  <td>Carte réseau du PC hors du plan d'adressage du node, ou pare-feu.</td>
-                  <td>Carte réseau en <strong>2.0.0.1 / 255.0.0.0</strong> (bouton ⚙ Configurer la connexion réseau), et autoriser MyStrow dans le pare-feu Windows pour les réseaux privés.</td>
+                  <td>Windows</td>
+                  <td>Carte réseau hors du plan d'adressage du node, ou pare-feu.</td>
+                  <td>Carte réseau en <strong>2.0.0.1 / 255.0.0.0</strong> (bouton ⚙️ Configurer la connexion réseau), et autoriser MyStrow dans le pare-feu pour les réseaux privés.</td>
                 </tr>
                 <tr>
-                  <td><strong>Node&nbsp;: connecté, mais une seule sortie fonctionne</strong></td>
-                  <td>Aiguillage&nbsp;: la sortie est sur «&nbsp;Désactivé&nbsp;» ou pointe sur un univers vide.</td>
-                  <td>Dans le tableau <strong>Aiguillage des sorties</strong>, remettre chaque prise sur l'univers voulu.</td>
+                  <td><strong>Aucun port proposé</strong></td>
+                  <td>Windows</td>
+                  <td>Pilote USB absent, ou câble USB de charge (sans fils de données).</td>
+                  <td>Installer le pilote FTDI, rebrancher, puis <strong>↺</strong> pour rescanner. Essayer un autre câble et un port USB à l'arrière du PC.</td>
+                </tr>
+                <tr>
+                  <td><strong>Aucun port proposé</strong></td>
+                  <td>macOS</td>
+                  <td>Câble de charge, hub USB-C fatigué, ou pilote FTDI tiers installé par-dessus celui d'Apple.</td>
+                  <td>Chercher une entrée <code>/dev/cu.usbserial-…</code>&nbsp;; changer de câble et brancher en direct. Désinstaller un éventuel pilote VCP FTDI ajouté à la main.</td>
+                </tr>
+                <tr>
+                  <td><strong>Boîtier «&nbsp;open&nbsp;» muet, diagnostic tout vert</strong></td>
+                  <td>Les deux</td>
+                  <td>Lignes de contrôle RTS/DTR&nbsp;: elles inhibent l'émission RS485 sur certains modèles.</td>
+                  <td><strong>Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB</strong> ▸ <strong>🔌 Test RTS/DTR</strong>&nbsp;: le balayage trouve la bonne combinaison et la mémorise.</td>
+                </tr>
+                <tr>
+                  <td><strong>Les projecteurs clignotent ou strobent tout seuls</strong></td>
+                  <td>Les deux</td>
+                  <td>Deux programmes écrivent sur le même boîtier, ou ligne DMX non terminée.</td>
+                  <td>Fermer tout autre logiciel de lumière et les utilitaires du fabricant. Ajouter un bouchon 120&nbsp;Ω en fin de ligne.</td>
+                </tr>
+                <tr>
+                  <td><strong>Un projecteur réagit quand j'en bouge un autre</strong></td>
+                  <td>Les deux</td>
+                  <td>Plages d'adresses qui se chevauchent.</td>
+                  <td>Réadresser&nbsp;: chaque appareil démarre après la fin du précédent. Le <strong>⚡ Auto-adressage</strong> du patch le fait automatiquement.</td>
                 </tr>
                 <tr>
                   <td><strong>Les couleurs ne correspondent pas</strong></td>
-                  <td>Mode DMX du projecteur différent du profil choisi dans le patch (ex. appareil en 8 canaux, patché en 5).</td>
-                  <td>Régler le même mode des deux côtés — sur le menu du projecteur et dans son profil MyStrow.</td>
+                  <td>Les deux</td>
+                  <td>Mode DMX du projecteur différent du profil du patch (appareil en 8 canaux, patché en 5).</td>
+                  <td>Régler le même mode des deux côtés&nbsp;: menu du projecteur et profil MyStrow.</td>
                 </tr>
                 <tr>
                   <td><strong>Ça marchait hier, plus aujourd'hui</strong></td>
-                  <td>Boîtier rebranché sur un autre port USB&nbsp;: le numéro de port COM a changé.</td>
-                  <td>Rouvrir la fenêtre, <strong>↺</strong>, resélectionner le port, <strong>Connecter</strong>. Reprendre le même port USB à chaque fois évite le problème.</td>
+                  <td>Les deux</td>
+                  <td>Boîtier rebranché sur un autre port USB&nbsp;: le nom du port a changé.</td>
+                  <td>Rouvrir la fenêtre, <strong>↺</strong>, resélectionner le port, <strong>🔌 Connecter</strong>. Reprendre toujours le même port USB évite le problème.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div class="lock-box">
-            <p><strong>Toujours bloqué&nbsp;?</strong> Passez par le bouton <strong>🔬 Diagnostic</strong> de la fenêtre de sortie DMX&nbsp;: il teste le port, le pilote et l'émission réelle. Notez son message et écrivez-nous depuis la <a href="contact.html" style="color:#ff8080;">page contact</a> — ou rejoignez le Discord, la communauté connaît généralement le boîtier que vous avez entre les mains.</p>
+            <p><strong>Toujours bloqué&nbsp;?</strong> <span class="path" style="border-color:rgba(255,128,128,.3);background:rgba(255,80,80,.08);">Connexion ▸ 🩺 Diagnostic ▸ 🩺 Diagnostic complet (BRAD)</span> teste toute la chaîne d'un coup. Copiez son rapport et écrivez-nous depuis la <a href="contact.html" style="color:#ff8080;">page contact</a> — ou rejoignez le Discord, la communauté connaît généralement le boîtier que vous avez entre les mains.</p>
           </div>
         </section>
 
-        <!-- 9. FAQ -->
+        <!-- 7. FAQ -->
         <section id="faq" class="doc-section">
           <div class="section-tag">Questions fréquentes</div>
-          <h2><span class="h2-num">09</span> FAQ</h2>
+          <h2><span class="h2-num">07</span> FAQ</h2>
           <div class="faq-list">
             <details class="faq">
               <summary>Quelle interface choisir pour débuter&nbsp;?</summary>
-              <p>Une interface USB à microcontrôleur (ENTTEC DMX USB Pro, Eurolite USB-DMX512 PRO MK2)&nbsp;: rien à configurer côté réseau, on choisit le port et on connecte. Un Node Art-Net devient intéressant dès qu'il faut plusieurs univers, de longues distances, ou une machine éloignée de la scène.</p>
+              <p>Une interface USB à microcontrôleur (ENTTEC DMX USB Pro, Eurolite USB-DMX512 PRO MK2)&nbsp;: rien à configurer côté réseau, on choisit le port et on connecte, et le boîtier fabrique lui-même les trames. Un Node Art-Net devient intéressant dès qu'il faut plusieurs univers, de longues distances, ou une machine éloignée de la scène.</p>
+            </details>
+            <details class="faq">
+              <summary>Sur Mac, le node ne répond jamais&nbsp;: pourquoi&nbsp;?</summary>
+              <p>Depuis macOS 14, une application doit être autorisée à parler au réseau local. Sans cette autorisation, macOS bloque l'Art-Net silencieusement&nbsp;: aucune erreur, le node ne répond simplement jamais. Activez MyStrow dans <strong>Réglages Système ▸ Confidentialité et sécurité ▸ Réseau local</strong>, relancez le logiciel, et vérifiez que la carte Ethernet est bien en 2.0.0.1 / 255.0.0.0.</p>
+            </details>
+            <details class="faq">
+              <summary>Où est le «&nbsp;port COM&nbsp;» sur un Mac&nbsp;?</summary>
+              <p>Le libellé vient de Windows, mais le menu liste bien les ports macOS&nbsp;: <code>/dev/cu.usbserial-XXXX</code>. Le pilote FTDI est intégré à macOS, il n'y a rien à installer — et mieux vaut ne pas ajouter le pilote VCP de FTDI par-dessus, qui crée des doublons.</p>
             </details>
             <details class="faq">
               <summary>Combien de projecteurs par univers&nbsp;?</summary>
-              <p>Un univers contient 512 canaux&nbsp;: environ 100 PAR LED en 5 canaux, mais seulement une trentaine de lyres en 16 canaux. Au-delà, il faut un deuxième univers — donc un node à plusieurs sorties.</p>
+              <p>512 canaux par univers&nbsp;: environ 100 PAR LED en 5 canaux, mais seulement une trentaine de lyres en 16 canaux. Au-delà, il faut un deuxième univers — donc un node à plusieurs sorties.</p>
             </details>
             <details class="faq">
               <summary>Faut-il un switch ou un routeur pour un node&nbsp;?</summary>
-              <p>Non. Un câble Ethernet direct entre l'ordinateur et le node suffit (ou le câble USB pour un node alimenté en USB). Il faut simplement que la carte réseau du PC soit sur le même plan d'adressage que le node&nbsp;: 2.0.0.1 / 255.0.0.0 pour un node en 2.0.0.15.</p>
+              <p>Non. Un câble Ethernet direct entre l'ordinateur et le node suffit. Il faut simplement que la carte réseau soit sur le même plan d'adressage&nbsp;: 2.0.0.1 / 255.0.0.0 pour un node en 2.0.0.15.</p>
             </details>
             <details class="faq">
               <summary>MyStrow envoie-t-il de l'Art-Net ou du sACN&nbsp;?</summary>
-              <p>De l'Art-Net, en UDP sur le port 6454. La plupart des nodes gèrent les deux protocoles&nbsp;: il suffit de régler le boîtier en Art-Net dans son utilitaire de configuration.</p>
-            </details>
-            <details class="faq">
-              <summary>Ça fonctionne sur Mac&nbsp;?</summary>
-              <p>Oui, en Art-Net comme en USB. Sur macOS, les interfaces à microcontrôleur (ENTTEC DMX USB Pro, Eurolite MK2) restent les plus fiables, puisque le boîtier génère lui-même les timings du signal. Les adaptateurs de type Open DMX fonctionnent également mais dépendent davantage de la machine.</p>
+              <p>De l'Art-Net, en UDP sur le port 6454. La plupart des nodes gèrent les deux protocoles&nbsp;: il suffit de régler le boîtier en Art-Net dans son utilitaire.</p>
             </details>
             <details class="faq">
               <summary>Puis-je utiliser deux interfaces en même temps&nbsp;?</summary>
-              <p>MyStrow pilote une sortie à la fois. Pour plusieurs univers simultanés, utilisez un node multi-sorties et son tableau d'aiguillage plutôt que plusieurs boîtiers USB.</p>
+              <p>MyStrow pilote une sortie à la fois. Pour plusieurs univers simultanés, utilisez un node multi-sorties et son tableau d'aiguillage plutôt que deux boîtiers USB.</p>
             </details>
             <details class="faq">
               <summary>Faut-il refaire la configuration à chaque spectacle&nbsp;?</summary>
@@ -917,7 +1167,7 @@
       <a href="shop.html">Shop</a>
       <a href="blog.html">Tutoriels</a>
       <a href="cgv.html">CGV</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a>
-      <a href="contact.html">Contact</a><a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="footer-nl">
       <form class="nl-form" onsubmit="handleNewsletter(event)">
@@ -927,7 +1177,7 @@
       <div class="nl-msg" id="nl-msg"></div>
     </div>
   </div>
-  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;flex-wrap:wrap;">
     <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
     <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
     <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
@@ -953,6 +1203,99 @@ function handleNewsletter(e) {
     else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
   }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
 }
+
+/* ── Configurateur : interface × système → procédure ────────────────────
+   Les 6 procédures sont dans le HTML (indexables, et lisibles sans JS) ;
+   ce script se contente de n'en afficher qu'une. Le choix est mémorisé et
+   reflété dans l'URL : #node-macos, #pro-windows… donnent un lien direct. */
+(function () {
+  var procs = [].slice.call(document.querySelectorAll('.proc'));
+  if (!procs.length) return;
+
+  var empty  = document.getElementById('proc-empty');
+  var ifaceBtns = [].slice.call(document.querySelectorAll('.pick[data-iface]'));
+  var osBtns    = [].slice.call(document.querySelectorAll('.pick[data-os]'));
+  var stepOs = document.getElementById('wiz-os');
+  var IFACES = ['node', 'pro', 'open'];
+  var OSES   = ['windows', 'macos'];
+  var STORE  = 'mystrow-dmx-setup';
+
+  var iface = '', os = '';
+
+  function paint(scroll) {
+    ifaceBtns.forEach(function (b) {
+      b.setAttribute('aria-checked', b.dataset.iface === iface ? 'true' : 'false');
+    });
+    osBtns.forEach(function (b) {
+      b.setAttribute('aria-checked', b.dataset.os === os ? 'true' : 'false');
+    });
+    stepOs.classList.toggle('is-locked', !iface);
+
+    var target = (iface && os) ? iface + '-' + os : null;
+    procs.forEach(function (p) { p.hidden = (p.id !== target); });
+    empty.hidden = !!target;
+
+    if (target) {
+      try {
+        localStorage.setItem(STORE, target);
+        if (history.replaceState) history.replaceState(null, '', '#' + target);
+        else location.hash = target;
+      } catch (e) {}
+      if (scroll) {
+        var el = document.getElementById(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  function apply(key, scroll) {
+    if (!key) return false;
+    var parts = key.split('-');
+    if (IFACES.indexOf(parts[0]) < 0 || OSES.indexOf(parts[1]) < 0) return false;
+    iface = parts[0]; os = parts[1];
+    paint(scroll);
+    return true;
+  }
+
+  ifaceBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      iface = b.dataset.iface;
+      paint(!!os);
+    });
+  });
+  osBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!iface) return;
+      os = b.dataset.os;
+      paint(true);
+    });
+  });
+  [].slice.call(document.querySelectorAll('.proc-reset')).forEach(function (b) {
+    b.addEventListener('click', function () {
+      iface = ''; os = '';
+      try { localStorage.removeItem(STORE); } catch (e) {}
+      paint(false);
+      document.getElementById('config').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* Devine le système, sans rien décider à la place de l'utilisateur :
+     la carte macOS/Windows est simplement pré-cochée. */
+  var guess = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent) ? 'macos' : 'windows';
+
+  var fromHash = location.hash.replace('#', '');
+  var stored = '';
+  try { stored = localStorage.getItem(STORE) || ''; } catch (e) {}
+
+  if (!apply(fromHash, false) && !apply(stored, false)) {
+    os = guess;
+    paint(false);
+  }
+
+  window.addEventListener('hashchange', function () {
+    apply(location.hash.replace('#', ''), true);
+  });
+})();
 
 /* Sommaire : surligne la section en cours de lecture */
 (function () {
