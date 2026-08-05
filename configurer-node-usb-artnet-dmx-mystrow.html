@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <title>Brancher sa sortie DMX avec MyStrow — Node Art-Net &amp; interfaces USB/DMX | MyStrow</title>
-  <meta name="description" content="Choisissez votre interface (Node Art-Net, ENTTEC Pro, Open DMX), indiquez Windows ou macOS : la procédure exacte s'affiche, étape par étape. Plus le câblage, la vérification et le dépannage.">
+  <meta name="description" content="Choisissez votre interface (Node Art-Net, ENTTEC Pro, Open DMX), indiquez Windows ou macOS : la procédure exacte s'affiche, étape par étape.">
   <meta name="keywords" content="sortie DMX MyStrow, node Art-Net, interface USB DMX, ENTTEC DMX USB Pro, ENTTEC Open DMX USB, Eurolite USB-DMX512 PRO MK2, DMXKing UltraDMX Micro, OPTO OPEN DMX, DMX TOOLS ElectroConcept, Art-Net 2.0.0.15, DMX Mac, univers DMX512">
   <link rel="canonical" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow">
 
@@ -42,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Brancher sa sortie DMX avec MyStrow — Node Art-Net et interfaces USB/DMX",
-    "description": "Guide de la sortie DMX de MyStrow : la procédure exacte pour chaque interface (Node Art-Net, ENTTEC Pro, Open DMX) sur Windows et sur macOS, plus le câblage, la vérification et le dépannage.",
+    "description": "Guide de la sortie DMX de MyStrow : la procédure exacte pour chaque interface (Node Art-Net, ENTTEC Pro, Open DMX) sur Windows et sur macOS.",
     "image": "https://mystrow.fr/node-usb-dmx-tuto.webp",
     "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
     "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
@@ -67,50 +67,6 @@
   }
   </script>
 
-  <!-- FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Quelle interface DMX choisir pour débuter avec MyStrow ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Une interface USB à microcontrôleur (ENTTEC DMX USB Pro, Eurolite USB-DMX512 PRO MK2) : rien à configurer côté réseau, on choisit le port et on clique sur Connecter, et le boîtier fabrique lui-même les trames DMX. Un Node Art-Net devient intéressant dès qu'il faut plusieurs univers, de longues distances ou une machine éloignée de la scène." }
-      },
-      {
-        "@type": "Question",
-        "name": "Sur Mac, le node Art-Net ne répond jamais : pourquoi ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Depuis macOS 14, une application doit être autorisée à parler au réseau local. Sans cette autorisation, macOS bloque l'Art-Net silencieusement : aucune erreur, le node ne répond simplement jamais. Activez MyStrow dans Réglages Système → Confidentialité et sécurité → Réseau local, et vérifiez que la carte Ethernet est en 2.0.0.1 / 255.0.0.0." }
-      },
-      {
-        "@type": "Question",
-        "name": "Où trouver le port COM d'une interface USB/DMX sur Mac ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sur macOS, les ports s'appellent /dev/cu.usbserial-XXXX (et non COM1, COM2 comme sur Windows). Le pilote FTDI est intégré à macOS : il n'y a rien à installer. Choisissez l'entrée /dev/cu.usbserial-… dans le menu Port COM de MyStrow, puis cliquez sur Connecter." }
-      },
-      {
-        "@type": "Question",
-        "name": "Combien de projecteurs peut-on piloter par univers DMX ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Un univers DMX512 contient 512 canaux. Le nombre de projecteurs dépend donc de leur mode DMX : environ 100 PAR LED en 5 canaux, une trentaine de lyres en 16 canaux. Au-delà, il faut un deuxième univers, donc un Node multi-sorties." }
-      },
-      {
-        "@type": "Question",
-        "name": "Faut-il un switch ou un routeur pour utiliser un Node Art-Net ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Non. Un câble Ethernet direct entre l'ordinateur et le Node suffit. Il faut simplement que la carte réseau de l'ordinateur soit sur le même plan d'adressage que le node, par exemple 2.0.0.1 avec un masque 255.0.0.0 pour un node en 2.0.0.15." }
-      },
-      {
-        "@type": "Question",
-        "name": "MyStrow envoie-t-il de l'Art-Net ou du sACN ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "MyStrow émet de l'Art-Net sur le port UDP 6454. La plupart des nodes acceptent les deux protocoles : il suffit de régler le node en Art-Net." }
-      },
-      {
-        "@type": "Question",
-        "name": "Le diagnostic est tout vert mais les projecteurs ne réagissent pas, pourquoi ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Un test qui ouvre sa propre sortie peut réussir alors que l'application n'émet rien : vérifiez que l'onglet actif de la fenêtre « Paramétrer la sortie DMX » correspond bien au matériel branché, et que vous avez cliqué sur Connecter. Sur un adaptateur passif de type Open DMX, un boîtier muet malgré un diagnostic vert vient souvent des lignes de contrôle RTS/DTR : le test RTS/DTR de MyStrow balaie les quatre combinaisons et mémorise la bonne." }
-      }
-    ]
-  }
-  </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -196,6 +152,8 @@
     .toc a.is-active::before { color: var(--accent); }
     .doc-section { padding: 0 0 12px; scroll-margin-top: 96px; }
     .doc-section + .doc-section { margin-top: 64px; padding-top: 56px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .doc-section > h2 { display: flex; align-items: baseline; gap: 14px; }
+    .doc-section > h2 .h2-num { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: rgba(226,206,22,0.55); letter-spacing: 1px; }
 
     /* ── Tableaux ──────────────────────────────────────────────────── */
     .table-scroll { overflow-x: auto; margin-top: 28px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
@@ -402,7 +360,7 @@
       </nav>
       <div class="hero-badge">🔌 Guide matériel · Sortie DMX</div>
       <h1>Brancher sa <em>sortie DMX</em><br>Node Art-Net &amp; interfaces USB</h1>
-      <p class="hero-sub">Choisissez votre boîtier, puis Windows ou macOS&nbsp;: la marche à suivre exacte s'affiche, avec les valeurs à saisir et les pièges propres à votre système. Le reste de la page couvre le câblage, la vérification et le dépannage.</p>
+      <p class="hero-sub">Choisissez votre boîtier, puis Windows ou macOS&nbsp;: la marche à suivre exacte s'affiche, avec les valeurs à saisir et les pièges propres à votre système. La page couvre ensuite les univers, l'aiguillage des sorties et la vérification.</p>
       <div class="hero-meta">
         <span>Par <strong>MyStrow</strong></span>
         <span>·</span>
@@ -412,7 +370,7 @@
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;">
         <a href="#config" class="btn-primary">Configurer ma sortie →</a>
-        <a href="#depannage" class="btn-outline">Aller au dépannage ↓</a>
+        <a href="telecharger.html" class="btn-outline">Télécharger MyStrow ↓</a>
       </div>
     </div>
   </section>
@@ -428,9 +386,6 @@
           <li><a href="#config">Configurateur</a></li>
           <li><a href="#univers">Univers &amp; aiguillage</a></li>
           <li><a href="#verifier">Vérifier que ça sort</a></li>
-          <li><a href="#cablage">Câblage DMX</a></li>
-          <li><a href="#depannage">Dépannage</a></li>
-          <li><a href="#faq">Questions fréquentes</a></li>
         </ol>
       </aside>
 
@@ -439,7 +394,7 @@
         <!-- 1. CONFIGURATEUR -->
         <section id="config" class="doc-section">
           <div class="section-tag">Votre installation</div>
-          <h2>Configurateur&nbsp;: votre matériel, votre procédure</h2>
+          <h2><span class="h2-num">01</span> Configurateur&nbsp;: votre matériel, votre procédure</h2>
           <div class="prose">
             <p>Deux questions, puis la procédure exacte. Tout passe ensuite par une seule fenêtre dans le logiciel&nbsp;: <span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>.</p>
           </div>
@@ -975,7 +930,7 @@
         <!-- 2. UNIVERS -->
         <section id="univers" class="doc-section">
           <div class="section-tag">Plusieurs sorties</div>
-          <h2>Univers et aiguillage des sorties</h2>
+          <h2><span class="h2-num">02</span> Univers et aiguillage des sorties</h2>
           <div class="prose">
             <p>Un univers = 512 canaux = une ligne XLR. Au-delà — typiquement en ajoutant des lyres — il faut répartir les projecteurs sur plusieurs univers, donc un node à plusieurs sorties.</p>
             <p>Node connecté, la fenêtre de sortie DMX affiche le tableau <strong>Aiguillage des sorties</strong>&nbsp;: pour chaque prise physique du boîtier (DMX&nbsp;1 à DMX&nbsp;4), vous choisissez <strong>quel univers</strong> y est envoyé, ou <strong>Désactivé</strong>.</p>
@@ -1019,7 +974,7 @@
         <!-- 3. VERIFIER -->
         <section id="verifier" class="doc-section">
           <div class="section-tag">Contrôle</div>
-          <h2>Vérifier que le DMX sort vraiment</h2>
+          <h2><span class="h2-num">03</span> Vérifier que le DMX sort vraiment</h2>
           <div class="prose">
             <p>Un statut vert veut dire «&nbsp;le boîtier est ouvert&nbsp;», pas «&nbsp;vos projecteurs reçoivent quelque chose&nbsp;». Le seul test qui compte est physique, et tient en quatre points.</p>
           </div>
@@ -1032,166 +987,6 @@
 
           <div class="callout">
             <p><strong>La LED clignote mais rien ne s'allume&nbsp;:</strong> le signal arrive, le problème est en aval — adresse du projecteur, univers, ou mode DMX différent de celui déclaré dans le patch. <strong>Elle ne clignote pas&nbsp;:</strong> le problème est en amont — interface, câble, ou sortie non connectée dans le logiciel.</p>
-          </div>
-        </section>
-
-        <!-- 4. CABLAGE -->
-        <section id="cablage" class="doc-section">
-          <div class="section-tag">Sur scène</div>
-          <h2>Câblage DMX&nbsp;: les règles qui évitent les pannes</h2>
-          <div class="prose">
-            <p>Beaucoup de «&nbsp;bugs logiciels&nbsp;» sont des problèmes de ligne. Le DMX512 est un bus série&nbsp;: règles simples, mais strictes.</p>
-          </div>
-          <div class="feat-grid">
-            <div class="feat-item">
-              <div class="feat-icon">🔗</div>
-              <h4>En guirlande, jamais en étoile</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Interface → projecteur 1 → projecteur 2 → … Un doubleur XLR passif crée des réflexions et fait scintiller la ligne. Pour partir en plusieurs directions&nbsp;: <strong>splitter DMX actif</strong> ou deuxième sortie de node.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">🎯</div>
-              <h4>Terminaison 120 Ω</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Un bouchon sur la <strong>dernière</strong> machine de la ligne. Sans lui, ça marche… jusqu'au jour où ça scintille sans raison, en général le soir de la presta.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">🎛️</div>
-              <h4>Câble DMX, pas câble micro</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Même prise XLR, impédance différente&nbsp;: 110&nbsp;Ω pour le DMX contre 50 à 75&nbsp;Ω pour un câble micro. Ce dernier dépanne sur 3&nbsp;m et devient aléatoire au-delà.</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon">📏</div>
-              <h4>32 appareils, ~300 m</h4>
-              <div class="prose" style="font-size:14px;"><p style="margin:0;">Les limites de la norme par ligne. Au-delà&nbsp;: splitter actif. Éloignez aussi le DMX des câbles de puissance, qui lui injectent du bruit.</p></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 5. DEPANNAGE -->
-        <section id="depannage" class="doc-section">
-          <div class="section-tag">SOS</div>
-          <h2>Dépannage</h2>
-          <div class="prose">
-            <p>Les symptômes les plus fréquents, avec la cause à vérifier en premier.</p>
-          </div>
-
-          <div class="table-scroll">
-            <table>
-              <thead>
-                <tr><th>Symptôme</th><th>Système</th><th>Cause la plus probable</th><th>Solution</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Rien ne s'allume, aucun voyant ne bouge</strong></td>
-                  <td>Les deux</td>
-                  <td>Sortie jamais connectée, ou master / faders à zéro.</td>
-                  <td>Rouvrir <strong>Connexion ▸ Sortie DMX ▸ Paramétrer la sortie</strong>, vérifier l'onglet actif, cliquer sur <strong>🔌 Connecter</strong>, puis monter le master.</td>
-                </tr>
-                <tr>
-                  <td><strong>Tout est vert, mais les projecteurs sont morts</strong></td>
-                  <td>Les deux</td>
-                  <td>La sortie active n'est pas celle du matériel branché&nbsp;: le logiciel émet en Art-Net alors que le boîtier est en USB, ou l'inverse.</td>
-                  <td>Vérifier <strong>quel onglet</strong> est actif et reconnecter sur le bon. Un test qui ouvre sa propre sortie peut être vert alors que l'application n'émet rien.</td>
-                </tr>
-                <tr>
-                  <td><strong>Node&nbsp;: jamais de réponse, statut rouge</strong></td>
-                  <td>macOS</td>
-                  <td>Autorisation «&nbsp;Réseau local&nbsp;» refusée&nbsp;: macOS bloque l'Art-Net sans afficher d'erreur.</td>
-                  <td><strong>Réglages Système ▸ Confidentialité et sécurité ▸ Réseau local</strong> ▸ activer MyStrow, puis relancer le logiciel.</td>
-                </tr>
-                <tr>
-                  <td><strong>Node&nbsp;: statut rouge, boîtier non détecté</strong></td>
-                  <td>Windows</td>
-                  <td>Carte réseau hors du plan d'adressage du node, ou pare-feu.</td>
-                  <td>Carte réseau en <strong>2.0.0.1 / 255.0.0.0</strong> (bouton ⚙️ Configurer la connexion réseau), et autoriser MyStrow dans le pare-feu pour les réseaux privés.</td>
-                </tr>
-                <tr>
-                  <td><strong>Aucun port proposé</strong></td>
-                  <td>Windows</td>
-                  <td>Pilote USB absent, ou câble USB de charge (sans fils de données).</td>
-                  <td>Installer le pilote FTDI, rebrancher, puis <strong>↺</strong> pour rescanner. Essayer un autre câble et un port USB à l'arrière du PC.</td>
-                </tr>
-                <tr>
-                  <td><strong>Aucun port proposé</strong></td>
-                  <td>macOS</td>
-                  <td>Câble de charge, hub USB-C fatigué, ou pilote FTDI tiers installé par-dessus celui d'Apple.</td>
-                  <td>Chercher une entrée <code>/dev/cu.usbserial-…</code>&nbsp;; changer de câble et brancher en direct. Désinstaller un éventuel pilote VCP FTDI ajouté à la main.</td>
-                </tr>
-                <tr>
-                  <td><strong>Boîtier «&nbsp;open&nbsp;» muet, diagnostic tout vert</strong></td>
-                  <td>Les deux</td>
-                  <td>Lignes de contrôle RTS/DTR&nbsp;: elles inhibent l'émission RS485 sur certains modèles.</td>
-                  <td><strong>Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB</strong> ▸ <strong>🔌 Test RTS/DTR</strong>&nbsp;: le balayage trouve la bonne combinaison et la mémorise.</td>
-                </tr>
-                <tr>
-                  <td><strong>Les projecteurs clignotent ou strobent tout seuls</strong></td>
-                  <td>Les deux</td>
-                  <td>Deux programmes écrivent sur le même boîtier, ou ligne DMX non terminée.</td>
-                  <td>Fermer tout autre logiciel de lumière et les utilitaires du fabricant. Ajouter un bouchon 120&nbsp;Ω en fin de ligne.</td>
-                </tr>
-                <tr>
-                  <td><strong>Un projecteur réagit quand j'en bouge un autre</strong></td>
-                  <td>Les deux</td>
-                  <td>Plages d'adresses qui se chevauchent.</td>
-                  <td>Réadresser&nbsp;: chaque appareil démarre après la fin du précédent. Le <strong>⚡ Auto-adressage</strong> du patch le fait automatiquement.</td>
-                </tr>
-                <tr>
-                  <td><strong>Les couleurs ne correspondent pas</strong></td>
-                  <td>Les deux</td>
-                  <td>Mode DMX du projecteur différent du profil du patch (appareil en 8 canaux, patché en 5).</td>
-                  <td>Régler le même mode des deux côtés&nbsp;: menu du projecteur et profil MyStrow.</td>
-                </tr>
-                <tr>
-                  <td><strong>Ça marchait hier, plus aujourd'hui</strong></td>
-                  <td>Les deux</td>
-                  <td>Boîtier rebranché sur un autre port USB&nbsp;: le nom du port a changé.</td>
-                  <td>Rouvrir la fenêtre, <strong>↺</strong>, resélectionner le port, <strong>🔌 Connecter</strong>. Reprendre toujours le même port USB évite le problème.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="lock-box">
-            <p><strong>Toujours bloqué&nbsp;?</strong> <span class="path" style="border-color:rgba(255,128,128,.3);background:rgba(255,80,80,.08);">Connexion ▸ 🩺 Diagnostic ▸ 🩺 Diagnostic complet (BRAD)</span> teste toute la chaîne d'un coup. Copiez son rapport et écrivez-nous depuis la <a href="contact.html" style="color:#ff8080;">page contact</a> — ou rejoignez le Discord, la communauté connaît généralement le boîtier que vous avez entre les mains.</p>
-          </div>
-        </section>
-
-        <!-- 6. FAQ -->
-        <section id="faq" class="doc-section">
-          <div class="section-tag">Questions fréquentes</div>
-          <h2>FAQ</h2>
-          <div class="faq-list">
-            <details class="faq">
-              <summary>Quelle interface choisir pour débuter&nbsp;?</summary>
-              <p>Une interface USB à microcontrôleur (ENTTEC DMX USB Pro, Eurolite USB-DMX512 PRO MK2)&nbsp;: rien à configurer côté réseau, on choisit le port et on connecte, et le boîtier fabrique lui-même les trames. Un Node Art-Net devient intéressant dès qu'il faut plusieurs univers, de longues distances, ou une machine éloignée de la scène.</p>
-            </details>
-            <details class="faq">
-              <summary>Sur Mac, le node ne répond jamais&nbsp;: pourquoi&nbsp;?</summary>
-              <p>Depuis macOS 14, une application doit être autorisée à parler au réseau local. Sans cette autorisation, macOS bloque l'Art-Net silencieusement&nbsp;: aucune erreur, le node ne répond simplement jamais. Activez MyStrow dans <strong>Réglages Système ▸ Confidentialité et sécurité ▸ Réseau local</strong>, relancez le logiciel, et vérifiez que la carte Ethernet est bien en 2.0.0.1 / 255.0.0.0.</p>
-            </details>
-            <details class="faq">
-              <summary>Où est le «&nbsp;port COM&nbsp;» sur un Mac&nbsp;?</summary>
-              <p>Le libellé vient de Windows, mais le menu liste bien les ports macOS&nbsp;: <code>/dev/cu.usbserial-XXXX</code>. Le pilote FTDI est intégré à macOS, il n'y a rien à installer — et mieux vaut ne pas ajouter le pilote VCP de FTDI par-dessus, qui crée des doublons.</p>
-            </details>
-            <details class="faq">
-              <summary>Combien de projecteurs par univers&nbsp;?</summary>
-              <p>512 canaux par univers&nbsp;: environ 100 PAR LED en 5 canaux, mais seulement une trentaine de lyres en 16 canaux. Au-delà, il faut un deuxième univers — donc un node à plusieurs sorties.</p>
-            </details>
-            <details class="faq">
-              <summary>Faut-il un switch ou un routeur pour un node&nbsp;?</summary>
-              <p>Non. Un câble Ethernet direct entre l'ordinateur et le node suffit. Il faut simplement que la carte réseau soit sur le même plan d'adressage&nbsp;: 2.0.0.1 / 255.0.0.0 pour un node en 2.0.0.15.</p>
-            </details>
-            <details class="faq">
-              <summary>MyStrow envoie-t-il de l'Art-Net ou du sACN&nbsp;?</summary>
-              <p>De l'Art-Net, en UDP sur le port 6454. La plupart des nodes gèrent les deux protocoles&nbsp;: il suffit de régler le boîtier en Art-Net dans son utilitaire.</p>
-            </details>
-            <details class="faq">
-              <summary>Puis-je utiliser deux interfaces en même temps&nbsp;?</summary>
-              <p>MyStrow pilote une sortie à la fois. Pour plusieurs univers simultanés, utilisez un node multi-sorties et son tableau d'aiguillage plutôt que deux boîtiers USB.</p>
-            </details>
-            <details class="faq">
-              <summary>Faut-il refaire la configuration à chaque spectacle&nbsp;?</summary>
-              <p>Non&nbsp;: le choix de l'interface, le port et l'aiguillage sont mémorisés. Il suffit de rebrancher le matériel avant de lancer le logiciel. Seul un changement de port USB peut demander de resélectionner le port.</p>
-            </details>
           </div>
         </section>
 
