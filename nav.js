@@ -35,11 +35,15 @@
     ".lang-selector-btn:hover,.lang-selector:focus-within .lang-selector-btn{border-color:var(--accent);color:var(--accent);}" +
     ".lang-chevron{font-size:9px;opacity:.5;margin-left:2px;transition:transform .18s;display:inline-block;}" +
     ".lang-selector:hover .lang-chevron,.lang-selector:focus-within .lang-chevron{transform:rotate(180deg);opacity:.8;}" +
-    ".lang-dropdown{display:none;position:absolute;top:calc(100% + 7px);right:0;background:#141414;border:1px solid #2a2a2a;border-radius:8px;padding:6px 0;min-width:110px;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.5);}" +
+    ".lang-dropdown{display:none;position:absolute;top:calc(100% + 7px);right:0;background:#141414;border:1px solid #2a2a2a;border-radius:8px;padding:6px 0;min-width:162px;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.5);}" +
     ".lang-selector:hover .lang-dropdown,.lang-selector:focus-within .lang-dropdown{display:block;}" +
-    ".lang-dropdown a,.lang-dropdown span{display:flex;align-items:center;gap:8px;padding:7px 14px;font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:1px;transition:color .15s,background .15s;white-space:nowrap;}" +
-    ".lang-dropdown a:hover{color:var(--accent);background:rgba(255,215,0,.05);}" +
-    ".lang-dropdown span{color:var(--accent);cursor:default;}" +
+    ".lang-dropdown>a,.lang-dropdown>span{display:flex;align-items:center;gap:9px;padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.2px;transition:color .15s,background .15s;white-space:nowrap;}" +
+    ".lang-dropdown>a:hover{color:var(--accent);background:rgba(255,215,0,.05);}" +
+    ".lang-dropdown>span{color:var(--accent);cursor:default;}" +
+    /* Le drapeau est décoratif : c'est le nom de la langue qui porte le sens
+       (un drapeau désigne un pays, pas une langue). */
+    ".lang-flag{font-size:15px;line-height:1;flex-shrink:0;}" +
+    ".lang-check{margin-left:auto;font-size:11px;color:var(--accent);}" +
     "@media(max-width:680px){header nav{padding:0 14px;gap:8px;}.nav-desktop{display:none!important;}.btn-nav-cta{display:none;}}";
 
   var IG = "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z";
@@ -67,7 +71,7 @@
         ["🗺️", "Plan de scène interactif", "Visualisez et contrôlez vos groupes de projecteurs d'un clic ou d'un fader.", "plan-de-scene.html"]
       ],
       top: [["Tarifs", "tarifs.html"], ["Matériel", "controleur-akai-apc-mini.html"], ["Shop", "shop.html"], ["FAQ", "index.html#faq"], ["Tutoriels", "blog.html"]],
-      signin: "Connexion", dl: "Télécharger ↓", dlHref: "telecharger.html"
+      langLabel: "Choisir la langue", signin: "Connexion", dl: "Télécharger ↓", dlHref: "telecharger.html"
     },
     en: {
       feat: "Features", featHref: "index.html#features",
@@ -80,7 +84,7 @@
         ["🗺️", "Interactive Stage Plot", "Visualize and control your fixture groups with a click or a fader.", "stage-plot.html"]
       ],
       top: [["Pricing", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
-      signin: "Sign in", dl: "Download ↓", dlHref: "download.html"
+      langLabel: "Choose language", signin: "Sign in", dl: "Download ↓", dlHref: "download.html"
     },
     de: {
       feat: "Funktionen", featHref: "index.html#features",
@@ -93,7 +97,7 @@
         ["🗺️", "Interaktiver Bühnenplan", "Scheinwerfergruppen mit einem Klick oder Fader visualisieren und steuern.", "stage-plot.html"]
       ],
       top: [["Preise", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
-      signin: "Anmelden", dl: "Herunterladen ↓", dlHref: "download.html"
+      langLabel: "Sprache wählen", signin: "Anmelden", dl: "Herunterladen ↓", dlHref: "download.html"
     },
     es: {
       feat: "Funciones", featHref: "index.html#features",
@@ -106,7 +110,7 @@
         ["🗺️", "Plano de escena interactivo", "Visualiza y controla tus grupos de focos con un clic o un fader.", "stage-plot.html"]
       ],
       top: [["Precios", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
-      signin: "Iniciar sesión", dl: "Descargar ↓", dlHref: "download.html"
+      langLabel: "Elegir idioma", signin: "Iniciar sesión", dl: "Descargar ↓", dlHref: "download.html"
     },
     pt: {
       feat: "Funcionalidades", featHref: "index.html#features",
@@ -119,12 +123,21 @@
         ["🗺️", "Planta de palco interativa", "Visualize e controle os seus grupos de projetores com um clique ou fader.", "stage-plot.html"]
       ],
       top: [["Preços", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
-      signin: "Entrar", dl: "Transferir ↓", dlHref: "download.html"
+      langLabel: "Escolher idioma", signin: "Entrar", dl: "Transferir ↓", dlHref: "download.html"
     }
   };
 
   var ORDER = ["fr", "en", "de", "es", "pt"];
-  var FLAG = { fr: "🇫🇷", en: "🇬🇧", de: "🇩🇪", es: "🇪🇸", pt: "🇵🇹" };
+  // Nom de la langue écrit DANS cette langue, drapeau en simple repère visuel.
+  // Source de vérité unique : mobile-nav.js relit ces valeurs via data-flag /
+  // data-name plutôt que de tenir sa propre table.
+  var LANGS = {
+    fr: { flag: "🇫🇷", name: "Français" },
+    en: { flag: "🇬🇧", name: "English" },
+    de: { flag: "🇩🇪", name: "Deutsch" },
+    es: { flag: "🇪🇸", name: "Español" },
+    pt: { flag: "🇵🇹", name: "Português" }
+  };
 
   var mm = location.pathname.match(/\/(en|de|es|pt)\//);
   var loc = mm ? mm[1] : "fr";
@@ -148,7 +161,12 @@
   }
   var langItems = ORDER.map(function (t) {
     var h = langHref(t);
-    return h === null ? "<span>" + FLAG[t] + "</span>" : '<a href="' + h + '">' + FLAG[t] + "</a>";
+    var l = LANGS[t];
+    var inner = '<span class="lang-flag" aria-hidden="true">' + l.flag + "</span>" + l.name;
+    var attrs = ' lang="' + t + '" data-lang="' + t + '" data-flag="' + l.flag + '" data-name="' + l.name + '"';
+    return h === null
+      ? "<span" + attrs + ' aria-current="true">' + inner + '<span class="lang-check" aria-hidden="true">✓</span></span>'
+      : '<a href="' + h + '"' + attrs + ">" + inner + "</a>";
   }).join("");
 
   var HEADER =
@@ -161,8 +179,8 @@
       '</div>' +
       '<div class="nav-right">' + SOCIALS +
         '<div class="lang-selector" tabindex="0">' +
-          '<button class="lang-selector-btn" aria-label="Language">' +
-            '<svg style="width:13px;height:13px;opacity:.6;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>' +
+          '<button class="lang-selector-btn" aria-label="' + cfg.langLabel + '">' +
+            '<span class="lang-flag" aria-hidden="true">' + LANGS[loc].flag + '</span>' +
             loc.toUpperCase() + ' <span class="lang-chevron">&#9660;</span>' +
           '</button>' +
           '<div class="lang-dropdown">' + langItems + '</div>' +

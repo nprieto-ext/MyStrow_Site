@@ -49,16 +49,28 @@
     var langHtml = '';
     var langDropdown = document.querySelector('.lang-dropdown');
     if (langDropdown) {
-      var flagMap = {'🇫🇷':'FR','🇬🇧':'EN','🇩🇪':'DE','🇪🇸':'ES','🇵🇹':'PT'};
-      var items = langDropdown.querySelectorAll('a, span');
-      var langLinks = Array.from(items).map(function(item) {
-        var raw = item.textContent.trim();
-        var m = raw.match(/[A-Za-z]{2}/);
-        var code = flagMap[raw] || (m ? m[0].toUpperCase() : raw);   // code seul, sans drapeau
-        if (item.tagName === 'SPAN') {
-          return '<span class="nb-lang-cur">' + code + '</span>';
+      // Drapeau + nom de la langue, repris tels quels du sélecteur bureau
+      // (data-flag / data-name) : une seule source de vérité, ici on n'a plus
+      // de table à tenir à jour. Repli sur l'ancien format drapeau seul.
+      var LEGACY = {'🇫🇷':['🇫🇷','Français'],'🇬🇧':['🇬🇧','English'],'🇩🇪':['🇩🇪','Deutsch'],'🇪🇸':['🇪🇸','Español'],'🇵🇹':['🇵🇹','Português']};
+      var items = Array.from(langDropdown.children).filter(function (el) {
+        return el.tagName === 'A' || el.tagName === 'SPAN';
+      });
+      var langLinks = items.map(function(item) {
+        var flag = item.getAttribute('data-flag');
+        var name = item.getAttribute('data-name');
+        if (!flag || !name) {
+          var legacy = LEGACY[item.textContent.trim()];
+          flag = flag || (legacy ? legacy[0] : '');
+          name = name || (legacy ? legacy[1] : item.textContent.trim());
         }
-        return '<a href="' + item.getAttribute('href') + '" class="nb-lang-link">' + code + '</a>';
+        var label = '<span class="nb-lang-flag" aria-hidden="true">' + flag + '</span>' + name;
+        var lang = item.getAttribute('data-lang');
+        var attr = lang ? ' lang="' + lang + '"' : '';
+        if (item.tagName === 'SPAN') {
+          return '<span class="nb-lang-cur"' + attr + '>' + label + '</span>';
+        }
+        return '<a href="' + item.getAttribute('href') + '" class="nb-lang-link"' + attr + '>' + label + '</a>';
       });
       if (langLinks.length) {
         langHtml = '<div class="nb-section-label">Langue</div><div class="nb-langs">' + langLinks.join('') + '</div>';

@@ -194,6 +194,7 @@
   border: 1px solid rgba(226,206,22,0.35);
   color: #E2CE16;
 }
+.nb-lang-flag { font-size: 15px; line-height: 1; }
 
 .nb-socials { display: flex; gap: 9px; flex-wrap: wrap; justify-content: center; }
 .nb-social {
