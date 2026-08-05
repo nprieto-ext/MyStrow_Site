@@ -409,7 +409,9 @@
     .lang-dropdown > a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
     .lang-dropdown > span { color: var(--accent); cursor: default; }
     /* Le drapeau est decoratif : c'est le nom de la langue qui porte le sens. */
-    .lang-flag { font-size: 15px; line-height: 1; flex-shrink: 0; }
+    .lang-flag { display: inline-flex; width: 20px; height: 13px; flex-shrink: 0;
+      border-radius: 2px; overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,.14); }
+    .lang-flag svg { width: 100%; height: 100%; display: block; }
     .lang-check { margin-left: auto; font-size: 11px; color: var(--accent); }
 
     /* ── Footer ──────────────────────────────────────────── */
@@ -552,15 +554,15 @@
       <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg></a>
       <div class="lang-selector" tabindex="0">
       <button class="lang-selector-btn" aria-label="Choose language">
-        <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+        <span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4.6"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2.4"/><path d="M15 0V20M0 10H30" stroke="#fff" stroke-width="7.4"/><path d="M15 0V20M0 10H30" stroke="#c8102e" stroke-width="4.4"/></svg></span>
         EN <span class="lang-chevron">&#9660;</span>
       </button>
       <div class="lang-dropdown">
-        <a href="../index.html" lang="fr" data-lang="fr" data-flag="🇫🇷" data-name="Français"><span class="lang-flag" aria-hidden="true">🇫🇷</span>Français</a>
-        <span lang="en" data-lang="en" data-flag="🇬🇧" data-name="English" aria-current="true"><span class="lang-flag" aria-hidden="true">🇬🇧</span>English<span class="lang-check" aria-hidden="true">✓</span></span>
-        <a href="../de/index.html" lang="de" data-lang="de" data-flag="🇩🇪" data-name="Deutsch"><span class="lang-flag" aria-hidden="true">🇩🇪</span>Deutsch</a>
-        <a href="../es/index.html" lang="es" data-lang="es" data-flag="🇪🇸" data-name="Español"><span class="lang-flag" aria-hidden="true">🇪🇸</span>Español</a>
-        <a href="../pt/index.html" lang="pt" data-lang="pt" data-flag="🇵🇹" data-name="Português"><span class="lang-flag" aria-hidden="true">🇵🇹</span>Português</a>
+        <a href="../index.html" lang="fr" data-lang="fr" data-name="Français"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/><rect x="20" width="10" height="20" fill="#ce1126"/></svg></span>Français</a>
+        <span lang="en" data-lang="en" data-name="English" aria-current="true"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4.6"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2.4"/><path d="M15 0V20M0 10H30" stroke="#fff" stroke-width="7.4"/><path d="M15 0V20M0 10H30" stroke="#c8102e" stroke-width="4.4"/></svg></span>English<span class="lang-check" aria-hidden="true">✓</span></span>
+        <a href="../de/index.html" lang="de" data-lang="de" data-name="Deutsch"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#ffce00"/><rect width="30" height="13.34" fill="#dd0000"/><rect width="30" height="6.67" fill="#000"/></svg></span>Deutsch</a>
+        <a href="../es/index.html" lang="es" data-lang="es" data-name="Español"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg></span>Español</a>
+        <a href="../pt/index.html" lang="pt" data-lang="pt" data-name="Português"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.4" fill="#ffe900" stroke="#046a38" stroke-width="0.6"/><rect x="10.2" y="7.7" width="3.6" height="4.6" rx="0.6" fill="#fff" stroke="#da291c" stroke-width="0.7"/></svg></span>Português</a>
       </div>
     </div>
       <a href="https://mystrow.fr/compte" class="nav-signin nav-desktop" target="_blank" rel="noopener noreferrer">Sign in</a>

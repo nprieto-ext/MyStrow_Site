@@ -42,7 +42,8 @@
     ".lang-dropdown>span{color:var(--accent);cursor:default;}" +
     /* Le drapeau est décoratif : c'est le nom de la langue qui porte le sens
        (un drapeau désigne un pays, pas une langue). */
-    ".lang-flag{font-size:15px;line-height:1;flex-shrink:0;}" +
+    ".lang-flag{display:inline-flex;width:20px;height:13px;flex-shrink:0;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.14);}" +
+    ".lang-flag svg{width:100%;height:100%;display:block;}" +
     ".lang-check{margin-left:auto;font-size:11px;color:var(--accent);}" +
     "@media(max-width:680px){header nav{padding:0 14px;gap:8px;}.nav-desktop{display:none!important;}.btn-nav-cta{display:none;}}";
 
@@ -131,12 +132,19 @@
   // Nom de la langue écrit DANS cette langue, drapeau en simple repère visuel.
   // Source de vérité unique : mobile-nav.js relit ces valeurs via data-flag /
   // data-name plutôt que de tenir sa propre table.
+  var FLAG_SVG = {
+    fr: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/><rect x="20" width="10" height="20" fill="#ce1126"/></svg>',
+    en: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4.6"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2.4"/><path d="M15 0V20M0 10H30" stroke="#fff" stroke-width="7.4"/><path d="M15 0V20M0 10H30" stroke="#c8102e" stroke-width="4.4"/></svg>',
+    de: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#ffce00"/><rect width="30" height="13.34" fill="#dd0000"/><rect width="30" height="6.67" fill="#000"/></svg>',
+    es: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg>',
+    pt: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.4" fill="#ffe900" stroke="#046a38" stroke-width="0.6"/><rect x="10.2" y="7.7" width="3.6" height="4.6" rx="0.6" fill="#fff" stroke="#da291c" stroke-width="0.7"/></svg>'
+  };
   var LANGS = {
-    fr: { flag: "🇫🇷", name: "Français" },
-    en: { flag: "🇬🇧", name: "English" },
-    de: { flag: "🇩🇪", name: "Deutsch" },
-    es: { flag: "🇪🇸", name: "Español" },
-    pt: { flag: "🇵🇹", name: "Português" }
+    fr: { flag: FLAG_SVG.fr, name: "Français" },
+    en: { flag: FLAG_SVG.en, name: "English" },
+    de: { flag: FLAG_SVG.de, name: "Deutsch" },
+    es: { flag: FLAG_SVG.es, name: "Español" },
+    pt: { flag: FLAG_SVG.pt, name: "Português" }
   };
 
   var mm = location.pathname.match(/\/(en|de|es|pt)\//);
@@ -163,7 +171,7 @@
     var h = langHref(t);
     var l = LANGS[t];
     var inner = '<span class="lang-flag" aria-hidden="true">' + l.flag + "</span>" + l.name;
-    var attrs = ' lang="' + t + '" data-lang="' + t + '" data-flag="' + l.flag + '" data-name="' + l.name + '"';
+    var attrs = ' lang="' + t + '" data-lang="' + t + '" data-name="' + l.name + '"';
     return h === null
       ? "<span" + attrs + ' aria-current="true">' + inner + '<span class="lang-check" aria-hidden="true">✓</span></span>'
       : '<a href="' + h + '"' + attrs + ">" + inner + "</a>";

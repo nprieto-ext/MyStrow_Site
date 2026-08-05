@@ -49,22 +49,23 @@
     var langHtml = '';
     var langDropdown = document.querySelector('.lang-dropdown');
     if (langDropdown) {
-      // Drapeau + nom de la langue, repris tels quels du sélecteur bureau
-      // (data-flag / data-name) : une seule source de vérité, ici on n'a plus
-      // de table à tenir à jour. Repli sur l'ancien format drapeau seul.
-      var LEGACY = {'🇫🇷':['🇫🇷','Français'],'🇬🇧':['🇬🇧','English'],'🇩🇪':['🇩🇪','Deutsch'],'🇪🇸':['🇪🇸','Español'],'🇵🇹':['🇵🇹','Português']};
+      // Drapeau + nom de la langue repris du sélecteur bureau : le drapeau est
+      // du SVG inline, on CLONE donc l'élément .lang-flag au lieu de lire un
+      // attribut texte. Une seule source de vérité, aucune table à tenir ici.
+      var LEGACY = {'🇫🇷':'Français','🇬🇧':'English','🇩🇪':'Deutsch','🇪🇸':'Español','🇵🇹':'Português'};
       var items = Array.from(langDropdown.children).filter(function (el) {
         return el.tagName === 'A' || el.tagName === 'SPAN';
       });
       var langLinks = items.map(function(item) {
-        var flag = item.getAttribute('data-flag');
+        var flagEl = item.querySelector('.lang-flag');
+        var flag = flagEl ? flagEl.outerHTML : '';
         var name = item.getAttribute('data-name');
-        if (!flag || !name) {
-          var legacy = LEGACY[item.textContent.trim()];
-          flag = flag || (legacy ? legacy[0] : '');
-          name = name || (legacy ? legacy[1] : item.textContent.trim());
+        if (!name) {
+          // Menu resté à l'ancien format (drapeau emoji seul, sans data-name).
+          var raw = item.textContent.trim();
+          name = LEGACY[raw] || raw;
         }
-        var label = '<span class="nb-lang-flag" aria-hidden="true">' + flag + '</span>' + name;
+        var label = flag + name;
         var lang = item.getAttribute('data-lang');
         var attr = lang ? ' lang="' + lang + '"' : '';
         if (item.tagName === 'SPAN') {
