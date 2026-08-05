@@ -819,8 +819,13 @@
       color: var(--muted); text-decoration: none; letter-spacing: .2px;
       transition: color .15s, background .15s; white-space: nowrap;
     }
-    .lang-dropdown a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
-    .lang-dropdown span { color: var(--accent); cursor: default; }
+    .lang-dropdown > a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
+    .lang-dropdown > span { color: var(--accent); cursor: default; }
+    /* Le drapeau est decoratif : c'est le nom de la langue qui porte le sens. */
+    .lang-flag { display: inline-flex; width: 20px; height: 13px; flex-shrink: 0;
+      border-radius: 2px; overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,.14); }
+    .lang-flag svg { width: 100%; height: 100%; display: block; }
+    .lang-check { margin-left: auto; font-size: 11px; color: var(--accent); }
 
     /* ── Footer ──────────────────────────────────────────── */
     footer {
