@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Ligar a sua saída DMX com o MyStrow — Nó Art-Net &amp; interfaces USB/DMX | MyStrow</title>
+  <meta name="description" content="Escolha a sua interface (nó Art-Net, ENTTEC Pro, Open DMX), indique Windows ou macOS: aparece o procedimento exato, passo a passo.">
+  <meta name="keywords" content="saída DMX MyStrow, nó Art-Net, interface USB DMX, ENTTEC DMX USB Pro, ENTTEC Open DMX USB, Eurolite USB-DMX512 PRO MK2, DMXKing UltraDMX Micro, OPTO OPEN DMX, DMX TOOLS ElectroConcept, Art-Net 2.0.0.15, DMX Mac, universo DMX512">
+  <link rel="canonical" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow">
+<!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow">
+  <meta property="og:title" content="Ligar a sua saída DMX com o MyStrow — Nó Art-Net & interfaces USB/DMX">
+  <meta property="og:description" content="A sua interface + o seu sistema = o procedimento exato. Nó Art-Net, ENTTEC Pro, Open DMX, tanto em Windows como em macOS.">
+  <meta property="og:image" content="https://mystrow.fr/node-usb-dmx-tuto.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="article:published_time" content="2026-07-13">
+  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ligar a sua saída DMX com o MyStrow — Nó Art-Net & USB/DMX">
+  <meta name="twitter:description" content="Escolha o seu aparelho e o seu sistema: os passos aparecem, sem rodeios.">
+  <meta name="twitter:image" content="https://mystrow.fr/node-usb-dmx-tuto.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ligar a sua saída DMX com o MyStrow — Nó Art-Net e interfaces USB/DMX",
+  "description": "Guia da saída DMX do MyStrow: o procedimento exato para cada interface (nó Art-Net, ENTTEC Pro, Open DMX) em Windows e em macOS.",
+  "image": "https://mystrow.fr/node-usb-dmx-tuto.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-05",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"
+  },
+  "url": "https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow",
+  "keywords": [
+    "saída DMX MyStrow",
+    "nó Art-Net",
+    "interface USB DMX",
+    "ENTTEC DMX USB Pro",
+    "ENTTEC Open DMX USB",
+    "Eurolite USB-DMX512 PRO MK2",
+    "DMXKing UltraDMX Micro",
+    "OPTO OPEN DMX",
+    "DMX TOOLS ElectroConcept",
+    "Art-Net 2.0.0.15",
+    "DMX Mac",
+    "universo DMX512"
+  ]
+}
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://mystrow.fr/pt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutoriais",
+      "item": "https://mystrow.fr/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ligar a sua saída DMX",
+      "item": "https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"
+    }
+  ]
+}
+  </script>
+
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-wide { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 38px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: .3px; margin-bottom: 8px; color: var(--text); }
+    .hero-section { padding: 72px 0 40px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 720px; margin-bottom: 30px; line-height: 1.65; }
+    .section { padding: 64px 0; }
+    .section-bg { background: var(--bg2); padding: 64px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose p:last-child { margin-bottom: 0; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 32px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .cta-block { text-align: center; padding: 72px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 26px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* ── Layout documentation : sommaire + contenu ─────────────────── */
+    .doc { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 56px; align-items: start; padding: 8px 0 40px; }
+    .doc > * { min-width: 0; }
+    .toc { position: sticky; top: 92px; border-left: 1px solid var(--border); padding-left: 18px; }
+    .toc-title { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .toc ol { list-style: none; counter-reset: toc; display: flex; flex-direction: column; gap: 2px; }
+    .toc a { display: block; counter-increment: toc; color: var(--muted); font-size: 13px; text-decoration: none; padding: 6px 0 6px 26px; position: relative; line-height: 1.35; transition: color .18s; }
+    .toc a::before { content: counter(toc, decimal-leading-zero); position: absolute; left: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; color: rgba(226,206,22,0.5); letter-spacing: .5px; }
+    .toc a:hover, .toc a.is-active { color: var(--text); }
+    .toc a.is-active::before { color: var(--accent); }
+    .doc-section { padding: 0 0 12px; scroll-margin-top: 96px; }
+    .doc-section + .doc-section { margin-top: 64px; padding-top: 56px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .doc-section > h2 { display: flex; align-items: baseline; gap: 14px; }
+    .doc-section > h2 .h2-num { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: rgba(226,206,22,0.55); letter-spacing: 1px; }
+
+    /* ── Tableaux ──────────────────────────────────────────────────── */
+    .table-scroll { overflow-x: auto; margin-top: 28px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+    table { width: 100%; border-collapse: collapse; min-width: 640px; }
+    thead th { text-align: left; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); padding: 14px 18px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    tbody td { padding: 14px 18px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; line-height: 1.6; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody td strong { color: var(--text); font-weight: 600; }
+    tbody tr:hover td { background: rgba(255,255,255,0.015); }
+    .tag-ok { color: var(--green); font-weight: 600; }
+    .tag-mid { color: var(--accent); font-weight: 600; }
+    .tag-no { color: #ff8080; font-weight: 600; }
+
+    /* ── CONFIGURATEUR ─────────────────────────────────────────────── */
+    .wiz { background: linear-gradient(180deg, rgba(226,206,22,0.05), rgba(226,206,22,0.015)); border: 1px solid var(--accent-border); border-radius: 16px; padding: 26px 26px 24px; margin-top: 26px; }
+    .wiz-step + .wiz-step { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .wiz-q { display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: .3px; margin-bottom: 16px; }
+    .wiz-n { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #000; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+    .wiz-step.is-locked { opacity: .38; }
+    .wiz-step.is-locked .pick { pointer-events: none; }
+    .pick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .pick-grid.os { grid-template-columns: repeat(2, 1fr); max-width: 560px; }
+    .pick { -webkit-appearance: none; appearance: none; text-align: left; font-family: inherit; color: var(--text); background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 15px; cursor: pointer; display: flex; flex-direction: column; gap: 5px; transition: border-color .18s, background .18s, box-shadow .18s; }
+    .pick:hover { border-color: rgba(226,206,22,0.5); background: rgba(255,255,255,0.05); }
+    .pick:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .pick[aria-checked="true"] { border-color: var(--accent); background: rgba(226,206,22,0.09); box-shadow: 0 0 0 1px var(--accent) inset; }
+    .pick-ic { font-size: 22px; line-height: 1; }
+    .pick-t { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: .2px; }
+    .pick-d { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .pick-ex { font-size: 11.5px; color: rgba(226,206,22,0.75); line-height: 1.45; margin-top: 2px; }
+    .pick-grid.os .pick { flex-direction: row; align-items: center; gap: 12px; padding: 14px 18px; }
+    .pick-grid.os .pick-t { font-size: 17px; }
+    .wiz-hint { font-size: 13px; color: var(--muted); line-height: 1.6; margin: -8px 0 16px; }
+
+    /* ── Vignettes « ce qui est inscrit sur le boîtier » ───────────────── */
+    .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(258px, 1fr)); gap: 12px; }
+    .pick.dev { padding: 13px 13px 14px; gap: 0; }
+    .dev-img { position: relative; display: block; border-radius: 9px; padding: 22px 14px 36px;
+      background: linear-gradient(158deg, #2b2924 0%, #1a1814 52%, #0e0d0b 100%);
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 6px 16px rgba(0,0,0,0.4);
+      overflow: hidden; transition: border-color .18s; }
+    .dev-mark { display: block; text-align: center; font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 16.5px; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #e9e4d4; line-height: 1.2; overflow-wrap: anywhere;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.65); }
+    .dev-brand { display: block; text-align: center; font-size: 9px; letter-spacing: 1.3px;
+      text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 5px; overflow-wrap: anywhere; }
+    .dev-ports { position: absolute; left: 0; right: 0; bottom: 0; height: 28px;
+      display: flex; align-items: center; justify-content: center; gap: 11px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
+      border-top: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.4); transition: color .18s; }
+    .dev-ports svg { width: 15px; height: 15px; display: block; }
+    .dev-ports::before, .dev-ports::after { content: ''; position: absolute; top: 50%; margin-top: -2.5px;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 32%, #6d6a62, #232019 72%); }
+    .dev-ports::before { left: 9px; }
+    .dev-ports::after { right: 9px; }
+    .dev-fam { display: block; margin-top: 10px; text-align: center;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px;
+      letter-spacing: .6px; color: rgba(226,206,22,0.8); }
+    .pick.dev[aria-checked="true"] .dev-img { border-color: rgba(226,206,22,0.4); }
+    .pick.dev[aria-checked="true"] .dev-ports { color: rgba(226,206,22,0.75); }
+    .pick.dev[aria-checked="true"] .dev-fam { color: var(--accent); }
+    .dev-else { margin-top: 22px; padding-top: 20px; border-top: 1px dashed rgba(255,255,255,0.1); }
+    .dev-else-q { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+    .dev-else-q strong { color: var(--text); }
+    .dev-else .note { margin-top: 12px; }
+    .proc-model { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px;
+      letter-spacing: .5px; color: var(--muted); }
+    .proc-model b { color: var(--text); font-weight: 700; }
+
+    details.helper { margin-top: 14px; }
+    details.helper > summary { cursor: pointer; list-style: none; font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
+    details.helper > summary::-webkit-details-marker { display: none; }
+    details.helper > summary::before { content: '?'; width: 17px; height: 17px; border-radius: 50%; border: 1px solid var(--accent); font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    details.helper[open] > summary { margin-bottom: 10px; }
+    details.helper .helper-body { font-size: 13.5px; color: var(--muted); line-height: 1.7; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 16px 18px; }
+    details.helper .helper-body strong { color: var(--text); }
+    details.helper .helper-body ul { margin: 8px 0 0 18px; }
+    details.helper .helper-body li { margin-bottom: 6px; }
+
+    /* Résultat */
+    .proc-empty { margin-top: 26px; border: 1px dashed rgba(255,255,255,0.14); border-radius: 12px; padding: 26px; text-align: center; color: var(--muted); font-size: 14px; }
+    .proc { margin-top: 30px; scroll-margin-top: 96px; }
+    .proc-head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--card); border: 1px solid var(--accent-border); border-radius: 12px 12px 0 0; border-bottom: none; padding: 16px 22px; }
+    .proc-head h3 { margin: 0; font-size: 19px; }
+    .proc-chip { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); background: rgba(226,206,22,0.1); border: 1px solid var(--accent-border); border-radius: 999px; padding: 3px 11px; }
+    .proc-body { border: 1px solid var(--border); border-radius: 0 0 12px 12px; padding: 26px 22px 24px; background: rgba(255,255,255,0.012); }
+    .proc-reset { margin-left: auto; font-size: 12px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: inherit; text-decoration: underline; padding: 0; }
+    .proc-reset:hover { color: var(--accent); }
+    .step-list { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 18px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 32px; height: 32px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body { min-width: 0; }
+    .step-body h4 { margin-bottom: 6px; font-size: 16px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .step-body p + p { margin-top: 8px; }
+    .step-body ul { margin: 8px 0 0 18px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .step-body li + li { margin-top: 4px; }
+    .step-body strong { color: var(--text); font-weight: 600; }
+    .step-body a { color: var(--accent); text-decoration: none; }
+    .step-body a:hover { text-decoration: underline; }
+    .path { display: inline-block; max-width: 100%; overflow-wrap: anywhere; font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 12.5px; background: rgba(226,206,22,0.08); border: 1px solid var(--accent-border); border-radius: 5px; padding: 2px 8px; color: var(--text); }
+    .kv { list-style: none; margin: 10px 0 0; display: grid; grid-template-columns: minmax(140px, max-content) 1fr; gap: 6px 18px; font-size: 13.5px; }
+    .kv dt { color: var(--muted); }
+    .kv dd { color: var(--text); font-weight: 600; font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 12.5px; }
+    .note { margin-top: 10px; font-size: 13px; line-height: 1.65; color: var(--muted); border-left: 2px solid rgba(255,255,255,0.14); padding-left: 12px; }
+    .note strong { color: var(--text); }
+    .note.warn { border-left-color: #ff8080; }
+    .note.warn strong { color: #ff8080; }
+    .note.ok { border-left-color: var(--green); }
+    .note.ok strong { color: var(--green); }
+
+    /* ── FAQ ───────────────────────────────────────────────────────── */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+    details.faq { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0 22px; }
+    details.faq summary { cursor: pointer; list-style: none; padding: 18px 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; color: var(--text); display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after { content: '+'; color: var(--accent); font-size: 20px; font-weight: 400; flex-shrink: 0; }
+    details.faq[open] summary::after { content: '−'; }
+    details.faq p { color: var(--muted); font-size: 14px; line-height: 1.75; padding-bottom: 20px; margin: 0; }
+
+    figure.shot { margin: 18px 0 0; }
+    figure.shot img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); display: block; }
+    figure.shot figcaption { color: var(--muted); font-size: 12.5px; margin-top: 8px; line-height: 1.5; }
+    .shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+    .shot-row figure.shot { margin: 0; }
+    code { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; font-size: 0.92em; overflow-wrap: anywhere; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 1024px) {
+      .doc { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .toc { position: static; border-left: none; border-bottom: 1px solid var(--border); padding: 0 0 20px; margin-bottom: 40px; }
+      .toc ol { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px 24px; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .pick-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .toc ol { grid-template-columns: 1fr; }
+      .shot-row { grid-template-columns: 1fr; }
+      .pick-grid.os { grid-template-columns: 1fr; }
+      .wiz { padding: 20px 16px; }
+      .proc-head { padding: 14px 16px; }
+      .proc-body { padding: 20px 14px; }
+      .step { gap: 12px; }
+      .kv { grid-template-columns: 1fr; gap: 2px; }
+      .kv dd { margin-bottom: 8px; }
+      /* La barre de réseaux sociaux du pied de page est en flex sans retour à
+         la ligne : elle imposait une largeur de ~511 px et rognait toute la
+         page sur un téléphone. */
+      footer { padding: 28px 16px 20px; }
+      footer > div { flex-wrap: wrap; }
+      .footer-nl { align-items: stretch; width: 100%; }
+      .nl-form input[type="email"] { width: 100%; min-width: 0; }
+    }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css">
+</head>
+<body>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-wide">
+      <nav class="breadcrumb" aria-label="Trilho de navegação">
+        <a href="index.html">Início</a> &nbsp;/&nbsp;
+        <a href="blog.html">Tutoriais</a> &nbsp;/&nbsp;
+        <span>Ligar a sua saída DMX</span>
+      </nav>
+      <div class="hero-badge">🔌 Guia de material · Saída DMX</div>
+      <h1>Ligar a sua <em>saída DMX</em><br>Nó Art-Net &amp; interfaces USB</h1>
+      <p class="hero-sub">Escolha o seu aparelho e depois Windows ou macOS&nbsp;: aparecem os passos exatos, com os valores a introduzir e as armadilhas próprias do seu sistema. A página cobre depois os universos, o roteamento das saídas e a verificação.</p>
+      <div class="hero-meta">
+        <span>Por <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Atualizado a <strong>5 de agosto de 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Instalação&nbsp;: <strong>5 a 10 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#config" class="btn-primary">Configurar a minha saída →</a>
+        <a href="download.html" class="btn-outline">Transferir o MyStrow ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPS DU DOCUMENT -->
+  <div class="wrap-wide">
+    <div class="doc">
+
+      <!-- SOMMAIRE -->
+      <aside class="toc" aria-label="Índice">
+        <div class="toc-title">Índice</div>
+        <ol>
+          <li><a href="#config">Configurador</a></li>
+          <li><a href="#univers">Universos &amp; roteamento</a></li>
+          <li><a href="#verifier">Verificar que sai sinal</a></li>
+        </ol>
+      </aside>
+
+      <div>
+
+        <!-- 1. CONFIGURATEUR -->
+        <section id="config" class="doc-section">
+          <div class="section-tag">A sua instalação</div>
+          <h2><span class="h2-num">01</span> Configurador&nbsp;: o seu material, o seu procedimento</h2>
+          <div class="prose">
+            <p>Duas perguntas e depois o procedimento exato. Tudo passa a seguir por uma única janela no programa&nbsp;: <span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>.</p>
+          </div>
+
+          <!-- Pictos de connectique, réutilisés par les vignettes de boîtiers -->
+          <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden">
+            <symbol id="ic-xlr" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="8.6" r="1.45" fill="currentColor"/>
+              <circle cx="9" cy="14" r="1.45" fill="currentColor"/>
+              <circle cx="15" cy="14" r="1.45" fill="currentColor"/>
+            </symbol>
+            <symbol id="ic-usb" viewBox="0 0 24 24">
+              <path d="M12 20.5V6.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M12 2.8l2.3 3.6H9.7z" fill="currentColor"/>
+              <path d="M12 14.4l4-3.1V8.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="16" cy="7.6" r="1.5" fill="currentColor"/>
+              <path d="M12 17.2l-4-3.1v-1.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="6.7" y="9.6" width="2.7" height="2.7" fill="currentColor"/>
+            </symbol>
+            <symbol id="ic-rj45" viewBox="0 0 24 24">
+              <path d="M5.6 5.6h12.8v9.6H5.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M9.6 15.2v3.2h4.8v-3.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M8 7.8v3M10.6 7.8v3M13.4 7.8v3M16 7.8v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </symbol>
+          </svg>
+
+          <div class="wiz">
+            <!-- Étape 1 : modèle inscrit sur le boîtier -->
+            <div class="wiz-step" id="wiz-iface">
+              <div class="wiz-q" id="q-iface"><span class="wiz-n">1</span> O que está escrito no seu aparelho&nbsp;?</div>
+              <p class="wiz-hint">Vire-o ao contrário&nbsp;: o nome do modelo está impresso em cima ou na face das fichas. Clique no que corresponder.</p>
+              <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-usb-node" data-mark="USB NODE DMX">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">USB NODE DMX</span>
+                    <span class="dev-brand">www.electroconcept.fr</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Nó Art-Net</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node4" data-mark="NODE 4 UNIVERS">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">NODE 4 UNIVERS</span>
+                    <span class="dev-brand">ElectroConcept</span>
+                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Nó Art-Net</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="ec-opto" data-mark="OPTO OPEN DMX">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">OPTO OPEN DMX</span>
+                    <span class="dev-brand">www.electroconcept.fr</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Adaptador USB «&nbsp;open&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="pro" data-model="enttec-pro" data-mark="DMX USB PRO">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">DMX USB PRO</span>
+                    <span class="dev-brand">ENTTEC</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Interface USB «&nbsp;Pro&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="enttec-open" data-mark="OPEN DMX USB">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">OPEN DMX USB</span>
+                    <span class="dev-brand">ENTTEC</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Adaptador USB «&nbsp;open&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="enttec-ode" data-mark="ODE Mk2">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">ODE&nbsp;/ ODE Mk2</span>
+                    <span class="dev-brand">ENTTEC</span>
+                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Nó Art-Net</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="pro" data-model="eurolite-mk2" data-mark="USB-DMX512 PRO MK2">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">USB-DMX512 PRO MK2</span>
+                    <span class="dev-brand">Eurolite</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Interface USB «&nbsp;Pro&nbsp;»</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="dmxking-edmx" data-mark="eDMX1 / eDMX2 PRO">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">eDMX1&nbsp;/ eDMX2 PRO</span>
+                    <span class="dev-brand">DMXKing</span>
+                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Nó Art-Net</span>
+                </button>
+
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="dmxking-ultra" data-mark="ultraDMX Micro">
+                  <span class="dev-img" aria-hidden="true">
+                    <span class="dev-mark">ultraDMX Micro</span>
+                    <span class="dev-brand">DMXKing</span>
+                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
+                  </span>
+                  <span class="dev-fam">Adaptador USB «&nbsp;open&nbsp;»</span>
+                </button>
+
+              </div>
+
+              <!-- Boîtier absent de la liste : on choisit sur la connectique -->
+              <div class="dev-else">
+                <div class="dev-else-q">Outro nome&nbsp;? Então olhe para as <strong>fichas</strong> do aparelho&nbsp;:</div>
+                <div class="pick-grid" role="radiogroup" aria-label="Identificar o aparelho pelas suas ligações">
+                  <button type="button" class="pick" role="radio" aria-checked="false" data-iface="node" data-model="other-node" data-mark="boîtier avec prise réseau">
+                    <span class="pick-ic" aria-hidden="true">🌐</span>
+                    <span class="pick-t">Há uma ficha de rede RJ45</span>
+                    <span class="pick-d">É um nó Art-Net, mesmo que o aparelho seja alimentado por USB.</span>
+                  </button>
+                  <button type="button" class="pick" role="radio" aria-checked="false" data-iface="pro" data-model="other-pro" data-mark="interface USB « Pro »">
+                    <span class="pick-ic" aria-hidden="true">🟢</span>
+                    <span class="pick-t">USB + XLR, e «&nbsp;PRO&nbsp;» no nome</span>
+                    <span class="pick-d">O aparelho constrói ele próprio as tramas DMX&nbsp;: é uma interface Pro.</span>
+                  </button>
+                  <button type="button" class="pick" role="radio" aria-checked="false" data-iface="open" data-model="other-open" data-mark="adaptateur USB « open »">
+                    <span class="pick-ic" aria-hidden="true">🟡</span>
+                    <span class="pick-t">USB + XLR, outro nome</span>
+                    <span class="pick-d">O caso da imensa maioria dos aparelhos abaixo dos 60&nbsp;€, e de todos os clones FTDI.</span>
+                  </button>
+                </div>
+                <div class="note">Está em dúvida entre os dois últimos&nbsp;? Escolha «&nbsp;<strong>open</strong>&nbsp;»&nbsp;: se o aparelho for na verdade um Pro, a saída simplesmente não arranca e basta mudar a linha «&nbsp;Interface&nbsp;» no programa. Nenhum risco para o material.</div>
+              </div>
+            </div>
+
+            <!-- Étape 2 : système -->
+            <div class="wiz-step" id="wiz-os">
+              <div class="wiz-q" id="q-os"><span class="wiz-n">2</span> Em que computador&nbsp;?</div>
+              <div class="pick-grid os" role="radiogroup" aria-labelledby="q-os">
+                <button type="button" class="pick" role="radio" aria-checked="false" data-os="windows">
+                  <span class="pick-ic" aria-hidden="true">🪟</span>
+                  <span class="pick-t">Windows</span>
+                </button>
+                <button type="button" class="pick" role="radio" aria-checked="false" data-os="macos">
+                  <span class="pick-ic" aria-hidden="true">🍎</span>
+                  <span class="pick-t">macOS</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="proc-empty" id="proc-empty" hidden>Selecione uma interface e um sistema para mostrar o procedimento.</div>
+
+          <!-- ═══════════ PROCÉDURES ═══════════ -->
+          <div id="procs">
+
+            <!-- A. NODE + WINDOWS -->
+            <article class="proc" id="node-windows" data-iface="node" data-os="windows">
+              <div class="proc-head">
+                <h3>Nó Art-Net</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar os dois cabos</h4>
+                      <p>Um cabo <strong>RJ45 diretamente entre o PC e o nó</strong> (sem switch, sem Wi-Fi), e a alimentação&nbsp;: USB-B quadrado ou USB-C consoante o modelo. Verifique se o LED do aparelho acende.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Configurar o nó no seu utilitário</h4>
+                      <p>Para os nós ElectroConcept, com o aparelho ligado e alimentado, abra <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> e introduza&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
+                      </dl>
+                      <p>Valide e depois <strong>desligue e volte a ligar o USB</strong>&nbsp;: o nó reinicia no seu novo endereço. Sai de fábrica em 2.0.0.1, e 2.0.0.15 é o endereço que o MyStrow procura por predefinição — respeitando-o, não terá de introduzir nada no programa.</p>
+                      <p>Noutro nó (ENTTEC ODE, DMXKing eDMX…), o utilitário muda mas as definições são as mesmas&nbsp;: <strong>protocolo Art-Net</strong>, saída em OUT, universo 0, IP 2.0.0.15 / máscara 255.0.0.0.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="../dmx-parameters-dmxtools.webp" alt="Separador DMX Parameters do DMX TOOLS ElectroConcept" width="401" height="538" loading="lazy">
+                          <figcaption>Separador <strong>DMX Parameters</strong>.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="../network-parameters-dmxtools.webp" alt="Separador Network Parameters do DMX TOOLS ElectroConcept" width="384" height="379" loading="lazy">
+                          <figcaption>Separador <strong>Network Parameters</strong>.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Colocar a placa de rede do PC em 2.0.0.1</h4>
+                      <p>No MyStrow&nbsp;: <span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🌐 Saída Node</strong>, botão <strong>⚙️ Configurar a ligação de rede</strong>. O assistente verifica os cabos, lista as placas Ethernet, e o botão <strong>Configurar automaticamente ✓</strong> aplica 2.0.0.1 / 255.0.0.0 àquela que indicar.</p>
+                      <p>A configuração automática exige <strong>direitos de administrador</strong>. Se falhar, o assistente passa para a página manual&nbsp;: botão <strong>🔑 Reiniciar como administrador</strong>, ou definição à mão — clique direito na placa ▸ Propriedades ▸ <strong>TCP/IPv4</strong> ▸ Propriedades ▸ «&nbsp;Utilizar o seguinte endereço IP&nbsp;» ▸ <strong>2.0.0.1</strong>, máscara <strong>255.0.0.0</strong>, gateway vazio.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="../proprietes-carte-reseau.webp" alt="Propriedades da placa de rede do Windows com IP fixo 2.0.0.1 para um nó Art-Net" loading="lazy">
+                          <figcaption>A definição manual equivalente, no Windows.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="../parametrer-sortie-node-mystrow.webp" alt="Botão Configurar a ligação de rede na janela Configurar a saída DMX do MyStrow" loading="lazy">
+                          <figcaption>O botão <strong>⚙️ Configurar a ligação de rede</strong> faz isso por si.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Autorizar o MyStrow na firewall</h4>
+                      <p>Na primeira emissão, o Windows mostra um pedido de autorização&nbsp;: marque <strong>Redes privadas</strong> e valide. O Art-Net sai em UDP pela porta <code>6454</code>&nbsp;; se for recusado, o pedido não volta a aparecer e o nó fica mudo.</p>
+                      <div class="note">Já recusou por engano&nbsp;? <strong>Firewall do Windows Defender ▸ Permitir uma aplicação</strong> ▸ marque o MyStrow para as redes privadas.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                      <h4>Ligar e depois encaminhar as saídas</h4>
+                      <p>Separador <strong>🌐 Saída Node</strong>&nbsp;: o estado passa a verde assim que o aparelho responde, e depois clique em <strong>🔌 Conectar</strong>. Na tabela <strong>Roteamento das saídas</strong>, indique que universo sai por que ficha física (ver <a href="#univers">Universos &amp; roteamento</a>).</p>
+                      <div class="note ok"><strong>Verificação rápida&nbsp;:</strong> <span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🌐 Teste RJ45 (rede / nó Art-Net)</span> verifica a placa de rede, o ping e a resposta Art-Net do nó.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>Wi-Fi&nbsp;: a evitar.</strong> O Art-Net suporta mal as perdas de pacotes e a latência variável de uma rede sem fios — as luzes «&nbsp;engasgam&nbsp;». O nó com cabo, o Wi-Fi para o tablet de controlo.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- B. NODE + MACOS -->
+            <article class="proc" id="node-macos" data-iface="node" data-os="macos">
+              <div class="proc-head">
+                <h3>Nó Art-Net</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar os dois cabos</h4>
+                      <p>Um cabo <strong>RJ45 diretamente entre o Mac e o nó</strong>, e a alimentação (USB-B ou USB-C consoante o modelo). Sem porta Ethernet, use um adaptador USB-C → Ethernet&nbsp;: aparece como uma placa de rede de pleno direito.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Configurar o nó no seu utilitário</h4>
+                      <p>Para os nós ElectroConcept, com o aparelho ligado e alimentado, abra <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> (Safari ou Chrome) e introduza&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
+                      </dl>
+                      <p>Valide e depois <strong>desligue e volte a ligar o USB</strong>. 2.0.0.15 é o endereço que o MyStrow procura por predefinição. Noutro nó, os nomes mudam mas os valores não&nbsp;: Art-Net, OUT, universo 0, 2.0.0.15 / 255.0.0.0.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="../dmx-parameters-dmxtools.webp" alt="Separador DMX Parameters do DMX TOOLS ElectroConcept" width="401" height="538" loading="lazy">
+                          <figcaption>Separador <strong>DMX Parameters</strong>.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="../network-parameters-dmxtools.webp" alt="Separador Network Parameters do DMX TOOLS ElectroConcept" width="384" height="379" loading="lazy">
+                          <figcaption>Separador <strong>Network Parameters</strong>.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Fixar o IP do Mac à mão</h4>
+                      <p><span class="path">Definições do Sistema ▸ Rede</span> ▸ selecione a interface <strong>Ethernet</strong> (ou o adaptador USB-C) ▸ <strong>Detalhes…</strong> ▸ separador <strong>TCP/IP</strong> ▸ <em>Configurar IPv4</em>&nbsp;: <strong>Manualmente</strong>.</p>
+                      <dl class="kv">
+                        <dt>Endereço IP</dt><dd>2.0.0.1</dd>
+                        <dt>Máscara de sub-rede</dt><dd>255.0.0.0</dd>
+                        <dt>Router</dt><dd>(deixar vazio)</dd>
+                      </dl>
+                      <p>Depois <strong>OK</strong> ▸ <strong>Aplicar</strong>. No MyStrow, o botão <strong>📂 Abrir as ligações de rede</strong> do assistente leva diretamente a esse painel.</p>
+                      <div class="note warn"><strong>No Mac não há configuração automática.</strong> O botão «&nbsp;Configurar automaticamente&nbsp;» do assistente assenta em comandos do Windows&nbsp;: no macOS, o que vale é a introdução manual acima.</div>
+                      <div class="note">O Mac pode continuar ligado ao Wi-Fi para a Internet&nbsp;: o tráfego para 2.0.0.15 sairá pela Ethernet, que leva o plano de endereçamento 2.x.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Autorizar o MyStrow na rede local</h4>
+                      <p><span class="path">Definições do Sistema ▸ Privacidade e segurança ▸ Rede local</span> ▸ ative <strong>MyStrow</strong>. O macOS faz a pergunta no primeiro arranque&nbsp;; se foi recusada, é aqui que se corrige.</p>
+                      <div class="note warn"><strong>A armadilha n.º 1 no Mac.</strong> Sem essa autorização, o macOS bloqueia o Art-Net <strong>em silêncio</strong>&nbsp;: nenhum erro, nenhuma mensagem — o nó simplesmente nunca responde e a saída fica muda. Depois de ativar, saia e volte a lançar o MyStrow.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                      <h4>Ligar e depois encaminhar as saídas</h4>
+                      <p><span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🌐 Saída Node</strong>&nbsp;: estado verde, depois <strong>🔌 Conectar</strong>. Configure em seguida a tabela <strong>Roteamento das saídas</strong> (ver <a href="#univers">Universos &amp; roteamento</a>).</p>
+                      <div class="note ok"><strong>Verificação rápida&nbsp;:</strong> <span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🌐 Teste RJ45 (rede / nó Art-Net)</span>.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>Wi-Fi&nbsp;: a evitar</strong> para o próprio nó — perdas de pacotes e latência variável fazem as luzes «&nbsp;engasgar&nbsp;». Cabo para o DMX, Wi-Fi para o tablet de controlo.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- C. PRO + WINDOWS -->
+            <article class="proc" id="pro-windows" data-iface="pro" data-os="windows">
+              <div class="proc-head">
+                <h3>Interface USB «&nbsp;Pro&nbsp;» (ENTTEC DMX USB Pro, Eurolite MK2)</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar antes de abrir a janela</h4>
+                      <p>Numa <strong>porta USB direta do PC</strong>, de preferência atrás numa torre&nbsp;; evite os hubs sem alimentação. Ligue antes de abrir a janela de saída DMX, para que a porta já esteja listada.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Verificar o driver</h4>
+                      <p>Estes aparelhos usam um chip FTDI&nbsp;: o Windows instala o driver sozinho na grande maioria dos casos. Para verificar&nbsp;: <span class="path">Gestor de dispositivos ▸ Portas (COM e LPT)</span> — deve ver aí uma linha do tipo <code>USB Serial Port (COM4)</code>.</p>
+                      <p>Não aparece nada, ou um ponto de exclamação amarelo&nbsp;? Instale o driver <strong>VCP FTDI</strong> (ftdichip.com) ou o do fabricante, e volte a ligar o aparelho.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Selecionar e ligar</h4>
+                      <p><span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🔌 Saída DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC DMX USB Pro&nbsp;» ou «&nbsp;Eurolite USB-DMX512 PRO (MK2)&nbsp;».</li>
+                        <li><strong>Porta COM</strong>&nbsp;: a da interface — os chips FTDI estão marcados com uma <strong>★</strong>. O botão <strong>↺</strong> relança a deteção.</li>
+                        <li><strong>🔌 Conectar</strong>&nbsp;: é este botão, e só ele, que comuta realmente a saída do programa. Abrir o separador não chega.</li>
+                      </ul>
+                      <div class="note">Nada a escolher do lado do protocolo&nbsp;: o MyStrow fala com estes aparelhos num protocolo por pacotes, e é o microcontrolador interno que constrói as tramas DMX. É isso que os torna tão estáveis.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Verificar</h4>
+                      <p>O <strong>LED do aparelho passa a verde</strong> quando a saída está ativa. Para ir mais longe&nbsp;: <span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🔌 Teste USB (interface DMX)</span> — o assistente propõe <strong>▶ Lançar o diagnóstico</strong> (porta, driver, emissão real) e <strong>💡 Teste 100&nbsp;%</strong>, que envia máximo em todos os canais.</p>
+                      <div class="note warn"><strong>Um só programa de cada vez sobre o aparelho.</strong> Um utilitário do fabricante ou outro software de luz a segurar a porta torna a saída errática (piscas, «&nbsp;port not open&nbsp;»). Feche tudo o resto antes de ligar.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- D. PRO + MACOS -->
+            <article class="proc" id="pro-macos" data-iface="pro" data-os="macos">
+              <div class="proc-head">
+                <h3>Interface USB «&nbsp;Pro&nbsp;» (ENTTEC DMX USB Pro, Eurolite MK2)</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="note ok" style="margin:0 0 22px;"><strong>É a solução mais fiável no Mac.</strong> O aparelho gera ele próprio o sinal DMX&nbsp;: a saída não depende nem da carga da máquina, nem dos drivers instalados.</div>
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar antes de abrir a janela</h4>
+                      <p>Numa porta USB direta (ou num adaptador USB-C de boa qualidade). Ligue antes de abrir a janela de saída DMX.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Não instale nenhum driver</h4>
+                      <p>O macOS traz o seu próprio driver FTDI. O aparelho aparece sozinho na forma <code>/dev/cu.usbserial-XXXXXXXX</code>.</p>
+                      <div class="note warn"><strong>Não acrescente o driver VCP da FTDI por cima&nbsp;:</strong> duplica as portas e torna a seleção ambígua. Se já o instalou, desinstale-o antes de começar a diagnosticar.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Selecionar e ligar</h4>
+                      <p><span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🔌 Saída DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC DMX USB Pro&nbsp;» ou «&nbsp;Eurolite USB-DMX512 PRO (MK2)&nbsp;».</li>
+                        <li><strong>Porta COM</strong>&nbsp;: a entrada <code>/dev/cu.usbserial-…</code> (marcada <strong>★</strong> para os chips FTDI). O botão <strong>↺</strong> relança a deteção. O rótulo «&nbsp;Porta COM&nbsp;» vem do Windows&nbsp;; no Mac designa efetivamente as portas chamadas <code>cu.*</code>.</li>
+                        <li><strong>🔌 Conectar</strong> — é este botão que comuta realmente a saída.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Verificar</h4>
+                      <p>O <strong>LED do aparelho passa a verde</strong>. Para um teste completo&nbsp;: <span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🔌 Teste USB (interface DMX)</span> ▸ <strong>▶ Lançar o diagnóstico</strong>, depois <strong>💡 Teste 100&nbsp;%</strong>.</p>
+                      <div class="note warn"><strong>Um só programa de cada vez sobre o aparelho</strong>&nbsp;: feche qualquer outro software de luz ou utilitário do fabricante antes de ligar.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- E. OPEN + WINDOWS -->
+            <article class="proc" id="open-windows" data-iface="open" data-os="windows">
+              <div class="proc-head">
+                <h3>Adaptador USB «&nbsp;open&nbsp;» (Open DMX, OPTO OPEN DMX, UltraDMX Micro, clones FTDI)</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar e instalar o driver FTDI</h4>
+                      <p>Porta USB direta, sem hub não alimentado. O Windows costuma instalar o driver sozinho&nbsp;; caso contrário, instale o pacote <strong>FTDI (VCP + D2XX)</strong> a partir de ftdichip.com, e volte a ligar.</p>
+                      <div class="note">Nestes aparelhos passivos, o MyStrow ataca o chip FTDI <strong>em direto (D2XX)</strong>, tal como o QLC+&nbsp;: é isso que ajusta o Latency Timer para 1&nbsp;ms e produz um sinal de sincronização limpo. Através da simples porta série, o timing ficaria partido e os projetores ignorariam todas as tramas — sem qualquer erro apresentado.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Fechar tudo o que segure o chip</h4>
+                      <p>Utilitário do fabricante, outro software de luz, uma segunda instância do MyStrow&nbsp;: só um programa pode abrir o aparelho. Dois, e a saída torna-se errática.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Selecionar e ligar</h4>
+                      <p><span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🔌 Saída DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC Open DMX USB&nbsp;», «&nbsp;OPTO OPEN DMX (ElectroConcept)&nbsp;», «&nbsp;DMXKing UltraDMX Micro&nbsp;», ou «&nbsp;Outra interface USB-DMX&nbsp;» para todos os clones FTDI.</li>
+                        <li><strong>Porta COM</strong>&nbsp;: os chips FTDI estão marcados com uma <strong>★</strong>. Botão <strong>↺</strong> para voltar a procurar.</li>
+                        <li><strong>🔌 Conectar</strong>.</li>
+                      </ul>
+                      <div class="note">Depois de ligado, a porta COM pode <strong>desaparecer da lista</strong>&nbsp;: é normal, o chip fica reservado em acesso direto. Reaparece quando desligar.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Aparelho mudo apesar de estar tudo verde&nbsp;? O teste RTS/DTR</h4>
+                      <p><span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🔌 Teste USB (interface DMX)</span> ▸ <strong>🔌 Teste RTS/DTR</strong>.</p>
+                      <p>Nestes adaptadores, o pino que <em>autoriza</em> a emissão RS485 está por vezes ligado às linhas de controlo RTS ou DTR — e estas são ativadas por predefinição na abertura da porta, o que deixa a saída totalmente muda, sem erro. O teste percorre as quatro combinações, pergunta-lhe qual delas acende os projetores, e a definição fica memorizada.</p>
+                      <div class="note ok">Antes disso, faça a ronda clássica&nbsp;: <strong>💡 Teste 100&nbsp;%</strong> para enviar máximo, com o master e os faders em cima, e um terminador de 120&nbsp;Ω no fim da linha.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- F. OPEN + MACOS -->
+            <article class="proc" id="open-macos" data-iface="open" data-os="macos">
+              <div class="proc-head">
+                <h3>Adaptador USB «&nbsp;open&nbsp;» (Open DMX, OPTO OPEN DMX, UltraDMX Micro, clones FTDI)</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar, não instalar nada</h4>
+                      <p>Porta USB direta (ou adaptador USB-C de qualidade). O macOS traz o seu driver FTDI&nbsp;: o aparelho aparece na forma <code>/dev/cu.usbserial-XXXXXXXX</code>.</p>
+                      <div class="note warn"><strong>Não instale o driver VCP da FTDI por cima do da Apple</strong>&nbsp;: cria portas duplicadas e baralha a seleção.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>O que o MyStrow faz no Mac</h4>
+                      <p>No macOS, o acesso direto ao chip (D2XX) não está disponível&nbsp;: o MyStrow passa pela porta série e gera o sinal de sincronização DMX comutando o débito. É o método que funciona realmente no Mac — o comando de break padrão tem êxito ali sem erro mas não produz qualquer sinal elétrico válido, o que dá um aparelho perfeitamente mudo e um programa perfeitamente verde.</p>
+                      <div class="note">Nada a regular&nbsp;: é automático. Retenha apenas que neste tipo de aparelho, <strong>a cadência depende da máquina</strong> — em espetáculo, uma interface Pro continua a ser mais segura.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Selecionar e ligar</h4>
+                      <p><span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🔌 Saída DMX USB</strong>&nbsp;:</p>
+                      <ul>
+                        <li><strong>Interface</strong>&nbsp;: «&nbsp;ENTTEC Open DMX USB&nbsp;», «&nbsp;OPTO OPEN DMX (ElectroConcept)&nbsp;», «&nbsp;DMXKing UltraDMX Micro&nbsp;» ou «&nbsp;Outra interface USB-DMX&nbsp;».</li>
+                        <li><strong>Porta COM</strong>&nbsp;: a entrada <code>/dev/cu.usbserial-…</code>, marcada <strong>★</strong>. Botão <strong>↺</strong> para voltar a procurar.</li>
+                        <li><strong>🔌 Conectar</strong>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Aparelho mudo apesar de estar tudo verde&nbsp;? O teste RTS/DTR</h4>
+                      <p><span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🔌 Teste USB (interface DMX)</span> ▸ <strong>🔌 Teste RTS/DTR</strong>.</p>
+                      <p>O pino que autoriza a emissão RS485 está por vezes ligado às linhas RTS ou DTR, ativadas por predefinição na abertura da porta&nbsp;: saída muda, nenhum erro. O teste percorre as quatro combinações e memoriza a que acende os seus projetores.</p>
+                      <div class="note ok">Antes disso&nbsp;: <strong>💡 Teste 100&nbsp;%</strong>, com o master e os faders em cima, terminador de 120&nbsp;Ω no fim da linha.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /#procs -->
+
+          <details class="helper" style="margin-top:26px;">
+            <summary>As bases, se as palavras «&nbsp;canal&nbsp;», «&nbsp;universo&nbsp;» ou «&nbsp;Art-Net&nbsp;» não lhe dizem nada</summary>
+            <div class="helper-body">
+              <ul>
+                <li><strong>Canal</strong> — um valor de 0 a 255. Um PAR LED simples consome 5 (dimmer, R, V, A, strobe), uma cabeça móvel 16 ou mais.</li>
+                <li><strong>Universo</strong> — um pacote de <strong>512 canais</strong>, ou seja uma linha DMX física. Rig maior = segundo universo = segunda saída.</li>
+                <li><strong>Endereço</strong> — o canal de início definido <em>no projetor</em>. Tem de corresponder exatamente ao patch do MyStrow.</li>
+                <li><strong>Art-Net</strong> — DMX transportado pela rede, em UDP pela porta <code>6454</code>. É o que o MyStrow envia a um nó.</li>
+              </ul>
+              <p style="margin-top:10px;">O MyStrow reemite o universo inteiro várias dezenas de vezes por segundo&nbsp;: é o funcionamento normal do DMX. Um projetor que «&nbsp;guarda&nbsp;» uma cor quando está tudo desligado nunca é portanto um projetor com defeito — é a saída que deixou de lhe falar.</p>
+            </div>
+          </details>
+        </section>
+
+        <!-- 2. UNIVERS -->
+        <section id="univers" class="doc-section">
+          <div class="section-tag">Várias saídas</div>
+          <h2><span class="h2-num">02</span> Universos e roteamento das saídas</h2>
+          <div class="prose">
+            <p>Um universo = 512 canais = uma linha XLR. Para além disso — tipicamente ao acrescentar cabeças móveis — é preciso repartir os projetores por vários universos, ou seja um nó com várias saídas.</p>
+            <p>Com o nó ligado, a janela de saída DMX mostra a tabela <strong>Roteamento das saídas</strong>&nbsp;: para cada ficha física do aparelho (DMX&nbsp;1 a DMX&nbsp;4), escolhe <strong>que universo</strong> é enviado para lá, ou <strong>Desativado</strong>.</p>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr><th>Caso</th><th>Definição</th><th>Resultado</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Instalação padrão</td>
+                  <td>DMX&nbsp;1 ← Universo&nbsp;1, DMX&nbsp;2 ← Universo&nbsp;2, etc.</td>
+                  <td>Cada saída leva o seu próprio universo.</td>
+                </tr>
+                <tr>
+                  <td>Duplicar uma linha (espelho)</td>
+                  <td>Duas saídas no <strong>mesmo</strong> universo</td>
+                  <td>O mesmo sinal sai por duas fichas&nbsp;: dois lados de palco sem splitter.</td>
+                </tr>
+                <tr>
+                  <td>Isolar uma linha durante os acertos</td>
+                  <td>A saída em <strong>Desativado</strong></td>
+                  <td>A ficha deixa de emitir, as outras continuam.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="shot" style="max-width:478px;">
+            <img src="../aiguillage-sorties-node-mystrow.webp" alt="Tabela de roteamento das saídas DMX de um nó no MyStrow" width="478" height="210" loading="lazy">
+            <figcaption>Cada ficha física do nó recebe o universo à sua escolha, ou nada de todo.</figcaption>
+          </figure>
+
+          <div class="callout">
+            <p><strong>O patch é que manda.</strong> O roteamento não muda o endereçamento&nbsp;: é no patch que cada projetor recebe o seu universo e o seu endereço de início. Dois aparelhos cujas gamas se sobrepõem reagirão em conjunto aconteça o que acontecer — a função <strong>⚡ Endereçamento automático</strong> do patch resolve isso com um clique.</p>
+          </div>
+        </section>
+
+        <!-- 3. VERIFIER -->
+        <section id="verifier" class="doc-section">
+          <div class="section-tag">Controlo</div>
+          <h2><span class="h2-num">03</span> Verificar que o DMX sai mesmo</h2>
+          <div class="prose">
+            <p>Um estado verde quer dizer «&nbsp;o aparelho está aberto&nbsp;», e não «&nbsp;os seus projetores recebem alguma coisa&nbsp;». O único teste que conta é físico, e resume-se a quatro pontos.</p>
+          </div>
+          <ul class="check-list">
+            <li><span>Suba o <strong>master</strong> e o fader do grupo em causa&nbsp;: sem eles, tudo sai a zero.</span></li>
+            <li><span>Envie <strong>branco máximo</strong> para um único projetor, o mais próximo da interface.</span></li>
+            <li><span><strong>Deixe o teste a correr vários segundos.</strong> Um projetor precisa de receber várias tramas antes de acender&nbsp;; um impulso de meio segundo passa despercebido.</span></li>
+            <li><span>Olhe para o <strong>LED de receção</strong> do projetor ou do aparelho&nbsp;: pisca assim que chega um sinal DMX válido, mesmo que o endereçamento esteja errado.</span></li>
+          </ul>
+
+          <div class="callout">
+            <p><strong>O LED pisca mas não acende nada&nbsp;:</strong> o sinal chega, o problema está a jusante — endereço do projetor, universo, ou modo DMX diferente do declarado no patch. <strong>Não pisca&nbsp;:</strong> o problema está a montante — interface, cabo, ou saída não ligada no programa.</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="cta-block" style="padding:16px 0 8px;">
+        <h2>O material está pronto&nbsp;?</h2>
+        <p>Passe ao que se segue&nbsp;: fazer o patch dos seus projetores e depois programar as suas primeiras sequências.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <a href="download.html" class="btn-primary">Transferir o MyStrow ↓</a>
+          <a href="index.html#pricing" class="btn-outline">Ver as interfaces compatíveis →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIES -->
+  <section class="section">
+    <div class="wrap-wide">
+      <div class="section-tag">Para ir mais longe</div>
+      <h2>Artigos relacionados</h2>
+      <div class="related-grid">
+        <a href="importer-fixture-dmx-mystrow.html" class="related-card">
+          <div class="rc-tag">Guia prático</div>
+          <h3>Importar um fixture DMX</h3>
+          <p>Mais de 5.000 perfis integrados, e a importação XML (GrandMA, QLC+) se o seu faltar.</p>
+        </a>
+        <a href="patcher-programmer-lyres-mystrow.html" class="related-card">
+          <div class="rc-tag">Cabeças móveis</div>
+          <h3>Fazer patch e programar cabeças móveis</h3>
+          <p>Endereçamento, pan/tilt, posições memorizadas&nbsp;: o passo lógico depois de ligado o DMX.</p>
+        </a>
+        <a href="akai-apc-mini-controller.html" class="related-card">
+          <div class="rc-tag">Material</div>
+          <h3>Controlador AKAI APC mini</h3>
+          <p>Comande as suas luzes com os dedos através da grelha de pads e dos faders do APC mini.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="download.html">Transferir</a>
+      <a href="index.html#pricing">Preços</a>
+      <a href="index.html#pricing">Loja</a>
+      <a href="blog.html">Tutoriais</a>
+      <a href="privacy.html">Privacidade</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="O seu endereço de e-mail" required>
+        <button type="submit">Subscrever</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;flex-wrap:wrap;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Todos os direitos reservados</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'pt' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+
+/* ── Configurateur : modèle du boîtier × système → procédure ────────────
+   Les 6 procédures sont dans le HTML (indexables, et lisibles sans JS) ;
+   ce script se contente de n'en afficher qu'une. Le choix est mémorisé et
+   reflété dans l'URL : #node-macos, #pro-windows… donnent un lien direct.
+   Plusieurs modèles pointent vers la même famille (iface) : on retient en
+   plus le modèle choisi, pour cocher la bonne vignette et la rappeler en
+   tête de la procédure. */
+(function () {
+  var procs = [].slice.call(document.querySelectorAll('.proc'));
+  if (!procs.length) return;
+
+  var empty  = document.getElementById('proc-empty');
+  var ifaceBtns = [].slice.call(document.querySelectorAll('.pick[data-iface]'));
+  var osBtns    = [].slice.call(document.querySelectorAll('.pick[data-os]'));
+  var stepOs = document.getElementById('wiz-os');
+  var IFACES = ['node', 'pro', 'open'];
+  var OSES   = ['windows', 'macos'];
+  var STORE  = 'mystrow-dmx-setup';
+
+  var iface = '', os = '', model = '';
+
+  function markOf(id) {
+    for (var i = 0; i < ifaceBtns.length; i++) {
+      if (ifaceBtns[i].dataset.model === id) return ifaceBtns[i].dataset.mark || '';
+    }
+    return '';
+  }
+
+  /* Rappelle en tête de procédure le boîtier annoncé par l'utilisateur. */
+  function stampModel(proc) {
+    var head = proc.querySelector('.proc-head');
+    if (!head) return;
+    var chip = head.querySelector('.proc-model');
+    var mark = markOf(model);
+    if (!mark) { if (chip) chip.remove(); return; }
+    if (!chip) {
+      chip = document.createElement('span');
+      chip.className = 'proc-model';
+      var reset = head.querySelector('.proc-reset');
+      head.insertBefore(chip, reset || null);
+    }
+    chip.innerHTML = 'Votre boîtier : <b></b>';
+    chip.querySelector('b').textContent = mark;
+  }
+
+  function paint(scroll) {
+    ifaceBtns.forEach(function (b) {
+      b.setAttribute('aria-checked', (model && b.dataset.model === model) ? 'true' : 'false');
+    });
+    osBtns.forEach(function (b) {
+      b.setAttribute('aria-checked', b.dataset.os === os ? 'true' : 'false');
+    });
+    stepOs.classList.toggle('is-locked', !iface);
+
+    var target = (iface && os) ? iface + '-' + os : null;
+    procs.forEach(function (p) { p.hidden = (p.id !== target); });
+    empty.hidden = !!target;
+
+    if (target) {
+      var el = document.getElementById(target);
+      if (el) stampModel(el);
+      try {
+        localStorage.setItem(STORE, target + (model ? '|' + model : ''));
+        if (history.replaceState) history.replaceState(null, '', '#' + target);
+        else location.hash = target;
+      } catch (e) {}
+      if (scroll && el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function apply(key, scroll) {
+    if (!key) return false;
+    var bits = key.split('|');
+    var parts = bits[0].split('-');
+    if (IFACES.indexOf(parts[0]) < 0 || OSES.indexOf(parts[1]) < 0) return false;
+    iface = parts[0]; os = parts[1];
+    model = (bits[1] && markOf(bits[1])) ? bits[1] : '';
+    paint(scroll);
+    return true;
+  }
+
+  ifaceBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      iface = b.dataset.iface;
+      model = b.dataset.model || '';
+      paint(!!os);
+    });
+  });
+  osBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!iface) return;
+      os = b.dataset.os;
+      paint(true);
+    });
+  });
+  [].slice.call(document.querySelectorAll('.proc-reset')).forEach(function (b) {
+    b.addEventListener('click', function () {
+      iface = ''; os = ''; model = '';
+      try { localStorage.removeItem(STORE); } catch (e) {}
+      paint(false);
+      document.getElementById('config').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  /* Devine le système, sans rien décider à la place de l'utilisateur :
+     la carte macOS/Windows est simplement pré-cochée. */
+  var guess = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent) ? 'macos' : 'windows';
+
+  var fromHash = location.hash.replace('#', '');
+  var stored = '';
+  try { stored = localStorage.getItem(STORE) || ''; } catch (e) {}
+
+  if (!apply(fromHash, false) && !apply(stored, false)) {
+    os = guess;
+    paint(false);
+  }
+
+  window.addEventListener('hashchange', function () {
+    apply(location.hash.replace('#', ''), true);
+  });
+})();
+
+/* Sommaire : surligne la section en cours de lecture */
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.toc a'));
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var visible = {};
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
+    var current = null;
+    Object.keys(byId).forEach(function (id) { if (visible[id] && !current) current = id; });
+    links.forEach(function (a) { a.classList.remove('is-active'); });
+    if (current) byId[current].classList.add('is-active');
+  }, { rootMargin: '-96px 0px -65% 0px' });
+  Object.keys(byId).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) obs.observe(el);
+  });
+})();
+</script>
+<script src="../nav.js" defer></script>
+<script src="../mobile-nav.js"></script>
+</body>
+</html>

@@ -133,10 +133,69 @@
     <lastmod>2026-04-09</lastmod>
   </url>
 
+  <!-- Pages FR uniquement (pas de version traduite) -->
+  <url>
+    <loc>https://mystrow.fr/tarifs</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tarifs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tarifs"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-07-27</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/boutique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/boutique"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/boutique"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/shop</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/newsletter</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/newsletter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/newsletter"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-08-05</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/cgv</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/cgv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/cgv"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-07-25</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mystrow.fr/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-07-25</lastmod>
+  </url>
+
   <!-- Blog & tutoriels (FR) -->
   <url>
     <loc>https://mystrow.fr/blog</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/blog"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -146,6 +205,10 @@
   <url>
     <loc>https://mystrow.fr/synchroniser-mystrow-logiciel-dj</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -155,6 +218,10 @@
   <url>
     <loc>https://mystrow.fr/sushi-z1-compatible-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/sushi-z1-compatible-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -164,6 +231,10 @@
   <url>
     <loc>https://mystrow.fr/patcher-programmer-lyres-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/patcher-programmer-lyres-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -173,6 +244,10 @@
   <url>
     <loc>https://mystrow.fr/creer-sequences-lumiere-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/creer-sequences-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -182,6 +257,10 @@
   <url>
     <loc>https://mystrow.fr/importer-fixture-dmx-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/importer-fixture-dmx-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -191,6 +270,10 @@
   <url>
     <loc>https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -200,6 +283,10 @@
   <url>
     <loc>https://mystrow.fr/tutoriel-debuter-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/tutoriel-debuter-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -209,6 +296,10 @@
   <url>
     <loc>https://mystrow.fr/automatisation-lumieres-dmx-mystrow</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/automatisation-lumieres-dmx-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -739,4 +830,437 @@
     <lastmod>2026-04-09</lastmod>
   </url>
 
+  <!-- Blog & tutoriels traduits -->
+  <url>
+    <loc>https://mystrow.fr/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/blog</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/tutoriel-debuter-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/tutoriel-debuter-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/tutoriel-debuter-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/tutoriel-debuter-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/tutoriel-debuter-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/tutoriel-debuter-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/automatisation-lumieres-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/automatisation-lumieres-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/automatisation-lumieres-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/automatisation-lumieres-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/automatisation-lumieres-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/creer-sequences-lumiere-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/creer-sequences-lumiere-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/creer-sequences-lumiere-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/creer-sequences-lumiere-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/creer-sequences-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-sequences-lumiere-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/importer-fixture-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/importer-fixture-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/importer-fixture-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/importer-fixture-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/importer-fixture-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/importer-fixture-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-30</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/patcher-programmer-lyres-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/patcher-programmer-lyres-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/patcher-programmer-lyres-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/patcher-programmer-lyres-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/patcher-programmer-lyres-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/patcher-programmer-lyres-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-05-22</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-07-13</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-01</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/sushi-z1-compatible-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/sushi-z1-compatible-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/sushi-z1-compatible-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-15</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/sushi-z1-compatible-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/sushi-z1-compatible-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/sushi-z1-compatible-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-15</lastmod>
+  </url>
 </urlset>

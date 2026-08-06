@@ -42,41 +42,77 @@
   <!-- JSON-LD BlogPosting -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "DMX-Licht mit MyStrow automatisieren — Licht-Aufnahme",
-    "description": "Vollständiger Leitfaden zur Automatisierung Ihres DMX-Lichts mit der Funktion Licht-Aufnahme von MyStrow. Live-Aufnahme, Bearbeitung auf der Timeline, Musiksynchronisation.",
-    "image": "https://mystrow.fr/og-image.webp",
-    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
-    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
-    "datePublished": "2026-04-21",
-    "dateModified": "2026-04-21",
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow" },
-    "url": "https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow",
-    "keywords": ["DMX-Licht automatisieren", "Licht-Aufnahme", "MyStrow", "DMX-Sequenzen", "Licht-Timeline", "Lichtshow aufnehmen"],
-    "video": {
-      "@type": "VideoObject",
-      "name": "DMX-LICHT AUTOMATISIEREN — Licht-Aufnahme mit MYSTROW",
-      "description": "Vollständiger Leitfaden zur Automatisierung Ihres DMX-Lichts mit der Funktion Licht-Aufnahme von MyStrow. Live-Aufnahme, Bearbeitung auf der Timeline, Musiksynchronisation.",
-      "embedUrl": "https://www.youtube.com/embed/2ko7SrMDM3s",
-      "url": "https://youtu.be/2ko7SrMDM3s",
-      "thumbnailUrl": "https://img.youtube.com/vi/2ko7SrMDM3s/maxresdefault.jpg",
-      "uploadDate": "2026-04-21T00:00:00+02:00"
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DMX-Licht mit MyStrow automatisieren — Licht-Aufnahme",
+  "description": "Vollständiger Leitfaden zur Automatisierung Ihres DMX-Lichts mit der Funktion Licht-Aufnahme von MyStrow. Live-Aufnahme, Bearbeitung auf der Timeline, Musiksynchronisation.",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
     }
+  },
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"
+  },
+  "url": "https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow",
+  "keywords": [
+    "DMX-Licht automatisieren",
+    "Licht-Aufnahme MyStrow",
+    "Lichtsequenzen aufnehmen",
+    "Licht automatisch programmieren",
+    "synchronisierte Licht-Timeline",
+    "DMX-Sequenzer"
+  ],
+  "video": {
+    "@type": "VideoObject",
+    "name": "DMX-LICHT AUTOMATISIEREN — Licht-Aufnahme mit MYSTROW",
+    "description": "Vollständiger Leitfaden zur Automatisierung Ihres DMX-Lichts mit der Funktion Licht-Aufnahme von MyStrow. Live-Aufnahme, Bearbeitung auf der Timeline, Musiksynchronisation.",
+    "embedUrl": "https://www.youtube.com/embed/2ko7SrMDM3s",
+    "url": "https://youtu.be/2ko7SrMDM3s",
+    "thumbnailUrl": "https://img.youtube.com/vi/2ko7SrMDM3s/maxresdefault.jpg",
+    "uploadDate": "2026-04-21T00:00:00+02:00"
   }
+}
   </script>
 
   <!-- BreadcrumbList -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://mystrow.fr/de/" },
-      { "@type": "ListItem", "position": 2, "name": "Tutorials", "item": "https://mystrow.fr/de/tutoriel-debuter-mystrow" },
-      { "@type": "ListItem", "position": 3, "name": "Licht automatisieren — Licht-Aufnahme", "item": "https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow" }
-    ]
-  }
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://mystrow.fr/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://mystrow.fr/de/tutoriel-debuter-mystrow"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Licht automatisieren — Licht-Aufnahme",
+      "item": "https://mystrow.fr/de/automatisation-lumieres-dmx-mystrow"
+    }
+  ]
+}
   </script>
 
   <style>
@@ -129,6 +165,11 @@
     .breadcrumb span { color: var(--accent); }
     .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); margin: 40px 0; }
     .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 14px; }
+    .video-lang-note { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 14px 16px; margin: -22px 0 40px; }
+    .video-lang-note svg { width: 24px; height: 16px; border-radius: 2px; display: block; flex-shrink: 0; margin-top: 3px; }
+    .video-lang-note p { color: var(--muted); font-size: 13.5px; line-height: 1.65; margin: 0; }
+    .video-lang-note strong { color: var(--text); font-weight: 600; }
+    .video-lang-note em { color: var(--text); font-style: normal; }
     .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
     .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
     .feat-icon { font-size: 26px; margin-bottom: 10px; }
@@ -298,12 +339,16 @@
       <!-- VIDEO EMBED -->
       <div id="video" class="video-embed">
         <iframe
-          src="https://www.youtube.com/embed/2ko7SrMDM3s"
+          src="https://www.youtube.com/embed/2ko7SrMDM3s?cc_load_policy=1&amp;cc_lang_pref=de&amp;hl=de"
           title="DMX-LICHT AUTOMATISIEREN — Licht-Aufnahme mit MYSTROW"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           loading="lazy">
         </iframe>
+      </div>
+      <div class="video-lang-note">
+        <span aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/><rect x="20" width="10" height="20" fill="#ce1126"/></svg></span>
+        <p><strong>Hinweis: Dieses Video ist auf Französisch vertont.</strong> Kein Problem — YouTube stellt automatisch <strong>deutsche Untertitel</strong> und eine <strong>deutsche Synchronspur</strong> bereit. Die Untertitel sind vorab aktiviert; die gesprochene Sprache lässt sich in den Player-Einstellungen umschalten (⚙️ → <em>Tonspur</em>).</p>
       </div>
 
       <div class="badge-row">

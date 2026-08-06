@@ -43,11 +43,48 @@
 
   <!-- JSON-LD : SoftwareApplication -->
   <script type="application/ld+json">
-  { "@type": "Offer", "name": "Monthly",  "price": "23.99",  "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Annual",   "price": "143.86", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Lebenslang", "price": "287.99", "priceCurrency": "EUR" }
-    ]
-  }
+  {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MyStrow",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "Windows 10, Windows 11, macOS 11+",
+  "description": "Professionelle DMX-Lichtsteuerungssoftware. Steuere deine Scheinwerfer vom Computer aus, synchronisiere per KI mit dem Audio und baue Sequenzen auf einer Timeline.",
+  "url": "https://mystrow.fr/de/",
+  "downloadUrl": "https://mystrow.fr/de/download",
+  "screenshot": "https://mystrow.fr/og-image.webp",
+  "softwareVersion": "3.0",
+  "featureList": [
+    "Professionelle DMX-Lichtsteuerung",
+    "AKAI APC mini Controller — 8×8-LED-Raster",
+    "6 Scheinwerfergruppen (A bis F)",
+    "Klangreaktive Licht-KI (AudioColorAI)",
+    "Timeline-Editor mit Keyframes",
+    "Integrierter Audio- und Videoplayer",
+    "Interaktiver visueller Bühnenplan",
+    "Shows im .tui-Format speichern"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Monatlich",
+      "price": "23.99",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Jährlich",
+      "price": "143.86",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Lifetime",
+      "price": "287.99",
+      "priceCurrency": "EUR"
+    }
+  ]
+}
   </script>
 
   <!-- JSON-LD : FAQPage -->

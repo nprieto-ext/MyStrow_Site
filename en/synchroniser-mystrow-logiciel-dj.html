@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Syncing MyStrow with Your DJ Software &amp; Your Music (PC &amp; Mac) | MyStrow</title>
+  <meta name="description" content="The complete guide to syncing MyStrow with your music: audio capture or MIDI Clock. Traktor, rekordbox, Serato, VirtualDJ — PC (Windows) and Mac versions on the same page.">
+  <meta name="keywords" content="sync MyStrow music, MIDI Clock DJ lighting, audio loopback lighting, Traktor MIDI clock, rekordbox lighting, Serato lighting, DDJ-400 lighting, BlackHole Mac, loopMIDI, IAC Driver">
+  <link rel="canonical" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-mystrow-logiciel-dj">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-mystrow-logiciel-dj">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-mystrow-logiciel-dj">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj">
+<!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj">
+  <meta property="og:title" content="Syncing MyStrow with your DJ software & your music (PC & Mac)">
+  <meta property="og:description" content="Audio capture or MIDI Clock: make your lights follow the beat of your music. Traktor, rekordbox, Serato, VirtualDJ — PC and Mac.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-06-01">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Syncing MyStrow with your DJ software & your music (PC & Mac)">
+  <meta name="twitter:description" content="Audio capture or MIDI Clock: make your lights follow the beat of your music. Traktor, rekordbox, Serato, VirtualDJ.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Syncing MyStrow with Your DJ Software & Your Music (PC & Mac)",
+  "description": "The complete guide to syncing MyStrow with your music: audio capture or MIDI Clock. Traktor, rekordbox, Serato, VirtualDJ — PC (Windows) and Mac versions.",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"
+  },
+  "url": "https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj",
+  "keywords": [
+    "sync MyStrow music",
+    "MIDI Clock DJ lighting",
+    "audio loopback lighting",
+    "Traktor MIDI clock",
+    "rekordbox lighting",
+    "Serato lighting",
+    "DDJ-400 lighting",
+    "BlackHole Mac",
+    "loopMIDI",
+    "IAC Driver"
+  ],
+  "video": {
+    "@type": "VideoObject",
+    "name": "Syncing music and DMX lights with MyStrow — the complete guide",
+    "description": "How to make your DMX lights react to the beat of your music with MyStrow: audio capture and MIDI Clock, with VirtualDJ, rekordbox, Spotify and Traktor.",
+    "embedUrl": "https://www.youtube.com/embed/QG2NN5wVLWU",
+    "url": "https://youtu.be/QG2NN5wVLWU",
+    "thumbnailUrl": "https://img.youtube.com/vi/QG2NN5wVLWU/maxresdefault.jpg",
+    "uploadDate": "2026-06-01T00:00:00+02:00"
+  }
+}
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mystrow.fr/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://mystrow.fr/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Syncing MyStrow with your DJ software & your music",
+      "item": "https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e; --red: #ff5555;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 50px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 660px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 56px 0; }
+    .section-bg { background: var(--bg2); padding: 56px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+
+    /* Two method cards */
+    .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+    .method-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; }
+    .method-card .m-icon { font-size: 28px; margin-bottom: 12px; }
+    .method-card h3 { font-size: 19px; margin-bottom: 8px; }
+    .method-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .method-card .m-tag { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--accent); background:rgba(226,206,22,0.10); border:1px solid var(--accent-border); padding:2px 10px; border-radius:20px; margin-bottom:14px; }
+
+    /* OS toggle */
+    .os-tabs { display: flex; gap: 12px; justify-content: center; margin: 0 auto 8px; flex-wrap: wrap; }
+    .os-tab { display: inline-flex; align-items: center; gap: 9px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.5px; padding: 13px 30px; border-radius: 999px; cursor: pointer; transition: all 0.18s; }
+    .os-tab:hover { border-color: rgba(226,206,22,0.45); }
+    .os-tab.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .os-panel { display: none; }
+    .os-panel.active { display: block; animation: fade 0.25s ease; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    /* Software chooser */
+    .chooser-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .sw-tabs { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .sw-tab { background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.4px; padding: 10px 20px; border-radius: 999px; cursor: pointer; transition: all 0.18s; }
+    .sw-tab:hover { border-color: rgba(226,206,22,0.45); }
+    .sw-tab.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .sw-panel { display: none; }
+    .sw-panel.active { display: block; animation: fade 0.25s ease; }
+    .sub-method { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 21px; color: var(--accent); margin: 40px 0 4px; }
+    .os-pc .mac-only { display: none !important; }
+    .os-mac .pc-only { display: none !important; }
+
+    /* Steps */
+    .step-list { display: flex; flex-direction: column; gap: 24px; margin-top: 28px; }
+    .step { display: flex; gap: 18px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 34px; height: 34px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .step-body code { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 5px; padding: 1px 7px; font-size: 13px; color: var(--accent); font-family: 'Barlow Condensed', monospace; }
+
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 26px 30px; margin-top: 30px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .highlight-box p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .check-list li strong { color: var(--text); }
+
+    /* Video embed (responsive 16:9) */
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); margin: 36px 0 0; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 14px; }
+    .video-lang-note { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 14px 16px; margin: -22px 0 40px; }
+    .video-lang-note svg { width: 24px; height: 16px; border-radius: 2px; display: block; flex-shrink: 0; margin-top: 3px; }
+    .video-lang-note p { color: var(--muted); font-size: 13.5px; line-height: 1.65; margin: 0; }
+    .video-lang-note strong { color: var(--text); font-weight: 600; }
+    .video-lang-note em { color: var(--text); font-style: normal; }
+
+    /* Comparison table */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 680px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .yes { color: var(--green); font-weight: 700; }
+    .no { color: var(--red); font-weight: 700; }
+
+    .cta-block { text-align: center; padding: 70px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--border); margin-top: 8px; gap: 16px; flex-wrap: wrap; }
+    .article-nav a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 0.18s; }
+    .article-nav a:hover { color: var(--accent); }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    /* Lang dropdown */
+    .lang-selector { position: relative; display: inline-flex; }
+    .lang-selector-btn { display: flex; align-items: center; gap: 6px; background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 5px 10px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
+    .lang-selector-btn:hover, .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
+    .lang-chevron { font-size:9px; opacity:.5; margin-left:2px; transition: transform .18s; display:inline-block; }
+    .lang-selector:hover .lang-chevron, .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
+    .lang-dropdown { display: none; position: absolute; top: calc(100% + 7px); right: 0; background: #141414; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px 0; min-width: 110px; z-index: 999; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+    .lang-selector:hover .lang-dropdown, .lang-selector:focus-within .lang-dropdown { display: block; }
+    .lang-dropdown a, .lang-dropdown span { display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color .15s, background .15s; white-space: nowrap; }
+    .lang-dropdown a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
+    .lang-dropdown span { color: var(--accent); cursor: default; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 0 24px; }
+    .footer-main { max-width: 1080px; margin: 0 auto; padding: 0 28px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; max-width: 1080px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .nav-right
+      .method-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-nl { align-items: flex-start; }
+    }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css">
+</head>
+<body>
+
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> &nbsp;/&nbsp;
+        <a href="blog.html">Tutorials</a> &nbsp;/&nbsp;
+        <span>Syncing MyStrow with your DJ software &amp; your music</span>
+      </nav>
+      <div class="hero-badge">🎚️ Guide · DJ &amp; Sync</div>
+      <h1>Syncing MyStrow with your <em>DJ software</em> &amp; your music</h1>
+      <p class="hero-sub">Make your lights follow the exact beat of your music. Two simple methods — audio capture and MIDI Clock — explained for <strong>PC (Windows)</strong> and for <strong>Mac</strong> : Traktor, VirtualDJ, rekordbox, Serato… or just an app like Spotify or KaraFun.</p>
+      <div class="hero-meta">
+        <span>By <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Published on <strong>1 June 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Reading time: <strong>7 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#guide" class="btn-primary">Jump to the guide ↓</a>
+        <a href="download.html" class="btn-outline">Download MyStrow ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO : LES 2 MÉTHODES -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">The principle</div>
+      <h2>Two ways to make your lights follow</h2>
+      <div class="prose">
+        <p>In <strong>LIVE</strong> mode (AI Light), MyStrow can drive your whole stage automatically to the beat of the music: flashes on the kick, build-ups on the risers, an explosion of color on the drop. To do that, it needs to “understand” what you are playing. There are two ways to give it that information:</p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="m-icon">🔊</div>
+          <span class="m-tag">The simplest</span>
+          <h3>Audio capture</h3>
+          <p>MyStrow “listens” to your computer's audio output and detects beats, energy and song sections on its own. No tempo setting at all, and it works with any source — <strong>Spotify, KaraFun</strong>, YouTube or just an audio file.</p>
+        </div>
+        <div class="method-card">
+          <div class="m-icon">🎛️</div>
+          <span class="m-tag">The most precise</span>
+          <h3>MIDI Clock</h3>
+          <p>Your DJ software sends its tempo clock (the BPM) straight to MyStrow. Perfect, rock-solid timing, ideal in a club or on stage. It needs a small software bridge to connect the two applications.</p>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <p>💡 <strong>Which one should you pick? It depends on your software.</strong> Some can send their tempo to MyStrow, others cannot:</p>
+        <ul class="check-list" style="margin-top:14px;">
+          <li><strong>Traktor &amp; VirtualDJ</strong> — they send their tempo → <strong>MIDI Clock</strong>, perfect sync.</li>
+          <li><strong>rekordbox &amp; Serato</strong> — they do not send a tempo → <strong>audio capture</strong> (or an “Ableton Link → MIDI” bridge).</li>
+          <li><strong>Spotify, KaraFun, YouTube…</strong> — these are just players, with no tempo to send → <strong>audio capture</strong>.</li>
+        </ul>
+        <p style="margin-top:14px;margin-bottom:0;">Don't worry: just below, you pick your computer and then your software, and MyStrow gives you the right steps directly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">On video</div>
+      <h2>The guide on video</h2>
+      <div class="prose"><p>Prefer to watch? We show you everything on screen: audio capture and MIDI Clock, with VirtualDJ, rekordbox, Spotify and Traktor.</p></div>
+      <div id="video" class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/QG2NN5wVLWU?cc_load_policy=1&amp;cc_lang_pref=en&amp;hl=en"
+          title="Syncing music and DMX lights with MyStrow — the complete guide"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-lang-note">
+        <span aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/><rect x="20" width="10" height="20" fill="#ce1126"/></svg></span>
+        <p><strong>Heads-up: this video is narrated in French.</strong> No problem though — YouTube automatically provides <strong>English subtitles</strong> and an <strong>English dubbed audio track</strong>. Subtitles are on by default; you can switch the spoken language from the player settings (⚙️ → <em>Audio track</em>).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE : SÉLECTEUR ORDINATEUR + LOGICIEL -->
+  <section class="section-bg" id="guide">
+    <div class="wrap-narrow">
+      <div style="text-align:center;margin-bottom:36px;">
+        <div class="section-tag" style="margin-bottom:8px;">The step-by-step guide</div>
+        <h2 style="margin-bottom:10px;">Pick your system &amp; your software</h2>
+        <p class="prose" style="margin-bottom:26px;">Select your computer, then the software you use: MyStrow shows you the right steps directly.</p>
+
+        <div class="chooser-label">1 · Your computer</div>
+        <div class="os-tabs">
+          <button class="os-tab active" data-os="pc">💻 PC / Windows</button>
+          <button class="os-tab" data-os="mac">🍎 Mac</button>
+        </div>
+
+        <div class="chooser-label" style="margin-top:24px;">2 · Your software</div>
+        <div class="sw-tabs">
+          <button class="sw-tab active" data-sw="traktor">Traktor</button>
+          <button class="sw-tab" data-sw="virtualdj">VirtualDJ</button>
+          <button class="sw-tab" data-sw="rekordbox">rekordbox / Serato</button>
+          <button class="sw-tab" data-sw="player">Spotify · KaraFun · other</button>
+        </div>
+      </div>
+
+      <div id="guide-content" class="os-pc">
+
+        <!-- ============ TRAKTOR ============ -->
+        <div class="sw-panel active" id="sw-traktor">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">Traktor — perfect sync over MIDI Clock</h3>
+          <p class="prose" style="margin-bottom:0;">Traktor sends its tempo natively: this is the most precise route. We connect it to MyStrow through a small virtual MIDI port.</p>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Create the “MyStrow” virtual MIDI port</h3>
+                <p class="pc-only">Install <strong>loopMIDI</strong> (free, by Tobias Erichsen) and create a port named <code>MyStrow</code>. MyStrow can also set it up for you.</p>
+                <p class="mac-only">On Mac it is built in: open <strong>Audio MIDI Setup</strong> → menu <em>Window</em> → <em>Show MIDI Studio</em> → double-click <strong>IAC Driver</strong> → tick <em>“Device is online”</em> and name a bus <code>MyStrow</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Enable MIDI Clock in Traktor</h3>
+                <p>Preferences → <em>Controller Manager</em> → <em>Add → Generic MIDI</em>, set the<em>Out-Port</em> to <code class="pc-only">MyStrow</code><code class="mac-only">IAC — MyStrow</code>. Then Preferences → <em>External Sync</em> → tick <em>Enable MIDI Clock</em>. Finally, in the <strong>MASTER CLOCK</strong> panel (the metronome icon at the top left), click the <em>MIDI Start</em> button (it turns blue).</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choose “MIDI Clock” in MyStrow</h3>
+                <p>Switch MyStrow to <strong>LIVE</strong> mode and select the <strong>MIDI Clock</strong>source. It is locked to Traktor's BPM — beats and tempo perfectly in sync.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ VIRTUALDJ ============ -->
+        <div class="sw-panel" id="sw-virtualdj">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">VirtualDJ — MIDI Clock (tested &amp; working)</h3>
+          <p class="prose" style="margin-bottom:0;">VirtualDJ sends its tempo to MyStrow through a virtual MIDI port. Three steps and you are up and running.</p>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Create the “MyStrow” virtual MIDI port</h3>
+                <p class="pc-only">Install <strong>loopMIDI</strong> (free) and create a port named <code>MyStrow</code>.</p>
+                <p class="mac-only">On Mac it is built in: <strong>Audio MIDI Setup</strong> → <em>Window</em> → <em>Show MIDI Studio</em> → double-click <strong>IAC Driver</strong> → tick <em>“Device is online”</em> and name a bus <code>MyStrow</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Enable the clock output in VirtualDJ</h3>
+                <p>Open the VirtualDJ settings → tab <strong>Controllers</strong> → select <strong>MyStrow</strong> in the list → enable <strong>MIDI Clock Output</strong>. And that's it: VirtualDJ is sending its tempo.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choose “MIDI Clock” in MyStrow</h3>
+                <p>Switch MyStrow to <strong>LIVE</strong> mode and select the <strong>MIDI Clock</strong>. VirtualDJ's BPM drives your lights directly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ REKORDBOX / SERATO ============ -->
+        <div class="sw-panel" id="sw-rekordbox">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">rekordbox / Serato</h3>
+          <p class="prose" style="margin-bottom:0;">These two applications <strong>do not send</strong> a tempo (MIDI Clock). Two options: the simplest is to capture the audio; the most precise is to add a small “Ableton Link → MIDI” bridge.</p>
+
+          <div class="sub-method">Option A — Capture the audio (recommended)</div>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Set up the audio capture</h3>
+                <p class="pc-only">On Windows there is nothing to install: MyStrow captures the audio output through the built-in <strong>WASAPI loopback</strong> .</p>
+                <p class="mac-only">On Mac, install the free virtual audio driver <strong>BlackHole 2ch</strong>, then create a <em>Multi-Output Device</em> (Audio MIDI Setup) grouping your <strong>speakers + BlackHole</strong>. Send the software's audio to that device: you hear it AND it goes out to BlackHole.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Pick the source in MyStrow</h3>
+                <p>In <strong>LIVE</strong>, select <span class="pc-only">your output (or your controller directly) as the source</span><span class="mac-only"><strong>BlackHole 2ch</strong> as the input source</span>. MyStrow detects the beats on its own.</p>
+              </div>
+            </div>
+          </div>
+          <div class="note-box">
+            <p>🎧 <strong>Sound card such as a DDJ-400:</strong> the audio comes out through the controller, not through the computer's default output. So select <span class="pc-only">the <strong>DDJ-400 as the source</strong> in MyStrow (if your software runs in <strong>exclusive ASIO</strong>, capture becomes impossible — use Option B in that case)</span><span class="mac-only">the controller, or route its master to BlackHole through the multi-output device</span>.</p>
+          </div>
+
+          <div class="sub-method">Option B — MIDI Clock through an Ableton Link bridge</div>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Create the “MyStrow” virtual MIDI port</h3>
+                <p class="pc-only">Install <strong>loopMIDI</strong> and create a port named <code>MyStrow</code>.</p>
+                <p class="mac-only">Enable the <strong>IAC</strong> bus built into macOS and name a bus <code>MyStrow</code> (via Audio MIDI Setup → MIDI Studio → IAC Driver).</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Enable Ableton Link + the bridge</h3>
+                <p>Enable <strong>Ableton Link</strong> in rekordbox / Serato, then start a “Link → MIDI Clock” bridge (e.g. the community tool <em>Rekordbox-Midi-Clock</em>) and have it send the clock to the port <code class="pc-only">MyStrow</code><code class="mac-only">IAC — MyStrow</code>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Choose “MIDI Clock” in MyStrow</h3>
+                <p>In <strong>LIVE</strong>, select the source <strong>MIDI Clock</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SPOTIFY / KARAFUN / AUTRE ============ -->
+        <div class="sw-panel" id="sw-player">
+          <h3 style="font-size:24px;color:var(--accent);margin-bottom:4px;">Spotify, KaraFun, YouTube… or any other player</h3>
+          <p class="prose" style="margin-bottom:0;">These apps simply output audio, with no tempo to send. MyStrow <strong>listens to that audio</strong> and detects the beats on its own. It is the simplest method: zero tempo settings.</p>
+          <div class="step-list">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Play your music as usual</h3>
+                <p>Play your track in Spotify, KaraFun, YouTube or your usual player, on the computer's regular audio output.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Set up the audio capture</h3>
+                <p class="pc-only">On Windows there is nothing to install: MyStrow captures the audio output through the built-in <strong>WASAPI loopback</strong> .</p>
+                <p class="mac-only">On Mac, install the free virtual audio driver <strong>BlackHole 2ch</strong>, then create a <em>Multi-Output Device</em> (speakers + BlackHole) in Audio MIDI Setup, and send the system audio to it.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Pick the source in MyStrow</h3>
+                <p>In <strong>LIVE</strong>, select <span class="pc-only">your audio output as the source</span><span class="mac-only"><strong>BlackHole 2ch</strong> as the input source</span>. The lights follow the music automatically.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLEAU RÉCAP PAR LOGICIEL -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Summary</div>
+      <h2>Which method for which software?</h2>
+      <div class="prose"><p>The table below sums up the best approach for each common DJ application. It applies equally on PC and Mac.</p></div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th>Software</th>
+              <th>Compatible?</th>
+              <th>Native MIDI Clock?</th>
+              <th>Recommended method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Traktor Pro</strong></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td>Direct MIDI Clock — the most stable and the most precise.</td>
+            </tr>
+            <tr>
+              <td><strong>rekordbox</strong></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td><span class="no">✕ No</span></td>
+              <td>Audio capture, or an Ableton Link → MIDI Clock bridge.</td>
+            </tr>
+            <tr>
+              <td><strong>Serato DJ</strong></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td><span class="no">✕ No</span></td>
+              <td>Audio capture, or an Ableton Link → MIDI Clock bridge.</td>
+            </tr>
+            <tr>
+              <td><strong>VirtualDJ</strong></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td>MIDI Clock through loopMIDI (tested and working), or audio capture.</td>
+            </tr>
+            <tr>
+              <td><strong>Spotify, KaraFun, YouTube…</strong></td>
+              <td><span class="yes">✅ Yes</span></td>
+              <td><span class="no">—</span></td>
+              <td>Regular audio output: <strong>audio capture</strong>. MyStrow detects everything with no setup.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box">
+        <h3>In short</h3>
+        <p><strong>To get going fast (party, wedding, bar):</strong> audio capture. Zero configuration, it works with any music — including Spotify, KaraFun or YouTube on the regular output.<br>
+        <strong>For perfect timing (club, stage, big show):</strong> MIDI Clock, with <strong>Traktor</strong> or <strong>VirtualDJ</strong> (both send it without trouble through loopMIDI). On Mac it is even simpler thanks to the built-in IAC bus.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-bg">
+    <div class="wrap cta-block">
+      <h2>Ready to make your lights dance?</h2>
+      <p>Download MyStrow and run your first synced show within minutes.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="download.html" class="btn-primary">Download MyStrow ↓</a>
+        <a href="ai-lighting.html" class="btn-outline">Discover AI Light →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Read next</div>
+      <h2>Go further</h2>
+      <div class="related-grid">
+        <a href="ai-lighting.html" class="related-card">
+          <div class="rc-tag">AI Light</div>
+          <h3>Lighting that reacts to the music</h3>
+          <p>How MyStrow's AI analyses sound and drives your whole stage in real time.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow.html" class="related-card">
+          <div class="rc-tag">Beginner · DMX</div>
+          <h3>Getting started with MyStrow</h3>
+          <p>From install to your first light show, step by step and without jargon.</p>
+        </a>
+        <a href="akai-apc-mini-controller.html" class="related-card">
+          <div class="rc-tag">Hardware</div>
+          <h3>AKAI APC mini controller</h3>
+          <p>The recommended controller for driving your colors and levels by hand.</p>
+        </a>
+        <a href="blog.html" class="related-card">
+          <div class="rc-tag">Tutorials</div>
+          <h3>All the MyStrow guides</h3>
+          <p>Find all our video tutorials and step-by-step articles.</p>
+        </a>
+      </div>
+
+      <div class="article-nav">
+        <a href="blog.html">← Back to the tutorials</a>
+        <a href="download.html">Download MyStrow →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="index.html" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="download.html">Download</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#pricing">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · All rights reserved</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://subscribe-newsletter-2gdol7vjca-uc.a.run.app', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'en' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+
+// Sélecteurs : ordinateur (PC/Mac) + logiciel
+(function () {
+  var content = document.getElementById('guide-content');
+
+  // 1 · Ordinateur → bascule la classe os-pc / os-mac sur le conteneur
+  var osTabs = document.querySelectorAll('.os-tab');
+  osTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var os = tab.getAttribute('data-os');
+      osTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+      content.classList.toggle('os-pc', os === 'pc');
+      content.classList.toggle('os-mac', os === 'mac');
+    });
+  });
+
+  // 2 · Logiciel → affiche le panneau correspondant
+  var swTabs = document.querySelectorAll('.sw-tab');
+  swTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var sw = tab.getAttribute('data-sw');
+      swTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+      document.querySelectorAll('.sw-panel').forEach(function (p) {
+        p.classList.toggle('active', p.id === 'sw-' + sw);
+      });
+    });
+  });
+})();
+</script>
+<script src="../nav.js" defer></script>
+<script src="../mobile-nav.js"></script>
+</body>
+</html>
