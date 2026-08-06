@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>IA Lumière : Éclairage automatique et intelligent pour votre scène | MyStrow</title>
-  <meta name="description" content="L'IA Lumière de MyStrow contrôle automatiquement vos projecteurs et génère des ambiances lumineuses cohérentes. Programmation assistée par IA.">
+  <title>Logiciel lumière IA : vos DMX réagissent à la musique</title>
+  <meta name="description" content="L'IA analyse le son en direct (graves, médiums, aigus, BPM) et pilote seule vos projecteurs DMX. Couleurs et intensités générées sans programmation.">
   <link rel="canonical" href="https://mystrow.fr/ia-lumiere">
 
   <!-- hreflang -->
@@ -19,8 +19,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mystrow.fr/ia-lumiere">
-  <meta property="og:title" content="IA Lumière : Éclairage automatique et intelligent pour votre scène | MyStrow">
-  <meta property="og:description" content="L'IA Lumière de MyStrow contrôle automatiquement vos projecteurs et génère des ambiances lumineuses cohérentes. Programmation assistée par IA.">
+  <meta property="og:title" content="Logiciel lumière IA — vos DMX réagissent à la musique">
+  <meta property="og:description" content="L'IA analyse le son en direct et pilote seule vos projecteurs DMX. Aucune programmation nécessaire.">
   <meta property="og:image" content="https://mystrow.fr/og-image.webp">
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="fr_FR">
@@ -291,6 +291,16 @@
       .footer-nl { align-items: flex-start; }
       .nl-form input[type="email"] { width: 150px; }
     }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { padding: 20px 0; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s; user-select: none; }
+    .faq-q:hover { color: var(--accent); }
+    .faq-arrow { color: var(--muted); font-size: 22px; transition: transform 0.25s; flex-shrink: 0; line-height: 1; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); color: var(--accent); }
+    .faq-a { color: var(--muted); font-size: 14px; line-height: 1.75; padding-bottom: 20px; display: none; }
+    .faq-item.open .faq-a { display: block; }
     </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
@@ -305,6 +315,78 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
   <script src="/cookie-consent.js" defer></script>
 <link rel="stylesheet" href="mobile-nav.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Comment une IA peut-elle piloter des projecteurs DMX ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'IA Lumière écoute le signal audio en direct et le décompose en bandes de fréquences : graves, médiums et aigus. À partir de l'énergie de chaque bande, du niveau global et du tempo détecté, elle calcule en continu une couleur et une intensité pour chacun de vos groupes de projecteurs, puis envoie ces valeurs sur votre ligne DMX. Il n'y a ni scène pré-enregistrée ni séquence à déclencher : les valeurs sont générées image par image pendant que la musique joue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il programmer quelque chose avant d'activer l'IA Lumière ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Une fois vos projecteurs patchés et répartis dans les six groupes, l'IA Lumière s'active en un clic et prend la main immédiatement. C'est la différence principale avec une timeline ou un enregistrement : vous n'avez aucune scène à construire au préalable, ce qui la rend utilisable sur un set improvisé ou sur un morceau que vous découvrez le soir même."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "L'IA fonctionne-t-elle avec de la musique jouée en direct ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. L'analyse peut se faire soit sur la sortie du player audio intégré, soit sur l'entrée microphone de l'ordinateur. Dans ce second cas, l'IA réagit à ce qu'elle entend dans la salle : un groupe sur scène, un DJ sur sa propre console, ou n'importe quelle source qui ne passe pas par le logiciel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "L'IA Lumière suit-elle le BPM du morceau ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, le tempo est estimé en continu entre 40 et 200 BPM par détection des pics d'énergie rythmique. Il sert à cadencer les changements : sur un morceau rapide les transitions se resserrent, sur un tempo lent elles s'étirent. Comme l'estimation est permanente, un changement de tempo en cours de morceau est suivi sans intervention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle différence avec un mode « son to light » classique ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un son-to-light classique fait varier une intensité proportionnellement au niveau sonore : le résultat suit le volume mais reste plat, et tous les projecteurs font la même chose. L'IA Lumière raisonne par groupe et par rôle scénique — la face, les douches, les latéraux et les contres ne reçoivent pas les mêmes instructions — et choisit des combinaisons de couleurs cohérentes entre elles plutôt qu'une réaction brute au volume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on reprendre la main pendant que l'IA tourne ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. L'IA Lumière est un mode parmi d'autres : vous pouvez la couper à tout moment pour repasser en contrôle manuel, depuis l'interface ou depuis votre contrôleur. C'est le fonctionnement habituel en concert — on laisse l'IA gérer les parties musicales et on reprend la main sur les moments clés."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelles interfaces DMX sont compatibles ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MyStrow envoie le DMX en Art-Net, un standard ouvert (UDP, port 6454) implémenté par la grande majorité des boîtiers du marché, ainsi que par les interfaces USB/DMX compatibles. Le choix du matériel n'a aucune incidence sur l'IA Lumière : elle calcule les valeurs, le transport les achemine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "L'IA Lumière est-elle accessible gratuitement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'IA Lumière est incluse dès la version gratuite, qui donne 14 jours d'accès sans aucune carte bancaire. À noter : la sortie DMX vers des projecteurs réels demande un plan Pro ou Lifetime. En gratuit, vous pouvez donc tout piloter et voir l'IA travailler sur le plan de scène, mais pas encore commander vos machines."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -488,6 +570,48 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section-bg" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-tag">Questions fréquentes</div>
+      <h2 id="faq-title" style="text-align:center">Questions fréquentes sur l'IA Lumière</h2>
+      <div class="faq-list" style="margin-top:40px">
+        <div class="faq-item">
+          <div class="faq-q">Comment une IA peut-elle piloter des projecteurs DMX&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">L'IA Lumière écoute le signal audio en direct et le décompose en bandes de fréquences : graves, médiums et aigus. À partir de l'énergie de chaque bande, du niveau global et du tempo détecté, elle calcule en continu une couleur et une intensité pour chacun de vos groupes de projecteurs, puis envoie ces valeurs sur votre ligne DMX. Il n'y a ni scène pré-enregistrée ni séquence à déclencher : les valeurs sont générées image par image pendant que la musique joue.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Faut-il programmer quelque chose avant d'activer l'IA Lumière&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Non. Une fois vos projecteurs patchés et répartis dans les six groupes, l'IA Lumière s'active en un clic et prend la main immédiatement. C'est la différence principale avec une timeline ou un enregistrement : vous n'avez aucune scène à construire au préalable, ce qui la rend utilisable sur un set improvisé ou sur un morceau que vous découvrez le soir même.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">L'IA fonctionne-t-elle avec de la musique jouée en direct&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Oui. L'analyse peut se faire soit sur la sortie du player audio intégré, soit sur l'entrée microphone de l'ordinateur. Dans ce second cas, l'IA réagit à ce qu'elle entend dans la salle : un groupe sur scène, un DJ sur sa propre console, ou n'importe quelle source qui ne passe pas par le logiciel.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">L'IA Lumière suit-elle le BPM du morceau&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Oui, le tempo est estimé en continu entre 40 et 200&nbsp;BPM par détection des pics d'énergie rythmique. Il sert à cadencer les changements : sur un morceau rapide les transitions se resserrent, sur un tempo lent elles s'étirent. Comme l'estimation est permanente, un changement de tempo en cours de morceau est suivi sans intervention.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Quelle différence avec un mode «&nbsp;son to light&nbsp;» classique&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Un son-to-light classique fait varier une intensité proportionnellement au niveau sonore : le résultat suit le volume mais reste plat, et tous les projecteurs font la même chose. L'IA Lumière raisonne par groupe et par rôle scénique — la face, les douches, les latéraux et les contres ne reçoivent pas les mêmes instructions — et choisit des combinaisons de couleurs cohérentes entre elles plutôt qu'une réaction brute au volume.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Peut-on reprendre la main pendant que l'IA tourne&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Oui. L'IA Lumière est un mode parmi d'autres&nbsp;: vous pouvez la couper à tout moment pour repasser en contrôle manuel, depuis l'interface ou depuis votre contrôleur. C'est le fonctionnement habituel en concert — on laisse l'IA gérer les parties musicales et on reprend la main sur les moments clés.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Quelles interfaces DMX sont compatibles&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">MyStrow envoie le DMX en Art-Net, un standard ouvert (UDP, port 6454) implémenté par la grande majorité des boîtiers du marché, ainsi que par les interfaces USB/DMX compatibles. Le choix du matériel n'a aucune incidence sur l'IA Lumière&nbsp;: elle calcule les valeurs, le transport les achemine.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">L'IA Lumière est-elle accessible gratuitement&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">L'IA Lumière est incluse dès la version gratuite, qui donne 14 jours d'accès sans aucune carte bancaire. À noter&nbsp;: la sortie DMX vers des projecteurs réels demande un plan Pro ou Lifetime. En gratuit, vous pouvez donc tout piloter et voir l'IA travailler sur le plan de scène, mais pas encore commander vos machines.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-block">
     <div class="wrap">
@@ -504,6 +628,10 @@
       <div class="section-tag">Explorer</div>
       <h2>Autres fonctionnalités</h2>
       <div class="other-grid">
+        <a href="logiciel-dmx-gratuit" class="other-card">
+          <h3>Version gratuite</h3>
+          <p>14 jours d'acc&egrave;s sans carte bancaire&nbsp;: ce qui est inclus, et ce qui ne l'est pas.</p>
+        </a>
         <a href="logiciel-lumiere-dmx-ia" class="other-card">
           <h3>Logiciel Lumière DMX</h3>
           <p>Logiciel DMX Art-Net pour contrôler tous vos projecteurs LED, lyres et PAR depuis votre PC en temps réel.</p>
@@ -573,6 +701,17 @@ function handleNewsletter(e) {
 </script>
 <script src="nav.js" defer></script>
 <script src="mobile-nav.js"></script>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
 </body>
 </html>
 

@@ -144,6 +144,15 @@
   </url>
 
   <url>
+    <loc>https://mystrow.fr/logiciel-dmx-gratuit</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/logiciel-dmx-gratuit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/logiciel-dmx-gratuit"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-08-06</lastmod>
+  </url>
+
+  <url>
     <loc>https://mystrow.fr/boutique</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/boutique"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/boutique"/>

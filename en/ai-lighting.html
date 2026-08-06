@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>AI Lighting: Automatic and Intelligent Stage Lighting | MyStrow</title>
-  <meta name="description" content="MyStrow's AI Lighting automatically controls your fixtures and generates coherent lighting atmospheres. AI-assisted programming for concerts, events and clubs.">
+  <title>AI DMX Lighting Software — Lights That Follow Your Music</title>
+  <meta name="description" content="MyStrow's AI analyses your audio live (bass, mids, highs, BPM) and drives your DMX fixtures on its own. Colours and intensities, with no programming.">
   <link rel="canonical" href="https://mystrow.fr/en/ai-lighting">
 
   <!-- hreflang -->
@@ -19,8 +19,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mystrow.fr/en/ai-lighting">
-  <meta property="og:title" content="AI Lighting: Automatic and Intelligent Stage Lighting | MyStrow">
-  <meta property="og:description" content="MyStrow's AI Lighting automatically controls your fixtures and generates coherent lighting atmospheres. AI-assisted programming for concerts, events and clubs.">
+  <meta property="og:title" content="AI DMX Lighting Software — Lights That Follow Your Music">
+  <meta property="og:description" content="AI analyses your audio live and drives your DMX fixtures on its own. No programming needed.">
   <meta property="og:image" content="https://mystrow.fr/og-image.webp">
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="en_US">
@@ -265,6 +265,16 @@
       .footer-nl { align-items: flex-start; }
       .nl-form input[type="email"] { width: 150px; }
     }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { padding: 20px 0; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s; user-select: none; }
+    .faq-q:hover { color: var(--accent); }
+    .faq-arrow { color: var(--muted); font-size: 22px; transition: transform 0.25s; flex-shrink: 0; line-height: 1; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); color: var(--accent); }
+    .faq-a { color: var(--muted); font-size: 14px; line-height: 1.75; padding-bottom: 20px; display: none; }
+    .faq-item.open .faq-a { display: block; }
     </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -278,6 +288,78 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
   <script src="/cookie-consent.js" defer></script>
   <link rel="stylesheet" href="../mobile-nav.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can an AI drive DMX fixtures ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AI listens to the live audio signal and splits it into frequency bands: bass, mids and highs. From the energy in each band, the overall level and the detected tempo, it continuously computes a colour and an intensity for each of your fixture groups, then sends those values down your DMX line. There is no pre-recorded scene and nothing to trigger: values are generated frame by frame while the music plays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to program anything before switching the AI on ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Once your fixtures are patched and spread across the six groups, AI Lighting starts with one click and takes over immediately. That is the main difference with a timeline or a recording: there is no scene to build beforehand, which makes it usable on an improvised set or on a track you are discovering the same evening."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work with live music ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The analysis can run either on the output of the built-in audio player, or on your computer's microphone input. In the latter case the AI reacts to what it hears in the room: a band on stage, a DJ on their own console, or any source that does not go through the software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the AI follow the track's BPM ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, tempo is estimated continuously between 40 and 200 BPM by detecting rhythmic energy peaks. It paces the changes: on a fast track transitions tighten up, on a slow tempo they stretch out. Because the estimate is permanent, a tempo change mid-track is followed without any intervention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from a classic sound-to-light mode ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A classic sound-to-light varies one intensity in proportion to the sound level: the result follows the volume but stays flat, and every fixture does the same thing. AI Lighting reasons per group and per stage role — front light, top light, side and back light do not receive the same instructions — and picks colour combinations that are coherent with each other rather than a raw reaction to volume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I take back control while the AI is running ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. AI Lighting is one mode among others: you can switch it off at any moment and return to manual control, from the interface or from your controller. That is the usual live workflow — let the AI handle the musical stretches, take over for the key moments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which DMX interfaces are supported ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MyStrow outputs DMX over Art-Net, an open standard (UDP, port 6454) implemented by the vast majority of nodes on the market, as well as over compatible USB/DMX interfaces. Your choice of hardware has no bearing on AI Lighting: it computes the values, the transport carries them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AI Lighting available for free ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI Lighting is included from the free version, which gives you 14 days of access with no credit card. One caveat: DMX output to real fixtures requires a Pro or Lifetime plan. On the free tier you can drive everything and watch the AI work on the stage plot, but not yet command your actual machines."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -461,6 +543,48 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section-bg" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-tag">FAQ</div>
+      <h2 id="faq-title" style="text-align:center">Frequently asked questions about AI Lighting</h2>
+      <div class="faq-list" style="margin-top:40px">
+        <div class="faq-item">
+          <div class="faq-q">How can an AI drive DMX fixtures&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">The AI listens to the live audio signal and splits it into frequency bands: bass, mids and highs. From the energy in each band, the overall level and the detected tempo, it continuously computes a colour and an intensity for each of your fixture groups, then sends those values down your DMX line. There is no pre-recorded scene and nothing to trigger: values are generated frame by frame while the music plays.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do I need to program anything before switching the AI on&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">No. Once your fixtures are patched and spread across the six groups, AI Lighting starts with one click and takes over immediately. That is the main difference with a timeline or a recording: there is no scene to build beforehand, which makes it usable on an improvised set or on a track you are discovering the same evening.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does it work with live music&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Yes. The analysis can run either on the output of the built-in audio player, or on your computer's microphone input. In the latter case the AI reacts to what it hears in the room: a band on stage, a DJ on their own console, or any source that does not go through the software.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does the AI follow the track's BPM&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Yes, tempo is estimated continuously between 40 and 200&nbsp;BPM by detecting rhythmic energy peaks. It paces the changes: on a fast track transitions tighten up, on a slow tempo they stretch out. Because the estimate is permanent, a tempo change mid-track is followed without any intervention.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How is this different from a classic sound-to-light mode&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">A classic sound-to-light varies one intensity in proportion to the sound level: the result follows the volume but stays flat, and every fixture does the same thing. AI Lighting reasons per group and per stage role — front light, top light, side and back light do not receive the same instructions — and picks colour combinations that are coherent with each other rather than a raw reaction to volume.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I take back control while the AI is running&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">Yes. AI Lighting is one mode among others: you can switch it off at any moment and return to manual control, from the interface or from your controller. That is the usual live workflow — let the AI handle the musical stretches, take over for the key moments.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Which DMX interfaces are supported&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">MyStrow outputs DMX over Art-Net, an open standard (UDP, port 6454) implemented by the vast majority of nodes on the market, as well as over compatible USB/DMX interfaces. Your choice of hardware has no bearing on AI Lighting: it computes the values, the transport carries them.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is AI Lighting available for free&nbsp;?<span class="faq-arrow" aria-hidden="true">+</span></div>
+          <div class="faq-a">AI Lighting is included from the free version, which gives you 14 days of access with no credit card. One caveat: DMX output to real fixtures requires a Pro or Lifetime plan. On the free tier you can drive everything and watch the AI work on the stage plot, but not yet command your actual machines.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="cta-block">
     <div class="wrap">
@@ -544,5 +668,16 @@ function handleNewsletter(e) {
 </script>
 <script src="../nav.js" defer></script>
 <script src="../mobile-nav.js"></script>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
 </body>
 </html>
