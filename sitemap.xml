@@ -212,6 +212,14 @@
   </url>
 
   <url>
+    <loc>https://mystrow.fr/regie-video-obs-vmix-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/regie-video-obs-vmix-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/regie-video-obs-vmix-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-08-06</lastmod>
+  </url>
+  <url>
     <loc>https://mystrow.fr/synchroniser-mystrow-logiciel-dj</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-mystrow-logiciel-dj"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-mystrow-logiciel-dj"/>
