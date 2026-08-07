@@ -35,8 +35,11 @@
     ".lang-selector-btn:hover,.lang-selector:focus-within .lang-selector-btn{border-color:var(--accent);color:var(--accent);}" +
     ".lang-chevron{font-size:9px;opacity:.5;margin-left:2px;transition:transform .18s;display:inline-block;}" +
     ".lang-selector:hover .lang-chevron,.lang-selector:focus-within .lang-chevron{transform:rotate(180deg);opacity:.8;}" +
-    ".lang-dropdown{display:none;position:absolute;top:calc(100% + 7px);right:0;background:#141414;border:1px solid #2a2a2a;border-radius:8px;padding:6px 0;min-width:162px;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.5);}" +
-    ".lang-selector:hover .lang-dropdown,.lang-selector:focus-within .lang-dropdown{display:block;}" +
+    ".lang-dropdown{opacity:0;visibility:hidden;transform:translateY(-4px);transition:opacity .16s ease,visibility .16s ease,transform .16s ease;transition-delay:.28s;position:absolute;top:calc(100% + 7px);right:0;background:#141414;border:1px solid #2a2a2a;border-radius:8px;padding:6px 0;min-width:162px;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.5);}" +
+    ".lang-selector:hover .lang-dropdown,.lang-selector:focus-within .lang-dropdown{opacity:1;visibility:visible;transform:none;transition-delay:0s;}" +
+    /* Passerelle invisible sous le bouton : sans elle, les 7px de vide entre le
+       bouton et le menu font perdre le :hover pendant le trajet de la souris. */
+    ".lang-selector:hover::after,.lang-selector:focus-within::after{content:'';position:absolute;top:100%;left:0;right:0;height:9px;}" +
     ".lang-dropdown>a,.lang-dropdown>span{display:flex;align-items:center;gap:9px;padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--muted);text-decoration:none;letter-spacing:.2px;transition:color .15s,background .15s;white-space:nowrap;}" +
     ".lang-dropdown>a:hover{color:var(--accent);background:rgba(255,215,0,.05);}" +
     ".lang-dropdown>span{color:var(--accent);cursor:default;}" +
@@ -84,7 +87,7 @@
         ["🎵", "Audio & Video Player", "Playlist and projections managed from the same interface.", "audio-video-player.html"],
         ["🗺️", "Interactive Stage Plot", "Visualize and control your fixture groups with a click or a fader.", "stage-plot.html"]
       ],
-      top: [["Pricing", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
+      top: [["Pricing", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutorials", "blog.html"]],
       langLabel: "Choose language", signin: "Sign in", dl: "Download ↓", dlHref: "download.html"
     },
     de: {
@@ -97,7 +100,7 @@
         ["🎵", "Audio- & Video-Player", "Playlist und Projektionen aus einer einzigen Oberfläche verwaltet.", "audio-video-player.html"],
         ["🗺️", "Interaktiver Bühnenplan", "Scheinwerfergruppen mit einem Klick oder Fader visualisieren und steuern.", "stage-plot.html"]
       ],
-      top: [["Preise", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
+      top: [["Preise", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutorials", "blog.html"]],
       langLabel: "Sprache wählen", signin: "Anmelden", dl: "Herunterladen ↓", dlHref: "download.html"
     },
     es: {
@@ -110,7 +113,7 @@
         ["🎵", "Audio & Video Player", "Lista de reproducción y proyecciones gestionadas desde la misma interfaz.", "audio-video-player.html"],
         ["🗺️", "Plano de escena interactivo", "Visualiza y controla tus grupos de focos con un clic o un fader.", "stage-plot.html"]
       ],
-      top: [["Precios", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
+      top: [["Precios", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutoriales", "blog.html"]],
       langLabel: "Elegir idioma", signin: "Iniciar sesión", dl: "Descargar ↓", dlHref: "download.html"
     },
     pt: {
@@ -123,7 +126,7 @@
         ["🎵", "Leitor de Áudio & Vídeo", "Lista de reprodução e projeções geridas a partir da mesma interface.", "audio-video-player.html"],
         ["🗺️", "Planta de palco interativa", "Visualize e controle os seus grupos de projetores com um clique ou fader.", "stage-plot.html"]
       ],
-      top: [["Preços", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"]],
+      top: [["Preços", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutoriais", "blog.html"]],
       langLabel: "Escolher idioma", signin: "Entrar", dl: "Transferir ↓", dlHref: "download.html"
     }
   };
