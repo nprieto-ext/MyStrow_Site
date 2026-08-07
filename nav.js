@@ -46,7 +46,11 @@
     /* Le drapeau est décoratif : c'est le nom de la langue qui porte le sens
        (un drapeau désigne un pays, pas une langue). */
     ".lang-flag{display:inline-flex;width:20px;height:13px;flex-shrink:0;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.14);}" +
-    ".lang-flag svg{width:100%;height:100%;display:block;}" +
+    /* Le SVG est sorti du flux (position:absolute) : laisse dans le flux, sa
+       taille intrinseque 30x20 remontait dans le calcul de la boite et le
+       width:20px ci-dessus n'etait plus respecte -> drapeau non peint. */
+    ".lang-flag{position:relative;}" +
+    ".lang-flag > svg{position:absolute;top:0;left:0;width:100%;height:100%;display:block;}" +
     ".lang-check{margin-left:auto;font-size:11px;color:var(--accent);}" +
     "@media(max-width:680px){header nav{padding:0 14px;gap:8px;}.nav-desktop{display:none!important;}.btn-nav-cta{display:none;}}";
 
