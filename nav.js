@@ -91,7 +91,7 @@
         ["🎵", "Audio & Video Player", "Playlist and projections managed from the same interface.", "audio-video-player.html"],
         ["🗺️", "Interactive Stage Plot", "Visualize and control your fixture groups with a click or a fader.", "stage-plot.html"]
       ],
-      top: [["Pricing", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutorials", "blog.html"]],
+      top: [["Pricing", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["Shop", "/shop"], ["FAQ", "index.html#faq"], ["Tutorials", "blog.html"]],
       langLabel: "Choose language", signin: "Sign in", dl: "Download ↓", dlHref: "download.html"
     },
     de: {
@@ -104,7 +104,7 @@
         ["🎵", "Audio- & Video-Player", "Playlist und Projektionen aus einer einzigen Oberfläche verwaltet.", "audio-video-player.html"],
         ["🗺️", "Interaktiver Bühnenplan", "Scheinwerfergruppen mit einem Klick oder Fader visualisieren und steuern.", "stage-plot.html"]
       ],
-      top: [["Preise", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutorials", "blog.html"]],
+      top: [["Preise", "index.html#pricing"], ["Hardware", "akai-apc-mini-controller.html"], ["Shop", "/shop"], ["FAQ", "index.html#faq"], ["Tutorials", "blog.html"]],
       langLabel: "Sprache wählen", signin: "Anmelden", dl: "Herunterladen ↓", dlHref: "download.html"
     },
     es: {
@@ -117,7 +117,7 @@
         ["🎵", "Audio & Video Player", "Lista de reproducción y proyecciones gestionadas desde la misma interfaz.", "audio-video-player.html"],
         ["🗺️", "Plano de escena interactivo", "Visualiza y controla tus grupos de focos con un clic o un fader.", "stage-plot.html"]
       ],
-      top: [["Precios", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutoriales", "blog.html"]],
+      top: [["Precios", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["Shop", "/shop"], ["FAQ", "index.html#faq"], ["Tutoriales", "blog.html"]],
       langLabel: "Elegir idioma", signin: "Iniciar sesión", dl: "Descargar ↓", dlHref: "download.html"
     },
     pt: {
@@ -130,7 +130,7 @@
         ["🎵", "Leitor de Áudio & Vídeo", "Lista de reprodução e projeções geridas a partir da mesma interface.", "audio-video-player.html"],
         ["🗺️", "Planta de palco interativa", "Visualize e controle os seus grupos de projetores com um clique ou fader.", "stage-plot.html"]
       ],
-      top: [["Preços", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["FAQ", "index.html#faq"], ["Tutoriais", "blog.html"]],
+      top: [["Preços", "index.html#pricing"], ["Material", "akai-apc-mini-controller.html"], ["Shop", "/shop"], ["FAQ", "index.html#faq"], ["Tutoriais", "blog.html"]],
       langLabel: "Escolher idioma", signin: "Entrar", dl: "Transferir ↓", dlHref: "download.html"
     }
   };

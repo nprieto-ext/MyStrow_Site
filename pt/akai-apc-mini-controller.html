@@ -1,34 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Controlador AKAI APC mini mk2 com MyStrow: Guia completo | MyStrow</title>
-  <meta name="description" content="O MyStrow foi desenvolvido para o AKAI APC mini mk2. Controle as suas luzes de palco com a grelha de 8×8 pads LED e 9 faders. Plug and play, configuração imediata.">
+  <title>Material para o MyStrow — Interface DMX e controlador MIDI | MyStrow</title>
+  <meta name="description" content="Que material precisa para o MyStrow? Uma interface DMX (nó Art-Net ou USB) e, opcionalmente, um controlador MIDI. Recomendações, preços e links de compra.">
   <link rel="canonical" href="https://mystrow.fr/pt/akai-apc-mini-controller">
+
+  <!-- hreflang -->
   <link rel="alternate" hreflang="fr" href="https://mystrow.fr/controleur-akai-apc-mini">
   <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/akai-apc-mini-controller">
   <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/akai-apc-mini-controller">
   <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/akai-apc-mini-controller">
   <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/akai-apc-mini-controller">
   <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/controleur-akai-apc-mini">
-  <meta property="og:locale" content="pt_PT">
-  <meta property="og:title" content="Controlador AKAI APC mini mk2 com MyStrow: Guia completo | MyStrow">
-  <meta property="og:description" content="O MyStrow foi desenvolvido para o AKAI APC mini mk2. Controle as suas luzes de palco com a grelha de 8×8 pads LED e 9 faders. Plug and play, configuração imediata.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://mystrow.fr/pt/akai-apc-mini-controller">
+  <meta property="og:title" content="Material para o MyStrow — Interface DMX e controlador MIDI | MyStrow">
+  <meta property="og:description" content="Um nó Art-Net ou uma interface USB/DMX, mais um controlador MIDI opcional. Tudo o que é preciso para comandar um palco completo.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="pt_PT">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Material para o MyStrow — Interface DMX e controlador MIDI | MyStrow">
+  <meta name="twitter:description" content="Nó Art-Net ou interface USB/DMX + controlador MIDI opcional. Material compatível e links de compra.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyStrow","url":"https://mystrow.fr/en/akai-apc-mini-controller","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","description":"DMX lighting software natively designed for the AKAI APC mini mk2. Full MIDI mapping, LED feedback, plug and play.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["AKAI APC mini mk2 native support","64 LED pad grid mapping","9 intensity faders","Live flash/strobe/chase effects","Built-in AKAI simulator","Zero configuration plug and play"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows, macOS",
+    "description": "Software de controlo de iluminação DMX. Compatível com qualquer aparelho DMX512, através de nó Art-Net ou interface USB/DMX."
+  }
   </script>
+
+  <!-- BreadcrumbList -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mystrow.fr/en/"},{"@type":"ListItem","position":2,"name":"Controlador AKAI APC mini mk2","item":"https://mystrow.fr/en/akai-apc-mini-controller"}]}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://mystrow.fr/pt/" },
+      { "@type": "ListItem", "position": 2, "name": "Material", "item": "https://mystrow.fr/pt/akai-apc-mini-controller" }
+    ]
+  }
   </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #080807; --bg2: #0e0d09; --bg3: #141310; --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16); --accent-border: rgba(226,206,22,0.22); --text: #f4f1e8; --muted: #7a7570; --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14); --green: #22c55e; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+    }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
@@ -49,19 +90,12 @@
     h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 8px; }
     .hero-section { padding: 100px 0 80px; }
     .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 24px; }
-    .hero-sub { font-size: 17px; color: var(--muted); max-width: 560px; margin-bottom: 36px; line-height: 1.65; }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 580px; margin-bottom: 32px; line-height: 1.65; }
     .section { padding: 80px 0; }
     .section-bg { background: var(--bg2); padding: 80px 0; }
-    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 48px; }
-    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
-    .feat-icon { font-size: 24px; margin-bottom: 10px; }
-    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
-    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; }
-    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .cta-block { text-align: center; padding: 80px 0; }
     .cta-block h2 { margin-bottom: 16px; }
     .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
-
     .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .breadcrumb a { color: var(--muted); text-decoration: none; }
     .breadcrumb a:hover { color: var(--accent); }
@@ -71,26 +105,17 @@
     .other-card:hover { border-color: var(--accent); }
     .other-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
     .other-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-    .prose { color: var(--muted); font-size: 15px; line-height: 1.75; }
-    .prose p { margin-bottom: 16px; }
-    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
-    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
-    .flow-steps { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-    .flow-step { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid rgba(226,206,22,0.06); }
-    .flow-step:last-child { border-bottom: none; }
-    .flow-num { width: 36px; height: 36px; border-radius: 50%; background: var(--accent-glow); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; color: var(--accent); flex-shrink: 0; }
-    .flow-content h3 { font-size: 16px; color: var(--text); margin-bottom: 6px; }
-    .flow-content p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-    .lang-switch { display: flex; align-items: center; gap: 5px; }
-    .lang-btn { font-size: 11px; font-weight: 700; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color 0.18s; padding: 3px 6px; }
-    .lang-btn:hover { color: var(--accent); }
-    .lang-btn.active { color: var(--accent); }
-    .lang-sep { color: rgba(255,255,255,0.15); font-size: 10px; }
-    @media (max-width: 680px) { .feat-grid { grid-template-columns: 1fr; } nav { padding: 0 14px; gap: 8px; } .nav-links { display: none; } .two-col { grid-template-columns: 1fr; } .other-grid { grid-template-columns: 1fr; } }
-    @media (min-width: 681px) and (max-width: 900px) { .other-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Grilles responsive */
+    .mat-prod-grid { display: grid; grid-template-columns: 260px 1fr; background: var(--bg); border: 2px solid rgba(226,206,22,0.28); border-radius: 16px; overflow: hidden; margin: 36px 0 28px; box-shadow: 0 0 40px rgba(226,206,22,0.06); }
+    .mat-prod-img { background: #0a0908; display: flex; align-items: center; justify-content: center; padding: 28px 20px; min-height: 200px; }
+    .mat-prod-img img { max-width: 100%; max-height: 220px; object-fit: contain; border-radius: 6px; }
+    .mat-prod-body { padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; }
+    .mat-dmx-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; margin: 40px 0 20px; }
+    .mat-dmx-opt { background: var(--bg2); border-radius: 14px; padding: 28px 24px; display: flex; flex-direction: column; gap: 16px; }
+    .mat-ou-sep { display: flex; align-items: center; justify-content: center; padding: 0 20px; }
+
+    /* Mega menu */
     .nav-dropdown-wrap { position: relative; }
     .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
     .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
@@ -104,145 +129,61 @@
     .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
     .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
     .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
-    /* MIDI table */
-    .midi-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 13px; }
-    .midi-table th { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
-    .midi-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--muted); font-size: 13px; vertical-align: top; }
-    .midi-table td:first-child { color: var(--text); font-weight: 500; }
-    .midi-table tr:last-child td { border-bottom: none; }
-    /* Setup steps */
-    .setup-steps { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-    .setup-step { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid rgba(226,206,22,0.06); }
-    .setup-step:last-child { border-bottom: none; }
-    .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-glow); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; color: var(--accent); flex-shrink: 0; }
-    .step-content h3 { font-size: 16px; margin-bottom: 8px; }
-    .step-content p { font-size: 14px; color: var(--muted); line-height: 1.65; }
-  
+
     /* Lang dropdown */
     .lang-selector { position: relative; display: inline-flex; }
-    .lang-selector-btn {
-      display: flex; align-items: center; gap: 6px;
-      background: transparent; border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 6px; padding: 5px 10px; color: var(--muted);
-      font-size: 11px; font-weight: 700; letter-spacing: 1px;
-      cursor: pointer; transition: all 0.18s; white-space: nowrap;
-      font-family: inherit;
-    }
-    .lang-selector-btn:hover,
-    .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
+    .lang-selector-btn { display: flex; align-items: center; gap: 6px; background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 5px 10px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
+    .lang-selector-btn:hover, .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
     .lang-chevron { font-size:9px; opacity:.5; margin-left:2px; transition: transform .18s; display:inline-block; }
-    .lang-selector:hover .lang-chevron,
-    .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
-    .lang-dropdown {
-      display: none; position: absolute; top: calc(100% + 7px); right: 0;
-      background: #141414; border: 1px solid #2a2a2a; border-radius: 8px;
-      padding: 6px 0; min-width: 110px; z-index: 999;
-      box-shadow: 0 8px 24px rgba(0,0,0,.5);
-    }
-    .lang-selector:hover .lang-dropdown,
-    .lang-selector:focus-within .lang-dropdown { display: block; }
-    .lang-dropdown a, .lang-dropdown span {
-      display: flex; align-items: center; gap: 8px;
-      padding: 7px 14px; font-size: 12px; font-weight: 600;
-      color: var(--muted); text-decoration: none; letter-spacing: 1px;
-      transition: color .15s, background .15s; white-space: nowrap;
-    }
+    .lang-selector:hover .lang-chevron, .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
+    .lang-dropdown { display: none; position: absolute; top: calc(100% + 7px); right: 0; background: #141414; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px 0; min-width: 110px; z-index: 999; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+    .lang-selector:hover .lang-dropdown, .lang-selector:focus-within .lang-dropdown { display: block; }
+    .lang-dropdown a, .lang-dropdown span { display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color .15s, background .15s; white-space: nowrap; }
     .lang-dropdown a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
     .lang-dropdown span { color: var(--accent); cursor: default; }
 
-    /* Footer newsletter */
-        
-    @media (max-width: 700px) {
-      .nl-strip { flex-direction: column; align-items: flex-start; padding: 36px 20px; }
-      .nl-form input[type="email"] { width: 160px; }
-    }
-    /* ── Footer ─────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 32px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .footer-main {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .footer-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 22px;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 1px;
-      flex-shrink: 0;
-    }
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
     .footer-logo em { font-style: normal; color: var(--accent); }
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .footer-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 13px;
-      transition: color 0.2s;
-    }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
     .footer-links a:hover { color: var(--text); }
     .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
-    .nl-form {
-      display: flex;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      transition: border-color .2s;
-    }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
     .nl-form:focus-within { border-color: var(--accent); }
-    .nl-form input[type="email"] {
-      background: #111;
-      border: none;
-      padding: 10px 16px;
-      color: var(--text);
-      font-size: 13px;
-      outline: none;
-      width: 200px;
-    }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
     .nl-form input[type="email"]::placeholder { color: #555; }
-    .nl-form button {
-      background: var(--accent);
-      color: #000;
-      border: none;
-      padding: 10px 18px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: 14px;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background .18s;
-    }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
     .nl-form button:hover { background: #ffd700; }
     .nl-msg { font-size: 11px; min-height: 14px; }
-    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.ok { color: var(--accent); }
     .nl-msg.err { color: #ff5555; }
-    .footer-copy {
-      color: var(--muted);
-      font-size: 11px;
-      text-align: center;
-      border-top: 1px solid var(--border);
-      padding-top: 16px;
-    }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    .mat-compat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+    .proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+
+    @media (max-width: 900px) { .other-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 780px) {
+      .mat-prod-grid { grid-template-columns: 1fr; }
+      .mat-prod-img { display: none; }
+      .mat-dmx-grid { grid-template-columns: 1fr; }
+      .mat-ou-sep { padding: 8px 0; }
       .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
       .footer-nl { align-items: flex-start; }
-      .nl-form input[type="email"] { width: 150px; }
+      .proj-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    </style>
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .other-grid { grid-template-columns: 1fr; }
+      .mat-compat-grid { grid-template-columns: 1fr; }
+      .proj-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -264,209 +205,328 @@
   <!-- HERO -->
   <section class="hero-section">
     <div class="wrap">
-      <div class="breadcrumb">
-        <a href="./">Início</a> &rsaquo; <span>Controlador AKAI APC mini mk2</span>
+      <nav class="breadcrumb" aria-label="Trilho de navegação">
+        <a href="./">Início</a> &nbsp;/&nbsp; <span>Material compatível</span>
+      </nav>
+      <div class="hero-badge">Setup completo · Controlador + Interface DMX + Projetores</div>
+      <h1>Que material<br>para <em>MyStrow?</em></h1>
+      <p class="hero-sub">Um controlador MIDI e uma interface DMX. É tudo o que é preciso para comandar um palco completo. Eis o que recomendamos — com os links para encomendar.</p>
+
+      <!-- Schéma de connexion -->
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:4px 0 20px;">
+        <span style="background:rgba(226,206,22,0.08);border:1px solid rgba(226,206,22,0.25);border-radius:8px;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--accent);">🎹 Controlador MIDI</span>
+        <span style="color:var(--muted);font-size:18px;">→</span>
+        <span style="background:rgba(226,206,22,0.08);border:1px solid rgba(226,206,22,0.25);border-radius:8px;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--accent);">💻 MyStrow</span>
+        <span style="color:var(--muted);font-size:18px;">→</span>
+        <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--muted);">📡 Interface DMX</span>
+        <span style="color:var(--muted);font-size:18px;">→</span>
+        <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:9px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;color:var(--muted);">💡 Projetores DMX</span>
       </div>
-      <div class="hero-badge">Controlador MIDI · Integração Nativa</div>
-      <h1>AKAI APC mini mk2 <em>&amp; MyStrow</em></h1>
-      <p class="hero-sub">O MyStrow foi concebido para trabalhar lado a lado com o AKAI APC mini mk2. Cada pad, cada fader, cada botão tem o seu mapeamento direto no software.</p>
-      <a href="download" class="btn-primary">Transferir o MyStrow ↓</a>
-      <img src="../akai.webp" alt="AKAI APC mini mk2 com o MyStrow" style="width:100%;border-radius:14px;margin-top:48px;border:1px solid var(--border)">
+      <p style="font-size:13px;color:var(--muted);">O controlador MIDI é opcional — o MyStrow também se comanda com teclado e rato.</p>
     </div>
   </section>
 
-  <!-- INTEGRATION -->
+  <!-- SECTION 1 : INTERFACE DMX -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Integração</div>
-      <h2>Integração nativa concebida para atuações ao vivo</h2>
-      <div class="prose">
-        <p>A grelha de 8×8 pads está mapeada às cores das suas fixtures. Clique num pad para mudar a cor, mova os faders para a intensidade. Os botões FX à direita acionam chase, estroboscópio, arco-íris e muito mais.</p>
+      <div class="section-tag">1 · Interface DMX</div>
+      <h2>A interface DMX — a ligação entre o MyStrow e os seus projetores</h2>
+      <p style="color:var(--muted);font-size:15px;max-width:640px;margin-top:8px;line-height:1.65;">A interface DMX converte o sinal do seu computador em comandos DMX512 para os seus projetores. Duas soluções consoante a instalação. <strong style="color:var(--text);">Basta uma.</strong></p>
+
+      <!-- Deux options -->
+      <div class="mat-dmx-grid">
+
+        <!-- Node ArtNet -->
+        <div class="mat-dmx-opt" style="border:1px solid rgba(0,212,255,0.2);">
+          <div>
+            <span style="display:inline-block;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.2);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#00d4ff;margin-bottom:12px;">Instalação fixa · Pro</span>
+            <img src="../img-shop/Node.jpg" alt="Nó Art-Net DMX" style="width:100%;max-height:150px;object-fit:contain;background:#0a0908;border-radius:8px;padding:10px;margin-bottom:14px;display:block;">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px;">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;">Node ArtNet DMX</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:#00d4ff;">59€</div>
+            </div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Liga-se por cabo de rede RJ45 entre o computador e o nó, que converte para DMX512 até aos projetores. Muito estável em palco, latência zero. A escolha de clubes, salas de espetáculo e instalações permanentes.</p>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:rgba(0,212,255,0.06);color:#00d4ff;border:1px solid rgba(0,212,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">Rede RJ45</span>
+            <span style="background:rgba(0,212,255,0.06);color:#00d4ff;border:1px solid rgba(0,212,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">XLR DMX512</span>
+            <span style="background:rgba(0,212,255,0.06);color:#00d4ff;border:1px solid rgba(0,212,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">Muito estável</span>
+          </div>
+          <a href="https://amzn.to/4tQKRCM" target="_blank" rel="noopener noreferrer sponsored"
+             style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(0,212,255,0.08);border:1px solid rgba(0,212,255,0.3);color:#00d4ff;border-radius:10px;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;letter-spacing:.5px;text-decoration:none;transition:opacity .18s;margin-top:auto;"
+             onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">
+            Ver na Amazon ↗
+          </a>
+        </div>
+
+        <!-- OU -->
+        <div class="mat-ou-sep">
+          <div style="background:#111;border:1px solid rgba(255,255,255,0.12);border-radius:999px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;">OU</div>
+        </div>
+
+        <!-- USB Node ArtNet -->
+        <div class="mat-dmx-opt" style="border:1px solid rgba(160,100,255,0.2);">
+          <div>
+            <span style="display:inline-block;background:rgba(160,100,255,0.08);border:1px solid rgba(160,100,255,0.2);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#a064ff;margin-bottom:12px;">Porta USB · Sem rede</span>
+            <img src="../img-shop/UsbDmx.jpg" alt="Interface nó USB Art-Net DMX Electroconcept" style="width:100%;max-height:150px;object-fit:contain;background:#0a0908;border-radius:8px;padding:10px;margin-bottom:14px;display:block;">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px;">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;">USB Node DMX ArtNet</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:#a064ff;">59€</div>
+            </div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Um verdadeiro nó Art-Net, mas por <strong style="color:var(--text);">USB</strong> : comande DMX512 sem placa de rede Ethernet dedicada. Plug &amp; play (sem controladores para instalar), RDM integrado e saída optoisolada que protege o computador. O nó cria a sua própria rede (2.0.0.1) e o MyStrow deteta-o automaticamente. Ideal se o computador só tiver uma porta USB.</p>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">Art-Net por USB</span>
+            <span style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">Plug &amp; Play</span>
+            <span style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">RDM</span>
+            <span style="background:rgba(160,100,255,0.06);color:#a064ff;border:1px solid rgba(160,100,255,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">Optoisolado</span>
+          </div>
+          <a href="https://amzn.to/3SAUDv5" target="_blank" rel="noopener noreferrer sponsored"
+             style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(160,100,255,0.08);border:1px solid rgba(160,100,255,0.3);color:#a064ff;border-radius:10px;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;letter-spacing:.5px;text-decoration:none;transition:opacity .18s;margin-top:auto;"
+             onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">
+            Ver na Amazon ↗
+          </a>
+        </div>
+
       </div>
-      <div class="badge-row">
-        <span class="badge">MIDI USB</span>
-        <span class="badge">64 pads LED</span>
-        <span class="badge">9 faders</span>
-        <span class="badge">Plug &amp; play</span>
-        <span class="badge">Bidirecional</span>
-        <span class="badge">4 universos Art-Net</span>
+
+      <p style="text-align:center;font-size:12px;color:#555;line-height:1.5;margin-top:8px;">
+        * Links de afiliado da Amazon — se comprar através deles, recebemos uma pequena comissão sem qualquer custo adicional para si. Obrigado pelo apoio!
+      </p>
+
+      <!-- Listes détaillées des interfaces compatibles -->
+      <div class="mat-compat-grid">
+
+        <!-- Nodes ArtNet -->
+        <div style="background:rgba(0,212,255,0.03);border:1px solid rgba(0,212,255,0.12);border-radius:12px;padding:22px 20px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#00d4ff;margin-bottom:12px;">🌐 Nós Art-Net compatíveis</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">ENTTEC ODE Mk2</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">~200 € · Referência</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">DMXking eDMX1 PRO</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">~130 € · Compacto</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">DMXking eDMX2 PRO</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">~200 € · 2 universos</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">Luminex Ethernet-DMX</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">~300 €+ · Multiuniverso</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(0,212,255,0.04);border:1px solid rgba(0,212,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">Compatível com qualquer nó DMX aberto</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">Art-Net standard</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interfaces USB/DMX -->
+        <div style="background:rgba(160,100,255,0.03);border:1px solid rgba(160,100,255,0.12);border-radius:12px;padding:22px 20px;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a064ff;margin-bottom:12px;">🔌 Interfaces USB/DMX compatíveis</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">ENTTEC DMX USB PRO</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">Referência</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">DMXking ultraDMX Micro</span>
+              <span style="font-size:11px;color:var(--muted);white-space:nowrap;flex-shrink:0;">Compacto</span>
+            </div>
+            <a href="https://amzn.to/4fitEMN" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);text-decoration:none;transition:border-color .18s;">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">Eurolite USB-DMX512 PRO MK2</span>
+              <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">150€ ↗</span>
+            </a>
+            <a href="https://amzn.to/4aLO0MT" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);text-decoration:none;transition:border-color .18s;">
+              <span style="font-size:13px;font-weight:600;color:var(--text);">ENTTEC Open DMX USB (70303)</span>
+              <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">97,55€ ↗</span>
+            </a>
+            <a href="https://amzn.to/4eZlx8N" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;flex-direction:column;gap:5px;padding:8px 10px;border-radius:7px;background:rgba(226,206,22,0.05);border:1px solid rgba(226,206,22,0.22);text-decoration:none;transition:border-color .18s;">
+              <span style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;">
+                <span style="font-size:13px;font-weight:600;color:var(--text);">⚠️ Adaptador USB DMX512</span>
+                <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">16,14€ ↗</span>
+              </span>
+              <span style="font-size:11px;color:var(--accent);line-height:1.55;font-weight:600;">Apenas como recurso de emergência, não para espetáculos</span>
+              <span style="font-size:11px;color:var(--muted);line-height:1.55;">Este tipo de adaptador não tem microcontrolador nem memória intermédia: é o computador que gera o sinal DMX em tempo real. A mínima carga do processador pode fazer as luzes tremeluzir ou bloquear. Para um espetáculo, prefira um nó Art-Net ou uma interface USB com eletrónica própria.</span>
+            </a>
+          </div>
+        </div>
+
       </div>
+
+
     </div>
   </section>
 
-  <!-- MAPPING -->
+  <!-- SECTION 2 : CONTRÔLEUR MIDI -->
   <section class="section">
     <div class="wrap">
-      <div class="section-tag">Mapeamento MIDI</div>
-      <h2>Cada elemento do AKAI tem o seu papel</h2>
-      <div class="feat-grid">
-        <div class="feat-item">
-          <div class="feat-icon">🟡</div>
-          <h3>Pads LED multicolor</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Os 64 pads da grelha de 8×8 estão mapeados, cada um, a uma cor, um efeito ou uma cena de luz predefinida. O seu feedback LED corresponde sempre ao estado de luz atual no palco. A navegação visual é imediata.</p>
+      <div class="section-tag">2 · Controlador MIDI <span style="color:var(--muted);font-weight:600;">(opcional)</span></div>
+      <h2>O AKAI APC mini mk2, pensado para o MyStrow</h2>
+      <p style="color:var(--muted);font-size:15px;max-width:640px;margin-top:8px;line-height:1.65;">O MyStrow foi pensado e otimizado em torno do AKAI APC mini mk2: cada pad da grelha 8×8 corresponde a uma cor ou a uma cena, e os 9 faders gerem a intensidade grupo a grupo. O Novation Launchpad Mini MK3 é uma alternativa perfeitamente reconhecida. <strong style="color:var(--text);">Basta um — e o controlador continua opcional.</strong></p>
+
+      <div class="mat-dmx-grid">
+
+        <!-- AKAI -->
+        <div class="mat-dmx-opt" style="border:1px solid rgba(226,206,22,0.25);">
+          <div>
+            <span style="display:inline-block;background:rgba(226,206,22,0.1);border:1px solid rgba(226,206,22,0.3);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">⭐ Recomendado · pensado para o MyStrow</span>
+            <img src="../img-shop/AKAIAPCMINI.png" alt="AKAI APC mini mk2" style="width:100%;max-height:150px;object-fit:contain;background:#0a0908;border-radius:8px;padding:10px;margin-bottom:14px;display:block;">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px;">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;">AKAI APC mini mk2</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:var(--accent);">89€</div>
+            </div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Plug &amp; play, sem controladores: o MyStrow deteta-o ao arrancar. Grelha 8×8 de pads LED que se acendem em tempo real, mais 9 faders de intensidade e botões de mute por grupo. A experiência ao vivo de referência.</p>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:rgba(226,206,22,0.06);color:var(--accent);border:1px solid rgba(226,206,22,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">8×8 pads LED</span>
+            <span style="background:rgba(226,206,22,0.06);color:var(--accent);border:1px solid rgba(226,206,22,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">9 faders</span>
+            <span style="background:rgba(226,206,22,0.06);color:var(--accent);border:1px solid rgba(226,206,22,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">USB plug &amp; play</span>
+          </div>
+          <a href="https://amzn.to/3PhCmBO" target="_blank" rel="noopener noreferrer sponsored"
+             style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(226,206,22,0.1);border:1px solid rgba(226,206,22,0.35);color:var(--accent);border-radius:10px;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;letter-spacing:.5px;text-decoration:none;transition:opacity .18s;margin-top:auto;"
+             onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">
+            Ver na Amazon ↗
+          </a>
         </div>
-        <div class="feat-item">
-          <div class="feat-icon">🎚️</div>
-          <h3>Faders de intensidade</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Os 9 faders verticais controlam a intensidade de cada grupo de fixtures. O fader 9 (mais à direita) é o fader master. Os primeiros 8 correspondem aos grupos A a F e às zonas configuradas.</p>
+
+        <!-- OU -->
+        <div class="mat-ou-sep">
+          <div style="background:#111;border:1px solid rgba(255,255,255,0.12);border-radius:999px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1px;">OU</div>
         </div>
-        <div class="feat-item">
-          <div class="feat-icon">🔇</div>
-          <h3>Botões Mute</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Por baixo de cada fader existe um botão mute dedicado. Premir um botão mute corta instantaneamente a saída DMX do grupo correspondente, sem modificar os valores guardados. Ideal para blackouts rápidos durante um show.</p>
+
+        <!-- Novation -->
+        <div class="mat-dmx-opt" style="border:1px solid rgba(90,209,127,0.2);">
+          <div>
+            <span style="display:inline-block;background:rgba(90,209,127,0.1);border:1px solid rgba(90,209,127,0.3);border-radius:999px;padding:3px 12px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5ad17f;margin-bottom:12px;">Alternativa compacta</span>
+            <img src="../img-shop/Novation.png" alt="Novation Launchpad Mini MK3" style="width:100%;max-height:150px;object-fit:contain;background:#0a0908;border-radius:8px;padding:10px;margin-bottom:14px;display:block;">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px;">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;">Novation Launchpad Mini MK3</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;color:#5ad17f;">89€</div>
+            </div>
+            <p style="font-size:14px;color:var(--muted);line-height:1.6;">Reconhecido como plug &amp; play pelo MyStrow. Grelha 8×8 de pads RGB com retorno LED vivo para comandar cores e memórias. Ultracompacto. A notar: sem faders físicos — a intensidade regula-se pelos pads, pelo tablet ou pela planta de palco.</p>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:rgba(90,209,127,0.06);color:#5ad17f;border:1px solid rgba(90,209,127,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">8×8 pads RGB</span>
+            <span style="background:rgba(90,209,127,0.06);color:#5ad17f;border:1px solid rgba(90,209,127,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">USB-C</span>
+            <span style="background:rgba(90,209,127,0.06);color:#5ad17f;border:1px solid rgba(90,209,127,0.15);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;">Sem faders</span>
+          </div>
+          <a href="https://amzn.to/43j8Y1B" target="_blank" rel="noopener noreferrer sponsored"
+             style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(90,209,127,0.1);border:1px solid rgba(90,209,127,0.35);color:#5ad17f;border-radius:10px;padding:12px 20px;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;letter-spacing:.5px;text-decoration:none;transition:opacity .18s;margin-top:auto;"
+             onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">
+            Ver na Amazon ↗
+          </a>
         </div>
-        <div class="feat-item">
-          <div class="feat-icon">⚡</div>
-          <h3>Efeitos ao vivo</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.65;">Os botões da coluna direita acionam efeitos instantâneos: flash (pulso de intensidade máxima), estroboscópio (intermitência rápida ajustável), chase (varrimento automático entre grupos). Estes efeitos não são destrutivos e não modificam o estado guardado das suas fixtures.</p>
+
+      </div>
+
+      <!-- Autres contrôleurs compatibles -->
+      <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px 28px;margin:20px 0;">
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;margin-bottom:8px;color:var(--text);">Outros controladores compatíveis</h3>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.6;">Outras superfícies de controlo MIDI funcionam com o MyStrow através de remapeamento. São compatíveis, mas sem o mapeamento nativo plug &amp; play do APC mini mk2.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="background:rgba(226,206,22,0.07);border:1px solid rgba(226,206,22,0.25);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--accent);font-weight:700;">⭐ AKAI APC mini mk2</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--muted);">AKAI APC mini mk1</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--muted);">AKAI APC40</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--muted);">AKAI MIDImix</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--muted);">Novation Launchpad Mini MK1</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:5px 14px;font-size:13px;color:var(--muted);">Novation Launchpad Mini MK2</span>
+          <span style="background:rgba(90,209,127,0.07);border:1px solid rgba(90,209,127,0.25);border-radius:999px;padding:5px 14px;font-size:13px;color:#5ad17f;font-weight:700;">⭐ Novation Launchpad Mini MK3</span>
         </div>
+      </div>
+
+      <!-- Pas de contrôleur -->
+      <div style="background:rgba(226,206,22,0.04);border:1px solid rgba(226,206,22,0.15);border-radius:12px;padding:22px 28px;">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--accent);margin-bottom:8px;">Sem controlador? Nenhum problema.</div>
+        <p style="font-size:14px;color:var(--muted);line-height:1.65;">O MyStrow inclui um <strong style="color:var(--text);">simulador AKAI no ecrã</strong> — grelha de 8×8 pads e 9 faders, utilizável com o rato ou num ecrã tátil. Também pode comandar tudo com teclado e rato. O controlador físico oferece a melhor experiência ao vivo, mas é totalmente opcional.</p>
       </div>
     </div>
   </section>
 
-  <!-- MIDI REFERENCE TABLE -->
+  <!-- SECTION 3 : PROJECTEURS DMX -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Referência</div>
-      <h2>Tabela completa de mapeamento MIDI</h2>
-      <table class="midi-table">
-        <thead>
-          <tr>
-            <th>Elemento AKAI</th>
-            <th>Nota MIDI / CC</th>
-            <th>Função no MyStrow</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pads da grelha 8×8 (linhas 1–8)</td>
-            <td>Note On/Off · 0–63</td>
-            <td>Seleção de cor ou cena de luz</td>
-          </tr>
-          <tr>
-            <td>Pads da coluna direita (8 botões)</td>
-            <td>Note On · 82–89</td>
-            <td>Acionadores de efeitos flash, estroboscópio, chase</td>
-          </tr>
-          <tr>
-            <td>Faders 1–8</td>
-            <td>CC · 48–55</td>
-            <td>Intensidade do grupo de fixtures</td>
-          </tr>
-          <tr>
-            <td>Fader 9 (master)</td>
-            <td>CC · 56</td>
-            <td>Intensidade master</td>
-          </tr>
-          <tr>
-            <td>Botões mute 1–8</td>
-            <td>Note On · 100–107</td>
-            <td>Silenciar/reativar grupos de fixtures</td>
-          </tr>
-          <tr>
-            <td>Feedback LED dos pads</td>
-            <td>Note On (saída)</td>
-            <td>Reflete as cores ativas das fixtures</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+      <div class="section-tag">3 · Projetores DMX</div>
+      <h2>Todos os seus projetores DMX são compatíveis</h2>
+      <p style="color:var(--muted);font-size:15px;max-width:640px;margin-top:8px;line-height:1.65;margin-bottom:32px;">O MyStrow utiliza o protocolo <strong style="color:var(--text);">DMX512 padrão</strong>. Não importa a marca nem o modelo — se o projetor recebe DMX, é compatível. Configure os canais manualmente ou importe um ficheiro de fixture.</p>
 
-  <!-- COMPATIBILITY -->
-  <section class="section">
-    <div class="wrap">
-      <div class="section-tag">Compatibilidade</div>
-      <h2>Também compatível com outras superfícies de controlo</h2>
-      <div class="prose">
-        <p>O AKAI APC mini mk2 é a superfície de referência para o MyStrow, mas o software também funciona com rato e teclado através da interface gráfica.</p>
-        <p>O simulador AKAI integrado reproduz no ecrã a grelha de 8×8 pads e os 9 faders, permitindo-lhe preparar os seus shows sem um controlador ligado. Qualquer controlador MIDI padrão também é compatível através de remapeamento.</p>
-      </div>
-      <h3 style="margin-top:28px;">Outros métodos de controlo</h3>
-      <ul class="check-list">
-        <li>Simulador AKAI integrado (rato/ecrã tátil)</li>
-        <li>Atalhos de teclado para ações rápidas</li>
-        <li>Qualquer controlador MIDI padrão (remapeamento)</li>
-        <li>StreamDeck / Elgato (atalhos atribuíveis)</li>
-        <li>Interface tátil em tablet ou ecrã tátil</li>
-        <li>Controlo programático através da linha do tempo e sequências</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SETUP -->
-  <section class="section-bg">
-    <div class="wrap">
-      <div class="section-tag">Configuração</div>
-      <h2>Ligue o AKAI APC mini mk2 em 3 passos</h2>
-      <div class="setup-steps">
-        <div class="setup-step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h3>Ligue o controlador</h3>
-            <p>Ligue o AKAI APC mini mk2 ao seu computador via USB. Sem controladores a instalar no Windows 10/11 ou macOS 11+: o controlador é automaticamente reconhecido como um dispositivo MIDI padrão.</p>
-          </div>
+      <div class="proj-grid">
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:8px;">💡</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">LED PAR</div>
+          <div style="font-size:12px;color:var(--muted);">3CH, 4CH, 5CH, 6CH</div>
         </div>
-        <div class="setup-step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h3>Inicie o MyStrow</h3>
-            <p>Inicie o MyStrow. O software deteta automaticamente o AKAI APC mini mk2 no arranque e ativa a interface MIDI. Os pads acendem-se de acordo com o estado atual do seu programa de luz.</p>
-          </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:8px;">🎯</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Moving heads e wash</div>
+          <div style="font-size:12px;color:var(--muted);">Beam, spot, wash, RGBW</div>
         </div>
-        <div class="setup-step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h3>Toque</h3>
-            <p>Prima um pad para mudar as cores das suas fixtures, mova um fader para ajustar a intensidade, use os botões do lado direito para acionar os seus efeitos. A configuração é imediata, mesmo sem formação prévia.</p>
-          </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:8px;">⚡</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Estroboscópios</div>
+          <div style="font-size:12px;color:var(--muted);">Controlo de intensidade e velocidade</div>
         </div>
-        <div class="setup-step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h3>Zero configuração</h3>
-            <p>O mapeamento MIDI está totalmente pré-configurado para o AKAI APC mini mk2. Não é necessário criar cenas MIDI, configurar canais ou programar macros. Está tudo pronto a usar desde a primeira ligação.</p>
-          </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:8px;">🌫️</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Máquinas de fumo</div>
+          <div style="font-size:12px;color:var(--muted);">Disparo DMX</div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:8px;">🔦</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Convencional</div>
+          <div style="font-size:12px;color:var(--muted);">PAR56, PAR64, PC, Fresnel…</div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;text-align:center;">
+          <div style="font-size:24px;margin-bottom:8px;">🎨</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;margin-bottom:4px;">Qualquer aparelho DMX512</div>
+          <div style="font-size:12px;color:var(--muted);">Qualquer marca, qualquer modo</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <div class="cta-block">
+  <section class="cta-block">
     <div class="wrap">
-      <div class="section-tag">Get Started</div>
-      <h2>Transfira o MyStrow e ilumine o seu palco</h2>
-      <p>Instale o MyStrow, ligue o seu AKAI APC mini mk2 e assuma o controlo das suas fixtures em menos de 5 minutos.</p>
-      <a href="download" class="btn-primary">Transferir o MyStrow ↓</a>
+      <div class="section-tag">Começar</div>
+      <h2>Descarregue o MyStrow gratuitamente</h2>
+      <p>Instale o MyStrow, ligue o seu material e assuma o controlo dos projetores em menos de 5 minutos.</p>
+      <a href="download" class="btn-primary" id="dl-btn-mat" style="display:inline-block;padding:14px 36px;font-size:16px;border-radius:999px;">Descarregar ↓</a>
     </div>
-  </div>
+  </section>
 
-  <!-- EXPLORE -->
+  <!-- AUTRES FONCTIONNALITÉS -->
   <section class="section-bg">
     <div class="wrap">
-      <div class="section-tag">Explore</div>
-      <h2>Descubra todas as funcionalidades</h2>
+      <div class="section-tag">Explorar</div>
+      <h2>Outras funcionalidades</h2>
       <div class="other-grid">
+        <a href="./#pricing" class="other-card">
+          <h3>Versão gratuita</h3>
+          <p>14 dias de acesso sem cartão bancário&nbsp;: o que está incluído e o que não está.</p>
+        </a>
         <a href="dmx-lighting-software" class="other-card">
-          <h3>⚡ Software de iluminação DMX</h3>
-          <p>Controlo DMX completo a partir do seu PC. Protocolo Art-Net, 25 fps, suporte multi-fixture.</p>
+          <h3>Software de iluminação DMX</h3>
+          <p>Controlo DMX Art-Net em tempo real de todos os seus projetores LED, moving heads e PAR a partir do computador.</p>
         </a>
         <a href="ai-lighting" class="other-card">
-          <h3>✨ Iluminação com IA</h3>
-          <p>A IA assume o controlo de todo o palco, reativa à música em tempo real.</p>
+          <h3>IA de iluminação</h3>
+          <p>A IA analisa o som e gera ambientes luminosos coerentes de forma totalmente automática.</p>
         </a>
         <a href="light-programming" class="other-card">
-          <h3>🎬 Programação de luzes</h3>
-          <p>Timeline visual, keyframes, clips editáveis. Componha os seus espetáculos antecipadamente.</p>
+          <h3>Programação de luz</h3>
+          <p>Linha de tempo visual, keyframes, clips editáveis. Componha os seus espetáculos com antecedência e sincronize-os com a música.</p>
         </a>
         <a href="audio-video-player" class="other-card">
-          <h3>🎵 Leitor de Áudio &amp; Vídeo</h3>
-          <p>Playlist e projeções geridas a partir da mesma interface. Tudo num só lugar.</p>
+          <h3>Leitor de áudio e vídeo</h3>
+          <p>Faça a gestão da playlist e das projeções na mesma interface. Som, imagem e luz num só programa.</p>
         </a>
         <a href="stage-plot" class="other-card">
-          <h3>🗺️ Plano de palco interativo</h3>
-          <p>Visualize e controle os seus grupos de projetores com um clique ou fader.</p>
+          <h3>Planta de palco interativa</h3>
+          <p>Visualize e controle os seus projetores numa planta interativa. Grupos, zonas e patch DMX em tempo real.</p>
         </a>
       </div>
     </div>
@@ -477,11 +537,11 @@
 <footer>
   <div class="footer-main">
     <a href="./" class="footer-logo">MY<em>STROW</em></a>
-    <nav class="footer-links" aria-label="Rodapé"><a href="download">Transferir</a><a href="#pricing">Preços</a><a href="terms">Condições</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidade</a><a href="contact">Contato</a></nav>
+    <nav class="footer-links" aria-label="Footer"><a href="download">Descarregar</a><a href="./#pricing">Preços</a><a href="terms">Termos</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidade</a><a href="contact">Contact</a><a href="/shop">Shop</a></nav>
     <div class="footer-nl">
       <form class="nl-form" onsubmit="handleNewsletter(event)">
-        <input type="email" id="nl-email" placeholder="Seu endereço de email" required>
-        <button type="submit">Inscrever</button>
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">Subscrever</button>
       </form>
       <div class="nl-msg" id="nl-msg"></div>
     </div>
@@ -489,10 +549,28 @@
   <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
     <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
     <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+    <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
   </div>
   <div class="footer-copy">© 2026 MyStrow · Todos os direitos reservados</div>
 </footer>
 
+<script>
+(function() {
+  var isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
+  var btn = document.getElementById('dl-btn-mat');
+  if (btn) {
+    if (!isMac) {
+      btn.href = 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
+      btn.textContent = 'Télécharger pour Windows ↗';
+      btn.target = '_blank';
+      btn.rel = 'noopener noreferrer';
+    } else {
+      btn.textContent = 'Télécharger pour macOS ↗';
+    }
+  }
+})();
+</script>
 
 <script>
 function handleNewsletter(e) {
@@ -509,9 +587,9 @@ function handleNewsletter(e) {
     headers: { 'Content-Type': 'application/json', 'api-key': k },
     body: JSON.stringify({ email: email, listIds: [3], updateEnabled: true })
   }).then(function(r) {
-    if (r.ok || r.status === 204) { msg.textContent = '✓ Bem-vindo!'; msg.className = 'nl-msg ok'; }
-    else { msg.textContent = 'Ocorreu um erro.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
-  }).catch(function() { msg.textContent = 'Ocorreu um erro.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
 }
 </script>
 <script src="../nav.js" defer></script>
@@ -519,3 +597,4 @@ function handleNewsletter(e) {
 <script src="/lang-suggest.js" defer></script>
 </body>
 </html>
+
