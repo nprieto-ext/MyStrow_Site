@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Moving Heads mit dem Gamepad richten — MyStrow-Guide | MyStrow</title>
+  <meta name="description" content="Richten Sie Ihre Moving Heads per Stick, wie mit einem Trackball am Pult. Kompatible Gamepads (Xbox, PS4, PS5, 8BitDo, Logitech), Totzone und Geschwindigkeit einstellen, und der Sonderfall PS3-Gamepad.">
+  <meta name="keywords" content="Gamepad Moving Head, Pan Tilt Gamepad, PS4 Controller Licht, Xbox Controller DMX, DualSense Beleuchtung, Moving Head richten Gamepad, Trackball Licht, MyStrow Gamepad, DualShock 3 Windows">
+  <link rel="canonical" href="https://mystrow.fr/de/manette-jeu-lyres-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manette-jeu-lyres-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/de/manette-jeu-lyres-mystrow">
+  <meta property="og:title" content="Moving Heads mit dem Gamepad richten in MyStrow">
+  <meta property="og:description" content="Der Stick steuert Geschwindigkeit, nicht Position: drücken zum Bewegen, loslassen zum Anhalten. Kompatible Gamepads, Einstellungen und Fehlersuche.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2026-08-07">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moving Heads mit dem Gamepad richten in MyStrow">
+  <meta name="twitter:description" content="Der Stick steuert Geschwindigkeit, nicht Position: drücken zum Bewegen, loslassen zum Anhalten. Kompatible Gamepads, Einstellungen und Fehlersuche.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Moving Heads mit dem Gamepad richten in MyStrow",
+  "description": "Richten Sie Ihre Moving Heads per Stick, wie mit einem Trackball am Pult. Kompatible Gamepads (Xbox, PS4, PS5, 8BitDo, Logitech), Totzone und Geschwindigkeit einstellen, und der Sonderfall PS3-Gamepad.",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/de/manette-jeu-lyres-mystrow"
+  },
+  "url": "https://mystrow.fr/de/manette-jeu-lyres-mystrow",
+  "keywords": [
+    "Gamepad",
+    "Pan Tilt",
+    "Moving Head",
+    "DMX",
+    "Xbox",
+    "PS4",
+    "PS5",
+    "DualSense",
+    "MyStrow"
+  ]
+}
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welche Gamepads funktionieren mit MyStrow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Xbox-Gamepads (Series, One, 360), das DualShock 4, das DualSense, das Nintendo Switch Pro, die Logitech F310/F510/F710 und die 8BitDo-Modelle funktionieren ohne Installation, über USB wie über Bluetooth. MyStrow stützt sich auf die Gamepad-Datenbank von SDL, die über zweihundert davon kennt. Das PS3-Gamepad ist der Sonderfall: Es verlangt unter Windows einen Fremdtreiber."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum wird mein PS3-Gamepad erkannt, tut aber nichts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unter Windows meldet der Standardtreiber das DualShock 3 an, fordert es aber nie zum Senden auf. Es erscheint also in der Liste, mit Namen, und schickt keinerlei Daten: weder Sticks noch Tasten. Nötig ist ein spezieller Treiber wie DsHidMini. MyStrow erkennt genau diesen Fall und zeigt ihn im Konfigurationsfenster an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Springt der Strahl beim Loslassen des Sticks zurück in die Mitte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die Auslenkung des Sticks steuert eine GESCHWINDIGKEIT und keine Position: Sie drücken, um den Strahl zu bewegen, und lassen los, um ihn dort anzuhalten, wo er ist. So verhält sich ein Trackball oder ein Pult-Encoder. Würde der Stick die absolute Position steuern, brächte ihn seine Rückstellfeder jedes Mal in die Bühnenmitte zurück."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wozu dient die Totzone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein abgenutzter Stick kehrt nie exakt auf null zurück. Ohne Totzone würden die Moving Heads den ganzen Abend langsam davondriften, ohne dass jemand das Gamepad anfasst — und bis man versteht, woher es kommt, ist die Show vorbei. Voreingestellt sind 12 %, jenseits normaler Abnutzung. Erhöhen Sie den Wert, wenn sich Ihre Geräte von allein bewegen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Stört das Gamepad laufende Effekte und Speicherstellen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Solange die Sticks in Ruhe sind, schreibt und sendet MyStrow nichts: Das Gamepad kann nicht mit einem Effekt, einer Speicherstelle oder einer REC-Licht-Sequenz konkurrieren. Es übernimmt nur die angesteuerten Geräte, und nur während Sie den Stick drücken."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://mystrow.fr/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://mystrow.fr/de/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Moving Heads mit dem Gamepad richten",
+      "item": "https://mystrow.fr/de/manette-jeu-lyres-mystrow"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    /* Tableau comparatif (repris de synchroniser-mystrow-logiciel-dj) */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css">
+</head>
+<body>
+
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+        <a href="./">Startseite</a> &nbsp;/&nbsp;
+        <a href="blog">Tutorials</a> &nbsp;/&nbsp;
+        <span>Moving Heads mit dem Gamepad richten</span>
+      </nav>
+      <div class="hero-badge">🎮 Praxis-Guide · Gamepad</div>
+      <h1>Richten Sie Ihre<br>Moving Heads per <em>Stick</em></h1>
+      <p class="hero-sub">Ein Gamepad für keine dreißig Euro ersetzt das Ziehen mit der Maus, wenn ein Strahl gesetzt werden soll. Die Geste ist die eines Trackballs am Pult: drücken zum Bewegen, loslassen zum Anhalten — genau dort, wo man ist.</p>
+      <div class="hero-meta">
+        <span>Von <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Veröffentlicht am <strong>7. August 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lesezeit: <strong>6 Min.</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#compatibles" class="btn-primary">Kompatible Gamepads →</a>
+        <a href="#reglages" class="btn-outline">Gamepad einstellen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Das Prinzip</div>
+      <h2>Der Stick steuert eine Geschwindigkeit, keine Position</h2>
+      <div class="prose">
+        <p>Das ist die Entscheidung, aus der alles Weitere folgt. Ein Stick wird von einer Feder in die Mitte zurückgeholt: Würde seine Stellung die absolute Position des Moving Heads steuern, <strong>bliebe beim Loslassen der Strahl in der Bühnenmitte stehen</strong>. In der Praxis unbrauchbar.</p>
+        <p>Die Auslenkung steuert deshalb eine Geschwindigkeit. Sie drücken, der Strahl wandert in diese Richtung; Sie lassen los, er bleibt stehen. Genau das Verhalten eines Trackballs oder eines Pult-Encoders — und der Grund, warum man mit dem Stick schneller richtet als mit der Maus in einem 2D-Feld.</p>
+        <p>Die Kennlinie ist <strong>quadratisch</strong>: Feingefühl nahe der Mitte, um ein Frontlicht auf zwanzig Meter zu setzen, volles Tempo am Anschlag, um die Bühne zu queren.</p>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🕹</div>
+          <h3>Linker Stick — die grobe Arbeit</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Er bewegt den Strahl mit voller Geschwindigkeit. Mit ihm bringt man den Moving Head in den richtigen Bereich.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎯</div>
+          <h3>Rechter Stick — der Feinschliff</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Achtmal langsamer. Er setzt den Strahl präzise, sobald der Bereich erreicht ist — ohne eine Einstellung zu ändern.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Solange die Sticks in Ruhe sind, schreibt und sendet MyStrow nichts.</strong> Das Gamepad kann also nicht mit einem laufenden Effekt, einer abgerufenen Speicherstelle oder einer REC-Licht-Sequenz kollidieren: Es übernimmt nur, während Sie tatsächlich drücken.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILITÉ -->
+  <section id="compatibles" class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Kompatibilität</div>
+      <h2>Welche Gamepads funktionieren</h2>
+      <div class="prose" style="max-width:760px;">
+        <p>MyStrow stützt sich auf die Gamepad-Datenbank von SDL, die <strong>über zweihundert Modelle</strong> enthält und die Sticks normiert ausliest: Egal welche Marke, der linke Stick bleibt der linke Stick. Das hier funktioniert — und das verlangt einen Handgriff.</p>
+      </div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th>Gamepad</th>
+              <th>USB</th>
+              <th>Bluetooth</th>
+              <th>Zu tun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Xbox Series X|S, Xbox One, Xbox 360</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nichts — Windows unterstützt es nativ. Die sicherste Wahl.</td>
+            </tr>
+            <tr>
+              <td><strong>DualShock 4 (PS4)</strong> — v1 und v2</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nichts. Für die Bluetooth-Kopplung: Share + PS bis zum Blinken.</td>
+            </tr>
+            <tr>
+              <td><strong>DualSense (PS5)</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nichts.</td>
+            </tr>
+            <tr>
+              <td><strong>Nintendo Switch Pro</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nichts.</td>
+            </tr>
+            <tr>
+              <td><strong>Logitech F310 / F510 / F710</strong></td>
+              <td>✅</td>
+              <td>—</td>
+              <td>Den Schalter auf der Rückseite auf <em>X</em> stellen (XInput-Modus).</td>
+            </tr>
+            <tr>
+              <td><strong>8BitDo</strong> (Pro 2, SN30 Pro, M30…)</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nichts. Sechzehn Modelle werden erkannt.</td>
+            </tr>
+            <tr>
+              <td><strong>DualShock 3 (PS3)</strong></td>
+              <td>⚠️</td>
+              <td>⚠️</td>
+              <td>Fremdtreiber unter Windows zwingend — siehe unten.</td>
+            </tr>
+            <tr>
+              <td>Namenlose „kompatible“ Gamepads</td>
+              <td>❔</td>
+              <td>❔</td>
+              <td>Von Fall zu Fall: viele werden gar nicht als Gamepad erkannt.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box">
+        <p>Hori, Thrustmaster, Razer, Nacon, PowerA, Google Stadia und Amazon Luna stehen ebenfalls in der Datenbank. <strong>Ist Ihr Gamepad angeschlossen, wird aber von MyStrow nicht aufgeführt</strong>, passt kein Profil zu seiner Kennung: Das Konfigurationsfenster nennt es dann beim Namen, statt zu behaupten, es sei nichts angeschlossen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE CAS PS3 -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Der Sonderfall</div>
+      <h2>Das PS3-Gamepad wird erkannt … und bleibt stumm</h2>
+      <div class="prose">
+        <p>Es verdient seinen eigenen Abschnitt, denn das Symptom irritiert: Windows zeigt es an, MyStrow erkennt es, sein Name erscheint grün — und <strong>nichts bewegt sich</strong>. Weder die Sticks noch die Tasten.</p>
+        <p>Die Ursache liegt nicht in der Software. Ein DualShock 3 sendet keine Daten, solange ihm niemand den Befehl zum Senden schreibt, und der Standardtreiber von Windows tut das nie. Genau dafür gibt es Fremdtreiber für dieses Gamepad. Zweites Indiz, wenn es so weit ist: <strong>es trennt sich von selbst</strong> nach ein paar Minuten.</p>
+      </div>
+
+      <div class="lock-box">
+        <p><strong>Die Lösung:</strong> <em>DsHidMini</em> installieren, den gepflegten Treiber, der das alte ScpToolkit ablöst. Das Gamepad meldet sich danach als normales Gamepad, und MyStrow muss nichts ändern. Suchen Sie nicht beim Kabel oder bei einer MyStrow-Option: Ohne diesen Treiber kann keine Software dieses Gamepad lesen.</p>
+      </div>
+
+      <div class="prose" style="margin-top:24px;">
+        <p>MyStrow erkennt genau diesen Fall und zeigt ihn im Konfigurationsfenster an, samt Namen des zu installierenden Treibers. Wenn Sie für diesen Zweck ein Gamepad kaufen: Ein gebrauchtes DualShock 4 oder ein Xbox-Gamepad erspart Ihnen die Frage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISE EN ROUTE -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Inbetriebnahme</div>
+      <h2>Vier Schritte</h2>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Gamepad anschließen</h3>
+            <p>Per USB, oder per Bluetooth, wenn Ihr PC es hat. Am besten, bevor Sie das Fenster öffnen: Die Erkennung ist sofort da, aber sauber begonnen ist halb gewonnen.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Verbindung ▸ Steuerung ▸ 🎮 Gamepad (Pan/Tilt) öffnen</h3>
+            <p>Der Name des Gamepads erscheint grün. Die beiden Balken im Fenster bewegen sich, sobald Sie einen Stick berühren: der schnellste Test, ob alles sitzt.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Wählen, was das Gamepad steuert</h3>
+            <p>Entweder die <strong>im Bühnenplan ausgewählten</strong> Moving Heads — das Ziel wechseln Sie mitten in der Show mit einem Klick — oder <strong>alle Moving Heads</strong> auf einmal. Feste Scheinwerfer sind nie betroffen: Nur Moving Heads haben Pan und Tilt zu bewegen.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>„Aktivieren“ ankreuzen und schließen</h3>
+            <p>Das Gamepad bleibt im Hintergrund aktiv. Öffnen Sie das Fenster wieder, wenn Sie Geschwindigkeit oder Ziel ändern wollen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉGLAGES -->
+  <section id="reglages" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Einstellungen</div>
+      <h2>Zwei Regler, mehr nicht</h2>
+
+      <div class="highlight-box">
+        <h3>Totzone — standardmäßig 12 %</h3>
+        <div class="prose" style="margin:0;">
+          <p style="margin:0;">Das ist die Schwelle, unterhalb derer der Stick als in Ruhe gilt. Sie steht nicht aus Prinzip dort: <strong>Ein abgenutzter Stick kehrt nie exakt auf null zurück</strong>, und ohne Totzone driften die Moving Heads den ganzen Abend langsam davon, ohne dass jemand das Gamepad anfasst. Bewegen sich Ihre Geräte von allein, erhöhen Sie diesen Regler. Fühlt sich der Stick beim Anfahren schwammig an, senken Sie ihn.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Schwenkzeit — standardmäßig 3 Sekunden</h3>
+        <div class="prose" style="margin:0;">
+          <p style="margin:0;">So lange braucht der Strahl für <strong>den vollen Weg</strong> einer Achse, Stick am Anschlag. Drei Sekunden passen zu einer Clubbühne. Auf großer Bühne oder für feines Richten in der Probe: verlängern. Die Geste wird weicher und der rechte Stick noch präziser.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>Die Pan- und Tilt-Grenzen, die Sie an Ihren Moving Heads eingestellt haben, <strong>bleiben wirksam</strong>. Haben Sie einem Gerät verboten, das Publikum zu überstreichen, kann das Gamepad es nicht dorthin bringen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉPANNAGE -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Fehlersuche</div>
+      <h2>Wenn sich nichts bewegt</h2>
+      <ul class="check-list">
+        <li><strong>Das Gamepad erscheint überhaupt nicht:</strong> Prüfen Sie, ob Windows selbst es erkennt. Zeigt MyStrow seinen Namen und meldet zugleich, es nicht als Gamepad zu erkennen, passt kein Profil zu diesem Modell — häufig bei namenlosen Gamepads.</li>
+        <li><strong>Es wird aufgeführt, aber nichts bewegt sich:</strong> Bei einem PS3-Gamepad ist es der oben beschriebene Fall, und Sie brauchen den Treiber. Bei einem anderen Modell testen Sie es zuerst in der Windows-Systemsteuerung für Gamecontroller.</li>
+        <li><strong>Die Balken bewegen sich, die Geräte nicht:</strong> Das Kästchen „Aktivieren“ ist nicht angekreuzt, oder es ist kein Gerät ausgewählt, während das Ziel auf die Auswahl steht.</li>
+        <li><strong>Die Geräte driften, ohne dass jemand etwas anfasst:</strong> Totzone erhöhen. Der Stick ist abgenutzt.</li>
+        <li><strong>Die Bewegung ruckelt:</strong> Schwenkzeit verlängern. Sehr schnelle Bewegung liest sich auf einem langsamen Moving Head immer als Stufen.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">Sie sind dran</div>
+      <h2>Richten aus dem Handgelenk</h2>
+      <p>Laden Sie MyStrow herunter, schließen Sie ein Gamepad an und setzen Sie Ihre Strahlen per Stick statt per Maus.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-primary" target="_blank" rel="noopener noreferrer">MyStrow herunterladen ↓</a>
+        <a href="tutoriel-debuter-mystrow" class="btn-outline">Einsteiger-Guide: mit MyStrow beginnen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Weiterlesen</div>
+      <h2>Verwandte Artikel und Ressourcen</h2>
+      <div class="related-grid">
+        <a href="akai-apc-mini-controller" class="related-card">
+          <div class="rc-tag">Hardware</div>
+          <h3>Der Controller AKAI APC mini</h3>
+          <p>Acht Fader, vierundsechzig Pads: der natürliche Begleiter von MyStrow, um eine Show von Hand zu fahren.</p>
+        </a>
+        <a href="stage-plot" class="related-card">
+          <div class="rc-tag">Funktion</div>
+          <h3>Lichtplan und 3D-Bühnenplan</h3>
+          <p>Platzieren Sie Ihre Scheinwerfer, sehen Sie Ihre Strahlen dreidimensional und wählen Sie Moving Heads per Klick.</p>
+        </a>
+        <a href="light-programming" class="related-card">
+          <div class="rc-tag">Funktion</div>
+          <h3>Lichtprogrammierung und Timeline</h3>
+          <p>Komponieren Sie Ihre Shows vorab auf einer visuellen Timeline mit Keyframes und editierbaren Clips.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Tutorial · Einsteiger</div>
+          <h3>Mit MyStrow beginnen — Patch, Gruppen und erste Show</h3>
+          <p>Schritt für Schritt zu Ihren ersten DMX-Scheinwerfern, von der Installation bis zur ersten Stimmung.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="download">Download</a>
+      <a href="index.html#pricing">Preise</a>
+      <a href="index.html#pricing">Shop</a>
+      <a href="terms">AGB</a><a href="legal-notice">Impressum</a><a href="privacy">Datenschutz</a>
+      <a href="contact">Kontakt</a><a href="index.html#pricing">Shop</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Ihre E-Mail-Adresse" required>
+        <button type="submit">Abonnieren</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Alle Rechte vorbehalten</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'de' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Willkommen!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Ein Fehler ist aufgetreten.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ein Fehler ist aufgetreten.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="../nav.js" defer></script>
+<script src="../mobile-nav.js"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>

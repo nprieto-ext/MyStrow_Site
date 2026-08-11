@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Apontar moving heads com um comando — Guia MyStrow | MyStrow</title>
+  <meta name="description" content="Aponte as suas moving heads com o analógico, como com um trackball de mesa. Comandos compatíveis (Xbox, PS4, PS5, 8BitDo, Logitech), ajustes de zona morta e velocidade, e o caso particular do comando da PS3.">
+  <meta name="keywords" content="comando moving head, pan tilt comando, comando PS4 luz, comando Xbox DMX, DualSense iluminação, apontar moving head comando, trackball luz, MyStrow comando, DualShock 3 Windows">
+  <link rel="canonical" href="https://mystrow.fr/pt/manette-jeu-lyres-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manette-jeu-lyres-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/pt/manette-jeu-lyres-mystrow">
+  <meta property="og:title" content="Apontar moving heads com um comando de jogo no MyStrow">
+  <meta property="og:description" content="O analógico comanda a velocidade, não a posição: empurra-se para deslocar, solta-se para parar. Comandos compatíveis, ajustes e resolução de problemas.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="article:published_time" content="2026-08-07">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apontar moving heads com um comando de jogo no MyStrow">
+  <meta name="twitter:description" content="O analógico comanda a velocidade, não a posição: empurra-se para deslocar, solta-se para parar. Comandos compatíveis, ajustes e resolução de problemas.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Apontar moving heads com um comando de jogo no MyStrow",
+  "description": "Aponte as suas moving heads com o analógico, como com um trackball de mesa. Comandos compatíveis (Xbox, PS4, PS5, 8BitDo, Logitech), ajustes de zona morta e velocidade, e o caso particular do comando da PS3.",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/pt/manette-jeu-lyres-mystrow"
+  },
+  "url": "https://mystrow.fr/pt/manette-jeu-lyres-mystrow",
+  "keywords": [
+    "comando",
+    "pan tilt",
+    "moving head",
+    "DMX",
+    "Xbox",
+    "PS4",
+    "PS5",
+    "DualSense",
+    "MyStrow"
+  ]
+}
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Que comandos funcionam com o MyStrow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os comandos Xbox (Series, One, 360), o DualShock 4, o DualSense, o Nintendo Switch Pro, os Logitech F310/F510/F710 e os modelos 8BitDo funcionam sem instalar nada, tanto por USB como por Bluetooth. O MyStrow apoia-se na base de comandos do SDL, que reconhece mais de duzentos. O comando da PS3 é o caso particular: exige um driver de terceiros no Windows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Porque é que o meu comando da PS3 é detetado mas não faz nada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No Windows, o driver de origem enumera o DualShock 3 mas nunca lhe pede para começar a emitir. Aparece portanto na lista, com o seu nome, e não envia dado nenhum: nem analógicos nem botões. É preciso instalar um driver dedicado como o DsHidMini. O MyStrow deteta este caso preciso e indica-o na janela de configuração."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O analógico devolve a moving head ao centro quando se solta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A deflexão do analógico comanda uma VELOCIDADE e não uma posição: empurra-se para deslocar o feixe, solta-se para o parar onde está. É o comportamento de um trackball ou de um encoder de mesa. Se o analógico comandasse a posição absoluta, a mola de retorno devolveria o feixe ao centro do palco de cada vez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Para que serve a zona morta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Um analógico gasto nunca volta exatamente a zero. Sem zona morta, as moving heads derivariam lentamente toda a noite sem que ninguém tocasse no comando — e quando se percebe de onde vem, o espetáculo acabou. A predefinição é de 12 %, para lá de um desgaste normal. Aumente-a se os seus aparelhos se mexerem sozinhos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O comando atrapalha os efeitos e memórias em curso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Enquanto os analógicos estão em repouso, o MyStrow não escreve nem envia nada: o comando não pode competir com um efeito, uma memória ou uma sequência REC Luz. Só assume as moving heads visadas, e apenas enquanto empurra o analógico."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://mystrow.fr/pt/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutoriais",
+      "item": "https://mystrow.fr/pt/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Apontar moving heads com um comando",
+      "item": "https://mystrow.fr/pt/manette-jeu-lyres-mystrow"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    /* Tableau comparatif (repris de synchroniser-mystrow-logiciel-dj) */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css">
+</head>
+<body>
+
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <a href="./">Início</a> &nbsp;/&nbsp;
+        <a href="blog">Tutoriais</a> &nbsp;/&nbsp;
+        <span>Apontar moving heads com um comando</span>
+      </nav>
+      <div class="hero-badge">🎮 Guia prático · Comando de jogo</div>
+      <h1>Aponte as suas moving heads<br>com o <em>analógico</em></h1>
+      <p class="hero-sub">Um comando de jogo por menos de trinta euros substitui o arrastar do rato para colocar um feixe. O gesto é o de um trackball de mesa: empurra-se para deslocar, solta-se para parar exatamente onde se está.</p>
+      <div class="hero-meta">
+        <span>Por <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Publicado a <strong>7 de agosto de 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Leitura: <strong>6 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#compatibles" class="btn-primary">Comandos compatíveis →</a>
+        <a href="#reglages" class="btn-outline">Configurar o comando →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">O princípio</div>
+      <h2>O analógico comanda uma velocidade, não uma posição</h2>
+      <div class="prose">
+        <p>É a escolha que estrutura todo o resto. Um analógico é puxado ao centro por uma mola: se a sua posição comandasse a posição absoluta da moving head, <strong>largar o analógico devolveria o feixe ao centro do palco</strong>. Inutilizável em situação real.</p>
+        <p>A deflexão comanda portanto uma velocidade. Empurra e o feixe parte nessa direção; solta e ele fica onde está. Exatamente o comportamento de um trackball ou de um encoder de mesa — e a razão pela qual se aponta mais depressa com o analógico do que com o rato num painel 2D.</p>
+        <p>A resposta é <strong>quadrática</strong>: sensibilidade perto do centro para colocar um frontal a vinte metros, velocidade no fim de curso para atravessar o palco.</p>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🕹</div>
+          <h3>Analógico esquerdo — o grosso do trabalho</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Desloca o feixe à velocidade máxima. É o que se usa para levar a moving head à zona certa.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎯</div>
+          <h3>Analógico direito — o acabamento</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Oito vezes mais lento. Serve para pousar o feixe com precisão depois de atingida a zona, sem mudar qualquer ajuste.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Enquanto os analógicos estão em repouso, o MyStrow não escreve nem envia nada.</strong> O comando não pode portanto entrar em conflito com um efeito em curso, uma memória chamada ou uma sequência REC Luz: só assume o controlo enquanto está a empurrar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILITÉ -->
+  <section id="compatibles" class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Compatibilidade</div>
+      <h2>Que comandos funcionam</h2>
+      <div class="prose" style="max-width:760px;">
+        <p>O MyStrow apoia-se na base de comandos do SDL, que integra <strong>mais de duzentos modelos</strong> e lê os analógicos de forma normalizada: seja qual for a marca, o analógico esquerdo continua a ser o analógico esquerdo. Eis o que funciona, e o que exige uma manipulação.</p>
+      </div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>USB</th>
+              <th>Bluetooth</th>
+              <th>A fazer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Xbox Series X|S, Xbox One, Xbox 360</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada — o Windows trata dele nativamente. A escolha mais segura.</td>
+            </tr>
+            <tr>
+              <td><strong>DualShock 4 (PS4)</strong> — v1 e v2</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada. Para o emparelhamento Bluetooth: Share + PS até piscar.</td>
+            </tr>
+            <tr>
+              <td><strong>DualSense (PS5)</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada.</td>
+            </tr>
+            <tr>
+              <td><strong>Nintendo Switch Pro</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada.</td>
+            </tr>
+            <tr>
+              <td><strong>Logitech F310 / F510 / F710</strong></td>
+              <td>✅</td>
+              <td>—</td>
+              <td>Colocar o interruptor de trás em <em>X</em> (modo XInput).</td>
+            </tr>
+            <tr>
+              <td><strong>8BitDo</strong> (Pro 2, SN30 Pro, M30…)</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada. Dezasseis modelos são reconhecidos.</td>
+            </tr>
+            <tr>
+              <td><strong>DualShock 3 (PS3)</strong></td>
+              <td>⚠️</td>
+              <td>⚠️</td>
+              <td>Driver de terceiros obrigatório no Windows — ver mais abaixo.</td>
+            </tr>
+            <tr>
+              <td>Comandos «compatíveis» sem marca</td>
+              <td>❔</td>
+              <td>❔</td>
+              <td>Caso a caso: muitos não são reconhecidos como comandos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box">
+        <p>Hori, Thrustmaster, Razer, Nacon, PowerA, Google Stadia e Amazon Luna também constam da base. <strong>Se o seu comando está ligado mas o MyStrow não o lista</strong>, é porque nenhum perfil corresponde ao seu identificador: a janela de configuração mostra-lho então pelo nome, em vez de fingir que não há nada ligado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE CAS PS3 -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">O caso particular</div>
+      <h2>O comando da PS3 é reconhecido… e está mudo</h2>
+      <div class="prose">
+        <p>Merece o seu próprio parágrafo, porque o sintoma confunde: o Windows mostra-o, o MyStrow deteta-o, o nome aparece a verde — e <strong>nada se mexe</strong>. Nem os analógicos, nem os botões.</p>
+        <p>A causa não está no software. Um DualShock 3 não envia dado nenhum enquanto não lhe escreverem a ordem de começar a emitir, e o driver de origem do Windows nunca o faz. É precisamente essa a razão de ser dos drivers de terceiros para este comando. Segundo indício quando é o caso: <strong>desliga-se sozinho</strong> ao fim de alguns minutos.</p>
+      </div>
+
+      <div class="lock-box">
+        <p><strong>A solução:</strong> instalar o <em>DsHidMini</em>, o driver mantido que substitui o antigo ScpToolkit. O comando passa depois a apresentar-se como um comando padrão e o MyStrow não precisa de mudar nada. Não vá procurar do lado do cabo nem de uma opção do MyStrow: sem esse driver, nenhum programa conseguirá ler este comando.</p>
+      </div>
+
+      <div class="prose" style="margin-top:24px;">
+        <p>O MyStrow reconhece este caso preciso e indica-o na janela de configuração, com o nome do driver a instalar. Se tiver de comprar um comando para este uso, um DualShock 4 em segunda mão ou um comando Xbox poupa-lhe a questão.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISE EN ROUTE -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Primeiros passos</div>
+      <h2>Quatro etapas</h2>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Ligue o comando</h3>
+            <p>Por USB, ou por Bluetooth se o seu PC o tiver. De preferência antes de abrir a janela: a deteção é imediata, mas mais vale começar limpo.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Abra Ligação ▸ Controlo ▸ 🎮 Comando (pan/tilt)</h3>
+            <p>O nome do comando aparece a verde. As duas barras da janela mexem-se assim que toca num analógico: é o teste mais rápido para saber se está tudo no lugar.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Escolha o que o comando pilota</h3>
+            <p>Ou as moving heads <strong>selecionadas no plano de palco</strong> — muda de alvo a meio do espetáculo com um simples clique — ou <strong>todas as moving heads</strong> de uma vez. Os projetores fixos nunca são afetados: só os aparelhos do tipo moving head têm pan e tilt para mexer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Marque «Ativar» e feche</h3>
+            <p>O comando fica ativo em segundo plano. Reabra a janela quando quiser ajustar a velocidade ou mudar de alvo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉGLAGES -->
+  <section id="reglages" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Ajustes</div>
+      <h2>Dois cursores, e nada mais</h2>
+
+      <div class="highlight-box">
+        <h3>Zona morta — 12 % por predefinição</h3>
+        <div class="prose" style="margin:0;">
+          <p style="margin:0;">É o limiar abaixo do qual o analógico é considerado em repouso. Não está ali por princípio: <strong>um analógico gasto nunca volta exatamente a zero</strong>, e sem zona morta as moving heads derivam lentamente toda a noite sem que ninguém toque no comando. Se os seus aparelhos se mexem sozinhos, suba este cursor. Se o analógico lhe parecer mole no arranque, baixe-o.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Velocidade de varrimento — 3 segundos por predefinição</h3>
+        <div class="prose" style="margin:0;">
+          <p style="margin:0;">É o tempo que o feixe demora a percorrer <strong>todo o curso</strong> de um eixo, com o analógico no máximo. Três segundos servem para um palco de clube. Num palco grande, ou para apontar fino em ensaio, aumente: o gesto torna-se mais suave e o analógico direito ainda mais preciso.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>Os limites de pan e de tilt que definiu nas suas moving heads <strong>continuam a ser respeitados</strong>. Se proibiu um aparelho de varrer o público, o comando não o poderá levar lá.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉPANNAGE -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Resolução de problemas</div>
+      <h2>Se nada se mexe</h2>
+      <ul class="check-list">
+        <li><strong>O comando não aparece de todo:</strong> verifique que o próprio Windows o reconhece. Se o MyStrow mostra o nome dizendo que não o reconhece como comando, é porque nenhum perfil corresponde a esse modelo — caso frequente dos comandos sem marca.</li>
+        <li><strong>Está listado mas nada se mexe:</strong> se for um comando da PS3, é o caso descrito acima e é preciso o driver. Noutro modelo, teste-o primeiro no painel de comandos de jogo do Windows.</li>
+        <li><strong>As barras mexem-se mas os aparelhos não:</strong> a caixa «Ativar» não está marcada, ou não há nenhum aparelho selecionado enquanto o alvo está na seleção.</li>
+        <li><strong>Os aparelhos derivam sem que ninguém toque em nada:</strong> suba a zona morta. O analógico do comando está gasto.</li>
+        <li><strong>O movimento é aos solavancos:</strong> aumente a velocidade de varrimento. Um movimento muito rápido lê-se sempre por patamares numa moving head lenta.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">É consigo</div>
+      <h2>Apontar com o dedo</h2>
+      <p>Transfira o MyStrow, ligue um comando e pouse os seus feixes com o analógico em vez do rato.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-primary" target="_blank" rel="noopener noreferrer">Transferir o MyStrow ↓</a>
+        <a href="tutoriel-debuter-mystrow" class="btn-outline">Guia para principiantes: começar com o MyStrow →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Continuar</div>
+      <h2>Artigos e recursos relacionados</h2>
+      <div class="related-grid">
+        <a href="akai-apc-mini-controller" class="related-card">
+          <div class="rc-tag">Material</div>
+          <h3>O controlador AKAI APC mini</h3>
+          <p>Oito faders, sessenta e quatro pads: o companheiro natural do MyStrow para tocar um espetáculo à mão.</p>
+        </a>
+        <a href="stage-plot" class="related-card">
+          <div class="rc-tag">Funcionalidade</div>
+          <h3>Plano de luzes e plano de palco 3D</h3>
+          <p>Coloque os seus projetores, visualize os feixes em três dimensões e selecione as moving heads com um clique.</p>
+        </a>
+        <a href="light-programming" class="related-card">
+          <div class="rc-tag">Funcionalidade</div>
+          <h3>Programação de luz e linha de tempo</h3>
+          <p>Componha os seus espetáculos com antecedência numa linha de tempo visual com keyframes e clips editáveis.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Tutorial · Principiante</div>
+          <h3>Começar com o MyStrow — patch, grupos e primeiro espetáculo</h3>
+          <p>Guia passo a passo para acender os seus primeiros projetores DMX, da instalação ao primeiro ambiente.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Rodapé">
+      <a href="download">Transferir</a>
+      <a href="index.html#pricing">Preços</a>
+      <a href="index.html#pricing">Loja</a>
+      <a href="terms">Condições</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidade</a>
+      <a href="contact">Contato</a><a href="index.html#pricing">Loja</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="O seu endereço de email" required>
+        <button type="submit">Inscrever</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Todos os direitos reservados</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'pt' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bem-vindo!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Ocorreu um erro.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ocorreu um erro.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="../nav.js" defer></script>
+<script src="../mobile-nav.js"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>

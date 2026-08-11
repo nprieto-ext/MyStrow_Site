@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Apuntar cabezas móviles con un mando — Guía MyStrow | MyStrow</title>
+  <meta name="description" content="Apunte sus cabezas móviles con el stick, como con un trackball de mesa. Mandos compatibles (Xbox, PS4, PS5, 8BitDo, Logitech), ajustes de zona muerta y velocidad, y el caso particular del mando de PS3.">
+  <meta name="keywords" content="mando cabeza móvil, pan tilt mando, mando PS4 luces, mando Xbox DMX, DualSense iluminación, apuntar cabeza móvil mando, trackball luces, MyStrow mando, DualShock 3 Windows">
+  <link rel="canonical" href="https://mystrow.fr/es/manette-jeu-lyres-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/manette-jeu-lyres-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manette-jeu-lyres-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/es/manette-jeu-lyres-mystrow">
+  <meta property="og:title" content="Apuntar cabezas móviles con un mando de juego en MyStrow">
+  <meta property="og:description" content="El stick controla la velocidad, no la posición: se empuja para desplazar, se suelta para parar. Mandos compatibles, ajustes y solución de problemas.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-08-07">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apuntar cabezas móviles con un mando de juego en MyStrow">
+  <meta name="twitter:description" content="El stick controla la velocidad, no la posición: se empuja para desplazar, se suelta para parar. Mandos compatibles, ajustes y solución de problemas.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Apuntar cabezas móviles con un mando de juego en MyStrow",
+  "description": "Apunte sus cabezas móviles con el stick, como con un trackball de mesa. Mandos compatibles (Xbox, PS4, PS5, 8BitDo, Logitech), ajustes de zona muerta y velocidad, y el caso particular del mando de PS3.",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/es/manette-jeu-lyres-mystrow"
+  },
+  "url": "https://mystrow.fr/es/manette-jeu-lyres-mystrow",
+  "keywords": [
+    "mando",
+    "pan tilt",
+    "cabeza móvil",
+    "DMX",
+    "Xbox",
+    "PS4",
+    "PS5",
+    "DualSense",
+    "MyStrow"
+  ]
+}
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué mandos funcionan con MyStrow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los mandos de Xbox (Series, One, 360), el DualShock 4, el DualSense, el Nintendo Switch Pro, los Logitech F310/F510/F710 y los modelos 8BitDo funcionan sin instalar nada, tanto por USB como por Bluetooth. MyStrow se apoya en la base de mandos de SDL, que reconoce más de doscientos. El mando de PS3 es el caso particular: exige un controlador de terceros en Windows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué mi mando de PS3 se detecta pero no hace nada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En Windows, el controlador de origen enumera el DualShock 3 pero nunca le indica que empiece a emitir. Aparece por tanto en la lista, con su nombre, y no envía dato alguno: ni sticks ni botones. Hace falta instalar un controlador dedicado como DsHidMini. MyStrow detecta este caso preciso y lo indica en la ventana de configuración."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El stick devuelve la cabeza móvil al centro al soltarlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La desviación del stick controla una VELOCIDAD y no una posición: se empuja para desplazar el haz, se suelta para detenerlo donde está. Es el comportamiento de un trackball o de un encoder de mesa. Si el stick controlara la posición absoluta, el muelle de retorno devolvería el haz al centro del escenario cada vez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué sirve la zona muerta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un stick desgastado nunca vuelve exactamente a cero. Sin zona muerta, las cabezas móviles derivarían lentamente toda la noche sin que nadie toque el mando — y para cuando se entiende de dónde viene, el show ha terminado. El ajuste por defecto es del 12 %, más allá de un desgaste normal. Súbalo si sus cabezas se mueven solas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El mando estorba a los efectos y memorias en curso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Mientras los sticks están en reposo, MyStrow no escribe ni envía nada: el mando no puede competir con un efecto, una memoria o una secuencia REC de luz. Solo toma el control de las cabezas apuntadas, y únicamente mientras usted empuja el stick."
+      }
+    }
+  ]
+}
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://mystrow.fr/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutoriales",
+      "item": "https://mystrow.fr/es/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Apuntar las cabezas móviles con un mando",
+      "item": "https://mystrow.fr/es/manette-jeu-lyres-mystrow"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    /* Tableau comparatif (repris de synchroniser-mystrow-logiciel-dj) */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css">
+</head>
+<body>
+
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="./">Inicio</a> &nbsp;/&nbsp;
+        <a href="blog">Tutoriales</a> &nbsp;/&nbsp;
+        <span>Apuntar las cabezas móviles con un mando</span>
+      </nav>
+      <div class="hero-badge">🎮 Guía práctica · Mando de juego</div>
+      <h1>Apunte sus cabezas móviles<br>con el <em>stick</em></h1>
+      <p class="hero-sub">Un mando de juego de menos de treinta euros sustituye al arrastrar con el ratón para colocar un haz. El gesto es el de un trackball de mesa: se empuja para desplazar, se suelta para detenerse donde uno está.</p>
+      <div class="hero-meta">
+        <span>Por <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Publicado el <strong>7 de agosto de 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lectura: <strong>6 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#compatibles" class="btn-primary">Mandos compatibles →</a>
+        <a href="#reglages" class="btn-outline">Ajustar el mando →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">El principio</div>
+      <h2>El stick controla una velocidad, no una posición</h2>
+      <div class="prose">
+        <p>Es la decisión que condiciona todo lo demás. Un stick vuelve al centro por un muelle: si su posición controlara la posición absoluta de la cabeza móvil, <strong>soltar el stick devolvería el haz al centro del escenario</strong>. Inservible en situación real.</p>
+        <p>La desviación controla, pues, una velocidad. Usted empuja y el haz se desplaza en esa dirección; suelta y se queda donde está. Exactamente el comportamiento de un trackball o de un encoder de mesa — y la razón por la que se apunta más rápido con el stick que con el ratón en un panel 2D.</p>
+        <p>La respuesta es <strong>cuadrática</strong>: precisión cerca del centro para colocar un frontal a veinte metros, velocidad a fondo de recorrido para cruzar el escenario.</p>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🕹</div>
+          <h3>Stick izquierdo — el grueso del trabajo</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Desplaza el haz a máxima velocidad. Es el que se usa para llevar la cabeza móvil a la zona correcta.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎯</div>
+          <h3>Stick derecho — el acabado</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Ocho veces más lento. Sirve para colocar el haz con precisión una vez alcanzada la zona, sin cambiar ningún ajuste.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Mientras los sticks están en reposo, MyStrow no escribe ni envía nada.</strong> El mando no puede entrar en conflicto con un efecto en curso, una memoria recuperada o una secuencia REC de luz: solo toma el mando mientras usted empuja.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPATIBILITÉ -->
+  <section id="compatibles" class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Compatibilidad</div>
+      <h2>Qué mandos funcionan</h2>
+      <div class="prose" style="max-width:760px;">
+        <p>MyStrow se apoya en la base de mandos de SDL, que incluye <strong>más de doscientos modelos</strong> y lee los sticks de forma normalizada: sea cual sea la marca, el stick izquierdo sigue siendo el stick izquierdo. Esto es lo que funciona, y lo que exige una manipulación.</p>
+      </div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th>Mando</th>
+              <th>USB</th>
+              <th>Bluetooth</th>
+              <th>Qué hacer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Xbox Series X|S, Xbox One, Xbox 360</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada — Windows lo gestiona de forma nativa. La opción más segura.</td>
+            </tr>
+            <tr>
+              <td><strong>DualShock 4 (PS4)</strong> — v1 y v2</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada. Para el emparejamiento Bluetooth: Share + PS hasta que parpadee.</td>
+            </tr>
+            <tr>
+              <td><strong>DualSense (PS5)</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada.</td>
+            </tr>
+            <tr>
+              <td><strong>Nintendo Switch Pro</strong></td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada.</td>
+            </tr>
+            <tr>
+              <td><strong>Logitech F310 / F510 / F710</strong></td>
+              <td>✅</td>
+              <td>—</td>
+              <td>Poner el interruptor trasero en <em>X</em> (modo XInput).</td>
+            </tr>
+            <tr>
+              <td><strong>8BitDo</strong> (Pro 2, SN30 Pro, M30…)</td>
+              <td>✅</td>
+              <td>✅</td>
+              <td>Nada. Se reconocen dieciséis modelos.</td>
+            </tr>
+            <tr>
+              <td><strong>DualShock 3 (PS3)</strong></td>
+              <td>⚠️</td>
+              <td>⚠️</td>
+              <td>Controlador de terceros obligatorio en Windows — véase más abajo.</td>
+            </tr>
+            <tr>
+              <td>Mandos «compatibles» sin marca</td>
+              <td>❔</td>
+              <td>❔</td>
+              <td>Caso por caso: muchos no se reconocen como mandos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box">
+        <p>Hori, Thrustmaster, Razer, Nacon, PowerA, Google Stadia y Amazon Luna también figuran en la base. <strong>Si su mando está conectado pero MyStrow no lo lista</strong>, es que ningún perfil corresponde a su identificador: la ventana de configuración se lo muestra entonces por su nombre, en lugar de fingir que no hay nada conectado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE CAS PS3 -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">El caso particular</div>
+      <h2>El mando de PS3 se detecta… y está mudo</h2>
+      <div class="prose">
+        <p>Merece su propio apartado, porque el síntoma desconcierta: Windows lo muestra, MyStrow lo detecta, su nombre aparece en verde — y <strong>nada se mueve</strong>. Ni los sticks, ni los botones.</p>
+        <p>La causa no está en el software. Un DualShock 3 no envía ningún dato mientras no se le indique que empiece a emitir, y el controlador de origen de Windows no lo hace nunca. Esa es precisamente la razón de ser de los controladores de terceros para este mando. Segundo indicio cuando es el caso: <strong>se desconecta solo</strong> al cabo de unos minutos.</p>
+      </div>
+
+      <div class="lock-box">
+        <p><strong>La solución:</strong> instalar <em>DsHidMini</em>, el controlador mantenido que sustituye al antiguo ScpToolkit. El mando se presenta después como un mando estándar y MyStrow no necesita ningún cambio. No busque por el lado del cable ni de una opción de MyStrow: sin ese controlador, ningún programa podrá leer este mando.</p>
+      </div>
+
+      <div class="prose" style="margin-top:24px;">
+        <p>MyStrow reconoce este caso concreto y lo indica en la ventana de configuración, con el nombre del controlador que hay que instalar. Si va a comprar un mando para este uso, un DualShock 4 de segunda mano o un mando de Xbox le evitará la cuestión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISE EN ROUTE -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Puesta en marcha</div>
+      <h2>Cuatro pasos</h2>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Conecte el mando</h3>
+            <p>Por USB, o por Bluetooth si su PC dispone de él. Hágalo preferiblemente antes de abrir la ventana: la detección es inmediata, pero mejor empezar limpio.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Abra Conexión ▸ Control ▸ 🎮 Mando (pan/tilt)</h3>
+            <p>El nombre del mando aparece en verde. Las dos barras de la ventana se mueven en cuanto toca un stick: es la prueba más rápida para saber si todo está en su sitio.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Elija qué controla el mando</h3>
+            <p>O bien las cabezas móviles <strong>seleccionadas en el plano de escena</strong> — cambia de objetivo durante el show con un simple clic — o bien <strong>todas las cabezas móviles</strong> a la vez. Los proyectores fijos nunca se ven afectados: solo los aparatos de tipo cabeza móvil tienen pan y tilt que mover.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Marque «Activar» y cierre</h3>
+            <p>El mando sigue activo en segundo plano. Vuelva a abrir la ventana cuando quiera ajustar la velocidad o cambiar de objetivo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉGLAGES -->
+  <section id="reglages" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Ajustes</div>
+      <h2>Dos cursores, y ya está</h2>
+
+      <div class="highlight-box">
+        <h3>Zona muerta — 12 % por defecto</h3>
+        <div class="prose" style="margin:0;">
+          <p style="margin:0;">Es el umbral por debajo del cual el stick se considera en reposo. No está ahí por principio: <strong>un stick desgastado nunca vuelve exactamente a cero</strong>, y sin zona muerta las cabezas móviles derivan lentamente toda la noche sin que nadie toque el mando. Si sus cabezas se mueven solas, suba este cursor. Si el stick le parece blando al arrancar, bájelo.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Velocidad de barrido — 3 segundos por defecto</h3>
+        <div class="prose" style="margin:0;">
+          <p style="margin:0;">Es el tiempo que tarda el haz en recorrer <strong>todo el recorrido</strong> de un eje, con el stick a fondo. Tres segundos convienen a un escenario de club. En un escenario grande, o para apuntado fino en ensayos, alárguelo: el gesto se vuelve más suave y el stick derecho aún más preciso.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>Los límites de pan y de tilt que haya ajustado en sus cabezas móviles <strong>se siguen respetando</strong>. Si ha prohibido a una cabeza barrer al público, el mando no podrá llevarla allí.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉPANNAGE -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Solución de problemas</div>
+      <h2>Si no se mueve nada</h2>
+      <ul class="check-list">
+        <li><strong>El mando no aparece en absoluto:</strong> compruebe que el propio Windows lo reconoce. Si MyStrow muestra su nombre indicando que no lo reconoce como mando, es que ningún perfil corresponde a ese modelo — caso frecuente de los mandos sin marca.</li>
+        <li><strong>Aparece en la lista pero nada se mueve:</strong> si es un mando de PS3, es el caso descrito más arriba y hace falta el controlador. En otro modelo, pruébelo primero en el panel de mandos de juego de Windows.</li>
+        <li><strong>Las barras se mueven pero las cabezas no:</strong> la casilla «Activar» no está marcada, o no hay ninguna cabeza seleccionada mientras el objetivo está puesto en la selección.</li>
+        <li><strong>Las cabezas derivan sin que nadie toque nada:</strong> suba la zona muerta. El stick del mando está desgastado.</li>
+        <li><strong>El movimiento va a saltos:</strong> alargue la velocidad de barrido. Un movimiento muy rápido siempre se lee por escalones en una cabeza lenta.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">Le toca a usted</div>
+      <h2>Apuntar con el dedo</h2>
+      <p>Descargue MyStrow, conecte un mando y coloque sus haces con el stick en lugar del ratón.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-primary" target="_blank" rel="noopener noreferrer">Descargar MyStrow ↓</a>
+        <a href="tutoriel-debuter-mystrow" class="btn-outline">Guía para principiantes: empezar con MyStrow →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Continuar</div>
+      <h2>Artículos y recursos relacionados</h2>
+      <div class="related-grid">
+        <a href="akai-apc-mini-controller" class="related-card">
+          <div class="rc-tag">Material</div>
+          <h3>El controlador AKAI APC mini</h3>
+          <p>Ocho faders, sesenta y cuatro pads: el compañero natural de MyStrow para tocar un show a mano.</p>
+        </a>
+        <a href="stage-plot" class="related-card">
+          <div class="rc-tag">Función</div>
+          <h3>Plano de luces y plano de escena 3D</h3>
+          <p>Coloque sus proyectores, visualice sus haces en tres dimensiones y seleccione sus cabezas móviles con un clic.</p>
+        </a>
+        <a href="light-programming" class="related-card">
+          <div class="rc-tag">Función</div>
+          <h3>Programación de luces y línea de tiempo</h3>
+          <p>Componga sus shows por adelantado en una línea de tiempo visual con keyframes y clips editables.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Tutorial · Principiante</div>
+          <h3>Empezar con MyStrow — patch, grupos y primer show</h3>
+          <p>Guía paso a paso para encender sus primeros proyectores DMX, desde la instalación hasta el primer ambiente.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="download">Descargar</a>
+      <a href="index.html#pricing">Precios</a>
+      <a href="index.html#pricing">Shop</a>
+      <a href="terms">Condiciones</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidad</a>
+      <a href="contact">Contacto</a><a href="index.html#pricing">Shop</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Tu dirección de email" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Todos los derechos reservados</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'es' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ ¡Bienvenido!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="../nav.js" defer></script>
+<script src="../mobile-nav.js"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
