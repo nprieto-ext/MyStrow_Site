@@ -233,34 +233,27 @@
     .pick-grid.os .pick-t { font-size: 17px; }
     .wiz-hint { font-size: 13px; color: var(--muted); line-height: 1.6; margin: -8px 0 16px; }
 
-    /* ── Vignettes « ce qui est inscrit sur le boîtier » ───────────────── */
-    .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(258px, 1fr)); gap: 12px; }
-    .pick.dev { padding: 13px 13px 14px; gap: 0; }
-    .dev-img { position: relative; display: block; border-radius: 9px; padding: 22px 14px 36px;
-      background: linear-gradient(158deg, #2b2924 0%, #1a1814 52%, #0e0d0b 100%);
-      border: 1px solid rgba(255,255,255,0.09);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 6px 16px rgba(0,0,0,0.4);
-      overflow: hidden; transition: border-color .18s; }
-    .dev-mark { display: block; text-align: center; font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800; font-size: 16.5px; letter-spacing: 1.5px; text-transform: uppercase;
-      color: #e9e4d4; line-height: 1.2; overflow-wrap: anywhere;
-      text-shadow: 0 1px 0 rgba(0,0,0,0.65); }
-    .dev-brand { display: block; text-align: center; font-size: 9px; letter-spacing: 1.3px;
-      text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 5px; overflow-wrap: anywhere; }
-    .dev-ports { position: absolute; left: 0; right: 0; bottom: 0; height: 28px;
-      display: flex; align-items: center; justify-content: center; gap: 11px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.6));
-      border-top: 1px solid rgba(255,255,255,0.07); color: rgba(255,255,255,0.4); transition: color .18s; }
+    /* ── Vignettes des boîtiers : photo + marquage ──────────────────── */
+    .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(258px, 100%), 1fr)); gap: 12px; }
+    .pick.dev { padding: 12px 12px 15px; gap: 0; }
+    .dev-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+      border-radius: 9px; border: 1px solid rgba(255,255,255,0.09); background: #e8e5dc;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4); transition: border-color .18s; }
+    .dev-mark { display: block; margin-top: 12px; text-align: center;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15.5px;
+      letter-spacing: 1.2px; text-transform: uppercase; color: #e9e4d4; line-height: 1.2;
+      overflow-wrap: anywhere; }
+    .dev-brand { display: block; margin-top: 4px; text-align: center; font-size: 9.5px;
+      letter-spacing: 1.3px; text-transform: uppercase; color: rgba(255,255,255,0.34);
+      overflow-wrap: anywhere; }
+    .dev-ports { display: flex; align-items: center; justify-content: center; gap: 11px;
+      margin-top: 9px; color: rgba(255,255,255,0.32); transition: color .18s; }
     .dev-ports svg { width: 15px; height: 15px; display: block; }
-    .dev-ports::before, .dev-ports::after { content: ''; position: absolute; top: 50%; margin-top: -2.5px;
-      width: 5px; height: 5px; border-radius: 50%;
-      background: radial-gradient(circle at 35% 32%, #6d6a62, #232019 72%); }
-    .dev-ports::before { left: 9px; }
-    .dev-ports::after { right: 9px; }
-    .dev-fam { display: block; margin-top: 10px; text-align: center;
+    .dev-fam { display: block; margin-top: 9px; text-align: center;
       font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px;
       letter-spacing: .6px; color: rgba(226,206,22,0.8); }
-    .pick.dev[aria-checked="true"] .dev-img { border-color: rgba(226,206,22,0.4); }
+    .pick.dev:hover .dev-photo { border-color: rgba(226,206,22,0.32); }
+    .pick.dev[aria-checked="true"] .dev-photo { border-color: rgba(226,206,22,0.55); }
     .pick.dev[aria-checked="true"] .dev-ports { color: rgba(226,206,22,0.75); }
     .pick.dev[aria-checked="true"] .dev-fam { color: var(--accent); }
     .dev-else { margin-top: 22px; padding-top: 20px; border-top: 1px dashed rgba(255,255,255,0.1); }
@@ -270,7 +263,6 @@
     .proc-model { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px;
       letter-spacing: .5px; color: var(--muted); }
     .proc-model b { color: var(--text); font-weight: 700; }
-
     details.helper { margin-top: 14px; }
     details.helper > summary { cursor: pointer; list-style: none; font-size: 13px; color: var(--accent); display: inline-flex; align-items: center; gap: 7px; }
     details.helper > summary::-webkit-details-marker { display: none; }
@@ -475,83 +467,74 @@
               <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-usb-node" data-mark="USB NODE DMX">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">USB NODE DMX</span>
-                    <span class="dev-brand">www.electroconcept.fr</span>
-                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/ec-usb-node.webp" alt="Interfaz ElectroConcept USB NODE DMX" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">USB NODE DMX</span>
+                  <span class="dev-brand">ElectroConcept</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Nodo Art-Net</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node4" data-mark="NODE 4 UNIVERS">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">NODE 4 UNIVERS</span>
-                    <span class="dev-brand">ElectroConcept</span>
-                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/ec-node4.webp" alt="Interfaz ElectroConcept NODE 4 UNIVERS" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">NODE 4 UNIVERS</span>
+                  <span class="dev-brand">ElectroConcept</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Nodo Art-Net</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="ec-opto" data-mark="OPTO OPEN DMX">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">OPTO OPEN DMX</span>
-                    <span class="dev-brand">www.electroconcept.fr</span>
-                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/ec-opto.webp" alt="Interfaz ElectroConcept OPTO OPEN DMX" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">OPTO OPEN DMX</span>
+                  <span class="dev-brand">ElectroConcept</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Adaptador USB «&nbsp;open&nbsp;»</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="pro" data-model="enttec-pro" data-mark="DMX USB PRO">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">DMX USB PRO</span>
-                    <span class="dev-brand">ENTTEC</span>
-                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/enttec-pro.webp" alt="Interfaz ENTTEC DMX USB PRO" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">DMX USB PRO</span>
+                  <span class="dev-brand">ENTTEC</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Interfaz USB «&nbsp;Pro&nbsp;»</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="enttec-open" data-mark="OPEN DMX USB">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">OPEN DMX USB</span>
-                    <span class="dev-brand">ENTTEC</span>
-                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/enttec-open.webp" alt="Interfaz ENTTEC OPEN DMX USB" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">OPEN DMX USB</span>
+                  <span class="dev-brand">ENTTEC</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Adaptador USB «&nbsp;open&nbsp;»</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="enttec-ode" data-mark="ODE Mk2">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">ODE&nbsp;/ ODE Mk2</span>
-                    <span class="dev-brand">ENTTEC</span>
-                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/enttec-ode.webp" alt="Interfaz ENTTEC ODE Mk2" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">ODE&nbsp;/ ODE Mk2</span>
+                  <span class="dev-brand">ENTTEC</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Nodo Art-Net</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="pro" data-model="eurolite-mk2" data-mark="USB-DMX512 PRO MK2">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">USB-DMX512 PRO MK2</span>
-                    <span class="dev-brand">Eurolite</span>
-                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/eurolite-mk2.webp" alt="Interfaz Eurolite USB-DMX512 PRO MK2" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">USB-DMX512 PRO MK2</span>
+                  <span class="dev-brand">Eurolite</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Interfaz USB «&nbsp;Pro&nbsp;»</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="dmxking-edmx" data-mark="eDMX1 / eDMX2 PRO">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">eDMX1&nbsp;/ eDMX2 PRO</span>
-                    <span class="dev-brand">DMXKing</span>
-                    <span class="dev-ports"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/dmxking-edmx.webp" alt="Interfaz DMXKing eDMX1 / eDMX2 PRO" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">eDMX1&nbsp;/ eDMX2 PRO</span>
+                  <span class="dev-brand">DMXKing</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Nodo Art-Net</span>
                 </button>
 
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="open" data-model="dmxking-ultra" data-mark="ultraDMX Micro">
-                  <span class="dev-img" aria-hidden="true">
-                    <span class="dev-mark">ultraDMX Micro</span>
-                    <span class="dev-brand">DMXKing</span>
-                    <span class="dev-ports"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
-                  </span>
+                  <img class="dev-photo" src="../img-interfaces/dmxking-ultra.webp" alt="Interfaz DMXKing ultraDMX Micro" width="640" height="480" loading="lazy" decoding="async">
+                  <span class="dev-mark">ultraDMX Micro</span>
+                  <span class="dev-brand">DMXKing</span>
+                  <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-usb"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
                   <span class="dev-fam">Adaptador USB «&nbsp;open&nbsp;»</span>
                 </button>
 
