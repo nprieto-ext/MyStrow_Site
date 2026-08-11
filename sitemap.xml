@@ -78,7 +78,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/controleur-akai-apc-mini"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-08-11</lastmod>
   </url>
 
   <url>
@@ -152,14 +152,6 @@
     <lastmod>2026-08-06</lastmod>
   </url>
 
-  <url>
-    <loc>https://mystrow.fr/boutique</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/boutique"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/boutique"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-08-05</lastmod>
-  </url>
 
   <url>
     <loc>https://mystrow.fr/shop</loc>
@@ -167,7 +159,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-11</lastmod>
   </url>
 
   <url>
@@ -182,6 +174,10 @@
   <url>
     <loc>https://mystrow.fr/cgv</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/cgv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/cgv"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -191,6 +187,10 @@
   <url>
     <loc>https://mystrow.fr/mentions-legales</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/legal-notice"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/mentions-legales"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -385,6 +385,30 @@
 
   <!-- EN pages -->
   <url>
+    <loc>https://mystrow.fr/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/cgv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/cgv"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+  <url>
     <loc>https://mystrow.fr/en/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/"/>
@@ -515,6 +539,30 @@
   </url>
 
   <!-- DE pages -->
+  <url>
+    <loc>https://mystrow.fr/de/terms</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/cgv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/cgv"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
   <url>
     <loc>https://mystrow.fr/de/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/"/>
@@ -647,6 +695,30 @@
 
   <!-- ES pages -->
   <url>
+    <loc>https://mystrow.fr/es/terms</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/cgv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/cgv"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+  <url>
     <loc>https://mystrow.fr/es/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/"/>
@@ -777,6 +849,30 @@
   </url>
 
   <!-- PT pages -->
+  <url>
+    <loc>https://mystrow.fr/pt/terms</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/cgv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/cgv"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/legal-notice</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/legal-notice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/mentions-legales"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-08-11</lastmod>
+  </url>
   <url>
     <loc>https://mystrow.fr/pt/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/"/>
