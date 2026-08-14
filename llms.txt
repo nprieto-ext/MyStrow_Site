@@ -1,0 +1,57 @@
+# MyStrow
+
+> Logiciel de contrôle lumière DMX pour Windows et macOS. Pilote des projecteurs
+> DMX512 depuis un ordinateur, en Art-Net ou en USB/DMX, avec une IA qui génère
+> l'éclairage en réaction à la musique, un séquenceur sur timeline, un simulateur
+> 3D intégré et la prise en charge des contrôleurs MIDI type AKAI APC mini.
+
+Éditeur : MyStrow — https://mystrow.fr — contact via https://mystrow.fr/contact
+
+## Faits essentiels
+
+- **Plateformes** : Windows 10/11, et macOS 11 Big Sur ou supérieur (Apple Silicon M1 à M5 et Intel). Les deux reçoivent les mêmes mises à jour.
+- **Essai** : 14 jours d'accès complet, sans carte bancaire. La sortie DMX n'est pas incluse dans l'essai.
+- **Tarifs TTC** : Pro mensuel 23,99 €/mois sans engagement ; Pro annuel 143,86 €/an, soit 11,99 €/mois ; Lifetime 287,99 € en paiement unique, mises à jour incluses à vie.
+- **Licences** : les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Paiement par Stripe.
+- **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché — ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
+- **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
+- **Fixtures** : bibliothèque de plus de 5 000 projecteurs, import de profils au format XML (GrandMA, QLC+).
+- **Langues du site** : français, anglais, espagnol, allemand, portugais.
+
+## Pages principales
+
+- [Accueil](https://mystrow.fr/) : présentation générale du logiciel et de ses modules.
+- [Télécharger](https://mystrow.fr/telecharger) : téléchargements Windows et macOS, configuration requise.
+- [Tarifs](https://mystrow.fr/tarifs) : les trois formules, tableau comparatif et FAQ sur la facturation.
+- [Shop](https://mystrow.fr/shop) : interfaces DMX et contrôleurs compatibles, avec les modèles tiers reconnus.
+- [Boutique](https://mystrow.fr/boutique) : le matériel utilisé au quotidien avec MyStrow.
+- [Contact](https://mystrow.fr/contact) : support et demandes commerciales.
+
+## Fonctionnalités
+
+- [IA Lumière](https://mystrow.fr/ia-lumiere) : analyse en temps réel de l'énergie, du rythme et des fréquences du son pour générer une ambiance lumineuse cohérente.
+- [Programmation lumière](https://mystrow.fr/programmation-lumiere) : séquences sur timeline, clips éditables au glisser-déposer, synchronisation à la milliseconde.
+- [Plan de scène](https://mystrow.fr/plan-de-scene) : patch DMX, adressage automatique par groupe et visualisation temps réel des projecteurs.
+- [Player audio et vidéo](https://mystrow.fr/player-audio-video) : playlist média synchronisée avec les séquences lumière.
+- [Contrôleur AKAI APC mini](https://mystrow.fr/controleur-akai-apc-mini) : grille 8×8 de pads LED et 9 faders d'intensité.
+- [Logiciel DMX gratuit](https://mystrow.fr/logiciel-dmx-gratuit) : ce que couvre la version d'essai.
+
+## Tutoriels
+
+- [Débuter avec MyStrow](https://mystrow.fr/tutoriel-debuter-mystrow)
+- [Configurer un node USB Art-Net DMX](https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow)
+- [Importer une fixture DMX](https://mystrow.fr/importer-fixture-dmx-mystrow)
+- [Créer des séquences lumière](https://mystrow.fr/creer-sequences-lumiere-mystrow)
+- [Patcher et programmer des lyres](https://mystrow.fr/patcher-programmer-lyres-mystrow)
+- [Piloter des lyres à la manette de jeu](https://mystrow.fr/manette-jeu-lyres-mystrow)
+- [Automatiser les lumières DMX](https://mystrow.fr/automatisation-lumieres-dmx-mystrow)
+- [Régie vidéo avec OBS et vMix](https://mystrow.fr/regie-video-obs-vmix-mystrow)
+- [Synchroniser avec un logiciel DJ](https://mystrow.fr/synchroniser-mystrow-logiciel-dj)
+- [Blog](https://mystrow.fr/blog) : articles, disponibles en cinq langues.
+
+## Optional
+
+- [CGV](https://mystrow.fr/cgv)
+- [Mentions légales](https://mystrow.fr/mentions-legales)
+- [Confidentialité](https://mystrow.fr/confidentialite)
+- [Newsletter](https://mystrow.fr/newsletter)

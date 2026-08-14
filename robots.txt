@@ -1,4 +1,65 @@
+# mystrow.fr — tous les robots sont autorises sur l'integralite du site.
+#
+# Note : un bloc User-agent specifique REMPLACE le bloc "*" pour ce robot.
+# Chaque agent liste ci-dessous porte donc son propre "Allow: /". Ces blocs
+# sont redondants aujourd'hui (le bloc "*" suffit), mais ils rendent
+# l'autorisation explicite pour les moteurs de recherche IA et evitent
+# qu'un durcissement futur de leur politique par defaut nous exclue.
+
 User-agent: *
+Allow: /
+
+# --- Recherche et assistants IA -------------------------------------------
+
+# OpenAI — ChatGPT Search, navigation a la demande, corpus
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — Claude
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google — Gemini et ancrage des AI Overviews
+# (distinct de Googlebot, qui reste couvert par le bloc "*")
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot / ChatGPT passent par l'index Bing
+User-agent: Bingbot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Common Crawl — corpus repris par de nombreux modeles
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://mystrow.fr/sitemap.xml
