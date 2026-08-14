@@ -49,6 +49,19 @@ RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ /$1.html [L]
 
 # -------------------------------------------------------
+# Types MIME des medias
+# -------------------------------------------------------
+# Sans ces declarations, LiteSpeed sert les .webm en text/plain : les
+# navigateurs de bureau s'en sortent en analysant le contenu du fichier,
+# mais Safari est plus strict et peut refuser de lire la video.
+# Les .webp et .ico sont deja corrects cote serveur, on les fixe ici par
+# securite (une redeclaration identique est sans effet de bord).
+
+AddType video/webm  .webm
+AddType video/mp4   .mp4
+AddType image/webp  .webp
+
+# -------------------------------------------------------
 # Page 404 custom
 # -------------------------------------------------------
 ErrorDocument 404 /404.html
