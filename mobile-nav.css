@@ -29,8 +29,16 @@
 .nb-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nb-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Le bouton est inséré AVANT `.nav-right` par mobile-nav.js, pour garder un
+   ordre de tabulation logique. Mais `.nav-right` porte lui aussi
+   `margin-left:auto` : deux marges automatiques concurrentes se partagent
+   l'espace libre à parts égales, et le hamburger tombait au MILIEU de la barre.
+   On le renvoie visuellement en dernier avec `order` — le DOM, lui, ne bouge
+   pas. `.nav-right` est vide sur mobile (socials, langue, connexion et CTA sont
+   tous masqués), il ne prend donc aucune place à gauche du bouton. */
 @media (max-width: 680px) {
-  .nb-burger { display: flex; }
+  .nb-burger { display: flex; order: 99; margin-left: auto; }
+  header nav > .nav-right, body > nav > .nav-right { margin-left: 0; }
 }
 
 /* ── Overlay plein écran ── */
