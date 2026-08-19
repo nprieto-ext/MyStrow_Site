@@ -26,7 +26,7 @@
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="fr_FR">
   <meta property="article:published_time" content="2026-07-13">
-  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-19">
   <meta property="article:author" content="MyStrow">
 
   <!-- Twitter Card -->
@@ -51,7 +51,7 @@
     "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
     "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
     "datePublished": "2026-07-13",
-    "dateModified": "2026-08-05",
+    "dateModified": "2026-08-19",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow" },
     "url": "https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow",
     "keywords": ["sortie DMX", "node Art-Net", "interface USB DMX", "ENTTEC DMX USB Pro", "ENTTEC Open DMX USB", "Eurolite USB-DMX512 PRO MK2", "DMXKing", "DMX TOOLS ElectroConcept", "DMX macOS", "MyStrow"]
@@ -356,11 +356,11 @@
       </nav>
       <div class="hero-badge">🔌 Guide matériel · Sortie DMX</div>
       <h1>Brancher sa <em>sortie DMX</em><br>Node Art-Net &amp; interfaces USB</h1>
-      <p class="hero-sub">Choisissez votre boîtier, puis Windows ou macOS&nbsp;: la marche à suivre exacte s'affiche, avec les valeurs à saisir et les pièges propres à votre système. La page couvre ensuite les univers, l'aiguillage des sorties et la vérification.</p>
+      <p class="hero-sub">Choisissez votre boîtier, puis Windows ou macOS&nbsp;: la marche à suivre exacte s'affiche, avec les valeurs à saisir et les pièges propres à votre système. La page couvre ensuite les univers et l'aiguillage des sorties.</p>
       <div class="hero-meta">
         <span>Par <strong>MyStrow</strong></span>
         <span>·</span>
-        <span>Mis à jour le <strong>5 août 2026</strong></span>
+        <span>Mis à jour le <strong>19 août 2026</strong></span>
         <span>·</span>
         <span>⏱ Installation&nbsp;: <strong>5 à 10 min</strong></span>
       </div>
@@ -380,8 +380,7 @@
         <div class="toc-title">Sommaire</div>
         <ol>
           <li><a href="#config">Configurateur</a></li>
-          <li><a href="#univers">Univers &amp; aiguillage</a></li>
-          <li><a href="#verifier">Vérifier que ça sort</a></li>
+          <li id="toc-univers"><a href="#univers">Univers &amp; aiguillage</a></li>
         </ol>
       </aside>
 
@@ -425,7 +424,7 @@
               <p class="wiz-hint">Retournez-le&nbsp;: le nom du modèle est imprimé sur le dessus ou sur la face des prises. Cliquez sur celui qui correspond.</p>
               <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node" data-mark="NODE ARTNET DMX">
-                  <img class="dev-photo" src="img-interfaces/ec-node.webp" alt="Boîtier ElectroConcept NODE ARTNET DMX" width="640" height="480" loading="lazy" decoding="async">
+                  <img class="dev-photo" src="img-interfaces/ec-node.webp?v=2" alt="Boîtier ElectroConcept NODE ARTNET DMX" width="640" height="480" loading="lazy" decoding="async">
                   <span class="dev-mark">NODE ARTNET DMX</span>
                   <span class="dev-brand">ElectroConcept</span>
                   <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
@@ -825,20 +824,12 @@
                   <div class="step">
                     <div class="step-num">1</div>
                     <div class="step-body">
-                      <h4>Brancher et installer le pilote FTDI</h4>
-                      <p>Port USB direct, pas de hub non alimenté. Windows pose en général le pilote tout seul&nbsp;; sinon, installez le pack <strong>FTDI (VCP + D2XX)</strong> depuis ftdichip.com, puis rebranchez.</p>
-                      <div class="note">Sur ces boîtiers passifs, MyStrow attaque la puce FTDI <strong>en direct (D2XX)</strong>, comme QLC+&nbsp;: c'est ce qui règle le Latency Timer à 1&nbsp;ms et produit un signal de synchronisation propre. Via le simple port série, le timing serait cassé et les projecteurs ignoreraient toutes les trames — sans la moindre erreur affichée.</div>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <div class="step-num">2</div>
-                    <div class="step-body">
                       <h4>Fermer tout ce qui tient la puce</h4>
                       <p>Utilitaire du fabricant, autre logiciel de lumière, seconde instance de MyStrow&nbsp;: un seul programme peut ouvrir le boîtier. Deux, et la sortie devient erratique.</p>
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">3</div>
+                    <div class="step-num">2</div>
                     <div class="step-body">
                       <h4>Sélectionner et connecter</h4>
                       <p><span class="path">Connexion ▸ 🌐 Sortie DMX ▸ ⚙️ Paramétrer la sortie</span>, onglet <strong>🔌 Sortie DMX USB</strong>&nbsp;:</p>
@@ -851,7 +842,7 @@
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">4</div>
+                    <div class="step-num">3</div>
                     <div class="step-body">
                       <h4>Boîtier muet alors que tout est vert&nbsp;? Le test RTS/DTR</h4>
                       <p><span class="path">Connexion ▸ 🩺 Diagnostic ▸ 🔌 Test USB (interface DMX)</span> ▸ <strong>🔌 Test RTS/DTR</strong>.</p>
@@ -915,18 +906,6 @@
 
           </div><!-- /#procs -->
 
-          <details class="helper" style="margin-top:26px;">
-            <summary>Les bases, si les mots «&nbsp;canal&nbsp;», «&nbsp;univers&nbsp;» ou «&nbsp;Art-Net&nbsp;» ne vous parlent pas</summary>
-            <div class="helper-body">
-              <ul>
-                <li><strong>Canal</strong> — une valeur de 0 à 255. Un PAR LED simple en consomme 5 (dimmer, R, V, B, strobe), une lyre 16 ou plus.</li>
-                <li><strong>Univers</strong> — un paquet de <strong>512 canaux</strong>, soit une ligne DMX physique. Plus gros rig = deuxième univers = deuxième sortie.</li>
-                <li><strong>Adresse</strong> — le canal de départ réglé <em>sur le projecteur</em>. Il doit correspondre exactement au patch de MyStrow.</li>
-                <li><strong>Art-Net</strong> — du DMX transporté sur le réseau, en UDP sur le port <code>6454</code>. C'est ce que MyStrow envoie à un node.</li>
-              </ul>
-              <p style="margin-top:10px;">MyStrow réémet l'univers entier plusieurs dizaines de fois par seconde&nbsp;: c'est le fonctionnement normal du DMX. Un projecteur qui «&nbsp;garde&nbsp;» une couleur alors que tout est coupé n'est donc jamais un projecteur qui bug — c'est la sortie qui ne lui parle plus.</p>
-            </div>
-          </details>
         </section>
 
         <!-- 2. UNIVERS -->
@@ -970,25 +949,6 @@
 
           <div class="callout">
             <p><strong>Le patch reste maître.</strong> L'aiguillage ne change pas l'adressage&nbsp;: c'est dans le patch que chaque projecteur reçoit son univers et son adresse de départ. Deux appareils dont les plages se chevauchent réagiront ensemble quoi qu'il arrive — la fonction <strong>⚡ Auto-adressage</strong> du patch règle ça en un clic.</p>
-          </div>
-        </section>
-
-        <!-- 3. VERIFIER -->
-        <section id="verifier" class="doc-section">
-          <div class="section-tag">Contrôle</div>
-          <h2><span class="h2-num">03</span> Vérifier que le DMX sort vraiment</h2>
-          <div class="prose">
-            <p>Un statut vert veut dire «&nbsp;le boîtier est ouvert&nbsp;», pas «&nbsp;vos projecteurs reçoivent quelque chose&nbsp;». Le seul test qui compte est physique, et tient en quatre points.</p>
-          </div>
-          <ul class="check-list">
-            <li><span>Montez le <strong>master</strong> et le fader du groupe concerné&nbsp;: sans eux, tout sort à zéro.</span></li>
-            <li><span>Envoyez un <strong>plein feu blanc</strong> sur un seul projecteur, le plus proche de l'interface.</span></li>
-            <li><span><strong>Laissez le test tourner plusieurs secondes.</strong> Un projecteur a besoin de recevoir plusieurs trames avant d'allumer&nbsp;; une impulsion d'une demi-seconde passe inaperçue.</span></li>
-            <li><span>Regardez la <strong>LED de réception</strong> du projecteur ou du boîtier&nbsp;: elle clignote dès qu'un signal DMX valide arrive, même si l'adressage est faux.</span></li>
-          </ul>
-
-          <div class="callout">
-            <p><strong>La LED clignote mais rien ne s'allume&nbsp;:</strong> le signal arrive, le problème est en aval — adresse du projecteur, univers, ou mode DMX différent de celui déclaré dans le patch. <strong>Elle ne clignote pas&nbsp;:</strong> le problème est en amont — interface, câble, ou sortie non connectée dans le logiciel.</p>
           </div>
         </section>
 
@@ -1140,6 +1100,15 @@ function handleNewsletter(e) {
     var target = (iface && os) ? iface + '-' + os : null;
     procs.forEach(function (p) { p.hidden = (p.id !== target); });
     empty.hidden = !!target;
+
+    /* Aiguillage des sorties : un node uniquement. Une interface USB n'a qu'une
+       seule prise DMX et le tableau n'existe pas dans le logiciel : l'afficher
+       a un utilisateur qui vient de cocher "USB" ne fait que semer le doute. */
+    var uni = document.getElementById('univers');
+    var uniToc = document.getElementById('toc-univers');
+    var showUni = (iface !== 'open' && iface !== 'pro');
+    if (uni) uni.hidden = !showUni;
+    if (uniToc) uniToc.hidden = !showUni;
 
     if (target) {
       var el = document.getElementById(target);

@@ -25,7 +25,7 @@
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="de_DE">
   <meta property="article:published_time" content="2026-07-13">
-  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-19">
   <meta property="article:author" content="MyStrow">
 
   <!-- Twitter Card -->
@@ -61,7 +61,7 @@
     }
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-08-19",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow"
@@ -397,11 +397,11 @@
       </nav>
       <div class="hero-badge">🔌 Hardware-Anleitung · DMX-Ausgang</div>
       <h1>Deinen <em>DMX-Ausgang</em><br>Art-Net-Node &amp; USB-Interfaces</h1>
-      <p class="hero-sub">Wähle dein Gerät und dann Windows oder macOS&nbsp;: die genaue Vorgehensweise erscheint, mit den einzugebenden Werten und den Stolperfallen deines Systems. Danach behandelt die Seite Universen, die Zuordnung der Ausgänge und die Überprüfung.</p>
+      <p class="hero-sub">Wähle dein Gerät und dann Windows oder macOS&nbsp;: die genaue Vorgehensweise erscheint, mit den einzugebenden Werten und den Stolperfallen deines Systems. Danach behandelt die Seite Universen und die Zuordnung der Ausgänge.</p>
       <div class="hero-meta">
         <span>Von <strong>MyStrow</strong></span>
         <span>·</span>
-        <span>Aktualisiert am <strong>5. August 2026</strong></span>
+        <span>Aktualisiert am <strong>19. August 2026</strong></span>
         <span>·</span>
         <span>⏱ Einrichtung&nbsp;: <strong>5 bis 10 Min.</strong></span>
       </div>
@@ -421,8 +421,7 @@
         <div class="toc-title">Inhalt</div>
         <ol>
           <li><a href="#config">Konfigurator</a></li>
-          <li><a href="#univers">Universen &amp; Zuordnung</a></li>
-          <li><a href="#verifier">Prüfen, ob wirklich DMX rausgeht</a></li>
+          <li id="toc-univers"><a href="#univers">Universen &amp; Zuordnung</a></li>
         </ol>
       </aside>
 
@@ -466,7 +465,7 @@
               <p class="wiz-hint">Dreh es um&nbsp;: der Modellname ist oben oder auf der Anschlussseite aufgedruckt. Klicke auf den passenden.</p>
               <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node" data-mark="NODE ARTNET DMX">
-                  <img class="dev-photo" src="../img-interfaces/ec-node.webp" alt="ElectroConcept NODE ARTNET DMX Interface" width="640" height="480" loading="lazy" decoding="async">
+                  <img class="dev-photo" src="../img-interfaces/ec-node.webp?v=2" alt="ElectroConcept NODE ARTNET DMX Interface" width="640" height="480" loading="lazy" decoding="async">
                   <span class="dev-mark">NODE ARTNET DMX</span>
                   <span class="dev-brand">ElectroConcept</span>
                   <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
@@ -866,20 +865,12 @@
                   <div class="step">
                     <div class="step-num">1</div>
                     <div class="step-body">
-                      <h4>Anschließen und den FTDI-Treiber installieren</h4>
-                      <p>Direkter USB-Port, kein Hub ohne eigene Stromversorgung. Windows legt den Treiber meist von allein an&nbsp;; andernfalls installiere das Paket <strong>FTDI (VCP + D2XX)</strong> von ftdichip.com und stecke neu ein.</p>
-                      <div class="note">Bei diesen passiven Geräten spricht MyStrow den FTDI-Chip <strong>direkt an (D2XX)</strong>, genau wie QLC+&nbsp;: das setzt den Latency Timer auf 1&nbsp;ms und erzeugt ein sauberes Synchronisationssignal. Über den einfachen seriellen Port wäre das Timing kaputt und die Scheinwerfer würden sämtliche Frames ignorieren — ohne dass auch nur ein Fehler angezeigt würde.</div>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <div class="step-num">2</div>
-                    <div class="step-body">
                       <h4>Alles schließen, was den Chip belegt</h4>
                       <p>Hersteller-Tool, andere Lichtsoftware, eine zweite MyStrow-Instanz&nbsp;: nur ein Programm kann das Gerät öffnen. Zwei, und der Ausgang wird unberechenbar.</p>
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">3</div>
+                    <div class="step-num">2</div>
                     <div class="step-body">
                       <h4>Auswählen und verbinden</h4>
                       <p><span class="path">Verbindung ▸ 🌐 DMX-Ausgang ▸ ⚙️ Ausgang einrichten</span>, Reiter <strong>🔌 USB-DMX-Ausgang</strong>&nbsp;:</p>
@@ -892,7 +883,7 @@
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">4</div>
+                    <div class="step-num">3</div>
                     <div class="step-body">
                       <h4>Gerät stumm, obwohl alles grün ist&nbsp;? Der RTS/DTR-Test</h4>
                       <p><span class="path">Verbindung ▸ 🩺 Diagnose ▸ 🔌 USB-Test (DMX-Interface)</span> ▸ <strong>🔌 RTS/DTR-Test</strong>.</p>
@@ -956,18 +947,6 @@
 
           </div><!-- /#procs -->
 
-          <details class="helper" style="margin-top:26px;">
-            <summary>Die Grundlagen, falls dir die Wörter „Kanal“, „Universum“ oder „Art-Net“ nichts sagen</summary>
-            <div class="helper-body">
-              <ul>
-                <li><strong>Kanal</strong> — ein Wert von 0 bis 255. Ein einfacher LED-PAR belegt 5 (Dimmer, R, G, B, Strobe), ein Moving Head 16 oder mehr.</li>
-                <li><strong>Universum</strong> — ein Bündel von <strong>512 Kanälen</strong>, also eine physische DMX-Leitung. Größeres Rig = zweites Universum = zweiter Ausgang.</li>
-                <li><strong>Adresse</strong> — der Startkanal, der <em>am Scheinwerfer</em>eingestellt wird. Er muss exakt zum Patch von MyStrow passen.</li>
-                <li><strong>Art-Net</strong> — DMX über das Netzwerk transportiert, per UDP über Port <code>6454</code>. Das ist es, was MyStrow an einen Node sendet.</li>
-              </ul>
-              <p style="margin-top:10px;">MyStrow sendet das gesamte Universum mehrere Dutzend Mal pro Sekunde erneut&nbsp;: so funktioniert DMX ganz normal. Ein Scheinwerfer, der eine Farbe „hält“, obwohl alles aus ist, ist deshalb nie ein Scheinwerfer mit Fehler — es ist der Ausgang, der nicht mehr mit ihm spricht.</p>
-            </div>
-          </details>
         </section>
 
         <!-- 2. UNIVERS -->
@@ -1011,25 +990,6 @@
 
           <div class="callout">
             <p><strong>Der Patch bleibt maßgeblich.</strong> Die Zuordnung ändert die Adressierung nicht&nbsp;: im Patch bekommt jeder Scheinwerfer sein Universum und seine Startadresse. Zwei Geräte, deren Bereiche sich überschneiden, reagieren in jedem Fall gemeinsam — die Funktion <strong>⚡ Auto-Adressierung</strong> im Patch löst das mit einem Klick.</p>
-          </div>
-        </section>
-
-        <!-- 3. VERIFIER -->
-        <section id="verifier" class="doc-section">
-          <div class="section-tag">Kontrolle</div>
-          <h2><span class="h2-num">03</span> Prüfen, ob wirklich DMX rausgeht</h2>
-          <div class="prose">
-            <p>Ein grüner Status heißt „das Gerät ist geöffnet“, nicht „deine Scheinwerfer bekommen etwas“. Der einzige Test, der zählt, ist physisch — und besteht aus vier Punkten.</p>
-          </div>
-          <ul class="check-list">
-            <li><span>Zieh den <strong>Master</strong> und den Fader der betreffenden Gruppe hoch&nbsp;: ohne sie geht alles auf null hinaus.</span></li>
-            <li><span>Schick <strong>volles Weiß</strong> auf einen einzigen Scheinwerfer, den nächstgelegenen am Interface.</span></li>
-            <li><span><strong>Lass den Test mehrere Sekunden laufen.</strong> Ein Scheinwerfer muss mehrere Frames empfangen, bevor er anspringt&nbsp;; ein halbsekündiger Impuls bleibt unbemerkt.</span></li>
-            <li><span>Schau auf die <strong>Empfangs-LED</strong> des Scheinwerfers oder des Geräts&nbsp;: sie blinkt, sobald ein gültiges DMX-Signal ankommt, selbst bei falscher Adressierung.</span></li>
-          </ul>
-
-          <div class="callout">
-            <p><strong>Die LED blinkt, aber nichts geht an&nbsp;:</strong> das Signal kommt an, das Problem liegt weiter hinten — Adresse des Scheinwerfers, Universum, oder ein anderer DMX-Modus als im Patch angegeben. <strong>Sie blinkt nicht&nbsp;:</strong> das Problem liegt davor — Interface, Kabel, oder ein in der Software nicht verbundener Ausgang.</p>
           </div>
         </section>
 
@@ -1181,6 +1141,15 @@ function handleNewsletter(e) {
     var target = (iface && os) ? iface + '-' + os : null;
     procs.forEach(function (p) { p.hidden = (p.id !== target); });
     empty.hidden = !!target;
+
+    /* Aiguillage des sorties : un node uniquement. Une interface USB n'a qu'une
+       seule prise DMX et le tableau n'existe pas dans le logiciel : l'afficher
+       a un utilisateur qui vient de cocher "USB" ne fait que semer le doute. */
+    var uni = document.getElementById('univers');
+    var uniToc = document.getElementById('toc-univers');
+    var showUni = (iface !== 'open' && iface !== 'pro');
+    if (uni) uni.hidden = !showUni;
+    if (uniToc) uniToc.hidden = !showUni;
 
     if (target) {
       var el = document.getElementById(target);

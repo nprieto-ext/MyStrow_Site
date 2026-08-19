@@ -25,7 +25,7 @@
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="pt_PT">
   <meta property="article:published_time" content="2026-07-13">
-  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-19">
   <meta property="article:author" content="MyStrow">
 
   <!-- Twitter Card -->
@@ -61,7 +61,7 @@
     }
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-08-19",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://mystrow.fr/pt/configurer-node-usb-artnet-dmx-mystrow"
@@ -397,11 +397,11 @@
       </nav>
       <div class="hero-badge">🔌 Guia de material · Saída DMX</div>
       <h1>Ligar a sua <em>saída DMX</em><br>Nó Art-Net &amp; interfaces USB</h1>
-      <p class="hero-sub">Escolha o seu aparelho e depois Windows ou macOS&nbsp;: aparecem os passos exatos, com os valores a introduzir e as armadilhas próprias do seu sistema. A página cobre depois os universos, o roteamento das saídas e a verificação.</p>
+      <p class="hero-sub">Escolha o seu aparelho e depois Windows ou macOS&nbsp;: aparecem os passos exatos, com os valores a introduzir e as armadilhas próprias do seu sistema. A página cobre depois os universos e o roteamento das saídas.</p>
       <div class="hero-meta">
         <span>Por <strong>MyStrow</strong></span>
         <span>·</span>
-        <span>Atualizado a <strong>5 de agosto de 2026</strong></span>
+        <span>Atualizado a <strong>19 de agosto de 2026</strong></span>
         <span>·</span>
         <span>⏱ Instalação&nbsp;: <strong>5 a 10 min</strong></span>
       </div>
@@ -421,8 +421,7 @@
         <div class="toc-title">Índice</div>
         <ol>
           <li><a href="#config">Configurador</a></li>
-          <li><a href="#univers">Universos &amp; roteamento</a></li>
-          <li><a href="#verifier">Verificar que sai sinal</a></li>
+          <li id="toc-univers"><a href="#univers">Universos &amp; roteamento</a></li>
         </ol>
       </aside>
 
@@ -466,7 +465,7 @@
               <p class="wiz-hint">Vire-o ao contrário&nbsp;: o nome do modelo está impresso em cima ou na face das fichas. Clique no que corresponder.</p>
               <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node" data-mark="NODE ARTNET DMX">
-                  <img class="dev-photo" src="../img-interfaces/ec-node.webp" alt="Interface ElectroConcept NODE ARTNET DMX" width="640" height="480" loading="lazy" decoding="async">
+                  <img class="dev-photo" src="../img-interfaces/ec-node.webp?v=2" alt="Interface ElectroConcept NODE ARTNET DMX" width="640" height="480" loading="lazy" decoding="async">
                   <span class="dev-mark">NODE ARTNET DMX</span>
                   <span class="dev-brand">ElectroConcept</span>
                   <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
@@ -866,20 +865,12 @@
                   <div class="step">
                     <div class="step-num">1</div>
                     <div class="step-body">
-                      <h4>Ligar e instalar o driver FTDI</h4>
-                      <p>Porta USB direta, sem hub não alimentado. O Windows costuma instalar o driver sozinho&nbsp;; caso contrário, instale o pacote <strong>FTDI (VCP + D2XX)</strong> a partir de ftdichip.com, e volte a ligar.</p>
-                      <div class="note">Nestes aparelhos passivos, o MyStrow ataca o chip FTDI <strong>em direto (D2XX)</strong>, tal como o QLC+&nbsp;: é isso que ajusta o Latency Timer para 1&nbsp;ms e produz um sinal de sincronização limpo. Através da simples porta série, o timing ficaria partido e os projetores ignorariam todas as tramas — sem qualquer erro apresentado.</div>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <div class="step-num">2</div>
-                    <div class="step-body">
                       <h4>Fechar tudo o que segure o chip</h4>
                       <p>Utilitário do fabricante, outro software de luz, uma segunda instância do MyStrow&nbsp;: só um programa pode abrir o aparelho. Dois, e a saída torna-se errática.</p>
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">3</div>
+                    <div class="step-num">2</div>
                     <div class="step-body">
                       <h4>Selecionar e ligar</h4>
                       <p><span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🔌 Saída DMX USB</strong>&nbsp;:</p>
@@ -892,7 +883,7 @@
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">4</div>
+                    <div class="step-num">3</div>
                     <div class="step-body">
                       <h4>Aparelho mudo apesar de estar tudo verde&nbsp;? O teste RTS/DTR</h4>
                       <p><span class="path">Ligação ▸ 🩺 Diagnóstico ▸ 🔌 Teste USB (interface DMX)</span> ▸ <strong>🔌 Teste RTS/DTR</strong>.</p>
@@ -956,18 +947,6 @@
 
           </div><!-- /#procs -->
 
-          <details class="helper" style="margin-top:26px;">
-            <summary>As bases, se as palavras «&nbsp;canal&nbsp;», «&nbsp;universo&nbsp;» ou «&nbsp;Art-Net&nbsp;» não lhe dizem nada</summary>
-            <div class="helper-body">
-              <ul>
-                <li><strong>Canal</strong> — um valor de 0 a 255. Um PAR LED simples consome 5 (dimmer, R, V, A, strobe), uma cabeça móvel 16 ou mais.</li>
-                <li><strong>Universo</strong> — um pacote de <strong>512 canais</strong>, ou seja uma linha DMX física. Rig maior = segundo universo = segunda saída.</li>
-                <li><strong>Endereço</strong> — o canal de início definido <em>no projetor</em>. Tem de corresponder exatamente ao patch do MyStrow.</li>
-                <li><strong>Art-Net</strong> — DMX transportado pela rede, em UDP pela porta <code>6454</code>. É o que o MyStrow envia a um nó.</li>
-              </ul>
-              <p style="margin-top:10px;">O MyStrow reemite o universo inteiro várias dezenas de vezes por segundo&nbsp;: é o funcionamento normal do DMX. Um projetor que «&nbsp;guarda&nbsp;» uma cor quando está tudo desligado nunca é portanto um projetor com defeito — é a saída que deixou de lhe falar.</p>
-            </div>
-          </details>
         </section>
 
         <!-- 2. UNIVERS -->
@@ -1011,25 +990,6 @@
 
           <div class="callout">
             <p><strong>O patch é que manda.</strong> O roteamento não muda o endereçamento&nbsp;: é no patch que cada projetor recebe o seu universo e o seu endereço de início. Dois aparelhos cujas gamas se sobrepõem reagirão em conjunto aconteça o que acontecer — a função <strong>⚡ Endereçamento automático</strong> do patch resolve isso com um clique.</p>
-          </div>
-        </section>
-
-        <!-- 3. VERIFIER -->
-        <section id="verifier" class="doc-section">
-          <div class="section-tag">Controlo</div>
-          <h2><span class="h2-num">03</span> Verificar que o DMX sai mesmo</h2>
-          <div class="prose">
-            <p>Um estado verde quer dizer «&nbsp;o aparelho está aberto&nbsp;», e não «&nbsp;os seus projetores recebem alguma coisa&nbsp;». O único teste que conta é físico, e resume-se a quatro pontos.</p>
-          </div>
-          <ul class="check-list">
-            <li><span>Suba o <strong>master</strong> e o fader do grupo em causa&nbsp;: sem eles, tudo sai a zero.</span></li>
-            <li><span>Envie <strong>branco máximo</strong> para um único projetor, o mais próximo da interface.</span></li>
-            <li><span><strong>Deixe o teste a correr vários segundos.</strong> Um projetor precisa de receber várias tramas antes de acender&nbsp;; um impulso de meio segundo passa despercebido.</span></li>
-            <li><span>Olhe para o <strong>LED de receção</strong> do projetor ou do aparelho&nbsp;: pisca assim que chega um sinal DMX válido, mesmo que o endereçamento esteja errado.</span></li>
-          </ul>
-
-          <div class="callout">
-            <p><strong>O LED pisca mas não acende nada&nbsp;:</strong> o sinal chega, o problema está a jusante — endereço do projetor, universo, ou modo DMX diferente do declarado no patch. <strong>Não pisca&nbsp;:</strong> o problema está a montante — interface, cabo, ou saída não ligada no programa.</p>
           </div>
         </section>
 
@@ -1181,6 +1141,15 @@ function handleNewsletter(e) {
     var target = (iface && os) ? iface + '-' + os : null;
     procs.forEach(function (p) { p.hidden = (p.id !== target); });
     empty.hidden = !!target;
+
+    /* Aiguillage des sorties : un node uniquement. Une interface USB n'a qu'une
+       seule prise DMX et le tableau n'existe pas dans le logiciel : l'afficher
+       a un utilisateur qui vient de cocher "USB" ne fait que semer le doute. */
+    var uni = document.getElementById('univers');
+    var uniToc = document.getElementById('toc-univers');
+    var showUni = (iface !== 'open' && iface !== 'pro');
+    if (uni) uni.hidden = !showUni;
+    if (uniToc) uniToc.hidden = !showUni;
 
     if (target) {
       var el = document.getElementById(target);

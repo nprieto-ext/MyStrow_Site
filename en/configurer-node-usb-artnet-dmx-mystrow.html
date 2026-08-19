@@ -25,7 +25,7 @@
   <meta property="og:site_name" content="MyStrow">
   <meta property="og:locale" content="en_US">
   <meta property="article:published_time" content="2026-07-13">
-  <meta property="article:modified_time" content="2026-08-05">
+  <meta property="article:modified_time" content="2026-08-19">
   <meta property="article:author" content="MyStrow">
 
   <!-- Twitter Card -->
@@ -61,7 +61,7 @@
     }
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-05",
+  "dateModified": "2026-08-19",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://mystrow.fr/en/configurer-node-usb-artnet-dmx-mystrow"
@@ -397,11 +397,11 @@
       </nav>
       <div class="hero-badge">🔌 Hardware guide · DMX output</div>
       <h1>Wiring your <em>DMX output</em><br>Art-Net node &amp; USB interfaces</h1>
-      <p class="hero-sub">Pick your box, then Windows or macOS&nbsp;: the exact procedure appears, with the values to enter and the pitfalls specific to your system. The page then covers universes, output routing and verification.</p>
+      <p class="hero-sub">Pick your box, then Windows or macOS&nbsp;: the exact procedure appears, with the values to enter and the pitfalls specific to your system. The page then covers universes and output routing.</p>
       <div class="hero-meta">
         <span>By <strong>MyStrow</strong></span>
         <span>·</span>
-        <span>Updated on <strong>5 August 2026</strong></span>
+        <span>Updated on <strong>19 August 2026</strong></span>
         <span>·</span>
         <span>⏱ Setup&nbsp;: <strong>5 to 10 min</strong></span>
       </div>
@@ -421,8 +421,7 @@
         <div class="toc-title">Contents</div>
         <ol>
           <li><a href="#config">Configurator</a></li>
-          <li><a href="#univers">Universes &amp; routing</a></li>
-          <li><a href="#verifier">Check that DMX is going out</a></li>
+          <li id="toc-univers"><a href="#univers">Universes &amp; routing</a></li>
         </ol>
       </aside>
 
@@ -466,7 +465,7 @@
               <p class="wiz-hint">Turn it over&nbsp;: the model name is printed on the top or on the connector face. Click the one that matches.</p>
               <div class="dev-grid" role="radiogroup" aria-labelledby="q-iface">
                 <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-node" data-mark="NODE ARTNET DMX">
-                  <img class="dev-photo" src="../img-interfaces/ec-node.webp" alt="ElectroConcept NODE ARTNET DMX interface" width="640" height="480" loading="lazy" decoding="async">
+                  <img class="dev-photo" src="../img-interfaces/ec-node.webp?v=2" alt="ElectroConcept NODE ARTNET DMX interface" width="640" height="480" loading="lazy" decoding="async">
                   <span class="dev-mark">NODE ARTNET DMX</span>
                   <span class="dev-brand">ElectroConcept</span>
                   <span class="dev-ports" aria-hidden="true"><svg><use href="#ic-rj45"></use></svg><svg><use href="#ic-xlr"></use></svg></span>
@@ -866,20 +865,12 @@
                   <div class="step">
                     <div class="step-num">1</div>
                     <div class="step-body">
-                      <h4>Plug in and install the FTDI driver</h4>
-                      <p>Direct USB port, no unpowered hub. Windows usually installs the driver by itself&nbsp;; otherwise install the <strong>FTDI (VCP + D2XX)</strong> package from ftdichip.com, then plug it back in.</p>
-                      <div class="note">On these passive boxes, MyStrow drives the FTDI chip <strong>directly (D2XX)</strong>, just like QLC+&nbsp;: that is what sets the Latency Timer to 1&nbsp;ms and produces a clean sync signal. Through the plain serial port, the timing would be broken and the fixtures would ignore every frame — without a single error being shown.</div>
-                    </div>
-                  </div>
-                  <div class="step">
-                    <div class="step-num">2</div>
-                    <div class="step-body">
                       <h4>Close everything holding the chip</h4>
                       <p>Manufacturer utility, another lighting application, a second instance of MyStrow&nbsp;: only one program can open the box. Two, and the output becomes erratic.</p>
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">3</div>
+                    <div class="step-num">2</div>
                     <div class="step-body">
                       <h4>Select and connect</h4>
                       <p><span class="path">Connection ▸ 🌐 DMX Output ▸ ⚙️ Configure output</span>, tab <strong>🔌 USB DMX output</strong>&nbsp;:</p>
@@ -892,7 +883,7 @@
                     </div>
                   </div>
                   <div class="step">
-                    <div class="step-num">4</div>
+                    <div class="step-num">3</div>
                     <div class="step-body">
                       <h4>Box silent even though everything is green&nbsp;? The RTS/DTR test</h4>
                       <p><span class="path">Connection ▸ 🩺 Diagnostics ▸ 🔌 USB test (DMX interface)</span> ▸ <strong>🔌 RTS/DTR test</strong>.</p>
@@ -956,18 +947,6 @@
 
           </div><!-- /#procs -->
 
-          <details class="helper" style="margin-top:26px;">
-            <summary>The basics, if the words “channel”, “universe” or “Art-Net” mean nothing to you</summary>
-            <div class="helper-body">
-              <ul>
-                <li><strong>Channel</strong> — a value from 0 to 255. A simple LED PAR uses 5 (dimmer, R, G, B, strobe), a moving head 16 or more.</li>
-                <li><strong>Universe</strong> — a bundle of <strong>512 channels</strong>, that is one physical DMX line. Bigger rig = second universe = second output.</li>
-                <li><strong>Address</strong> — the start channel set <em>on the fixture</em>. It must match the MyStrow patch exactly.</li>
-                <li><strong>Art-Net</strong> — DMX carried over the network, in UDP on port <code>6454</code>. This is what MyStrow sends to a node.</li>
-              </ul>
-              <p style="margin-top:10px;">MyStrow re-sends the whole universe several dozen times a second&nbsp;: that is how DMX normally works. So a fixture that “holds” a color when everything is off is never a buggy fixture — it is the output that has stopped talking to it.</p>
-            </div>
-          </details>
         </section>
 
         <!-- 2. UNIVERS -->
@@ -1011,25 +990,6 @@
 
           <div class="callout">
             <p><strong>The patch stays in charge.</strong> Routing does not change the addressing&nbsp;: it is in the patch that each fixture gets its universe and its start address. Two devices whose ranges overlap will react together no matter what — the patch's <strong>⚡ Auto-addressing</strong> function fixes that in one click.</p>
-          </div>
-        </section>
-
-        <!-- 3. VERIFIER -->
-        <section id="verifier" class="doc-section">
-          <div class="section-tag">Verification</div>
-          <h2><span class="h2-num">03</span> Check that DMX really is going out</h2>
-          <div class="prose">
-            <p>A green status means “the box is open”, not “your fixtures are receiving something”. The only test that counts is physical, and it comes down to four points.</p>
-          </div>
-          <ul class="check-list">
-            <li><span>Bring up the <strong>master</strong> and the fader of the group concerned&nbsp;: without them, everything goes out at zero.</span></li>
-            <li><span>Send <strong>full white</strong> to a single fixture, the one closest to the interface.</span></li>
-            <li><span><strong>Let the test run for several seconds.</strong> A fixture needs to receive several frames before lighting up&nbsp;; a half-second pulse goes unnoticed.</span></li>
-            <li><span>Watch the <strong>receive LED</strong> on the fixture or the box&nbsp;: it blinks as soon as a valid DMX signal arrives, even if the addressing is wrong.</span></li>
-          </ul>
-
-          <div class="callout">
-            <p><strong>The LED blinks but nothing lights up&nbsp;:</strong> the signal is arriving, the problem is downstream — fixture address, universe, or a DMX mode different from the one declared in the patch. <strong>It does not blink&nbsp;:</strong> the problem is upstream — interface, cable, or an output not connected in the software.</p>
           </div>
         </section>
 
@@ -1181,6 +1141,15 @@ function handleNewsletter(e) {
     var target = (iface && os) ? iface + '-' + os : null;
     procs.forEach(function (p) { p.hidden = (p.id !== target); });
     empty.hidden = !!target;
+
+    /* Aiguillage des sorties : un node uniquement. Une interface USB n'a qu'une
+       seule prise DMX et le tableau n'existe pas dans le logiciel : l'afficher
+       a un utilisateur qui vient de cocher "USB" ne fait que semer le doute. */
+    var uni = document.getElementById('univers');
+    var uniToc = document.getElementById('toc-univers');
+    var showUni = (iface !== 'open' && iface !== 'pro');
+    if (uni) uni.hidden = !showUni;
+    if (uniToc) uniToc.hidden = !showUni;
 
     if (target) {
       var el = document.getElementById(target);
