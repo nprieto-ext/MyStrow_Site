@@ -1144,10 +1144,14 @@ function handleNewsletter(e) {
     if (target) {
       var el = document.getElementById(target);
       if (el) stampModel(el);
+      // On memorise le choix, mais on n'ecrit PLUS le hash dans l'URL.
+      // Il y avait deux memoires concurrentes, et le hash gagnait : une fois la
+      // page configuree, l'adresse elle-meme portait "#node-windows". Mise en
+      // favori ou partagee, elle imposait ce choix a tout le monde, pour
+      // toujours. La lecture du hash reste en place plus bas : les liens deja
+      // partages continuent de fonctionner.
       try {
         localStorage.setItem(STORE, target + (model ? '|' + model : ''));
-        if (history.replaceState) history.replaceState(null, '', '#' + target);
-        else location.hash = target;
       } catch (e) {}
       if (scroll && el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -1182,6 +1186,12 @@ function handleNewsletter(e) {
     b.addEventListener('click', function () {
       iface = ''; os = ''; model = '';
       try { localStorage.removeItem(STORE); } catch (e) {}
+      // Seule ecriture d'URL conservee, et elle NETTOIE : sans elle, un
+      // "#node-windows" herite d'un ancien lien survivrait a la
+      // reinitialisation et reviendrait au rechargement suivant.
+      if (location.hash && history.replaceState) {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
       paint(false);
       document.getElementById('config').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
