@@ -505,11 +505,10 @@ function handleNewsletter(e) {
   var msg = document.getElementById('nl-msg');
   btn.disabled = true;
   btn.style.opacity = '0.6';
-  var k = 'xkeysib-a025cb5a886afe77f36be2116538dfd7aecc239ee396518b531c4998346407f2' + '-oRCwrjIY8RZ6clbt';
-  fetch('https://api.brevo.com/v3/contacts', {
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'api-key': k },
-    body: JSON.stringify({ email: email, listIds: [3], updateEnabled: true })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
   }).then(function(r) {
     if (r.ok || r.status === 204) { msg.textContent = '✓ Bem-vindo!'; msg.className = 'nl-msg ok'; }
     else { msg.textContent = 'Ocorreu um erro.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }

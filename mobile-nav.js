@@ -45,6 +45,28 @@
 
     if (!links.length) return;
 
+    // ── Menu mobile : allegement ──────────────────────────────────────────
+    // On retire "Fonctionnalites" et "Shop" du panneau mobile UNIQUEMENT. Le
+    // menu bureau n'est pas touche : ce fichier ne fait que lire la nav pour
+    // en deriver une version tactile, il ne la modifie pas.
+    //
+    // Le filtre porte sur le href et non sur le libelle, qui change dans les
+    // cinq langues (Fonctionnalites / Features / Funktionen / Funciones /
+    // Funcionalidades). Les href, eux, se resument a deux formes.
+    var EXCLUS = /(#fonctionnalites|#features)$|(^|\/)shop(\.html)?$/i;
+    links = links.filter(function (l) { return !EXCLUS.test(l.href); });
+
+    // ── Menu mobile : entree Newsletter ───────────────────────────────────
+    // Ajoutee seulement en francais : newsletter.html n'existe qu'a la racine,
+    // il n'y a pas de traduction en/de/es/pt. Pointer les autres langues
+    // dessus enverrait le lecteur sur une page qu'il ne comprend pas.
+    var estFR = (document.documentElement.lang || 'fr').toLowerCase().indexOf('fr') === 0;
+    if (estFR && !links.some(function (l) { return /newsletter/.test(l.href); })) {
+      // Sans ".html" : la reecriture URL propre renvoie "newsletter.html" vers
+      // "newsletter" par un 301, autant pointer directement la bonne adresse.
+      links.push({ href: 'newsletter', text: 'Newsletter' });
+    }
+
     // ── Collect language links from existing lang-dropdown ────────────────
     var langHtml = '';
     var langDropdown = document.querySelector('.lang-dropdown');
