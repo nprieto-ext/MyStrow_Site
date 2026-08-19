@@ -311,7 +311,7 @@
       <div class="forgot-link">
         <a onclick="sendReset()">Mot de passe oublié ?</a>
       </div>
-      <div class="reset-ok" id="reset-ok">Email de réinitialisation envoyé ✓</div>
+      <div class="reset-ok" id="reset-ok"></div>
     </div>
   </div>
 
@@ -540,19 +540,48 @@ async function login() {
 }
 
 // ── Mot de passe oublié ──────────────────────────────────────────────────────
+// Passe par la Cloud Function `send_reset_email`, qui RENVOIE les identifiants
+// (email + mot de passe) au lieu d'un lien à cliquer — c'est ce que le client a
+// perdu. Surtout, elle remonte les échecs : `accounts:sendOobCode` répond 200
+// quoi qu'il arrive (protection anti-énumération activée sur le projet), et
+// cette fonction-ci ignorait de toute façon la réponse. La page affichait donc
+// « email envoyé ✓ » même quand rien ne partait, et un client sans identifiants
+// n'avait aucun moyen de le savoir.
+const RESET_EMAIL_URL =
+  'https://us-central1-mystrow-907be.cloudfunctions.net/send_reset_email';
+
 async function sendReset() {
   const email = document.getElementById('l-email').value.trim();
-  if (!email) {
-    const e = document.getElementById('login-error');
-    e.textContent = 'Entrez votre email ci-dessus pour recevoir le lien.';
-    e.style.display = 'block'; return;
+  const okEl  = document.getElementById('reset-ok');
+  const errEl = document.getElementById('login-error');
+  okEl.style.display = 'none';
+  errEl.style.display = 'none';
+
+  if (!email || email.indexOf('@') < 0) {
+    errEl.textContent = 'Entrez votre email ci-dessus pour recevoir vos identifiants.';
+    errEl.style.display = 'block';
+    return;
   }
-  await fetch(
-    `https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=${FB_API_KEY}`,
-    { method: 'POST', headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ requestType: 'PASSWORD_RESET', email }) }
-  );
-  document.getElementById('reset-ok').style.display = 'block';
+
+  okEl.textContent = 'Envoi en cours…';
+  okEl.style.display = 'block';
+  try {
+    const res  = await fetch(RESET_EMAIL_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || `Envoi impossible (erreur ${res.status}).`);
+    }
+    okEl.textContent = 'Identifiants envoyés ✓ — pensez à regarder dans vos spams.';
+  } catch (e) {
+    okEl.style.display = 'none';
+    errEl.textContent = (e && e.message ? e.message : 'Envoi impossible.') +
+      ' Si le problème persiste, écrivez à nicolas@mystrow.fr.';
+    errEl.style.display = 'block';
+  }
 }
 
 // ── Logout ───────────────────────────────────────────────────────────────────
@@ -772,7 +801,7 @@ function handleNewsletter(e) {
 }
 </script>
 <script src="nav.js" defer></script>
-<script src="mobile-nav.js"></script>
+<script src="mobile-nav.js?v=2"></script>
 <script src="/lang-suggest.js" defer></script>
 </body>
 </html>
