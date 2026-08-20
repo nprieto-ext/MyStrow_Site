@@ -424,7 +424,7 @@
       var email=input.value.trim();
       if(!email||!email.includes('@')){msg.style.color='#ff5555';msg.textContent='Invalid email address.';return;}
       var btn=form.querySelector('button');btn.disabled=true;btn.textContent='…';msg.textContent='';
-      fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,lang:'en'})})
+      fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,lang:'es'})})
       .then(function(r){return r.json();})
       .then(function(d){
         if(d.ok){msg.style.color='var(--accent)';msg.textContent='✓  Subscribed — see you soon!';input.value='';btn.textContent='✓ Subscribed';}

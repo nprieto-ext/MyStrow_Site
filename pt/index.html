@@ -1277,7 +1277,7 @@
       msg.style.color = 'var(--muted)'; msg.textContent = '';
       fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
         method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({email: email, lang: 'en'})
+        body: JSON.stringify({email: email, lang: 'pt'})
       })
       .then(function(r){ return r.json(); })
       .then(function(d){

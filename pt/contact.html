@@ -424,7 +424,7 @@
       var email=input.value.trim();
       if(!email||!email.includes('@')){msg.style.color='#ff5555';msg.textContent='Endereço de email inválido.';return;}
       var btn=form.querySelector('button');btn.disabled=true;btn.textContent='…';msg.textContent='';
-      fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,lang:'en'})})
+      fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,lang:'pt'})})
       .then(function(r){return r.json();})
       .then(function(d){
         if(d.ok){msg.style.color='var(--accent)';msg.textContent='✓  Subscrito — até breve!';input.value='';btn.textContent='✓ Subscrito';}
