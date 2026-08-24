@@ -688,7 +688,20 @@
       .btn-nav-cta { display: none; }
       .pillars-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-item { padding: 22px 28px; }
-      h1 { font-size: 52px; }
+      /* Le titre du hero contient un mot long et INSECABLE (« instantanement, »
+         en francais, « instantaneamente, » en portugais qui est pire) : a 52px il
+         depassait la largeur d'un telephone et se coupait en deux lignes. On
+         recupere d'abord de la place (padding 40 -> 20), puis on fait varier la
+         taille avec l'ecran. 12,5vw garde le mot portugais — le plus large, 6,62
+         px de large par px de police — sur une seule ligne jusqu'a 300 px. */
+      .hero-inner { padding: 30px 20px 72px; }
+      h1 { font-size: clamp(34px, 12.5vw, 52px); }
+      /* Sur telephone : appels a l'action et ligne « Gratuit pour demarrer »
+         centres, deux elements decoratifs retires pour alleger l'ecran. */
+      .hero-content .hero-ctas { justify-content: center; }
+      .hero-content .hero-meta { text-align: center; }
+      .demo-bar-title { display: none; }
+      #how-tag { display: none; }
     }
 
     /* Synoptique signal */
@@ -1127,7 +1140,7 @@
 <!-- COMMENT ÇA MARCHE -->
 <section aria-labelledby="how-title">
   <div class="wrap" style="text-align:center">
-    <p class="section-tag">Démarrage rapide</p>
+    <p class="section-tag" id="how-tag">Démarrage rapide</p>
     <h2 id="how-title">Opérationnel en 3 étapes</h2>
     <p class="section-sub" style="margin:0 auto 56px">De l'installation à votre premier show, en moins de 10 minutes.</p>
     <div class="how-grid">
