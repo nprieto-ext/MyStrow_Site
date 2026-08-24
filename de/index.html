@@ -396,8 +396,13 @@
     centres, deux elements decoratifs retires pour alleger l'ecran. */
  .hero-content .hero-ctas { justify-content: center; }
  .hero-content .hero-meta { text-align: center; }
- .demo-bar-title { display: none; }
- #how-tag { display: none; } .btn-nav-cta { display: none; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
+ /* Sections entieres retirees du telephone : la fenetre de demo et
+    « Operationnel en 3 etapes ». Aucun JS n'y est attache, seulement des
+    animations CSS, qui cessent avec display:none. Ces deux regles rendent
+    inutiles les masquages plus fins poses juste avant (.demo-bar-title et
+    le tag « Demarrage rapide »), qui ont donc ete retires. */
+ .demo-wrap { display: none; }
+ section[aria-labelledby="how-title"] { display: none; } .btn-nav-cta { display: none; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 720px) { .demo-body { grid-template-columns: 1fr; } .demo-akai-panel { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); } }
     @media (max-width: 560px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
 
@@ -722,7 +727,7 @@
 <!-- HOW IT WORKS -->
 <section aria-labelledby="how-title">
   <div class="wrap" style="text-align:center">
-    <p class="section-tag" id="how-tag">Schnellstart</p>
+    <p class="section-tag">Schnellstart</p>
     <h2 id="how-title">In 3 Schritten startklar</h2>
     <p class="section-sub" style="margin:0 auto 56px">Von der Installation bis zur ersten Show – in unter 10 Minuten.</p>
     <div class="how-grid">
