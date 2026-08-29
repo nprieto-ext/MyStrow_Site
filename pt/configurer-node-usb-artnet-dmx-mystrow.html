@@ -472,7 +472,7 @@
                   <span class="dev-fam">Nó Art-Net</span>
                 </button>
 
-                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-usb-node" data-mark="USB NODE DMX">
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="usbnode" data-model="ec-usb-node" data-mark="USB NODE DMX">
                   <img class="dev-photo" src="../img-interfaces/ec-usb-node.webp" alt="Interface ElectroConcept USB NODE DMX" width="640" height="480" loading="lazy" decoding="async">
                   <span class="dev-mark">USB NODE DMX</span>
                   <span class="dev-brand">ElectroConcept</span>
@@ -644,6 +644,7 @@
                       <h4>Colocar a placa de rede do PC em 2.0.0.1</h4>
                       <p>No MyStrow&nbsp;: <span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🌐 Saída Node</strong>, botão <strong>⚙️ Configurar a ligação de rede</strong>. O assistente verifica os cabos, lista as placas Ethernet, e o botão <strong>Configurar automaticamente ✓</strong> aplica 2.0.0.1 / 255.0.0.0 àquela que indicar.</p>
                       <p>A configuração automática exige <strong>direitos de administrador</strong>. Se falhar, o assistente passa para a página manual&nbsp;: botão <strong>🔑 Reiniciar como administrador</strong>, ou definição à mão — clique direito na placa ▸ Propriedades ▸ <strong>TCP/IPv4</strong> ▸ Propriedades ▸ «&nbsp;Utilizar o seguinte endereço IP&nbsp;» ▸ <strong>2.0.0.1</strong>, máscara <strong>255.0.0.0</strong>, gateway vazio.</p>
+                      <div class="note warn"><strong>A ordem conta.</strong> Faça o passo 2 <em>antes</em> deste : o node sai de fábrica em <strong>2.0.0.1</strong>, o mesmo endereço que o assistente está prestes a dar ao seu PC. Ambos o reclamariam ao mesmo tempo, e o Windows pode então desativar a placa, assinalando um endereço duplicado.</div>
                       <div class="shot-row">
                         <figure class="shot">
                           <img src="../proprietes-carte-reseau.webp" alt="Propriedades da placa de rede do Windows com IP fixo 2.0.0.1 para um nó Art-Net" loading="lazy">
@@ -756,6 +757,135 @@
             </article>
 
             <!-- C. PRO + WINDOWS -->
+
+            <!-- A-bis. USB NODE + WINDOWS -->
+            <article class="proc" id="usbnode-windows" data-iface="usbnode" data-os="windows">
+              <div class="proc-head">
+                <h3>USB NODE DMX</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="callout">
+                  <p><strong>Esta caixa não é um node como os outros.</strong> Não tem tomada RJ45 nem alimentação separada&nbsp;: um único cabo USB leva ao mesmo tempo a corrente e a rede. O Windows vê-a como uma <strong>placa de rede adicional</strong>, e é a própria caixa que distribui o endereço IP ao seu computador. Portanto <strong>não há nenhum endereço para escrever</strong> no seu PC.</p>
+                </div>
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar o cabo USB e aguardar</h4>
+                      <p>Um único cabo, do PC à caixa. O Windows tem depois de instalar a placa de rede que ela contém&nbsp;: conte <strong>uns dez segundos</strong>, por vezes mais na primeira ligação.</p>
+                      <div class="note">Aparece com um nome que depende do controlador utilizado — «&nbsp;<strong>Electroconcept USB Node</strong>&nbsp;» ou «&nbsp;<strong>UsbNcm Host Device</strong>&nbsp;». É normal, ambos designam a sua caixa.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Configurar o node no DMX TOOLS</h4>
+                      <p>Com a caixa ligada, abra <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> e introduza&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
+                      </dl>
+                      <p>Valide e depois <strong>desligue e volte a ligar o USB</strong>. A caixa sai de fábrica em <strong>2.0.0.1</strong>&nbsp;; o MyStrow, por seu lado, dirige-se a <strong>2.0.0.15</strong>. É esse todo o objetivo deste passo.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="../dmx-parameters-dmxtools.webp" alt="Separador DMX Parameters do DMX TOOLS ElectroConcept" width="401" height="538" loading="lazy">
+                          <figcaption>Separador <strong>DMX Parameters</strong>.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="../network-parameters-dmxtools.webp" alt="Separador Network Parameters do DMX TOOLS ElectroConcept" width="384" height="379" loading="lazy">
+                          <figcaption>Separador <strong>Network Parameters</strong>.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Não mexa na placa de rede</h4>
+                      <p>Ao contrário de um node RJ45, aqui <strong>não há nada para configurar</strong>&nbsp;: a caixa atribui ela própria um endereço ao seu PC (2.0.0.2), e já é o correto. Deixe a placa em «&nbsp;Obter um endereço IP automaticamente&nbsp;».</p>
+                      <div class="note warn"><strong>Não lance «&nbsp;Configurar automaticamente&nbsp;» antes do passo 2.</strong> Esse assistente atribui <strong>2.0.0.1</strong> ao seu PC — o endereço de fábrica da própria caixa. Enquanto o node não tiver passado para 2.0.0.15, ambos reclamam o mesmo endereço e o Windows pode desativar a placa. Depois do passo 2 já não há conflito&nbsp;: o assistente volta a ser inofensivo, apenas inútil.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Autorizar o MyStrow na firewall</h4>
+                      <p>Na primeira emissão, o Windows mostra um pedido de autorização&nbsp;: marque <strong>Redes privadas</strong> e valide. O Art-Net sai por UDP na porta <code>6454</code>&nbsp;; se for recusado, o pedido não volta a aparecer e o node fica mudo.</p>
+                      <div class="note">Já recusou por engano&nbsp;? <strong>Firewall do Windows Defender ▸ Permitir uma aplicação</strong> ▸ marque o MyStrow para as redes privadas.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                      <h4>Conectar</h4>
+                      <p>No MyStrow&nbsp;: <span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🌐 Saída Node</strong>. O estado passa a verde assim que a caixa responde, depois clique em <strong>🔌 Conectar</strong>.</p>
+                      <div class="note ok"><strong>O indicador DMX da caixa</strong> é a sua melhor testemunha&nbsp;: só acende quando recebe dados de verdade. Apagado enquanto o MyStrow indica «&nbsp;conectado&nbsp;» significa que as tramas vão para o endereço errado — volte ao passo 2.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>Uma só tomada DMX.</strong> Este modelo tem uma única saída física e só difunde o universo 1. A tabela de roteamento do MyStrow continua a servir para escolher <em>qual</em> universo vai para lá, mas um de cada vez&nbsp;: se os seus projetores estiverem patcheados no universo 2, 3 ou 4, defina <strong>DMX 1 ← Universo 2</strong> (ver <a href="#univers">Universos &amp; roteamento</a>) ou volte a patcheá-los no universo 1.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- B-bis. USB NODE + MACOS -->
+            <article class="proc" id="usbnode-macos" data-iface="usbnode" data-os="macos">
+              <div class="proc-head">
+                <h3>USB NODE DMX</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Mudar de material</button>
+              </div>
+              <div class="proc-body">
+                <div class="callout">
+                  <p><strong>É a caixa mais simples num Mac.</strong> Um único cabo USB leva a corrente e a rede. O macOS vê-a como uma <strong>interface de rede adicional</strong>, e a caixa entrega-lhe ela própria o seu endereço&nbsp;: ao contrário de um node RJ45, <strong>não há nenhum endereço para escrever</strong> nas Definições de Rede.</p>
+                </div>
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Ligar o cabo USB e aguardar</h4>
+                      <p>Um único cabo, do Mac à caixa. Conte <strong>uns dez segundos</strong> até a interface aparecer em <span class="path">Definições do Sistema ▸ Rede</span>.</p>
+                      <div class="note">Num Mac recente (apenas USB-C), utilize um adaptador <strong>alimentado</strong> ou uma porta direta&nbsp;: esta caixa retira a corrente do USB, e um hub passivo sobrecarregado fá-la falhar a meio do espetáculo.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Configurar o node no DMX TOOLS</h4>
+                      <p>Com a caixa ligada, abra <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> e introduza&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
+                      </dl>
+                      <p>Valide e depois <strong>desligue e volte a ligar o USB</strong>. A caixa sai de fábrica em <strong>2.0.0.1</strong>, e o MyStrow dirige-se a <strong>2.0.0.15</strong>.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Deixar a interface em automático</h4>
+                      <p>Em <span class="path">Definições do Sistema ▸ Rede</span>, a interface da caixa deve ficar em <strong>«&nbsp;Utilizar DHCP&nbsp;»</strong>. Recebe o endereço 2.0.0.2 que a caixa lhe dá&nbsp;: é o correto, não o force para manual.</p>
+                      <div class="note">O Mac pode continuar em Wi-Fi para a Internet&nbsp;: o tráfego para 2.0.0.15 sairá pela interface da caixa, que leva o plano de endereçamento 2.x.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Conectar</h4>
+                      <p>No MyStrow&nbsp;: <span class="path">Ligação ▸ 🌐 Saída DMX ▸ ⚙️ Configurar a saída</span>, separador <strong>🌐 Saída Node</strong>. O estado passa a verde assim que a caixa responde, depois <strong>🔌 Conectar</strong>. O macOS pode pedir autorização para aceitar ligações de entrada&nbsp;: aceite.</p>
+                      <div class="note ok"><strong>O indicador DMX da caixa</strong> só acende quando recebe dados de verdade. Apagado enquanto o MyStrow indica «&nbsp;conectado&nbsp;», volte ao passo 2.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>Uma só tomada DMX.</strong> Este modelo tem uma única saída física e só difunde o universo 1. Se os seus projetores estiverem patcheados no universo 2, 3 ou 4, defina <strong>DMX 1 ← Universo 2</strong> na tabela de roteamento (ver <a href="#univers">Universos &amp; roteamento</a>) ou volte a patcheá-los no universo 1.</p>
+                </div>
+              </div>
+            </article>
+
             <article class="proc" id="pro-windows" data-iface="pro" data-os="windows">
               <div class="proc-head">
                 <h3>Interface USB «&nbsp;Pro&nbsp;» (ENTTEC DMX USB Pro, Eurolite MK2)</h3>
@@ -1099,7 +1229,7 @@ function handleNewsletter(e) {
   var ifaceBtns = [].slice.call(document.querySelectorAll('.pick[data-iface]'));
   var osBtns    = [].slice.call(document.querySelectorAll('.pick[data-os]'));
   var stepOs = document.getElementById('wiz-os');
-  var IFACES = ['node', 'pro', 'open'];
+  var IFACES = ['node', 'usbnode', 'pro', 'open'];
   var OSES   = ['windows', 'macos'];
   var STORE  = 'mystrow-dmx-setup';
 

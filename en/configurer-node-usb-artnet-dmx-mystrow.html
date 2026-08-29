@@ -472,7 +472,7 @@
                   <span class="dev-fam">Art-Net node</span>
                 </button>
 
-                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="node" data-model="ec-usb-node" data-mark="USB NODE DMX">
+                <button type="button" class="pick dev" role="radio" aria-checked="false" data-iface="usbnode" data-model="ec-usb-node" data-mark="USB NODE DMX">
                   <img class="dev-photo" src="../img-interfaces/ec-usb-node.webp" alt="ElectroConcept USB NODE DMX interface" width="640" height="480" loading="lazy" decoding="async">
                   <span class="dev-mark">USB NODE DMX</span>
                   <span class="dev-brand">ElectroConcept</span>
@@ -644,6 +644,7 @@
                       <h4>Set the PC's network adapter to 2.0.0.1</h4>
                       <p>In MyStrow&nbsp;: <span class="path">Connection ▸ 🌐 DMX Output ▸ ⚙️ Configure output</span>, tab <strong>🌐 Node output</strong>, button <strong>⚙️ Configure the network connection</strong>. The wizard checks the cables, lists the Ethernet adapters, and the <strong>Configure automatically ✓</strong> button applies 2.0.0.1 / 255.0.0.0 to the one you point at.</p>
                       <p>Automatic configuration requires <strong>administrator rights</strong>. If it fails, the wizard falls back to the manual page&nbsp;: button <strong>🔑 Restart as administrator</strong>, or set it by hand — right-click the adapter ▸ Properties ▸ <strong>TCP/IPv4</strong> ▸ Properties ▸ “Use the following IP address” ▸ <strong>2.0.0.1</strong>, netmask <strong>255.0.0.0</strong>, gateway empty.</p>
+                      <div class="note warn"><strong>Order matters.</strong> Do step 2 <em>before</em> this one : the node ships from the factory on <strong>2.0.0.1</strong>, the very address the wizard is about to give your PC. Both would claim it at once, and Windows may then disable the adapter, reporting a duplicate address.</div>
                       <div class="shot-row">
                         <figure class="shot">
                           <img src="../proprietes-carte-reseau.webp" alt="Windows network adapter properties set to fixed IP 2.0.0.1 for an Art-Net node" loading="lazy">
@@ -756,6 +757,135 @@
             </article>
 
             <!-- C. PRO + WINDOWS -->
+
+            <!-- A-bis. USB NODE + WINDOWS -->
+            <article class="proc" id="usbnode-windows" data-iface="usbnode" data-os="windows">
+              <div class="proc-head">
+                <h3>USB NODE DMX</h3>
+                <span class="proc-chip">Windows</span>
+                <button type="button" class="proc-reset">Change hardware</button>
+              </div>
+              <div class="proc-body">
+                <div class="callout">
+                  <p><strong>This box is not a node like the others.</strong> It has neither an RJ45 socket nor a separate power supply&nbsp;: a single USB cable carries both power and network. Windows sees it as an <strong>extra network adapter</strong>, and the box itself hands your computer its IP address. So there is <strong>no address to type in</strong> on your PC.</p>
+                </div>
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Plug the USB cable in, then wait</h4>
+                      <p>A single cable, from the PC to the box. Windows then has to install the network adapter it contains&nbsp;: allow <strong>about ten seconds</strong>, sometimes more on the very first connection.</p>
+                      <div class="note">It shows up under a name that depends on the driver in use — «&nbsp;<strong>Electroconcept USB Node</strong>&nbsp;» or «&nbsp;<strong>UsbNcm Host Device</strong>&nbsp;». That is normal, both mean your box.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Set the node up in DMX TOOLS</h4>
+                      <p>With the box plugged in, open <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> and enter&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
+                      </dl>
+                      <p>Confirm, then <strong>unplug and replug the USB</strong>. The box ships from the factory on <strong>2.0.0.1</strong>&nbsp;; MyStrow, for its part, talks to <strong>2.0.0.15</strong>. That is the whole point of this step.</p>
+                      <div class="shot-row">
+                        <figure class="shot">
+                          <img src="../dmx-parameters-dmxtools.webp" alt="DMX Parameters tab in DMX TOOLS ElectroConcept" width="401" height="538" loading="lazy">
+                          <figcaption><strong>DMX Parameters</strong> tab.</figcaption>
+                        </figure>
+                        <figure class="shot">
+                          <img src="../network-parameters-dmxtools.webp" alt="Network Parameters tab in DMX TOOLS ElectroConcept" width="384" height="379" loading="lazy">
+                          <figcaption><strong>Network Parameters</strong> tab.</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Leave the network adapter alone</h4>
+                      <p>Unlike an RJ45 node, there is <strong>nothing to configure here</strong>&nbsp;: the box assigns an address to your PC itself (2.0.0.2), and it is already the right one. Leave the adapter on «&nbsp;Obtain an IP address automatically&nbsp;».</p>
+                      <div class="note warn"><strong>Do not run «&nbsp;Configure automatically&nbsp;» before step 2.</strong> That wizard assigns <strong>2.0.0.1</strong> to your PC — the box's own factory address. Until the node has moved to 2.0.0.15, both claim the same address and Windows may disable the adapter. After step 2 there is no more conflict&nbsp;: the wizard becomes harmless again, simply useless.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Allow MyStrow through the firewall</h4>
+                      <p>On the first transmission, Windows shows a permission prompt&nbsp;: tick <strong>Private networks</strong> and confirm. Art-Net goes out over UDP on port <code>6454</code>&nbsp;; once refused, the prompt never comes back and the node stays silent.</p>
+                      <div class="note">Already refused by mistake&nbsp;? <strong>Windows Defender Firewall ▸ Allow an app</strong> ▸ tick MyStrow for private networks.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                      <h4>Connect</h4>
+                      <p>In MyStrow&nbsp;: <span class="path">Connection ▸ 🌐 DMX Output ▸ ⚙️ Configure output</span>, <strong>🌐 Node output</strong> tab. The status turns green as soon as the box answers, then click <strong>🔌 Connect</strong>.</p>
+                      <div class="note ok"><strong>The box's DMX indicator</strong> is your best witness&nbsp;: it only lights up when data actually arrives. Dark while MyStrow says «&nbsp;connected&nbsp;» means the frames are going to the wrong address — go back to step 2.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>One DMX socket only.</strong> This model carries a single physical output and broadcasts universe 1 only. MyStrow's routing table still lets you choose <em>which</em> universe goes there, but one at a time&nbsp;: if your fixtures are patched to universe 2, 3 or 4, set <strong>DMX 1 ← Universe 2</strong> (see <a href="#univers">Universes &amp; routing</a>) or repatch them to universe 1.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- B-bis. USB NODE + MACOS -->
+            <article class="proc" id="usbnode-macos" data-iface="usbnode" data-os="macos">
+              <div class="proc-head">
+                <h3>USB NODE DMX</h3>
+                <span class="proc-chip">macOS</span>
+                <button type="button" class="proc-reset">Change hardware</button>
+              </div>
+              <div class="proc-body">
+                <div class="callout">
+                  <p><strong>This is the simplest box on a Mac.</strong> A single USB cable carries power and network. macOS sees it as an <strong>extra network interface</strong>, and the box hands it its address itself&nbsp;: unlike an RJ45 node, there is <strong>no address to type in</strong> under Network settings.</p>
+                </div>
+                <div class="step-list">
+                  <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                      <h4>Plug the USB cable in, then wait</h4>
+                      <p>A single cable, from the Mac to the box. Allow <strong>about ten seconds</strong> before the interface appears under <span class="path">System Settings ▸ Network</span>.</p>
+                      <div class="note">On a recent Mac (USB-C only), use a <strong>powered</strong> adapter or a direct port&nbsp;: this box draws its power from USB, and an overloaded passive hub will make it drop out mid-show.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                      <h4>Set the node up in DMX TOOLS</h4>
+                      <p>With the box plugged in, open <a href="https://dmx-tools.electroconcept.fr" target="_blank" rel="noopener noreferrer">dmx-tools.electroconcept.fr</a> and enter&nbsp;:</p>
+                      <dl class="kv">
+                        <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
+                        <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
+                      </dl>
+                      <p>Confirm, then <strong>unplug and replug the USB</strong>. The box ships on <strong>2.0.0.1</strong>, and MyStrow talks to <strong>2.0.0.15</strong>.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                      <h4>Leave the interface on automatic</h4>
+                      <p>Under <span class="path">System Settings ▸ Network</span>, the box's interface must stay on <strong>«&nbsp;Using DHCP&nbsp;»</strong>. It takes the 2.0.0.2 address the box gives it&nbsp;: that is the right one, do not force it to manual.</p>
+                      <div class="note">The Mac can stay on Wi-Fi for the internet&nbsp;: traffic to 2.0.0.15 will leave through the box's interface, which carries the 2.x addressing plan.</div>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                      <h4>Connect</h4>
+                      <p>In MyStrow&nbsp;: <span class="path">Connection ▸ 🌐 DMX Output ▸ ⚙️ Configure output</span>, <strong>🌐 Node output</strong> tab. The status turns green as soon as the box answers, then <strong>🔌 Connect</strong>. macOS may ask for permission to accept incoming connections&nbsp;: accept.</p>
+                      <div class="note ok"><strong>The box's DMX indicator</strong> only lights up when data actually arrives. Dark while MyStrow says «&nbsp;connected&nbsp;», go back to step 2.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="callout">
+                  <p><strong>One DMX socket only.</strong> This model carries a single physical output and broadcasts universe 1 only. If your fixtures are patched to universe 2, 3 or 4, set <strong>DMX 1 ← Universe 2</strong> in the routing table (see <a href="#univers">Universes &amp; routing</a>) or repatch them to universe 1.</p>
+                </div>
+              </div>
+            </article>
+
             <article class="proc" id="pro-windows" data-iface="pro" data-os="windows">
               <div class="proc-head">
                 <h3>“Pro” USB interface (ENTTEC DMX USB Pro, Eurolite MK2)</h3>
@@ -1099,7 +1229,7 @@ function handleNewsletter(e) {
   var ifaceBtns = [].slice.call(document.querySelectorAll('.pick[data-iface]'));
   var osBtns    = [].slice.call(document.querySelectorAll('.pick[data-os]'));
   var stepOs = document.getElementById('wiz-os');
-  var IFACES = ['node', 'pro', 'open'];
+  var IFACES = ['node', 'usbnode', 'pro', 'open'];
   var OSES   = ['windows', 'macos'];
   var STORE  = 'mystrow-dmx-setup';
 
