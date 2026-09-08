@@ -56,15 +56,25 @@
     var EXCLUS = /(#fonctionnalites|#features)$|(^|\/)shop(\.html)?$/i;
     links = links.filter(function (l) { return !EXCLUS.test(l.href); });
 
-    // ── Menu mobile : entree Newsletter ───────────────────────────────────
-    // Ajoutee seulement en francais : newsletter.html n'existe qu'a la racine,
-    // il n'y a pas de traduction en/de/es/pt. Pointer les autres langues
-    // dessus enverrait le lecteur sur une page qu'il ne comprend pas.
-    var estFR = (document.documentElement.lang || 'fr').toLowerCase().indexOf('fr') === 0;
-    if (estFR && !links.some(function (l) { return /newsletter/.test(l.href); })) {
-      // Sans ".html" : la reecriture URL propre renvoie "newsletter.html" vers
-      // "newsletter" par un 301, autant pointer directement la bonne adresse.
-      links.push({ href: 'newsletter', text: 'Newsletter' });
+    // ── Menu mobile : entree "Mon compte" ────────────────────────
+    // Le lien de connexion vit dans .nav-right avec la classe .nav-desktop,
+    // masquee sous 900px : sur telephone le compte n'etait accessible nulle
+    // part. On le remet donc ici, a la place de l'ancienne entree Newsletter.
+    //
+    // L'adresse est LUE sur le lien bureau (.nav-signin) : une seule source de
+    // verite. Le libelle, lui, est propre au mobile ("Mon compte" plutot que
+    // "Connexion"), d'ou la petite table des cinq langues.
+    var LIB_COMPTE = { fr: 'Mon compte', en: 'My account', de: 'Mein Konto',
+                       es: 'Mi cuenta', pt: 'A minha conta' };
+    var signin = document.querySelector('.nav-signin');
+    var lang2 = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
+    if (!links.some(function (l) { return /compte/i.test(l.href); })) {
+      links.push({
+        href: (signin && signin.getAttribute('href')) || 'https://mystrow.fr/compte',
+        // Les autres libelles arrivent deja en capitales : innerText applique
+        // le text-transform de la nav bureau. On aligne donc le notre.
+        text: (LIB_COMPTE[lang2] || LIB_COMPTE.fr).toUpperCase()
+      });
     }
 
     // ── Collect language links from existing lang-dropdown ────────────────
