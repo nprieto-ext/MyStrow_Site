@@ -4,6 +4,11 @@
 
   <!-- FR pages -->
   <url>
+    <loc>https://mystrow.fr/activate</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://mystrow.fr/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/"/>
