@@ -43,6 +43,7 @@
 - [Importer une fixture DMX](https://mystrow.fr/importer-fixture-dmx-mystrow)
 - [Créer des séquences lumière](https://mystrow.fr/creer-sequences-lumiere-mystrow)
 - [Patcher et programmer des lyres](https://mystrow.fr/patcher-programmer-lyres-mystrow)
+- [Contrôler MyStrow depuis une tablette ou un téléphone](https://mystrow.fr/controler-mystrow-tablette-telephone)
 - [Piloter des lyres à la manette de jeu](https://mystrow.fr/manette-jeu-lyres-mystrow)
 - [Automatiser les lumières DMX](https://mystrow.fr/automatisation-lumieres-dmx-mystrow)
 - [Régie vidéo avec OBS et vMix](https://mystrow.fr/regie-video-obs-vmix-mystrow)
