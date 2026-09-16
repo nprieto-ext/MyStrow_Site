@@ -80,7 +80,7 @@
     {
       "@type": "Offer",
       "name": "Lifetime",
-      "price": "349.00",
+      "price": "349.99",
       "priceCurrency": "EUR"
     }
   ]
@@ -341,6 +341,7 @@
     .price-amount { font-family: 'Bebas Neue', sans-serif; font-size: 56px; margin: 18px 0 2px; line-height: 1; color: var(--text); }
     .price-amount sup { font-size: 24px; vertical-align: super; margin-right: 2px; font-family: 'Barlow Condensed', sans-serif; }
     .price-period { color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+    .price-tax { display: block; margin-top: 4px; font-size: 11px; opacity: 0.8; }
     .price-features { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 9px; }
     .price-features li { font-size: 13px; color: var(--muted); display: flex; gap: 9px; }
     .price-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
@@ -1149,8 +1150,8 @@
           <span class="saving-pill visible" id="saving-pill">−50%</span>
         </div>
 
-        <div class="price-amount" id="pro-price"><sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span></div>
-        <div class="price-period" id="pro-period">IVA incl. / mes · facturado 143,86 €/año</div>
+        <div class="price-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span></div>
+        <div class="price-period" id="pro-period">sin IVA / mes · facturado 119,88 €/año<span class="price-tax">11,99 €/mes con IVA en Francia · IVA según tu país, calculado al pagar</span></div>
 
         <ul class="price-features">
           <li>Control de luz en tiempo real</li>
@@ -1169,8 +1170,8 @@
         <div class="popular-badge" style="background:var(--muted);color:#fff">MEJOR PRECIO</div>
         <div class="price-name">Lifetime</div>
         <div class="price-desc">Acceso de por vida · pago único</div>
-        <div class="price-amount"><sup>€</sup>349</div>
-        <div class="price-period">IVA incl. · una sola vez · acceso de por vida</div>
+        <div class="price-amount"><sup>€</sup>291<span style="font-size:0.55em;vertical-align:super">,66</span></div>
+        <div class="price-period">sin IVA · una sola vez · acceso de por vida<span class="price-tax">349,99 € con IVA en Francia · IVA según tu país, calculado al pagar</span></div>
         <ul class="price-features">
           <li>Control de luz en tiempo real</li>
           <li>Reproductor audio &amp; vídeo</li>
@@ -1181,7 +1182,7 @@
           <li>Actualizaciones de por vida incluidas</li>
           <li>Sin suscripción · nunca</li>
         </ul>
-        <a href="https://buy.stripe.com/14A6oz7kV0cMdJmbN208g07" class="btn-full outline" target="_blank" rel="noopener noreferrer">Comprar Lifetime</a>
+        <a href="https://buy.stripe.com/8x228j48J1gQbBeg3i08g08" class="btn-full outline" target="_blank" rel="noopener noreferrer">Comprar Lifetime</a>
       </div>
 
     </div>
@@ -1759,14 +1760,14 @@ function setPricing(annual) {
   var btnM     = document.getElementById('toggle-monthly');
   var btnA     = document.getElementById('toggle-annual');
   if (annual) {
-    priceEl.innerHTML = '<sup>€</sup>11<span style="font-size:0.55em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'IVA incl. / mes · facturado 143,86 euros/ano';
+    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.innerHTML = 'sin IVA / mes · facturado 119,88 €/año<span class="price-tax">11,99 €/mes con IVA en Francia · IVA según tu país, calculado al pagar</span>';
     ctaEl.href = STRIPE_ANNUAL;
     pillEl.classList.add('visible');
     btnM.classList.remove('active'); btnA.classList.add('active');
   } else {
-    priceEl.innerHTML = '<sup>€</sup>23<span style="font-size:0.55em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'IVA incl. / mes · sin compromiso';
+    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">,99</span>';
+    periodEl.innerHTML = 'sin IVA / mes · sin compromiso<span class="price-tax">23,99 €/mes con IVA en Francia · IVA según tu país, calculado al pagar</span>';
     ctaEl.href = STRIPE_MONTHLY;
     pillEl.classList.remove('visible');
     btnM.classList.add('active'); btnA.classList.remove('active');

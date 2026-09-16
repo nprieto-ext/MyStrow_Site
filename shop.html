@@ -291,6 +291,7 @@
     .pricing-amount { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; color: var(--text); margin: 4px 0 2px; }
     .pricing-amount sup { font-size: 22px; vertical-align: super; font-family: 'Barlow Condensed', sans-serif; }
     .pricing-period { font-size: 11px; color: var(--muted); margin-bottom: 20px; }
+    .pricing-tax { display: block; margin-top: 4px; font-size: 11px; opacity: 0.8; }
     .billing-toggle { display: flex; align-items: center; gap: 0; margin: 14px 0 8px; }
     .toggle-btn { padding: 5px 16px; font-size: 11px; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.14); font-family: 'Inter', sans-serif; transition: all 0.18s; background: transparent; color: var(--muted); }
     .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
@@ -679,8 +680,8 @@
             <button class="toggle-btn active" id="toggle-annual"  onclick="setPricing(true)">Annuel</button>
             <span class="saving-pill visible" id="saving-pill">−50%</span>
           </div>
-          <div class="pricing-amount" id="pro-price"><sup>€</sup>11<span style="font-size:0.5em;vertical-align:super">,99</span></div>
-          <div class="pricing-period" id="pro-period">TTC / mois · facturé 143,86 €/an</div>
+          <div class="pricing-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.5em;vertical-align:super">,99</span></div>
+          <div class="pricing-period" id="pro-period">HT / mois · facturé 119,88 € HT/an<span class="pricing-tax">soit 11,99 € TTC/mois en France · TVA selon votre pays, calculée au paiement</span></div>
           <ul class="pricing-feats">
             <li>Tout du plan Gratuit</li>
             <li><strong style="color:var(--text)">Sortie DMX complète</strong></li>
@@ -696,14 +697,14 @@
           <div class="pricing-badge-top badge-value">Meilleur prix</div>
           <div class="pricing-plan">Lifetime</div>
           <div class="pricing-desc">Accès à vie · paiement unique</div>
-          <div class="pricing-amount"><sup>€</sup>349</div>
-          <div class="pricing-period">TTC · une seule fois · à vie</div>
+          <div class="pricing-amount"><sup>€</sup>291<span style="font-size:0.5em;vertical-align:super">,66</span></div>
+          <div class="pricing-period">HT · une seule fois · accès à vie<span class="pricing-tax">soit 349,99 € TTC en France · TVA selon votre pays, calculée au paiement</span></div>
           <ul class="pricing-feats">
             <li>Tout du plan Pro</li>
             <li>Mises à jour à vie incluses</li>
             <li><strong style="color:var(--text)">Aucun abonnement · jamais</strong></li>
           </ul>
-          <a href="https://buy.stripe.com/14A6oz7kV0cMdJmbN208g07" target="_blank" rel="noopener noreferrer" class="btn-pricing outline">Acheter Lifetime →</a>
+          <a href="https://buy.stripe.com/8x228j48J1gQbBeg3i08g08" target="_blank" rel="noopener noreferrer" class="btn-pricing outline">Acheter Lifetime →</a>
         </div>
 
       </div>
@@ -753,14 +754,14 @@ function setPricing(annual) {
   var btnM     = document.getElementById('toggle-monthly');
   var btnA     = document.getElementById('toggle-annual');
   if (annual) {
-    priceEl.innerHTML = '<sup>€</sup>11<span style="font-size:0.5em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'TTC / mois · facturé 143,86 €/an';
+    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.5em;vertical-align:super">,99</span>';
+    periodEl.innerHTML = 'HT / mois · facturé 119,88 € HT/an<span class="pricing-tax">soit 11,99 € TTC/mois en France · TVA selon votre pays, calculée au paiement</span>';
     ctaEl.href = STRIPE_ANNUAL;
     pillEl.classList.add('visible');
     btnM.classList.remove('active'); btnA.classList.add('active');
   } else {
-    priceEl.innerHTML = '<sup>€</sup>23<span style="font-size:0.5em;vertical-align:super">,99</span>';
-    periodEl.textContent = 'TTC / mois · sans engagement';
+    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.5em;vertical-align:super">,99</span>';
+    periodEl.innerHTML = 'HT / mois · sans engagement<span class="pricing-tax">soit 23,99 € TTC/mois en France · TVA selon votre pays, calculée au paiement</span>';
     ctaEl.href = STRIPE_MONTHLY;
     pillEl.classList.remove('visible');
     btnM.classList.add('active'); btnA.classList.remove('active');
