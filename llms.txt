@@ -11,7 +11,7 @@
 
 - **Plateformes** : Windows 10/11, et macOS 11 Big Sur ou supérieur (Apple Silicon M1 à M5 et Intel). Les deux reçoivent les mêmes mises à jour.
 - **Essai** : 14 jours d'accès complet, sans carte bancaire. La sortie DMX n'est pas incluse dans l'essai.
-- **Tarifs HT** (TVA calculée au paiement selon le pays ; TTC pour un particulier en France entre parenthèses) : Pro mensuel 19,99 €/mois sans engagement (23,99 €) ; Pro annuel 119,88 €/an, soit 9,99 €/mois (143,86 €) ; Lifetime 291,66 € en paiement unique (349,99 €), mises à jour incluses à vie.
+- **Tarifs HT** (TVA calculée au paiement selon le pays ; TTC pour un particulier en France entre parenthèses) : Pro mensuel 19,99 €/mois sans engagement (23,99 €) ; Pro annuel 119,88 €/an, soit 9,99 €/mois (143,86 €) ; Lifetime 299,99 € en paiement unique (359,99 €), mises à jour incluses à vie.
 - **Licences** : les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Paiement par Stripe.
 - **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché — ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
 - **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
