@@ -65,3 +65,14 @@ AddType image/webp  .webp
 # Page 404 custom
 # -------------------------------------------------------
 ErrorDocument 404 /404.html
+
+# -------------------------------------------------------
+# Journal des mises a jour : cache court
+# -------------------------------------------------------
+# L'hebergeur sert tout avec max-age=604800 (7 jours). Pour cette page, une
+# nouvelle version doit apparaitre le jour meme : 10 minutes suffisent.
+<IfModule mod_headers.c>
+  <Files "nouveautes.html">
+    Header set Cache-Control "public, max-age=600"
+  </Files>
+</IfModule>
