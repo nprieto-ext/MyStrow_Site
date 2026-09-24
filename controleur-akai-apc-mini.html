@@ -182,6 +182,12 @@
       .mat-compat-grid { grid-template-columns: 1fr; }
       .proj-grid { grid-template-columns: 1fr; }
     }
+  
+    /* Badge « Windows uniquement » + explication au survol / clic */
+    .win-only { position: relative; align-self: flex-start; font-size: 11px; color: var(--accent); line-height: 1.55; font-weight: 600; cursor: help; outline: none; }
+    .win-only-i { font-size: 11px; opacity: .8; }
+    .win-only-tip { display: none; position: absolute; left: 0; bottom: calc(100% + 6px); z-index: 50; width: max-content; max-width: min(280px, 80vw); padding: 10px 12px; border-radius: 8px; background: #16150f; border: 1px solid var(--accent-border, rgba(226,206,22,0.22)); color: var(--text); font-weight: 400; font-size: 12px; line-height: 1.5; box-shadow: 0 8px 24px rgba(0,0,0,.45); white-space: normal; }
+    .win-only:hover .win-only-tip, .win-only:focus .win-only-tip, .win-only.open .win-only-tip { display: block; }
   </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -340,15 +346,26 @@
               <span style="font-size:13px;font-weight:600;color:var(--text);">Eurolite USB-DMX512 PRO MK2</span>
               <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">150€ ↗</span>
             </a>
-            <a href="https://amzn.to/4aLO0MT" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);text-decoration:none;transition:border-color .18s;">
-              <span style="font-size:13px;font-weight:600;color:var(--text);">ENTTEC Open DMX USB (70303)</span>
-              <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">97,55€ ↗</span>
+            <a href="https://amzn.to/4aLO0MT" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;flex-direction:column;gap:5px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);text-decoration:none;transition:border-color .18s;">
+              <span style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;">
+                <span style="font-size:13px;font-weight:600;color:var(--text);">ENTTEC Open DMX USB (70303)</span>
+                <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">97,55€ ↗</span>
+              </span>
+              <span class="win-only" tabindex="0" role="button" aria-label="Windows uniquement : pourquoi ?">Windows uniquement <span class="win-only-i" aria-hidden="true">ⓘ</span><span class="win-only-tip" role="tooltip">Boîtier « passif » : c'est l'ordinateur qui fabrique le signal DMX. Testé et fiable sur Windows ; sur Mac le signal n'est pas garanti avec MyStrow. Sur Mac, choisissez un Node ArtNet ou une interface USB « PRO ».</span></span>
+            </a>
+            <a href="https://amzn.to/4yhzOoC" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;flex-direction:column;gap:5px;padding:8px 10px;border-radius:7px;background:rgba(160,100,255,0.04);border:1px solid rgba(160,100,255,0.1);text-decoration:none;transition:border-color .18s;">
+              <span style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;">
+                <span style="font-size:13px;font-weight:600;color:var(--text);">Electroconcept OPTO USB-DMX</span>
+                <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">39€ ↗</span>
+              </span>
+              <span class="win-only" tabindex="0" role="button" aria-label="Windows uniquement : pourquoi ?">Windows uniquement <span class="win-only-i" aria-hidden="true">ⓘ</span><span class="win-only-tip" role="tooltip">Boîtier « passif » : c'est l'ordinateur qui fabrique le signal DMX. Testé et fiable sur Windows ; sur Mac le signal n'est pas garanti avec MyStrow. Sur Mac, choisissez un Node ArtNet ou une interface USB « PRO ».</span></span>
             </a>
             <a href="https://amzn.to/4eZlx8N" target="_blank" rel="noopener noreferrer sponsored" style="display:flex;flex-direction:column;gap:5px;padding:8px 10px;border-radius:7px;background:rgba(226,206,22,0.05);border:1px solid rgba(226,206,22,0.22);text-decoration:none;transition:border-color .18s;">
               <span style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;">
                 <span style="font-size:13px;font-weight:600;color:var(--text);">⚠️ Adaptateur USB DMX512</span>
                 <span style="font-size:11px;color:#a064ff;white-space:nowrap;flex-shrink:0;font-weight:700;">16,14€ ↗</span>
               </span>
+              <span class="win-only" tabindex="0" role="button" aria-label="Windows uniquement : pourquoi ?">Windows uniquement <span class="win-only-i" aria-hidden="true">ⓘ</span><span class="win-only-tip" role="tooltip">Boîtier « passif » : c'est l'ordinateur qui fabrique le signal DMX. Testé et fiable sur Windows ; sur Mac le signal n'est pas garanti avec MyStrow. Sur Mac, choisissez un Node ArtNet ou une interface USB « PRO ».</span></span>
               <span style="font-size:11px;color:var(--accent);line-height:1.55;font-weight:600;">Dépannage uniquement, pas pour du live</span>
               <span style="font-size:11px;color:var(--muted);line-height:1.55;">Ce type d'adaptateur n'a ni microcontrôleur ni mémoire tampon : c'est l'ordinateur qui fabrique le signal DMX en temps réel. La moindre charge du processeur peut faire scintiller ou figer vos lumières. Pour une prestation, préférez un node Art-Net ou une interface USB avec sa propre électronique.</span>
             </a>
@@ -594,6 +611,14 @@ function handleNewsletter(e) {
 <script src="nav.js?v=2" defer></script>
 <script src="mobile-nav.js?v=4"></script>
 <script src="/lang-suggest.js" defer></script>
+<script>
+  /* « Windows uniquement » : un clic ouvre l'explication au lieu de suivre le lien Amazon */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.win-only');
+    document.querySelectorAll('.win-only.open').forEach(function (o) { if (o !== b) o.classList.remove('open'); });
+    if (b) { e.preventDefault(); e.stopPropagation(); b.classList.toggle('open'); }
+  }, true);
+</script>
 </body>
 </html>
 
