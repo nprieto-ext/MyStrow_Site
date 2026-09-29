@@ -117,6 +117,25 @@
     .btn-invoice:hover { background: rgba(226,206,22,0.08); border-color: rgba(226,206,22,0.6); }
     .no-invoices { font-size: 13px; color: var(--muted); padding: 8px 0; }
 
+    /* FACTURATION PRO (SIRET) */
+    .pro-intro { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 18px; }
+    .pro-intro strong { color: var(--text); font-weight: 600; }
+    .pro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+    .pro-grid .form-group { margin-bottom: 14px; }
+    .form-group .opt { text-transform: none; letter-spacing: 0; font-weight: 500; font-family: 'Inter', sans-serif; }
+    .pro-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .pro-actions .btn-portal { padding: 11px 24px; }
+    .btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.14); color: var(--muted); padding: 11px 22px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .pro-found { background: var(--accent-glow); border: 1px solid var(--accent-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 14px; }
+    .pro-found-q { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .pro-found-name { font-size: 15px; font-weight: 700; }
+    .pro-found-addr { font-size: 13px; color: var(--muted); margin-top: 2px; }
+    .pro-msg { font-size: 13px; margin-top: 12px; display: none; }
+    .pro-msg.ok { color: var(--green); }
+    .pro-msg.err { color: #f87171; }
+    @media (max-width: 600px) { .pro-grid { grid-template-columns: 1fr; } }
+
     /* LOADING */
     .loading-wrap { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
     .spinner { width: 32px; height: 32px; border: 3px solid rgba(226,206,22,0.15); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; }
@@ -348,6 +367,63 @@
     <div class="card">
       <div class="card-title">Mes Factures</div>
       <div id="invoices-list"><span class="no-invoices">Chargement…</span></div>
+    </div>
+
+    <!-- FACTURATION PRO : SIRET / TVA — facture électronique (obligatoire au 01/09/2027) -->
+    <div class="card" id="card-pro">
+      <div class="card-title">Facturation professionnelle</div>
+
+      <!-- Déjà renseigné -->
+      <div id="pro-view" style="display:none">
+        <div class="card-row">
+          <span class="row-label">Entreprise</span>
+          <span class="row-value" id="pro-v-name">—</span>
+        </div>
+        <div class="card-row" id="pro-v-siret-row">
+          <span class="row-label">SIRET</span>
+          <span class="row-value" id="pro-v-siret">—</span>
+        </div>
+        <div class="card-row" id="pro-v-vat-row">
+          <span class="row-label">N° de TVA</span>
+          <span class="row-value" id="pro-v-vat">—</span>
+        </div>
+        <div class="pro-actions" style="margin-top:16px">
+          <button class="btn-ghost" onclick="proEdit()">Modifier</button>
+        </div>
+      </div>
+
+      <!-- Saisie -->
+      <div id="pro-form" style="display:none">
+        <p class="pro-intro">
+          Vous achetez pour une <strong>entreprise ou une association</strong> ? Indiquez votre SIRET :
+          il figurera sur vos prochaines factures, et il sera indispensable pour recevoir vos factures
+          électroniques à partir de 2027. <strong>Particuliers : rien à faire.</strong>
+        </p>
+        <div class="pro-grid">
+          <div class="form-group">
+            <label for="pro-siret">SIRET <span class="opt">(14 chiffres)</span></label>
+            <input type="text" id="pro-siret" inputmode="numeric" autocomplete="off" placeholder="123 456 789 00012" maxlength="20">
+          </div>
+          <div class="form-group">
+            <label for="pro-vat">N° de TVA intracom. <span class="opt">(facultatif)</span></label>
+            <input type="text" id="pro-vat" autocomplete="off" placeholder="FR12 345678901" maxlength="20">
+          </div>
+        </div>
+        <p class="billing-note" style="margin:-4px 0 14px">Micro-entrepreneur en franchise de TVA : le SIRET suffit. Entreprise hors de France : le numéro de TVA seul suffit.</p>
+
+        <div class="pro-found" id="pro-found" style="display:none">
+          <div class="pro-found-q">Nous avons trouvé cette entreprise — c'est bien vous ?</div>
+          <div class="pro-found-name" id="pro-found-name"></div>
+          <div class="pro-found-addr" id="pro-found-addr"></div>
+        </div>
+
+        <div class="pro-actions">
+          <button class="btn-portal" id="btn-pro-check" onclick="proCheck()">Vérifier →</button>
+          <button class="btn-portal" id="btn-pro-save" onclick="proSave()" style="display:none">Oui, enregistrer ✓</button>
+          <button class="btn-ghost" id="btn-pro-cancel" onclick="proCancel()" style="display:none">Annuler</button>
+        </div>
+      </div>
+      <div class="pro-msg" id="pro-msg"></div>
     </div>
 
     <!-- FACTURATION -->
@@ -720,6 +796,8 @@ function renderAccount(d) {
     }).join('');
   }
 
+  renderPro(d);
+
   // Facturation Stripe
   const hasStripe = !!d.stripe_customer_id;
   const billingCard = document.getElementById('card-billing');
@@ -758,6 +836,131 @@ async function revokeMachine(machineId, btn) {
   } catch (e) {
     btn.disabled = false; btn.textContent = 'Révoquer';
     alert('Impossible de révoquer : ' + e.message);
+  }
+}
+
+// ── Facturation pro (SIRET / TVA) ────────────────────────────────────────────
+// Deux temps : « Vérifier » interroge l'annuaire des entreprises via la Cloud
+// Function (dry_run, rien n'est écrit) et affiche la raison sociale trouvée ;
+// le client confirme, et SEULEMENT alors la CF écrit la licence + la fiche
+// Axonaut. Une faute de frappe sur un SIRET valide tomberait sinon sur
+// l'entreprise d'un autre, et elle partirait sur toutes les factures suivantes.
+const BILLING_URL = `${CF_BASE}/update_billing_info`;
+
+function fmtSiret(s) {
+  return (s || '').replace(/^(\d{3})(\d{3})(\d{3})(\d{5})$/, '$1 $2 $3 $4');
+}
+
+function proMsg(text, kind) {
+  const el = document.getElementById('pro-msg');
+  el.textContent = text || '';
+  el.className = 'pro-msg ' + (kind || '');
+  el.style.display = text ? 'block' : 'none';
+}
+
+function renderPro(d) {
+  const has = !!(d.billing_siret || d.vat_number);
+  // Pas d'achat Stripe (essai, activation manuelle, contrat TUI) = pas de
+  // facture MyStrow à compléter : le bloc n'aurait aucun effet.
+  document.getElementById('card-pro').style.display =
+    (d.stripe_customer_id || has) ? '' : 'none';
+  document.getElementById('pro-view').style.display = has ? 'block' : 'none';
+  document.getElementById('pro-form').style.display = has ? 'none' : 'block';
+  if (!has) return;
+  document.getElementById('pro-v-name').textContent  = d.billing_company_name || '—';
+  document.getElementById('pro-v-siret').textContent = fmtSiret(d.billing_siret);
+  document.getElementById('pro-v-vat').textContent   = d.vat_number || '';
+  document.getElementById('pro-v-siret-row').style.display = d.billing_siret ? '' : 'none';
+  document.getElementById('pro-v-vat-row').style.display   = d.vat_number ? '' : 'none';
+}
+
+function proEdit() {
+  const d = _userData || {};
+  document.getElementById('pro-siret').value = fmtSiret(d.billing_siret);
+  document.getElementById('pro-vat').value   = d.vat_number || '';
+  document.getElementById('pro-view').style.display = 'none';
+  document.getElementById('pro-form').style.display = 'block';
+  document.getElementById('btn-pro-cancel').style.display = '';
+  proMsg('');
+}
+
+function proReset() {
+  document.getElementById('pro-found').style.display = 'none';
+  document.getElementById('btn-pro-check').style.display = '';
+  document.getElementById('btn-pro-save').style.display = 'none';
+  document.getElementById('pro-siret').disabled = false;
+  document.getElementById('pro-vat').disabled = false;
+}
+
+function proCancel() {
+  proReset();
+  proMsg('');
+  renderPro(_userData || {});
+}
+
+async function proCall(dryRun) {
+  const res = await fetch(BILLING_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${_idToken}` },
+    body: JSON.stringify({
+      siret:      document.getElementById('pro-siret').value,
+      vat_number: document.getElementById('pro-vat').value,
+      dry_run:    dryRun
+    })
+  });
+  const data = await res.json().catch(() => ({}));
+  if (res.status === 401) { logout(); throw new Error('Session expirée, reconnectez-vous.'); }
+  if (!res.ok || !data.ok) throw new Error(data.error || `Erreur ${res.status}`);
+  return data;
+}
+
+async function proCheck() {
+  const btn = document.getElementById('btn-pro-check');
+  proMsg('');
+  btn.disabled = true; btn.textContent = 'Vérification…';
+  try {
+    const data = await proCall(true);
+    const c = data.company || {};
+    if (c.siret) {
+      document.getElementById('pro-found-name').textContent = c.name || '';
+      document.getElementById('pro-found-addr').textContent =
+        `${c.address || ''} — SIRET ${fmtSiret(c.siret)}`;
+      document.getElementById('pro-found').style.display = 'block';
+      document.getElementById('btn-pro-check').style.display = 'none';
+      document.getElementById('btn-pro-save').style.display = '';
+      document.getElementById('btn-pro-cancel').style.display = '';
+      document.getElementById('pro-siret').disabled = true;
+      document.getElementById('pro-vat').disabled = true;
+    } else {
+      // TVA étrangère seule : rien à confirmer dans l'annuaire français
+      await proSave();
+    }
+  } catch (e) {
+    proMsg(e.message, 'err');
+  } finally {
+    btn.disabled = false; btn.textContent = 'Vérifier →';
+  }
+}
+
+async function proSave() {
+  const btn = document.getElementById('btn-pro-save');
+  btn.disabled = true; btn.textContent = 'Enregistrement…';
+  try {
+    const data = await proCall(false);
+    const c = data.company || {};
+    _userData = Object.assign(_userData || {}, {
+      billing_siret:        c.siret || (_userData || {}).billing_siret,
+      billing_company_name: c.name  || (_userData || {}).billing_company_name,
+      vat_number:           document.getElementById('pro-vat').value.replace(/[^0-9A-Za-z]/g, '').toUpperCase()
+                              || (_userData || {}).vat_number
+    });
+    proReset();
+    renderPro(_userData);
+    proMsg('Enregistré ✓ — ces informations figureront sur vos prochaines factures.', 'ok');
+  } catch (e) {
+    proMsg(e.message, 'err');
+  } finally {
+    btn.disabled = false; btn.textContent = 'Oui, enregistrer ✓';
   }
 }
 
