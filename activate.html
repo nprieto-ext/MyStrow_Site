@@ -315,6 +315,10 @@
       .act-card { padding: 28px 20px; }
       input.mono { font-size: 19px !important; letter-spacing: 2px; }
     }
+
+    /* Champ et ligne « code » masqués pour un boîtier MS-DMY : sans cette
+       règle, le display de .form-group / .recap-row l'emporte sur [hidden]. */
+    #grp-code[hidden], #row-code[hidden] { display: none; }
 </style>
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
   <script>
@@ -349,17 +353,19 @@
 
       <div class="login-card act-card">
         <div class="form-group">
+          <label for="f-serial" data-t="l_serial"></label>
+          <input id="f-serial" class="mono" placeholder="MS-XXX-XXXX-XXXX" maxlength="16"
+                 autocomplete="off" autocapitalize="characters" spellcheck="false">
+          <div class="field-err" id="err-serial"></div>
+        </div>
+
+        <!-- Code carte : seulement pour un boîtier MS-DMX (le MS-DMY maison n'a
+             pas de carte, son numéro gravé suffit). Affiché par le script. -->
+        <div class="form-group" id="grp-code" hidden>
           <label for="f-code" data-t="l_code"></label>
           <input id="f-code" class="mono" placeholder="XXXX-XXXX-XXXX" maxlength="14"
                  autocomplete="off" autocapitalize="characters" spellcheck="false">
           <div class="field-err" id="err-code"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="f-serial" data-t="l_serial"></label>
-          <input id="f-serial" class="mono" placeholder="MS-DMX-0000-XXXX" maxlength="16"
-                 autocomplete="off" autocapitalize="characters" spellcheck="false">
-          <div class="field-err" id="err-serial"></div>
         </div>
 
         <div class="form-group">
@@ -374,14 +380,15 @@
 
       <div class="where">
         <div class="where-box">
-          <h3 data-t="w1_t"></h3>
-          <p data-t="w1_p"></p>
-          <span class="sample">XXXX-XXXX-XXXX</span>
-        </div>
-        <div class="where-box">
           <h3 data-t="w2_t"></h3>
           <p data-t="w2_p"></p>
           <span class="sample">MS-DMX-0000-XXXX</span>
+          <span class="sample">MS-DMY-XXXX-XXXX</span>
+        </div>
+        <div class="where-box">
+          <h3 data-t="w1_t"></h3>
+          <p data-t="w1_p"></p>
+          <span class="sample">XXXX-XXXX-XXXX</span>
         </div>
       </div>
     </section>
@@ -394,8 +401,8 @@
 
       <div class="login-card act-card confirm-box">
         <div class="recap">
-          <div class="recap-row"><span data-t="r_code"></span><span id="r-code"></span></div>
           <div class="recap-row"><span data-t="r_serial"></span><span id="r-serial"></span></div>
+          <div class="recap-row" id="row-code"><span data-t="r_code"></span><span id="r-code"></span></div>
         </div>
         <div class="big-email" id="r-email"></div>
         <p class="confirm-note" data-t="c_note"></p>
@@ -447,9 +454,12 @@
 // ───────────────────────────────────────────────────────────────────────────
 // Page d'activation d'un boîtier USB-DMX.
 //
-// Le code d'activation est en bas de la carte livrée dans la boîte, le numéro
-// de série est sous le boîtier : il faut les deux. Une carte photographiée
-// dans un déballage filmé ne suffit donc pas à voler l'année de licence.
+// On demande d'abord le numéro de série, sous le boîtier :
+//   - MS-DMX (autocollant, boîtier Electroconcept) : il faut AUSSI le code en
+//     bas de la carte livrée dans la boîte. Une carte photographiée dans un
+//     déballage filmé ne suffit donc pas à voler l'année de licence ;
+//   - MS-DMY (gravé, boîtier maison) : pas de carte, le numéro seul active,
+//     une seule fois (cf. activate_code dans functions/main.py).
 //
 // La carte imprimée renvoie tout le monde sur cette seule URL : la page porte
 // donc les cinq langues du site plutôt qu'un fichier par langue.
@@ -469,16 +479,16 @@ const T = {
     doc_title: "Activer votre licence | MyStrow",
     tag:   "Boîtier USB-DMX",
     title: 'Activer <em>votre licence</em>',
-    sub:   "Votre boîtier MyStrow est livré avec une licence incluse. Deux informations suffisent : le code en bas de la carte glissée dans la boîte, et le numéro de série collé sous le boîtier.",
+    sub:   "Votre boîtier MyStrow est livré avec une licence incluse. Commencez par le numéro de série, sous le boîtier. S'il commence par MS-DMX, on vous demandera aussi le code en bas de la carte glissée dans la boîte.",
     l_code:   'Code d\'activation <span class="hint">— en bas de la carte</span>',
     l_serial: 'Numéro de série <span class="hint">— sous le boîtier</span>',
     l_email:  'Votre adresse email',
     btn_next: 'Continuer →',
     legal:    'En activant votre licence, vous acceptez les <a href="/cgv">conditions générales</a>.',
     w1_t: "Le code d'activation",
-    w1_p: "En bas de la carte de remerciement, dans la boîte. 12 caractères.",
+    w1_p: "Seulement si votre numéro commence par MS-DMX : en bas de la carte de remerciement, dans la boîte. 12 caractères.",
     w2_t: "Le numéro de série",
-    w2_p: "Sur l'autocollant collé sous le boîtier. Retournez-le, il commence par MS-DMX.",
+    w2_p: "Sous le boîtier : retournez-le. Il commence par MS-DMX (autocollant) ou MS-DMY (gravé).",
     c_title: 'Vérifiez <em>votre adresse</em>',
     c_sub:   "Votre licence sera créée sur cette adresse et le mot de passe y sera envoyé. Une erreur ici et le code est perdu — relisez-la bien.",
     r_code:   "Code",
@@ -491,7 +501,7 @@ const T = {
     d_acc:   'Accéder à mon compte →',
     dl_href: '/telecharger',
     e_code:   "Ce code est incorrect. Vérifiez la saisie en bas de la carte.",
-    e_serial: "Numéro de série incorrect. Il est sous le boîtier, au format MS-DMX-0000-XXXX.",
+    e_serial: "Numéro de série incorrect. Il est sous le boîtier, au format MS-DMX-0000-XXXX ou MS-DMY-XXXX-XXXX.",
     e_email:  "Cette adresse email n'est pas valide.",
     e_net:    "Connexion impossible. Vérifiez votre accès à Internet et réessayez.",
     working:  'Activation…',
@@ -505,16 +515,16 @@ const T = {
     doc_title: "Activate your licence | MyStrow",
     tag:   "USB-DMX interface",
     title: 'Activate <em>your licence</em>',
-    sub:   "Your MyStrow interface comes with an included licence. Two things are needed: the code at the bottom of the card inside the box, and the serial number stuck under the interface.",
+    sub:   "Your MyStrow interface comes with an included licence. Start with the serial number, under the interface. If it starts with MS-DMX, you will also be asked for the code at the bottom of the card inside the box.",
     l_code:   'Activation code <span class="hint">— at the bottom of the card</span>',
     l_serial: 'Serial number <span class="hint">— under the interface</span>',
     l_email:  'Your email address',
     btn_next: 'Continue →',
     legal:    'By activating your licence you accept the <a href="/en/terms">terms and conditions</a>.',
     w1_t: "The activation code",
-    w1_p: "At the bottom of the thank-you card, inside the box. 12 characters.",
+    w1_p: "Only if your number starts with MS-DMX: at the bottom of the thank-you card, inside the box. 12 characters.",
     w2_t: "The serial number",
-    w2_p: "On the sticker under the interface. Turn it over — it starts with MS-DMX.",
+    w2_p: "Under the interface: turn it over. It starts with MS-DMX (sticker) or MS-DMY (engraved).",
     c_title: 'Check <em>your address</em>',
     c_sub:   "Your licence will be created on this address and the password sent there. A typo here and the code is lost — read it carefully.",
     r_code:   "Code",
@@ -527,7 +537,7 @@ const T = {
     d_acc:   'Go to my account →',
     dl_href: '/en/download',
     e_code:   "This code is incorrect. Check what is printed at the bottom of the card.",
-    e_serial: "Incorrect serial number. It is under the interface, formatted MS-DMX-0000-XXXX.",
+    e_serial: "Incorrect serial number. It is under the interface, formatted MS-DMX-0000-XXXX or MS-DMY-XXXX-XXXX.",
     e_email:  "This email address is not valid.",
     e_net:    "Connection failed. Check your internet access and try again.",
     working:  'Activating…',
@@ -541,16 +551,16 @@ const T = {
     doc_title: "Lizenz aktivieren | MyStrow",
     tag:   "USB-DMX-Interface",
     title: 'Ihre Lizenz <em>aktivieren</em>',
-    sub:   "Ihr MyStrow-Interface wird mit einer inklusiven Lizenz geliefert. Zwei Angaben genügen: der Code unten auf der Karte in der Schachtel und die Seriennummer auf der Unterseite des Interface.",
+    sub:   "Ihr MyStrow-Interface wird mit einer inklusiven Lizenz geliefert. Beginnen Sie mit der Seriennummer auf der Unterseite des Interface. Beginnt sie mit MS-DMX, brauchen Sie zusätzlich den Code unten auf der Karte in der Schachtel.",
     l_code:   'Aktivierungscode <span class="hint">— unten auf der Karte</span>',
     l_serial: 'Seriennummer <span class="hint">— unter dem Interface</span>',
     l_email:  'Ihre E-Mail-Adresse',
     btn_next: 'Weiter →',
     legal:    'Mit der Aktivierung akzeptieren Sie die <a href="/de/terms">Allgemeinen Geschäftsbedingungen</a>.',
     w1_t: "Der Aktivierungscode",
-    w1_p: "Unten auf der Dankeskarte in der Schachtel. 12 Zeichen.",
+    w1_p: "Nur wenn Ihre Nummer mit MS-DMX beginnt: unten auf der Dankeskarte in der Schachtel. 12 Zeichen.",
     w2_t: "Die Seriennummer",
-    w2_p: "Auf dem Aufkleber unter dem Interface. Umdrehen — sie beginnt mit MS-DMX.",
+    w2_p: "Unter dem Interface: umdrehen. Sie beginnt mit MS-DMX (Aufkleber) oder MS-DMY (graviert).",
     c_title: 'Adresse <em>prüfen</em>',
     c_sub:   "Ihre Lizenz wird auf diese Adresse angelegt, das Passwort geht dorthin. Ein Tippfehler hier und der Code ist verloren — bitte genau lesen.",
     r_code:   "Code",
@@ -563,7 +573,7 @@ const T = {
     d_acc:   'Zu meinem Konto →',
     dl_href: '/de/download',
     e_code:   "Dieser Code ist falsch. Prüfen Sie die Eingabe unten auf der Karte.",
-    e_serial: "Seriennummer falsch. Sie steht unter dem Interface, im Format MS-DMX-0000-XXXX.",
+    e_serial: "Seriennummer falsch. Sie steht unter dem Interface, im Format MS-DMX-0000-XXXX oder MS-DMY-XXXX-XXXX.",
     e_email:  "Diese E-Mail-Adresse ist ungültig.",
     e_net:    "Keine Verbindung. Prüfen Sie Ihren Internetzugang und versuchen Sie es erneut.",
     working:  'Aktivierung…',
@@ -577,16 +587,16 @@ const T = {
     doc_title: "Activar tu licencia | MyStrow",
     tag:   "Interfaz USB-DMX",
     title: 'Activa <em>tu licencia</em>',
-    sub:   "Tu interfaz MyStrow incluye una licencia. Bastan dos datos: el código en la parte inferior de la tarjeta que va dentro de la caja, y el número de serie pegado bajo la interfaz.",
+    sub:   "Tu interfaz MyStrow incluye una licencia. Empieza por el número de serie, bajo la interfaz. Si empieza por MS-DMX, también te pediremos el código en la parte inferior de la tarjeta que va dentro de la caja.",
     l_code:   'Código de activación <span class="hint">— abajo en la tarjeta</span>',
     l_serial: 'Número de serie <span class="hint">— bajo la interfaz</span>',
     l_email:  'Tu dirección de email',
     btn_next: 'Continuar →',
     legal:    'Al activar tu licencia aceptas las <a href="/es/terms">condiciones generales</a>.',
     w1_t: "El código de activación",
-    w1_p: "En la parte inferior de la tarjeta de agradecimiento, dentro de la caja. 12 caracteres.",
+    w1_p: "Solo si tu número empieza por MS-DMX: en la parte inferior de la tarjeta de agradecimiento, dentro de la caja. 12 caracteres.",
     w2_t: "El número de serie",
-    w2_p: "En la pegatina bajo la interfaz. Dale la vuelta, empieza por MS-DMX.",
+    w2_p: "Bajo la interfaz: dale la vuelta. Empieza por MS-DMX (pegatina) o MS-DMY (grabado).",
     c_title: 'Comprueba <em>tu dirección</em>',
     c_sub:   "Tu licencia se creará en esta dirección y allí se enviará la contraseña. Un error aquí y el código se pierde — léela con atención.",
     r_code:   "Código",
@@ -599,7 +609,7 @@ const T = {
     d_acc:   'Ir a mi cuenta →',
     dl_href: '/es/download',
     e_code:   "Este código es incorrecto. Revisa lo impreso abajo en la tarjeta.",
-    e_serial: "Número de serie incorrecto. Está bajo la interfaz, con el formato MS-DMX-0000-XXXX.",
+    e_serial: "Número de serie incorrecto. Está bajo la interfaz, con el formato MS-DMX-0000-XXXX o MS-DMY-XXXX-XXXX.",
     e_email:  "Esta dirección de email no es válida.",
     e_net:    "No se pudo conectar. Comprueba tu acceso a Internet e inténtalo de nuevo.",
     working:  'Activando…',
@@ -613,16 +623,16 @@ const T = {
     doc_title: "Ativar a sua licença | MyStrow",
     tag:   "Interface USB-DMX",
     title: 'Ativar <em>a sua licença</em>',
-    sub:   "A sua interface MyStrow inclui uma licença. Bastam dois dados: o código na parte de baixo do cartão que vem na caixa, e o número de série colado sob a interface.",
+    sub:   "A sua interface MyStrow inclui uma licença. Comece pelo número de série, sob a interface. Se começar por MS-DMX, também lhe pediremos o código na parte de baixo do cartão que vem na caixa.",
     l_code:   'Código de ativação <span class="hint">— em baixo no cartão</span>',
     l_serial: 'Número de série <span class="hint">— sob a interface</span>',
     l_email:  'O seu endereço de email',
     btn_next: 'Continuar →',
     legal:    'Ao ativar a sua licença aceita as <a href="/pt/terms">condições gerais</a>.',
     w1_t: "O código de ativação",
-    w1_p: "Na parte de baixo do cartão de agradecimento, dentro da caixa. 12 caracteres.",
+    w1_p: "Só se o seu número começar por MS-DMX: na parte de baixo do cartão de agradecimento, dentro da caixa. 12 caracteres.",
     w2_t: "O número de série",
-    w2_p: "No autocolante sob a interface. Vire-a ao contrário, começa por MS-DMX.",
+    w2_p: "Sob a interface: vire-a ao contrário. Começa por MS-DMX (autocolante) ou MS-DMY (gravado).",
     c_title: 'Verifique <em>o seu endereço</em>',
     c_sub:   "A sua licença será criada neste endereço e a palavra-passe enviada para lá. Um erro aqui e o código perde-se — releia com atenção.",
     r_code:   "Código",
@@ -635,7 +645,7 @@ const T = {
     d_acc:   'Ir para a minha conta →',
     dl_href: '/pt/download',
     e_code:   "Este código está incorreto. Verifique o que está impresso em baixo no cartão.",
-    e_serial: "Número de série incorreto. Está sob a interface, no formato MS-DMX-0000-XXXX.",
+    e_serial: "Número de série incorreto. Está sob a interface, no formato MS-DMX-0000-XXXX ou MS-DMY-XXXX-XXXX.",
     e_email:  "Este endereço de email não é válido.",
     e_net:    "Ligação impossível. Verifique o seu acesso à Internet e tente de novo.",
     working:  'A ativar…',
@@ -704,12 +714,33 @@ function codeOk(c) {
 }
 function prettyCode(c) { return (c.match(/.{1,4}/g) || []).join('-'); }
 
-// ── Numéro de série : MS-DMX-0001-B9ER, saisi comme on veut ────────────────
+// ── Numéro de série : MS-DMX-0001-B9ER ou MS-DMY-9JQF-Y7ZY, saisi comme on veut
+// Boîtier maison : ni I, ni O, ni 0 (même alphabet que _DMY_ALPHABET côté serveur).
+const DMY_ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZ';
 function normSerial(raw) {
   let up = (raw || '').toUpperCase().replace(/[^0-9A-Z]/g, '');
+  if (up.startsWith('MSDMY')) {
+    up = up.slice(5);
+    if (up.length !== 8 || [...up].some(c => !DMY_ALPHABET.includes(c))) return '';
+    return 'MS-DMY-' + up.slice(0, 4) + '-' + up.slice(4);
+  }
   if (up.startsWith('MSDMX')) up = up.slice(5);
   if (!/^\d{4}[0-9A-Z]{4}$/.test(up)) return '';
   return 'MS-DMX-' + up.slice(0, 4) + '-' + up.slice(4);
+}
+// Famille du boîtier dès le début de la frappe : 'dmx', 'dmy' ou '' (pas
+// encore tranché). Un numéro tapé sans préfixe (0001B9ER) est un MS-DMX.
+function serialKind(raw) {
+  const up = (raw || '').toUpperCase().replace(/[^0-9A-Z]/g, '');
+  if (up.startsWith('MSDMY')) return 'dmy';
+  if (up.startsWith('MSDMX') || /^\d/.test(up)) return 'dmx';
+  return '';
+}
+// Le champ code n'apparaît que pour un MS-DMX.
+function syncCodeField() {
+  const dmx = serialKind(fSerial.value) === 'dmx';
+  document.getElementById('grp-code').hidden = !dmx;
+  if (!dmx) clearErr('code');
 }
 
 function emailOk(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }
@@ -731,8 +762,12 @@ fSerial.addEventListener('input', () => {
   if (s) fSerial.value = s;
   else fSerial.value = fSerial.value.toUpperCase();
   clearErr('serial');
+  syncCodeField();
 });
 fEmail.addEventListener('input', () => clearErr('email'));
+// Retour arrière du navigateur ou saisie automatique : le champ peut déjà
+// contenir un numéro au chargement.
+syncCodeField();
 [fCode, fSerial, fEmail].forEach(el => el.addEventListener('keydown', e => {
   if (e.key === 'Enter') { e.preventDefault(); goConfirm(); }
 }));
@@ -759,17 +794,19 @@ function show(id) {
 let PAYLOAD = null;
 
 function goConfirm() {
-  const code   = normCode(fCode.value);
   const serial = normSerial(fSerial.value);
+  const dmy    = serial.startsWith('MS-DMY-');
+  const code   = dmy ? '' : normCode(fCode.value);
   const email  = fEmail.value.trim().toLowerCase();
   let ok = true;
 
-  if (!codeOk(code))     { setErr('code',   t().e_code);   ok = false; }
-  if (!serial)           { setErr('serial', t().e_serial); ok = false; }
-  if (!emailOk(email))   { setErr('email',  t().e_email);  ok = false; }
+  if (!serial)                         { setErr('serial', t().e_serial); ok = false; }
+  if (serial && !dmy && !codeOk(code)) { setErr('code',   t().e_code);   ok = false; }
+  if (!emailOk(email))                 { setErr('email',  t().e_email);  ok = false; }
   if (!ok) return;
 
   PAYLOAD = { code, serial, email };
+  document.getElementById('row-code').hidden = dmy;
   document.getElementById('r-code').textContent   = prettyCode(code);
   document.getElementById('r-serial').textContent = serial;
   document.getElementById('r-email').textContent  = email;
