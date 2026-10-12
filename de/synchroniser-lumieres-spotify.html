@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Deine Lichter mit Spotify synchronisieren – dank LIVE-Modus | MyStrow</title>
+  <meta name="description" content="Starte eine Spotify-Playlist: MyStrow hört die Musik und steuert deine DMX-Lichter im Takt – Beats, Steigerungen, Drops. Kein Konto verknüpfen, nichts programmieren. Anleitung für PC und Mac.">
+  <meta name="keywords" content="Lichter mit Spotify synchronisieren, Spotify DMX Licht, Spotify Lichtshow, Licht im Takt der Musik, MyStrow LIVE-Modus, Licht-KI, Audio-Loopback, BlackHole Mac">
+  <link rel="canonical" href="https://mystrow.fr/de/synchroniser-lumieres-spotify">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/synchroniser-lumieres-spotify">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/synchroniser-lumieres-spotify">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/synchroniser-lumieres-spotify">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/synchroniser-lumieres-spotify">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/synchroniser-lumieres-spotify">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/synchroniser-lumieres-spotify">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/de/synchroniser-lumieres-spotify">
+  <meta property="og:title" content="Deine Lichter mit Spotify synchronisieren – dank LIVE-Modus">
+  <meta property="og:description" content="Eine Spotify-Playlist, und deine DMX-Lichter folgen der Musik ganz von selbst – Beats, Steigerungen, Drops. Anleitung für PC und Mac.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-de.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2026-10-12">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deine Lichter mit Spotify synchronisieren – dank LIVE-Modus">
+  <meta name="twitter:description" content="Eine Spotify-Playlist, und deine DMX-Lichter folgen der Musik ganz von selbst. Anleitung für PC und Mac.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-de.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Deine Lichter mit Spotify synchronisieren – dank LIVE-Modus",
+    "description": "Starte eine Spotify-Playlist: MyStrow hört die Musik und steuert deine DMX-Lichter im Takt – Beats, Steigerungen, Drops. Kein Konto verknüpfen, nichts programmieren. Anleitung für PC und Mac.",
+    "image": "https://mystrow.fr/og-image-de.webp",
+    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
+    "datePublished": "2026-10-12",
+    "dateModified": "2026-10-12",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/de/synchroniser-lumieres-spotify" },
+    "url": "https://mystrow.fr/de/synchroniser-lumieres-spotify",
+    "keywords": ["MyStrow", "Spotify", "LIVE-Modus", "Licht-KI", "synchronisiertes DMX-Licht", "Audio-Loopback", "BlackHole"]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://mystrow.fr/de/" },
+      { "@type": "ListItem", "position": 2, "name": "Tutorials", "item": "https://mystrow.fr/de/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Deine Lichter mit Spotify synchronisieren", "item": "https://mystrow.fr/de/synchroniser-lumieres-spotify" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Brauche ich Spotify Premium?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. MyStrow verbindet sich nicht mit deinem Konto: Es hört den Ton, der aus dem Computer kommt. Spotify Free funktioniert auch, aber dann bekommt auch die Werbung eine Lichtshow – für eine Party ist Premium angenehmer." } },
+      { "@type": "Question", "name": "Muss ich mein Spotify-Konto mit MyStrow verknüpfen?", "acceptedAnswer": { "@type": "Answer", "text": "Nein – keine Anmeldung, kein Passwort. Spotify spielt die Musik, MyStrow hört zu. Die beiden Apps bleiben völlig unabhängig." } },
+      { "@type": "Question", "name": "Funktioniert das auch mit Deezer, Apple Music, YouTube oder SoundCloud?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Der LIVE-Modus reagiert auf den Ton, nicht auf eine bestimmte App: Alles, was über die Lautsprecher des Computers läuft, kann deine Lichter steuern." } },
+      { "@type": "Question", "name": "Und wenn die Musik vom Handy kommt?", "acceptedAnswer": { "@type": "Answer", "text": "Verbinde das Handy per Klinkenkabel mit dem Line-Eingang des Computers oder deiner Soundkarte und wähle in MyStrow die Quelle Micro / Line In. Notfalls funktioniert auch das Mikrofon des Computers in der Nähe der Lautsprecher." } }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e; --red: #ff5555;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 50px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 660px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 56px 0; }
+    .section-bg { background: var(--bg2); padding: 56px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+
+    /* Two method cards */
+    .method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+    .method-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; }
+    .method-card .m-icon { font-size: 28px; margin-bottom: 12px; }
+    .method-card h3 { font-size: 19px; margin-bottom: 8px; }
+    .method-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .method-card .m-tag { display:inline-block; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--accent); background:rgba(226,206,22,0.10); border:1px solid var(--accent-border); padding:2px 10px; border-radius:20px; margin-bottom:14px; }
+
+    /* OS toggle */
+    .os-tabs { display: flex; gap: 12px; justify-content: center; margin: 0 auto 8px; flex-wrap: wrap; }
+    .os-tab { display: inline-flex; align-items: center; gap: 9px; background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.5px; padding: 13px 30px; border-radius: 999px; cursor: pointer; transition: all 0.18s; }
+    .os-tab:hover { border-color: rgba(226,206,22,0.45); }
+    .os-tab.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .os-panel { display: none; }
+    .os-panel.active { display: block; animation: fade 0.25s ease; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+    /* Software chooser */
+    .chooser-label { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .sw-tabs { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .sw-tab { background: var(--bg3); border: 1px solid var(--border); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.4px; padding: 10px 20px; border-radius: 999px; cursor: pointer; transition: all 0.18s; }
+    .sw-tab:hover { border-color: rgba(226,206,22,0.45); }
+    .sw-tab.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .sw-panel { display: none; }
+    .sw-panel.active { display: block; animation: fade 0.25s ease; }
+    .sub-method { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 21px; color: var(--accent); margin: 40px 0 4px; }
+    .os-pc .mac-only { display: none !important; }
+    .os-mac .pc-only { display: none !important; }
+
+    /* Steps */
+    .step-list { display: flex; flex-direction: column; gap: 24px; margin-top: 28px; }
+    .step { display: flex; gap: 18px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 34px; height: 34px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .prose h3 { margin-top: 28px; }
+    .prose h3:first-child { margin-top: 0; }
+    .step-body code { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 5px; padding: 1px 7px; font-size: 13px; color: var(--accent); font-family: 'Barlow Condensed', monospace; }
+
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 26px 30px; margin-top: 30px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .highlight-box p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .check-list li strong { color: var(--text); }
+
+    /* Video embed (responsive 16:9) */
+    .video-embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; border: 1px solid var(--border); margin: 36px 0 0; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 14px; }
+
+    /* Comparison table */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 680px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .yes { color: var(--green); font-weight: 700; }
+    .no { color: var(--red); font-weight: 700; }
+
+    .cta-block { text-align: center; padding: 70px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .article-nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-top: 1px solid var(--border); margin-top: 8px; gap: 16px; flex-wrap: wrap; }
+    .article-nav a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 0.18s; }
+    .article-nav a:hover { color: var(--accent); }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    /* Lang dropdown */
+    .lang-selector { position: relative; display: inline-flex; }
+    .lang-selector-btn { display: flex; align-items: center; gap: 6px; background: transparent; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 5px 10px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: all 0.18s; white-space: nowrap; font-family: inherit; }
+    .lang-selector-btn:hover, .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
+    .lang-chevron { font-size:9px; opacity:.5; margin-left:2px; transition: transform .18s; display:inline-block; }
+    .lang-selector:hover .lang-chevron, .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
+    .lang-dropdown { display: none; position: absolute; top: calc(100% + 7px); right: 0; background: #141414; border: 1px solid #2a2a2a; border-radius: 8px; padding: 6px 0; min-width: 110px; z-index: 999; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+    .lang-selector:hover .lang-dropdown, .lang-selector:focus-within .lang-dropdown { display: block; }
+    .lang-dropdown a, .lang-dropdown span { display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color .15s, background .15s; white-space: nowrap; }
+    .lang-dropdown a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
+    .lang-dropdown span { color: var(--accent); cursor: default; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 0 24px; }
+    .footer-main { max-width: 1080px; margin: 0 auto; padding: 0 28px 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; max-width: 1080px; margin: 0 auto; padding-left: 28px; padding-right: 28px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .method-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-nl { align-items: flex-start; }
+    }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css">
+</head>
+<body>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./">Startseite</a> &nbsp;/&nbsp;
+        <a href="blog">Tutorials</a> &nbsp;/&nbsp;
+        <span>Deine Lichter mit Spotify synchronisieren</span>
+      </nav>
+      <div class="hero-badge">🎵 Anleitung · LIVE-Modus</div>
+      <h1>Deine Lichter mit <em>Spotify</em> synchronisieren</h1>
+      <p class="hero-sub">Du startest eine Playlist, MyStrow hört die Musik und steuert deine DMX-Lichter im Takt: Blitz auf der Kick, Spannung beim Build-up, Explosion beim Drop. <strong>Kein Konto verknüpfen, nichts programmieren.</strong> Das ist der <strong>LIVE</strong>-Modus, eingerichtet in drei Klicks – auf PC wie auf Mac.</p>
+      <div class="hero-meta">
+        <span>Von <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Veröffentlicht am <strong>12. Oktober 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lesezeit: <strong>5 Min.</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#guide" class="btn-primary">Zur Anleitung ↓</a>
+        <a href="download" class="btn-outline">MyStrow herunterladen ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE PRINCIPE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Das Prinzip</div>
+      <h2>Spotify spielt, MyStrow hört zu</h2>
+      <div class="prose">
+        <p>Keine komplizierte Integration nötig: MyStrow <strong>hört den Ton, der aus deinem Computer kommt</strong>, genau wie ein Lichttechniker neben den Lautsprechern. Daraus erkennt es Tempo, Energie und den Moment im Song und wählt passend Farben, Intensitäten, Effekte und Bewegungen der Moving Heads.</p>
+        <p>Das Ergebnis: Du nutzt Spotify wie jeden Tag – deine Playlists, die Warteschlange, Zufallswiedergabe – und deine Lichter folgen <strong>jedem Song, ohne irgendetwas vorzubereiten</strong>. Ideal für eine Bar, einen Geburtstag, eine Hochzeit, ein Fitnessstudio oder eine Party zu Hause.</p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="m-icon">🥁</div>
+          <span class="m-tag">Der Rhythmus</span>
+          <h3>Exakt auf dem Beat</h3>
+          <p>MyStrow erkennt die Schläge und das BPM in Echtzeit. Blitze, Farbwechsel und Effekte sitzen auf der Musik, auch wenn sich das Tempo von Song zu Song ändert.</p>
+        </div>
+        <div class="method-card">
+          <div class="m-icon">📈</div>
+          <span class="m-tag">Die Energie</span>
+          <h3>Es spürt den Drop kommen</h3>
+          <p>Der LIVE-Modus erkennt die Abschnitte <strong>CALME</strong> (ruhig), <strong>BEAT</strong>, <strong>MONTÉE</strong> (Steigerung), <strong>DROP&nbsp;!</strong> und <strong>PEAK</strong>: sanftes Licht in der Strophe, steigende Spannung im Build-up, alles leuchtet beim Drop.</p>
+        </div>
+        <div class="method-card">
+          <div class="m-icon">🎨</div>
+          <span class="m-tag">Die ganze Bühne</span>
+          <h3>Farben, Moving Heads, Gobos</h3>
+          <p>PARs, LED-Bars, Moving Heads, Stroboskope: Jeder Scheinwerfer spielt seine Rolle. Die Moving Heads bewegen sich im Takt, die Gobos drehen sich, der Strobe setzt im richtigen Moment ein – ganz nach deinen Einstellungen.</p>
+        </div>
+        <div class="method-card">
+          <div class="m-icon">🎚️</div>
+          <span class="m-tag">Du behältst die Kontrolle</span>
+          <h3>Drei Modi zur Wahl</h3>
+          <p><strong>MUSIK-KI</strong> zum Tanzen, <strong>STIMMUNGS-KI</strong> für sanftes Hintergrundlicht (Abendessen, Aperitif, Bar) und <strong>MANUELL</strong>, um jederzeit die Kontrolle zu übernehmen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="section-bg" id="guide">
+    <div class="wrap-narrow">
+      <div style="text-align:center;margin-bottom:36px;">
+        <div class="section-tag" style="margin-bottom:8px;">Schritt-für-Schritt-Anleitung</div>
+        <h2 style="margin-bottom:10px;">Spotify mit deinen Lichtern verbinden</h2>
+        <p class="prose" style="margin-bottom:26px;">Wir gehen davon aus, dass deine Scheinwerfer bereits in MyStrow gepatcht sind. Falls nicht, beginne mit der <a href="tutoriel-debuter-mystrow" style="color:var(--accent)">Einsteiger-Anleitung</a>.</p>
+        <div class="chooser-label">Dein Computer</div>
+        <div class="os-tabs">
+          <button class="os-tab active" data-os="pc">💻 PC / Windows</button>
+          <button class="os-tab" data-os="mac">🍎 Mac</button>
+        </div>
+      </div>
+
+      <div id="guide-content" class="os-pc">
+        <div class="step-list">
+          <div class="step mac-only">
+            <div class="step-num">0</div>
+            <div class="step-body">
+              <h3>Auf dem Mac: BlackHole installieren (nur einmal)</h3>
+              <p>macOS lässt Apps den Tonausgang nicht direkt abhören. Installiere den kostenlosen virtuellen Audiotreiber <strong>BlackHole 2ch</strong>, öffne dann <strong>Audio-MIDI-Setup</strong> → Taste <code>+</code> → <em>Gerät mit mehreren Ausgängen erstellen</em> und aktiviere <strong>deine Lautsprecher + BlackHole 2ch</strong>. Wähle dieses Gerät als Tonausgabe des Mac: Du hörst die Musik, und MyStrow bekommt sie ebenfalls.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>Starte Spotify auf demselben Computer</h3>
+              <p>Spotify-App oder Webplayer, ganz egal. Der Ton muss über die Lautsprecher (oder die Soundkarte) laufen, <span class="pc-only">die an dem Computer mit MyStrow angeschlossen sind</span><span class="mac-only">über das in Schritt 0 erstellte Gerät mit mehreren Ausgängen</span>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>MyStrow in den LIVE-Modus schalten und die Quelle wählen</h3>
+              <p class="pc-only">Öffne den <strong>LIVE</strong>-Modus, klicke auf die Karte <strong>INPUT</strong> und wähle in der Liste <em>Geräte</em> den mit 🔊 markierten Ausgang, der den Namen deiner Lautsprecher, Kopfhörer oder Soundkarte trägt. Nichts zu installieren: MyStrow greift direkt ab, was über diesen Ausgang läuft.</p>
+              <p class="mac-only">Öffne den <strong>LIVE</strong>-Modus, klicke auf die Karte <strong>INPUT</strong> und wähle <strong>BlackHole 2ch</strong> in der Liste <em>Geräte</em>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>MUSIK-KI wählen … und die Playlist starten</h3>
+              <p>Wähle die Kachel <strong>MUSIK-KI</strong> und drücke in Spotify auf Play. Das BPM erscheint, die Anzeige wechselt im Lauf des Songs von <strong>BEAT</strong> zu <strong>MONTÉE</strong> (Steigerung) und dann <strong>DROP&nbsp;!</strong>, und deine Lichter folgen. Jetzt nur noch genießen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <p>📱 <strong>Die Musik ist auf deinem Handy?</strong> Verbinde das Handy per Klinkenkabel mit dem <strong>Line-Eingang</strong> des Computers oder deiner Soundkarte und wähle in MyStrow die Quelle <strong>Micro / Line In</strong>. Notfalls funktioniert auch das eingebaute Mikrofon des Computers in der Nähe der Lautsprecher.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉGLAGES -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Anpassen</div>
+      <h2>Die Show an deinen Abend anpassen</h2>
+      <div class="prose">
+        <p>Der LIVE-Modus funktioniert ab dem ersten Klick, aber ein paar Einstellungen machen den Unterschied:</p>
+      </div>
+      <ul class="check-list">
+        <li><span><strong>Erlaubte Gruppen:</strong> Lass die KI nur bestimmte Scheinwerfer steuern, zum Beispiel die Moving Heads und LED-Bars, und behalte die Raumbeleuchtung von Hand.</span></li>
+        <li><span><strong>Bewegungen:</strong> Wähle die Figuren der Moving Heads, ihre Geschwindigkeit und ihre Größe.</span></li>
+        <li><span><strong>Gobos und Strobe:</strong> Wähle die Gobos, die die KI verwenden darf, schalte die Rotation ein oder aus und entscheide, ob der Strobe schnell, langsam oder gar nicht eingesetzt wird.</span></li>
+        <li><span><strong>STIMMUNGS-KI für den Anfang des Abends:</strong> sanftes Stimmungslicht beim Aperitif, dann auf MUSIK-KI umschalten, wenn sich die Tanzfläche füllt.</span></li>
+        <li><span><strong>MANUELL jederzeit:</strong> Eine Ansage, eine Rede, die Torte kommt? Übernimm die Kontrolle und starte die KI danach mit einem Klick neu.</span></li>
+      </ul>
+
+      <div class="highlight-box">
+        <h3>Drei Tipps für Spotify</h3>
+        <p><strong>Aktiviere Crossfade</strong> in den Spotify-Einstellungen: Ohne Pause zwischen den Songs bleibt das Licht von einem Titel zum nächsten lebendig.<br>
+        <strong>Aktiviere die Lautstärke-Normalisierung</strong>: Alle Titel kommen mit gleichem Pegel an, das Licht reagiert bei einem alten Hit genauso wie bei einem neuen Song.<br>
+        <strong>Schalte die Benachrichtigungstöne</strong> des Computers während der Feier stumm: Sie kommen aus denselben Lautsprechern, MyStrow würde sie also auch hören.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Häufige Fragen</div>
+      <h2>Vielleicht fragst du dich …</h2>
+      <div class="prose">
+        <h3>Brauche ich Spotify Premium?</h3>
+        <p>Nein. MyStrow verbindet sich nicht mit deinem Konto: Es hört den Ton, der aus dem Computer kommt. Spotify Free funktioniert auch, aber dann bekommt auch die Werbung eine Lichtshow – für eine Party ist Premium angenehmer.</p>
+        <h3>Muss ich mein Spotify-Konto mit MyStrow verknüpfen?</h3>
+        <p>Nein – keine Anmeldung, kein Passwort. Spotify spielt die Musik, MyStrow hört zu. Die beiden Apps bleiben völlig unabhängig.</p>
+        <h3>Funktioniert das auch mit Deezer, Apple Music, YouTube oder SoundCloud?</h3>
+        <p>Ja. Der LIVE-Modus reagiert auf den Ton, nicht auf eine bestimmte App: Alles, was über die Lautsprecher des Computers läuft, kann deine Lichter steuern.</p>
+        <h3>Und wenn die Musik vom Handy kommt?</h3>
+        <p>Verbinde das Handy per Klinkenkabel mit dem Line-Eingang des Computers oder deiner Soundkarte und wähle in MyStrow die Quelle <strong>Micro / Line In</strong>. Notfalls funktioniert auch das Mikrofon des Computers in der Nähe der Lautsprecher.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="wrap cta-block">
+      <h2>Deine Playlist verdient eine echte Show</h2>
+      <p>Lade MyStrow herunter, starte Spotify und lass den LIVE-Modus deine Lichter tanzen.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="download" class="btn-primary">MyStrow herunterladen ↓</a>
+        <a href="ai-lighting" class="btn-outline">Licht-KI entdecken →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Weiterlesen</div>
+      <h2>Mehr erfahren</h2>
+      <div class="related-grid">
+        <a href="ai-lighting" class="related-card">
+          <div class="rc-tag">Licht-KI</div>
+          <h3>Licht, das auf die Musik reagiert</h3>
+          <p>Wie die KI von MyStrow den Ton analysiert und deine ganze Bühne in Echtzeit steuert.</p>
+        </a>
+        <a href="synchroniser-mystrow-logiciel-dj" class="related-card">
+          <div class="rc-tag">DJ · Synchronisation</div>
+          <h3>MyStrow mit deiner DJ-Software synchronisieren</h3>
+          <p>Audio-Capture oder MIDI Clock: alle Methoden für DJs, auf PC und Mac.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Einsteiger · DMX</div>
+          <h3>Einstieg in MyStrow</h3>
+          <p>Von der Installation bis zu deiner ersten Lichtshow, Schritt für Schritt und ohne Fachchinesisch.</p>
+        </a>
+        <a href="blog" class="related-card">
+          <div class="rc-tag">Tutorials</div>
+          <h3>Alle MyStrow-Anleitungen</h3>
+          <p>Alle unsere Video-Tutorials und Schritt-für-Schritt-Artikel.</p>
+        </a>
+      </div>
+
+      <p style="color:var(--muted);font-size:12px;margin-top:32px;">Spotify ist eine Marke der Spotify AB. MyStrow ist weder mit Spotify verbunden noch von Spotify unterstützt.</p>
+
+      <div class="article-nav">
+        <a href="blog">← Zurück zu den Tutorials</a>
+        <a href="download">MyStrow herunterladen →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="download">Download</a><a href="whats-new">Neuigkeiten</a><a href="/activate?lang=de">Produkt aktivieren</a>
+      <a href="index.html#pricing">Preise</a>
+      <a href="index.html#pricing">Shop</a>
+      <a href="blog">Blog</a>
+      <a href="terms">AGB</a><a href="legal-notice">Impressum</a><a href="privacy">Datenschutz</a>
+      <a href="contact">Kontakt</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Deine E-Mail-Adresse" required>
+        <button type="submit">Abonnieren</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a><a href="https://www.linkedin.com/company/mystrow/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#70B5F9'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 4.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Alle Rechte vorbehalten</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://subscribe-newsletter-2gdol7vjca-uc.a.run.app', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'de' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+
+// Computer selector (PC/Mac)
+(function () {
+  var content = document.getElementById('guide-content');
+  var osTabs = document.querySelectorAll('.os-tab');
+  osTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var os = tab.getAttribute('data-os');
+      osTabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+      content.classList.toggle('os-pc', os === 'pc');
+      content.classList.toggle('os-mac', os === 'mac');
+    });
+  });
+})();
+</script>
+<script src="../nav.js?v=3" defer></script>
+<script src="../mobile-nav.js?v=4"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
