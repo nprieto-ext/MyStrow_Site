@@ -227,6 +227,35 @@
     }
     .btn-amazon-sub:hover { opacity: 0.75; }
 
+    /* ── PACK MYSTROW (boîtier maison, Amazon) ── */
+    .product-mystrow {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      background: var(--bg3); border: 2px solid var(--accent);
+      border-radius: 16px; overflow: hidden; margin-bottom: 20px;
+      box-shadow: 0 0 40px var(--accent-glow);
+    }
+    .product-mystrow-visual { background: #fff; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .product-mystrow-visual img { width: 100%; height: auto; max-width: 440px; }
+    .product-mystrow-body { padding: 32px 32px; display: flex; flex-direction: column; gap: 16px; }
+    .pack-new { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; background: var(--accent); color: #0c0b00; padding: 3px 10px; border-radius: 20px; width: fit-content; }
+    .pack-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
+    .pack-choice {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      border-radius: 10px; padding: 12px 10px; text-decoration: none; text-align: center;
+      font-family: 'Barlow Condensed', sans-serif; transition: opacity 0.18s, transform 0.12s;
+      border: 1px solid var(--accent-border); color: var(--text); background: rgba(226,206,22,0.05);
+    }
+    .pack-choice:hover { opacity: 0.86; transform: scale(1.02); }
+    .pack-choice.best { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .pack-choice-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: 0.8; }
+    .pack-choice-price { font-size: 30px; font-weight: 800; line-height: 1.05; }
+    .pack-choice-cta { font-size: 13px; font-weight: 800; letter-spacing: 0.4px; }
+    .pack-note { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    @media (max-width: 768px) {
+      .product-mystrow { grid-template-columns: 1fr; }
+      .product-mystrow-body { padding: 24px 20px; }
+    }
+
     /* ── COMPAT ── */
     .compat-block {
       background: var(--bg2); border: 1px solid rgba(255,255,255,0.07);
@@ -391,6 +420,38 @@
 
   <section style="padding-bottom: 24px;">
     <div class="wrap">
+
+      <!-- ═══ PACK MYSTROW — boîtier maison vendu sur Amazon ═══
+           Liens directs vers les ASIN, SANS tag affilié (vendeur = MyStrow). -->
+      <div class="product-mystrow" id="pack-mystrow">
+        <div class="product-mystrow-visual">
+          <img src="img-shop/mystrow-pack-usb-dmx.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="800" height="626" loading="eager">
+        </div>
+        <div class="product-mystrow-body">
+          <div class="pack-new">Nouveau · Disponible sur Amazon</div>
+          <div class="prod-title">Pack MyStrow<br>Interface USB-DMX + licence</div>
+          <p class="prod-desc">Notre propre interface, pensée pour MyStrow : on la branche en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte. Rien à configurer.</p>
+          <ul class="prod-features">
+            <li class="highlight">Licence MyStrow incluse (2 mois ou 1 an)</li>
+            <li>Sortie DMX512 sur XLR 3 broches</li>
+            <li>Windows et Mac (Apple Silicon et Intel)</li>
+            <li>Câble USB-A vers USB-C fourni</li>
+          </ul>
+          <div class="pack-choices">
+            <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener noreferrer" class="pack-choice">
+              <span class="pack-choice-label">Licence 2 mois</span>
+              <span class="pack-choice-price">99€</span>
+              <span class="pack-choice-cta">Voir sur Amazon ↗</span>
+            </a>
+            <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener noreferrer" class="pack-choice best">
+              <span class="pack-choice-label">Licence 1 an</span>
+              <span class="pack-choice-price">199€</span>
+              <span class="pack-choice-cta">Voir sur Amazon ↗</span>
+            </a>
+          </div>
+          <p class="pack-note">Le pack 1 an revient à payer l'interface environ 55 €, l'abonnement annuel seul valant 143,86 €. Vous activez la licence sur <a href="activate" style="color:var(--accent);">mystrow.fr/activate</a>.</p>
+        </div>
+      </div>
 
       <!-- ═══ PRODUIT 2 — Interface DMX (choix) ═══ -->
       <div class="product-dmx">
@@ -595,7 +656,7 @@
 
       <!-- Disclaimer -->
       <p class="disclaimer">
-        * Liens affiliés Amazon — si vous achetez via ces liens, on perçoit une petite commission sans aucun surcoût pour vous. Le prix est identique à celui affiché sur Amazon. Merci pour votre soutien !
+        * Liens affiliés Amazon (hors Pack MyStrow, vendu directement par nous) — si vous achetez via ces liens, on perçoit une petite commission sans aucun surcoût pour vous. Le prix est identique à celui affiché sur Amazon. Merci pour votre soutien !
       </p>
 
     </div>
