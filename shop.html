@@ -245,7 +245,7 @@
       font-family: 'Barlow Condensed', sans-serif; transition: opacity 0.18s, transform 0.12s;
       border: 1px solid var(--accent-border); color: var(--text); background: rgba(226,206,22,0.05);
     }
-    .pack-choice:hover { opacity: 0.86; transform: scale(1.02); }
+    a.pack-choice:hover { opacity: 0.86; transform: scale(1.02); }
     .pack-choice.best { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
     .pack-choice-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: 0.8; }
     .pack-choice-price { font-size: 30px; font-weight: 800; line-height: 1.05; }
@@ -420,38 +420,6 @@
 
   <section style="padding-bottom: 24px;">
     <div class="wrap">
-
-      <!-- ═══ PACK MYSTROW — boîtier maison vendu sur Amazon ═══
-           Liens directs vers les ASIN, SANS tag affilié (vendeur = MyStrow). -->
-      <div class="product-mystrow" id="pack-mystrow">
-        <div class="product-mystrow-visual">
-          <img src="img-shop/mystrow-pack-usb-dmx.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="800" height="626" loading="eager">
-        </div>
-        <div class="product-mystrow-body">
-          <div class="pack-new">Nouveau · Disponible sur Amazon</div>
-          <div class="prod-title">Pack MyStrow<br>Interface USB-DMX + licence</div>
-          <p class="prod-desc">Notre propre interface, pensée pour MyStrow : on la branche en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte. Rien à configurer.</p>
-          <ul class="prod-features">
-            <li class="highlight">Licence MyStrow incluse (2 mois ou 1 an)</li>
-            <li>Sortie DMX512 sur XLR 3 broches</li>
-            <li>Windows et Mac (Apple Silicon et Intel)</li>
-            <li>Câble USB-A vers USB-C fourni</li>
-          </ul>
-          <div class="pack-choices">
-            <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener noreferrer" class="pack-choice">
-              <span class="pack-choice-label">Licence 2 mois</span>
-              <span class="pack-choice-price">99€</span>
-              <span class="pack-choice-cta">Voir sur Amazon ↗</span>
-            </a>
-            <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener noreferrer" class="pack-choice best">
-              <span class="pack-choice-label">Licence 1 an</span>
-              <span class="pack-choice-price">199€</span>
-              <span class="pack-choice-cta">Voir sur Amazon ↗</span>
-            </a>
-          </div>
-          <p class="pack-note">Le pack 1 an revient à payer l'interface environ 55 €, l'abonnement annuel seul valant 143,86 €. Vous activez la licence sur <a href="activate" style="color:var(--accent);">mystrow.fr/activate</a>.</p>
-        </div>
-      </div>
 
       <!-- ═══ PRODUIT 2 — Interface DMX (choix) ═══ -->
       <div class="product-dmx">
@@ -651,6 +619,40 @@
             </a>
           </div>
 
+        </div>
+      </div>
+
+      <!-- ═══ PACK MYSTROW — boîtier maison, bientôt sur Amazon ═══
+           Pas de lien tant que le stock FBA n'est pas disponible (fiche « indisponible »).
+           Quand c'est en vente : remettre des <a href="https://www.amazon.fr/dp/B0HK4YF5FS"> (2 mois)
+           et B0HK5539BK (1 an), SANS tag affilié, et remonter le bloc en tête. -->
+      <div class="product-mystrow" id="pack-mystrow" style="margin-top:20px;">
+        <div class="product-mystrow-visual">
+          <img src="img-shop/mystrow-pack-usb-dmx.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="800" height="626" loading="lazy">
+        </div>
+        <div class="product-mystrow-body">
+          <div class="pack-new">Nouveau · Bientôt disponible</div>
+          <div class="prod-title">Pack MyStrow<br>Interface USB-DMX + licence</div>
+          <p class="prod-desc">Notre propre interface, pensée pour MyStrow : on la branche en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte. Rien à configurer.</p>
+          <ul class="prod-features">
+            <li class="highlight">Licence MyStrow incluse (2 mois ou 1 an)</li>
+            <li>Sortie DMX512 sur XLR 3 broches</li>
+            <li>Windows et Mac (Apple Silicon et Intel)</li>
+            <li>Câble USB-A vers USB-C fourni</li>
+          </ul>
+          <div class="pack-choices">
+            <div class="pack-choice">
+              <span class="pack-choice-label">Licence 2 mois</span>
+              <span class="pack-choice-price">99€</span>
+              <span class="pack-choice-cta">Bientôt disponible</span>
+            </div>
+            <div class="pack-choice best">
+              <span class="pack-choice-label">Licence 1 an</span>
+              <span class="pack-choice-price">199€</span>
+              <span class="pack-choice-cta">Bientôt disponible</span>
+            </div>
+          </div>
+          <p class="pack-note">Le pack 1 an revient à payer l'interface environ 55 €, l'abonnement annuel seul valant 143,86 €. Vous activez la licence sur <a href="activate" style="color:var(--accent);">mystrow.fr/activate</a>.</p>
         </div>
       </div>
 
