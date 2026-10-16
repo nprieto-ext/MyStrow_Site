@@ -83,7 +83,7 @@
       {
         "@type": "Question",
         "name": "Quel matériel me faut-il pour utiliser MyStrow ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Un PC Windows 10/11 ou macOS (Intel 11+, Apple Silicon 13+) équipé d'un port USB ou réseau, un boîtier ArtNet DMX relié au PC par câble réseau, et vos projecteurs DMX. Le contrôleur AKAI APC mini mk2 est recommandé pour le live — un simulateur est intégré, il est totalement optionnel." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Un PC Windows 10/11 ou macOS (Intel 11+, Apple Silicon 13+), une interface DMX et vos projecteurs DMX. Le plus simple : le Pack MyStrow, notre interface USB-DMX livrée avec la licence (disponible sur Amazon). Les nodes Art-Net et la plupart des interfaces USB/DMX du marché fonctionnent aussi. Le contrôleur AKAI APC mini mk2 est recommandé pour le live — un simulateur est intégré, il est totalement optionnel." }
       },
       {
         "@type": "Question",
@@ -93,7 +93,7 @@
       {
         "@type": "Question",
         "name": "Mon PC n'a pas de port RJ45, que faire ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Aucun souci : le plus simple est de choisir l'interface USB Node DMX ArtNet, qui se branche directement sur un port USB, sans carte réseau ni driver. Et si vous préférez un node Ethernet, un simple adaptateur USB-RJ45, reconnu automatiquement par Windows et macOS, fait aussi l'affaire." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Aucun souci : le Pack MyStrow se branche directement sur un port USB, sans carte réseau ni driver, et MyStrow le reconnaît tout seul. Et si vous préférez un node Ethernet, un simple adaptateur USB-RJ45, reconnu automatiquement par Windows et macOS, fait aussi l'affaire." }
       },
       {
         "@type": "Question",
@@ -960,6 +960,32 @@
       .footer-nl { align-items: flex-start; }
       .nl-form input[type="email"] { width: 160px; }
     }
+
+    /* ── Pack MyStrow (interface USB-DMX maison, produit phare) ── */
+    .pack-home { padding: 72px 28px; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .pack-home-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .pack-home-visual { background: #fff; border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center; }
+    .pack-home-visual img { width: 100%; height: auto; max-width: 460px; }
+    .pack-home h2 { margin-bottom: 14px; }
+    .pack-home-sub { color: var(--muted); font-size: 16px; line-height: 1.7; margin-bottom: 18px; }
+    .pack-home-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; padding: 0; }
+    .pack-home-list li { display: flex; gap: 10px; font-size: 15px; color: var(--text); }
+    .pack-home-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .pack-home-offers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    .pack-home-offer { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 14px 10px; border-radius: 12px; text-decoration: none; text-align: center; border: 1px solid var(--accent-border); background: var(--accent-dim); color: var(--text); transition: opacity .18s, transform .12s; }
+    .pack-home-offer:hover { opacity: .86; transform: scale(1.02); }
+    .pack-home-offer.best { background: var(--accent); border-color: var(--accent); color: #0c0b00; }
+    .pack-home-offer-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: .8; }
+    .pack-home-offer-price { font-size: 32px; font-weight: 800; line-height: 1.05; }
+    .pack-home-offer-cta { font-size: 13px; font-weight: 800; }
+    .pack-home-note { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .pack-home-note a { color: var(--accent); }
+    .hero-pack-link { display: inline-block; margin-top: 18px; font-size: 14px; color: var(--accent); text-decoration: none; font-weight: 600; }
+    .hero-pack-link:hover { text-decoration: underline; }
+    @media (max-width: 860px) {
+      .pack-home { padding: 56px 16px; }
+      .pack-home-inner { grid-template-columns: 1fr; gap: 28px; }
+    }
   </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -1071,6 +1097,7 @@
         <a href="#fonctionnalites" class="btn-outline" style="padding:13px 32px;font-size:16px;">Voir les fonctionnalités</a>
       </div>
       <p class="hero-meta">Gratuit pour démarrer<span>·</span>Windows 10/11<span>·</span>macOS<span>·</span>4 univers DMX Art-Net</p>
+      <a href="#pack-mystrow" class="hero-pack-link">Nouveau : le Pack MyStrow, interface USB-DMX + licence, sur Amazon →</a>
     </div>
   </div>
 </section>
@@ -1138,6 +1165,39 @@
       <img src="programme.webp" alt="Programmez" class="pillar-icon">
       <h3 class="pillar-title">Programmez</h3>
       <p class="pillar-text">Programmez, ajustez, lancez. Une interface pensée pour aller vite et rester précis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PACK MYSTROW — notre interface USB-DMX, produit phare (liens Amazon sans tag affilié) -->
+<section class="pack-home" id="pack-mystrow" aria-labelledby="pack-title">
+  <div class="pack-home-inner">
+    <div class="pack-home-visual">
+      <img src="img-shop/mystrow-pack-usb-dmx.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="800" height="626" loading="lazy">
+    </div>
+    <div>
+      <p class="section-tag">Nouveau · Disponible sur Amazon</p>
+      <h2 id="pack-title">Le Pack MyStrow.<br><em style="font-style:normal;color:var(--accent)">Branchez, éclairez.</em></h2>
+      <p class="pack-home-sub">Notre propre interface USB-DMX, conçue pour MyStrow. Vous la branchez en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte.</p>
+      <ul class="pack-home-list">
+        <li>Licence MyStrow incluse (2 mois ou 1 an)</li>
+        <li>Sortie DMX512 sur XLR 3 broches</li>
+        <li>Windows et Mac (Apple Silicon et Intel)</li>
+        <li>Expédié par Amazon, livraison Prime</li>
+      </ul>
+      <div class="pack-home-offers">
+        <a class="pack-home-offer" href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">
+          <span class="pack-home-offer-label">Licence 2 mois</span>
+          <span class="pack-home-offer-price">99€</span>
+          <span class="pack-home-offer-cta">Acheter sur Amazon ↗</span>
+        </a>
+        <a class="pack-home-offer best" href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">
+          <span class="pack-home-offer-label">Licence 1 an</span>
+          <span class="pack-home-offer-price">199€</span>
+          <span class="pack-home-offer-cta">Acheter sur Amazon ↗</span>
+        </a>
+      </div>
+      <p class="pack-home-note">Déjà équipé ? MyStrow fonctionne aussi avec la plupart des nodes Art-Net et interfaces USB/DMX du marché : <a href="shop">voir les interfaces compatibles</a>.</p>
     </div>
   </div>
 </section>
@@ -1276,7 +1336,7 @@
 
       <!-- Flèche Art-Net -->
       <div class="synop-connector">
-        <div class="synop-tag">RJ45</div>
+        <div class="synop-tag">USB</div>
         <div class="synop-line">
           <div class="synop-dot"></div>
           <div class="synop-dot"></div>
@@ -1297,8 +1357,8 @@
             <rect x="7"  y="12" width="4"  height="3" rx="1" fill="rgba(255,255,255,0.12)"/>
           </svg>
         </div>
-        <div class="synop-name">Boîtier Node</div>
-        <div class="synop-sub">Art-Net → DMX</div>
+        <div class="synop-name">Interface USB-DMX</div>
+        <div class="synop-sub">MyStrow · ou node Art-Net</div>
       </div>
 
       <!-- Flèche DMX -->
@@ -1336,7 +1396,7 @@
       <div class="synop-nav-dot" data-idx="3">Clavier</div>
     </div>
     <div style="margin-top:40px">
-      <a href="controleur-akai-apc-mini" class="btn-outline" style="padding:13px 32px;font-size:15px;">Voir le matériel recommandé →</a>
+      <a href="shop" class="btn-outline" style="padding:13px 32px;font-size:15px;">Voir le matériel recommandé →</a>
     </div>
   </div>
 </section>
@@ -1371,7 +1431,7 @@
       <a class="feat-card" href="logiciel-lumiere-dmx-ia">
           <div class="feat-icon" aria-hidden="true">⚡</div>
           <h3>Logiciel Lumière DMX</h3>
-          <p>Un PC Windows ou Mac avec une carte réseau, un boîtier ArtNet DMX, et MyStrow. Compatible tout projecteur DMX : Lyre, Projecteur LED, PAR LED. Intensités, couleurs, strobes, tout se pilote depuis une interface pensée pour les professionnels.</p>
+          <p>Un PC Windows ou Mac, l'interface USB-DMX MyStrow (ou tout node Art-Net), et MyStrow. Compatible tout projecteur DMX : Lyre, Projecteur LED, PAR LED. Intensités, couleurs, strobes, tout se pilote depuis une interface pensée pour les professionnels.</p>
       </a>
       <a class="feat-card" href="ia-lumiere">
           <div class="feat-icon" aria-hidden="true">✨</div>
@@ -1563,7 +1623,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q">Quel matériel me faut-il pour utiliser MyStrow ?<span class="faq-arrow" aria-hidden="true">+</span></div>
-        <div class="faq-a">Un PC Windows 10/11 ou macOS (Intel 11+, Apple Silicon 13+) équipé d'un port USB ou réseau, un boîtier ArtNet DMX (configuré sur l'IP 2.0.0.15) relié au PC par câble réseau, et vos projecteurs DMX. Le contrôleur AKAI APC mini mk2 est recommandé pour le live — un simulateur est intégré, il est totalement optionnel.</div>
+        <div class="faq-a">Un PC Windows 10/11 ou macOS (Intel 11+, Apple Silicon 13+), une interface DMX et vos projecteurs DMX. Le plus simple : le Pack MyStrow, notre interface USB-DMX livrée avec la licence (disponible sur Amazon). Les nodes Art-Net et la plupart des interfaces USB/DMX du marché fonctionnent aussi. Le contrôleur AKAI APC mini mk2 est recommandé pour le live — un simulateur est intégré, il est totalement optionnel.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Comment configurer le boîtier DMX ?<span class="faq-arrow" aria-hidden="true">+</span></div>
@@ -1571,7 +1631,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">Mon PC n'a pas de port RJ45, que faire ?<span class="faq-arrow" aria-hidden="true">+</span></div>
-        <div class="faq-a">Aucun souci : le plus simple est de choisir l'interface USB Node DMX ArtNet, qui se branche directement sur un port USB, sans carte réseau ni driver. Et si vous préférez un node Ethernet, un simple adaptateur USB-RJ45, reconnu automatiquement par Windows et macOS, fait aussi l'affaire.</div>
+        <div class="faq-a">Aucun souci : le Pack MyStrow se branche directement sur un port USB, sans carte réseau ni driver, et MyStrow le reconnaît tout seul. Et si vous préférez un node Ethernet, un simple adaptateur USB-RJ45, reconnu automatiquement par Windows et macOS, fait aussi l'affaire.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Comment l'IA analyse ma musique ?<span class="faq-arrow" aria-hidden="true">+</span></div>
