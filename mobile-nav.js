@@ -46,14 +46,16 @@
     if (!links.length) return;
 
     // ── Menu mobile : allegement ──────────────────────────────────────────
-    // On retire "Fonctionnalites" et "Shop" du panneau mobile UNIQUEMENT. Le
-    // menu bureau n'est pas touche : ce fichier ne fait que lire la nav pour
-    // en deriver une version tactile, il ne la modifie pas.
+    // On retire "Fonctionnalites" du panneau mobile UNIQUEMENT. Le menu bureau
+    // n'est pas touche : ce fichier ne fait que lire la nav pour en deriver une
+    // version tactile, il ne la modifie pas. ("Shop", retire le 19/08/2026,
+    // est revenu le 16/10/2026 a la demande : la boutique doit etre joignable
+    // depuis un telephone.)
     //
     // Le filtre porte sur le href et non sur le libelle, qui change dans les
     // cinq langues (Fonctionnalites / Features / Funktionen / Funciones /
     // Funcionalidades). Les href, eux, se resument a deux formes.
-    var EXCLUS = /(#fonctionnalites|#features)$|(^|\/)shop(\.html)?$/i;
+    var EXCLUS = /(#fonctionnalites|#features)$/i;
     links = links.filter(function (l) { return !EXCLUS.test(l.href); });
 
     // ── Menu mobile : entree "Mon compte" ────────────────────────
