@@ -1682,4 +1682,10 @@
     <priority>0.7</priority>
     <lastmod>2026-10-12</lastmod>
   </url>
+  <url>
+    <loc>https://mystrow.fr/application-tablette</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
