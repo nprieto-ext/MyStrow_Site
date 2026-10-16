@@ -281,6 +281,17 @@
     .cl-item ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .cl-item li { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 12px 16px; font-size: 14.5px; color: rgba(244,241,232,0.86); line-height: 1.6; }
     .cl-item li strong { color: var(--text); font-weight: 600; }
+    .cl-search { position: relative; max-width: 820px; margin: 0 0 34px; }
+    .cl-search svg { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
+    .cl-search input { width: 100%; background: var(--card); border: 1px solid rgba(255,255,255,0.10); border-radius: 12px; padding: 14px 110px 14px 46px; font: 15px 'Inter', sans-serif; color: var(--text); outline: none; transition: border-color .18s, box-shadow .18s; -webkit-appearance: none; appearance: none; }
+    .cl-search input::placeholder { color: var(--muted); }
+    .cl-search input:focus { border-color: var(--accent-border); box-shadow: 0 0 0 4px var(--accent-glow); }
+    .cl-search input::-webkit-search-cancel-button { filter: invert(1) opacity(.5); cursor: pointer; }
+    .cl-count { position: absolute; right: 44px; top: 50%; transform: translateY(-50%); font-size: 12.5px; color: var(--muted); pointer-events: none; }
+    .cl-empty { max-width: 820px; color: var(--muted); font-size: 15px; padding: 10px 0 0; }
+    .cl-item[hidden], .cl-item li[hidden], .cl-empty[hidden] { display: none; }
+    .cl-item mark { background: rgba(226,206,22,0.28); color: var(--text); border-radius: 3px; padding: 0 1px; }
+    @media (max-width: 680px) { .cl-search input { font-size: 16px; padding-right: 16px; } .cl-count { display: none; } }
     .tag { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; padding: 2px 9px; border-radius: 999px; margin-right: 8px; vertical-align: 1px; }
     .tag.new { background: rgba(226,206,22,0.12); color: var(--accent); border: 1px solid var(--accent-border); }
     .tag.imp { background: rgba(96,165,250,0.10); color: #7fb4f5; border: 1px solid rgba(96,165,250,0.25); }
@@ -321,6 +332,13 @@
 
   <section class="cl-section">
     <div class="wrap cl-list">
+
+      <div class="cl-search" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="cl-q" placeholder="Funktion, Fehlerbehebung oder Version suchen…" aria-label="Neuigkeiten durchsuchen" autocomplete="off" spellcheck="false">
+        <span class="cl-count" id="cl-count" aria-live="polite" data-one="1 Treffer" data-many="{n} Treffer"></span>
+      </div>
+      <p class="cl-empty" id="cl-empty" hidden>Keine Neuigkeit passt zu dieser Suche.</p>
 
 <!--
   ===================================================================
@@ -543,5 +561,6 @@ function handleNewsletter(e) {
   else window.addEventListener('load',pret);
 })();
 </script>
+<script src="/changelog-search.js?v=1" defer></script>
 </body>
 </html>
