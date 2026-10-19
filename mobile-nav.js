@@ -99,9 +99,12 @@
           var raw = item.textContent.trim();
           name = LEGACY[raw] || raw;
         }
-        var label = flag + name;
+        // Code court (FR, EN…) pour tenir les cinq langues sur une seule ligne
+        // en mobile ; le nom complet reste en aria-label / title.
         var lang = item.getAttribute('data-lang');
-        var attr = lang ? ' lang="' + lang + '"' : '';
+        var code = (lang || name).slice(0, 2).toUpperCase();
+        var label = flag + '<span class="nb-lang-code">' + code + '</span>';
+        var attr = (lang ? ' lang="' + lang + '"' : '') + ' title="' + name + '" aria-label="' + name + '"';
         if (item.tagName === 'SPAN') {
           return '<span class="nb-lang-cur"' + attr + '>' + label + '</span>';
         }
