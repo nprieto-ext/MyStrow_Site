@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Shop MyStrow — Pack interface USB-DMX + licence, disponible sur Amazon</title>
-  <meta name="description" content="Le Pack MyStrow : notre interface USB-DMX 512 avec la licence incluse, disponible sur Amazon (Prime). Les autres interfaces Art-Net et USB/DMX restent compatibles.">
+  <title>Pack MyStrow — Interface USB-DMX + licence, livré en 72 h</title>
+  <meta name="description" content="Le Pack MyStrow : notre interface USB-DMX 512 avec la licence incluse, dès 99 €. Livraison offerte en 72 h en France métropolitaine, aussi sur Amazon Prime.">
   <link rel="canonical" href="https://mystrow.fr/shop">
   <link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop">
   <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mystrow.fr/shop">
   <meta property="og:title" content="Shop MyStrow — Le Pack interface USB-DMX + licence">
-  <meta property="og:description" content="Notre interface USB-DMX 512, licence MyStrow incluse. Disponible sur Amazon, livraison Prime.">
+  <meta property="og:description" content="Notre interface USB-DMX 512, licence MyStrow incluse. Livraison offerte en 72 h.">
   <meta property="og:image" content="https://mystrow.fr/og-image.webp">
   <meta property="og:site_name" content="MyStrow">
 
@@ -31,6 +31,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
   <script src="/cookie-consent.js" defer></script>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preload" as="image" href="img-shop/pack-mystrow-1an.webp">
 
   <script type="application/ld+json">
   {
@@ -52,8 +53,8 @@
           "category": "Interface DMX USB",
           "image": "https://mystrow.fr/img-shop/mystrow-pack-usb-dmx.webp",
           "offers": [
-            { "@type": "Offer", "name": "Licence 2 mois", "price": "99.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.fr/dp/B0HK4YF5FS" },
-            { "@type": "Offer", "name": "Licence 1 an", "price": "199.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://www.amazon.fr/dp/B0HK5539BK" }
+            { "@type": "Offer", "name": "Licence 2 mois", "price": "99.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" },
+            { "@type": "Offer", "name": "Licence 1 an", "price": "199.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" }
           ]
         }
       },
@@ -243,35 +244,67 @@
     }
     .btn-amazon-sub:hover { opacity: 0.75; }
 
-    /* ── PACK MYSTROW (boîtier maison, Amazon) ── */
-    .product-mystrow {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
-      background: var(--bg3); border: 2px solid var(--accent);
-      border-radius: 16px; overflow: hidden; margin-bottom: 20px;
-      box-shadow: 0 0 40px var(--accent-glow);
-    }
-    .product-mystrow-visual { background: #fff; display: flex; align-items: center; justify-content: center; padding: 20px; }
-    .product-mystrow-visual img { width: 100%; height: auto; max-width: 440px; }
-    .product-mystrow-body { padding: 32px 32px; display: flex; flex-direction: column; gap: 16px; }
-    .pack-new { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; background: var(--accent); color: #0c0b00; padding: 3px 10px; border-radius: 20px; width: fit-content; }
-    .pack-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
-    .pack-choice {
-      display: flex; flex-direction: column; align-items: center; gap: 2px;
-      border-radius: 10px; padding: 12px 10px; text-decoration: none; text-align: center;
-      font-family: 'Barlow Condensed', sans-serif; transition: opacity 0.18s, transform 0.12s;
-      border: 1px solid var(--accent-border); color: var(--text); background: rgba(226,206,22,0.05);
-    }
-    a.pack-choice:hover { opacity: 0.86; transform: scale(1.02); }
-    .pack-choice.best { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
-    .pack-choice-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: 0.8; }
-    .pack-choice-price { font-size: 30px; font-weight: 800; line-height: 1.05; }
-    .pack-choice-cta { font-size: 13px; font-weight: 800; letter-spacing: 0.4px; }
-    .pack-note { font-size: 12px; color: var(--muted); line-height: 1.5; }
-    .pack-amazon { font-size: 13px; color: var(--muted); text-align: center; margin-top: -6px; }
-    .pack-amazon a { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
-    @media (max-width: 768px) {
-      .product-mystrow { grid-template-columns: 1fr; }
-      .product-mystrow-body { padding: 24px 20px; }
+    /* ── PACK MYSTROW (produit phare, commande directe) ── */
+    .pk { padding: 40px 0 56px; position: relative; overflow: hidden; }
+    .pk::before { content: ''; position: absolute; inset: -20% -10% auto; height: 520px; background: radial-gradient(ellipse at 30% 40%, rgba(226,206,22,0.10), transparent 60%); pointer-events: none; }
+    .pk-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; position: relative; }
+    .pk-visual { position: relative; border-radius: 20px; background: radial-gradient(circle at 50% 60%, #1d1a05 0%, #0b0a05 70%); border: 1px solid var(--accent-border); aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .pk-visual img { position: relative; z-index: 2; width: 88%; height: auto; filter: drop-shadow(0 28px 36px rgba(0,0,0,0.75)); animation: pk-float 6s ease-in-out infinite; transition: opacity .2s; }
+    .pk-beams { position: absolute; inset: 0; z-index: 1; }
+    .pk-beams i { position: absolute; top: -30%; left: 50%; width: 220px; height: 160%; transform-origin: 50% 0; background: linear-gradient(to bottom, rgba(226,206,22,0.55), rgba(226,206,22,0) 70%); filter: blur(18px); mix-blend-mode: screen; animation: pk-sweep 7s ease-in-out infinite; }
+    .pk-beams i:nth-child(2) { background: linear-gradient(to bottom, rgba(0,212,255,0.45), rgba(0,212,255,0) 70%); animation-duration: 9s; animation-delay: -3s; }
+    .pk-beams i:nth-child(3) { background: linear-gradient(to bottom, rgba(255,60,170,0.40), rgba(255,60,170,0) 70%); animation-duration: 11s; animation-delay: -6s; }
+    @keyframes pk-sweep { 0%,100% { transform: translateX(-50%) rotate(-28deg); } 50% { transform: translateX(-50%) rotate(28deg); } }
+    @keyframes pk-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .pk-sticker { position: absolute; z-index: 3; top: 18px; right: 18px; width: 86px; height: 86px; border-radius: 50%; background: var(--accent); color: #0c0b00; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; transform: rotate(12deg); box-shadow: 0 6px 20px rgba(226,206,22,0.35); }
+    .pk-buy { display: flex; flex-direction: column; gap: 16px; }
+    .pk-buy .breadcrumb { display: block; height: auto; padding: 0; margin: 0; max-width: none; }
+    .pk-live { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #4ade80; }
+    .pk-live.low { color: #fb923c; } .pk-live.out { color: var(--muted); }
+    .pk-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 0 currentColor; animation: pk-ping 1.8s ease-out infinite; }
+    @keyframes pk-ping { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 100% { box-shadow: 0 0 0 10px rgba(74,222,128,0); } }
+    .pk h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(46px,5.4vw,72px); line-height: 0.92; letter-spacing: 1px; }
+    .pk h1 em { font-style: normal; color: var(--accent); }
+    .pk-sub { font-size: 15px; color: var(--muted); line-height: 1.6; max-width: 440px; }
+    .pk-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .pk-opt { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; cursor: pointer; padding: 14px 16px; border-radius: 12px; background: rgba(255,255,255,0.03); border: 2px solid rgba(255,255,255,0.1); color: var(--text); font-family: 'Barlow Condensed', sans-serif; transition: border-color .18s, background .18s, transform .12s; }
+    .pk-opt:hover { border-color: rgba(226,206,22,0.45); transform: translateY(-1px); }
+    .pk-opt.on { border-color: var(--accent); background: rgba(226,206,22,0.08); box-shadow: 0 0 24px rgba(226,206,22,0.12); }
+    .pk-opt-name { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85; }
+    .pk-opt-price { font-size: 34px; font-weight: 800; line-height: 1.05; }
+    .pk-opt-hint { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); }
+    .pk-opt-badge { position: absolute; top: -10px; right: 12px; background: var(--accent); color: #0c0b00; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; }
+    .pk-ship { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 12px; background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.18); }
+    .pk-ship-ico { font-size: 22px; line-height: 1.2; }
+    .pk-ship-main { font-size: 15px; color: var(--text); }
+    .pk-ship-main b { color: #4ade80; }
+    .pk-ship-sub { font-size: 12px; color: var(--muted); }
+    .pk-cp-toggle { background: none; border: none; padding: 0; color: var(--text); font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+    .pk-cp { display: flex; gap: 6px; margin-top: 8px; }
+    .pk-cp[hidden] { display: none; }
+    .pk-cp input { width: 96px; background: #111; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 7px 10px; color: var(--text); font-size: 14px; letter-spacing: 1px; outline: none; }
+    .pk-cp input:focus { border-color: var(--accent); }
+    .pk-cp button { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: var(--text); border-radius: 8px; padding: 0 12px; font-weight: 700; cursor: pointer; }
+    .pk-cta { display: flex; justify-content: center; align-items: center; gap: 6px; background: var(--accent); color: #0c0b00; text-decoration: none; border-radius: 12px; padding: 16px 24px; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: 0.5px; box-shadow: 0 8px 30px rgba(226,206,22,0.25); transition: transform .12s, box-shadow .18s, opacity .18s; }
+    .pk-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(226,206,22,0.35); }
+    .pk-cta.off { background: rgba(255,255,255,0.08); color: var(--muted); box-shadow: none; pointer-events: none; }
+    .pk-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: rgba(244,241,232,0.7); }
+    .pk-amazon { font-size: 12px; color: var(--muted); }
+    .pk-amazon a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+    .pk-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px; counter-reset: none; }
+    .pk-steps li { display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: 14px; background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .pk-steps li b { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 800; color: var(--text); }
+    .pk-steps a { color: var(--accent); }
+    .pk-step-n { width: 30px; height: 30px; border-radius: 50%; background: var(--accent-glow); border: 1px solid var(--accent-border); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; margin-bottom: 6px; }
+    .pk-specs { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .pk-specs li { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.4px; padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); color: rgba(244,241,232,0.75); }
+    @media (prefers-reduced-motion: reduce) { .pk-beams i, .pk-visual img, .pk-dot { animation: none; } }
+    @media (max-width: 860px) {
+      .pk { padding-top: 20px; }
+      .pk-grid { grid-template-columns: 1fr; gap: 24px; }
+      .pk-visual { aspect-ratio: 4 / 3; }
+      .pk-sticker { width: 70px; height: 70px; font-size: 12px; }
+      .pk-steps { grid-template-columns: 1fr; }
     }
 
     /* ── COMPAT ── */
@@ -413,64 +446,85 @@
 
 
 <main>
-  <!-- ═══ HERO ═══ -->
-  <section class="hero">
-    <div class="wrap">
-      <nav class="breadcrumb" aria-label="Fil d'Ariane">
-        <a href="./">Accueil</a> &nbsp;/&nbsp; <span>Shop</span>
-      </nav>
-      <div class="section-tag">Nouveau · Disponible sur Amazon</div>
-      <h1>Le Pack MyStrow.<br><em>Branchez, éclairez.</em></h1>
-      <p class="hero-sub">Notre interface USB-DMX, la licence déjà dans la boîte. Vous la branchez, MyStrow la reconnaît, vos projecteurs s'allument. Un contrôleur MIDI vient en option pour le live.</p>
+  <!-- ═══ PACK MYSTROW — produit phare, commande directe ═══
+       Commander → Payment Link Stripe → stripe_webhook → expédition Amazon MCF
+       depuis le stock FBA. Date de livraison et stock : CF livraison_estimation. -->
+  <section class="pk" id="pack-mystrow">
+    <div class="wrap pk-grid">
 
-      <!-- Chaîne setup -->
-      <div class="setup-chain">
-        <span class="chain-item">💻 MyStrow</span>
-        <span class="chain-arrow">→</span>
-        <span class="chain-item hl">🔌 Interface USB-DMX MyStrow</span>
-        <span class="chain-arrow">→</span>
-        <span class="chain-item">Projecteurs DMX</span>
+      <div class="pk-visual" aria-hidden="false">
+        <div class="pk-beams" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img id="pk-img" src="img-shop/pack-mystrow-1an.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence 1 an incluse" width="900" height="694">
+        <span class="pk-sticker">Licence<br>incluse</span>
       </div>
+
+      <div class="pk-buy">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <a href="./">Accueil</a> &nbsp;/&nbsp; <span>Shop</span>
+        </nav>
+        <div class="pk-live"><span class="pk-dot"></span><span id="pk-stock">En stock</span></div>
+        <h1>Le Pack MyStrow.<br><em>Branchez, éclairez.</em></h1>
+        <p class="pk-sub">L'interface USB-DMX + la licence dans la boîte. Vous branchez, MyStrow la reconnaît, vos projecteurs s'allument.</p>
+
+        <div class="pk-opts" role="radiogroup" aria-label="Choisissez votre pack">
+          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_2m" data-img="img-shop/pack-mystrow-2mois.webp"
+                  data-price="99" data-href="https://buy.stripe.com/7sYcMX0Wx1gQ0WAcR608g0a">
+            <span class="pk-opt-name">Licence 2 mois</span>
+            <span class="pk-opt-price">99€</span>
+            <span class="pk-opt-hint">Pour découvrir</span>
+          </button>
+          <button type="button" class="pk-opt on" role="radio" aria-checked="true" data-plan="pack_1a" data-img="img-shop/pack-mystrow-1an.webp"
+                  data-price="199" data-href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
+            <span class="pk-opt-badge">Le + choisi</span>
+            <span class="pk-opt-name">Licence 1 an</span>
+            <span class="pk-opt-price">199€</span>
+            <span class="pk-opt-hint">L'interface revient à ~55 €</span>
+          </button>
+        </div>
+
+        <div class="pk-ship">
+          <span class="pk-ship-ico" aria-hidden="true">🚚</span>
+          <div>
+            <div class="pk-ship-main" id="pk-ship-main">Livré en <b>72 h</b> en France métropolitaine</div>
+            <div class="pk-ship-sub">Livraison offerte ·
+              <button type="button" class="pk-cp-toggle" id="pk-cp-toggle">votre code postal</button>
+            </div>
+            <form class="pk-cp" id="pk-cp" hidden>
+              <input id="pk-cp-input" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="75001" aria-label="Code postal de livraison" autocomplete="postal-code">
+              <button type="submit">OK</button>
+            </form>
+          </div>
+        </div>
+
+        <a class="pk-cta" id="pk-cta" href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
+          Commander — <span id="pk-cta-price">199 €</span>
+        </a>
+
+        <ul class="pk-trust">
+          <li>🔒 Paiement sécurisé</li>
+          <li>↩️ 14 jours pour changer d'avis</li>
+          <li>🛡️ Garantie 2 ans</li>
+        </ul>
+        <p class="pk-amazon">Aussi sur Amazon Prime :
+          <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">2 mois ↗</a> ·
+          <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">1 an ↗</a></p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <ol class="pk-steps">
+        <li><span class="pk-step-n">1</span><b>Commandez</b><span>Livré chez vous en 72 h, suivi par email.</span></li>
+        <li><span class="pk-step-n">2</span><b>Branchez</b><span>USB d'un côté, XLR de l'autre. Windows ou Mac, rien à installer.</span></li>
+        <li><span class="pk-step-n">3</span><b>Activez</b><span>Le code est sur la carte dans la boîte : <a href="activate">mystrow.fr/activate</a>.</span></li>
+      </ol>
+      <ul class="pk-specs">
+        <li>DMX512 · XLR 3 broches</li><li>512 canaux</li><li>Windows · Mac Apple Silicon et Intel</li><li>Câble USB-A → USB-C fourni</li><li>Reconnu automatiquement par MyStrow</li>
+      </ul>
     </div>
   </section>
 
   <section style="padding-bottom: 24px;">
     <div class="wrap">
-
-      <!-- ═══ PACK MYSTROW — notre interface, produit phare (Amazon, sans tag affilié) ═══ -->
-      <div class="product-mystrow" id="pack-mystrow">
-        <div class="product-mystrow-visual">
-          <img src="img-shop/mystrow-pack-usb-dmx.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="800" height="626">
-        </div>
-        <div class="product-mystrow-body">
-          <div class="pack-new">Nouveau · En direct ou sur Amazon</div>
-          <div class="prod-title">Pack MyStrow<br>Interface USB-DMX + licence</div>
-          <p class="prod-desc">Notre propre interface, pensée pour MyStrow : on la branche en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte. Rien à configurer.</p>
-          <ul class="prod-features">
-            <li class="highlight">Licence MyStrow incluse (2 mois ou 1 an)</li>
-            <li>Sortie DMX512 sur XLR 3 broches</li>
-            <li>Windows et Mac (Apple Silicon et Intel)</li>
-            <li>Câble USB-A vers USB-C fourni</li>
-            <li>Livraison offerte en France métropolitaine, suivi par email</li>
-          </ul>
-          <!-- Commande directe : Stripe → Cloud Function → expédition Amazon MCF
-               depuis le stock FBA (functions/amazon_mcf.py). -->
-          <div class="pack-choices">
-            <a class="pack-choice" href="https://buy.stripe.com/7sYcMX0Wx1gQ0WAcR608g0a">
-              <span class="pack-choice-label">Licence 2 mois</span>
-              <span class="pack-choice-price">99€</span>
-              <span class="pack-choice-cta">Commander →</span>
-            </a>
-            <a class="pack-choice best" href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
-              <span class="pack-choice-label">Licence 1 an</span>
-              <span class="pack-choice-price">199€</span>
-              <span class="pack-choice-cta">Commander →</span>
-            </a>
-          </div>
-          <p class="pack-amazon">Vous préférez Amazon (Prime) ? <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">Pack 2 mois ↗</a> · <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">Pack 1 an ↗</a></p>
-          <p class="pack-note">Le pack 1 an revient à payer l'interface environ 55 €, l'abonnement annuel seul valant 143,86 €. Vous activez la licence sur <a href="activate" style="color:var(--accent);">mystrow.fr/activate</a>.</p>
-        </div>
-      </div>
 
       <!-- ═══ Interfaces tierces testées ═══ -->
       <div class="product-dmx" style="margin-top:20px;">
@@ -882,6 +936,91 @@ function handleNewsletter(e) {
     else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
   }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
 }
+</script>
+<script>
+/* Pack MyStrow : choix du pack, date de livraison et stock en direct
+   (CF livraison_estimation → Amazon MCF preview + stock FBA). */
+(function () {
+  var API = 'https://us-central1-mystrow-907be.cloudfunctions.net/livraison_estimation';
+  var opts = document.querySelectorAll('.pk-opt');
+  var cta = document.getElementById('pk-cta');
+  var live = document.querySelector('.pk-live');
+  var liveTxt = document.getElementById('pk-stock');
+  var shipMain = document.getElementById('pk-ship-main');
+  var cpForm = document.getElementById('pk-cp');
+  var cpInput = document.getElementById('pk-cp-input');
+  var cpToggle = document.getElementById('pk-cp-toggle');
+  var stock = null;
+
+  function current() { return document.querySelector('.pk-opt.on'); }
+
+  function render() {
+    var o = current();
+    var img = document.getElementById('pk-img');
+    if (img.getAttribute('src') !== o.dataset.img) { img.src = o.dataset.img; img.alt = 'Pack MyStrow : interface USB-DMX 512 et sa boîte, ' + o.querySelector('.pk-opt-name').textContent.toLowerCase() + ' incluse'; }
+    var n = stock ? stock[o.dataset.plan] : null;
+    live.classList.remove('low', 'out');
+    if (n === 0) {
+      live.classList.add('out');
+      liveTxt.textContent = 'Bientôt de retour — dispo sur Amazon';
+      cta.classList.add('off');
+      cta.textContent = 'Momentanément épuisé';
+      return;
+    }
+    cta.classList.remove('off');
+    cta.href = o.dataset.href;
+    cta.innerHTML = 'Commander — <span id="pk-cta-price">' + o.dataset.price + ' €</span>';
+    if (n !== null && n < 10) { live.classList.add('low'); liveTxt.textContent = 'Plus que ' + n + ' en stock'; }
+    else liveTxt.textContent = 'En stock · expédié depuis la France';
+  }
+
+  opts.forEach(function (b) {
+    b.addEventListener('click', function () {
+      opts.forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-checked', 'false'); });
+      b.classList.add('on'); b.setAttribute('aria-checked', 'true');
+      render();
+    });
+  });
+
+  function jour(iso) {
+    var d = new Date(iso + 'T12:00:00');
+    return d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+  }
+
+  function estimer(cp, perso) {
+    fetch(API + '?cp=' + encodeURIComponent(cp))
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.stock) { stock = d.stock; render(); }
+        if (d.raison === 'outre-mer') {
+          shipMain.innerHTML = 'Outre-mer : commandez sur <b>Amazon</b> (liens ci-dessous)';
+        } else if (d.ok && d.latest) {
+          shipMain.innerHTML = (perso ? 'Livré au ' + cp + ' ' : 'Commandez maintenant, livré ') +
+            "d'ici <b>" + jour(d.latest) + '</b>';
+        } else if (perso) {
+          shipMain.innerHTML = 'Code postal non reconnu';
+        }
+      })
+      .catch(function () { /* on garde « Livré en 72 h » */ });
+  }
+
+  cpToggle.addEventListener('click', function () { cpForm.hidden = false; cpInput.focus(); });
+  cpForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var cp = cpInput.value.trim();
+    if (!/^\d{5}$/.test(cp)) { cpInput.focus(); return; }
+    try { localStorage.setItem('mystrow_cp', cp); } catch (_) {}
+    cpForm.hidden = true;
+    cpToggle.textContent = 'changer (' + cp + ')';
+    estimer(cp, true);
+  });
+
+  var saved = null;
+  try { saved = localStorage.getItem('mystrow_cp'); } catch (_) {}
+  if (saved && /^\d{5}$/.test(saved)) { cpToggle.textContent = 'changer (' + saved + ')'; estimer(saved, true); }
+  else estimer('75001', false);
+  render();
+})();
 </script>
 <script src="nav.js?v=3" defer></script>
 <script src="mobile-nav.js?v=6"></script>
