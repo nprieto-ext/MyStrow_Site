@@ -74,7 +74,7 @@
       feat: "Fonctionnalités", featHref: "index.html#fonctionnalites",
       mega: [
         ["⚡", "Logiciel Lumière DMX", "PC + Node DMX. Contrôle total de votre scène en temps réel.", "logiciel-lumiere-dmx-ia.html"],
-        ["🎹", "Matériel compatible", "AKAI APC mini mk2 recommandé, plus d'autres contrôleurs et interfaces DMX.", "controleur-akai-apc-mini.html"],
+        ["🛒", "Shop · Pack MyStrow", "Notre interface USB-DMX avec la licence, plus le matériel compatible.", "shop.html"],
         ["✨", "IA Lumière", "L'IA prend le contrôle de toute la scène ou vous aide à programmer vos shows.", "ia-lumiere.html"],
         ["🎬", "Programmation Lumière", "Timeline visuelle, keyframes, clips éditables. Composez vos shows à l'avance.", "programmation-lumiere.html"],
         ["🎵", "Player audio & vidéo", "Playlist et projections gérées depuis la même interface. Tout en un.", "player-audio-video.html"],
@@ -87,7 +87,7 @@
       feat: "Features", featHref: "index.html#features",
       mega: [
         ["⚡", "DMX Lighting Software", "PC + DMX Node. Full control of your stage in real time.", "dmx-lighting-software.html"],
-        ["🎹", "Compatible hardware", "Built for the AKAI. Every pad, every fader has its direct mapping.", "akai-apc-mini-controller.html"],
+        ["🛒", "Shop · MyStrow Pack", "Our USB-DMX interface with the licence, plus compatible hardware.", "shop.html"],
         ["✨", "AI Lighting", "AI takes control of the whole stage or helps you program your shows.", "ai-lighting.html"],
         ["🎬", "Light Programming", "Visual timeline, keyframes, editable clips. Compose your shows in advance.", "light-programming.html"],
         ["🎵", "Audio & Video Player", "Playlist and projections managed from the same interface.", "audio-video-player.html"],
@@ -100,7 +100,7 @@
       feat: "Funktionen", featHref: "index.html#features",
       mega: [
         ["⚡", "DMX-Beleuchtungssoftware", "PC + DMX-Node. Volle Kontrolle über Ihre Bühne in Echtzeit.", "dmx-lighting-software.html"],
-        ["🎹", "Kompatible Hardware", "Entwickelt für das AKAI. Jedes Pad, jeder Fader direkt zugeordnet.", "akai-apc-mini-controller.html"],
+        ["🛒", "Shop · MyStrow Pack", "Unser USB-DMX-Interface mit Lizenz, dazu kompatible Hardware.", "shop.html"],
         ["✨", "KI-Beleuchtung", "KI übernimmt die Bühne oder hilft Ihnen, Shows zu programmieren.", "ai-lighting.html"],
         ["🎬", "Lichtprogrammierung", "Visuelle Timeline, Keyframes, editierbare Clips. Shows im Voraus komponieren.", "light-programming.html"],
         ["🎵", "Audio- & Video-Player", "Playlist und Projektionen aus einer einzigen Oberfläche verwaltet.", "audio-video-player.html"],
@@ -113,7 +113,7 @@
       feat: "Funciones", featHref: "index.html#features",
       mega: [
         ["⚡", "Software de iluminación DMX", "PC + Nodo DMX. Control total de tu escenario en tiempo real.", "dmx-lighting-software.html"],
-        ["🎹", "Hardware compatible", "Diseñado para el AKAI. Cada pad y cada fader con su asignación directa.", "akai-apc-mini-controller.html"],
+        ["🛒", "Shop · Pack MyStrow", "Nuestra interfaz USB-DMX con la licencia, y el material compatible.", "shop.html"],
         ["✨", "Iluminación con IA", "La IA controla el escenario completo o te ayuda a programar tus shows.", "ai-lighting.html"],
         ["🎬", "Programación de luces", "Timeline visual, keyframes, clips editables. Compón tus shows con antelación.", "light-programming.html"],
         ["🎵", "Audio & Video Player", "Lista de reproducción y proyecciones gestionadas desde la misma interfaz.", "audio-video-player.html"],
@@ -126,7 +126,7 @@
       feat: "Funcionalidades", featHref: "index.html#features",
       mega: [
         ["⚡", "Software de iluminação DMX", "Nó DMX. Controlo total do seu palco em tempo real.", "dmx-lighting-software.html"],
-        ["🎹", "Controlador AKAI APC mini", "Desenvolvido para o AKAI. Cada pad e cada fader com mapeamento direto.", "akai-apc-mini-controller.html"],
+        ["🛒", "Shop · Pack MyStrow", "A nossa interface USB-DMX com a licença, e o material compatível.", "shop.html"],
         ["✨", "Iluminação com IA", "A IA controla todo o palco ou ajuda-o a programar os seus espetáculos.", "ai-lighting.html"],
         ["🎬", "Programação de luzes", "Timeline visual, keyframes, clips editáveis. Componha os seus espetáculos antecipadamente.", "light-programming.html"],
         ["🎵", "Leitor de Áudio & Vídeo", "Lista de reprodução e projeções geridas a partir da mesma interface.", "audio-video-player.html"],

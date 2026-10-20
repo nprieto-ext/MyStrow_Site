@@ -327,22 +327,22 @@
     .pk-pay { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; font-size: 12px; color: var(--muted); }
     .pk-pay-lock { color: var(--text); font-weight: 600; }
     .pk-pay-lock b { color: #8b8cff; font-weight: 800; letter-spacing: 0.2px; }
-    .pk-details { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
-    .pk-card { background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 24px; }
-    .pk-card h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; line-height: 1.1; margin-bottom: 8px; }
-    .pk-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 800; margin: 14px 0 8px; }
-    .pk-card-lead, .pk-card-note { font-size: 13px; color: var(--muted); line-height: 1.6; }
-    .pk-card-note { margin-top: 14px; }
-    .pk-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
-    .pk-ticks { list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: rgba(244,241,232,0.78); line-height: 1.45; }
+    .pk-details { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 18px; }
+    .pk-card { background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 36px 40px; }
+    .pk-card h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 800; line-height: 1.1; margin-bottom: 10px; }
+    .pk-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 800; margin: 28px 0 14px; }
+    .pk-card-lead, .pk-card-note { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .pk-card-note { margin-top: 22px; }
+    .pk-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
+    .pk-ticks { list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 14px; color: rgba(244,241,232,0.78); line-height: 1.45; }
     .pk-ticks li { display: flex; gap: 8px; }
     .pk-ticks li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .pk-ticks li.muted { color: var(--muted); }
     .pk-ticks li.muted::before { content: 'ⓘ'; color: var(--muted); }
-    .pk-soon { margin-top: 8px; font-size: 12px; color: #4ade80; }
-    .pk-box-h { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; }
+    .pk-soon { margin-top: 14px; font-size: 12px; color: #4ade80; }
+    .pk-box-h { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; margin-top: 32px !important; }
     .pk-specs-t { display: grid; grid-template-columns: 1fr 1fr; column-gap: 36px; }
-    .pk-specs-t > div { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; }
+    .pk-specs-t > div { display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; }
     .pk-specs-t dt { color: var(--muted); }
     .pk-specs-t dd { color: var(--text); font-weight: 600; text-align: right; }
     .ifc { margin-top: 8px; }
@@ -365,8 +365,11 @@
       .pk-specs-t { grid-template-columns: 1fr; }
       .pk-two { grid-template-columns: 1fr; }
     }
+    @media (max-width: 600px) { .pk-card { padding: 26px 22px; } }
     @media (max-width: 420px) { .pk-keys { grid-template-columns: 1fr; } }
     .pk-fr { width: 15px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+    .pk-renew { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; }
+    .pk-y { color: var(--accent); font-weight: 600; }
     /* ── fin PACK galerie ── */
 
     /* ── COMPAT ── */
@@ -524,15 +527,13 @@
         </div>
         <div class="pk-thumbs" role="list" aria-label="Photos">
           <button type="button" class="pk-thumb on" role="listitem" data-kind="cutout" aria-label="Photos 1"><img src="img-shop/pack-mystrow-1an.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="setup" aria-label="Photos 2"><img src="img-shop/pack/fr/setup-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="contenu-@" aria-label="Photos 3"><img src="img-shop/pack/fr/contenu-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="technique-@" aria-label="Photos 4"><img src="img-shop/pack/fr/technique-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="etapes-@" aria-label="Photos 5"><img src="img-shop/pack/fr/etapes-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="3d" aria-label="Photos 6"><img src="img-shop/pack/fr/3d-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="logiciel" aria-label="Photos 7"><img src="img-shop/pack/fr/logiciel-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="musique" aria-label="Photos 8"><img src="img-shop/pack/fr/musique-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="controleurs" aria-label="Photos 9"><img src="img-shop/pack/fr/controleurs-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="bibliotheque" aria-label="Photos 10"><img src="img-shop/pack/fr/bibliotheque-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/face" aria-label="Photos 2"><img src="img-shop/pack/photos/face-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/dos" aria-label="Photos 3"><img src="img-shop/pack/photos/dos-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/contenu-@" aria-label="Photos 4"><img src="img-shop/pack/photos/contenu-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/carte-@" aria-label="Photos 5"><img src="img-shop/pack/photos/carte-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/boite-main" aria-label="Photos 6"><img src="img-shop/pack/photos/boite-main-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/boite-dessus-@" aria-label="Photos 7"><img src="img-shop/pack/photos/boite-dessus-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="fr/technique-@" aria-label="Photos 8"><img src="img-shop/pack/fr/technique-1an-mini.webp" alt="" loading="lazy"></button>
         </div>
       </div>
 
@@ -559,6 +560,8 @@
             <span class="pk-opt-hint">L'interface revient à ~55 €</span>
           </button>
         </div>
+
+        <p class="pk-renew">🔄 Licence prolongeable ensuite par abonnement, <span class="pk-y">l'interface reste à vous</span>.</p>
 
         <ul class="pk-keys">
           <li>Sortie XLR 3 broches</li>
@@ -632,13 +635,13 @@
             <div><dt>Sortie</dt><dd>DMX512 · XLR 3 broches femelle</dd></div>
             <div><dt>Univers</dt><dd>1 univers · 512 canaux</dd></div>
             <div><dt>Connexion</dt><dd>USB-C, alimentée par l'appareil</dd></div>
-            <div><dt>Dimensions</dt><dd>env. 87 × 42 × 42 mm</dd></div>
+            <div><dt>Dimensions</dt><dd>87 × 42 × 42 mm</dd></div>
             <div><dt>Ordinateurs</dt><dd>Windows · macOS (Apple Silicon et Intel)</dd></div>
             <div><dt>Tablettes</dt><dd>Android (USB-C) · iPad bientôt</dd></div>
             <div><dt>Autres logiciels</dt><dd>Art-Net : QLC+ par exemple</dd></div>
             <div><dt>Fabrication</dt><dd>Assemblée en France</dd></div>
           </dl>
-          <p class="pk-card-note">À la fin de la licence incluse, vous la prolongez par abonnement si vous le souhaitez. L'interface reste à vous.</p>
+          <p class="pk-card-note">À la fin de la licence incluse, vous la prolongez par abonnement si vous le souhaitez. <span class="pk-y">L'interface reste à vous.</span></p>
         </div>
       </div>
     </div>
@@ -651,7 +654,7 @@
       <div class="ifc">
         <div class="prod-step">Déjà équipé ? Aussi compatibles</div>
         <h2 class="ifc-h">Autres interfaces DMX</h2>
-        <p class="ifc-lead">MyStrow parle l'Art-Net et le DMX512 standard : si vous avez déjà une interface, gardez-la. Ces modèles sont reconnus, <a href="tarifs"><b>licence MyStrow vendue à part</b> →</a>.</p>
+        <p class="ifc-lead">MyStrow parle l'Art-Net et le DMX512 standard : si vous avez déjà une interface, gardez-la. Ces modèles sont reconnus, <a href="#formules"><b>licence MyStrow vendue à part</b> →</a>.</p>
         <div class="mat-compat-grid">
           <div class="ifc-col net">
             <div class="ifc-col-h">🌐 Nodes Art-Net</div>
@@ -786,7 +789,7 @@
   </section>
 
   <!-- ═══ SECTION TARIFS ═══ -->
-  <section class="pricing-section">
+  <section class="pricing-section" id="formules">
     <div class="wrap">
       <div class="section-tag">Licences</div>
       <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.05;margin-bottom:8px;">Choisissez votre formule</h2>
@@ -954,7 +957,7 @@ function handleNewsletter(e) {
     if (thumb.dataset.kind === 'cutout') {
       photo.hidden = true; sticker.hidden = false;
     } else {
-      photo.src = P + 'img-shop/pack/fr/' + thumb.dataset.img.replace('@', suf) + '.webp';
+      photo.src = P + 'img-shop/pack/' + thumb.dataset.img.replace('@', suf) + '.webp';
       photo.hidden = false; sticker.hidden = true;
     }
   }
@@ -967,7 +970,7 @@ function handleNewsletter(e) {
     thumbs.forEach(function (t) {
       var i = t.querySelector('img');
       if (t.dataset.kind === 'cutout') i.src = img.src;
-      else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/fr/' + t.dataset.img.replace('@', suf) + '-mini.webp';
+      else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/' + t.dataset.img.replace('@', suf) + '-mini.webp';
     });
     show(document.querySelector('.pk-thumb.on'));
     var n = stock ? stock[o.dataset.plan] : null;
@@ -1029,7 +1032,7 @@ function handleNewsletter(e) {
   render();
 })();
 </script>
-<script src="nav.js?v=4" defer></script>
+<script src="nav.js?v=5" defer></script>
 <script src="mobile-nav.js?v=6"></script>
 <script src="/lang-suggest.js" defer></script>
 <script>

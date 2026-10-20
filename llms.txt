@@ -24,7 +24,7 @@
 - [Télécharger](https://mystrow.fr/telecharger) : téléchargements Windows et macOS, configuration requise.
 - [Tarifs](https://mystrow.fr/tarifs) : les trois formules, tableau comparatif et FAQ sur la facturation.
 - [Shop](https://mystrow.fr/shop) : interfaces DMX et contrôleurs compatibles, avec les modèles tiers reconnus.
-- [Boutique](https://mystrow.fr/boutique) : le matériel utilisé au quotidien avec MyStrow.
+- [Boutique](https://mystrow.fr/shop) : le matériel utilisé au quotidien avec MyStrow.
 - [Contact](https://mystrow.fr/contact) : support et demandes commerciales.
 
 ## Fonctionnalités
@@ -33,7 +33,7 @@
 - [Programmation lumière](https://mystrow.fr/programmation-lumiere) : séquences sur timeline, clips éditables au glisser-déposer, synchronisation à la milliseconde.
 - [Plan de scène](https://mystrow.fr/plan-de-scene) : patch DMX, adressage automatique par groupe et visualisation temps réel des projecteurs.
 - [Player audio et vidéo](https://mystrow.fr/player-audio-video) : playlist média synchronisée avec les séquences lumière.
-- [Contrôleur AKAI APC mini](https://mystrow.fr/controleur-akai-apc-mini) : grille 8×8 de pads LED et 9 faders d'intensité.
+- [Contrôleur AKAI APC mini](https://mystrow.fr/shop) : grille 8×8 de pads LED et 9 faders d'intensité.
 - [Logiciel DMX gratuit](https://mystrow.fr/logiciel-dmx-gratuit) : ce que couvre la version d'essai.
 
 ## Tutoriels

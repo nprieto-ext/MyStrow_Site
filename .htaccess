@@ -8,6 +8,10 @@ RewriteEngine On
 # Redirect old slugs
 RewriteRule ^programmation-dmx-avec-mystrow(/.*)?$ /programmation-lumiere [R=301,L]
 RewriteRule ^synchroniser-mystrow-platine-dj(/.*)?$ /synchroniser-mystrow-logiciel-dj [R=301,L]
+# 20/10/2026 : « Matériel recommandé / compatible » fusionné dans le Shop
+RewriteRule ^boutique(\.html)?/?$ /shop [R=301,L]
+RewriteRule ^controleur-akai-apc-mini(\.html)?/?$ /shop [R=301,L]
+RewriteRule ^(en|de|es|pt)/akai-apc-mini-controller(\.html)?/?$ /$1/shop [R=301,L]
 
 # HTTP → HTTPS
 RewriteCond %{HTTPS} off
