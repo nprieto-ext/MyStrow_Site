@@ -327,7 +327,7 @@
     .pk-pay { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; font-size: 12px; color: var(--muted); }
     .pk-pay-lock { color: var(--text); font-weight: 600; }
     .pk-pay-lock b { color: #8b8cff; font-weight: 800; letter-spacing: 0.2px; }
-    .pk-details { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; margin-top: 18px; }
+    .pk-details { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
     .pk-card { background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 24px; }
     .pk-card h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; line-height: 1.1; margin-bottom: 8px; }
     .pk-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 17px; font-weight: 800; margin: 14px 0 8px; }
@@ -341,7 +341,7 @@
     .pk-ticks li.muted::before { content: 'ⓘ'; color: var(--muted); }
     .pk-soon { margin-top: 8px; font-size: 12px; color: #4ade80; }
     .pk-box-h { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; }
-    .pk-specs-t { display: flex; flex-direction: column; }
+    .pk-specs-t { display: grid; grid-template-columns: 1fr 1fr; column-gap: 36px; }
     .pk-specs-t > div { display: flex; justify-content: space-between; gap: 14px; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; }
     .pk-specs-t dt { color: var(--muted); }
     .pk-specs-t dd { color: var(--text); font-weight: 600; text-align: right; }
@@ -349,6 +349,8 @@
     .ifc-h { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 800; line-height: 1.1; margin: 6px 0 4px; }
     .ifc-lead { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 620px; margin-bottom: 16px; }
     .ifc-lead b { color: var(--text); }
+    .ifc-lead a { color: var(--accent); text-decoration: none; }
+    .ifc-lead a:hover b { text-decoration: underline; }
     .ifc-col { border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px; }
     .ifc-col.net { background: rgba(0,212,255,0.03); border: 1px solid rgba(0,212,255,0.12); --c: #00d4ff; }
     .ifc-col.usb { background: rgba(160,100,255,0.03); border: 1px solid rgba(160,100,255,0.12); --c: #a064ff; }
@@ -360,7 +362,7 @@
     .ifc-row em { font-style: normal; font-size: 11px; font-weight: 700; color: var(--c); white-space: nowrap; }
     .ifc-row .win-only { display: inline-block; margin-left: 6px; font-size: 10px; }
     @media (max-width: 860px) {
-      .pk-details { grid-template-columns: 1fr; }
+      .pk-specs-t { grid-template-columns: 1fr; }
       .pk-two { grid-template-columns: 1fr; }
     }
     @media (max-width: 420px) { .pk-keys { grid-template-columns: 1fr; } }
@@ -522,15 +524,15 @@
         </div>
         <div class="pk-thumbs" role="list" aria-label="Photos">
           <button type="button" class="pk-thumb on" role="listitem" data-kind="cutout" aria-label="Photos 1"><img src="img-shop/pack-mystrow-1an.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="setup" aria-label="Photos 2"><img src="img-shop/pack/setup-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="contenu-@" aria-label="Photos 3"><img src="img-shop/pack/contenu-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="technique-@" aria-label="Photos 4"><img src="img-shop/pack/technique-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="etapes-@" aria-label="Photos 5"><img src="img-shop/pack/etapes-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="3d" aria-label="Photos 6"><img src="img-shop/pack/3d-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="logiciel" aria-label="Photos 7"><img src="img-shop/pack/logiciel-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="musique" aria-label="Photos 8"><img src="img-shop/pack/musique-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="controleurs" aria-label="Photos 9"><img src="img-shop/pack/controleurs-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="bibliotheque" aria-label="Photos 10"><img src="img-shop/pack/bibliotheque-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="setup" aria-label="Photos 2"><img src="img-shop/pack/fr/setup-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="contenu-@" aria-label="Photos 3"><img src="img-shop/pack/fr/contenu-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="technique-@" aria-label="Photos 4"><img src="img-shop/pack/fr/technique-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="etapes-@" aria-label="Photos 5"><img src="img-shop/pack/fr/etapes-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="3d" aria-label="Photos 6"><img src="img-shop/pack/fr/3d-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="logiciel" aria-label="Photos 7"><img src="img-shop/pack/fr/logiciel-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="musique" aria-label="Photos 8"><img src="img-shop/pack/fr/musique-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="controleurs" aria-label="Photos 9"><img src="img-shop/pack/fr/controleurs-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="bibliotheque" aria-label="Photos 10"><img src="img-shop/pack/fr/bibliotheque-mini.webp" alt="" loading="lazy"></button>
         </div>
       </div>
 
@@ -599,13 +601,7 @@
     </div>
 
     <div class="wrap">
-      <ol class="pk-steps">
-        <li><span class="pk-step-n">1</span><b>Commandez</b><span>Livré chez vous en 72 h, suivi par email.</span></li>
-        <li><span class="pk-step-n">2</span><b>Branchez</b><span>USB d'un côté, XLR de l'autre. Windows, Mac ou tablette Android, rien à régler.</span></li>
-        <li><span class="pk-step-n">3</span><b>Activez</b><span>Le code est sur la carte dans la boîte : <a href="/activate">mystrow.fr/activate</a>.</span></li>
-      </ol>
-
-      <div class="pk-details">
+      <div class="pk-details" style="margin-top:44px">
         <div class="pk-card">
           <h2>Tout pour démarrer, dans une seule boîte</h2>
           <p class="pk-card-lead">La licence incluse vaut pour le logiciel sur ordinateur ET pour l'app sur tablette. À vous de choisir comment jouer.</p>
@@ -655,7 +651,7 @@
       <div class="ifc">
         <div class="prod-step">Déjà équipé ? Aussi compatibles</div>
         <h2 class="ifc-h">Autres interfaces DMX</h2>
-        <p class="ifc-lead">MyStrow parle l'Art-Net et le DMX512 standard : si vous avez déjà une interface, gardez-la. Ces modèles sont reconnus, <b>licence MyStrow vendue à part</b>.</p>
+        <p class="ifc-lead">MyStrow parle l'Art-Net et le DMX512 standard : si vous avez déjà une interface, gardez-la. Ces modèles sont reconnus, <a href="tarifs"><b>licence MyStrow vendue à part</b> →</a>.</p>
         <div class="mat-compat-grid">
           <div class="ifc-col net">
             <div class="ifc-col-h">🌐 Nodes Art-Net</div>
@@ -958,7 +954,7 @@ function handleNewsletter(e) {
     if (thumb.dataset.kind === 'cutout') {
       photo.hidden = true; sticker.hidden = false;
     } else {
-      photo.src = P + 'img-shop/pack/' + thumb.dataset.img.replace('@', suf) + '.webp';
+      photo.src = P + 'img-shop/pack/fr/' + thumb.dataset.img.replace('@', suf) + '.webp';
       photo.hidden = false; sticker.hidden = true;
     }
   }
@@ -971,7 +967,7 @@ function handleNewsletter(e) {
     thumbs.forEach(function (t) {
       var i = t.querySelector('img');
       if (t.dataset.kind === 'cutout') i.src = img.src;
-      else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/' + t.dataset.img.replace('@', suf) + '-mini.webp';
+      else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/fr/' + t.dataset.img.replace('@', suf) + '-mini.webp';
     });
     show(document.querySelector('.pk-thumb.on'));
     var n = stock ? stock[o.dataset.plan] : null;
