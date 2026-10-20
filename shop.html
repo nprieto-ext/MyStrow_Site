@@ -267,6 +267,8 @@
     .pack-choice-price { font-size: 30px; font-weight: 800; line-height: 1.05; }
     .pack-choice-cta { font-size: 13px; font-weight: 800; letter-spacing: 0.4px; }
     .pack-note { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .pack-amazon { font-size: 13px; color: var(--muted); text-align: center; margin-top: -6px; }
+    .pack-amazon a { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
     @media (max-width: 768px) {
       .product-mystrow { grid-template-columns: 1fr; }
       .product-mystrow-body { padding: 24px 20px; }
@@ -441,7 +443,7 @@
           <img src="img-shop/mystrow-pack-usb-dmx.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="800" height="626">
         </div>
         <div class="product-mystrow-body">
-          <div class="pack-new">Nouveau · Disponible sur Amazon · Prime</div>
+          <div class="pack-new">Nouveau · En direct ou sur Amazon</div>
           <div class="prod-title">Pack MyStrow<br>Interface USB-DMX + licence</div>
           <p class="prod-desc">Notre propre interface, pensée pour MyStrow : on la branche en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte. Rien à configurer.</p>
           <ul class="prod-features">
@@ -449,20 +451,23 @@
             <li>Sortie DMX512 sur XLR 3 broches</li>
             <li>Windows et Mac (Apple Silicon et Intel)</li>
             <li>Câble USB-A vers USB-C fourni</li>
-            <li>Expédié par Amazon, livraison Prime</li>
+            <li>Livraison offerte en France métropolitaine, suivi par email</li>
           </ul>
+          <!-- Commande directe : Stripe → Cloud Function → expédition Amazon MCF
+               depuis le stock FBA (functions/amazon_mcf.py). -->
           <div class="pack-choices">
-            <a class="pack-choice" href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">
+            <a class="pack-choice" href="https://buy.stripe.com/7sYcMX0Wx1gQ0WAcR608g0a">
               <span class="pack-choice-label">Licence 2 mois</span>
               <span class="pack-choice-price">99€</span>
-              <span class="pack-choice-cta">Acheter sur Amazon ↗</span>
+              <span class="pack-choice-cta">Commander →</span>
             </a>
-            <a class="pack-choice best" href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">
+            <a class="pack-choice best" href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
               <span class="pack-choice-label">Licence 1 an</span>
               <span class="pack-choice-price">199€</span>
-              <span class="pack-choice-cta">Acheter sur Amazon ↗</span>
+              <span class="pack-choice-cta">Commander →</span>
             </a>
           </div>
+          <p class="pack-amazon">Vous préférez Amazon (Prime) ? <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">Pack 2 mois ↗</a> · <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">Pack 1 an ↗</a></p>
           <p class="pack-note">Le pack 1 an revient à payer l'interface environ 55 €, l'abonnement annuel seul valant 143,86 €. Vous activez la licence sur <a href="activate" style="color:var(--accent);">mystrow.fr/activate</a>.</p>
         </div>
       </div>
