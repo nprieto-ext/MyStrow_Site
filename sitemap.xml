@@ -222,10 +222,62 @@
   <url>
     <loc>https://mystrow.fr/shop</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/shop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/shop"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/shop"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-08-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/en/shop</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/shop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/shop"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/de/shop</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/shop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/shop"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/shop</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/shop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/shop"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/pt/shop</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/shop"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/shop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/shop"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/shop"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-20</lastmod>
   </url>
 
   <url>
