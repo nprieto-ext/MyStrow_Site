@@ -241,34 +241,83 @@
       </nav>
       <div class="section-tag">Legal</div>
       <h1>Privacy <em>Policy</em></h1>
-      <p class="date-label">Last updated: March 2026</p>
+      <p class="date-label">Last updated: October 2026</p>
 
       <div class="legal-block">
         <div class="legal-section">
-          <h3>1. Data collected</h3>
-          <p>MyStrow collects only the data strictly necessary for licence activation: your email address and a machine identifier (machine ID) generated locally on your computer.</p>
-          <p>No browsing data, telemetry or show content is collected or transmitted.</p>
+          <p>This policy explains which personal data MyStrow uses, why, with which service providers, for how long, and how to exercise your rights. It covers the mystrow.fr website, the MyStrow software (PC and Mac), the tablet app and the sale of the MyStrow Pack.</p>
         </div>
 
         <div class="legal-section">
-          <h3>2. Use of data</h3>
-          <p>Collected data is used exclusively for licence verification. Verification is performed via Firebase Auth (Google) when the software starts. Your information is not used for advertising or commercial purposes.</p>
-          <p><strong>Customer reviews (Trustpilot).</strong> If you order a MyStrow Pack on our website, your name, email address and order reference are passed to Trustpilot (Denmark), which invites you once, about 7 days after purchase, to review your order. Leaving a review is entirely optional. This data is used only for that invitation; to opt out or have your data deleted at Trustpilot, write to us at the address below.</p>
+          <h3>1. Data controller</h3>
+          <p>Nicolas PRIETO BLANCO, sole trader (MyStrow), SIRET 801 334 095 00032, Rue Owel Solvet, 97180 Sainte-Anne (Guadeloupe, France). Contact: <a href="mailto:nicolas@mystrow.fr">nicolas@mystrow.fr</a>.</p>
         </div>
 
         <div class="legal-section">
-          <h3>3. Storage</h3>
-          <p>Licence information is stored locally on your machine in an encrypted file (<code style="color:var(--accent);font-size:13px;">~/.maestro_account.dat</code>), protected by Fernet encryption linked to your machine identifier. It is not accessible by third parties.</p>
+          <h3>2. What data, and why</h3>
+          <p><strong>Account and licence.</strong> Your email address, your password (handled by Firebase Auth: we never have access to it in plain text) or your Google / Apple sign-in, your plan and its expiry date, and a machine identifier generated on your computer for each of the two authorised devices. This data is used to activate and check your licence. <em>Legal basis: performance of the contract.</em></p>
+          <p><strong>Payment and invoicing.</strong> Payment is handled by Stripe: we never see or store your card number. We receive your name, email, country (for VAT) and, if you provide them, your company and your SIRET or EU VAT number. They are used to issue your invoices in our accounting software. <em>Legal basis: performance of the contract and accounting obligations.</em></p>
+          <p><strong>MyStrow Pack orders.</strong> Your name, delivery address, phone number and email are passed to Amazon, which prepares and ships the parcel from its warehouse, then sends us the tracking number. <em>Legal basis: performance of the contract.</em></p>
+          <p><strong>Customer reviews.</strong> After you buy a Pack on our website, your name, email and order reference are passed to Trustpilot, which invites you once, about 7 days later, to leave a review. Leaving a review is optional; to opt out of this invitation, write to us. <em>Legal basis: legitimate interest (collecting our customers' feedback).</em></p>
+          <p><strong>Emails.</strong> We write to you about your account and orders (login details, confirmation, shipping, renewal). If you are a customer or have subscribed to the newsletter, we may also tell you about MyStrow news, at most once a month; every email contains an unsubscribe link. <em>Legal basis: performance of the contract; for the newsletter, your consent, or for customers our legitimate interest in presenting similar products.</em></p>
+          <p><strong>Software downloads.</strong> When you click a download link, we record the date, the platform (Windows or Mac), your IP address, and the city and country derived from it by the ip-api.com service. This information is used to measure downloads and detect abuse. <em>Legal basis: legitimate interest.</em></p>
+          <p><strong>Website analytics.</strong> Only with your consent (cookie banner), the website uses Google Analytics and Microsoft Clarity to understand how pages are used. If you refuse, none of these tools is loaded. You can change your mind at any time by clearing the site's data in your browser. <em>Legal basis: consent.</em></p>
+          <p><strong>Contact.</strong> When you write to us, we keep the conversation so we can reply and follow up.</p>
+          <p>The software sends no telemetry, no usage statistics and none of your show content. Your data is never sold or used for targeted advertising.</p>
         </div>
 
         <div class="legal-section">
-          <h3>4. Your rights</h3>
-          <p>You have the right to access, rectify and delete your data. To exercise these rights or request deletion of your account and associated data, contact us at the address below.</p>
+          <h3>3. Tablet app (Android, iPad)</h3>
+          <p><strong>Account.</strong> Signing in to the app is optional. If you do, your email address and password are used only to check your licence via Firebase Auth (Google). The password is never stored on the tablet; only a sign-in token is, on the device.</p>
+          <p><strong>Configuration sent from the PC.</strong> If you use “Send my config to the tablet” in the software, your patch (fixtures, memories, effects, positions) is saved in your account (Firebase Firestore) so the tablet can retrieve it. Only your account has access to it.</p>
+          <p><strong>Microphone.</strong> The LIVE tab can listen to the music through the microphone to make the lights react, only when you press “Listen to the music”. The sound is analysed live on the tablet (tempo, bass, treble): it is neither recorded nor sent to anyone.</p>
+          <p><strong>Network and USB.</strong> The app sends the DMX signal to your USB interface or to your Art-Net node on the local network. These exchanges stay between the tablet and your equipment.</p>
+          <p>The app contains no advertising, no tracking tools and no analytics. Your settings (patch, memories, effects) stay stored on the tablet.</p>
         </div>
 
         <div class="legal-section">
-          <h3>5. Contact</h3>
-          <p>For any question regarding the protection of your personal data: <a href="mailto:nicolas@mystrow.fr">nicolas@mystrow.fr</a></p>
+          <h3>4. Our service providers</h3>
+          <p>They only receive the data they need for their task:</p>
+          <p>• <strong>Google Firebase / Google Cloud</strong> (Google Ireland Ltd): accounts, licences, database<br>
+          • <strong>Stripe</strong> (Stripe Payments Europe Ltd, Ireland): payments and VAT calculation<br>
+          • <strong>Amazon</strong> (Amazon EU S.à r.l., Luxembourg): storage and shipping of the MyStrow Pack<br>
+          • <strong>Axonaut</strong> (France): invoicing and accounting<br>
+          • <strong>Brevo</strong> (France): sending emails and the newsletter<br>
+          • <strong>Trustpilot</strong> (Trustpilot A/S, Denmark): review invitations<br>
+          • <strong>Hostinger</strong> (Hostinger International Ltd, Cyprus): website hosting<br>
+          • <strong>Google Analytics</strong> (Google Ireland Ltd) and <strong>Microsoft Clarity</strong> (Microsoft Ireland Operations Ltd): website analytics, with your consent<br>
+          • <strong>ip-api.com</strong>: country and city derived from the IP address when downloading</p>
+        </div>
+
+        <div class="legal-section">
+          <h3>5. Transfers outside the European Union</h3>
+          <p>Some of these providers, including Google, Stripe, Amazon and Microsoft, may process data in the United States. These transfers are covered by the EU–US Data Privacy Framework or by the European Commission's standard contractual clauses.</p>
+        </div>
+
+        <div class="legal-section">
+          <h3>6. Retention periods</h3>
+          <p>• Account and licence: as long as your account exists, then 3 years after your last activity, unless you ask us to delete it<br>
+          • Invoices and accounting records: 10 years, as required by French law (article L123-22 of the Commercial Code)<br>
+          • Pack order and delivery data: for the delivery and the legal warranty period (2 years), then archived with the invoice<br>
+          • Download log: 13 months at most<br>
+          • Newsletter: until you unsubscribe<br>
+          • Website analytics: 13 months at most</p>
+        </div>
+
+        <div class="legal-section">
+          <h3>7. Storage on your device</h3>
+          <p>Licence information is stored on your computer in an encrypted file (<code style="color:var(--accent);font-size:13px;">~/.maestro_account.dat</code>), protected by Fernet encryption tied to your machine's identifier. The website also keeps in your browser your cookie choice, your language and, if you entered it, your postcode to estimate the delivery date.</p>
+        </div>
+
+        <div class="legal-section">
+          <h3>8. Your rights</h3>
+          <p>You have the right to access, rectify, erase, restrict, object to and port your data, as well as the right to withdraw your consent at any time. To exercise these rights, or to delete your account and the associated data, write to us (how to: <a href="../suppression-compte">delete your account</a>). We reply within one month.</p>
+          <p>If you believe your rights are not being respected, you can lodge a complaint with the French data protection authority, the CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>), or with the authority of your country.</p>
+        </div>
+
+        <div class="legal-section">
+          <h3>9. Contact</h3>
+          <p>For any question about your personal data: <a href="mailto:nicolas@mystrow.fr">nicolas@mystrow.fr</a></p>
         </div>
       </div>
     </div>
