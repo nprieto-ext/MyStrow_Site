@@ -320,7 +320,7 @@
     .pk-thumb.on { border-color: var(--accent); }
     .pk-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .pk-thumb[data-kind="cutout"] img { object-fit: contain; padding: 4px; }
-    .pk-keys { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; font-size: 13px; color: rgba(244,241,232,0.8); }
+    .pk-keys { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 11px 14px; font-size: 14px; color: rgba(244,241,232,0.8); }
     .pk-keys li { display: flex; gap: 8px; }
     .pk-keys li::before { content: '✓'; color: var(--accent); font-weight: 700; }
     .pk-pay { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; font-size: 12px; color: var(--muted); }
@@ -585,15 +585,6 @@
           </button>
         </div>
 
-        <p class="pk-renew">🔄 Licence prolongeable ensuite par abonnement, <span class="pk-y">l'interface reste à vous</span>.</p>
-
-        <ul class="pk-keys">
-          <li>Sortie XLR 3 broches</li>
-          <li>Logiciel PC/Mac + app Android</li>
-          <li>Compatible QLC+ (Art-Net)</li>
-          <li>Compacte : 87 × 42 × 42 mm</li>
-        </ul>
-
         <div class="pk-ship">
           <span class="pk-ship-ico" aria-hidden="true">🚚</span>
           <div>
@@ -614,12 +605,10 @@
 
         <div class="pk-pay">
           <span class="pk-pay-lock">🔒 Paiement sécurisé par <b>Stripe</b></span>
-          <span class="pk-pay-methods">CB · Apple Pay · Google Pay · PayPal · Klarna</span>
         </div>
         <ul class="pk-trust">
           <li>↩️ 14 jours pour changer d'avis</li>
           <li>🛡️ Garantie 2 ans</li>
-          <li><svg class="pk-fr" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg>Assemblée en France</li>
         </ul>
         <p class="pk-amazon">Aussi sur Amazon Prime :
           <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">2 mois ↗</a> ·
@@ -647,10 +636,19 @@
               <p class="pk-soon">Android disponible · iPad et iPhone : bientôt</p>
             </div>
           </div>
+          <h3 class="pk-box-h">🔌 Le boîtier</h3>
+          <ul class="pk-keys">
+            <li>Sortie XLR 3 broches</li>
+            <li>Logiciel PC/Mac + app Android</li>
+            <li>Compatible autres logiciels</li>
+            <li>Compacte : 87 × 42 × 42 mm</li>
+            <li>Assemblé en France <svg class="pk-fr" style="align-self:center" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg></li>
+          </ul>
           <h3 class="pk-box-h">📦 Dans la boîte</h3>
           <ul class="pk-ticks">
             <li>1 interface USB-DMX (1 univers, XLR 3 broches femelle, USB-C)</li><li>1 câble USB-A → USB-C pour l'ordinateur</li><li>1 carte d'activation de la licence MyStrow (2 mois ou 1 an)</li><li class="muted">Pour une tablette : câble USB-C ↔ USB-C non fourni</li>
           </ul>
+          <p class="pk-renew" style="margin-top:18px">🔄 Licence prolongeable ensuite par abonnement, <span class="pk-y">l'interface reste à vous</span>.</p>
         </div>
 
         <div class="pk-card">
