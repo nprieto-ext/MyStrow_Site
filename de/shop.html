@@ -317,6 +317,8 @@
     @media (max-width: 600px) { .pk-card { padding: 26px 22px; } }
     @media (max-width: 420px) { .pk-keys { grid-template-columns: 1fr; } }
     .pk-fr { width: 15px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+    .pk-opts { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 420px) { .pk-opt { padding: 12px 10px; } .pk-opt-price { font-size: 28px; } }
     .pk-renew { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; }
     .pk-y { color: var(--accent); font-weight: 600; }
     /* ── fin PACK galerie ── */
@@ -476,11 +478,12 @@
           <button type="button" class="pk-thumb on" role="listitem" data-kind="cutout" aria-label="Fotos 1"><img src="../img-shop/pack-mystrow-1an.webp" alt="" loading="lazy"></button>
           <button type="button" class="pk-thumb" role="listitem" data-img="photos/face" aria-label="Fotos 2"><img src="../img-shop/pack/photos/face-mini.webp" alt="" loading="lazy"></button>
           <button type="button" class="pk-thumb" role="listitem" data-img="photos/dos" aria-label="Fotos 3"><img src="../img-shop/pack/photos/dos-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="photos/contenu-@" aria-label="Fotos 4"><img src="../img-shop/pack/photos/contenu-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="photos/carte-@" aria-label="Fotos 5"><img src="../img-shop/pack/photos/carte-1an-mini.webp" alt="" loading="lazy"></button>
-          <button type="button" class="pk-thumb" role="listitem" data-img="photos/boite-main" aria-label="Fotos 6"><img src="../img-shop/pack/photos/boite-main-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/dimensions" aria-label="Fotos 4"><img src="../img-shop/pack/photos/dimensions-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/contenu-@" aria-label="Fotos 5"><img src="../img-shop/pack/photos/contenu-1an-mini.webp" alt="" loading="lazy"></button>
+          <button type="button" class="pk-thumb" role="listitem" data-img="photos/carte-@" aria-label="Fotos 6"><img src="../img-shop/pack/photos/carte-1an-mini.webp" alt="" loading="lazy"></button>
           <button type="button" class="pk-thumb" role="listitem" data-img="photos/boite-dessus-@" aria-label="Fotos 7"><img src="../img-shop/pack/photos/boite-dessus-1an-mini.webp" alt="" loading="lazy"></button>
           <button type="button" class="pk-thumb" role="listitem" data-img="de/technique-@" aria-label="Fotos 8"><img src="../img-shop/pack/de/technique-1an-mini.webp" alt="" loading="lazy"></button>
+
         </div>
       </div>
 
@@ -505,6 +508,12 @@
             <span class="pk-opt-name">Lizenz 1 Jahr</span>
             <span class="pk-opt-price">199€</span>
             <span class="pk-opt-hint">Das Interface kostet so ~55 €</span>
+          </button>
+          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_vie" data-suffix="1an"
+                  data-price="399" data-href="https://buy.stripe.com/14A7sD6gR7Fe6gU4kA08g0c">
+            <span class="pk-opt-name">Lizenz auf Lebenszeit</span>
+            <span class="pk-opt-price">399€</span>
+            <span class="pk-opt-hint">Nie wieder ein Abo</span>
           </button>
         </div>
 
@@ -758,6 +767,8 @@ function handleNewsletter(e) {
       else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/' + t.dataset.img.replace('@', suf) + '-mini.webp';
     });
     show(document.querySelector('.pk-thumb.on'));
+    var renew = document.querySelector('.pk-renew');
+    if (renew) renew.hidden = o.dataset.plan === 'pack_vie';
     var n = stock ? stock[o.dataset.plan] : null;
     live.classList.remove('low', 'out');
     if (n === 0) {
