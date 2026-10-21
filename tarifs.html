@@ -218,6 +218,23 @@
     .cross { color: rgba(122,117,112,0.4); font-size: 14px; }
     .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
 
+    /* ── Pack MyStrow (boîtier + licence) ── */
+    .pack-section { padding: 0 0 80px; }
+    .pack-card { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: center; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px 36px; }
+    .pack-card img { width: 100%; height: auto; display: block; }
+    .pack-card h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; margin: 0 0 8px; }
+    .pack-lead { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+    .pack-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .pack-opt { border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 10px; text-align: center; text-decoration: none; color: var(--text); transition: border-color 0.18s; }
+    .pack-opt:hover { border-color: var(--accent); }
+    .pack-opt-name { display: block; font-size: 12px; color: var(--muted); }
+    .pack-opt-price { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1.1; }
+    .pack-opt-hint { display: block; font-size: 11px; color: var(--accent); }
+    .pack-foot { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .pack-foot .btn-contact { padding: 12px 26px; font-size: 14px; }
+    .pack-note { color: var(--muted); font-size: 12px; }
+    @media (max-width: 480px) { .pack-opts { grid-template-columns: 1fr; } }
+
     /* ── Volume ── */
     .volume-section { padding: 0 28px 80px; }
     .volume-card { max-width: 660px; margin: 0 auto; background: rgba(226,206,22,0.04); border: 1.5px solid var(--accent-border); border-radius: 16px; padding: 40px 36px; text-align: center; }
@@ -262,6 +279,8 @@
       .page-hero h1 { font-size: 42px; }
       .compare-table { font-size: 12px; }
       .compare-table th, .compare-table td { padding: 10px 10px; }
+      .pack-card { grid-template-columns: 1fr; padding: 26px 22px; gap: 20px; }
+      .pack-card img { max-width: 260px; margin: 0 auto; }
     }
   </style>
 <link rel="stylesheet" href="mobile-nav.css?v=6">
@@ -380,6 +399,29 @@
         <tr><td>Durée</td><td>15 jours</td><td>Mensuel / Annuel</td><td>À vie</td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<!-- PACK MYSTROW : interface USB-DMX + licence (vendu sur /shop) -->
+<section class="pack-section" id="pack">
+  <div class="wrap">
+    <div class="pack-card">
+      <img src="img-shop/pack-mystrow-1an.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="900" height="694" loading="lazy">
+      <div>
+        <p class="section-tag" style="margin-bottom:6px">Pack MyStrow</p>
+        <h2>Pas encore d'interface DMX&nbsp;? Prenez le Pack.</h2>
+        <p class="pack-lead">L'interface USB-DMX MyStrow (sortie XLR, alimentée par l'USB) avec la licence dans la boîte. Livraison offerte en 72&nbsp;h en France métropolitaine.</p>
+        <div class="pack-opts">
+          <a class="pack-opt" href="shop#pack-mystrow"><span class="pack-opt-name">Licence 2 mois</span><span class="pack-opt-price">99&nbsp;€</span><span class="pack-opt-hint">interface ~51&nbsp;€</span></a>
+          <a class="pack-opt" href="shop#pack-mystrow"><span class="pack-opt-name">Licence 1 an</span><span class="pack-opt-price">199&nbsp;€</span><span class="pack-opt-hint">interface ~55&nbsp;€</span></a>
+          <a class="pack-opt" href="shop#pack-mystrow"><span class="pack-opt-name">Licence à vie</span><span class="pack-opt-price">399&nbsp;€</span><span class="pack-opt-hint">interface ~39&nbsp;€</span></a>
+        </div>
+        <div class="pack-foot">
+          <a href="shop#pack-mystrow" class="btn-contact">Voir le Pack →</a>
+          <span class="pack-note">Prix TTC · Paiement sécurisé par Stripe · Aussi sur Amazon Prime</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
