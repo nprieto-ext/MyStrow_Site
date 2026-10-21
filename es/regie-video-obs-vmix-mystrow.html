@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Controlar tus luces desde OBS o vMix — Guía MyStrow | MyStrow</title>
+  <meta name="description" content="Haz que tus luces DMX sigan a tu realización de vídeo: cuando una escena de OBS o una entrada de vMix sale al aire, MyStrow lanza la memoria, el efecto o el cartucho que elijas. Guía completa y solución de problemas.">
+  <meta name="keywords" content="OBS luz DMX, vMix luz DMX, obs-websocket MyStrow, vMix TCP API, tally de luz, realización de vídeo iluminación, escena de OBS lanza luz, iluminación automática streaming">
+  <link rel="canonical" href="https://mystrow.fr/es/regie-video-obs-vmix-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/regie-video-obs-vmix-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/regie-video-obs-vmix-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/regie-video-obs-vmix-mystrow">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/regie-video-obs-vmix-mystrow">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/regie-video-obs-vmix-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/regie-video-obs-vmix-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/es/regie-video-obs-vmix-mystrow">
+  <meta property="og:title" content="Controlar tus luces desde OBS o vMix con MyStrow">
+  <meta property="og:description" content="Una escena de OBS o una entrada de vMix sale al aire: MyStrow envía la luz que le corresponde. Conexión, ajustes y solución de problemas.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-es.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-08-06">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Controlar tus luces desde OBS o vMix con MyStrow">
+  <meta name="twitter:description" content="Una escena de OBS o una entrada de vMix sale al aire: MyStrow envía la luz que le corresponde. Conexión, ajustes y solución de problemas.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-es.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Controlar tus luces desde OBS o vMix con MyStrow",
+    "description": "Haz que tus luces DMX sigan a tu realización de vídeo: cuando una escena de OBS o una entrada de vMix sale al aire, MyStrow lanza la memoria, el efecto o el cartucho que elijas. Guía completa y solución de problemas.",
+    "image": "https://mystrow.fr/og-image-es.webp",
+    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
+    "datePublished": "2026-08-06",
+    "dateModified": "2026-08-06",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/es/regie-video-obs-vmix-mystrow" },
+    "url": "https://mystrow.fr/es/regie-video-obs-vmix-mystrow",
+    "keywords": ["OBS", "vMix", "obs-websocket", "vMix TCP API", "tally", "luz DMX", "realización de vídeo", "MyStrow"]
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Hace falta un segundo ordenador para conectar OBS y MyStrow?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. OBS y MyStrow funcionan perfectamente en la misma máquina: la dirección que hay que usar es entonces 127.0.0.1, que designa al propio ordenador. Un segundo equipo solo hace falta si separas físicamente la realización de vídeo y el control de luces." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Por qué OBS muestra una dirección 192.168.x.x si 127.0.0.1 funciona?",
+        "acceptedAnswer": { "@type": "Answer", "text": "OBS escucha en todas las interfaces de red de la máquina a la vez. La dirección que aparece en la ventana de información de conexión es la que hay que dar a OTRO aparato: un móvil, una tablet, un segundo ordenador. Desde el mismo PC, 127.0.0.1 lleva al mismo sitio y sigue siendo válida aunque tu router cambie las direcciones." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿vMix pide una contraseña?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. MyStrow utiliza la API TCP de vMix en el puerto 8099, que está siempre activa y no pide autenticación. Así que no hay servidor que activar ni contraseña que introducir, a diferencia de OBS." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puede MyStrow cambiar de escena en OBS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No, y es a propósito. El enlace va en un solo sentido: la realización de vídeo manda en el directo, la luz sigue. Un enlace en los dos sentidos crearía un bucle de retorno, en el que cada acción de MyStrow provocaría un evento de la realización que volvería a lanzar MyStrow." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si cambio el nombre de una escena de OBS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Se pierde la correspondencia de esa escena: del lado de OBS, MyStrow identifica una escena por su NOMBRE. En cambio, reordenar las escenas no rompe nada. Es lo contrario que en vMix, donde el identificador es el número de entrada: reordenar las entradas rompe la correspondencia, renombrarlas no." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mystrow.fr/es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mystrow.fr/es/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Controlar tus luces desde OBS o vMix", "item": "https://mystrow.fr/es/regie-video-obs-vmix-mystrow" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    /* Tableau comparatif (repris de synchroniser-mystrow-logiciel-dj) */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="./">Inicio</a> &nbsp;/&nbsp;
+        <a href="blog">Blog</a> &nbsp;/&nbsp;
+        <span>Controlar tus luces desde OBS o vMix</span>
+      </nav>
+      <div class="hero-badge">🎬 Guía práctica · Realización de vídeo</div>
+      <h1>Tus luces siguen<br>a la realización de <em>vídeo</em></h1>
+      <p class="hero-sub">Cuando una escena sale al aire en OBS, o una cámara pasa a programa en vMix, MyStrow envía la luz que le corresponde. El realizador manda, la iluminación sigue — sin nadie detrás de la mesa.</p>
+      <div class="hero-meta">
+        <span>Por <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Publicado el <strong>6 de agosto de 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lectura: <strong>7 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#obs" class="btn-primary">Configurar OBS →</a>
+        <a href="#vmix" class="btn-outline">Configurar vMix →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">El principio</div>
+      <h2>Un evento de vídeo, una acción de luz</h2>
+      <div class="prose">
+        <p>OBS o vMix, el principio es el mismo — y MyStrow se conecta a los dos de la misma manera. Tu realización indica en todo momento <strong>lo que está al aire</strong>: la escena activa en OBS, la entrada en programa en vMix. MyStrow escucha esa señal y lanza la acción que hayas asociado a esa fuente.</p>
+        <p>En la práctica: el plano general sale al aire → sube la luz frontal. Cortas a la cámara del batería → los contras pasan a azul. Empiezan los créditos → el cartucho «fin del set» arranca solo. Nada que pulsar durante el directo.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-block">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Un solo sentido</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Tipos de acción</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Cables que tirar</div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>El enlace va <strong>en un solo sentido</strong>: la realización controla MyStrow, nunca al revés. Es una decisión de diseño. El realizador manda en el directo, y un enlace en los dos sentidos abriría un bucle de retorno — MyStrow cambia una memoria, la realización devuelve un evento, MyStrow repite la acción — que luego habría que domar.</p>
+        <p>Todo pasa por la red. Si tu realización y MyStrow funcionan en el mismo ordenador, no hay absolutamente nada que conectar.</p>
+      </div>
+
+      <div class="badge-row">
+        <span class="badge">🎬 OBS 28 o superior</span>
+        <span class="badge">📺 vMix, todas las ediciones</span>
+        <span class="badge">🖥 Mismo PC o red local</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LES TROIS ACTIONS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Lo que MyStrow puede lanzar</div>
+      <h2>Tres tipos de acción</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🎚</div>
+          <h3>Una memoria</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Un estado de luz completo, guardado en un pad MEM. Es la opción más habitual: cada cámara con su ambiente. La memoria se recupera exactamente como si hubieras pulsado el pad.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✨</div>
+          <h3>Un efecto</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Uno de los efectos de tus botones E1 a E9: chaser, estrobo, arcoíris, movimiento de cabezas móviles. Práctico para un plano de ambiente o un momento fuerte que vuelve cada vez.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🔊</div>
+          <h3>Un cartucho</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Un sonido, lanzado a la vez que el plano. Sintonía de apertura, ráfaga sonora, fondo de ambiente — lanzado por el vídeo, sin quitarle el ojo a la luz.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">⏸</div>
+          <h3>Nada</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Una fuente puede no tener ninguna acción. Escenas intermedias, cartas de ajuste, planos técnicos: déjalas en «Nada» y la iluminación actual no se moverá.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:36px;">
+        <p><strong>El disparo se hace en el flanco de subida.</strong> La acción solo arranca en el momento en que la fuente <em>pasa a estar</em> activa. Mientras siga al aire, no se repite nada — así que puedes retomar el control de la mesa durante el plano sin que MyStrow te lo pise un segundo después.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBS -->
+  <section id="obs" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">OBS Studio</div>
+      <h2>Conectar OBS a MyStrow</h2>
+      <div class="prose">
+        <p>Desde la versión 28, OBS incluye un servidor <strong>obs-websocket</strong>, sin plugin que instalar. Está integrado, pero <strong>desactivado por defecto</strong>: es lo que bloquea casi todas las primeras puestas en marcha.</p>
+      </div>
+
+      <div class="step-list" style="margin-top:40px;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Activar el servidor en OBS</h3>
+            <p>En OBS: <strong>Herramientas → Ajustes del servidor WebSocket</strong>. Marca <strong>«Activar servidor WebSocket»</strong> y luego Aplicar. Apunta el puerto, <code>4455</code> por defecto. Sin esta casilla marcada, MyStrow no puede conectarse a nada.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Copiar la contraseña</h3>
+            <p>En la misma ventana, haz clic en <strong>«Mostrar información de conexión»</strong>. OBS muestra una contraseña generada automáticamente. Cópiala. Si prefieres prescindir de ella, desmarca <strong>«Activar autenticación»</strong> — en una red de realización cerrada, es una opción razonable.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Abrir la ventana OBS de MyStrow</h3>
+            <p>En MyStrow: <strong>Conexión → 🎮 Control → 🎬 OBS Studio</strong>. Deja el host en <code>127.0.0.1</code> si OBS funciona en el mismo ordenador, y pega la contraseña. El botón <strong>Detectar</strong> encuentra la dirección solo si tu realización está en otro equipo de la red.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Probar la conexión</h3>
+            <p>Haz clic en <strong>Probar la conexión</strong>. La tabla se llena con la lista de tus escenas de OBS, en el mismo orden que en OBS. Si no aparece nada, consulta la tabla de solución de problemas más abajo — el mensaje que aparece indica la causa.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h3>Asociar escenas y acciones</h3>
+            <p>Para cada escena, elige el tipo de acción y luego su destino: la memoria <code>3.2</code>, el efecto <code>E4</code>, el cartucho 1… Las escenas que no quieras que actúen se quedan en <strong>«— Nada —»</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h3>Marcar «Activar el enlace OBS»</h3>
+            <p>Abajo en la ventana, y luego <strong>Guardar</strong>. Esta casilla es la que pone el enlace en marcha: los ajustes por sí solos no lanzan nada. MyStrow se volverá a conectar solo la próxima vez que se inicie.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lock-box">
+        <p><strong>💡 La dirección que muestra OBS no es la que hay que copiar.</strong> La ventana de información de conexión muestra una dirección del tipo <code>192.168.1.x</code>: está pensada para <em>otro</em> aparato, un móvil o un segundo equipo. Desde el mismo ordenador, <code>127.0.0.1</code> lleva al mismo OBS — y esa dirección no cambiará cuando tu router reparta otras nuevas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VMIX -->
+  <section id="vmix" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">vMix</div>
+      <h2>Conectar vMix a MyStrow</h2>
+      <div class="prose">
+        <p>Con vMix es más rápido: MyStrow usa la <strong>API TCP</strong> en el puerto <code>8099</code>, que está siempre activa. <strong>No hay servidor que activar ni contraseña que introducir</strong>.</p>
+        <p>Se eligió este puerto en lugar de la API web (8088) precisamente por eso: el Web Controller puede estar desactivado, el 8099 no. Una dependencia menos que comprobar la noche del espectáculo.</p>
+      </div>
+
+      <div class="step-list" style="margin-top:40px;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Abrir la ventana vMix de MyStrow</h3>
+            <p>En MyStrow: <strong>Conexión → 🎮 Control → 🎥 vMix</strong>. El host es <code>127.0.0.1</code> si vMix funciona en el mismo PC, y el puerto <code>8099</code>. El botón <strong>Detectar</strong> busca vMix en la red local si tu realización está en otro sitio.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Probar la conexión</h3>
+            <p>Haz clic en <strong>Probar la conexión</strong>: MyStrow lee la lista de tus entradas de vMix y llena la tabla. Cada fila lleva el número y el nombre de la entrada, tal como los declara vMix.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Asociar entradas y acciones</h3>
+            <p>Mismo principio que con OBS: para cada entrada, un tipo de acción y un destino. MyStrow sigue el <strong>tally de programa</strong> — la acción arranca cuando la entrada sale al aire, no cuando llega a preview.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Marcar «Activar el enlace vMix»</h3>
+            <p>Luego <strong>Guardar</strong>. El enlace se restablece solo en cada arranque, y se vuelve a conectar solo si vMix se reinicia durante el montaje.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>¿Preview o programa?</strong> Solo el paso a <em>programa</em> lanza la acción. Una entrada en preview no cambia nada en la luz: puedes preparar tu siguiente plano con calma, el público no verá venir nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBS vs VMIX -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Conviene saber</div>
+      <h2>Una diferencia importante</h2>
+      <div class="prose">
+        <p>Las dos realizaciones no identifican sus fuentes de la misma forma, y eso tiene una consecuencia muy concreta en tus correspondencias.</p>
+      </div>
+
+      <div class="two-col" style="margin-top:32px;">
+        <div class="highlight-box">
+          <h3>OBS — identificada por su NOMBRE</h3>
+          <p>Reorganizar tus escenas no rompe nada: muévelas como quieras. En cambio, <strong>renombrar una escena rompe la correspondencia</strong> — la acción ya no arrancará. Basta con volver a asociarla en la tabla.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>vMix — identificada por su NÚMERO</h3>
+          <p>Es lo contrario: renombra tus entradas libremente. Pero <strong>cambiar su orden desplaza las correspondencias</strong>, y la luz del plano general saldrá con la cámara 2. Revisa la tabla después de cualquier cambio en el plató.</p>
+        </div>
+      </div>
+
+      <div class="note-box" style="margin-top:28px;">
+        <p><strong>El reflejo que evita sorpresas:</strong> después de tocar el orden o los nombres de tus fuentes, vuelve a abrir la ventana del enlace y repite «Probar la conexión». La lista se actualiza y ves enseguida las filas que ya no apuntan a ninguna parte.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉPANNAGE -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Solución de problemas</div>
+      <h2>No se conecta</h2>
+      <div class="prose">
+        <p>MyStrow muestra un mensaje preciso bajo los campos de conexión. En la app, estos mensajes están en francés — esto es lo que significa cada uno.</p>
+      </div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr><th>Mensaje</th><th>Qué pasa</th><th>La solución</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Rien n'écoute sur 127.0.0.1:4455</strong><br>(nada escucha en 127.0.0.1:4455)</td>
+              <td>Nadie responde en ese puerto. El caso más frecuente de todos.</td>
+              <td>¿Está OBS abierto? ¿Está marcado el servidor WebSocket en Herramientas → Ajustes del servidor WebSocket?</td>
+            </tr>
+            <tr>
+              <td><strong>Aucune réponse de…</strong><br>(ninguna respuesta de…)</td>
+              <td>La máquina no responde en absoluto, la conexión caduca.</td>
+              <td>Realización en otro equipo: comprueba la dirección, y el cortafuegos que bloquea el puerto.</td>
+            </tr>
+            <tr>
+              <td><strong>Mot de passe refusé par OBS</strong><br>(contraseña rechazada por OBS)</td>
+              <td>La conexión se establece, pero OBS rechaza la autenticación.</td>
+              <td>Vuelve a copiar la contraseña desde «Mostrar información de conexión», <strong>sin espacio al final de la selección</strong>. Si la acabas de cambiar, haz clic en Aplicar en OBS.</td>
+            </tr>
+            <tr>
+              <td><strong>OBS demande un mot de passe</strong><br>(OBS pide una contraseña)</td>
+              <td>La autenticación está activada en OBS, el campo de MyStrow está vacío.</td>
+              <td>Introduce la contraseña, o desmarca la autenticación en OBS.</td>
+            </tr>
+            <tr>
+              <td><strong>Hôte introuvable</strong><br>(host no encontrado)</td>
+              <td>El nombre introducido no corresponde a ninguna máquina.</td>
+              <td>Introduce una dirección IP en lugar de un nombre de ordenador, o usa el botón Detectar.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose" style="margin-top:40px;">
+        <h3 style="font-size:20px;margin-bottom:12px;">Se conecta, pero no se lanza nada</h3>
+      </div>
+      <ul class="check-list">
+        <li><span><strong>¿Está marcada la casilla «Activar el enlace»?</strong> Las correspondencias están guardadas, pero no hacen nada mientras el enlace no esté en marcha.</span></li>
+        <li><span><strong>¿Has hecho clic en Guardar?</strong> Cerrar la ventana de otra forma descarta los cambios.</span></li>
+        <li><span><strong>¿Las filas siguen apuntando a algo?</strong> Una escena renombrada en OBS, entradas de vMix reordenadas: repite «Probar la conexión» para actualizar la lista.</span></li>
+        <li><span><strong>¿Sigue existiendo la memoria de destino?</strong> Una acción que apunta a una memoria borrada no hace nada.</span></li>
+        <li><span><strong>¿Esperas un disparo en la preview?</strong> Solo el paso a programa tiene efecto.</span></li>
+      </ul>
+
+      <div class="note-box" style="margin-top:28px;">
+        <p><strong>¿Sigues bloqueado?</strong> Escríbenos desde <a href="contact" style="color:var(--accent);text-decoration:none;">contacto</a> indicando el mensaje exacto que muestra MyStrow, tu versión de OBS o de vMix, y si los dos programas funcionan en la misma máquina. Con esos tres datos casi siempre basta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">¿Listo para el directo?</div>
+      <h2>La luz al servicio de la imagen</h2>
+      <p>Descarga MyStrow y deja que tu realización marque el ritmo. Tus planos cambian, la iluminación sigue.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-primary" target="_blank" rel="noopener noreferrer">Descargar MyStrow ↓</a>
+        <a href="tutoriel-debuter-mystrow" class="btn-outline">Guía para principiantes: empezar con MyStrow →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Seguir</div>
+      <h2>Artículos y recursos relacionados</h2>
+      <div class="related-grid">
+        <a href="synchroniser-mystrow-logiciel-dj" class="related-card">
+          <div class="rc-tag">Tutorial · Intermedio</div>
+          <h3>Sincronizar MyStrow con tu software DJ</h3>
+          <p>Captura de audio o MIDI Clock: haz que tus luces sigan el ritmo de la música, en PC y en Mac.</p>
+        </a>
+        <a href="automatisation-lumieres-dmx-mystrow" class="related-card">
+          <div class="rc-tag">Tutorial · Intermedio</div>
+          <h3>Automatizar tus luces DMX — REC de luz</h3>
+          <p>Graba tus acciones en directo y conviértelas en secuencias que puedes repetir sin fin.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Tutorial · Principiante</div>
+          <h3>Empezar con MyStrow — Patch, grupos y primer show</h3>
+          <p>Guía paso a paso para encender tus primeros focos DMX, desde la instalación hasta el primer ambiente.</p>
+        </a>
+        <a href="light-programming" class="related-card">
+          <div class="rc-tag">Función</div>
+          <h3>Programación de luces y timeline</h3>
+          <p>Compón tus shows con antelación en una timeline visual con keyframes y clips editables.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="download">Descargar</a><a href="whats-new">Novedades</a><a href="/activate?lang=es">Activar un producto</a><a href="./#pricing">Precios</a><a href="terms">Condiciones</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidad</a><a href="contact">Contacto</a><a href="shop">Shop</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Tu dirección de email" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Todos los derechos reservados</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ ¡Bienvenido!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=6"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+
