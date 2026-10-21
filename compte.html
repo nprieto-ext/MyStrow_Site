@@ -275,6 +275,26 @@
       .footer-nl { align-items: flex-start; }
       .nl-form input[type="email"] { width: 150px; }
     }
+    /* Connexion Google / Apple */
+    .oauth-sep { display: flex; align-items: center; gap: 12px; margin: 22px 0 16px; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .oauth-sep::before, .oauth-sep::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08); }
+    .oauth-btns { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+    .oauth-google { min-height: 44px; display: flex; justify-content: center; }
+    .btn-apple { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #000; border: none; padding: 11px 24px; border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: -apple-system, 'Inter', sans-serif; transition: opacity 0.2s; }
+    .btn-apple:hover { opacity: 0.88; }
+    .btn-apple:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-apple svg { width: 16px; height: 16px; }
+    .oauth-noaccount { background: rgba(226,206,22,0.06); border: 1px solid var(--accent-border); border-radius: 8px; padding: 12px 14px; font-size: 13px; line-height: 1.55; color: var(--text); margin-top: 14px; display: none; }
+    .oauth-noaccount a { color: var(--accent); }
+    .oauth-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .oauth-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .oauth-row:first-child { padding-top: 0; }
+    .oauth-row-info { display: flex; flex-direction: column; gap: 2px; }
+    .oauth-row-name { font-size: 14px; font-weight: 600; }
+    .oauth-row-sub { font-size: 12px; color: var(--muted); word-break: break-all; }
+    .oauth-row .oauth-google { min-height: 0; }
+    .oauth-row .btn-apple { width: auto; padding: 7px 16px; font-size: 12px; }
+    .oauth-note { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
     </style>
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
   <script>
@@ -331,6 +351,18 @@
         <a onclick="sendReset()">Mot de passe oublié ?</a>
       </div>
       <div class="reset-ok" id="reset-ok"></div>
+
+      <div id="oauth-login" style="display:none">
+        <div class="oauth-sep">ou</div>
+        <div class="oauth-btns">
+          <div class="oauth-google" id="oauth-google-login" style="display:none"></div>
+          <button class="btn-apple" id="oauth-apple-login" style="display:none" onclick="appleLogin(this)">
+            <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            Continuer avec Apple
+          </button>
+        </div>
+        <div class="oauth-noaccount" id="oauth-noaccount"></div>
+      </div>
     </div>
   </div>
 
@@ -361,6 +393,14 @@
     <div class="card">
       <div class="card-title">Ordinateurs actifs <span style="font-size:13px;font-weight:400;color:var(--muted)" id="machine-count"></span></div>
       <div id="machines-list"><span class="no-machines">Chargement…</span></div>
+    </div>
+
+    <!-- CONNEXION GOOGLE / APPLE -->
+    <div class="card" id="card-oauth" style="display:none">
+      <div class="card-title">Connexion rapide</div>
+      <p class="oauth-note">Connectez-vous à MyStrow avec Google ou Apple. Si votre compte Google ou Apple utilise la même adresse que votre achat, rien à faire : ça marche directement. Sinon, liez-le ici.</p>
+      <div id="oauth-list"></div>
+      <div class="login-error" id="oauth-msg"></div>
     </div>
 
     <!-- FACTURES -->
@@ -464,6 +504,7 @@
   <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
 </footer>
 
+<script src="oauth.js?v=1"></script>
 <script>
 const FB_API_KEY    = "AIzaSyAQjGJXGCSWzOE-wvKXh6sbZy6JDhL8tqA";
 const FB_PROJECT    = "mystrow-907be";
@@ -523,6 +564,7 @@ function showView(name) {
     document.getElementById(`view-${v}`).style.display = v === name ? '' : 'none'
   );
   if (name === 'account') document.getElementById('view-account').style.display = 'block';
+  if (name === 'login') renderLoginOAuth();
 }
 
 // ── Init ────────────────────────────────────────────────────────────────────
@@ -578,12 +620,7 @@ async function login() {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error?.message || 'Erreur');
 
-    saveSession(data.idToken, data.localId, data.email, data.expiresIn);
-    _idToken = data.idToken; _uid = data.localId;
-    showNav();
-    showView('loading');
-    await loadAccount();
-    showView('account');
+    await openSession(data.idToken, data.localId, data.email, data.expiresIn);
   } catch (err) {
     // INVALID_LOGIN_CREDENTIALS : code renvoyé par Firebase depuis l'activation
     // de la protection contre l'énumération d'emails. Il a REMPLACÉ
@@ -612,6 +649,159 @@ async function login() {
     errEl.textContent = msg;
     errEl.style.display = 'block';
     btn.disabled = false; btn.textContent = 'Se connecter →';
+  }
+}
+
+async function openSession(token, uid, email, expiresIn) {
+  saveSession(token, uid, email, expiresIn);
+  _idToken = token; _uid = uid;
+  showNav();
+  showView('loading');
+  // Identité Google/Apple restée sans compte (adresse différente de l'achat) :
+  // la connexion par mot de passe qui suit la rattache au compte.
+  if (_pendingLink) {
+    const p = _pendingLink; _pendingLink = null;
+    try { await msOAuth.link(p.provider, p.token, token); }
+    catch (e) { console.warn('[OAuth] liaison après connexion :', e.message); }
+  }
+  await loadAccount();
+  showView('account');
+}
+
+// ── Connexion Google / Apple (oauth.js) ──────────────────────────────────────
+const OAUTH_NAMES = { google: 'Google', apple: 'Apple' };
+let _pendingLink = null;   // {provider, token}
+
+function renderLoginOAuth() {
+  if (!window.msOAuth || !(msOAuth.hasGoogle || msOAuth.hasApple)) return;
+  _navEl('oauth-login', 'block');
+  if (msOAuth.hasApple) _navEl('oauth-apple-login', 'flex');
+  if (msOAuth.hasGoogle) {
+    const el = _navEl('oauth-google-login', 'flex');
+    msOAuth.renderGoogle(el, (t) => oauthLogin('google', t))
+      .catch((e) => showLoginError(msOAuth.errorText(e.message)));
+  }
+}
+
+function showLoginError(msg) {
+  const errEl = document.getElementById('login-error');
+  errEl.textContent = msg;
+  errEl.style.display = 'block';
+}
+
+async function appleLogin(btn) {
+  btn.disabled = true;
+  try {
+    await oauthLogin('apple', await msOAuth.appleToken());
+  } catch (e) {
+    if (e.message !== 'CANCELLED') showLoginError(msOAuth.errorText(e.message));
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function oauthLogin(provider, token) {
+  const infoEl = document.getElementById('oauth-noaccount');
+  document.getElementById('login-error').style.display = 'none';
+  infoEl.style.display = 'none';
+  try {
+    const s = await msOAuth.login(provider, token);
+    _pendingLink = null;
+    await openSession(s.idToken, s.localId, s.email, s.expiresIn);
+  } catch (e) {
+    if (e.message !== 'NO_ACCOUNT') { showLoginError(msOAuth.errorText(e.message)); return; }
+    _pendingLink = { provider, token };
+    const name = OAUTH_NAMES[provider];
+    const masked = /@privaterelay\.appleid\.com$/.test(e.email || '');
+    infoEl.textContent = '';
+    const p1 = document.createElement('div');
+    if (masked) {
+      p1.textContent = 'Votre adresse Apple est masquée : nous ne pouvons pas retrouver votre compte MyStrow tout seuls.';
+    } else {
+      p1.append('Aucun compte MyStrow n\'utilise ');
+      const b = document.createElement('b'); b.textContent = e.email || 'cette adresse';
+      p1.append(b, '.');
+    }
+    const p2 = document.createElement('div');
+    p2.style.marginTop = '8px';
+    p2.textContent = `Déjà client ? Connectez-vous une fois ci-dessus avec l'e-mail et le mot de passe de votre achat : votre compte ${name} sera lié et marchera directement les fois suivantes.`;
+    const p3 = document.createElement('div');
+    p3.style.marginTop = '8px';
+    p3.innerHTML = 'Pas encore client ? <a href="tarifs">Voir les offres →</a>';
+    infoEl.append(p1, p2, p3);
+    infoEl.style.display = 'block';
+  }
+}
+
+function renderOAuthCard(d) {
+  const card = document.getElementById('card-oauth');
+  if (!window.msOAuth || !(msOAuth.hasGoogle || msOAuth.hasApple)) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+  document.getElementById('oauth-msg').style.display = 'none';
+  const links = d.oauth_links || {};
+  const list = document.getElementById('oauth-list');
+  list.textContent = '';
+  for (const provider of ['google', 'apple']) {
+    if (provider === 'google' ? !msOAuth.hasGoogle : !msOAuth.hasApple) continue;
+    const linked = links[provider];
+    const row = document.createElement('div'); row.className = 'oauth-row';
+    const info = document.createElement('div'); info.className = 'oauth-row-info';
+    const name = document.createElement('span'); name.className = 'oauth-row-name';
+    name.textContent = OAUTH_NAMES[provider];
+    const sub = document.createElement('span'); sub.className = 'oauth-row-sub';
+    sub.textContent = linked ? `Lié · ${linked.email || ''}` : 'Non lié';
+    info.append(name, sub);
+    row.append(info);
+    if (linked) {
+      const btn = document.createElement('button');
+      btn.className = 'btn-revoke'; btn.textContent = 'Délier';
+      btn.onclick = () => oauthUnlink(provider, btn);
+      row.append(btn);
+    } else if (provider === 'google') {
+      const holder = document.createElement('div'); holder.className = 'oauth-google';
+      row.append(holder);
+      msOAuth.renderGoogle(holder, (t) => oauthLink('google', t),
+                           { size: 'medium', text: 'signin', width: 200 })
+        .catch((e) => oauthCardError(msOAuth.errorText(e.message)));
+    } else {
+      const btn = document.createElement('button');
+      btn.className = 'btn-apple'; btn.textContent = 'Lier Apple';
+      btn.onclick = async () => {
+        btn.disabled = true;
+        try { await oauthLink('apple', await msOAuth.appleToken()); }
+        catch (e) { if (e.message !== 'CANCELLED') oauthCardError(msOAuth.errorText(e.message)); }
+        finally { btn.disabled = false; }
+      };
+      row.append(btn);
+    }
+    list.append(row);
+  }
+}
+
+function oauthCardError(msg) {
+  const el = document.getElementById('oauth-msg');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+async function oauthLink(provider, token) {
+  try {
+    await msOAuth.link(provider, token, _idToken);
+    await loadAccount();
+  } catch (e) {
+    oauthCardError(msOAuth.errorText(e.message));
+  }
+}
+
+async function oauthUnlink(provider, btn) {
+  if (!confirm(`Délier ${OAUTH_NAMES[provider]} ? Vous pourrez toujours vous connecter avec votre e-mail et votre mot de passe.`)) return;
+  btn.disabled = true;
+  try {
+    await msOAuth.unlink(provider, _idToken);
+    await loadAccount();
+  } catch (e) {
+    btn.disabled = false;
+    oauthCardError(msOAuth.errorText(e.message));
   }
 }
 
@@ -797,6 +987,7 @@ function renderAccount(d) {
   }
 
   renderPro(d);
+  renderOAuthCard(d);
 
   // Facturation Stripe
   const hasStripe = !!d.stripe_customer_id;
