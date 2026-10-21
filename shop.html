@@ -339,6 +339,9 @@
     .pk-ticks li.muted { color: var(--muted); }
     .pk-ticks li.muted::before { content: 'ⓘ'; color: var(--muted); }
     .pk-soon { margin-top: 14px; font-size: 12px; color: #4ade80; }
+    .pk-box-h.pk-box-top { border-top: 0; padding-top: 0; margin-top: 24px !important; }
+    .pk-sw { border-top: 1px solid rgba(255,255,255,0.06); margin-top: 32px; }
+    .pk-lnk { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
     .pk-box-h { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; margin-top: 32px !important; }
     .pk-specs-t { display: grid; grid-template-columns: 1fr 1fr; column-gap: 36px; }
     .pk-specs-t > div { display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; }
@@ -362,7 +365,7 @@
     .ifc-row .win-only { display: inline-block; margin-left: 6px; font-size: 10px; }
     @media (max-width: 860px) {
       .pk-specs-t { grid-template-columns: 1fr; }
-      .pk-two { grid-template-columns: 1fr; }
+      .pk-two { grid-template-columns: 1fr; row-gap: 11px; }
     }
     @media (max-width: 600px) { .pk-card { padding: 26px 22px; } }
     @media (max-width: 420px) { .pk-keys { grid-template-columns: 1fr; } }
@@ -621,7 +624,21 @@
         <div class="pk-card">
           <h2>Tout pour démarrer, dans une seule boîte</h2>
           <p class="pk-card-lead">La licence incluse vaut pour le logiciel sur ordinateur ET pour l'app sur tablette. À vous de choisir comment jouer.</p>
+          <h3 class="pk-box-h pk-box-top">🔌 Le boîtier</h3>
           <div class="pk-two">
+            <ul class="pk-ticks">
+              <li>Sortie DMX XLR 3 broches</li>
+              <li>USB-C, auto-alimenté : pas de bloc secteur</li>
+              <li>Compacte : 87 × 42 × 42 mm</li>
+              <li>Assemblé en France <svg class="pk-fr" style="align-self:center" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg></li>
+            </ul>
+            <ul class="pk-ticks">
+              <li><span>Compatible <a class="pk-lnk" href="telecharger">logiciel MyStrow (PC &amp; Mac)</a></span></li>
+              <li><span>Compatible <a class="pk-lnk" href="application-tablette">app MyStrow tablette</a></span></li>
+              <li>Compatible autres logiciels</li>
+            </ul>
+          </div>
+          <div class="pk-two pk-sw">
             <div>
               <h3>💻 Le logiciel (PC et Mac)</h3>
               <ul class="pk-ticks">
@@ -636,14 +653,6 @@
               <p class="pk-soon">Android disponible · iPad et iPhone : bientôt</p>
             </div>
           </div>
-          <h3 class="pk-box-h">🔌 Le boîtier</h3>
-          <ul class="pk-keys">
-            <li>Sortie XLR 3 broches</li>
-            <li>Logiciel PC/Mac + app Android</li>
-            <li>Compatible autres logiciels</li>
-            <li>Compacte : 87 × 42 × 42 mm</li>
-            <li>Assemblé en France <svg class="pk-fr" style="align-self:center" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg></li>
-          </ul>
           <h3 class="pk-box-h">📦 Dans la boîte</h3>
           <ul class="pk-ticks">
             <li>1 interface USB-DMX (1 univers, XLR 3 broches femelle, USB-C)</li><li>1 câble USB-A → USB-C pour l'ordinateur</li><li>1 carte d'activation de la licence MyStrow (2 mois ou 1 an)</li><li class="muted">Pour une tablette : câble USB-C ↔ USB-C non fourni</li>
