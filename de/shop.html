@@ -45,7 +45,7 @@
     "@type": "Brand",
     "name": "MyStrow"
   },
-  "description": "Das USB-DMX-Interface + die Lizenz in der Box. Einstecken, MyStrow erkennt es, Ihre Scheinwerfer leuchten.",
+  "description": "Das USB-DMX-Interface + die Lizenz in der Box.",
   "image": "https://mystrow.fr/img-shop/pack-mystrow-1an.webp",
   "offers": [
     {
@@ -508,24 +508,24 @@
           <a href="./">Startseite</a> &nbsp;/&nbsp; <span>Shop</span>
         </nav>
         <div class="pk-live"><span class="pk-dot"></span><span id="pk-stock">Auf Lager · Versand aus Frankreich</span></div>
-        <h1>Das MyStrow Pack.<br><em>Einstecken, loslegen.</em></h1>
-        <p class="pk-sub">Das USB-DMX-Interface + die Lizenz in der Box. Einstecken, MyStrow erkennt es, Ihre Scheinwerfer leuchten.</p>
+        <h1>Das MyStrow Pack.</h1>
+        <p class="pk-sub">Das USB-DMX-Interface + die Lizenz in der Box.</p>
 
         <div class="pk-opts" role="radiogroup" aria-label="Wählen Sie Ihr Pack">
-          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_2m" data-suffix="2mois"
+          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_2m" data-suffix="2mois" data-amz="https://www.amazon.fr/dp/B0HK4YF5FS"
                   data-price="99" data-href="https://buy.stripe.com/7sYcMX0Wx1gQ0WAcR608g0a">
             <span class="pk-opt-name">Lizenz 2 Monate</span>
             <span class="pk-opt-price">99€</span>
             <span class="pk-opt-hint">Das Interface kostet so ~51 € ggü. Einzellizenz</span>
           </button>
-          <button type="button" class="pk-opt on" role="radio" aria-checked="true" data-plan="pack_1a" data-suffix="1an"
+          <button type="button" class="pk-opt on" role="radio" aria-checked="true" data-plan="pack_1a" data-suffix="1an" data-amz="https://www.amazon.fr/dp/B0HK5539BK"
                   data-price="199" data-href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
             <span class="pk-opt-badge">Am beliebtesten</span>
             <span class="pk-opt-name">Lizenz 1 Jahr</span>
             <span class="pk-opt-price">199€</span>
             <span class="pk-opt-hint">Das Interface kostet so ~55 € ggü. Einzellizenz</span>
           </button>
-          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_vie" data-suffix="1an"
+          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_vie" data-suffix="1an" data-amz="https://www.amazon.fr/dp/B0HK5539BK"
                   data-price="399" data-href="https://buy.stripe.com/14A7sD6gR7Fe6gU4kA08g0c">
             <span class="pk-opt-name">Lizenz auf Lebenszeit</span>
             <span class="pk-opt-price">399€</span>
@@ -744,7 +744,7 @@ function handleNewsletter(e) {
 (function () {
   var API = 'https://us-central1-mystrow-907be.cloudfunctions.net/livraison_estimation';
   var P = '../';
-  var T = {"alt": "MyStrow Pack: USB-DMX-512-Interface und Box, ", "out": "Bald wieder da — bei Amazon erhältlich", "soldout": "Vorübergehend ausverkauft", "order": "Bestellen", "left": "Nur noch {n} auf Lager", "instock": "Auf Lager · Versand aus Frankreich", "dom": "Übersee: bitte bei <b>Amazon</b> bestellen (Links unten)", "perso": "Lieferung nach {cp} bis ", "badcp": "Postleitzahl nicht erkannt", "change": "ändern", "locale": "de-DE", "def": "Jetzt bestellen, Lieferung bis "};
+  var T = {"alt": "MyStrow Pack: USB-DMX-512-Interface und Box, ", "out": "Bald wieder da — bei Amazon erhältlich", "soldout": "Vorübergehend ausverkauft", "order": "Bestellen", "left": "Nur noch {n} auf Lager", "instock": "Auf Lager · Versand aus Frankreich", "dom": "Übersee: dieses Pack bei <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a> bestellen", "domvie": "Übersee: Pack Lifetime nicht verfügbar, <a href='{amz}' target='_blank' rel='noopener'><b>1-Jahres-Pack bei Amazon</b> ↗</a>", "perso": "Lieferung nach {cp} bis ", "badcp": "Postleitzahl nicht erkannt", "change": "ändern", "locale": "de-DE", "def": "Jetzt bestellen, Lieferung bis "};
   var opts = document.querySelectorAll('.pk-opt');
   var thumbs = document.querySelectorAll('.pk-thumb');
   var cta = document.getElementById('pk-cta');
@@ -758,6 +758,12 @@ function handleNewsletter(e) {
   var photo = document.getElementById('pk-photo');
   var sticker = document.getElementById('pk-sticker');
   var stock = null;
+  var outreMer = false;
+
+  function shipDom() {
+    var o = current();
+    shipMain.innerHTML = (o.dataset.plan === 'pack_vie' ? T.domvie : T.dom).replace('{amz}', o.dataset.amz);
+  }
 
   function current() { return document.querySelector('.pk-opt.on'); }
 
@@ -785,6 +791,7 @@ function handleNewsletter(e) {
     show(document.querySelector('.pk-thumb.on'));
     var renew = document.querySelector('.pk-renew');
     if (renew) renew.hidden = o.dataset.plan === 'pack_vie';
+    if (outreMer) shipDom();
     var n = stock ? stock[o.dataset.plan] : null;
     live.classList.remove('low', 'out');
     if (n === 0) {
@@ -896,7 +903,8 @@ function handleNewsletter(e) {
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d.stock) { stock = d.stock; render(); }
-        if (d.raison === 'outre-mer') shipMain.innerHTML = T.dom;
+        outreMer = d.raison === 'outre-mer';
+        if (outreMer) shipDom();
         else if (d.ok && d.latest) shipMain.innerHTML = (perso ? T.perso.replace('{cp}', cp) : T.def) + '<b>' + jour(d.latest) + '</b>';
         else if (perso) shipMain.innerHTML = T.badcp;
       })
