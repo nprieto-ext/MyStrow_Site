@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion MyStrow</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --accent: #E2CE16; --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14); --green: #22c55e;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 40px 36px; width: 100%; max-width: 420px; }
+    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 1px; margin-bottom: 18px; }
+    .logo em { color: var(--accent); font-style: normal; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 1px; font-weight: 400; margin-bottom: 4px; }
+    .sub { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+    .btns { display: flex; flex-direction: column; gap: 10px; }
+    .g-btn { min-height: 44px; display: flex; justify-content: center; }
+    .btn-apple { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #000; border: none; padding: 11px 24px; border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: -apple-system, 'Inter', sans-serif; }
+    .btn-apple:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-apple svg { width: 16px; height: 16px; }
+    .msg { border-radius: 8px; padding: 12px 14px; font-size: 13px; line-height: 1.55; margin-top: 16px; display: none; }
+    .msg.err { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); color: #f87171; }
+    .msg.info { background: rgba(226,206,22,0.06); border: 1px solid var(--accent-border); }
+    .msg.ok { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.3); color: var(--green); }
+    .msg a { color: var(--accent); }
+    #link-form { display: none; margin-top: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; }
+    .form-group input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 11px 14px; color: var(--text); font-size: 14px; outline: none; width: 100%; font-family: inherit; }
+    .form-group input:focus { border-color: var(--accent); }
+    .btn-full { width: 100%; background: var(--accent); color: #0c0b00; border: none; padding: 12px 24px; border-radius: 999px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: inherit; }
+    .btn-full:disabled { opacity: 0.4; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">MY<em>STROW</em></div>
+  <h1 id="t-title"></h1>
+  <p class="sub" id="t-sub"></p>
+
+  <div id="area">
+    <div class="btns">
+      <div class="g-btn" id="g-btn"></div>
+      <button class="btn-apple" id="a-btn" onclick="appleLogin(this)">
+        <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        <span id="t-apple"></span>
+      </button>
+    </div>
+
+    <div class="msg info" id="noaccount"></div>
+    <form id="link-form" onsubmit="linkWithPassword(event)">
+      <div class="form-group">
+        <label for="l-email" id="t-email"></label>
+        <input type="email" id="l-email" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="l-pass" id="t-pass"></label>
+        <input type="password" id="l-pass" autocomplete="current-password" required>
+      </div>
+      <button class="btn-full" id="btn-link" type="submit"></button>
+    </form>
+  </div>
+
+  <div class="msg" id="msg"></div>
+</div>
+
+<script src="oauth.js?v=1"></script>
+<script>
+// Relais de connexion Google / Apple pour l'appli PC (license_manager.
+// OAuthLoginSession) : l'app ouvre cette page avec ?port=&state=, on connecte
+// l'utilisateur via oauth.js puis on renvoie le refresh token Firebase par un
+// POST de formulaire vers http://127.0.0.1:<port>/oauth. Navigation de premier
+// niveau ⇒ ni CORS ni « Local Network Access », et le jeton reste hors de l'URL.
+const I18N = {
+  fr: { title: 'Connexion à MyStrow', sub: 'Choisissez votre compte. MyStrow reprendra la main tout seul.',
+        apple: 'Continuer avec Apple', email: 'E-mail', pass: 'Mot de passe', link: 'Lier et me connecter →',
+        bad: 'Ouvrez cette page depuis l\'application MyStrow (bouton « Continuer avec Google / Apple »).',
+        noacc: (e, n) => `Aucun compte MyStrow n'utilise <b>${e}</b>. Déjà client ? Entrez l'e-mail et le mot de passe de votre achat : votre compte ${n} sera lié et marchera directement les fois suivantes. <br>Pas encore client ? <a href="tarifs" target="_blank">Voir les offres →</a>`,
+        masked: n => `Votre adresse Apple est masquée : entrez une fois l'e-mail et le mot de passe de votre achat pour lier votre compte ${n}. <br>Pas encore client ? <a href="tarifs" target="_blank">Voir les offres →</a>`,
+        wrong: 'E-mail ou mot de passe incorrect.', sending: 'Connexion réussie — retour à MyStrow…' },
+  en: { title: 'Sign in to MyStrow', sub: 'Choose your account. MyStrow will take over automatically.',
+        apple: 'Continue with Apple', email: 'Email', pass: 'Password', link: 'Link and sign in →',
+        bad: 'Open this page from the MyStrow app ("Continue with Google / Apple" button).',
+        noacc: (e, n) => `No MyStrow account uses <b>${e}</b>. Already a customer? Enter the email and password of your purchase: your ${n} account will be linked and work directly next time. <br>Not a customer yet? <a href="tarifs" target="_blank">See plans →</a>`,
+        masked: n => `Your Apple email is hidden: enter the email and password of your purchase once to link your ${n} account. <br>Not a customer yet? <a href="tarifs" target="_blank">See plans →</a>`,
+        wrong: 'Incorrect email or password.', sending: 'Signed in — returning to MyStrow…' },
+};
+const P     = new URLSearchParams(location.search);
+const PORT  = parseInt(P.get('port') || '', 10);
+const STATE = P.get('state') || '';
+const LANG  = (P.get('lang') || 'fr').slice(0, 2);
+const T     = I18N[LANG] || I18N.en;
+const NAMES = { google: 'Google', apple: 'Apple' };
+let _pending = null;   // {provider, token} resté sans compte
+
+document.documentElement.lang = I18N[LANG] ? LANG : 'en';
+for (const [id, key] of [['t-title','title'],['t-sub','sub'],['t-apple','apple'],['t-email','email'],['t-pass','pass'],['btn-link','link']])
+  document.getElementById(id).textContent = T[key];
+
+function show(id, cls, html) {
+  const el = document.getElementById(id);
+  if (cls) el.className = 'msg ' + cls;
+  el.innerHTML = html; el.style.display = html ? 'block' : 'none';
+}
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+const valid = PORT >= 1024 && PORT <= 65535 && /^[A-Za-z0-9_-]{16,128}$/.test(STATE);
+if (!valid) {
+  document.getElementById('area').style.display = 'none';
+  show('msg', 'err', esc(T.bad));
+} else {
+  if (!msOAuth.hasApple) document.getElementById('a-btn').style.display = 'none';
+  if (msOAuth.hasGoogle) {
+    msOAuth.renderGoogle(document.getElementById('g-btn'), t => oauthLogin('google', t),
+                         { locale: LANG, text: 'continue_with' })
+      .catch(e => show('msg', 'err', esc(msOAuth.errorText(e.message))));
+  }
+}
+
+// Remise de la session à l'app : POST vers l'écoute locale (usage unique).
+function handOver(refreshToken, email) {
+  show('msg', 'ok', esc(T.sending));
+  document.getElementById('area').style.display = 'none';
+  const f = document.createElement('form');
+  f.method = 'POST';
+  f.action = `http://127.0.0.1:${PORT}/oauth`;
+  for (const [k, v] of Object.entries({ state: STATE, refresh_token: refreshToken, email: email || '' })) {
+    const i = document.createElement('input');
+    i.type = 'hidden'; i.name = k; i.value = v; f.appendChild(i);
+  }
+  document.body.appendChild(f);
+  f.submit();
+}
+
+async function appleLogin(btn) {
+  btn.disabled = true;
+  try { await oauthLogin('apple', await msOAuth.appleToken()); }
+  catch (e) { if (e.message !== 'CANCELLED') show('msg', 'err', esc(msOAuth.errorText(e.message))); }
+  finally { btn.disabled = false; }
+}
+
+async function oauthLogin(provider, token) {
+  show('msg', '', ''); show('noaccount', '', '');
+  try {
+    const s = await msOAuth.login(provider, token);
+    handOver(s.refreshToken, s.email);
+  } catch (e) {
+    if (e.message !== 'NO_ACCOUNT') { show('msg', 'err', esc(msOAuth.errorText(e.message))); return; }
+    _pending = { provider, token };
+    const masked = /@privaterelay\.appleid\.com$/.test(e.email || '');
+    show('noaccount', 'info', masked ? T.masked(NAMES[provider])
+                                     : T.noacc(esc(e.email || '?'), NAMES[provider]));
+    document.getElementById('link-form').style.display = 'block';
+  }
+}
+
+async function linkWithPassword(ev) {
+  ev.preventDefault();
+  const btn = document.getElementById('btn-link');
+  const email = document.getElementById('l-email').value.trim();
+  const pass = document.getElementById('l-pass').value.trim();
+  btn.disabled = true; show('msg', '', '');
+  try {
+    const res = await fetch(
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAQjGJXGCSWzOE-wvKXh6sbZy6JDhL8tqA',
+      { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password: pass, returnSecureToken: true }) });
+    const d = await res.json();
+    if (!res.ok) {
+      const code = (d.error && d.error.message) || '';
+      throw new Error(/INVALID_LOGIN_CREDENTIALS|INVALID_PASSWORD|EMAIL_NOT_FOUND|INVALID_EMAIL/.test(code)
+                      ? T.wrong : msOAuth.errorText(code));
+    }
+    if (_pending) {
+      try { await msOAuth.link(_pending.provider, _pending.token, d.idToken); }
+      catch (e) { console.warn('[OAuth] liaison :', e.message); }
+    }
+    handOver(d.refreshToken, d.email);
+  } catch (e) {
+    show('msg', 'err', esc(e.message));
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
