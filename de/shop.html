@@ -341,6 +341,9 @@
     .pk-lb-thumbs .pk-thumb { width: 56px; height: 56px; }
     @media (max-width: 640px) { .pk-lb-prev, .pk-lb-next { display: none; } .pk-lb-close { top: 10px; right: 10px; } }
     .pk-ttc { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--muted); margin-left: 4px; letter-spacing: 0; }
+    .pk-cp { flex-wrap: wrap; }
+    .pk-cp select { max-width: 170px; background: #111; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 7px 8px; color: var(--text); font-size: 14px; outline: none; }
+    .pk-cp select:focus { border-color: var(--accent); }
     /* ── fin PACK galerie ── */
 
     /* ── COMPAT ── */
@@ -543,11 +546,12 @@
           <span class="pk-ship-ico" aria-hidden="true">🚚</span>
           <div>
             <div class="pk-ship-main" id="pk-ship-main">Lieferung in <b>72 h</b> innerhalb Festland-Frankreichs</div>
-            <div class="pk-ship-sub">Kostenloser Versand, nur Festland-Frankreich ·
+            <div class="pk-ship-sub">Kostenloser Versand nach Frankreich, Belgien, Luxemburg, in die Niederlande, nach Italien, Spanien und Portugal (nicht nach Deutschland) ·
               <button type="button" class="pk-cp-toggle" id="pk-cp-toggle">Ihre Postleitzahl</button>
             </div>
             <form class="pk-cp" id="pk-cp" hidden>
-              <input id="pk-cp-input" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="75001" aria-label="Lieferpostleitzahl" autocomplete="postal-code">
+              <select id="pk-cp-pays" aria-label="Lieferland" autocomplete="country"></select>
+              <input id="pk-cp-input" inputmode="numeric" maxlength="8" placeholder="75001" aria-label="Lieferpostleitzahl" autocomplete="postal-code">
               <button type="submit">OK</button>
             </form>
           </div>
@@ -753,7 +757,7 @@ function handleNewsletter(e) {
 (function () {
   var API = 'https://us-central1-mystrow-907be.cloudfunctions.net/livraison_estimation';
   var P = '../';
-  var T = {"alt": "MyStrow Pack: USB-DMX-512-Interface und Box, ", "out": "Bald wieder da — bei Amazon erhältlich", "soldout": "Vorübergehend ausverkauft", "order": "Bestellen", "left": "Nur noch {n} auf Lager", "instock": "Auf Lager · Versand aus Frankreich", "dom": "Übersee: dieses Pack bei <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a> bestellen", "domvie": "Übersee: Pack Lifetime nicht verfügbar, <a href='{amz}' target='_blank' rel='noopener'><b>1-Jahres-Pack bei Amazon</b> ↗</a>", "perso": "Lieferung nach {cp} bis ", "badcp": "Postleitzahl nicht erkannt", "change": "ändern", "locale": "de-DE", "ttc": "inkl. MwSt.", "def": "Jetzt bestellen, Lieferung bis "};
+  var T = {"alt": "MyStrow Pack: USB-DMX-512-Interface und Box, ", "out": "Bald wieder da — bei Amazon erhältlich", "soldout": "Vorübergehend ausverkauft", "order": "Bestellen", "left": "Nur noch {n} auf Lager", "instock": "Auf Lager · Versand aus Frankreich", "dom": "Übersee: dieses Pack bei <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a> bestellen", "domvie": "Übersee: Pack Lifetime nicht verfügbar, <a href='{amz}' target='_blank' rel='noopener'><b>1-Jahres-Pack bei Amazon</b> ↗</a>", "perso": "Lieferung nach {cp} bis ", "badcp": "Postleitzahl nicht erkannt", "nozone": "Keine Lieferung an diese Postleitzahl", "change": "ändern", "locale": "de-DE", "ttc": "inkl. MwSt.", "def": "Jetzt bestellen, Lieferung bis "};
   var opts = document.querySelectorAll('.pk-opt');
   var thumbs = document.querySelectorAll('.pk-thumb');
   var cta = document.getElementById('pk-cta');
@@ -763,6 +767,7 @@ function handleNewsletter(e) {
   var cpForm = document.getElementById('pk-cp');
   var cpInput = document.getElementById('pk-cp-input');
   var cpToggle = document.getElementById('pk-cp-toggle');
+  var cpPays = document.getElementById('pk-cp-pays');
   var img = document.getElementById('pk-img');
   var photo = document.getElementById('pk-photo');
   var sticker = document.getElementById('pk-sticker');
@@ -909,14 +914,41 @@ function handleNewsletter(e) {
     return new Date(iso + 'T12:00:00').toLocaleDateString(T.locale, { weekday: 'long', day: 'numeric', month: 'long' });
   }
 
-  function estimer(cp, perso) {
-    fetch(API + '?cp=' + encodeURIComponent(cp))
+  /* Pays ouverts sur les liens de paiement Stripe (alignés sur la CF et les CGV). */
+  var PAYS = { FR: [/^\d{5}$/, '75001'], BE: [/^\d{4}$/, '1000'], LU: [/^\d{4}$/, '1009'],
+               NL: [/^\d{4} ?[A-Z]{2}$/, '1012 AB'], IT: [/^\d{5}$/, '20121'],
+               ES: [/^\d{5}$/, '28001'], PT: [/^\d{4}-?\d{3}$/, '1000-001'] };
+  var noms = null;
+  try { noms = new Intl.DisplayNames([T.locale], { type: 'region' }); } catch (_) {}
+  function nom(p) { return noms ? noms.of(p) : p; }
+  Object.keys(PAYS).sort(function (a, b) {
+    return a === 'FR' ? -1 : b === 'FR' ? 1 : nom(a).localeCompare(nom(b), T.locale);
+  }).forEach(function (p) {
+    var o = document.createElement('option');
+    o.value = p; o.textContent = nom(p);
+    cpPays.appendChild(o);
+  });
+  function choisirPays(p) {
+    cpPays.value = p;
+    cpInput.placeholder = PAYS[p][1];
+    cpInput.inputMode = p === 'NL' ? 'text' : 'numeric';
+  }
+  cpPays.addEventListener('change', function () { choisirPays(cpPays.value); cpInput.value = ''; cpInput.focus(); });
+  function normal(cp, p) {
+    cp = cp.trim().toUpperCase();
+    return p === 'LU' ? cp.replace(/^L-/, '') : cp;
+  }
+  function libelle(cp, p, sep) { return p === 'FR' ? cp : sep ? cp + sep + nom(p) : cp + ' (' + nom(p) + ')'; }
+
+  function estimer(cp, p, perso) {
+    fetch(API + '?cp=' + encodeURIComponent(cp) + '&pays=' + p)
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d.stock) { stock = d.stock; render(); }
-        outreMer = d.raison === 'outre-mer';
+        outreMer = d.raison === 'outre-mer' && p === 'FR';
         if (outreMer) shipDom();
-        else if (d.ok && d.latest) shipMain.innerHTML = (perso ? T.perso.replace('{cp}', cp) : T.def) + '<b>' + jour(d.latest) + '</b>';
+        else if (d.raison === 'outre-mer') shipMain.innerHTML = T.nozone;
+        else if (d.ok && d.latest) shipMain.innerHTML = (perso ? T.perso.replace('{cp}', libelle(cp, p)) : T.def) + '<b>' + jour(d.latest) + '</b>';
         else if (perso) shipMain.innerHTML = T.badcp;
       })
       .catch(function () { /* on garde « 72 h » */ });
@@ -925,18 +957,25 @@ function handleNewsletter(e) {
   cpToggle.addEventListener('click', function () { cpForm.hidden = false; cpInput.focus(); });
   cpForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    var cp = cpInput.value.trim();
-    if (!/^\d{5}$/.test(cp)) { cpInput.focus(); return; }
-    try { localStorage.setItem('mystrow_cp', cp); } catch (_) {}
+    var p = cpPays.value;
+    var cp = normal(cpInput.value, p);
+    if (!PAYS[p][0].test(cp)) { cpInput.focus(); return; }
+    try { localStorage.setItem('mystrow_cp', cp); localStorage.setItem('mystrow_pays', p); } catch (_) {}
     cpForm.hidden = true;
-    cpToggle.textContent = T.change + ' (' + cp + ')';
-    estimer(cp, true);
+    cpToggle.textContent = T.change + ' (' + libelle(cp, p, ', ') + ')';
+    estimer(cp, p, true);
   });
 
-  var saved = null;
-  try { saved = localStorage.getItem('mystrow_cp'); } catch (_) {}
-  if (saved && /^\d{5}$/.test(saved)) { cpToggle.textContent = T.change + ' (' + saved + ')'; estimer(saved, true); }
-  else estimer('75001', false);
+  var saved = null, savedPays = null;
+  try { saved = localStorage.getItem('mystrow_cp'); savedPays = localStorage.getItem('mystrow_pays') || 'FR'; } catch (_) {}
+  var lang = document.documentElement.lang.slice(0, 2);
+  choisirPays(PAYS[savedPays] ? savedPays : lang === 'es' ? 'ES' : lang === 'pt' ? 'PT' : 'FR');
+  if (saved && PAYS[savedPays] && PAYS[savedPays][0].test(saved)) {
+    cpInput.value = saved;
+    cpToggle.textContent = T.change + ' (' + libelle(saved, savedPays, ', ') + ')';
+    estimer(saved, savedPays, true);
+  }
+  else estimer('75001', 'FR', false);
   render();
 })();
 </script>
