@@ -961,31 +961,30 @@
       .nl-form input[type="email"] { width: 160px; }
     }
 
-    /* ── Pack MyStrow (interface USB-DMX maison, produit phare) ── */
-    .pack-home { padding: 72px 28px; background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .pack-home-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .pack-home-visual { background: radial-gradient(circle at 50% 60%, #1d1a05 0%, #0b0a05 70%); border: 1px solid var(--accent-border); border-radius: 16px; padding: 20px; display: flex; align-items: center; justify-content: center; }
-    .pack-home-visual img { width: 100%; height: auto; max-width: 460px; }
-    .pack-home h2 { margin-bottom: 14px; }
-    .pack-home-sub { color: var(--muted); font-size: 16px; line-height: 1.7; margin-bottom: 18px; }
-    .pack-home-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; padding: 0; }
-    .pack-home-list li { display: flex; gap: 10px; font-size: 15px; color: var(--text); }
-    .pack-home-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
-    .pack-home-offers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
-    .pack-home-offer { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 14px 10px; border-radius: 12px; text-decoration: none; text-align: center; border: 1px solid var(--accent-border); background: var(--accent-dim); color: var(--text); transition: opacity .18s, transform .12s; }
-    .pack-home-offer:hover { opacity: .86; transform: scale(1.02); }
-    .pack-home-offer.best { background: var(--accent); border-color: var(--accent); color: #0c0b00; }
-    .pack-home-offer-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: .8; }
-    .pack-home-offer-price { font-size: 32px; font-weight: 800; line-height: 1.05; }
-    .pack-home-offer-cta { font-size: 13px; font-weight: 800; }
-    .pack-home-note { font-size: 13px; color: var(--muted); line-height: 1.6; }
-    .pack-home-note a { color: var(--accent); }
+    /* ── Pack MyStrow (boîtier + licence) ── */
+    .pack-section { padding: 72px 0; }
+    .pack-card { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: center; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px 36px; }
+    .pack-card img { width: 100%; height: auto; display: block; }
+    .pack-card h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; margin: 0 0 8px; }
+    .pack-lead { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+    .pack-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .pack-opt { border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 10px; text-align: center; text-decoration: none; color: var(--text); transition: border-color 0.18s; }
+    .pack-opt:hover { border-color: var(--accent); }
+    .pack-opt-name { display: block; font-size: 12px; color: var(--muted); }
+    .pack-opt-price { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1.1; }
+    .pack-ttc { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+    .pack-opt-hint { display: block; font-size: 11px; color: var(--accent); }
+    .pack-foot { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .pack-foot .btn-primary { display: inline-block; padding: 12px 26px; font-size: 14px; }
+    .pack-note { color: var(--muted); font-size: 12px; }
+    @media (max-width: 480px) { .pack-opts { grid-template-columns: 1fr; } }
+
+    @media (max-width: 820px) {
+      .pack-card { grid-template-columns: 1fr; padding: 26px 22px; gap: 20px; }
+      .pack-card img { max-width: 260px; margin: 0 auto; }
+    }
     .hero-pack-link { display: inline-block; margin-top: 18px; font-size: 14px; color: var(--accent); text-decoration: none; font-weight: 600; }
     .hero-pack-link:hover { text-decoration: underline; }
-    @media (max-width: 860px) {
-      .pack-home { padding: 56px 16px; }
-      .pack-home-inner { grid-template-columns: 1fr; gap: 28px; }
-    }
   </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -1097,7 +1096,7 @@
         <a href="#fonctionnalites" class="btn-outline" style="padding:13px 32px;font-size:16px;">Voir les fonctionnalités</a>
       </div>
       <p class="hero-meta">Gratuit pour démarrer<span>·</span>Windows 10/11<span>·</span>macOS<span>·</span>4 univers DMX Art-Net</p>
-      <a href="#pack-mystrow" class="hero-pack-link">Nouveau : le Pack MyStrow, interface USB-DMX + licence, sur Amazon →</a>
+      <a href="#pack-mystrow" class="hero-pack-link">Nouveau : le Pack MyStrow, interface USB-DMX + licence, dès 99 € TTC →</a>
     </div>
   </div>
 </section>
@@ -1169,35 +1168,25 @@
   </div>
 </section>
 
-<!-- PACK MYSTROW — notre interface USB-DMX, produit phare (liens Amazon sans tag affilié) -->
-<section class="pack-home" id="pack-mystrow" aria-labelledby="pack-title">
-  <div class="pack-home-inner">
-    <div class="pack-home-visual">
-      <img src="img-shop/pack-mystrow-1an.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="900" height="694" loading="lazy" style="filter:drop-shadow(0 20px 30px rgba(0,0,0,.7))">
-    </div>
-    <div>
-      <p class="section-tag">Nouveau · Livré en 72 h</p>
-      <h2 id="pack-title">Le Pack MyStrow.<br><em style="font-style:normal;color:var(--accent)">Branchez, éclairez.</em></h2>
-      <p class="pack-home-sub">Notre propre interface USB-DMX, conçue pour MyStrow. Vous la branchez en USB, le logiciel la reconnaît tout seul, et la licence est déjà dans la boîte.</p>
-      <ul class="pack-home-list">
-        <li>Licence MyStrow incluse (2 mois ou 1 an)</li>
-        <li>Sortie DMX512 sur XLR 3 broches</li>
-        <li>Windows et Mac (Apple Silicon et Intel)</li>
-        <li>Livraison offerte en 72 h, compatible QLC+ et app Android</li>
-      </ul>
-      <div class="pack-home-offers">
-        <a class="pack-home-offer" href="shop#pack-mystrow">
-          <span class="pack-home-offer-label">Licence 2 mois</span>
-          <span class="pack-home-offer-price">99€</span>
-          <span class="pack-home-offer-cta">Voir le pack →</span>
-        </a>
-        <a class="pack-home-offer best" href="shop#pack-mystrow">
-          <span class="pack-home-offer-label">Licence 1 an</span>
-          <span class="pack-home-offer-price">199€</span>
-          <span class="pack-home-offer-cta">Voir le pack →</span>
-        </a>
+<!-- PACK MYSTROW : interface USB-DMX + licence (vendu sur /shop) -->
+<section class="pack-section" id="pack-mystrow" aria-labelledby="pack-title">
+  <div class="wrap">
+    <div class="pack-card">
+      <img src="img-shop/pack-mystrow-1an.webp" alt="Pack MyStrow : interface USB-DMX 512 et sa boîte, licence incluse" width="900" height="694" loading="lazy">
+      <div>
+        <p class="section-tag" style="margin-bottom:6px">Pack MyStrow</p>
+        <h2 id="pack-title">Pas encore d'interface DMX&nbsp;? Prenez le Pack.</h2>
+        <p class="pack-lead">L'interface USB-DMX MyStrow (sortie XLR, alimentée par l'USB) avec la licence dans la boîte. Livraison offerte en 72&nbsp;h en France métropolitaine.</p>
+        <div class="pack-opts">
+          <a class="pack-opt" href="shop#pack-mystrow"><span class="pack-opt-name">Licence 2 mois</span><span class="pack-opt-price">99&nbsp;€<small class="pack-ttc">TTC</small></span><span class="pack-opt-hint">interface ~51&nbsp;€</span></a>
+          <a class="pack-opt" href="shop#pack-mystrow"><span class="pack-opt-name">Licence 1 an</span><span class="pack-opt-price">199&nbsp;€<small class="pack-ttc">TTC</small></span><span class="pack-opt-hint">interface ~55&nbsp;€</span></a>
+          <a class="pack-opt" href="shop#pack-mystrow"><span class="pack-opt-name">Licence à vie</span><span class="pack-opt-price">399&nbsp;€<small class="pack-ttc">TTC</small></span><span class="pack-opt-hint">interface ~39&nbsp;€</span></a>
+        </div>
+        <div class="pack-foot">
+          <a href="shop#pack-mystrow" class="btn-primary">Voir le Pack →</a>
+          <span class="pack-note">Paiement sécurisé par Stripe · Aussi sur Amazon Prime</span>
+        </div>
       </div>
-      <p class="pack-home-note">Paiement sécurisé par Stripe · aussi sur <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">Amazon Prime ↗</a><br>Déjà équipé ? MyStrow fonctionne aussi avec la plupart des nodes Art-Net et interfaces USB/DMX du marché : <a href="shop">voir les interfaces compatibles</a>.</p>
     </div>
   </div>
 </section>

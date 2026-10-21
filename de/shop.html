@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <title>MyStrow Pack — USB-DMX-Interface + Lizenz, Lieferung in 72 h</title>
-  <meta name="description" content="Das MyStrow Pack: unser USB-DMX-512-Interface inklusive Lizenz, ab 99 €. Kostenlose Lieferung in 72 h innerhalb Festland-Frankreichs, auch bei Amazon Prime.">
+  <meta name="description" content="Das MyStrow Pack: unser USB-DMX-512-Interface inklusive Lizenz, ab 99 € inkl. MwSt. Kostenlose Lieferung in 72 h innerhalb Festland-Frankreichs, auch bei Amazon Prime.">
   <link rel="canonical" href="https://mystrow.fr/de/shop">
   <link rel="alternate" hreflang="fr" href="https://mystrow.fr/shop">
   <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/shop">
@@ -340,6 +340,7 @@
     .pk-lb-thumbs { display: flex; gap: 8px; overflow-x: auto; max-width: 100%; padding-bottom: 4px; }
     .pk-lb-thumbs .pk-thumb { width: 56px; height: 56px; }
     @media (max-width: 640px) { .pk-lb-prev, .pk-lb-next { display: none; } .pk-lb-close { top: 10px; right: 10px; } }
+    .pk-ttc { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--muted); margin-left: 4px; letter-spacing: 0; }
     /* ── fin PACK galerie ── */
 
     /* ── COMPAT ── */
@@ -518,20 +519,20 @@
           <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_2m" data-suffix="2mois" data-amz="https://www.amazon.fr/dp/B0HK4YF5FS"
                   data-price="99" data-href="https://buy.stripe.com/7sYcMX0Wx1gQ0WAcR608g0a">
             <span class="pk-opt-name">Lizenz 2 Monate</span>
-            <span class="pk-opt-price">99€</span>
+            <span class="pk-opt-price">99€<small class="pk-ttc">inkl. MwSt.</small></span>
             <span class="pk-opt-hint">Das Interface kostet so ~51 €</span>
           </button>
           <button type="button" class="pk-opt on" role="radio" aria-checked="true" data-plan="pack_1a" data-suffix="1an" data-amz="https://www.amazon.fr/dp/B0HK5539BK"
                   data-price="199" data-href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
             <span class="pk-opt-badge">Am beliebtesten</span>
             <span class="pk-opt-name">Lizenz 1 Jahr</span>
-            <span class="pk-opt-price">199€</span>
+            <span class="pk-opt-price">199€<small class="pk-ttc">inkl. MwSt.</small></span>
             <span class="pk-opt-hint">Das Interface kostet so ~55 €</span>
           </button>
           <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="pack_vie" data-suffix="1an" data-amz="https://www.amazon.fr/dp/B0HK5539BK"
                   data-price="399" data-href="https://buy.stripe.com/14A7sD6gR7Fe6gU4kA08g0c">
             <span class="pk-opt-name">Lizenz auf Lebenszeit</span>
-            <span class="pk-opt-price">399€</span>
+            <span class="pk-opt-price">399€<small class="pk-ttc">inkl. MwSt.</small></span>
             <span class="pk-opt-hint">Das Interface kostet so ~39 €</span>
           </button>
         </div>
@@ -553,7 +554,7 @@
         </div>
 
         <a class="pk-cta" id="pk-cta" href="https://buy.stripe.com/7sY8wHcFf2kU5cQ8AQ08g0b">
-          Bestellen — <span id="pk-cta-price">199 €</span>
+          Bestellen — <span id="pk-cta-price">199 € inkl. MwSt.</span>
         </a>
 
         <div class="pk-pay">
@@ -622,7 +623,6 @@
             <div><dt>Andere Software</dt><dd>Art-Net: z. B. QLC+</dd></div>
             <div><dt>Herstellung</dt><dd>Montiert in Frankreich</dd></div>
           </dl>
-          <p class="pk-card-note">Nach Ablauf der enthaltenen Lizenz können Sie sie bei Bedarf per Abo verlängern. <span class="pk-y">Das Interface gehört Ihnen.</span></p>
         </div>
       </div>
     </div>
@@ -753,7 +753,7 @@ function handleNewsletter(e) {
 (function () {
   var API = 'https://us-central1-mystrow-907be.cloudfunctions.net/livraison_estimation';
   var P = '../';
-  var T = {"alt": "MyStrow Pack: USB-DMX-512-Interface und Box, ", "out": "Bald wieder da — bei Amazon erhältlich", "soldout": "Vorübergehend ausverkauft", "order": "Bestellen", "left": "Nur noch {n} auf Lager", "instock": "Auf Lager · Versand aus Frankreich", "dom": "Übersee: dieses Pack bei <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a> bestellen", "domvie": "Übersee: Pack Lifetime nicht verfügbar, <a href='{amz}' target='_blank' rel='noopener'><b>1-Jahres-Pack bei Amazon</b> ↗</a>", "perso": "Lieferung nach {cp} bis ", "badcp": "Postleitzahl nicht erkannt", "change": "ändern", "locale": "de-DE", "def": "Jetzt bestellen, Lieferung bis "};
+  var T = {"alt": "MyStrow Pack: USB-DMX-512-Interface und Box, ", "out": "Bald wieder da — bei Amazon erhältlich", "soldout": "Vorübergehend ausverkauft", "order": "Bestellen", "left": "Nur noch {n} auf Lager", "instock": "Auf Lager · Versand aus Frankreich", "dom": "Übersee: dieses Pack bei <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a> bestellen", "domvie": "Übersee: Pack Lifetime nicht verfügbar, <a href='{amz}' target='_blank' rel='noopener'><b>1-Jahres-Pack bei Amazon</b> ↗</a>", "perso": "Lieferung nach {cp} bis ", "badcp": "Postleitzahl nicht erkannt", "change": "ändern", "locale": "de-DE", "ttc": "inkl. MwSt.", "def": "Jetzt bestellen, Lieferung bis "};
   var opts = document.querySelectorAll('.pk-opt');
   var thumbs = document.querySelectorAll('.pk-thumb');
   var cta = document.getElementById('pk-cta');
@@ -814,7 +814,7 @@ function handleNewsletter(e) {
     }
     cta.classList.remove('off');
     cta.href = o.dataset.href;
-    cta.innerHTML = T.order + ' — <span id="pk-cta-price">' + o.dataset.price + ' €</span>';
+    cta.innerHTML = T.order + ' — <span id="pk-cta-price">' + o.dataset.price + ' € ' + T.ttc + '</span>';
     if (n !== null && n < 10) { live.classList.add('low'); liveTxt.textContent = T.left.replace('{n}', n); }
     else liveTxt.textContent = T.instock;
   }
