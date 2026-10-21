@@ -372,6 +372,7 @@
     .pk-fr { width: 15px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
     .pk-opts { grid-template-columns: repeat(3, 1fr); }
     @media (max-width: 420px) { .pk-opt { padding: 12px 10px; } .pk-opt-price { font-size: 28px; } }
+    .pk-vie { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; line-height: 1.5; }
     .pk-renew { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; }
     .pk-y { color: var(--accent); font-weight: 600; }
     .pk-visual { cursor: zoom-in; }
@@ -587,6 +588,8 @@
             <span class="pk-opt-hint">L'interface revient à ~39 €</span>
           </button>
         </div>
+
+        <p class="pk-vie" hidden>♾️ Licence à vie activée sur votre compte <span class="pk-y">dès le paiement</span>. La boîte contient une carte 1 an : inutile de l'activer.</p>
 
         <div class="pk-ship">
           <span class="pk-ship-ico" aria-hidden="true">🚚</span>
@@ -950,6 +953,8 @@ function handleNewsletter(e) {
     show(document.querySelector('.pk-thumb.on'));
     var renew = document.querySelector('.pk-renew');
     if (renew) renew.hidden = o.dataset.plan === 'pack_vie';
+    var vie = document.querySelector('.pk-vie');
+    if (vie) vie.hidden = o.dataset.plan !== 'pack_vie';
     if (outreMer) shipDom();
     var n = stock ? stock[o.dataset.plan] : null;
     live.classList.remove('low', 'out');
