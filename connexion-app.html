@@ -74,7 +74,7 @@
   <div class="msg" id="msg"></div>
 </div>
 
-<script src="oauth.js?v=1"></script>
+<script src="oauth.js?v=2"></script>
 <script>
 // Relais de connexion Google / Apple pour l'appli PC (license_manager.
 // OAuthLoginSession) : l'app ouvre cette page avec ?port=&state=, on connecte
@@ -87,17 +87,23 @@ const I18N = {
         bad: 'Ouvrez cette page depuis l\'application MyStrow (bouton « Continuer avec Google / Apple »).',
         noacc: (e, n) => `Aucun compte MyStrow n'utilise <b>${e}</b>. Déjà client ? Entrez l'e-mail et le mot de passe de votre achat : votre compte ${n} sera lié et marchera directement les fois suivantes. <br>Pas encore client ? <a href="tarifs" target="_blank">Voir les offres →</a>`,
         masked: n => `Votre adresse Apple est masquée : entrez une fois l'e-mail et le mot de passe de votre achat pour lier votre compte ${n}. <br>Pas encore client ? <a href="tarifs" target="_blank">Voir les offres →</a>`,
-        wrong: 'E-mail ou mot de passe incorrect.', sending: 'Connexion réussie — retour à MyStrow…' },
+        wrong: 'E-mail ou mot de passe incorrect.', sending: 'Connexion réussie — retour à MyStrow…',
+        back: 'Connexion réussie ✓ Vous pouvez revenir à MyStrow.', backBtn: 'Revenir à MyStrow →' },
   en: { title: 'Sign in to MyStrow', sub: 'Choose your account. MyStrow will take over automatically.',
         apple: 'Continue with Apple', email: 'Email', pass: 'Password', link: 'Link and sign in →',
         bad: 'Open this page from the MyStrow app ("Continue with Google / Apple" button).',
         noacc: (e, n) => `No MyStrow account uses <b>${e}</b>. Already a customer? Enter the email and password of your purchase: your ${n} account will be linked and work directly next time. <br>Not a customer yet? <a href="tarifs" target="_blank">See plans →</a>`,
         masked: n => `Your Apple email is hidden: enter the email and password of your purchase once to link your ${n} account. <br>Not a customer yet? <a href="tarifs" target="_blank">See plans →</a>`,
-        wrong: 'Incorrect email or password.', sending: 'Signed in — returning to MyStrow…' },
+        wrong: 'Incorrect email or password.', sending: 'Signed in — returning to MyStrow…',
+        back: 'Signed in ✓ You can go back to MyStrow.', backBtn: 'Back to MyStrow →' },
 };
 const P     = new URLSearchParams(location.search);
 const PORT  = parseInt(P.get('port') || '', 10);
 const STATE = P.get('state') || '';
+// mode=app : app tablette (navigateur intégré). Pas de port local : la
+// session passe par la boîte aux lettres de oauth_login (msOAuth.handoff).
+const APP_MODE = P.get('mode') === 'app';
+const PLATFORM = P.get('platform') || '';
 const LANG  = (P.get('lang') || 'fr').slice(0, 2);
 const T     = I18N[LANG] || I18N.en;
 const NAMES = { google: 'Google', apple: 'Apple' };
@@ -114,7 +120,8 @@ function show(id, cls, html) {
 }
 function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
 
-const valid = PORT >= 1024 && PORT <= 65535 && /^[A-Za-z0-9_-]{16,128}$/.test(STATE);
+const valid = APP_MODE ? /^[A-Za-z0-9_-]{32,128}$/.test(STATE)
+                       : PORT >= 1024 && PORT <= 65535 && /^[A-Za-z0-9_-]{16,128}$/.test(STATE);
 if (!valid) {
   document.getElementById('area').style.display = 'none';
   show('msg', 'err', esc(T.bad));
@@ -128,9 +135,25 @@ if (!valid) {
 }
 
 // Remise de la session à l'app : POST vers l'écoute locale (usage unique).
-function handOver(refreshToken, email) {
+async function handOver(refreshToken, email) {
   show('msg', 'ok', esc(T.sending));
   document.getElementById('area').style.display = 'none';
+  if (APP_MODE) {
+    try {
+      await msOAuth.handoff(STATE, refreshToken, email);
+    } catch (e) {
+      document.getElementById('area').style.display = '';
+      show('msg', 'err', esc(msOAuth.errorText(e.message)));
+      return;
+    }
+    // L'app relève la session d'elle-même (et ferme cette fenêtre sur iPad).
+    // Sur Android, le Custom Tab ne se ferme pas par programme : le lien
+    // mystrow:// ramène l'app au premier plan. Il ne porte aucun jeton.
+    show('msg', 'ok', esc(T.back) + (PLATFORM === 'android'
+      ? '<br><a href="mystrow://oauth">' + esc(T.backBtn) + '</a>' : ''));
+    if (PLATFORM === 'android') location.href = 'mystrow://oauth';
+    return;
+  }
   const f = document.createElement('form');
   f.method = 'POST';
   f.action = `http://127.0.0.1:${PORT}/oauth`;

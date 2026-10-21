@@ -124,6 +124,12 @@
     return callOAuth({ provider, action: 'unlink' }, firebaseIdToken);
   }
 
+  // App tablette : dépose la session dans la boîte aux lettres que l'app
+  // relève avec le même `state` (voir _oauth_handoff côté Cloud Function).
+  function handoff(state, refreshToken, email) {
+    return callOAuth({ action: 'handoff_put', state, refresh_token: refreshToken, email: email || '' });
+  }
+
   // Messages communs (le cas NO_ACCOUNT est rédigé par chaque page).
   function errorText(code) {
     switch (code) {
@@ -140,6 +146,6 @@
   window.msOAuth = {
     hasGoogle: !!GOOGLE_CLIENT_ID,
     hasApple:  !!APPLE_SERVICES_ID,
-    renderGoogle, appleToken, login, link, unlink, errorText,
+    renderGoogle, appleToken, login, link, unlink, handoff, errorText,
   };
 })();
