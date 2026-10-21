@@ -202,13 +202,12 @@
     .pk::before { content: ''; position: absolute; inset: -20% -10% auto; height: 520px; background: radial-gradient(ellipse at 30% 40%, rgba(226,206,22,0.10), transparent 60%); pointer-events: none; }
     .pk-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: center; position: relative; }
     .pk-visual { position: relative; border-radius: 20px; background: radial-gradient(circle at 50% 60%, #1d1a05 0%, #0b0a05 70%); border: 1px solid var(--accent-border); aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .pk-visual img { position: relative; z-index: 2; width: 88%; height: auto; filter: drop-shadow(0 28px 36px rgba(0,0,0,0.75)); animation: pk-float 6s ease-in-out infinite; transition: opacity .2s; }
+    .pk-visual img { position: relative; z-index: 2; width: 88%; height: auto; filter: drop-shadow(0 28px 36px rgba(0,0,0,0.75)); transition: opacity .2s; }
     .pk-beams { position: absolute; inset: 0; z-index: 1; }
     .pk-beams i { position: absolute; top: -30%; left: 50%; width: 220px; height: 160%; transform-origin: 50% 0; background: linear-gradient(to bottom, rgba(226,206,22,0.55), rgba(226,206,22,0) 70%); filter: blur(18px); mix-blend-mode: screen; animation: pk-sweep 7s ease-in-out infinite; }
     .pk-beams i:nth-child(2) { background: linear-gradient(to bottom, rgba(0,212,255,0.45), rgba(0,212,255,0) 70%); animation-duration: 9s; animation-delay: -3s; }
     .pk-beams i:nth-child(3) { background: linear-gradient(to bottom, rgba(255,60,170,0.40), rgba(255,60,170,0) 70%); animation-duration: 11s; animation-delay: -6s; }
     @keyframes pk-sweep { 0%,100% { transform: translateX(-50%) rotate(-28deg); } 50% { transform: translateX(-50%) rotate(28deg); } }
-    @keyframes pk-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
     .pk-sticker { position: absolute; z-index: 3; top: 18px; right: 18px; width: 86px; height: 86px; border-radius: 50%; background: var(--accent); color: #0c0b00; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; line-height: 1; text-transform: uppercase; letter-spacing: 0.5px; transform: rotate(12deg); box-shadow: 0 6px 20px rgba(226,206,22,0.35); }
     .pk-buy { display: flex; flex-direction: column; gap: 16px; }
     .pk-buy .breadcrumb { display: block; height: auto; padding: 0; margin: 0; max-width: none; }
@@ -251,7 +250,7 @@
     .pk-step-n { width: 30px; height: 30px; border-radius: 50%; background: var(--accent-glow); border: 1px solid var(--accent-border); color: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; margin-bottom: 6px; }
     .pk-specs { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
     .pk-specs li { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.4px; padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); color: rgba(244,241,232,0.75); }
-    @media (prefers-reduced-motion: reduce) { .pk-beams i, .pk-visual img, .pk-dot { animation: none; } }
+    @media (prefers-reduced-motion: reduce) { .pk-beams i, .pk-dot { animation: none; } }
     @media (max-width: 860px) {
       .pk { padding-top: 20px; }
       .pk-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -270,7 +269,7 @@
     .pk-thumb.on { border-color: var(--accent); }
     .pk-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .pk-thumb[data-kind="cutout"] img { object-fit: contain; padding: 4px; }
-    .pk-keys { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; font-size: 13px; color: rgba(244,241,232,0.8); }
+    .pk-keys { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 11px 14px; font-size: 14px; color: rgba(244,241,232,0.8); }
     .pk-keys li { display: flex; gap: 8px; }
     .pk-keys li::before { content: '✓'; color: var(--accent); font-weight: 700; }
     .pk-pay { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; font-size: 12px; color: var(--muted); }
@@ -289,6 +288,9 @@
     .pk-ticks li.muted { color: var(--muted); }
     .pk-ticks li.muted::before { content: 'ⓘ'; color: var(--muted); }
     .pk-soon { margin-top: 14px; font-size: 12px; color: #4ade80; }
+    .pk-box-h.pk-box-top { border-top: 0; padding-top: 0; margin-top: 24px !important; }
+    .pk-sw { border-top: 1px solid rgba(255,255,255,0.06); margin-top: 32px; }
+    .pk-lnk { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
     .pk-box-h { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 28px; margin-top: 32px !important; }
     .pk-specs-t { display: grid; grid-template-columns: 1fr 1fr; column-gap: 36px; }
     .pk-specs-t > div { display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; }
@@ -312,13 +314,14 @@
     .ifc-row .win-only { display: inline-block; margin-left: 6px; font-size: 10px; }
     @media (max-width: 860px) {
       .pk-specs-t { grid-template-columns: 1fr; }
-      .pk-two { grid-template-columns: 1fr; }
+      .pk-two { grid-template-columns: 1fr; row-gap: 11px; }
     }
     @media (max-width: 600px) { .pk-card { padding: 26px 22px; } }
     @media (max-width: 420px) { .pk-keys { grid-template-columns: 1fr; } }
     .pk-fr { width: 15px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
     .pk-opts { grid-template-columns: repeat(3, 1fr); }
     @media (max-width: 420px) { .pk-opt { padding: 12px 10px; } .pk-opt-price { font-size: 28px; } }
+    .pk-vie { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; line-height: 1.5; }
     .pk-renew { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; }
     .pk-y { color: var(--accent); font-weight: 600; }
     .pk-visual { cursor: zoom-in; }
@@ -533,14 +536,7 @@
           </button>
         </div>
 
-        <p class="pk-renew">🔄 Licence renewable afterwards by subscription, <span class="pk-y">the interface stays yours</span>.</p>
-
-        <ul class="pk-keys">
-          <li>3-pin XLR output</li>
-          <li>PC/Mac software + Android app</li>
-          <li>QLC+ compatible (Art-Net)</li>
-          <li>Compact: 87 × 42 × 42 mm</li>
-        </ul>
+        <p class="pk-vie" hidden>♾️ Lifetime licence activated on your account <span class="pk-y">as soon as you pay</span>. The box contains a 1-year card: no need to activate it.</p>
 
         <div class="pk-ship">
           <span class="pk-ship-ico" aria-hidden="true">🚚</span>
@@ -562,12 +558,10 @@
 
         <div class="pk-pay">
           <span class="pk-pay-lock">🔒 Secure payment by <b>Stripe</b></span>
-          <span class="pk-pay-methods">Card · Apple Pay · Google Pay · PayPal · Klarna</span>
         </div>
         <ul class="pk-trust">
           <li>↩️ 14 days to change your mind</li>
           <li>🛡️ 2-year warranty</li>
-          <li><svg class="pk-fr" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg>Assembled in France</li>
         </ul>
         <p class="pk-amazon">Also on Amazon Prime:
           <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">2 months ↗</a> ·
@@ -580,7 +574,21 @@
         <div class="pk-card">
           <h2>Everything to get started, in one box</h2>
           <p class="pk-card-lead">The included licence covers the desktop software AND the tablet app. Play the way you like.</p>
+          <h3 class="pk-box-h pk-box-top">🔌 The interface</h3>
           <div class="pk-two">
+            <ul class="pk-ticks">
+              <li>3-pin XLR DMX output</li>
+              <li>USB-C, bus-powered: no power adapter needed</li>
+              <li>Compact: 87 × 42 × 42 mm</li>
+              <li>Assembled in France <svg class="pk-fr" style="align-self:center" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002654"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce1126"/></svg></li>
+            </ul>
+            <ul class="pk-ticks">
+              <li><span>Works with the <a class="pk-lnk" href="download">MyStrow software (PC &amp; Mac)</a></span></li>
+              <li><span>Works with the MyStrow tablet app</span></li>
+              <li>Works with other software</li>
+            </ul>
+          </div>
+          <div class="pk-two pk-sw">
             <div>
               <h3>💻 The software (PC and Mac)</h3>
               <ul class="pk-ticks">
@@ -599,6 +607,7 @@
           <ul class="pk-ticks">
             <li>1 USB-DMX interface (1 universe, female 3-pin XLR, USB-C)</li><li>1 USB-A → USB-C cable for the computer</li><li>1 MyStrow licence activation card (2 months or 1 year)</li><li class="muted">For a tablet: USB-C ↔ USB-C cable not included</li>
           </ul>
+          <p class="pk-renew" style="margin-top:18px">🔄 Licence renewable afterwards by subscription, <span class="pk-y">the interface stays yours</span>.</p>
         </div>
 
         <div class="pk-card">
@@ -791,6 +800,8 @@ function handleNewsletter(e) {
     show(document.querySelector('.pk-thumb.on'));
     var renew = document.querySelector('.pk-renew');
     if (renew) renew.hidden = o.dataset.plan === 'pack_vie';
+    var vie = document.querySelector('.pk-vie');
+    if (vie) vie.hidden = o.dataset.plan !== 'pack_vie';
     if (outreMer) shipDom();
     var n = stock ? stock[o.dataset.plan] : null;
     live.classList.remove('low', 'out');
