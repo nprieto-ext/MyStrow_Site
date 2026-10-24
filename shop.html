@@ -673,7 +673,7 @@
           </div>
           <h3 class="pk-box-h">📦 Dans la boîte</h3>
           <ul class="pk-ticks">
-            <li>1 interface USB-DMX (1 univers, XLR 3 broches femelle, USB-C)</li><li>1 câble USB-A → USB-C pour l'ordinateur</li><li>1 carte d'activation de la licence MyStrow (2 mois ou 1 an)</li><li class="muted">Pour une tablette : câble USB-C ↔ USB-C non fourni</li>
+            <li>1 interface USB-DMX (1 univers, XLR 3 broches femelle, USB-C)</li><li>1 câble USB-A → USB-C pour l'ordinateur</li><li class="pk-pack-only">1 carte d'activation de la licence MyStrow (2 mois ou 1 an)</li><li class="muted">Pour une tablette : câble USB-C ↔ USB-C non fourni</li>
           </ul>
           <p class="pk-renew" style="margin-top:18px">🔄 Licence prolongeable ensuite par abonnement, <span class="pk-y">l'interface reste à vous</span>.</p>
         </div>
@@ -984,6 +984,7 @@ function handleNewsletter(e) {
     var vie = document.querySelector('.pk-vie:not(.pk-solo-note)');
     if (vie) vie.hidden = o.dataset.plan !== 'pack_vie';
     document.querySelector('.pk-solo-note').hidden = !solo;
+    document.querySelectorAll('.pk-pack-only').forEach(function (e) { e.hidden = solo; });
     ship();
     var n = stock ? stock[o.dataset.plan] : null;
     live.classList.remove('low', 'out');
