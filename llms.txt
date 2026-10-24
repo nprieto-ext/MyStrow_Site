@@ -22,8 +22,7 @@
 
 - [Accueil](https://mystrow.fr/) : présentation générale du logiciel et de ses modules.
 - [Télécharger](https://mystrow.fr/telecharger) : téléchargements Windows et macOS, configuration requise.
-- [Tarifs](https://mystrow.fr/tarifs) : les trois formules, tableau comparatif et FAQ sur la facturation.
-- [Shop](https://mystrow.fr/shop) : interfaces DMX et contrôleurs compatibles, avec les modèles tiers reconnus.
+- [Shop](https://mystrow.fr/shop) : Pack MyStrow (interface + licence), les trois formules de licence (Gratuit, Pro, Lifetime) avec tableau comparatif et FAQ sur la facturation, interfaces DMX et contrôleurs compatibles.
 - [Boutique](https://mystrow.fr/shop) : le matériel utilisé au quotidien avec MyStrow.
 - [Contact](https://mystrow.fr/contact) : support et demandes commerciales.
 

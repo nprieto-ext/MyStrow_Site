@@ -12,6 +12,8 @@ RewriteRule ^synchroniser-mystrow-platine-dj(/.*)?$ /synchroniser-mystrow-logici
 RewriteRule ^boutique(\.html)?/?$ /shop [R=301,L]
 RewriteRule ^controleur-akai-apc-mini(\.html)?/?$ /shop [R=301,L]
 RewriteRule ^(en|de|es|pt)/akai-apc-mini-controller(\.html)?/?$ /$1/shop [R=301,L]
+# 24/10/2026 : page Tarifs supprimée, tout est dans le Shop (formules, comparatif, FAQ)
+RewriteRule ^tarifs(\.html)?/?$ /shop#formules [R=301,NE,L]
 
 # HTTP → HTTPS
 RewriteCond %{HTTPS} off

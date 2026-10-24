@@ -112,6 +112,50 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quelle est la différence entre Mensuel et Annuel ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Le plan Mensuel est à 19,99 € HT/mois (23,99 € TTC en France), sans engagement — résiliable à tout moment. Le plan Annuel est à 9,99 € HT/mois (11,99 € TTC en France), facturé 119,88 € HT/an en une fois, soit 50% d'économie. Les deux plans incluent exactement les mêmes fonctionnalités." }
+      },
+      {
+        "@type": "Question",
+        "name": "Que se passe-t-il à la fin de mon abonnement ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Votre accès à la sortie DMX est désactivé. Vous pouvez continuer à utiliser MyStrow en mode essai (sans DMX) ou renouveler votre abonnement depuis votre espace compte dans l'application." }
+      },
+      {
+        "@type": "Question",
+        "name": "Le Lifetime inclut-il toutes les futures mises à jour ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le plan Lifetime inclut les mises à jour à vie : vous payez une seule fois et vous recevez toutes les futures versions de MyStrow, sans abonnement ni renouvellement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je utiliser MyStrow sur plusieurs ordinateurs ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui, les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Pour plus de 2 machines ou pour un déploiement en volume (5 licences ou plus), contactez-nous pour un tarif adapté." }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment fonctionne le paiement ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tous les paiements sont traités de façon sécurisée via Stripe (carte bancaire, Apple Pay, Google Pay). Après paiement, vos identifiants de licence vous sont envoyés par email dans les minutes qui suivent." }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je passer de Mensuel à Annuel ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Annulez simplement votre abonnement mensuel depuis votre portail Stripe, puis souscrivez au plan Annuel. Le nouveau tarif s'applique immédiatement à la prochaine facturation." }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il une version macOS ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. MyStrow est disponible sur Windows 10/11 et sur Mac, en versions Apple Silicon (M1 à M5, macOS 13 Ventura ou supérieur) et Intel (macOS 11 Big Sur ou supérieur). Les deux plateformes reçoivent les mêmes mises à jour." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
@@ -530,6 +574,39 @@
     .win-only-i { font-size: 11px; opacity: .8; }
     .win-only-tip { display: none; position: absolute; left: 0; bottom: calc(100% + 6px); z-index: 50; width: max-content; max-width: min(280px, 80vw); padding: 10px 12px; border-radius: 8px; background: #16150f; border: 1px solid var(--accent-border, rgba(226,206,22,0.22)); color: var(--text); font-weight: 400; font-size: 12px; line-height: 1.5; box-shadow: 0 8px 24px rgba(0,0,0,.45); white-space: normal; }
     .win-only:hover .win-only-tip, .win-only:focus .win-only-tip, .win-only.open .win-only-tip { display: block; }
+
+    /* Comparatif, licences en volume et FAQ (repris de l'ancienne page /tarifs) */
+    .compare-section, .volume-section, .faq-section { padding: 0 0 80px; }
+    .compare-section h2, .faq-section h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 36px; text-align: center; margin-bottom: 40px; }
+    .compare-table { max-width: 820px; margin: 0 auto; border-collapse: collapse; width: 100%; }
+    .compare-table th, .compare-table td { padding: 13px 16px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 13px; }
+    .compare-table th { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.5px; color: var(--text); }
+    .compare-table td:first-child { text-align: left; color: var(--muted); }
+    .compare-table th:first-child { text-align: left; }
+    .compare-table th.featured-col { color: var(--accent); }
+    .compare-table .check { color: var(--accent); font-size: 16px; font-weight: 700; }
+    .compare-table .cross { color: rgba(122,117,112,0.4); font-size: 14px; }
+    .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .volume-card { max-width: 660px; margin: 0 auto; background: rgba(226,206,22,0.04); border: 1.5px solid rgba(226,206,22,0.22); border-radius: 16px; padding: 40px 36px; text-align: center; }
+    .volume-card h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; margin-bottom: 10px; }
+    .volume-card p { color: var(--muted); font-size: 15px; margin-bottom: 28px; line-height: 1.7; }
+    .btn-contact { display: inline-block; background: var(--accent); color: #0c0b00; border: none; border-radius: 8px; padding: 13px 32px; font-size: 15px; font-weight: 700; text-decoration: none; font-family: 'Inter', sans-serif; transition: opacity 0.18s; }
+    .btn-contact:hover { opacity: 0.86; }
+    .volume-perks { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+    .volume-perk { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 20px; font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .volume-perk::before { content: '★'; color: var(--accent); flex-shrink: 0; }
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(226,206,22,0.14); }
+    .faq-q { padding: 20px 0; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s; user-select: none; }
+    .faq-q:hover { color: var(--accent); }
+    .faq-arrow { color: var(--muted); font-size: 22px; transition: transform 0.25s; flex-shrink: 0; line-height: 1; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); color: var(--accent); }
+    .faq-a { color: var(--muted); font-size: 14px; line-height: 1.75; padding-bottom: 20px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    @media (max-width: 820px) {
+      .compare-table th, .compare-table td { padding: 10px; font-size: 12px; }
+      .volume-card { padding: 30px 20px; }
+    }
   </style>
 <link rel="stylesheet" href="mobile-nav.css?v=6">
 </head>
@@ -837,7 +914,91 @@
 
       </div>
 
-      <p class="pricing-note">🔒 Paiement sécurisé Stripe &nbsp;·&nbsp; <a href="tarifs">Voir tous les détails et la FAQ →</a></p>
+      <p class="pricing-note">🔒 Paiement sécurisé Stripe · Identifiants envoyés par email après paiement &nbsp;·&nbsp; <a href="#comparatif">Comparatif et FAQ ↓</a></p>
+    </div>
+  </section>
+
+  <!-- ═══ TABLEAU COMPARATIF (repris de l'ancienne page /tarifs) ═══ -->
+  <section class="compare-section" id="comparatif">
+    <div class="wrap">
+      <h2>Tout comparer d'un coup d'œil</h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Fonctionnalité</th>
+            <th>Gratuit</th>
+            <th class="featured-col">Pro</th>
+            <th>Lifetime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Contrôle lumière temps réel</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Player audio &amp; vidéo</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>IA Lumière réactive au son</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Programmation Lumière / Timeline</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Plan de scène interactif</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Sortie DMX (Art-Net)</td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Activation sur 2 machines</td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Mises à jour incluses</td><td><span class="cross">✕</span></td><td><span class="check">✓ Illimitées</span></td><td><span class="check">✓ À vie</span></td></tr>
+          <tr><td>Support par email</td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Durée</td><td>15 jours</td><td>Mensuel / Annuel</td><td>À vie</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══ LICENCES EN VOLUME ═══ -->
+  <section class="volume-section" id="volume">
+    <div class="wrap">
+      <div class="volume-card">
+        <div style="font-size:36px;margin-bottom:12px">🎪</div>
+        <h2>Vous avez besoin de 5 licences ou plus&nbsp;?</h2>
+        <p>Pour les écoles, sociétés de production, prestataires événementiels ou régies techniques qui déploient MyStrow sur plusieurs postes — contactez-nous pour un tarif sur-mesure, une facturation groupée et un accompagnement dédié.</p>
+        <a href="contact" class="btn-contact">Nous contacter pour un devis →</a>
+        <div class="volume-perks">
+          <div class="volume-perk">Tarif dégressif dès 5 licences</div>
+          <div class="volume-perk">Facturation unique par structure</div>
+          <div class="volume-perk">Accompagnement à la prise en main</div>
+          <div class="volume-perk">Machines illimitées sur devis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ LICENCES ═══ -->
+  <section class="faq-section" id="faq">
+    <div class="wrap">
+      <h2>Questions fréquentes sur les licences</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Quelle est la différence entre Mensuel et Annuel ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Le plan Mensuel est à 19,99 € HT/mois (23,99 € TTC en France), sans engagement — résiliable à tout moment. Le plan Annuel est à 9,99 € HT/mois (11,99 € TTC en France), facturé 119,88 € HT/an en une fois, soit 50% d'économie. Les deux plans incluent exactement les mêmes fonctionnalités.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Que se passe-t-il à la fin de mon abonnement ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Votre accès à la sortie DMX est désactivé. Vous pouvez continuer à utiliser MyStrow en mode essai (sans DMX) ou renouveler votre abonnement depuis votre espace compte dans l'application.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Le Lifetime inclut-il toutes les futures mises à jour ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Oui. Le plan Lifetime inclut les mises à jour à vie : vous payez une seule fois et vous recevez toutes les futures versions de MyStrow, sans abonnement ni renouvellement.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Puis-je utiliser MyStrow sur plusieurs ordinateurs ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Oui, les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Pour plus de 2 machines ou pour un déploiement en volume (5 licences ou plus), contactez-nous pour un tarif adapté.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Comment fonctionne le paiement ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Tous les paiements sont traités de façon sécurisée via Stripe (carte bancaire, Apple Pay, Google Pay). Après paiement, vos identifiants de licence vous sont envoyés par email dans les minutes qui suivent.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Puis-je passer de Mensuel à Annuel ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Oui. Annulez simplement votre abonnement mensuel depuis votre portail Stripe, puis souscrivez au plan Annuel. Le nouveau tarif s'applique immédiatement à la prochaine facturation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Y a-t-il une version macOS ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Oui. MyStrow est disponible sur Windows 10/11 et sur Mac, en versions Apple Silicon (M1 à M5, macOS 13 Ventura ou supérieur) et Intel (macOS 11 Big Sur ou supérieur). Les deux plateformes reçoivent les mêmes mises à jour. <a href="/telecharger" style="color:var(--accent)">Télécharger MyStrow</a></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -848,7 +1009,6 @@
     <a href="./" class="footer-logo">MY<em>STROW</em></a>
     <nav class="footer-links" aria-label="Footer">
       <a href="telecharger">Téléchargement</a><a href="nouveautes">Nouveautés</a><a href="/activate">Activer un produit</a>
-      <a href="tarifs">Tarifs</a>
       <a href="blog">Blog</a>
       <a href="shop">Shop</a>
       <a href="cgv">CGV</a><a href="mentions-legales">Mentions légales</a><a href="confidentialite">Confidentialité</a>
@@ -1176,6 +1336,12 @@ function handleNewsletter(e) {
     document.querySelectorAll('.win-only.open').forEach(function (o) { if (o !== b) o.classList.remove('open'); });
     if (b) { e.preventDefault(); e.stopPropagation(); b.classList.toggle('open'); }
   }, true);
+</script>
+<script>
+  /* FAQ licences : accordéon */
+  document.querySelectorAll('.faq-q').forEach(function (q) {
+    q.addEventListener('click', function () { this.parentElement.classList.toggle('open'); });
+  });
 </script>
 </body>
 </html>

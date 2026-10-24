@@ -80,7 +80,7 @@
         ["🎵", "Player audio & vidéo", "Playlist et projections gérées depuis la même interface. Tout en un.", "player-audio-video.html"],
         ["🗺️", "Plan de scène interactif", "Visualisez et contrôlez vos groupes de projecteurs d'un clic ou d'un fader.", "plan-de-scene.html"]
       ],
-      top: [["Tarifs", "tarifs.html"], ["Shop", "shop.html"], ["FAQ", "index.html#faq"], ["Tutoriels", "blog.html"]],
+      top: [["Shop", "shop.html"], ["FAQ", "index.html#faq"], ["Tutoriels", "blog.html"]],
       langLabel: "Choisir la langue", signin: "Connexion", dl: "Télécharger ↓", dlHref: "telecharger.html"
     },
     en: {
