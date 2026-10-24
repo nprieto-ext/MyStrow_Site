@@ -13,6 +13,9 @@ RewriteRule ^boutique(\.html)?/?$ /shop [R=301,L]
 RewriteRule ^controleur-akai-apc-mini(\.html)?/?$ /shop [R=301,L]
 RewriteRule ^(en|de|es|pt)/akai-apc-mini-controller(\.html)?/?$ /$1/shop [R=301,L]
 # 24/10/2026 : page Tarifs supprimée, tout est dans le Shop (formules, comparatif, FAQ)
+# (le paramètre éventuel, ex. utm_*, doit passer AVANT l'ancre, sinon l'ancre ne marche plus)
+RewriteCond %{QUERY_STRING} .
+RewriteRule ^tarifs(\.html)?/?$ /shop?%{QUERY_STRING}#formules [R=301,NE,L]
 RewriteRule ^tarifs(\.html)?/?$ /shop#formules [R=301,NE,L]
 
 # HTTP → HTTPS
