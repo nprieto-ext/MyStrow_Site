@@ -58,7 +58,8 @@
           "image": "https://mystrow.fr/img-shop/mystrow-pack-usb-dmx.webp",
           "offers": [
             { "@type": "Offer", "name": "Licence 2 mois", "price": "99.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" },
-            { "@type": "Offer", "name": "Licence 1 an", "price": "199.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" }
+            { "@type": "Offer", "name": "Licence 1 an", "price": "199.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" },
+            { "@type": "Offer", "name": "Interface seule, sans licence", "price": "69.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pk-solo" }
           ]
         }
       },
@@ -293,6 +294,15 @@
     .pk-cta.off { background: rgba(255,255,255,0.08); color: var(--muted); box-shadow: none; pointer-events: none; }
     .pk-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: rgba(244,241,232,0.7); }
     .pk-amazon { font-size: 12px; color: var(--muted); }
+    /* Interface seule : stock chez Fanny, expédiée par nos soins (stripe_webhook → boitier_expedie) */
+    .pk-solo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; padding: 14px 16px; border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.16); }
+    .pk-solo-txt { flex: 1 1 220px; min-width: 0; font-size: 13px; color: var(--muted); line-height: 1.45; }
+    .pk-solo-txt b { color: var(--text); font-size: 15px; }
+    .pk-solo-txt .pk-solo-price { color: var(--accent); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; }
+    .pk-solo-cta { flex: 0 0 auto; display: inline-block; padding: 10px 16px; border-radius: 10px; border: 2px solid var(--accent); color: var(--accent); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; text-decoration: none; transition: background .18s, color .18s; }
+    .pk-solo-cta:hover { background: var(--accent); color: #0c0b00; }
+    .pk-solo-cta.off { border-color: rgba(255,255,255,0.15); color: var(--muted); pointer-events: none; }
+    @media (max-width: 420px) { .pk-solo-cta { width: 100%; text-align: center; } }
     .pk-amazon a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
     .pk-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px; counter-reset: none; }
     .pk-steps li { display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: 14px; background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--muted); line-height: 1.5; }
@@ -624,6 +634,13 @@
         <p class="pk-amazon">Aussi sur Amazon Prime :
           <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">2 mois ↗</a> ·
           <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">1 an ↗</a></p>
+        <div class="pk-solo" id="pk-solo">
+          <div class="pk-solo-txt">
+            <b>Juste l'interface ?</b> <span class="pk-solo-price">69 € TTC</span><br>
+            Sans licence : pour l'essai gratuit, une licence achetée à part ou un logiciel Art-Net. Livraison offerte en France métropolitaine, expédiée sous 2 jours ouvrés.
+          </div>
+          <a class="pk-solo-cta" id="pk-solo-cta" href="https://buy.stripe.com/bJe7sD34F8Ji8p28AQ08g0d">Commander l'interface seule</a>
+        </div>
       </div>
     </div>
 
@@ -712,7 +729,6 @@
             <a class="ifc-row" href="https://amzn.to/4aLO0MT" target="_blank" rel="noopener noreferrer sponsored"><span>ENTTEC Open DMX USB (70303) <span class="win-only" tabindex="0" role="button" aria-label="Windows uniquement : pourquoi ?">Windows uniquement <span class="win-only-i" aria-hidden="true">ⓘ</span><span class="win-only-tip" role="tooltip">Boîtier «&nbsp;passif&nbsp;»&nbsp;: c'est l'ordinateur qui fabrique le signal DMX. Testé et fiable sur Windows ; sur Mac le signal n'est pas garanti avec MyStrow. Sur Mac, choisissez un Node ArtNet ou une interface USB «&nbsp;PRO&nbsp;».</span></span></span><em>97,55€ ↗</em></a>
             <a class="ifc-row" href="https://amzn.to/4yhzOoC" target="_blank" rel="noopener noreferrer sponsored"><span>Electroconcept OPTO USB-DMX <span class="win-only" tabindex="0" role="button" aria-label="Windows uniquement : pourquoi ?">Windows uniquement <span class="win-only-i" aria-hidden="true">ⓘ</span><span class="win-only-tip" role="tooltip">Boîtier «&nbsp;passif&nbsp;»&nbsp;: c'est l'ordinateur qui fabrique le signal DMX. Testé et fiable sur Windows ; sur Mac le signal n'est pas garanti avec MyStrow. Sur Mac, choisissez un Node ArtNet ou une interface USB «&nbsp;PRO&nbsp;».</span></span></span><em>39€ ↗</em></a>
             <a class="ifc-row" href="https://amzn.to/4eZlx8N" target="_blank" rel="noopener noreferrer sponsored"><span>Adaptateur USB DMX512 <span class="win-only" tabindex="0" role="button" aria-label="Windows uniquement : pourquoi ?">Windows uniquement <span class="win-only-i" aria-hidden="true">ⓘ</span><span class="win-only-tip" role="tooltip">Boîtier «&nbsp;passif&nbsp;»&nbsp;: c'est l'ordinateur qui fabrique le signal DMX. Testé et fiable sur Windows ; sur Mac le signal n'est pas garanti avec MyStrow. Sur Mac, choisissez un Node ArtNet ou une interface USB «&nbsp;PRO&nbsp;».</span></span></span><em>16,14€ ↗</em></a>
-            <a class="ifc-row" href="https://amzn.to/3SAUDv5" target="_blank" rel="noopener noreferrer sponsored"><span>Electroconcept USB Node DMX ArtNet</span><em>59€ ↗</em></a>
           </div>
         </div>
       </div>
@@ -1063,6 +1079,14 @@ function handleNewsletter(e) {
     if (Math.abs(dx) > 50) lbShow(lbI + (dx < 0 ? 1 : -1));
   });
 
+  /* Interface seule : stock chez Fanny (absent de la réponse = non suivi → en vente). */
+  function solo() {
+    var b = document.getElementById('pk-solo-cta');
+    if (!b || !stock || stock.boitier !== 0) return;
+    b.classList.add('off');
+    b.textContent = T.soldout;
+  }
+
   function jour(iso) {
     return new Date(iso + 'T12:00:00').toLocaleDateString(T.locale, { weekday: 'long', day: 'numeric', month: 'long' });
   }
@@ -1097,7 +1121,7 @@ function handleNewsletter(e) {
     fetch(API + '?cp=' + encodeURIComponent(cp) + '&pays=' + p)
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        if (d.stock) { stock = d.stock; render(); }
+        if (d.stock) { stock = d.stock; render(); solo(); }
         outreMer = d.raison === 'outre-mer' && p === 'FR';
         if (outreMer) shipDom();
         else if (d.raison === 'outre-mer') shipMain.innerHTML = T.nozone;
