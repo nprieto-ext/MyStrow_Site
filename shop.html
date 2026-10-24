@@ -602,8 +602,6 @@
           </button>
         </div>
 
-        <p class="pk-vie pk-solo-note" hidden>🔌 Sans licence : pour l'essai gratuit, une licence achetée à part ou un logiciel Art-Net (QLC+…). <span class="pk-y">Livrée en France métropolitaine uniquement</span>, expédiée sous 2 jours ouvrés.</p>
-
         <p class="pk-vie" hidden>♾️ Licence à vie activée sur votre compte <span class="pk-y">dès le paiement</span>. La boîte contient une carte 1 an : inutile de l'activer.</p>
 
         <div class="pk-ship">
@@ -974,17 +972,17 @@ function handleNewsletter(e) {
     var solo = !!o.dataset.solo;
     thumbs.forEach(function (t) {
       var i = t.querySelector('img');
-      // Boîte, carte et contenu du pack : sans objet pour l'interface seule.
-      t.hidden = solo && !!t.dataset.img && t.dataset.img.indexOf('@') >= 0;
+      // Boîte, carte et contenu du pack : sans objet pour l'interface seule ;
+      // la photo de face est déjà la grande photo (vignette 1).
+      t.hidden = solo && !!t.dataset.img && (t.dataset.img.indexOf('@') >= 0 || t.dataset.img === 'photos/face');
       if (t.dataset.kind === 'cutout') i.src = solo ? P + 'img-shop/pack/photos/face-mini.webp' : img.src;
       else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/' + t.dataset.img.replace('@', suf) + '-mini.webp';
     });
     show(document.querySelector('.pk-thumb.on'));
     var renew = document.querySelector('.pk-renew');
     if (renew) renew.hidden = o.dataset.plan === 'pack_vie' || solo;
-    var vie = document.querySelector('.pk-vie:not(.pk-solo-note)');
+    var vie = document.querySelector('.pk-vie');
     if (vie) vie.hidden = o.dataset.plan !== 'pack_vie';
-    document.querySelector('.pk-solo-note').hidden = !solo;
     document.querySelectorAll('.pk-pack-only').forEach(function (e) { e.hidden = solo; });
     ship();
     var n = stock ? stock[o.dataset.plan] : null;
