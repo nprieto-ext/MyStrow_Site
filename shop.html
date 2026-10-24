@@ -59,7 +59,7 @@
           "offers": [
             { "@type": "Offer", "name": "Licence 2 mois", "price": "99.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" },
             { "@type": "Offer", "name": "Licence 1 an", "price": "199.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" },
-            { "@type": "Offer", "name": "Interface seule, sans licence", "price": "69.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pk-solo" }
+            { "@type": "Offer", "name": "Interface seule, sans licence", "price": "69.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": "https://mystrow.fr/shop#pack-mystrow" }
           ]
         }
       },
@@ -294,15 +294,6 @@
     .pk-cta.off { background: rgba(255,255,255,0.08); color: var(--muted); box-shadow: none; pointer-events: none; }
     .pk-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: rgba(244,241,232,0.7); }
     .pk-amazon { font-size: 12px; color: var(--muted); }
-    /* Interface seule : stock chez Fanny, expédiée par nos soins (stripe_webhook → boitier_expedie) */
-    .pk-solo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; padding: 14px 16px; border-radius: 12px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.16); }
-    .pk-solo-txt { flex: 1 1 220px; min-width: 0; font-size: 13px; color: var(--muted); line-height: 1.45; }
-    .pk-solo-txt b { color: var(--text); font-size: 15px; }
-    .pk-solo-txt .pk-solo-price { color: var(--accent); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; }
-    .pk-solo-cta { flex: 0 0 auto; display: inline-block; padding: 10px 16px; border-radius: 10px; border: 2px solid var(--accent); color: var(--accent); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; text-decoration: none; transition: background .18s, color .18s; }
-    .pk-solo-cta:hover { background: var(--accent); color: #0c0b00; }
-    .pk-solo-cta.off { border-color: rgba(255,255,255,0.15); color: var(--muted); pointer-events: none; }
-    @media (max-width: 420px) { .pk-solo-cta { width: 100%; text-align: center; } }
     .pk-amazon a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
     .pk-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 44px; counter-reset: none; }
     .pk-steps li { display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: 14px; background: var(--bg3); border: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--muted); line-height: 1.5; }
@@ -380,7 +371,7 @@
     @media (max-width: 600px) { .pk-card { padding: 26px 22px; } }
     @media (max-width: 420px) { .pk-keys { grid-template-columns: 1fr; } }
     .pk-fr { width: 15px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
-    .pk-opts { grid-template-columns: repeat(3, 1fr); }
+    .pk-opts { grid-template-columns: repeat(2, 1fr); }
     @media (max-width: 420px) { .pk-opt { padding: 12px 10px; } .pk-opt-price { font-size: 28px; } }
     .pk-vie { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; line-height: 1.5; }
     .pk-renew { font-size: 13px; color: rgba(244,241,232,0.8); margin-top: -6px; }
@@ -601,7 +592,16 @@
             <span class="pk-opt-price">399€<small class="pk-ttc">TTC</small></span>
             <span class="pk-opt-hint">L'interface revient à ~39 €</span>
           </button>
+          <!-- Interface seule : stock chez Fanny, expédiée par nos soins (stripe_webhook → boitier_expedie) -->
+          <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="boitier" data-suffix="2mois" data-solo="1"
+                  data-price="69" data-href="https://buy.stripe.com/bJe7sD34F8Ji8p28AQ08g0d">
+            <span class="pk-opt-name">Interface seule</span>
+            <span class="pk-opt-price">69€<small class="pk-ttc">TTC</small></span>
+            <span class="pk-opt-hint">Sans licence</span>
+          </button>
         </div>
+
+        <p class="pk-vie pk-solo-note" hidden>🔌 Sans licence : pour l'essai gratuit, une licence achetée à part ou un logiciel Art-Net (QLC+…). <span class="pk-y">Livrée en France métropolitaine uniquement</span>, expédiée sous 2 jours ouvrés.</p>
 
         <p class="pk-vie" hidden>♾️ Licence à vie activée sur votre compte <span class="pk-y">dès le paiement</span>. La boîte contient une carte 1 an : inutile de l'activer.</p>
 
@@ -634,13 +634,6 @@
         <p class="pk-amazon">Aussi sur Amazon Prime :
           <a href="https://www.amazon.fr/dp/B0HK4YF5FS" target="_blank" rel="noopener">2 mois ↗</a> ·
           <a href="https://www.amazon.fr/dp/B0HK5539BK" target="_blank" rel="noopener">1 an ↗</a></p>
-        <div class="pk-solo" id="pk-solo">
-          <div class="pk-solo-txt">
-            <b>Juste l'interface ?</b> <span class="pk-solo-price">69 € TTC</span><br>
-            Sans licence : pour l'essai gratuit, une licence achetée à part ou un logiciel Art-Net. Livraison offerte en France métropolitaine, expédiée sous 2 jours ouvrés.
-          </div>
-          <a class="pk-solo-cta" id="pk-solo-cta" href="https://buy.stripe.com/bJe7sD34F8Ji8p28AQ08g0d">Commander l'interface seule</a>
-        </div>
       </div>
     </div>
 
@@ -926,7 +919,7 @@ function handleNewsletter(e) {
 (function () {
   var API = 'https://us-central1-mystrow-907be.cloudfunctions.net/livraison_estimation';
   var P = '';
-  var T = {"alt": "Pack MyStrow : interface USB-DMX 512 et sa boîte, ", "out": "Bientôt de retour — dispo sur Amazon", "soldout": "Momentanément épuisé", "order": "Commander", "left": "Plus que {n} en stock", "instock": "En stock · expédié depuis la France", "dom": "Outre-mer : commandez ce pack sur <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a>", "domvie": "Outre-mer : pack à vie indisponible, <a href='{amz}' target='_blank' rel='noopener'><b>pack 1 an sur Amazon</b> ↗</a>", "perso": "Livré au {cp} d'ici ", "badcp": "Code postal non reconnu", "nozone": "Pas de livraison vers ce code postal", "change": "changer", "locale": "fr-FR", "ttc": "TTC", "def": "Commandez maintenant, livré d'ici "};
+  var T = {"alt": "Pack MyStrow : interface USB-DMX 512 et sa boîte, ", "out": "Bientôt de retour — dispo sur Amazon", "soldout": "Momentanément épuisé", "order": "Commander", "left": "Plus que {n} en stock", "instock": "En stock · expédié depuis la France", "dom": "Outre-mer : commandez ce pack sur <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a>", "domvie": "Outre-mer : pack à vie indisponible, <a href='{amz}' target='_blank' rel='noopener'><b>pack 1 an sur Amazon</b> ↗</a>", "perso": "Livré au {cp} d'ici ", "badcp": "Code postal non reconnu", "nozone": "Pas de livraison vers ce code postal", "change": "changer", "locale": "fr-FR", "ttc": "TTC", "def": "Commandez maintenant, livré d'ici ", "solo": "Expédiée sous <b>2 jours ouvrés</b> depuis la France", "solofr": "Interface seule : livraison en <b>France métropolitaine</b> uniquement"};
   var opts = document.querySelectorAll('.pk-opt');
   var thumbs = document.querySelectorAll('.pk-thumb');
   var cta = document.getElementById('pk-cta');
@@ -942,10 +935,18 @@ function handleNewsletter(e) {
   var sticker = document.getElementById('pk-sticker');
   var stock = null;
   var outreMer = false;
+  var shipHtml = shipMain.innerHTML;   // dernier encart livraison des packs (Amazon)
+  var paysLivr = 'FR';
 
   function shipDom() {
     var o = current();
     shipMain.innerHTML = (o.dataset.plan === 'pack_vie' ? T.domvie : T.dom).replace('{amz}', o.dataset.amz);
+  }
+  /* Encart livraison : l'interface seule part de chez nous (France métro.), pas d'Amazon. */
+  function ship() {
+    if (current().dataset.solo) shipMain.innerHTML = (paysLivr === 'FR' && !outreMer) ? T.solo : T.solofr;
+    else if (outreMer) shipDom();
+    else shipMain.innerHTML = shipHtml;
   }
 
   function current() { return document.querySelector('.pk-opt.on'); }
@@ -953,7 +954,10 @@ function handleNewsletter(e) {
   function show(thumb) {
     thumbs.forEach(function (t) { t.classList.toggle('on', t === thumb); });
     var suf = current().dataset.suffix;
-    if (thumb.dataset.kind === 'cutout') {
+    if (thumb.dataset.kind === 'cutout' && current().dataset.solo) {
+      photo.src = P + 'img-shop/pack/photos/face.webp';   // le boîtier nu, sans la boîte « licence incluse »
+      photo.hidden = false; sticker.hidden = true;
+    } else if (thumb.dataset.kind === 'cutout') {
       photo.hidden = true; sticker.hidden = false;
     } else {
       photo.src = P + 'img-shop/pack/' + thumb.dataset.img.replace('@', suf) + '.webp';
@@ -966,17 +970,21 @@ function handleNewsletter(e) {
     var suf = o.dataset.suffix;
     img.src = P + 'img-shop/pack-mystrow-' + suf + '.webp';
     img.alt = T.alt + o.querySelector('.pk-opt-name').textContent;
+    var solo = !!o.dataset.solo;
     thumbs.forEach(function (t) {
       var i = t.querySelector('img');
-      if (t.dataset.kind === 'cutout') i.src = img.src;
+      // Boîte, carte et contenu du pack : sans objet pour l'interface seule.
+      t.hidden = solo && !!t.dataset.img && t.dataset.img.indexOf('@') >= 0;
+      if (t.dataset.kind === 'cutout') i.src = solo ? P + 'img-shop/pack/photos/face-mini.webp' : img.src;
       else if (t.dataset.img.indexOf('@') >= 0) i.src = P + 'img-shop/pack/' + t.dataset.img.replace('@', suf) + '-mini.webp';
     });
     show(document.querySelector('.pk-thumb.on'));
     var renew = document.querySelector('.pk-renew');
-    if (renew) renew.hidden = o.dataset.plan === 'pack_vie';
-    var vie = document.querySelector('.pk-vie');
+    if (renew) renew.hidden = o.dataset.plan === 'pack_vie' || solo;
+    var vie = document.querySelector('.pk-vie:not(.pk-solo-note)');
     if (vie) vie.hidden = o.dataset.plan !== 'pack_vie';
-    if (outreMer) shipDom();
+    document.querySelector('.pk-solo-note').hidden = !solo;
+    ship();
     var n = stock ? stock[o.dataset.plan] : null;
     live.classList.remove('low', 'out');
     if (n === 0) {
@@ -1020,22 +1028,27 @@ function handleNewsletter(e) {
   var lbI = 0, lbFocus = null;
 
   function srcOf(t) {
-    if (t.dataset.kind === 'cutout') return img.src;
+    if (t.dataset.kind === 'cutout') return current().dataset.solo ? P + 'img-shop/pack/photos/face.webp' : img.src;
     return P + 'img-shop/pack/' + t.dataset.img.replace('@', current().dataset.suffix) + '.webp';
   }
-  function lbShow(i) {
+  function lbShow(i, sens) {
     lbI = (i + thumbs.length) % thumbs.length;
+    for (var n = 0; thumbs[lbI].hidden && n < thumbs.length; n++)   // vignettes masquées (interface seule)
+      lbI = (lbI + (sens || 1) + thumbs.length) % thumbs.length;
     lbStage.classList.remove('zoom');
     lbImg.src = srcOf(thumbs[lbI]);
-    lbCount.textContent = (lbI + 1) + ' / ' + thumbs.length;
-    Array.prototype.forEach.call(lbThumbs.children, function (c, k) { c.classList.toggle('on', k === lbI); });
+    var vis = Array.prototype.filter.call(thumbs, function (t) { return !t.hidden; });
+    lbCount.textContent = (vis.indexOf(thumbs[lbI]) + 1) + ' / ' + vis.length;
+    Array.prototype.forEach.call(lbThumbs.children, function (c) { c.classList.toggle('on', c.dataset.k == lbI); });
     show(thumbs[lbI]);
   }
   function lbOpen() {
     lbThumbs.innerHTML = '';
     thumbs.forEach(function (t, k) {
+      if (t.hidden) return;
       var c = t.cloneNode(true);
       c.removeAttribute('role');
+      c.dataset.k = k;
       c.addEventListener('click', function () { lbShow(k); });
       lbThumbs.appendChild(c);
     });
@@ -1052,7 +1065,7 @@ function handleNewsletter(e) {
   }
   document.querySelector('.pk-visual').addEventListener('click', lbOpen);
   lb.querySelector('.pk-lb-close').addEventListener('click', lbClose);
-  lb.querySelector('.pk-lb-prev').addEventListener('click', function () { lbShow(lbI - 1); });
+  lb.querySelector('.pk-lb-prev').addEventListener('click', function () { lbShow(lbI - 1, -1); });
   lb.querySelector('.pk-lb-next').addEventListener('click', function () { lbShow(lbI + 1); });
   lbStage.addEventListener('click', function (e) { if (e.target === lbStage) lbClose(); });
   lbImg.addEventListener('click', function (e) {
@@ -1068,7 +1081,7 @@ function handleNewsletter(e) {
   document.addEventListener('keydown', function (e) {
     if (lb.hidden) return;
     if (e.key === 'Escape') lbClose();
-    else if (e.key === 'ArrowLeft') lbShow(lbI - 1);
+    else if (e.key === 'ArrowLeft') lbShow(lbI - 1, -1);
     else if (e.key === 'ArrowRight') lbShow(lbI + 1);
   });
   var x0 = null;
@@ -1076,16 +1089,8 @@ function handleNewsletter(e) {
   lbStage.addEventListener('touchend', function (e) {
     if (x0 === null || lbStage.classList.contains('zoom')) return;
     var dx = e.changedTouches[0].clientX - x0; x0 = null;
-    if (Math.abs(dx) > 50) lbShow(lbI + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 50) lbShow(lbI + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
   });
-
-  /* Interface seule : stock chez Fanny (absent de la réponse = non suivi → en vente). */
-  function solo() {
-    var b = document.getElementById('pk-solo-cta');
-    if (!b || !stock || stock.boitier !== 0) return;
-    b.classList.add('off');
-    b.textContent = T.soldout;
-  }
 
   function jour(iso) {
     return new Date(iso + 'T12:00:00').toLocaleDateString(T.locale, { weekday: 'long', day: 'numeric', month: 'long' });
@@ -1121,12 +1126,13 @@ function handleNewsletter(e) {
     fetch(API + '?cp=' + encodeURIComponent(cp) + '&pays=' + p)
       .then(function (r) { return r.json(); })
       .then(function (d) {
-        if (d.stock) { stock = d.stock; render(); solo(); }
+        if (d.stock) { stock = d.stock; render(); }
         outreMer = d.raison === 'outre-mer' && p === 'FR';
-        if (outreMer) shipDom();
-        else if (d.raison === 'outre-mer') shipMain.innerHTML = T.nozone;
-        else if (d.ok && d.latest) shipMain.innerHTML = (perso ? T.perso.replace('{cp}', libelle(cp, p)) : T.def) + '<b>' + jour(d.latest) + '</b>';
-        else if (perso) shipMain.innerHTML = T.badcp;
+        paysLivr = p;
+        if (d.raison === 'outre-mer' && !outreMer) shipHtml = T.nozone;
+        else if (d.ok && d.latest) shipHtml = (perso ? T.perso.replace('{cp}', libelle(cp, p)) : T.def) + '<b>' + jour(d.latest) + '</b>';
+        else if (perso) shipHtml = T.badcp;
+        ship();
       })
       .catch(function () { /* on garde « 72 h » */ });
   }
