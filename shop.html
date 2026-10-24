@@ -336,6 +336,7 @@
     .pk-two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; }
     .pk-ticks { list-style: none; display: flex; flex-direction: column; gap: 11px; font-size: 14px; color: rgba(244,241,232,0.78); line-height: 1.45; }
     .pk-ticks li { display: flex; gap: 8px; }
+    .pk-ticks li[hidden] { display: none; }
     .pk-ticks li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .pk-ticks li.muted { color: var(--muted); }
     .pk-ticks li.muted::before { content: 'ⓘ'; color: var(--muted); }
