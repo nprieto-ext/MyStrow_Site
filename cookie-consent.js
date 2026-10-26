@@ -23,19 +23,65 @@
     })(window, document, 'clarity', 'script', CLARITY_ID);
   }
 
+  /* Liens Stripe → offre (les 5 derniers caractères du lien suffisent).
+     ⚠ À compléter à chaque nouveau lien de paiement, sinon il remonte en « autre ». */
+  var STRIPE_OFFRES = {
+    '08g03': 'pro_mensuel', '08g05': 'pro_annuel', '08g09': 'lifetime',
+    '08g0a': 'pack_2m', '08g0b': 'pack_1a', '08g0c': 'pack_vie', '08g0d': 'boitier'
+  };
+
+  function _offre(href) {
+    var m = /buy\.stripe\.com\/[A-Za-z0-9]*?(08g[0-9a-z]{2})(?:[?#]|$)/.exec(href);
+    return (m && STRIPE_OFFRES[m[1]]) || 'autre';
+  }
+
   function _trackConversions() {
     document.addEventListener('click', function (e) {
-      var a = e.target.closest ? e.target.closest('a') : null;
+      if (!e.target.closest) return;
+
+      /* Boutique : choix dans le sélecteur du Pack */
+      var opt = e.target.closest('.pk-opt');
+      if (opt && opt.dataset.plan) {
+        _gtag('event', 'select_item', {
+          item_list_id: 'pack',
+          items: [{ item_id: opt.dataset.plan, price: Number(opt.dataset.price) || undefined }]
+        });
+        return;
+      }
+      /* Boutique : agrandissement des photos, question de FAQ ouverte */
+      if (e.target.closest('.pk-visual')) { _gtag('event', 'gallery_open', {}); return; }
+      var faq = e.target.closest('.faq-q');
+      if (faq) {
+        if (!faq.parentElement.classList.contains('open')) {
+          _gtag('event', 'faq_open', { faq_question: (faq.textContent || '').trim().replace(/\s*[+−×]$/, '').slice(0, 100) });
+        }
+        return;
+      }
+
+      var a = e.target.closest('a');
       if (!a || !a.href) return;
       var href = a.href;
       if (href.indexOf('download_redirect') !== -1) {
         var plat = /p=mac/.test(href) ? 'mac' : (/p=win/.test(href) ? 'windows' : 'autre');
         _gtag('event', 'download_click', { platform: plat, link_url: href });
       } else if (href.indexOf('buy.stripe.com') !== -1) {
-        var plan = /08g06/.test(href) ? 'lifetime' : 'pro';
-        _gtag('event', 'begin_checkout', { plan: plan, link_url: href });
+        var offre = _offre(href);
+        _gtag('event', 'begin_checkout', { plan: offre, link_url: href, items: [{ item_id: offre }] });
+      } else if (/^https?:\/\/([a-z]+\.)?(amazon\.[a-z.]+|amzn\.to)\//.test(href)
+                 && !e.target.closest('.win-only')) {
+        /* fiches Amazon du Pack + liens affiliés amzn.to ; le badge « Windows uniquement »
+           ouvre une infobulle au lieu de suivre le lien, ce n'est pas un clic sortant */
+        _gtag('event', 'amazon_click', { link_url: href });
       } else if (href.indexOf('mailto:') === 0) {
         _gtag('event', 'contact_click', {});
+      }
+    }, true);
+
+    /* Boutique : estimation de livraison par code postal */
+    document.addEventListener('submit', function (e) {
+      if (e.target && e.target.id === 'pk-cp') {
+        var pays = document.getElementById('pk-cp-pays');
+        _gtag('event', 'shipping_estimate', { country: pays ? pays.value : '' });
       }
     }, true);
   }
