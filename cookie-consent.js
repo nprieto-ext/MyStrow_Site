@@ -60,6 +60,8 @@
 
       var a = e.target.closest('a');
       if (!a || !a.href) return;
+      /* Lien interne à suivre : <a data-ga-event="nom_evenement"> */
+      if (a.dataset.gaEvent) { _gtag('event', a.dataset.gaEvent, { link_url: a.href }); return; }
       var href = a.href;
       if (href.indexOf('download_redirect') !== -1) {
         var plat = /p=mac/.test(href) ? 'mac' : (/p=win/.test(href) ? 'windows' : 'autre');
