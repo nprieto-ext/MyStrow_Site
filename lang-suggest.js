@@ -17,7 +17,7 @@
 
   /* Langue explicitement choisie par le visiteur (ou "ici, ca me va"). */
   var KEY = 'mystrow_lang';
-  var SUPPORTED = ['fr', 'en', 'de', 'es', 'pt'];
+  var SUPPORTED = ['fr', 'en', 'de', 'es', 'pt', 'it'];
 
   /* Libelles ecrits dans la langue CIBLE : c'est celle que le visiteur lit. */
   var T = {
@@ -25,7 +25,8 @@
     en: { msg: 'This page is available in English.', cta: 'View in English', close: 'Close' },
     de: { msg: 'Diese Seite ist auf Deutsch verfügbar.', cta: 'Auf Deutsch ansehen', close: 'Schließen' },
     es: { msg: 'Esta página está disponible en español.', cta: 'Ver en español', close: 'Cerrar' },
-    pt: { msg: 'Esta página está disponível em português.', cta: 'Ver em português', close: 'Fechar' }
+    pt: { msg: 'Esta página está disponível em português.', cta: 'Ver em português', close: 'Fechar' },
+    it: { msg: 'Questa pagina è disponibile in italiano.', cta: 'Vedi in italiano', close: 'Chiudi' }
   };
 
   function _gtag() {
@@ -44,7 +45,7 @@
   function _pageLang() {
     var h = (document.documentElement.getAttribute('lang') || '').slice(0, 2).toLowerCase();
     if (SUPPORTED.indexOf(h) !== -1) return h;
-    var m = location.pathname.match(/^\/(en|de|es|pt)\//);
+    var m = location.pathname.match(/^\/(en|de|es|pt|it)\//);
     return m ? m[1] : 'fr';
   }
 
@@ -53,7 +54,7 @@
     var a = document.createElement('a');
     a.href = url;
     if (a.host !== location.host) return null;
-    var m = a.pathname.match(/^\/(en|de|es|pt)\//);
+    var m = a.pathname.match(/^\/(en|de|es|pt|it)\//);
     return m ? m[1] : 'fr';
   }
 

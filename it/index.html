@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>MyStrow — Software luci DMX con IA | Windows e Mac</title>
+  <meta name="description" content="Controlla i tuoi proiettori DMX dal computer. L&#x27;IA sincronizza le luci con la musica in tempo reale. AKAI APC mini, sequencer, timeline. Prova gratuita.">
+  <meta name="keywords" content="software luci DMX, controllo luci palco, AKAI APC mini, sequencer luci, mixer luci, software controllo show, luci a ritmo di musica, programma luci DMX">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="MyStrow">
+  <link rel="canonical" href="https://mystrow.fr/it/">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/">
+  <link rel="alternate" hreflang="it" href="https://mystrow.fr/it/">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystrow.fr/it/">
+  <meta property="og:title" content="MyStrow — Software luci DMX con IA">
+  <meta property="og:description" content="I tuoi proiettori DMX pilotati dal computer, a ritmo di musica grazie all&#x27;IA. Prova gratuita.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-en.webp">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MyStrow: software professionale per luci da palco">
+  <meta name="twitter:description" content="Controlla i proiettori a ritmo di musica. AKAI APC mini + IA che reagisce al suono.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-en.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="../akai.webp">
+
+  <!-- JSON-LD : SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MyStrow",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Windows 10, Windows 11, macOS 11+ (Intel), macOS 13+ (Apple Silicon)",
+    "description": "Software professionale di controllo luci DMX. Pilota i proiettori dal computer, sincronizzali con l'audio grazie all'IA, crea sequenze su una timeline.",
+    "url": "https://mystrow.fr/it/",
+    "downloadUrl": "https://mystrow.fr/en/download",
+    "screenshot": "https://mystrow.fr/og-image-en.webp",
+    "softwareVersion": "3.0",
+    "featureList": [
+      "Controllo luci DMX professionale",
+      "Controller AKAI APC mini — griglia LED 8×8",
+      "Gruppi di proiettori",
+      "Luci IA che reagiscono al suono",
+      "Editor timeline con keyframe",
+      "Player audio e video integrato",
+      "Pianta del palco visiva e interattiva",
+      "Show salvati in formato .tui"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Mensile",
+        "price": "23.99",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Annuale",
+        "price": "143.86",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Lifetime",
+        "price": "359.99",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD : FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Che hardware serve per usare MyStrow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un computer Windows 10/11 o macOS (Intel 11+, Apple Silicon 13+) con una porta USB o di rete, un'interfaccia USB-DMX o un nodo DMX Art-Net, e i tuoi proiettori DMX. Il controller AKAI APC mini mk2 è consigliato per il live, ma un simulatore integrato lo rende del tutto facoltativo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come si configura il nodo DMX?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MyStrow usa il protocollo Art-Net, uno standard aperto (porta UDP 6454) supportato dalla grande maggioranza dei nodi DMX. Funziona qualsiasi nodo compatibile Art-Net: Enttec ODE, LumenRadio, Artnet4 e molti altri. Imposta il nodo sull'IP 2.0.0.15 e collegalo al PC con un cavo ethernet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Il mio PC non ha una porta RJ45: come faccio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nessun problema: la soluzione più semplice è la nostra interfaccia USB Node DMX ArtNet, che si collega direttamente a una porta USB, senza scheda di rete né driver. Se preferisci un nodo Ethernet, va benissimo anche un semplice adattatore USB-RJ45, riconosciuto automaticamente da Windows e macOS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Come analizza la musica l'IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In modalità IA, MyStrow analizza in tempo reale il ritmo, le frequenze e l'energia della musica e genera automaticamente colori, intensità e transizioni su tutti i gruppi di proiettori. Nessuna programmazione necessaria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "C'è latenza tra musica e luci?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non percepibile. MyStrow invia i frame DMX a 25 fps tramite un timer dedicato. La latenza tra audio e comandi DMX è inferiore a 5 ms grazie al motore Qt Multimedia."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:            #080807;
+      --bg2:           #0e0d09;
+      --bg3:           #141310;
+      --accent:        #E2CE16;
+      --accent-glow:   rgba(226, 206, 22, 0.16);
+      --accent-dim:    rgba(226, 206, 22, 0.10);
+      --accent-border: rgba(226, 206, 22, 0.22);
+      --text:          #f4f1e8;
+      --muted:         #7a7570;
+      --card:          rgba(255,255,255,0.03);
+      --border:        rgba(226, 206, 22, 0.14);
+      --green:         #22c55e;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+
+    .btn-primary {
+      background: var(--accent); color: #0c0b00; border: none;
+      padding: 9px 20px; border-radius: 7px; font-size: 14px; font-weight: 700;
+      cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none;
+      transition: opacity 0.2s; letter-spacing: -0.2px; white-space: nowrap;
+    }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline {
+      background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14);
+      padding: 9px 20px; border-radius: 7px; font-size: 14px; font-weight: 500;
+      cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none;
+      transition: border-color 0.2s, color 0.2s; white-space: nowrap;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: transparent;
+      transition: background 0.35s, backdrop-filter 0.35s;
+    }
+    header.scrolled {
+      background: rgba(6,6,5,0.88);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    }
+    nav {
+      display: flex; align-items: center;
+      height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto;
+      gap: 32px;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-center {
+      display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center;
+    }
+    .nav-center a {
+      color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600;
+      text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase;
+      transition: color 0.18s;
+    }
+    .nav-center a:hover { color: #fff; }
+
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega {
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(-8px);
+      width: 700px; padding: 10px;
+      background: #0c0b08;
+      border: 1px solid rgba(226,206,22,0.16);
+      border-radius: 14px;
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 4px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 300;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.7), 0 1px 0 rgba(226,206,22,0.06) inset;
+    }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+    .nav-right { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+    .nav-signin { color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 500; text-decoration: none; transition: color 0.18s; }
+    .nav-signin:hover { color: #fff; }
+    .btn-nav-cta {
+      padding: 9px 22px; border-radius: 999px;
+      border: 1.5px solid var(--accent); background: var(--accent);
+      color: #0c0b00; font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+      text-decoration: none; white-space: nowrap; cursor: pointer;
+      transition: opacity 0.18s;
+    }
+    .btn-nav-cta:hover { opacity: 0.85; }
+    .nav-links { display: flex; gap: 12px; align-items: center; }
+    .lang-switch { display: flex; align-items: center; gap: 5px; }
+    .lang-btn { font-size: 11px; font-weight: 700; color: var(--muted); text-decoration: none; letter-spacing: 1px; transition: color 0.18s; padding: 3px 6px; }
+    .lang-btn:hover { color: var(--accent); }
+    .lang-btn.active { color: var(--accent); }
+    .lang-sep { color: rgba(255,255,255,0.15); font-size: 10px; }
+
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 7vw, 88px); line-height: 0.92; letter-spacing: 1px; margin-bottom: 28px; text-align: left; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(30px, 4.5vw, 52px); line-height: 1.1; letter-spacing: 0.5px; margin-bottom: 16px; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: 0.3px; margin-bottom: 9px; }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    .section-sub { color: var(--muted); font-size: 16px; max-width: 510px; margin-bottom: 54px; line-height: 1.75; }
+
+    .hero { position: relative; min-height: 88vh; display: flex; align-items: center; background: url('../hero-bg.webp') center center / cover no-repeat; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(6,6,5,0.82) 0%, rgba(6,6,5,0.55) 55%, rgba(6,6,5,0.10) 100%); }
+    .hero-inner { position: relative; z-index: 1; max-width: 1280px; width: 100%; margin: 0 auto; padding: 30px 40px 80px; }
+    .hero-content { max-width: 560px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim); border: 1px solid var(--accent-border); color: var(--accent); font-size: 11px; font-weight: 700; padding: 5px 16px; border-radius: 20px; margin-bottom: 28px; letter-spacing: 1px; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif; }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; flex-shrink: 0; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .hero-sub { color: rgba(255,255,255,0.70); font-size: 18px; max-width: 460px; margin: 0 0 38px; line-height: 1.65; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .hero-meta { color: rgba(255,255,255,0.40); font-size: 12px; letter-spacing: 0.3px; }
+    .hero-meta span { color: rgba(226,206,22,0.5); margin: 0 5px; }
+
+    .demo-wrap { max-width: 900px; margin: 0 auto; padding: 60px 28px 0; background: var(--bg); }
+    .demo-window { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 0 100px rgba(226,206,22,0.08), 0 50px 100px rgba(0,0,0,0.6); }
+    .demo-bar { background: var(--bg3); padding: 11px 16px; display: flex; align-items: center; gap: 7px; border-bottom: 1px solid var(--border); }
+    .d-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .demo-bar-title { color: var(--muted); font-size: 12px; margin-left: 8px; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; }
+    .demo-bar-live { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--green); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
+    .demo-bar-live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 1.2s infinite; }
+
+    .demo-body { display: grid; grid-template-columns: 1fr 1fr; min-height: 340px; }
+    .demo-akai-panel { background: #0a0908; border-right: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 10px 10px; gap: 4px; }
+    .demo-pfe-panel { background: #050503; display: flex; flex-direction: column; align-items: center; padding: 12px 10px 10px; }
+    .demo-panel-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 700; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    #planfeu-canvas { display: block; width: 100%; height: auto; border-radius: 6px; }
+    .drag-hint { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; color: rgba(226,206,22,0.38); letter-spacing: 1px; text-align: center; margin-top: 6px; }
+
+    .akai-body { background: #0d0c09; border-radius: 10px; border: 1px solid #201e13; padding: 10px; display: flex; flex-direction: column; gap: 8px; width: fit-content; }
+    .akai-branding { display: flex; align-items: baseline; justify-content: space-between; padding: 0 2px 5px; border-bottom: 1px solid #201e13; }
+    .akai-logo { font-size: 9px; color: rgba(255,255,255,0.32); letter-spacing: 0.5px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; }
+    .akai-model { font-size: 8px; color: rgba(226,206,22,0.32); letter-spacing: 1px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; }
+    .akai-pads-section { display: flex; gap: 3px; align-items: flex-start; }
+    .akai-pads-grid { display: grid; grid-template-columns: repeat(8, 20px); grid-template-rows: repeat(8, 20px); gap: 2px; }
+    .pad { width: 20px; height: 20px; border-radius: 3px; position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.08s, box-shadow 0.08s; }
+    .pad.active { border-color: rgba(255,255,255,0.55) !important; box-shadow: 0 0 5px rgba(255,255,255,0.2); }
+    .akai-fx-col { display: flex; flex-direction: column; margin-left: 5px; }
+    .fx-btn-wrap { height: 22px; display: flex; align-items: center; justify-content: center; }
+    .fx-btn { width: 12px; height: 12px; border-radius: 2px; background: #0d2e12; border: 1px solid #1a5e26; box-shadow: inset 0 1px 2px rgba(0,0,0,0.5); }
+    .fx-btn.active-green { background: #16622a; border-color: #28ca41; box-shadow: 0 0 4px rgba(40,202,65,0.35); }
+    .fx-btn.fx-active { background: #22c55e; border-color: #4ade80; box-shadow: 0 0 10px rgba(34,197,94,0.85), 0 0 3px #4ade80; }
+    .fx-btn.fired { background: #22c55e; border-color: #4ade80; box-shadow: 0 0 7px rgba(34,197,94,0.65); }
+    .akai-faders-section { padding-top: 8px; border-top: 1px solid #201e13; }
+    .faders-row { display: flex; gap: 4px; align-items: flex-start; justify-content: center; }
+    .fader-col { display: flex; flex-direction: column; align-items: center; gap: 5px; width: 20px; }
+    .fader-col.master-col { margin-left: 8px; padding-left: 8px; border-left: 1px solid #201e13; }
+    .fader-track { width: 6px; height: 68px; background: #141210; border-radius: 3px; position: relative; border: 1px solid rgba(255,255,255,0.10); cursor: ns-resize; }
+    .fader-thumb { width: 18px; height: 7px; border-radius: 2px; position: absolute; left: 50%; transform: translateX(-50%); cursor: ns-resize; user-select: none; touch-action: none; box-shadow: 0 1px 3px rgba(0,0,0,0.7); transition: bottom 0.12s, filter 0.1s; }
+    .fader-thumb:hover { filter: brightness(1.3); }
+    .fader-thumb.dragging { transition: none; filter: brightness(1.5); }
+    .fader-col.master-col .fader-thumb { background: #b0b0b0; box-shadow: 0 0 4px rgba(255,255,255,0.18); }
+    .fader-name { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; font-weight: 700; color: var(--muted); letter-spacing: 0.3px; text-transform: uppercase; white-space: nowrap; text-align: center; }
+    .fader-col.master-col .fader-name { color: rgba(255,255,255,0.35); }
+
+    .pillars-section { padding: 60px 28px; background: var(--bg); }
+    .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .pillar-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 36px 32px; text-align: center; }
+    .pillar-card--highlight { background: #0f0f0d; border-color: var(--border); }
+    .pillar-icon { width: 80px; height: 80px; object-fit: contain; margin: 0 auto 20px; display: block; }
+    .pillar-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 10px; color: var(--text); letter-spacing: 0.2px; }
+    .pillar-card--highlight .pillar-title { color: var(--accent); }
+    .pillar-text { font-size: 14px; color: var(--muted); line-height: 1.65; margin: 0; }
+
+    section { padding: 88px 0; }
+    .section-bg { background: var(--bg2); }
+
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 14px; }
+    .feat-card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 28px; transition: border-color 0.25s, transform 0.2s; display: block; text-decoration: none; color: inherit; cursor: pointer; }
+    .feat-card:hover { border-color: var(--accent-border); transform: translateY(-2px); }
+    .feat-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+    .feat-card p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+    .feature-split { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .feature-split.rev .fs-img { order: -1; }
+    .fs-img { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .fs-img img { width: 100%; height: auto; display: block; }
+    .fs-txt p  { color: var(--muted); font-size: 15px; line-height: 1.75; margin-bottom: 20px; }
+    .fs-txt h2 { font-size: clamp(28px, 3.5vw, 44px); }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .check-list li { display: flex; gap: 10px; font-size: 14px; color: var(--muted); }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+    .how-grid { display: grid; grid-template-columns: repeat(3,1fr); }
+    .step { padding: 28px 26px; position: relative; }
+    .step:not(:last-child)::after { content: '→'; position: absolute; right: -2px; top: 34px; color: var(--accent); font-size: 22px; }
+    .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: var(--accent); letter-spacing: 2px; margin-bottom: 12px; }
+    .step p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit,minmax(270px,1fr)); gap: 14px; }
+    .testi { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 28px; }
+    .stars { color: var(--accent); font-size: 13px; margin-bottom: 14px; letter-spacing: 3px; }
+    .testi p  { color: var(--text); font-size: 14px; line-height: 1.75; margin-bottom: 20px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--accent-dim); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--accent); flex-shrink: 0; }
+    .author-name { font-size: 13px; font-weight: 600; }
+    .author-role { font-size: 12px; color: var(--muted); }
+
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; max-width: 880px; margin: 0 auto; }
+    .price-card { background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 30px; position: relative; }
+    .price-card.featured { border: 2px solid var(--accent); background: rgba(226,206,22,0.04); }
+    .popular-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #0c0b00; font-size: 10px; font-weight: 800; padding: 4px 16px; border-radius: 20px; letter-spacing: 0.8px; text-transform: uppercase; white-space: nowrap; font-family: 'Barlow Condensed', sans-serif; }
+    .price-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; margin-bottom: 4px; letter-spacing: 0.5px; }
+    .price-desc { color: var(--muted); font-size: 13px; }
+    .price-amount { font-family: 'Bebas Neue', sans-serif; font-size: 56px; margin: 18px 0 2px; line-height: 1; color: var(--text); }
+    .price-amount sup { font-size: 24px; vertical-align: super; margin-right: 2px; font-family: 'Barlow Condensed', sans-serif; }
+    .price-period { color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+    .price-tax { display: block; margin-top: 4px; font-size: 11px; opacity: 0.8; }
+    .price-features { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 9px; }
+    .price-features li { font-size: 13px; color: var(--muted); display: flex; gap: 9px; }
+    .price-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .price-features li.off { color: rgba(122,117,112,0.6); }
+    .price-features li.off::before { content: '✕'; color: rgba(122,117,112,0.5); }
+    .btn-full { width: 100%; padding: 12px; border-radius: 7px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center; text-decoration: none; display: block; transition: opacity 0.2s; }
+    .btn-full.primary { background: var(--accent); color: #0c0b00; border: none; }
+    .btn-full.outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
+    .btn-full.primary:hover { opacity: 0.86; }
+    .btn-full.outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Toggle mensuel / annuel */
+    .billing-toggle { display: flex; align-items: center; justify-content: center; gap: 0; margin: 18px 0 4px; }
+    .toggle-btn { padding: 5px 16px; font-size: 11px; font-weight: 700; cursor: pointer; border: 1px solid rgba(255,255,255,0.14); font-family: 'Inter', sans-serif; transition: all 0.18s; background: transparent; color: var(--muted); }
+    .toggle-btn:first-child { border-radius: 6px 0 0 6px; }
+    .toggle-btn:last-child  { border-radius: 0 6px 6px 0; }
+    .toggle-btn.active { background: var(--accent); color: #0c0b00; border-color: var(--accent); }
+    .saving-pill { background: #22c55e; color: #000; font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 20px; margin-left: 8px; display: none; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.5px; white-space: nowrap; }
+    .saving-pill.visible { display: inline-flex; align-items: center; }
+
+
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { padding: 20px 0; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: color 0.2s; user-select: none; }
+    .faq-q:hover { color: var(--accent); }
+    .faq-arrow { color: var(--muted); font-size: 22px; transition: transform 0.25s; flex-shrink: 0; line-height: 1; }
+    .faq-item.open .faq-arrow { transform: rotate(45deg); color: var(--accent); }
+    .faq-a { color: var(--muted); font-size: 14px; line-height: 1.75; padding-bottom: 20px; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    .cta-final { text-align: center; padding: 100px 28px; background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(226,206,22,0.1) 0%, transparent 70%); border-top: 1px solid var(--border); }
+
+
+
+    @media (max-width: 900px) {
+      .feature-split { grid-template-columns: 1fr; gap: 24px; }
+      .feature-split.rev .fs-img { order: unset; }
+      .fs-img video, .fs-img img { max-height: 220px; object-fit: cover; width: 100%; }
+      .feature-split .fs-txt h2 { font-size: 32px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+      .how-grid { grid-template-columns: 1fr; }
+      .step::after { display: none; }
+    }
+    @media (max-width: 680px) { nav { padding: 0 14px; gap: 8px; } .nav-desktop { display: none; } /* Le titre du hero contient un mot long et INSECABLE (« instantanement, »
+    en francais, « instantaneamente, » en portugais qui est pire) : a 52px il
+    depassait la largeur d'un telephone et se coupait en deux lignes. On
+    recupere d'abord de la place (padding 40 -> 20), puis on fait varier la
+    taille avec l'ecran. 12,5vw garde le mot portugais — le plus large, 6,62
+    px de large par px de police — sur une seule ligne jusqu'a 300 px. */
+ .hero-inner { padding: 30px 20px 72px; }
+ h1 { font-size: clamp(34px, 12.5vw, 52px); }
+ /* Sur telephone : appels a l'action et ligne « Gratuit pour demarrer »
+    centres, deux elements decoratifs retires pour alleger l'ecran. */
+ .hero-content .hero-ctas { justify-content: center; }
+ .hero-content .hero-meta { text-align: center; }
+ /* Sections entieres retirees du telephone : la fenetre de demo et
+    « Operationnel en 3 etapes ». Aucun JS n'y est attache, seulement des
+    animations CSS, qui cessent avec display:none. Ces deux regles rendent
+    inutiles les masquages plus fins poses juste avant (.demo-bar-title et
+    le tag « Demarrage rapide »), qui ont donc ete retires. */
+ .demo-wrap { display: none; }
+ section[aria-labelledby="how-title"] { display: none; } .btn-nav-cta { display: none; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 720px) { .demo-body { grid-template-columns: 1fr; } .demo-akai-panel { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); } }
+    @media (max-width: 560px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
+
+    .synop-chain { display: flex; align-items: center; justify-content: center; gap: 0; max-width: 920px; margin: 0 auto; }
+    .synop-node { background: #0d0c09; border: 1px solid rgba(226,206,22,0.15); border-radius: 12px; padding: 22px 16px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 140px; transition: border-color 0.25s, box-shadow 0.25s; flex-shrink: 0; }
+    .synop-node:hover { border-color: rgba(226,206,22,0.45); box-shadow: 0 0 24px rgba(226,206,22,0.08); }
+    .synop-node.synop-accent { border-color: var(--accent); background: rgba(226,206,22,0.04); box-shadow: 0 0 28px rgba(226,206,22,0.13); }
+    .synop-icon { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; }
+    .synop-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.5px; color: var(--text); text-align: center; }
+    .synop-sub { font-size: 10px; color: var(--muted); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; text-transform: uppercase; text-align: center; line-height: 1.3; }
+    .synop-connector { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 0 6px; flex-shrink: 0; }
+    .synop-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(226,206,22,0.55); white-space: nowrap; }
+    .synop-line { width: 70px; height: 2px; background: rgba(226,206,22,0.12); border-radius: 1px; position: relative; overflow: visible; }
+    .synop-line::after { content: ''; position: absolute; right: -6px; top: -4px; border-left: 7px solid rgba(226,206,22,0.35); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+    .synop-dot { position: absolute; width: 10px; height: 2px; background: var(--accent); border-radius: 1px; top: 0; animation: synop-flow 1.8s linear infinite; opacity: 0; box-shadow: 0 0 4px var(--accent); }
+    .synop-dot:nth-child(2) { animation-delay: 0.6s; }
+    .synop-dot:nth-child(3) { animation-delay: 1.2s; }
+    @keyframes synop-flow { 0% { left: -10px; opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { left: 72px; opacity: 0; } }
+    .synop-price { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; color: var(--accent); letter-spacing: 0.3px; margin-bottom: -2px; }
+    .synop-price span { font-size: 11px; font-weight: 600; color: rgba(226,206,22,0.6); }
+    .synop-ctrl-states { width: 46px; height: 46px; position: relative; }
+    .synop-ctrl-state { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.4s ease; pointer-events: none; }
+    .synop-ctrl-state.active { opacity: 1; pointer-events: auto; }
+    .synop-nav-dots { display: flex; gap: 6px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+    .synop-nav-dot { padding: 4px 12px; border-radius: 999px; cursor: pointer; font-size: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.5px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--muted); transition: background 0.18s, border-color 0.18s, color 0.18s; white-space: nowrap; }
+    .synop-nav-dot:hover { background: rgba(226,206,22,0.08); color: var(--text); border-color: rgba(226,206,22,0.3); }
+    .synop-nav-dot.active { background: rgba(226,206,22,0.12); border-color: var(--accent); color: var(--accent); }
+    @media (max-width: 860px) { .synop-chain { flex-direction: column; gap: 0; } .synop-connector { flex-direction: row; padding: 4px 0; gap: 8px; } .synop-line { width: 2px; height: 44px; } .synop-line::after { right: -4px; top: auto; bottom: -6px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid rgba(226,206,22,0.35); border-bottom: none; } .synop-dot { width: 2px; height: 10px; left: 0; animation-name: synop-flow-v; } @keyframes synop-flow-v { 0% { top: -10px; opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { top: 46px; opacity: 0; } } }
+  
+    /* Lang dropdown */
+    .lang-selector { position: relative; display: inline-flex; }
+    .lang-selector-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: transparent; border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 6px; padding: 5px 10px; color: var(--muted);
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      cursor: pointer; transition: all 0.18s; white-space: nowrap;
+      font-family: inherit;
+    }
+    .lang-selector-btn:hover,
+    .lang-selector:focus-within .lang-selector-btn { border-color: var(--accent); color: var(--accent); }
+    .lang-chevron { font-size:9px; opacity:.5; margin-left:2px; transition: transform .18s; display:inline-block; }
+    .lang-selector:hover .lang-chevron,
+    .lang-selector:focus-within .lang-chevron { transform: rotate(180deg); opacity:.8; }
+    .lang-dropdown {
+      opacity: 0; visibility: hidden; transform: translateY(-4px);
+      transition: opacity .16s ease, visibility .16s ease, transform .16s ease;
+      transition-delay: .28s;
+      position: absolute; top: calc(100% + 7px); right: 0;
+      background: #141414; border: 1px solid #2a2a2a; border-radius: 8px;
+      padding: 6px 0; min-width: 162px; z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    }
+    .lang-selector:hover .lang-dropdown,
+    .lang-selector:focus-within .lang-dropdown { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+    /* Passerelle invisible : comble les 7px de vide sous le bouton, sinon le
+       :hover se perd pendant que la souris descend vers le menu. */
+    .lang-selector:hover::after,
+    .lang-selector:focus-within::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 9px; }
+    .lang-dropdown > a, .lang-dropdown > span {
+      display: flex; align-items: center; gap: 9px;
+      padding: 7px 14px; font-size: 12.5px; font-weight: 600;
+      color: var(--muted); text-decoration: none; letter-spacing: .2px;
+      transition: color .15s, background .15s; white-space: nowrap;
+    }
+    .lang-dropdown > a:hover { color: var(--accent); background: rgba(255,215,0,.05); }
+    .lang-dropdown > span { color: var(--accent); cursor: default; }
+    /* Le drapeau est decoratif : c'est le nom de la langue qui porte le sens. */
+    .lang-flag { display: inline-flex; width: 20px; height: 13px; flex-shrink: 0;
+      border-radius: 2px; overflow: hidden; box-shadow: 0 0 0 1px rgba(255,255,255,.14); }
+    /* Le SVG est sorti du flux : laissé dans le flux, sa taille intrinsèque
+       30x20 remontait dans le calcul de la boîte et le width:20px ci-dessus
+       n'était plus respecté — le drapeau n'était pas peint. */
+    .lang-flag { position: relative; }
+    .lang-flag > svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; }
+    .lang-check { margin-left: auto; font-size: 11px; color: var(--accent); }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+    }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+    .nl-form {
+      display: flex;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0e0d09;
+      transition: border-color .2s;
+    }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] {
+      background: transparent;
+      border: none;
+      padding: 10px 16px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      outline: none;
+      width: 210px;
+    }
+    .nl-form input[type="email"]::placeholder { color: var(--muted); }
+    .nl-form button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 10px 18px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .18s;
+    }
+    .nl-form button:hover { background: #f0dc3a; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy {
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      letter-spacing: .3px;
+    }
+    @media (max-width: 820px) {
+      footer { padding: 28px 20px 16px; }
+      .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-nl { align-items: flex-start; }
+      .nl-form input[type="email"] { width: 160px; }
+    }
+    /* ── Pack MyStrow (boîtier + licence), sous les tarifs ── */
+    .pack-card { max-width: 900px; margin: 56px auto 0; display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: center; text-align: left; background: #141310; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px 36px; }
+    .pack-card img { width: 100%; height: auto; display: block; }
+    .pack-card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; margin: 0 0 8px; }
+    .pack-lead { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+    .pack-opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .pack-opt { border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 10px; text-align: center; text-decoration: none; color: var(--text); transition: border-color 0.18s; }
+    .pack-opt:hover { border-color: var(--accent); }
+    .pack-opt-name { display: block; font-size: 12px; color: var(--muted); }
+    .pack-opt-price { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 32px; line-height: 1.1; }
+    .pack-ttc { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+    .pack-opt-hint { display: block; font-size: 11px; color: var(--accent); }
+    .pack-foot { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .pack-note { color: var(--muted); font-size: 12px; }
+    @media (max-width: 820px) {
+      .pack-card { grid-template-columns: 1fr; padding: 26px 22px; gap: 20px; }
+      .pack-card img { max-width: 260px; margin: 0 auto; }
+    }
+    @media (max-width: 480px) { .pack-opts { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="/mobile-nav.css?v=6">
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <nav aria-label="Navigazione principale">
+    <a href="./" class="nav-logo" aria-label="MyStrow — Home">MY<em>STROW</em></a>
+    <div class="nav-center nav-desktop">
+      <div class="nav-dropdown-wrap">
+        <a href="#features">Funzionalità <span class="nav-chevron">▾</span></a>
+        <div class="nav-mega">
+          <a class="mega-item" href="dmx-lighting-software"><div class="mega-icon">⚡</div><div><div class="mega-title">Software luci DMX</div><div class="mega-desc">PC + nodo DMX. Controllo totale del palco in tempo reale.</div></div></a>
+          <a class="mega-item" href="../en/shop"><div class="mega-icon">🎹</div><div><div class="mega-title">Hardware compatibile</div><div class="mega-desc">Pensato per l'AKAI. Ogni pad e ogni fader ha la sua funzione diretta.</div></div></a>
+          <a class="mega-item" href="../en/ai-lighting"><div class="mega-icon">✨</div><div><div class="mega-title">Luci con IA</div><div class="mega-desc">L'IA prende il controllo di tutto il palco o ti aiuta a programmare i tuoi show.</div></div></a>
+          <a class="mega-item" href="../en/light-programming"><div class="mega-icon">🎬</div><div><div class="mega-title">Programmazione luci</div><div class="mega-desc">Timeline visiva, keyframe, clip modificabili. Componi i tuoi show in anticipo.</div></div></a>
+          <a class="mega-item" href="../en/audio-video-player"><div class="mega-icon">🎵</div><div><div class="mega-title">Player audio e video</div><div class="mega-desc">Playlist e proiezioni gestite dalla stessa interfaccia.</div></div></a>
+          <a class="mega-item" href="../en/stage-plot"><div class="mega-icon">🗺️</div><div><div class="mega-title">Pianta del palco interattiva</div><div class="mega-desc">Visualizza e controlla i gruppi di proiettori con un clic o un fader.</div></div></a>
+        </div>
+      </div>
+      <a href="#pricing">Prezzi</a>
+      <a href="../en/shop">Shop</a>
+      <a href="#faq">FAQ</a>
+      <a href="../en/blog">Tutorial</a>
+    </div>
+    <div class="nav-right">
+            <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="display:flex;align-items:center;color:#888;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg></a>
+      <div class="lang-selector" tabindex="0">
+      <button class="lang-selector-btn" aria-label="Scegli la lingua">
+        <span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/><rect x="20" width="10" height="20" fill="#ce2b37"/></svg></span>
+        IT <span class="lang-chevron">&#9660;</span>
+      </button>
+      <div class="lang-dropdown">
+        <a href="../" lang="fr" data-lang="fr" data-name="Français"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#002654"/><rect x="20" width="10" height="20" fill="#ce1126"/></svg></span>Français</a>
+        <a href="../en/" lang="en" data-lang="en" data-name="English"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4.6"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2.4"/><path d="M15 0V20M0 10H30" stroke="#fff" stroke-width="7.4"/><path d="M15 0V20M0 10H30" stroke="#c8102e" stroke-width="4.4"/></svg></span>English</a>
+        <a href="../de/" lang="de" data-lang="de" data-name="Deutsch"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#ffce00"/><rect width="30" height="13.34" fill="#dd0000"/><rect width="30" height="6.67" fill="#000"/></svg></span>Deutsch</a>
+        <a href="../es/" lang="es" data-lang="es" data-name="Español"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg></span>Español</a>
+        <a href="../pt/" lang="pt" data-lang="pt" data-name="Português"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.4" fill="#ffe900" stroke="#046a38" stroke-width="0.6"/><rect x="10.2" y="7.7" width="3.6" height="4.6" rx="0.6" fill="#fff" stroke="#da291c" stroke-width="0.7"/></svg></span>Português</a>
+        <span lang="it" data-lang="it" data-name="Italiano" aria-current="true"><span class="lang-flag" aria-hidden="true"><svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/><rect x="20" width="10" height="20" fill="#ce2b37"/></svg></span>Italiano<span class="lang-check" aria-hidden="true">✓</span></span>
+      </div>
+    </div>
+      <a href="https://mystrow.fr/compte" class="nav-signin nav-desktop" target="_blank" rel="noopener noreferrer">Accedi</a>
+      <a href="#download" class="btn-nav-cta">Scarica ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="badge"><span class="badge-dot"></span>Software luci DMX · Con intelligenza artificiale</div>
+      <h1 id="hero-title">Controlla tutto,<br>all'istante,<br><em>MyStrow.</em></h1>
+      <p class="hero-sub">Software DMX tutto in uno. Luci assistite dall'IA integrate. Un potente player audio e video per dare libero sfogo alla tua creatività.</p>
+      <div class="hero-ctas">
+        <a id="dl-btn-hero" href="#download" class="btn-primary" style="padding:13px 32px;font-size:16px;">Scarica gratis ↓</a>
+        <a href="#features" class="btn-outline" style="padding:13px 32px;font-size:16px;">Scopri le funzionalità</a>
+      </div>
+      <p class="hero-meta">Inizia gratis<span>·</span>Windows 10/11<span>·</span>macOS</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTERACTIVE DEMO -->
+<div class="demo-wrap">
+  <div class="demo-window" aria-label="Demo MyStrow — pianta del palco interattiva + controller AKAI">
+    <div class="demo-bar">
+      <div class="d-dot" style="background:#ff5f57"></div>
+      <div class="d-dot" style="background:#ffbd2e"></div>
+      <div class="d-dot" style="background:#28ca41"></div>
+      <span class="demo-bar-title">MyStrow 3.0 · Show dal vivo</span>
+      <span class="demo-bar-live"><span class="demo-bar-live-dot"></span>LIVE</span>
+      <span style="color:rgba(255,255,255,0.35);font-size:11px;margin-left:10px;">· Prendi il controllo</span>
+    </div>
+
+    <div class="demo-body">
+      <!-- AKAI APC mini mk2 — LEFT -->
+      <div class="demo-akai-panel">
+        <div class="demo-panel-label">AKAI APC mini mk2</div>
+        <div class="akai-body">
+          <div class="akai-branding">
+            <span class="akai-logo">AKAI professional</span>
+            <span class="akai-model">APC mini mk2</span>
+          </div>
+          <div class="akai-pads-section">
+            <div id="pads-grid" class="akai-pads-grid" aria-hidden="true"></div>
+            <div id="fx-col" class="akai-fx-col" aria-hidden="true"></div>
+          </div>
+          <div class="akai-faders-section">
+            <div class="faders-row" id="faders-row"></div>
+          </div>
+        </div>
+        <div class="drag-hint">↕ Muovi i fader · clic sul pad = colore</div>
+      </div>
+
+      <!-- Stage plot — RIGHT -->
+      <div class="demo-pfe-panel">
+        <div class="demo-panel-label">Pianta del palco</div>
+        <canvas id="planfeu-canvas" width="400" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PILLARS -->
+<section class="pillars-section">
+  <div class="pillars-grid">
+    <div class="pillar-card">
+      <img src="../Logo_DMX512.webp" alt="DMX 512" class="pillar-icon">
+      <h3 class="pillar-title">Luci</h3>
+      <p class="pillar-text">Compatibile con tutti i proiettori DMX 512. Oltre 5.000 proiettori nella libreria integrata.</p>
+    </div>
+    <div class="pillar-card pillar-card--highlight">
+      <img src="../IA.webp" alt="Luci con IA" class="pillar-icon">
+      <h3 class="pillar-title">Luci con IA</h3>
+      <p class="pillar-text">Risparmia tempo. L'IA analizza, propone e ottimizza le tue luci DMX 512 in tempo reale.</p>
+    </div>
+    <div class="pillar-card">
+      <img src="../playeraudiovideo-3.webp" alt="Player audio e video" class="pillar-icon">
+      <h3 class="pillar-title">Player audio e video</h3>
+      <p class="pillar-text">Riproduci i tuoi media direttamente in MyStrow. Niente più salti tra un'applicazione e l'altra.</p>
+    </div>
+    <div class="pillar-card">
+      <img src="../programme.webp" alt="Programma" class="pillar-icon">
+      <h3 class="pillar-title">Programmazione</h3>
+      <p class="pillar-text">Programma, regola, lancia. Un'interfaccia pensata per andare veloce restando precisi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section aria-labelledby="how-title">
+  <div class="wrap" style="text-align:center">
+    <p class="section-tag">Avvio rapido</p>
+    <h2 id="how-title">Operativo in 3 passaggi</h2>
+    <p class="section-sub" style="margin:0 auto 56px">Dall'installazione al primo show, in meno di 10 minuti.</p>
+    <div class="how-grid">
+      <div class="step">
+        <div class="step-num">PASSO 01</div>
+        <h3>Collega l'hardware</h3>
+        <p>Collega il tuo <strong>controller MIDI</strong>, uno Stream Deck, o usa semplicemente tastiera e mouse. MyStrow riconosce automaticamente il tuo hardware: colleghi ed è pronto.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">PASSO 02</div>
+        <h3>Patcha i tuoi proiettori</h3>
+        <p>Crea il tuo patch DMX in pochi clic grazie a una libreria integrata di <strong>oltre 5.000 proiettori</strong>. Indirizzi, modalità, gruppi: si configura tutto in fretta, senza fatica.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">PASSO 03</div>
+        <h3>Vai in scena</h3>
+        <p>Scene precaricate, effetti pronti all'uso, livelli impostati. È tutto in ordine: premi play. <strong>Lo show può cominciare.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL CHAIN -->
+<section class="section-bg" aria-label="Catena del segnale MyStrow">
+  <div class="wrap" style="text-align:center">
+    <p class="section-tag">Hardware necessario</p>
+    <h2>Il tuo impianto luci,<br>a colpo d'occhio</h2>
+    <p class="section-sub" style="margin:0 auto 52px">Compatibile con qualsiasi proiettore DMX: collega, avvia, illumina.</p>
+    <div class="synop-chain">
+
+      <!-- Controller — switchable -->
+      <div class="synop-node" id="synop-ctrl-node">
+        <div class="synop-ctrl-states">
+          <div class="synop-ctrl-state active">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <rect x="3" y="8" width="40" height="30" rx="4" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
+              <rect x="8"  y="13" width="6" height="6" rx="1.5" fill="rgba(226,206,22,0.75)"/>
+              <rect x="16" y="13" width="6" height="6" rx="1.5" fill="rgba(255,100,100,0.7)"/>
+              <rect x="24" y="13" width="6" height="6" rx="1.5" fill="rgba(100,200,255,0.7)"/>
+              <rect x="32" y="13" width="6" height="6" rx="1.5" fill="rgba(180,100,255,0.7)"/>
+              <rect x="8"  y="21" width="6" height="6" rx="1.5" fill="rgba(100,220,100,0.6)"/>
+              <rect x="16" y="21" width="6" height="6" rx="1.5" fill="rgba(226,206,22,0.4)"/>
+              <rect x="24" y="21" width="6" height="6" rx="1.5" fill="rgba(255,150,50,0.6)"/>
+              <rect x="32" y="21" width="6" height="6" rx="1.5" fill="rgba(255,100,180,0.5)"/>
+              <rect x="8"  y="30" width="30" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
+              <rect x="18" y="29" width="10" height="6" rx="2" fill="rgba(200,200,200,0.55)"/>
+            </svg>
+          </div>
+          <div class="synop-ctrl-state">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <rect x="4" y="10" width="38" height="26" rx="5" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
+              <rect x="9"  y="15" width="8" height="6" rx="1.5" fill="rgba(100,200,255,0.65)"/>
+              <rect x="19" y="15" width="8" height="6" rx="1.5" fill="rgba(226,206,22,0.7)"/>
+              <rect x="29" y="15" width="8" height="6" rx="1.5" fill="rgba(255,100,100,0.65)"/>
+              <rect x="9"  y="23" width="8" height="6" rx="1.5" fill="rgba(180,100,255,0.5)"/>
+              <rect x="19" y="23" width="8" height="6" rx="1.5" fill="rgba(100,220,100,0.6)"/>
+              <rect x="29" y="23" width="8" height="6" rx="1.5" fill="rgba(255,150,50,0.5)"/>
+              <rect x="6"  y="11" width="3"  height="24" rx="1.5" fill="rgba(255,255,255,0.06)"/>
+            </svg>
+          </div>
+          <div class="synop-ctrl-state">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <rect x="16" y="4" width="14" height="38" rx="5" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
+              <rect x="19" y="9"  width="8" height="3" rx="1.5" fill="rgba(226,206,22,0.5)"/>
+              <circle cx="23" cy="19" r="2.5" fill="rgba(226,206,22,0.7)"/>
+              <circle cx="23" cy="27" r="2"   fill="rgba(255,100,100,0.65)"/>
+              <circle cx="18" cy="27" r="2"   fill="rgba(100,200,255,0.55)"/>
+              <circle cx="28" cy="27" r="2"   fill="rgba(100,220,100,0.55)"/>
+              <circle cx="23" cy="33" r="2"   fill="rgba(226,206,22,0.3)"/>
+            </svg>
+          </div>
+          <div class="synop-ctrl-state">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <rect x="3" y="14" width="40" height="20" rx="3" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
+              <rect x="7"  y="18" width="5" height="4" rx="1" fill="rgba(226,206,22,0.35)"/>
+              <rect x="14" y="18" width="5" height="4" rx="1" fill="rgba(226,206,22,0.2)"/>
+              <rect x="21" y="18" width="5" height="4" rx="1" fill="rgba(226,206,22,0.35)"/>
+              <rect x="28" y="18" width="5" height="4" rx="1" fill="rgba(226,206,22,0.2)"/>
+              <rect x="35" y="18" width="5" height="4" rx="1" fill="rgba(226,206,22,0.35)"/>
+              <rect x="7"  y="24" width="5" height="4" rx="1" fill="rgba(226,206,22,0.2)"/>
+              <rect x="14" y="24" width="5" height="4" rx="1" fill="rgba(226,206,22,0.35)"/>
+              <rect x="21" y="24" width="5" height="4" rx="1" fill="rgba(226,206,22,0.2)"/>
+              <rect x="28" y="24" width="5" height="4" rx="1" fill="rgba(226,206,22,0.35)"/>
+              <rect x="35" y="24" width="5" height="4" rx="1" fill="rgba(226,206,22,0.2)"/>
+              <rect x="13" y="30" width="20" height="3" rx="1.5" fill="rgba(226,206,22,0.28)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="synop-name" id="synop-ctrl-name">AKAI / NOVATION</div>
+        <div class="synop-sub" id="synop-ctrl-sub">Controller MIDI</div>
+      </div>
+      <div class="synop-connector">
+        <div class="synop-tag" id="synop-ctrl-proto">USB</div>
+        <div class="synop-line">
+          <div class="synop-dot"></div>
+          <div class="synop-dot"></div>
+          <div class="synop-dot"></div>
+        </div>
+      </div>
+
+      <!-- PC / MyStrow -->
+      <div class="synop-node synop-accent">
+        <div class="synop-icon">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <rect x="7" y="6" width="32" height="22" rx="2.5" stroke="rgba(226,206,22,0.7)" stroke-width="1.5" fill="rgba(226,206,22,0.06)"/>
+            <rect x="11" y="10" width="20" height="2" rx="1" fill="rgba(226,206,22,0.5)"/>
+            <rect x="11" y="14" width="8"  height="8" rx="1" fill="rgba(226,206,22,0.1)" stroke="rgba(226,206,22,0.3)" stroke-width="0.8"/>
+            <rect x="21" y="14" width="8"  height="8" rx="1" fill="rgba(226,206,22,0.06)" stroke="rgba(226,206,22,0.2)" stroke-width="0.8"/>
+            <rect x="11" y="24" width="14" height="1.5" rx="0.75" fill="rgba(226,206,22,0.2)"/>
+            <rect x="17" y="28" width="12" height="1.5" rx="0.75" fill="rgba(226,206,22,0.25)"/>
+            <path d="M4 30 L7 29 L39 29 L42 30 L43 33 H3 Z" fill="rgba(226,206,22,0.07)" stroke="rgba(226,206,22,0.4)" stroke-width="1.2"/>
+            <rect x="19" y="30.5" width="8" height="1.5" rx="0.75" fill="rgba(226,206,22,0.2)"/>
+          </svg>
+        </div>
+        <div class="synop-name">MyStrow</div>
+        <div class="synop-sub">Windows · macOS</div>
+      </div>
+
+      <div class="synop-connector">
+        <div class="synop-tag">RJ45</div>
+        <div class="synop-line">
+          <div class="synop-dot"></div>
+          <div class="synop-dot"></div>
+          <div class="synop-dot"></div>
+        </div>
+      </div>
+
+      <!-- DMX Node -->
+      <div class="synop-node">
+        <div class="synop-icon">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <rect x="5" y="11" width="36" height="22" rx="5" stroke="rgba(226,206,22,0.4)" stroke-width="1.5" fill="rgba(226,206,22,0.04)"/>
+            <circle cx="23" cy="20" r="4" fill="rgba(34,197,94,0.85)"/>
+            <circle cx="23" cy="20" r="7" fill="rgba(34,197,94,0.12)"/>
+            <rect x="10" y="28" width="7"  height="5" rx="1.5" fill="rgba(226,206,22,0.35)"/>
+            <rect x="19" y="28" width="7"  height="5" rx="1.5" fill="rgba(226,206,22,0.35)"/>
+            <rect x="28" y="28" width="7"  height="5" rx="1.5" fill="rgba(226,206,22,0.35)"/>
+            <rect x="7"  y="12" width="4"  height="3" rx="1" fill="rgba(255,255,255,0.12)"/>
+          </svg>
+        </div>
+        <div class="synop-name">Nodo DMX</div>
+        <div class="synop-sub">Art-Net → DMX</div>
+      </div>
+
+      <div class="synop-connector">
+        <div class="synop-tag">DMX512</div>
+        <div class="synop-line">
+          <div class="synop-dot"></div>
+          <div class="synop-dot"></div>
+          <div class="synop-dot"></div>
+        </div>
+      </div>
+
+      <!-- Fixtures -->
+      <div class="synop-node">
+        <div class="synop-icon">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <ellipse cx="23" cy="13" rx="9" ry="9" stroke="rgba(226,206,22,0.45)" stroke-width="1.5" fill="rgba(226,206,22,0.06)"/>
+            <circle cx="23" cy="13" r="4" fill="rgba(226,206,22,0.6)"/>
+            <circle cx="23" cy="13" r="2" fill="rgba(226,206,22,1)"/>
+            <path d="M15 21 L7 40 L39 40 L31 21" fill="rgba(226,206,22,0.06)" stroke="rgba(226,206,22,0.18)" stroke-width="1" stroke-linejoin="round"/>
+            <line x1="23" y1="4"  x2="23" y2="1"  stroke="rgba(226,206,22,0.3)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="30" y1="6"  x2="33" y2="3"  stroke="rgba(226,206,22,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="16" y1="6"  x2="13" y2="3"  stroke="rgba(226,206,22,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="synop-name">Proiettori DMX</div>
+        <div class="synop-sub">Luci da palco</div>
+      </div>
+
+    </div>
+    <div class="synop-nav-dots">
+      <div class="synop-nav-dot active" data-idx="0">AKAI / NOVATION</div>
+      <div class="synop-nav-dot" data-idx="1">StreamDeck</div>
+      <div class="synop-nav-dot" data-idx="2">Telecomando IR</div>
+      <div class="synop-nav-dot" data-idx="3">Tastiera</div>
+    </div>
+    <div style="margin-top:40px">
+      <a href="../en/shop" class="btn-outline" style="padding:13px 32px;font-size:15px;">Vedi l'hardware consigliato →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" aria-labelledby="feat-title">
+  <div class="wrap">
+    <p class="section-tag">Funzionalità</p>
+    <h2 id="feat-title">Tutto ciò che serve per<br>dominare il palco</h2>
+    <p class="section-sub">MyStrow riunisce in un solo software la potenza di un mixer luci, un player audio e video e un'IA creativa.</p>
+    <div class="features-grid">
+      <a class="feat-card" href="../en/stage-plot">
+        <div class="feat-icon" aria-hidden="true">🗺️</div>
+        <h3>Pianta del palco interattiva</h3>
+        <p>Visualizza i proiettori su una pianta del palco, raggruppali per zona e controlla ogni gruppo con un clic o un fader.</p>
+      </a>
+      <a class="feat-card" href="../en/audio-video-player">
+        <div class="feat-icon" aria-hidden="true">🎵</div>
+        <h3>Player audio e video integrato</h3>
+        <p>Gestisci playlist e proiezioni dalla stessa interfaccia. Modalità Manuale, IA, Programma e Light Play: tutto in uno, senza saltare da un'app all'altra.</p>
+      </a>
+      <a class="feat-card" href="../en/shop">
+        <div class="feat-icon" aria-hidden="true">🎹</div>
+        <h3>Pensato per l'AKAI APC mini mk2</h3>
+        <p>Progettato per l'AKAI APC mini mk2. Ogni pad e ogni fader ha la sua funzione diretta. Feedback LED in tempo reale, controllo immediato.</p>
+      </a>
+      <a class="feat-card" href="../en/light-programming">
+        <div class="feat-icon" aria-hidden="true">🎬</div>
+        <h3>Programmazione luci</h3>
+        <p>Componi i tuoi show in anticipo su una timeline visiva. Imposta keyframe di colore e intensità, modifica le clip con il drag-and-drop e sincronizza ogni effetto con precisione sulla musica.</p>
+      </a>
+      <a class="feat-card" href="dmx-lighting-software">
+        <div class="feat-icon" aria-hidden="true">⚡</div>
+        <h3>Software luci DMX</h3>
+        <p>Un PC Windows o un Mac, un'interfaccia USB-DMX o un nodo DMX Art-Net, e MyStrow. Compatibile con qualsiasi proiettore DMX: teste mobili, wash LED, PAR LED. Intensità, colori, strobo: tutto controllato da un'interfaccia pensata per i professionisti.</p>
+      </a>
+      <a class="feat-card" href="../en/ai-lighting">
+        <div class="feat-icon" aria-hidden="true">✨</div>
+        <h3>Luci con IA</h3>
+        <p>Attiva l'IA e lascia che gestisca tutto il palco: colori, intensità, transizioni. Oppure fatti aiutare a programmare i tuoi show più in fretta.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT — PATCH -->
+<section class="section-bg" aria-labelledby="patch-title">
+  <div class="wrap">
+    <div class="feature-split">
+      <div class="fs-txt">
+        <p class="section-tag">Patch DMX</p>
+        <h2 id="patch-title">Patch.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">I tuoi proiettori, i tuoi gruppi, in tempo reale.</span></h2>
+        <p>Configura gli indirizzi DMX, assegna i proiettori e organizza i gruppi in pochi clic. Ogni modifica appare subito sulla pianta del palco.</p>
+        <ul class="check-list">
+          <li>Patch completamente personalizzabile</li>
+          <li>Visualizzazione in tempo reale</li>
+          <li>Libreria integrata di oltre 5.000 proiettori</li>
+          <li>Importazione di proiettori da file QLC+ e GDTF</li>
+          <li>Compatibile con tutti i proiettori (PAR LED, teste mobili, barre LED, strobo, macchine del fumo…)</li>
+          <li>Indirizzamento automatico per gruppo</li>
+        </ul>
+      </div>
+      <div class="fs-img">
+        <video src="../patchvertical.webm" autoplay muted loop playsinline preload="auto"
+          style="width:100%;height:auto;border-radius:12px;display:block;object-fit:cover"
+          aria-label="Patch DMX personalizzabile in MyStrow"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT — TIMELINE -->
+<section aria-labelledby="timeline-title">
+  <div class="wrap">
+    <div class="feature-split rev">
+      <div class="fs-txt">
+        <p class="section-tag">Programmazione semplificata</p>
+        <h2 id="timeline-title">Programma.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">Timeline, clip. Al millisecondo.</span></h2>
+        <p>Componi le tue sequenze luci su una timeline visiva. Crea clip colorate e sincronizza ogni effetto con precisione sulla musica.</p>
+        <ul class="check-list">
+          <li>Visualizzazione in tempo reale</li>
+          <li>Clip modificabili con drag-and-drop</li>
+          <li>Sincronizzazione perfetta con la playlist</li>
+          <li>Importa ed esporta i tuoi lavori</li>
+        </ul>
+      </div>
+      <div class="fs-img">
+        <video src="../programmationlumiere.webm" autoplay muted loop playsinline preload="auto"
+          style="width:100%;height:auto;border-radius:12px;display:block;object-fit:cover"
+          aria-label="Programmazione luci in MyStrow"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT — AI -->
+<section class="section-bg" aria-labelledby="ia-title">
+  <div class="wrap">
+    <div class="feature-split">
+      <div class="fs-txt">
+        <p class="section-tag">Intelligenza artificiale</p>
+        <h2 id="ia-title">Analizza.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">L'IA ascolta la tua musica e guida il palco.</span></h2>
+        <p>MyStrow analizza in tempo reale l'energia, il ritmo e le frequenze dell'audio per generare automaticamente un'atmosfera luminosa coerente. Dal concerto intimo al festival, le luci si adattano.</p>
+        <ul class="check-list">
+          <li>Analisi continua di ritmo ed energia</li>
+          <li>Colori generati in base al genere musicale</li>
+          <li>Sincronizzazione automatica sui BPM</li>
+        </ul>
+      </div>
+      <div class="fs-img">
+        <video src="../ia_lumiere.webm" autoplay muted loop playsinline preload="auto"
+          style="width:100%;height:auto;border-radius:12px;display:block;object-fit:cover"
+          aria-label="Luci con IA in MyStrow"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT — 3D SIMULATOR -->
+<section aria-labelledby="simu3d-title">
+  <div class="wrap">
+    <div class="feature-split rev">
+      <div class="fs-txt">
+        <p class="section-tag">Simulatore 3D</p>
+        <h2 id="simu3d-title">Visualizza.<br><span style="color:var(--muted);font-size:0.65em;font-weight:600">Un simulatore 3D integrato, niente altro da scaricare.</span></h2>
+        <p>Il rendering 3D è incluso direttamente in MyStrow: proiettori, fasci e colori appaiono in tempo reale mentre programmi. Nessun software di terze parti, nessuna licenza in più, nessuna esportazione.</p>
+        <ul class="check-list">
+          <li>Simulatore 3D integrato, niente altro da installare</li>
+          <li>Fasci volumetrici, gobo e haze in tempo reale</li>
+          <li>Scenografie pronte all'uso</li>
+          <li>Prepara e verifica il tuo show senza l'attrezzatura</li>
+        </ul>
+      </div>
+      <div class="fs-img">
+        <video src="../simulateur3d.webm" autoplay muted loop playsinline preload="auto"
+          style="width:100%;height:auto;border-radius:12px;display:block;object-fit:cover"
+          aria-label="Simulatore 3D integrato in MyStrow"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-bg" aria-labelledby="testi-title">
+  <div class="wrap">
+    <p class="section-tag">Testimonianze</p>
+    <h2 id="testi-title">Cosa dicono i tecnici luci</h2>
+    <p class="section-sub">Dalle sale concerto ai festival, MyStrow accompagna i professionisti delle luci.</p>
+    <div class="testimonials">
+      <article class="testi">
+        <div class="stars" aria-label="5 stelle">★★★★★</div>
+        <p>"Finalmente un software che capisce come lavora un tecnico luci. La sincronizzazione automatica sui BPM e le sequenze IA mi hanno fatto risparmiare ore di preproduzione."</p>
+        <div class="testi-author">
+          <div class="avatar" aria-hidden="true">TL</div>
+          <div><div class="author-name">Thomas L.</div><div class="author-role">Tecnico luci, sala concerti, Lione</div></div>
+        </div>
+      </article>
+      <article class="testi">
+        <div class="stars" aria-label="5 stelle">★★★★★</div>
+        <p>"Il controllo live con l'AKAI APC mini è una rivoluzione. Lancio le scene come un DJ lancia i loop. Reattivissimo, zero ritardo."</p>
+        <div class="testi-author">
+          <div class="avatar" aria-hidden="true">SM</div>
+          <div><div class="author-name">Sarah M.</div><div class="author-role">DJ e VJ, club e festival</div></div>
+        </div>
+      </article>
+      <article class="testi">
+        <div class="stars" aria-label="5 stelle">★★★★★</div>
+        <p>"La pianta del palco visiva e la gestione dei gruppi semplificano enormemente i grandi impianti. Risparmio un sacco di tempo a ogni evento."</p>
+        <div class="testi-author">
+          <div class="avatar" aria-hidden="true">MK</div>
+          <div><div class="author-name">Marc K.</div><div class="author-role">Tecnico audio e luci, eventi</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMMENDED HARDWARE -->
+<section aria-labelledby="hardware-title">
+  <div class="wrap" style="text-align:center">
+    <p class="section-tag">Hardware consigliato</p>
+    <h2 id="hardware-title">La configurazione ideale per MyStrow</h2>
+    <p class="section-sub" style="margin:0 auto 52px">Funziona tutto anche da tastiera, ma questo trio offre la migliore esperienza live.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;max-width:900px;margin:0 auto;">
+      <div class="pillar-card">
+        <div style="font-size:40px;line-height:1;margin-bottom:14px">🎛️</div>
+        <h3 class="pillar-title">AKAI APC mini mk2</h3>
+        <p class="pillar-text">Controller MIDI: 8×8 pad LED + 9 fader. Il riferimento per il live.</p>
+      </div>
+      <div class="pillar-card pillar-card--highlight">
+        <div style="font-size:40px;line-height:1;margin-bottom:14px">🌐</div>
+        <h3 class="pillar-title">Nodo ArtNet / DMX</h3>
+        <p class="pillar-text">Box Ethernet → DMX512, IP fisso, nessun driver. La scelta consigliata per la produzione.</p>
+      </div>
+      <div class="pillar-card">
+        <div style="font-size:40px;line-height:1;margin-bottom:14px">🔌</div>
+        <h3 class="pillar-title">Nodo ArtNet USB</h3>
+        <p class="pillar-text">Un vero nodo ArtNet, ma via USB: nessuna scheda Ethernet necessaria. Per i PC con sola porta USB.</p>
+      </div>
+    </div>
+    <div style="margin-top:44px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="../en/shop" class="btn-primary" style="padding:13px 32px;font-size:15px;">Scopri l'hardware →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap" style="text-align:center">
+    <p class="section-tag">Prezzi</p>
+    <h2 id="pricing-title">Semplici e trasparenti</h2>
+    <p class="section-sub" style="margin:0 auto 56px">Inizia gratis, passa a Pro quando sei pronto. 15 giorni di prova.</p>
+        <div class="pricing-grid">
+
+      <!-- FREE -->
+      <div class="price-card">
+        <div class="price-name">Gratis</div>
+        <div class="price-desc">Nessuna carta di credito richiesta</div>
+        <div class="price-amount" style="font-size:42px;margin:18px 0 2px">0 €</div>
+        <div class="price-period">15 giorni di accesso completo</div>
+        <ul class="price-features">
+          <li>Controllo luci in tempo reale</li>
+          <li>Player audio e video</li>
+          <li>Luci IA avanzate</li>
+          <li>Programmazione luci</li>
+          <li class="off">Nessuna uscita DMX</li>
+        </ul>
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-full outline" target="_blank" rel="noopener noreferrer">Scarica MyStrow</a>
+      </div>
+
+      <!-- PRO — toggle -->
+      <div class="price-card featured">
+        <div class="popular-badge">IL PIÙ SCELTO</div>
+        <div class="price-name">Pro</div>
+        <div class="price-desc">Per tecnici e operatori</div>
+
+        <div class="billing-toggle">
+          <button class="toggle-btn"        id="toggle-monthly" onclick="setPricing(false)">Mensile</button>
+          <button class="toggle-btn active" id="toggle-annual"  onclick="setPricing(true)">Annuale</button>
+          <span class="saving-pill visible" id="saving-pill">−50%</span>
+        </div>
+
+        <div class="price-amount" id="pro-price"><sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">.99</span></div>
+        <div class="price-period" id="pro-period">IVA escl. / mese · fatturato 119,88 €/anno<span class="price-tax">11,99 €/mese IVA incl. in Francia · IVA in base al tuo paese, calcolata al pagamento</span></div>
+
+        <ul class="price-features">
+          <li>Controllo luci in tempo reale</li>
+          <li>Player audio e video</li>
+          <li>Luci IA avanzate</li>
+          <li>Programmazione luci</li>
+          <li>Uscita DMX</li>
+          <li>Attivazione su 2 computer</li>
+          <li>Aggiornamenti inclusi</li>
+        </ul>
+        <a id="pro-cta" href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" class="btn-full primary" target="_blank" rel="noopener noreferrer">Abbonati a MyStrow PRO</a>
+      </div>
+
+      <!-- LIFETIME -->
+      <div class="price-card">
+        <div class="popular-badge" style="background:var(--muted);color:#fff">MIGLIOR AFFARE</div>
+        <div class="price-name">Lifetime</div>
+        <div class="price-desc">Accesso a vita · pagamento unico</div>
+        <div class="price-amount"><sup>€</sup>299<span style="font-size:0.55em;vertical-align:super">.99</span></div>
+        <div class="price-period">IVA escl. · una volta sola · accesso a vita<span class="price-tax">359,99 € IVA incl. in Francia · IVA in base al tuo paese, calcolata al pagamento</span></div>
+        <ul class="price-features">
+          <li>Controllo luci in tempo reale</li>
+          <li>Player audio e video</li>
+          <li>Luci IA avanzate</li>
+          <li>Programmazione luci</li>
+          <li>Uscita DMX</li>
+          <li>Attivazione su 2 computer</li>
+          <li>Aggiornamenti a vita inclusi</li>
+          <li>Nessun abbonamento · mai</li>
+        </ul>
+        <a href="https://buy.stripe.com/9B6dR19t38JieNqaIY08g09" class="btn-full outline" target="_blank" rel="noopener noreferrer">Acquista Lifetime</a>
+      </div>
+
+    </div>
+    <!-- PACK MYSTROW : interface USB-DMX + licence (vendu sur /shop) -->
+    <div class="pack-card" id="pack">
+      <img src="../img-shop/pack-mystrow-1an.webp" alt="MyStrow Pack" width="900" height="694" loading="lazy">
+      <div>
+        <p class="section-tag" style="margin-bottom:6px">MyStrow Pack</p>
+        <h3>Non hai ancora un'interfaccia DMX? Prendi il Pack.</h3>
+        <p class="pack-lead">L'interfaccia USB-DMX MyStrow (uscita XLR, alimentata via USB) con la licenza nella confezione. Spedizione gratuita in 72&nbsp;h nella Francia metropolitana; consegniamo anche in Italia, Belgio, Lussemburgo, Paesi Bassi, Spagna e Portogallo.</p>
+        <div class="pack-opts">
+          <a class="pack-opt" href="../en/shop#pack-mystrow"><span class="pack-opt-name">Licenza 2 mesi</span><span class="pack-opt-price">€99<small class="pack-ttc">IVA incl.</small></span><span class="pack-opt-hint">interfaccia ~51 €</span></a>
+          <a class="pack-opt" href="../en/shop#pack-mystrow"><span class="pack-opt-name">Licenza 1 anno</span><span class="pack-opt-price">€199<small class="pack-ttc">IVA incl.</small></span><span class="pack-opt-hint">interfaccia ~55 €</span></a>
+          <a class="pack-opt" href="../en/shop#pack-mystrow"><span class="pack-opt-name">Licenza a vita</span><span class="pack-opt-price">€399<small class="pack-ttc">IVA incl.</small></span><span class="pack-opt-hint">interfaccia ~39 €</span></a>
+        </div>
+        <div class="pack-foot">
+          <a href="../en/shop#pack-mystrow" class="btn-primary" style="padding:12px 26px;font-size:14px;">Vedi il Pack →</a>
+          <span class="pack-note">Pagamento sicuro con Stripe · Disponibile anche su Amazon.fr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-bg" aria-labelledby="faq-title">
+  <div class="wrap">
+    <p class="section-tag" style="text-align:center">FAQ</p>
+    <h2 id="faq-title" style="text-align:center">Domande frequenti</h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 52px">Tutto quello che devi sapere prima di iniziare.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Che hardware serve per usare MyStrow?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Un computer Windows 10/11 o macOS (Intel 11+, Apple Silicon 13+) con una porta USB o di rete, un'interfaccia USB-DMX o un nodo DMX Art-Net (impostato sull'IP 2.0.0.15), e i tuoi proiettori DMX. Il controller AKAI APC mini mk2 è consigliato per il live, ma un simulatore integrato lo rende del tutto facoltativo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Come si configura il nodo DMX?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">MyStrow usa il protocollo Art-Net, uno standard aperto (porta UDP 6454) supportato dalla grande maggioranza dei nodi DMX in commercio. Funziona qualsiasi nodo compatibile Art-Net: Enttec ODE, LumenRadio, Artnet4 e molti altri. Imposta il nodo sull'IP 2.0.0.15 e collegalo al PC con un cavo ethernet: MyStrow lo rileva automaticamente all'avvio.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Il mio PC non ha una porta RJ45: come faccio?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Nessun problema: la soluzione più semplice è la nostra interfaccia USB Node DMX ArtNet, che si collega direttamente a una porta USB, senza scheda di rete né driver. Se preferisci un nodo Ethernet, va benissimo anche un semplice adattatore USB-RJ45, riconosciuto automaticamente da Windows e macOS.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Come analizza la musica l'IA?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">In modalità IA, MyStrow analizza in tempo reale il ritmo, le frequenze e l'energia della musica e genera automaticamente colori, intensità e transizioni su tutti i gruppi di proiettori. Nessuna programmazione: colleghi, avvii la musica e le luci si adattano.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">C'è latenza tra musica e luci?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Non percepibile. MyStrow invia i frame DMX a 25 fps tramite un timer dedicato. La latenza tra audio e comandi DMX è inferiore a 5 ms grazie al motore Qt Multimedia.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quali formati audio e video sono supportati?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Audio: MP3, WAV, FLAC, AAC, OGG. Video: MP4, MOV, AVI, MKV, proiettati a schermo intero su un secondo monitor. Puoi anche inserire pause manuali o tempi cronometrati nella playlist.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Il controller AKAI APC mini è obbligatorio?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">No. MyStrow si controlla interamente con tastiera (Spazio per play/pausa, PagSu/PagGiù per navigare) e mouse. Nell'interfaccia è incluso un simulatore AKAI. Il controller fisico offre la migliore esperienza live, ma resta facoltativo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quanti proiettori posso controllare?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">MyStrow organizza i proiettori in gruppi controllabili in modo indipendente e gestisce fino a 4 universi DMX Art-Net, cioè 2.048 canali in totale. L'indirizzamento è automatico (canali 1, 11, 21…) e completamente personalizzabile.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Posso salvare e riutilizzare i miei show?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Sì. MyStrow salva i tuoi show in un file .tui: playlist, sequenze luci, keyframe della timeline e impostazioni del patch inclusi. Trasferiscilo su un altro computer e ottieni esattamente lo stesso risultato.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">MyStrow funziona su Mac e Windows?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Sì. MyStrow è disponibile per Windows 10/11 e macOS (Intel 11+, Apple Silicon 13+). Le due versioni ricevono gli stessi aggiornamenti contemporaneamente, tramite il sistema di aggiornamento automatico integrato.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">MyStrow funziona offline?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Sì. MyStrow funziona interamente in locale: la comunicazione DMX passa dalla rete locale via Art-Net (UDP) o dalla porta USB. Durante uno show non serve alcuna connessione internet: è necessaria solo per la prima attivazione della licenza e per gli aggiornamenti automatici.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section aria-labelledby="newsletter-title-en" style="padding:80px 28px;text-align:center;background:var(--bg);">
+  <div class="wrap" style="max-width:580px">
+    <div style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;
+                background:var(--accent-dim);border:1px solid var(--accent-border);border-radius:14px;
+                font-size:24px;margin-bottom:22px;">✉</div>
+    <p class="section-tag">Newsletter</p>
+    <h2 id="newsletter-title-en" style="font-size:clamp(26px,4vw,40px);margin-bottom:14px;line-height:1.2">
+      Resta aggiornato
+    </h2>
+    <p style="color:var(--muted);font-size:16px;margin-bottom:40px;line-height:1.75;max-width:460px;margin-left:auto;margin-right:auto">
+      Nuove funzionalità, consigli sulle luci e aggiornamenti di MyStrow,<br>direttamente nella tua casella. Niente spam, disiscrizione in qualsiasi momento.
+    </p>
+
+    <form id="nl-form-en" novalidate
+      style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px;max-width:500px;margin-left:auto;margin-right:auto;">
+      <input id="nl-email-en" type="email" placeholder="tua@email.com" autocomplete="email" required
+        style="flex:1;min-width:220px;padding:14px 18px;background:#111;color:var(--text);
+               border:1px solid #2a2a2a;border-radius:10px;font-size:15px;outline:none;
+               font-family:inherit;transition:border-color 0.2s,box-shadow 0.2s;"
+        onfocus="this.style.borderColor='var(--accent)';this.style.boxShadow='0 0 0 3px var(--accent-dim)'"
+        onblur="this.style.borderColor='#2a2a2a';this.style.boxShadow='none'">
+      <button type="submit"
+        style="padding:14px 30px;background:var(--accent);color:#0c0b00;border:none;border-radius:10px;
+               font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;
+               transition:opacity 0.2s,transform 0.1s;letter-spacing:0.2px;"
+        onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'"
+        onmousedown="this.style.transform='scale(0.97)'" onmouseup="this.style.transform='scale(1)'">
+        Iscriviti →
+      </button>
+    </form>
+
+    <p id="nl-msg-en" style="min-height:24px;font-size:14px;font-weight:500;"></p>
+
+    <p style="color:#444;font-size:12px;margin-top:16px">
+      Iscrivendoti accetti la nostra <a href="../en/privacy" style="color:#555;text-decoration:underline;text-underline-offset:3px;">informativa sulla privacy</a>.
+    </p>
+  </div>
+  <script>
+  (function(){
+    var form  = document.getElementById('nl-form-en');
+    var msg   = document.getElementById('nl-msg-en');
+    var input = document.getElementById('nl-email-en');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = input.value.trim();
+      if(!email || !email.includes('@')){ msg.style.color='#ff5555'; msg.textContent='Invalid email address.'; return; }
+      var btn = form.querySelector('button');
+      btn.disabled = true; btn.textContent = '…';
+      msg.style.color = 'var(--muted)'; msg.textContent = '';
+      fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({email: email, lang: 'en'})
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if(d.ok){
+          msg.style.color = 'var(--accent)';
+          msg.textContent = '✓  Iscrizione confermata, a presto!';
+          input.value = ''; btn.textContent = '✓ Subscribed';
+        } else {
+          msg.style.color = '#ff5555'; msg.textContent = d.error || 'Si è verificato un errore.';
+          btn.disabled = false; btn.textContent = 'Iscriviti →';
+        }
+      })
+      .catch(function(){ msg.style.color='#ff5555'; msg.textContent='Errore di rete, riprova.'; btn.disabled=false; btn.textContent='Iscriviti →'; });
+    });
+  })();
+  </script>
+</section>
+
+<!-- TUTORIELS -->
+<section id="tutorials" aria-labelledby="tutorials-title" style="padding:100px 0 80px;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <p class="section-tag" style="text-align:center">Tutorial e guide</p>
+    <h2 id="tutorials-title" style="text-align:center;margin-bottom:14px">Impara a usare MyStrow</h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 56px">Video e guide passo passo (in inglese): dal primo patch a uno show completamente automatizzato.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:28px">
+
+      <!-- Carte 1 -->
+      <a href="../en/tutoriel-debuter-mystrow" style="display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;"
+         onmouseover="this.style.borderColor='rgba(226,206,22,0.45)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.5)'"
+         onmouseout="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0908">
+          <img src="../img-blog/dmx-facile-en.webp"
+               alt="Tutorial MyStrow per principianti" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(8,8,7,0.6) 100%)"></div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(226,206,22,0.9);display:flex;align-items:center;justify-content:center;font-size:18px">▶</div>
+        </div>
+        <div style="padding:24px 26px 28px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;background:rgba(226,206,22,0.10);border:1px solid rgba(226,206,22,0.22);padding:2px 9px;border-radius:20px">Principiante · DMX</span>
+            <span style="font-size:12px;color:var(--muted)">Apr 2026</span>
+          </div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:19px;line-height:1.2;margin-bottom:10px;letter-spacing:0.3px">Iniziare con MyStrow: tutorial completo per principianti del DMX</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7;flex:1">Patch, gruppi di proiettori, AKAI APC mini, colori in tempo reale: tutto il necessario per il tuo primo light show partendo da zero.</p>
+          <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:12px;font-weight:600;color:var(--accent);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;text-transform:uppercase">Leggi la guida →</span>
+        </div>
+      </a>
+
+      <!-- Carte 2 -->
+      <a href="../en/automatisation-lumieres-dmx-mystrow" style="display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;"
+         onmouseover="this.style.borderColor='rgba(226,206,22,0.45)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.5)'"
+         onmouseout="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0908">
+          <img src="../img-blog/automatiser-en.webp"
+               alt="Automatizzare le luci DMX con MyStrow" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(8,8,7,0.6) 100%)"></div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(226,206,22,0.9);display:flex;align-items:center;justify-content:center;font-size:18px">▶</div>
+        </div>
+        <div style="padding:24px 26px 28px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;background:rgba(226,206,22,0.10);border:1px solid rgba(226,206,22,0.22);padding:2px 9px;border-radius:20px">Automazione · Rec</span>
+            <span style="font-size:12px;color:var(--muted)">Apr 2026</span>
+          </div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:19px;line-height:1.2;margin-bottom:10px;letter-spacing:0.3px">Automatizzare le luci DMX con MyStrow — Light Rec e timeline</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7;flex:1">Registra la tua performance live in modalità Light Rec, modifica le clip sulla timeline e riproponi uno show identico a ogni data.</p>
+          <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:12px;font-weight:600;color:var(--accent);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;text-transform:uppercase">Leggi la guida →</span>
+        </div>
+      </a>
+
+      <!-- Carte 3 -->
+      <a href="../en/creer-sequences-lumiere-mystrow" style="display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;"
+         onmouseover="this.style.borderColor='rgba(226,206,22,0.45)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.5)'"
+         onmouseout="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0908">
+          <img src="../img-blog/sequences-en.webp"
+               alt="Creare e registrare le sequenze luci in MyStrow" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(8,8,7,0.6) 100%)"></div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(226,206,22,0.9);display:flex;align-items:center;justify-content:center;font-size:18px">▶</div>
+        </div>
+        <div style="padding:24px 26px 28px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;background:rgba(226,206,22,0.10);border:1px solid rgba(226,206,22,0.22);padding:2px 9px;border-radius:20px">Sequenze · Timeline</span>
+            <span style="font-size:12px;color:var(--muted)">Apr 2026</span>
+          </div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:19px;line-height:1.2;margin-bottom:10px;letter-spacing:0.3px">Creare e registrare le sequenze luci con MyStrow</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7;flex:1">Light Rec dal vivo o programmazione su timeline: crea light show da riprodurre all'infinito, sincronizzati con la musica al millisecondo.</p>
+          <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:12px;font-weight:600;color:var(--accent);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;text-transform:uppercase">Leggi la guida →</span>
+        </div>
+      </a>
+
+      <!-- Carte 4 -->
+      <a href="https://youtu.be/cXyJaINXok8" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;"
+         onmouseover="this.style.borderColor='rgba(226,206,22,0.45)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.5)'"
+         onmouseout="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#0a0908">
+          <img src="../img-blog/brancher-en.webp"
+               alt="Le basi del DMX in 5 minuti con MyStrow" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;display:block">
+          <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(8,8,7,0.6) 100%)"></div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(226,206,22,0.9);display:flex;align-items:center;justify-content:center;font-size:18px">▶</div>
+        </div>
+        <div style="padding:24px 26px 28px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;background:rgba(226,206,22,0.10);border:1px solid rgba(226,206,22,0.22);padding:2px 9px;border-radius:20px">DMX · Cablaggio</span>
+            <span style="font-size:12px;color:var(--muted)">Mag 2026</span>
+          </div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:19px;line-height:1.2;margin-bottom:10px;letter-spacing:0.3px">Le basi del DMX in 5 minuti — cavi, universi e collegamenti</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.7;flex:1">Nuovo nel DMX e confuso tra cavi, universi e collegamenti? Come funziona una catena DMX, come collegare i proiettori, come fare il patch: tutto in 5 minuti. (Video in francese, con sottotitoli e doppiaggio in inglese su YouTube.)</p>
+          <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:12px;font-weight:600;color:var(--accent);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.5px;text-transform:uppercase">Guarda il video →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="text-align:center;margin-top:44px">
+      <a href="../en/blog" style="display:inline-flex;align-items:center;gap:8px;padding:11px 26px;border-radius:999px;border:1px solid var(--border);color:var(--text);font-size:13px;font-weight:600;text-decoration:none;transition:border-color 0.18s,color 0.18s"
+         onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'"
+         onmouseout="this.style.borderColor='';this.style.color=''">
+        Vedi tutti i tutorial →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="download" class="cta-final" aria-labelledby="cta-title">
+  <div class="wrap">
+    <p class="section-tag" style="text-align:center">Pronto a iniziare?</p>
+    <h2 id="cta-title" style="max-width:600px;margin:0 auto 16px">Trasforma il tuo palco oggi stesso</h2>
+    <p style="color:var(--muted);margin-bottom:38px;font-size:17px">Unisciti ai tecnici luci che si affidano a MyStrow per i loro show.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a id="dl-btn-cta" href="#" class="btn-primary" style="padding:14px 36px;font-size:16px;">Scarica gratis ↓</a>
+      <a href="#pricing" class="btn-outline" style="padding:14px 36px;font-size:16px;">Vedi i prezzi</a>
+    </div>
+    <p class="hero-meta" style="margin-top:18px">Inizia gratis<span>·</span>Nessuna carta di credito richiesta<span>·</span>Windows e macOS</p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Piè di pagina"><a href="download">Download</a><a href="../en/whats-new">Novità</a><a href="/activate?lang=en">Attiva un prodotto</a><a href="#pricing">Prezzi</a><a href="../en/blog">Tutorial</a><a href="../en/terms">Condizioni di vendita</a><a href="../en/legal-notice">Note legali</a><a href="../en/privacy">Privacy</a><a href="../en/contact">Contatti</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Il tuo indirizzo email" required>
+        <button type="submit">Iscriviti</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tutti i diritti riservati</div>
+</footer>
+
+<script>
+/* STAGE PLOT + AKAI — Interactive demo (identical logic to FR page) */
+
+const PFE_GROUPS = [
+  { name: 'FACE',  color: '#ff8844', n: 4, lyre: false,
+    pos: (i, n) => [0.20 + i * 0.60 / Math.max(n - 1, 1), 0.80] },
+  { name: 'DCH 1', color: '#44cc88', n: 2, lyre: false,
+    pos: (i)    => [0.24 + i * 0.08, 0.50] },
+  { name: 'DCH 2', color: '#ffcc44', n: 2, lyre: false,
+    pos: (i)    => [0.46 + i * 0.08, 0.50] },
+  { name: 'DCH 3', color: '#ff4488', n: 2, lyre: false,
+    pos: (i)    => [0.68 + i * 0.08, 0.50] },
+  { name: 'LAT',   color: '#aa55ff', n: 2, lyre: false,
+    pos: (i)    => [i === 0 ? 0.07 : 0.93, 0.40] },
+  { name: 'LYRE',  color: '#E2CE16', n: 4, lyre: true,
+    pos: (i, n) => [0.12 + i * 0.76 / Math.max(n - 1, 1), 0.07] },
+];
+
+const FADER_TO_GROUP = [0, 1, 2, 3, 4, -1, 5, 5];
+const FADER_CFG = [
+  { name: 'FACE',  color: '#ff8844' },
+  { name: 'DCH1',  color: '#44cc88' },
+  { name: 'DCH2',  color: '#ffcc44' },
+  { name: 'DCH3',  color: '#ff4488' },
+  { name: 'LAT',   color: '#aa55ff' },
+  { name: '',      color: '#555' },
+  { name: 'LYRE',  color: '#E2CE16' },
+  { name: 'LYRE',  color: '#E2CE16' },
+];
+const ROW_COLORS = ['#ffffff','#ff2020','#ff8800','#ffdd00','#22dd22','#00cccc','#4488ff','#ee44ee'];
+const PHASES = [0.0, 1.1, 2.4, 0.7, 1.8, 3.1, 2.0, 0.5];
+
+const FADER_INIT_LVL = [12, 30, 50, 40, 18, 44, 28, 38].map(v => v / 61);
+const levels = new Float32Array(FADER_INIT_LVL);
+let masterLevel = 0.80;
+const userControlled = new Uint8Array(9);
+const lastUserTime   = new Float64Array(9);
+const USER_TIMEOUT   = 3500;
+
+const padsGrid  = document.getElementById('pads-grid');
+const fxCol     = document.getElementById('fx-col');
+const fadersRow = document.getElementById('faders-row');
+const pfCanvas  = document.getElementById('planfeu-canvas');
+const pfCtx     = pfCanvas.getContext('2d');
+const thumbEls  = [];
+const fxBtns    = [];
+const activePadRow       = new Int8Array(8).fill(-1);
+const groupColorOverride = new Array(PFE_GROUPS.length).fill(null);
+const colPads            = Array.from({ length: 8 }, () => []);
+let   masterThumb;
+
+function hexRgb(hex) {
+  return { r: parseInt(hex.slice(1,3), 16), g: parseInt(hex.slice(3,5), 16), b: parseInt(hex.slice(5,7), 16) };
+}
+function hslHex(h, s, l) {
+  s /= 100; l /= 100;
+  const a = s * Math.min(l, 1 - l);
+  const f = n => { const k = (n + h / 30) % 12; return l - a * Math.max(-1, Math.min(k - 3, 9 - k, 1)); };
+  const x = v => Math.round(v * 255).toString(16).padStart(2, '0');
+  return `#${x(f(0))}${x(f(8))}${x(f(4))}`;
+}
+
+const THUMB_H = 8;
+function makeDraggable(track, thumb, idx) {
+  let drag = false, startY = 0, startPx = 0;
+  function trackH()   { return Math.max(track.clientHeight - THUMB_H, 1); }
+  function getLevel() { return idx < 8 ? levels[idx] : masterLevel; }
+  function setLevel(v) {
+    const clamped = Math.max(0, Math.min(1, v));
+    if (idx < 8) levels[idx] = clamped; else masterLevel = clamped;
+    thumb.style.bottom = Math.round(clamped * trackH()) + 'px';
+  }
+  function onStart(clientY) { drag = true; startY = clientY; startPx = getLevel() * trackH(); userControlled[idx] = 1; lastUserTime[idx] = Date.now(); thumb.classList.add('dragging'); thumb.style.transition = 'none'; }
+  function onMove(clientY)  { if (!drag) return; setLevel((startPx + startY - clientY) / trackH()); userControlled[idx] = 1; lastUserTime[idx] = Date.now(); }
+  function onEnd()           { if (!drag) return; drag = false; thumb.classList.remove('dragging'); thumb.style.transition = ''; }
+  thumb.addEventListener('mousedown',  e => { onStart(e.clientY); e.preventDefault(); });
+  document.addEventListener('mousemove', e => onMove(e.clientY));
+  document.addEventListener('mouseup',   onEnd);
+  thumb.addEventListener('touchstart',  e => { onStart(e.touches[0].clientY); e.preventDefault(); }, { passive: false });
+  document.addEventListener('touchmove', e => { if (drag) { onMove(e.touches[0].clientY); e.preventDefault(); } }, { passive: false });
+  document.addEventListener('touchend',  onEnd);
+}
+
+const FADER_INIT = [12, 30, 50, 40, 18, 44, 28, 38];
+FADER_CFG.forEach((g, i) => {
+  const col = document.createElement('div'); col.className = 'fader-col';
+  const track = document.createElement('div'); track.className = 'fader-track';
+  const thumb = document.createElement('div'); thumb.className = 'fader-thumb';
+  thumb.style.cssText = `background:#cccccc;bottom:${FADER_INIT[i]}px`;
+  track.appendChild(thumb);
+  const label = document.createElement('div'); label.className = 'fader-name'; label.textContent = g.name;
+  col.append(track, label); fadersRow.appendChild(col); thumbEls.push(thumb); makeDraggable(track, thumb, i);
+});
+const mCol = document.createElement('div'); mCol.className = 'fader-col master-col';
+const mTrack = document.createElement('div'); mTrack.className = 'fader-track';
+masterThumb = document.createElement('div'); masterThumb.className = 'fader-thumb';
+masterThumb.style.cssText = 'background:#cccccc;bottom:52px';
+mTrack.appendChild(masterThumb);
+const mLabel = document.createElement('div'); mLabel.className = 'fader-name'; mLabel.textContent = 'MASTER';
+mCol.append(mTrack, mLabel); fadersRow.appendChild(mCol); makeDraggable(mTrack, masterThumb, 8);
+
+for (let row = 0; row < 8; row++) {
+  for (let col = 0; col < 8; col++) {
+    const pad = document.createElement('div'); pad.className = 'pad';
+    pad.style.background = ROW_COLORS[row]; pad.style.opacity = '0.28'; pad.style.cursor = 'pointer';
+    pad.addEventListener('click', () => {
+      const gi = FADER_TO_GROUP[col]; const wasActive = activePadRow[col] === row;
+      if (activePadRow[col] >= 0) { const prev = colPads[col][activePadRow[col]]; prev.classList.remove('active'); prev.style.opacity = '0.28'; }
+      if (!wasActive) { activePadRow[col] = row; pad.classList.add('active'); pad.style.opacity = '1'; if (gi >= 0) groupColorOverride[gi] = ROW_COLORS[row]; }
+      else { activePadRow[col] = -1; if (gi >= 0) groupColorOverride[gi] = null; }
+    });
+    padsGrid.appendChild(pad); colPads[col].push(pad);
+  }
+}
+const DEFAULT_COLS = [3, 6, 1, 5, 0, 7, 2, 4];
+for (let row = 0; row < 8; row++) {
+  const col = DEFAULT_COLS[row]; const pad = colPads[col][row]; const gi = FADER_TO_GROUP[col];
+  activePadRow[col] = row; pad.classList.add('active'); pad.style.opacity = '1';
+  if (gi >= 0) groupColorOverride[gi] = ROW_COLORS[row];
+}
+
+const FX_NAMES = ['CHASE','STROBE','DEPHASE','PULSE','RAINBOW','ALTER','FADE','FLASH'];
+for (let r = 0; r < 8; r++) {
+  const wrap = document.createElement('div'); wrap.className = 'fx-btn-wrap';
+  const btn = document.createElement('div'); btn.className = 'fx-btn active-green'; btn.title = FX_NAMES[r];
+  const idx = r;
+  btn.addEventListener('click', () => {
+    if (activeFxIdx === idx) { activeFxIdx = -1; btn.classList.remove('fx-active', 'fired'); btn.classList.add('active-green'); }
+    else { fxBtns.forEach(b => { b.classList.remove('fx-active', 'fired'); b.classList.add('active-green'); }); activeFxIdx = idx; fxChaseT = 0; btn.classList.remove('active-green'); btn.classList.add('fx-active'); }
+  });
+  wrap.appendChild(btn); fxCol.appendChild(wrap); fxBtns.push(btn);
+}
+
+function drawPlanDeFeu() {
+  const W = pfCanvas.width, H = pfCanvas.height;
+  pfCtx.fillStyle = '#060604'; pfCtx.fillRect(0, 0, W, H);
+  pfCtx.fillStyle = 'rgba(255,255,255,0.07)'; pfCtx.fillRect(0, H - 2, W, 2);
+  const sg = pfCtx.createLinearGradient(0, H * 0.6, 0, H);
+  sg.addColorStop(0, 'rgba(0,0,0,0)'); sg.addColorStop(1, 'rgba(226,206,22,0.025)');
+  pfCtx.fillStyle = sg; pfCtx.fillRect(0, 0, W, H);
+  const gLevels = PFE_GROUPS.map((g, gi) => { const fi = FADER_TO_GROUP.indexOf(gi); return (fi >= 0 ? levels[fi] : 0.4) * masterLevel; });
+  PFE_GROUPS.forEach((grp, gi) => {
+    if (!grp.lyre) return;
+    const lvl = gLevels[gi]; let color = groupColorOverride[gi] || grp.color;
+    if (activeFxIdx >= 0) {
+      const n = PFE_GROUPS.length; let fxC = null;
+      if      (activeFxIdx === 0) { const cgi = Math.floor(fxChaseT * 2.5) % n; if (gi === cgi) fxC = '#ffffff'; }
+      else if (activeFxIdx === 1) { const s = Math.sin(fxChaseT * Math.PI * 12); fxC = s > 0.1 ? '#ffffff' : null; }
+      else if (activeFxIdx === 2) { fxC = hslHex((gi * (360 / n) + fxChaseT * 35) % 360, 100, 58); }
+      else if (activeFxIdx === 3) { fxC = '#bb33ff'; }
+      else if (activeFxIdx === 4) { fxC = hslHex((fxChaseT * 55 + gi * (360 / n)) % 360, 100, 55); }
+      else if (activeFxIdx === 5) { const beat = Math.floor(fxChaseT * 3.5) % 2; if (gi % 2 === beat) fxC = '#ff3300'; }
+      else if (activeFxIdx === 6) { fxC = hslHex((fxChaseT * 18 + gi * 12) % 360, 100, 55); }
+      else if (activeFxIdx === 7) { if ((fxRndState[gi] || 0) > 0.1) fxC = '#ffdd00'; }
+      if (fxC) color = fxC;
+    }
+    const rgb = hexRgb(color);
+    if (lvl < 0.03 && activeFxIdx < 0) return;
+    for (let j = 0; j < grp.n; j++) {
+      const [nx, ny] = grp.pos(j, grp.n); const x = nx * W; const y = ny * H + 8; const floorY = H * 0.60;
+      const panOffset = Math.sin(animT * 0.75 + j * (Math.PI * 0.5)) * 50 * lvl; const targetX = x + panOffset; const spread = 22 + 55 * lvl;
+      const bGrad = pfCtx.createLinearGradient(x, y, targetX, floorY);
+      bGrad.addColorStop(0, `rgba(${rgb.r},${rgb.g},${rgb.b},${0.70 * lvl})`);
+      bGrad.addColorStop(0.5, `rgba(${rgb.r},${rgb.g},${rgb.b},${0.25 * lvl})`);
+      bGrad.addColorStop(1, `rgba(${rgb.r},${rgb.g},${rgb.b},0)`);
+      pfCtx.beginPath(); pfCtx.moveTo(x - 2, y); pfCtx.lineTo(x + 2, y); pfCtx.lineTo(targetX + spread, floorY); pfCtx.lineTo(targetX - spread, floorY); pfCtx.closePath(); pfCtx.fillStyle = bGrad; pfCtx.fill();
+    }
+  });
+  PFE_GROUPS.forEach((grp, gi) => {
+    const lvl = gLevels[gi]; const color = groupColorOverride[gi] || grp.color; const rgb = hexRgb(color);
+    for (let j = 0; j < grp.n; j++) {
+      const [nx, ny] = grp.pos(j, grp.n); const x = nx * W; const y = ny * H; const r = 7;
+      if (lvl > 0.03) {
+        const glowR = r + 22 * lvl; const grad = pfCtx.createRadialGradient(x, y, 0, x, y, glowR);
+        grad.addColorStop(0, `rgba(${rgb.r},${rgb.g},${rgb.b},${0.75 * lvl})`);
+        grad.addColorStop(0.35, `rgba(${rgb.r},${rgb.g},${rgb.b},${0.32 * lvl})`);
+        grad.addColorStop(1, `rgba(${rgb.r},${rgb.g},${rgb.b},0)`);
+        pfCtx.beginPath(); pfCtx.arc(x, y, glowR, 0, Math.PI * 2); pfCtx.fillStyle = grad; pfCtx.fill();
+      }
+      if (activeFxIdx >= 0 && grp.lyre) {
+        const n = PFE_GROUPS.length; let fxColor = null, fxIntensity = 0;
+        if (activeFxIdx === 0) { const chaseGi = Math.floor(fxChaseT * 2.5) % n; if (gi === chaseGi) { fxColor = '#ffffff'; fxIntensity = 0.7 + 0.3 * Math.sin(fxChaseT * Math.PI * 6); } }
+        else if (activeFxIdx === 1) { const s = Math.sin(fxChaseT * Math.PI * 12); fxColor = '#ffffff'; fxIntensity = s > 0.1 ? 0.95 : 0; }
+        else if (activeFxIdx === 2) { const phase = fxChaseT * 1.8 + gi * (Math.PI * 2 / n); const hue = (gi * (360 / n) + fxChaseT * 35) % 360; fxColor = hslHex(hue, 100, 58); fxIntensity = Math.max(0, 0.45 + 0.55 * Math.sin(phase)); }
+        else if (activeFxIdx === 3) { fxColor = '#bb33ff'; fxIntensity = 0.45 + 0.55 * Math.abs(Math.sin(fxChaseT * Math.PI * 1.2)); }
+        else if (activeFxIdx === 4) { const hue = (fxChaseT * 55 + gi * (360 / n)) % 360; fxColor = hslHex(hue, 100, 55); fxIntensity = 0.85; }
+        else if (activeFxIdx === 5) { const beat = Math.floor(fxChaseT * 3.5) % 2; if (gi % 2 === beat) { fxColor = '#ff3300'; fxIntensity = 0.9; } }
+        else if (activeFxIdx === 6) { const hue = (fxChaseT * 18 + gi * 12) % 360; fxColor = hslHex(hue, 100, 55); fxIntensity = 0.70; }
+        else if (activeFxIdx === 7) { fxColor = '#ffdd00'; fxIntensity = fxRndState[gi] || 0; }
+        if (fxColor && fxIntensity > 0.01) {
+          const fc = hexRgb(fxColor); const fR = r + 38 * fxIntensity;
+          const fGr = pfCtx.createRadialGradient(x, y, 0, x, y, fR);
+          fGr.addColorStop(0, `rgba(${fc.r},${fc.g},${fc.b},${0.95 * fxIntensity})`);
+          fGr.addColorStop(0.4, `rgba(${fc.r},${fc.g},${fc.b},${0.45 * fxIntensity})`);
+          fGr.addColorStop(1, `rgba(${fc.r},${fc.g},${fc.b},0)`);
+          pfCtx.beginPath(); pfCtx.arc(x, y, fR, 0, Math.PI * 2); pfCtx.fillStyle = fGr; pfCtx.fill();
+        }
+      }
+      pfCtx.beginPath(); pfCtx.arc(x, y, r, 0, Math.PI * 2); pfCtx.fillStyle = lvl > 0.03 ? `rgba(${rgb.r},${rgb.g},${rgb.b},${0.6 * lvl})` : '#1a1810'; pfCtx.fill();
+      pfCtx.beginPath(); pfCtx.arc(x, y, r, 0, Math.PI * 2); pfCtx.strokeStyle = color; pfCtx.lineWidth = 1.5; pfCtx.globalAlpha = 0.45 + 0.55 * lvl; pfCtx.stroke(); pfCtx.globalAlpha = 1;
+    }
+  });
+  pfCtx.font = '700 8px "Barlow Condensed", Inter, sans-serif'; pfCtx.textAlign = 'center';
+  PFE_GROUPS.forEach((grp, gi) => {
+    const lvl = gLevels[gi]; const color = groupColorOverride[gi] || grp.color;
+    pfCtx.fillStyle = lvl > 0.08 ? color : 'rgba(120,115,100,0.45)';
+    let cx = 0, cy = 0;
+    for (let j = 0; j < grp.n; j++) { const [nx, ny] = grp.pos(j, grp.n); cx += nx; cy += ny; }
+    cx = (cx / grp.n) * W; cy = (cy / grp.n) * H;
+    pfCtx.fillText(grp.name, cx, cy < H * 0.45 ? cy - 13 : cy + 19);
+  });
+}
+
+let animT = 0, activeFxIdx = -1, fxChaseT = 0;
+const fxRndState = new Array(6).fill(0);
+function tick() {
+  animT += 0.018;
+  if (activeFxIdx >= 0) {
+    fxChaseT += 0.055;
+    if (activeFxIdx === 7) { for (let i = 0; i < PFE_GROUPS.length; i++) { fxRndState[i] = Math.max(0, fxRndState[i] - 0.06); if (Math.random() < 0.018) fxRndState[i] = 1.0; } }
+  }
+  [6, 7].forEach((fi, i) => {
+    if (!userControlled[fi] || Date.now() - lastUserTime[fi] > USER_TIMEOUT) {
+      userControlled[fi] = 0;
+      const lvl = 0.55 + 0.35 * Math.sin(animT * 0.4 + i * 1.4); levels[fi] = lvl;
+      const trackEl = thumbEls[fi].parentElement; const th = Math.max(trackEl.clientHeight - THUMB_H, 1);
+      thumbEls[fi].style.bottom = Math.round(lvl * th) + 'px';
+    }
+  });
+  drawPlanDeFeu();
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+/* HEADER SCROLL */
+(function() {
+  const hdr = document.querySelector('header');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+
+/* OS DETECTION — download link */
+(function() {
+  const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
+  const url   = isMac
+    ? 'download.html'
+    : 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
+  const label = isMac ? 'Scarica per macOS ↗' : 'Scarica per Windows ↗';
+  document.querySelectorAll('#dl-btn-hero, #dl-btn-cta').forEach(btn => {
+    btn.href = url; btn.textContent = label; btn.target = '_blank'; btn.rel = 'noopener noreferrer';
+  });
+})();
+
+/* SIGNAL CHAIN — CONTROLLER SWITCHER */
+(function() {
+  const CTRL_STATES = [
+    { name: 'AKAI / NOVATION',   sub: 'MIDI Controller',   proto: 'USB' },
+    { name: 'StreamDeck / Elgato', sub: 'Stream Controller', proto: 'USB' },
+    { name: 'IR Remote',           sub: 'IR Remote',         proto: 'USB' },
+    { name: 'Keyboard & Mouse',    sub: 'Keyboard · Mouse',  proto: 'USB' },
+  ];
+  let cur = 0;
+  const stateEls = document.querySelectorAll('.synop-ctrl-state');
+  const dotEls   = document.querySelectorAll('.synop-nav-dot');
+  const nameEl   = document.getElementById('synop-ctrl-name');
+  const subEl    = document.getElementById('synop-ctrl-sub');
+  const protoEl  = document.getElementById('synop-ctrl-proto');
+  function switchTo(idx) {
+    stateEls[cur].classList.remove('active'); dotEls[cur].classList.remove('active'); cur = idx;
+    stateEls[cur].classList.add('active'); dotEls[cur].classList.add('active');
+    const s = CTRL_STATES[cur];
+    nameEl.textContent = s.name; subEl.textContent = s.sub; protoEl.textContent = s.proto;
+  }
+  dotEls.forEach(d => d.addEventListener('click', () => {
+    switchTo(parseInt(d.dataset.idx));
+  }));
+})();
+
+/* FAQ ACCORDION */
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
+
+<script>
+var STRIPE_MONTHLY = 'https://buy.stripe.com/5kQcMXeNn7FeaxabN208g03';
+var STRIPE_ANNUAL  = 'https://buy.stripe.com/dRm4greNn0cM48MbN208g05';
+function setPricing(annual) {
+  var priceEl  = document.getElementById('pro-price');
+  var periodEl = document.getElementById('pro-period');
+  var ctaEl    = document.getElementById('pro-cta');
+  var pillEl   = document.getElementById('saving-pill');
+  var btnM     = document.getElementById('toggle-monthly');
+  var btnA     = document.getElementById('toggle-annual');
+  if (annual) {
+    priceEl.innerHTML = '<sup>€</sup>9<span style="font-size:0.55em;vertical-align:super">.99</span>';
+    periodEl.innerHTML = 'IVA escl. / mese · fatturato 119,88 €/anno<span class="price-tax">11,99 €/mese IVA incl. in Francia · IVA in base al tuo paese, calcolata al pagamento</span>';
+    ctaEl.href = STRIPE_ANNUAL;
+    pillEl.classList.add('visible');
+    btnM.classList.remove('active'); btnA.classList.add('active');
+  } else {
+    priceEl.innerHTML = '<sup>€</sup>19<span style="font-size:0.55em;vertical-align:super">.99</span>';
+    periodEl.innerHTML = 'IVA escl. / mese · senza vincoli<span class="price-tax">23,99 €/mese IVA incl. in Francia · IVA in base al tuo paese, calcolata al pagamento</span>';
+    ctaEl.href = STRIPE_MONTHLY;
+    pillEl.classList.remove('visible');
+    btnM.classList.add('active'); btnA.classList.remove('active');
+  }
+}
+</script>
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'en' })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Welcome!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Si è verificato un errore.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Si è verificato un errore.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="/lang-suggest.js?v=2" defer></script>
+<script src="/mobile-nav.js?v=7"></script>
+</body>
+</html>

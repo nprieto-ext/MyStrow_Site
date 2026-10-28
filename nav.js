@@ -134,10 +134,25 @@
       ],
       top: [["Preços", "index.html#pricing"], ["Shop", "shop.html"], ["FAQ", "index.html#faq"], ["Tutoriais", "blog.html"]],
       langLabel: "Escolher idioma", signin: "Entrar", dl: "Transferir ↓", dlHref: "download.html"
+    },
+    // Italien : seules l'accueil, le logiciel DMX et le téléchargement sont
+    // traduits ; les autres entrées mènent à la version anglaise.
+    it: {
+      feat: "Funzionalità", featHref: "index.html#features",
+      mega: [
+        ["⚡", "Software luci DMX", "PC + nodo DMX. Controllo totale del palco in tempo reale.", "dmx-lighting-software.html"],
+        ["🛒", "Shop · MyStrow Pack", "La nostra interfaccia USB-DMX con la licenza, e l'hardware compatibile.", "../en/shop.html"],
+        ["✨", "Luci con IA", "L'IA prende il controllo del palco o ti aiuta a programmare i tuoi show.", "../en/ai-lighting.html"],
+        ["🎬", "Programmazione luci", "Timeline visiva, keyframe, clip modificabili. Componi i tuoi show in anticipo.", "../en/light-programming.html"],
+        ["🎵", "Player audio e video", "Playlist e proiezioni gestite dalla stessa interfaccia.", "../en/audio-video-player.html"],
+        ["🗺️", "Pianta del palco interattiva", "Visualizza e controlla i gruppi di proiettori con un clic o un fader.", "../en/stage-plot.html"]
+      ],
+      top: [["Prezzi", "index.html#pricing"], ["Shop", "../en/shop.html"], ["FAQ", "index.html#faq"], ["Tutorial", "../en/blog.html"]],
+      langLabel: "Scegli la lingua", signin: "Accedi", dl: "Scarica ↓", dlHref: "download.html"
     }
   };
 
-  var ORDER = ["fr", "en", "de", "es", "pt"];
+  var ORDER = ["fr", "en", "de", "es", "pt", "it"];
   // Nom de la langue écrit DANS cette langue, drapeau en simple repère visuel.
   // Source de vérité unique : mobile-nav.js relit ces valeurs via data-flag /
   // data-name plutôt que de tenir sa propre table.
@@ -146,17 +161,19 @@
     en: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#012169"/><path d="M0 0 30 20M30 0 0 20" stroke="#fff" stroke-width="4.6"/><path d="M0 0 30 20M30 0 0 20" stroke="#c8102e" stroke-width="2.4"/><path d="M15 0V20M0 10H30" stroke="#fff" stroke-width="7.4"/><path d="M15 0V20M0 10H30" stroke="#c8102e" stroke-width="4.4"/></svg>',
     de: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#ffce00"/><rect width="30" height="13.34" fill="#dd0000"/><rect width="30" height="6.67" fill="#000"/></svg>',
     es: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg>',
-    pt: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.4" fill="#ffe900" stroke="#046a38" stroke-width="0.6"/><rect x="10.2" y="7.7" width="3.6" height="4.6" rx="0.6" fill="#fff" stroke="#da291c" stroke-width="0.7"/></svg>'
+    pt: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#da291c"/><rect width="12" height="20" fill="#046a38"/><circle cx="12" cy="10" r="4.4" fill="#ffe900" stroke="#046a38" stroke-width="0.6"/><rect x="10.2" y="7.7" width="3.6" height="4.6" rx="0.6" fill="#fff" stroke="#da291c" stroke-width="0.7"/></svg>',
+    it: '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="10" height="20" fill="#009246"/><rect x="20" width="10" height="20" fill="#ce2b37"/></svg>'
   };
   var LANGS = {
     fr: { flag: FLAG_SVG.fr, name: "Français" },
     en: { flag: FLAG_SVG.en, name: "English" },
     de: { flag: FLAG_SVG.de, name: "Deutsch" },
     es: { flag: FLAG_SVG.es, name: "Español" },
-    pt: { flag: FLAG_SVG.pt, name: "Português" }
+    pt: { flag: FLAG_SVG.pt, name: "Português" },
+    it: { flag: FLAG_SVG.it, name: "Italiano" }
   };
 
-  var mm = location.pathname.match(/\/(en|de|es|pt)\//);
+  var mm = location.pathname.match(/\/(en|de|es|pt|it)\//);
   var loc = mm ? mm[1] : "fr";
   var cfg = L[loc] || L.fr;
 

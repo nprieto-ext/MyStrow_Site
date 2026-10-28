@@ -67,7 +67,7 @@
     // verite. Le libelle, lui, est propre au mobile ("Mon compte" plutot que
     // "Connexion"), d'ou la petite table des cinq langues.
     var LIB_COMPTE = { fr: 'Mon compte', en: 'My account', de: 'Mein Konto',
-                       es: 'Mi cuenta', pt: 'A minha conta' };
+                       es: 'Mi cuenta', pt: 'A minha conta', it: 'Il mio account' };
     var signin = document.querySelector('.nav-signin');
     var lang2 = (document.documentElement.lang || 'fr').slice(0, 2).toLowerCase();
     if (!links.some(function (l) { return /compte/i.test(l.href); })) {
