@@ -17,6 +17,11 @@ RewriteRule ^(en|de|es|pt)/akai-apc-mini-controller(\.html)?/?$ /$1/shop [R=301,
 RewriteCond %{QUERY_STRING} .
 RewriteRule ^tarifs(\.html)?/?$ /shop?%{QUERY_STRING}#formules [R=301,NE,L]
 RewriteRule ^tarifs(\.html)?/?$ /shop#formules [R=301,NE,L]
+# 28/10/2026 : 404 relevées dans Search Console
+# lien tronqué (copié coupé quelque part) → article OBS/vMix
+RewriteRule ^regie-video-obs-?/?$ /regie-video-obs-vmix-mystrow [R=301,L]
+# pages auteur de l'ancien site WordPress : supprimées définitivement (410)
+RewriteRule ^author(/.*)?$ - [G,L]
 
 # HTTP → HTTPS
 RewriteCond %{HTTPS} off
