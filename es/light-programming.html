@@ -41,9 +41,50 @@
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"MyStrow","url":"https://mystrow.fr/en/light-programming","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","description":"Light programming software with visual timeline, DMX keyframes, editable clips and music synchronization for shows and events.","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"featureList":["Visual light timeline","Color and intensity keyframes","Drag-and-drop editable clips","Audio playlist synchronization","Show export and import","Real-time visualization"]}
   </script>
 
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo se programa un show de luces en una línea de tiempo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada canción o vídeo de tu playlist tiene su propia línea de tiempo de luz. Colocas clips y keyframes de color e intensidad, con transición instantánea, lineal o en fundido. En la reproducción, la luz sigue la canción exactamente igual cada vez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay que programarlo todo a mano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Con REC de luz, tocas la luz en directo sobre la canción y MyStrow la graba en la línea de tiempo. Solo queda retocar los clips si hace falta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede preparar un show sin el material?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El plano de escena 3D muestra tus focos, sus colores y sus haces mientras programas: lo preparas todo en casa y conectas la interfaz DMX el día del show."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde se guardan los shows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En un archivo .tui que contiene la playlist, las secuencias de luz, los keyframes y el patch. Cópialo a otro ordenador y tendrás exactamente el mismo show."
+      }
+    }
+  ]
+}
+  </script>
   <!-- BreadcrumbList -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mystrow.fr/en/"},{"@type":"ListItem","position":2,"name":"Programación de luces","item":"https://mystrow.fr/en/light-programming"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://mystrow.fr/es/"},{"@type":"ListItem","position":2,"name":"Programación de luces","item":"https://mystrow.fr/es/light-programming"}]}
   </script>
 
   <style>
@@ -414,6 +455,32 @@
           <div class="feat-icon">▶️</div>
           <h3>Show Playback</h3>
           <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Lanza la playlist en modo Play Light. MyStrow reproduce las secuencias sincronizadas con cada pista. Mantienes el control total en cualquier momento mediante el AKAI, StreamDeck, una tablet u otro modo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section data-faq-prog="1" style="padding:72px 0;">
+    <div style="max-width:760px;margin:0 auto;padding:0 28px;">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">FAQ</div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(26px,4vw,40px);margin-bottom:28px;line-height:1.05;">Programación de luces: preguntas frecuentes</h2>
+      <div style="display:flex;flex-direction:column;gap:26px;">
+        <div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;color:var(--text);">¿Cómo se programa un show de luces en una línea de tiempo?</h3>
+          <p style="color:var(--muted);font-size:15px;line-height:1.75;">Cada canción o vídeo de tu playlist tiene su propia línea de tiempo de luz. Colocas clips y keyframes de color e intensidad, con transición instantánea, lineal o en fundido. En la reproducción, la luz sigue la canción exactamente igual cada vez.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;color:var(--text);">¿Hay que programarlo todo a mano?</h3>
+          <p style="color:var(--muted);font-size:15px;line-height:1.75;">No. Con REC de luz, tocas la luz en directo sobre la canción y MyStrow la graba en la línea de tiempo. Solo queda retocar los clips si hace falta.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;color:var(--text);">¿Se puede preparar un show sin el material?</h3>
+          <p style="color:var(--muted);font-size:15px;line-height:1.75;">Sí. El plano de escena 3D muestra tus focos, sus colores y sus haces mientras programas: lo preparas todo en casa y conectas la interfaz DMX el día del show.</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;color:var(--text);">¿Dónde se guardan los shows?</h3>
+          <p style="color:var(--muted);font-size:15px;line-height:1.75;">En un archivo .tui que contiene la playlist, las secuencias de luz, los keyframes y el patch. Cópialo a otro ordenador y tendrás exactamente el mismo show.</p>
         </div>
       </div>
     </div>
