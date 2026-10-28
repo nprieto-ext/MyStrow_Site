@@ -484,8 +484,18 @@
     <lastmod>2026-08-10</lastmod>
   </url>
   <url>
+    <loc>https://mystrow.fr/en/logiciel-lumiere-theatre</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/logiciel-lumiere-theatre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/logiciel-lumiere-theatre"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/logiciel-lumiere-theatre"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
     <loc>https://mystrow.fr/logiciel-lumiere-theatre</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/logiciel-lumiere-theatre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/logiciel-lumiere-theatre"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/logiciel-lumiere-theatre"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
