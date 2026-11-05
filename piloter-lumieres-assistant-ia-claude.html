@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Piloter ses lumières avec Claude, l'assistant IA — Guide MyStrow | MyStrow</title>
+  <meta name="description" content="Dites « allume les lumières en bleu » ou « envoie un effet rapide » à Claude Desktop, et MyStrow l'exécute. Créez aussi vos fixtures à partir du manuel PDF. Installation de l'extension MyStrow, exemples et dépannage.">
+  <meta name="keywords" content="Claude lumière DMX, assistant IA éclairage, MCP MyStrow, piloter lumières IA, commande vocale lumière, Claude Desktop extension, créer fixture DMX IA, manuel PDF fixture">
+  <link rel="canonical" href="https://mystrow.fr/piloter-lumieres-assistant-ia-claude">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/piloter-lumieres-assistant-ia-claude">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/piloter-lumieres-assistant-ia-claude">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/piloter-lumieres-assistant-ia-claude">
+  <meta property="og:title" content="Piloter ses lumières avec Claude, l'assistant IA">
+  <meta property="og:description" content="« Allume les lumières », « envoie un effet rapide », « crée cette lyre à partir du manuel » : Claude Desktop pilote MyStrow pour vous.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="article:published_time" content="2026-10-28">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Piloter ses lumières avec Claude, l'assistant IA">
+  <meta name="twitter:description" content="« Allume les lumières », « envoie un effet rapide », « crée cette lyre à partir du manuel » : Claude Desktop pilote MyStrow pour vous.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Piloter ses lumières avec Claude, l'assistant IA",
+    "description": "Dites « allume les lumières en bleu » ou « envoie un effet rapide » à Claude Desktop, et MyStrow l'exécute. Créez aussi vos fixtures à partir du manuel PDF. Installation de l'extension MyStrow, exemples et dépannage.",
+    "image": "https://mystrow.fr/og-image.webp",
+    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
+    "datePublished": "2026-10-28",
+    "dateModified": "2026-10-28",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/piloter-lumieres-assistant-ia-claude" },
+    "url": "https://mystrow.fr/piloter-lumieres-assistant-ia-claude",
+    "keywords": ["Claude", "assistant IA", "MCP", "Claude Desktop", "lumière DMX", "fixture", "MyStrow"]
+  }
+  </script>
+
+  <!-- FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Est-ce que ça marche avec ChatGPT ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pas pour l'instant. L'extension MyStrow fonctionne avec Claude Desktop, sur Windows et sur Mac. Elle parle au logiciel MyStrow ouvert sur le même ordinateur, ce que Claude Desktop sait faire directement." }
+      },
+      {
+        "@type": "Question",
+        "name": "Mes lumières sont-elles pilotables depuis Internet ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. L'extension parle à MyStrow uniquement sur l'ordinateur lui-même (adresse 127.0.0.1). Personne ne peut piloter vos projecteurs depuis l'extérieur, et une page web ouverte dans votre navigateur ne peut pas non plus envoyer de commande lumière." }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je m'en servir pendant un concert ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pour changer d'ambiance, oui. Mais une demande à l'IA met une à quelques secondes à s'exécuter : pour un top précis, sur un coup de grosse caisse ou une entrée de chanteur, gardez vos mémoires sur l'AKAI, la tablette ou le clavier." }
+      },
+      {
+        "@type": "Question",
+        "name": "La fixture créée par Claude est-elle partagée avec les autres utilisateurs ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. Elle est ajoutée à la bibliothèque de votre ordinateur uniquement. Vous pouvez la retoucher dans l'éditeur de fixtures de MyStrow comme n'importe quelle autre." }
+      },
+      {
+        "@type": "Question",
+        "name": "Claude peut-il faire une bêtise sur mes lumières ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "L'extension ne donne accès qu'à des commandes de jeu : couleurs, intensité, effets, mémoires, noir, lecture. Elle ne peut ni effacer une mémoire, ni modifier votre patch, ni supprimer une fixture. Et Claude Desktop vous demande votre accord avant d'utiliser chaque outil." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://mystrow.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Tutoriels", "item": "https://mystrow.fr/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Piloter ses lumières avec Claude", "item": "https://mystrow.fr/piloter-lumieres-assistant-ia-claude" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    /* Tableau comparatif (repris de synchroniser-mystrow-logiciel-dj) */
+    .cmp-wrap { overflow-x: auto; margin-top: 32px; border: 1px solid var(--border); border-radius: 14px; }
+    table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+    table.cmp th, table.cmp td { text-align: left; padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    table.cmp thead th { background: var(--bg3); color: var(--text); font-family: 'Barlow Condensed', sans-serif; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    table.cmp tbody td { color: var(--muted); vertical-align: top; }
+    table.cmp tbody td strong { color: var(--text); }
+    table.cmp tr:last-child td { border-bottom: none; }
+    .note-box { background: rgba(255,255,255,0.03); border-left: 3px solid var(--accent); border-radius: 8px; padding: 18px 22px; margin-top: 24px; }
+    .note-box p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .note-box strong { color: var(--text); }
+  </style>
+  <style>
+    code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .chat { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+    .chat-msg { max-width: 82%; padding: 12px 18px; border-radius: 16px; font-size: 14px; line-height: 1.55; }
+    .chat-msg.you { align-self: flex-end; background: var(--accent); color: #0c0b00; font-weight: 600; border-bottom-right-radius: 4px; }
+    .chat-msg.ai { align-self: flex-start; background: var(--bg3); border: 1px solid var(--border); color: var(--muted); border-bottom-left-radius: 4px; }
+    .chat-msg.ai strong { color: var(--text); }
+    @media (max-width: 680px) { .chat-msg { max-width: 92%; } }
+  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="mobile-nav.css?v=6">
+</head>
+<body>
+
+
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="./">Accueil</a> &nbsp;/&nbsp;
+        <a href="blog">Tutoriels</a> &nbsp;/&nbsp;
+        <span>Piloter ses lumières avec Claude</span>
+      </nav>
+      <div class="hero-badge">🤖 Guide pratique · Assistant IA</div>
+      <h1>« Allume les lumières »<br>et ça <em>s'allume</em></h1>
+      <p class="hero-sub">Avec l'extension MyStrow pour Claude Desktop, vous parlez à vos lumières comme à un technicien : une couleur, un effet rapide, un noir, une mémoire. Et quand une lyre arrive sans profil, Claude lit le manuel et crée la fixture pour vous.</p>
+      <div class="hero-meta">
+        <span>Par <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Publié le <strong>28 octobre 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Lecture : <strong>6 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#installation" class="btn-primary">Installer l'extension →</a>
+        <a href="#fixture" class="btn-outline">Créer une fixture →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Le principe</div>
+      <h2>Vous demandez, MyStrow exécute</h2>
+      <div class="prose">
+        <p><strong>Claude</strong> est l'assistant IA d'Anthropic. Son application pour ordinateur, <strong>Claude Desktop</strong>, peut recevoir des extensions qui lui donnent accès à d'autres logiciels. L'extension MyStrow lui apprend à piloter vos lumières.</p>
+        <p>Vous écrivez votre demande en français, comme vous la diriez à voix haute. Claude comprend ce que vous voulez, choisit la bonne commande et l'envoie à MyStrow, qui l'exécute exactement comme si vous aviez touché la console. Les lyres à roue de couleurs prennent la teinte la plus proche, les machines à fumée restent tranquilles quand vous demandez d'« allumer tout ».</p>
+      </div>
+
+      <div class="chat">
+        <div class="chat-msg you">Allume les lumières</div>
+        <div class="chat-msg ai">C'est fait : <strong>12 projecteurs en blanc à 100 %</strong>.</div>
+        <div class="chat-msg you">Ok, envoie un effet rapide</div>
+        <div class="chat-msg ai">J'ai lancé <strong>Strobe Classique</strong> et monté la vitesse des effets à <strong>90</strong>.</div>
+        <div class="chat-msg you">Un peu moins violent, et passe la face en bleu</div>
+        <div class="chat-msg ai">Vitesse redescendue à <strong>60</strong>, <strong>groupe A en bleu</strong>.</div>
+        <div class="chat-msg you">Noir</div>
+        <div class="chat-msg ai"><strong>Noir envoyé.</strong></div>
+      </div>
+
+      <div class="badge-row" style="margin-top:32px;">
+        <span class="badge">💻 Claude Desktop · Windows et Mac</span>
+        <span class="badge">🎛 MyStrow 3.2.9 et supérieur</span>
+        <span class="badge">🔒 Reste sur votre ordinateur</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QU'ON PEUT DEMANDER -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Ce que Claude peut faire</div>
+      <h2>Tout ce qui se joue en direct</h2>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">🎨</div>
+          <h3>Couleurs et intensité</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Tout le plateau, un groupe (« le groupe C », « les lyres ») ou des projecteurs précis. « Mets la face à 40 % », « contres en rouge », « ambiance chaude ».</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">✨</div>
+          <h3>Effets</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Claude connaît la liste de vos effets, y compris ceux que vous avez créés. « Un effet rapide », « quelque chose de doux », « plus vite », « arrête l'effet ».</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎚</div>
+          <h3>Mémoires et playlist</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">« Lance la mémoire 2.3 », « morceau suivant », « pause », « GO » en mode GO. Vos ambiances enregistrées restent la base, Claude ne fait que les appeler.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">📄</div>
+          <h3>Création de fixtures</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Donnez-lui le manuel d'une lyre ou d'un PAR introuvable : il lit le tableau DMX et ajoute l'appareil à votre bibliothèque. Détails <a href="#fixture" style="color:var(--accent);text-decoration:none;">plus bas</a>.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:36px;">
+        <p><strong>Ce que Claude ne peut pas faire :</strong> effacer une mémoire, modifier votre patch, supprimer une fixture ou toucher à vos réglages. L'extension ne donne accès qu'aux commandes de jeu. Le pire qu'une demande mal comprise puisse produire, c'est une mauvaise couleur, que vous corrigez d'une phrase.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATION -->
+  <section id="installation" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Installation</div>
+      <h2>Prêt en cinq minutes</h2>
+      <div class="prose">
+        <p>Il n'y a rien à configurer dans MyStrow : la porte d'entrée de l'extension s'ouvre toute seule au démarrage du logiciel. Tout se passe du côté de Claude.</p>
+      </div>
+
+      <div class="step-list" style="margin-top:40px;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Mettre MyStrow à jour</h3>
+            <p>L'extension demande <strong>MyStrow 3.2.9 ou plus récent</strong>. La mise à jour vous est proposée au lancement ; sinon, réinstallez depuis la page <a href="telecharger" style="color:var(--accent);text-decoration:none;">Téléchargement</a>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Installer Claude Desktop</h3>
+            <p>Téléchargez l'application sur <a href="https://claude.ai/download" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">claude.ai/download</a> et connectez-vous avec votre compte Claude. C'est l'application pour ordinateur qui compte : la version navigateur ne peut pas parler à un logiciel installé sur votre PC.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Télécharger l'extension MyStrow</h3>
+            <p>Un seul fichier, <code>MyStrow.mcpb</code>, le même pour Windows et Mac : <a href="downloads/MyStrow.mcpb" download style="color:var(--accent);text-decoration:none;">télécharger l'extension</a>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>L'installer dans Claude Desktop</h3>
+            <p>Double-cliquez sur le fichier : Claude Desktop s'ouvre et propose l'installation. Si rien ne se passe, ouvrez <strong>Paramètres → Extensions</strong> dans Claude Desktop et faites-y glisser le fichier. Laissez le port sur <code>8765</code>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h3>Ouvrir MyStrow et demander</h3>
+            <p>MyStrow doit être lancé, avec votre show chargé. Dans Claude, essayez : <strong>« Quels projecteurs y a-t-il dans MyStrow ? »</strong>. S'il vous répond avec la liste de votre patch, tout est branché.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lock-box">
+        <p><strong>💡 La première fois, Claude demande la permission.</strong> Avant d'utiliser un outil MyStrow, Claude Desktop vous demande de l'autoriser, une fois ou toujours. C'est voulu : vous gardez la main sur ce que l'IA a le droit de faire. Autorisez « toujours » les outils que vous utilisez souvent pour ne plus être interrompu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXTURE -->
+  <section id="fixture" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Fixtures</div>
+      <h2>Créer une fixture à partir du manuel</h2>
+      <div class="prose">
+        <p>Votre nouvelle lyre n'est dans aucune bibliothèque ? Le tableau DMX est dans son manuel : Claude sait le lire. Vous pouvez lui donner <strong>le PDF, une photo de la page ou le texte copié</strong>.</p>
+      </div>
+
+      <div class="step-list" style="margin-top:40px;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Joindre le manuel</h3>
+            <p>Dans Claude Desktop, ajoutez le PDF (ou une photo nette du tableau des canaux) à votre message, et écrivez : <strong>« Crée cette fixture dans MyStrow »</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Claude vérifie qu'elle n'existe pas déjà</h3>
+            <p>Il cherche d'abord le modèle dans votre bibliothèque MyStrow, pour ne pas créer un doublon d'un appareil vendu sous une autre marque.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Il crée la fixture, tous modes compris</h3>
+            <p>Chaque mode DMX du manuel (9 canaux, 14 canaux…), les couleurs de la roue avec leurs valeurs, les gobos, les plages utiles de Pan et Tilt. MyStrow contrôle le résultat avant de l'enregistrer, puis Claude vous affiche la liste des canaux retenus.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>La patcher et la tester</h3>
+            <p>La fixture apparaît dans <strong>Patch DMX → Ajouter</strong>, comme toutes les autres. Patchez-la et vérifiez canal par canal sur le vrai appareil : Pan, Tilt, couleurs, strobe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Toujours tester sur la vraie machine.</strong> Les manuels des lyres d'entrée de gamme contiennent souvent des erreurs : un canal décalé, un mode mal décrit, des valeurs de roue approximatives. Si un canal est marqué <code>Unused</code>, c'est que Claude n'a pas su l'identifier avec certitude : ouvrez la fixture dans l'éditeur de MyStrow et corrigez-le en deux clics.</p>
+      </div>
+
+      <div class="prose" style="margin-top:28px;">
+        <p>La fixture créée reste <strong>sur votre ordinateur</strong>. Pas de compte Claude ? Le menu <strong>Patch DMX → Créer votre fixture via IA</strong> fait la même chose avec n'importe quelle IA, par copier-coller : voir le guide <a href="importer-fixture-dmx-mystrow">importer une fixture DMX</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BON USAGE -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">À savoir</div>
+      <h2>Une aide, pas un pupitre</h2>
+      <div class="two-col" style="margin-top:32px;">
+        <div class="highlight-box">
+          <h3>Là où l'IA brille</h3>
+          <p>Préparer un plateau, chercher une ambiance, essayer des effets sans connaître leur nom, monter une fixture en quelques secondes. Et piloter sans les mains : depuis la scène, l'ordinateur portable posé sur l'ampli.</p>
+        </div>
+        <div class="highlight-box">
+          <h3>Là où elle ne remplace rien</h3>
+          <p>Une demande met <strong>une à quelques secondes</strong> à s'exécuter. Pour un top précis, une entrée de chanteur, un coup de grosse caisse, gardez vos mémoires sur l'AKAI, la tablette ou le clavier.</p>
+        </div>
+      </div>
+
+      <div class="note-box" style="margin-top:28px;">
+        <p><strong>Vos lumières ne sont pas sur Internet.</strong> Vos phrases partent vers Claude comme dans n'importe quelle conversation, mais l'extension ne parle à MyStrow que sur l'ordinateur lui-même. Personne ne peut piloter vos projecteurs depuis l'extérieur, et une page web ouverte dans votre navigateur ne peut pas envoyer de commande lumière.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉPANNAGE -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Dépannage</div>
+      <h2>Claude ne pilote rien</h2>
+      <div class="prose">
+        <p>Claude vous répète le message renvoyé par l'extension. Voici ce que chacun veut dire.</p>
+      </div>
+
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead>
+            <tr><th>Message</th><th>Ce qui se passe</th><th>La solution</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MyStrow ne répond pas</strong></td>
+              <td>L'extension ne trouve pas MyStrow sur l'ordinateur.</td>
+              <td>Lancez MyStrow. S'il est ouvert, vérifiez qu'il est en version 3.2.9 ou plus récente, puis relancez-le.</td>
+            </tr>
+            <tr>
+              <td><strong>Aucun projecteur dans le groupe…</strong></td>
+              <td>Le groupe demandé n'existe pas dans votre patch.</td>
+              <td>Le message liste vos groupes réels : reformulez avec l'un d'eux (« groupe B », « les lyres »).</td>
+            </tr>
+            <tr>
+              <td><strong>Effet inconnu</strong></td>
+              <td>Le nom d'effet ne correspond à aucun effet de MyStrow.</td>
+              <td>Demandez « quels effets as-tu ? », ou décrivez le résultat voulu plutôt qu'un nom.</td>
+            </tr>
+            <tr>
+              <td><strong>Aucun canal DMX exploitable</strong></td>
+              <td>Le tableau des canaux n'a pas pu être lu dans le document fourni.</td>
+              <td>Joignez la page du tableau DMX elle-même, en PDF ou en photo nette, ou copiez son texte.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose" style="margin-top:40px;">
+        <h3 style="font-size:20px;margin-bottom:12px;">Claude ne propose même pas d'utiliser MyStrow</h3>
+      </div>
+      <ul class="check-list">
+        <li><span><strong>L'extension est-elle activée ?</strong> Dans Claude Desktop, Paramètres → Extensions : MyStrow doit y figurer, activée.</span></li>
+        <li><span><strong>Utilisez-vous bien l'application ?</strong> Sur claude.ai dans le navigateur ou sur téléphone, l'extension n'existe pas.</span></li>
+        <li><span><strong>Avez-vous redémarré Claude Desktop ?</strong> Après l'installation, quittez-le complètement et rouvrez-le.</span></li>
+        <li><span><strong>Mentionnez MyStrow</strong> dans votre première demande (« dans MyStrow, allume la face ») : Claude fera le lien pour la suite de la conversation.</span></li>
+      </ul>
+
+      <div class="note-box" style="margin-top:28px;">
+        <p><strong>Toujours bloqué ?</strong> Écrivez-nous à <a href="contact" style="color:var(--accent);text-decoration:none;">contact</a> avec le message exact de Claude, votre version de MyStrow et votre système (Windows ou Mac).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">À vous de jouer</div>
+      <h2>Parlez à vos lumières</h2>
+      <p>Installez l'extension, ouvrez MyStrow, et demandez votre première ambiance.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="downloads/MyStrow.mcpb" download class="btn-primary">Télécharger l'extension ↓</a>
+        <a href="telecharger" class="btn-outline">Télécharger MyStrow →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Continuer</div>
+      <h2>Articles et ressources liés</h2>
+      <div class="related-grid">
+        <a href="importer-fixture-dmx-mystrow" class="related-card">
+          <div class="rc-tag">Guide · Fixtures</div>
+          <h3>Importer un fixture DMX dans MyStrow</h3>
+          <p>Bibliothèque, fichiers QLC+ et GrandMA, création via IA par copier-coller : toutes les façons d'ajouter un appareil.</p>
+        </a>
+        <a href="controler-mystrow-tablette-telephone" class="related-card">
+          <div class="rc-tag">Guide · Télécommande</div>
+          <h3>Piloter MyStrow depuis une tablette ou un téléphone</h3>
+          <p>Le plateau dans la main : couleurs, mémoires et effets depuis n'importe quel écran du réseau.</p>
+        </a>
+        <a href="regie-video-obs-vmix-mystrow" class="related-card">
+          <div class="rc-tag">Guide · Régie vidéo</div>
+          <h3>Piloter ses lumières depuis OBS ou vMix</h3>
+          <p>Une scène passe à l'antenne, la lumière qui va avec part toute seule.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Tutoriel · Débutant</div>
+          <h3>Débuter avec MyStrow — Patch, groupes et premier show</h3>
+          <p>Guide pas à pas pour allumer vos premiers projecteurs DMX, de l'installation à la première ambiance.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="telecharger">Téléchargement</a><a href="nouveautes">Nouveautés</a><a href="/activate">Activer un produit</a>
+      <a href="shop">Shop</a>
+      <a href="blog">Tutoriels</a>
+      <a href="cgv">CGV</a><a href="mentions-legales">Mentions légales</a><a href="confidentialite">Confidentialité</a>
+      <a href="contact">Contact</a><a href="shop">Shop</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a><a href="https://www.linkedin.com/company/mystrow/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#70B5F9'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 4.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'fr' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="nav.js?v=5" defer></script>
+<script src="mobile-nav.js?v=6"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+

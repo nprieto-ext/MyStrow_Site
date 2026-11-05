@@ -75,6 +75,14 @@ AddType video/webm  .webm
 AddType video/mp4   .mp4
 AddType image/webp  .webp
 
+# Extension Claude Desktop : forcer le téléchargement (sinon servie en texte)
+AddType application/octet-stream .mcpb
+<IfModule mod_headers.c>
+  <FilesMatch "\.mcpb$">
+    Header set Content-Disposition "attachment"
+  </FilesMatch>
+</IfModule>
+
 # -------------------------------------------------------
 # Page 404 custom
 # -------------------------------------------------------
