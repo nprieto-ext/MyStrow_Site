@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Create your 3D set with AI (ChatGPT, Claude) for MyStrow | MyStrow</title>
+  <meta name="description" content="Stage, DJ booth, speakers, truss: let ChatGPT or Claude build your 3D set, then import the GLB file into MyStrow&#x27;s 3D lighting plan. Ready-to-copy prompt.">
+  <meta name="keywords" content="MyStrow 3D set, import GLB, 3D object lighting plan, ChatGPT 3D, Claude Code GLB, 3D DMX lighting plan, AI 3D stage">
+  <link rel="canonical" href="https://mystrow.fr/en/decor-3d-ia-mystrow">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/decor-3d-ia-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/decor-3d-ia-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/decor-3d-ia-mystrow">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/decor-3d-ia-mystrow">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/decor-3d-ia-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/decor-3d-ia-mystrow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/en/decor-3d-ia-mystrow">
+  <meta property="og:title" content="Create your 3D set with AI and import it into MyStrow">
+  <meta property="og:description" content="Stage, DJ booth, speakers, truss: let ChatGPT or Claude build your 3D set, then import the GLB file into MyStrow&#x27;s 3D lighting plan. Ready-to-copy prompt.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-en.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-05">
+  <meta property="article:author" content="MyStrow">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Create your 3D set with AI and import it into MyStrow">
+  <meta name="twitter:description" content="ChatGPT or Claude builds your stage as a GLB, MyStrow shows it under your fixtures. The prompt is in the article.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-en.webp">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Create your 3D set with AI (ChatGPT, Claude) and import it into MyStrow",
+    "description": "Stage, DJ booth, speakers, truss: let ChatGPT or Claude build your 3D set, then import the GLB file into MyStrow's 3D lighting plan. Ready-to-copy prompt.",
+    "image": "https://mystrow.fr/og-image-en.webp",
+    "inLanguage": "en",
+    "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
+    "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
+    "datePublished": "2026-11-05",
+    "dateModified": "2026-11-05",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/en/decor-3d-ia-mystrow" },
+    "url": "https://mystrow.fr/en/decor-3d-ia-mystrow",
+    "keywords": ["3D set", "GLB", "3D lighting plan", "ChatGPT", "Claude", "MyStrow"]
+  }
+  </script>
+
+  <!-- BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mystrow.fr/en/" },
+      { "@type": "ListItem", "position": 2, "name": "Tutorials", "item": "https://mystrow.fr/en/blog" },
+      { "@type": "ListItem", "position": 3, "name": "3D set with AI", "item": "https://mystrow.fr/en/decor-3d-ia-mystrow" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "My object looks huge, why?", "acceptedAnswer": { "@type": "Answer", "text": "MyStrow always scales the largest dimension of the imported file to 12 metres. So a 2 m DJ booth on its own becomes a 12 m booth. The fix: include a 12 m wide floor in the file, as the prompt in this article does. The set then keeps its real size." } },
+      { "@type": "Question", "name": "Can I import several objects one by one?", "acceptedAnswer": { "@type": "Answer", "text": "No: a new import replaces the previous one. Put all your objects in the same file. If you want to add an object later, ask the AI to reuse its script and regenerate the complete file." } },
+      { "@type": "Question", "name": "The AI answers with code or a hand-written .gltf file, does that work?", "acceptedAnswer": { "@type": "Answer", "text": "Code yes, as long as the AI runs it and gives you the .glb file to download. A hand-typed .gltf, no: the shapes are stored as encoded binary data that an AI can't write from memory without mistakes." } },
+      { "@type": "Question", "name": "My set is backwards (the audience is behind the stage).", "acceptedAnswer": { "@type": "Answer", "text": "Ask the AI: \"Turn the whole stage 180° around the vertical axis and regenerate the file.\" In MyStrow, the audience is on the negative Z side and the back of the stage on the positive Z side." } },
+      { "@type": "Question", "name": "My screen doesn't show the video.", "acceptedAnswer": { "@type": "Answer", "text": "A screen drawn in the file is just an object. To show your video on it, use the VIDEO SCREENS section of the 3D lighting plan panel (Add a video screen) and line it up with the screen in your set." } },
+      { "@type": "Question", "name": "Can I use a model found online or made in Blender?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Any GLTF or GLB file works: Blender (File › Export › glTF 2.0), SketchUp (glTF Export extension), Vectorworks, or a model downloaded from Sketchfab. Just avoid files compressed with Draco or meshopt, which MyStrow can't read." } }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+    .video-lang-note { display: flex; gap: 12px; align-items: flex-start; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 14px 16px; margin: -12px auto 40px; max-width: 560px; }
+    .video-lang-note svg { width: 24px; height: 16px; border-radius: 2px; display: block; flex-shrink: 0; margin-top: 3px; }
+    .video-lang-note p { color: var(--muted); font-size: 13.5px; line-height: 1.65; margin: 0; }
+    .video-lang-note strong { color: var(--text); font-weight: 600; }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./">Home</a> &nbsp;/&nbsp;
+        <a href="blog">Tutorials</a> &nbsp;/&nbsp;
+        <span>3D set with AI</span>
+      </nav>
+      <div class="hero-badge">🧊 Practical guide · 3D lighting plan</div>
+      <h1>Your <em>3D</em> set<br>built by AI</h1>
+      <p class="hero-sub">A stage, a DJ booth, speakers, a truss… You don't need to know 3D: ChatGPT or Claude make the file, MyStrow shows it under your fixtures. The prompt is ready to copy below.</p>
+      <div class="hero-meta">
+        <span>By <strong>MyStrow</strong></span>
+        <span>·</span>
+        <span>Published on <strong>November 5, 2026</strong></span>
+        <span>·</span>
+        <span>⏱ Reading time: <strong>5 min</strong></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#prompt" class="btn-primary">Copy the prompt →</a>
+        <a href="download" class="btn-outline">Download MyStrow ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANT DE COMMENCER -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Before you start</div>
+      <h2>4 things to know about 3D import</h2>
+      <div class="prose">
+        <p>MyStrow's <a href="stage-plot">3D lighting plan</a> already comes with several ready-made sets. To get <strong>your</strong> venue or <strong>your</strong> stage, you can import a 3D model in <strong>GLB</strong> (or GLTF) format. If you already tried with an AI and it didn't work, it's almost always because of one of these four points:</p>
+      </div>
+      <div class="feat-grid">
+        <div class="feat-item">
+          <div class="feat-icon">📏</div>
+          <h3>Everything is scaled to 12 m</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">MyStrow scales the largest dimension of the file to 12 metres. A DJ booth imported on its own becomes a giant booth. The trick: a 12 m floor in the file, and everything keeps its real size.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">📦</div>
+          <h3>One file at a time</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">Each import replaces the previous one. You don't place objects one by one: the whole stage goes into the same file.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🧭</div>
+          <h3>The audience is in front</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">The audience is on the negative Z side, the back of the stage on the positive Z side, the floor at Y = 0. If you don't say so, the AI often turns the stage the wrong way.</p>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🐍</div>
+          <h3>You need an AI that creates files</h3>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;">The AI has to write a small script and run it to give you a real .glb file. A file "typed by hand" by the AI doesn't work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUELLE IA -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Step 1</div>
+      <h2>Choose your AI</h2>
+      <div class="prose">
+        <p>Any AI that can <strong>run code and hand you a file</strong> will do. The three that work best:</p>
+      </div>
+      <div class="ai-row">
+        <div class="ai-card">
+          <h3>ChatGPT</h3>
+          <p>It runs the script itself and gives you a download link for the .glb. If you only get code, reply: "Run the script and give me the file".</p>
+        </div>
+        <div class="ai-card">
+          <h3>Claude</h3>
+          <p>On claude.ai, with file creation turned on in the settings, Claude generates the .glb and offers it for download.</p>
+        </div>
+        <div class="ai-card">
+          <h3>Claude Code</h3>
+          <p>For the more confident: it writes the file straight onto your computer, in the folder of your choice. Ideal for tweaking the stage as you go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMPT -->
+  <section id="prompt" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Step 2</div>
+      <h2>Copy the prompt and describe your stage</h2>
+      <div class="prose">
+        <p>Copy this text, paste it into your AI, then <strong>replace the "MY STAGE" part</strong> with a description of your stage. The more dimensions you give, the more accurate the result. You can also attach a photo or a sketch of your venue.</p>
+      </div>
+      <div class="prompt-box">
+        <span class="pb-label">3D set prompt</span>
+        <button class="copy-btn" type="button">📋 Copy</button>
+        <pre>You are a 3D modelling expert. Create a .glb file (binary glTF 2.0) of my stage for the MyStrow lighting software.
+Write a Python script (using the trimesh library), RUN IT, and give me the .glb file to download.
+
+RULES
+1. Units in metres. The Y axis is vertical, the floor is at Y = 0.
+2. The audience is on the NEGATIVE Z side, the back of the stage on the POSITIVE Z side. X = left / right.
+3. Add a reference floor 12 m wide (X) by 8 m deep (Z), dark grey, 2 cm thick, centred at X = 0 and Z = 0. No object may stick out of this floor. (MyStrow always scales the largest dimension of the set to 12 m: this floor keeps the stage at its real size.)
+4. One colour per object (PBR material with baseColorFactor). No textures, no images.
+5. Simple shapes (boxes, cylinders), fewer than 50,000 triangles in total. No Draco or meshopt compression.
+6. All objects in ONE single .glb file, each object with a clear name.
+7. Don&#x27;t model the lighting fixtures: MyStrow places them itself from the patch.
+
+MY STAGE
+[Describe your stage here with dimensions, for example:
+- a stage 6 m wide, 4 m deep and 1 m high, at the back
+- a white DJ booth of 2 m x 0.8 m x 1.1 m in the middle of the stage
+- two black speakers on stands on each side, in front of the stage
+- a silver 30 cm square truss as a goal post 4 m above the stage
+- a black 4 x 2.5 m screen at the back of the stage]</pre>
+      </div>
+      <div class="callout">
+        <p><strong>Why a 12 m floor?</strong> Because MyStrow always adjusts the imported set so that its largest dimension is 12 m. If the floor is 12 m, there's nothing to adjust: your 6 m stage really is 6 m, surrounded by fixtures at the right scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORT -->
+  <section class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Step 3</div>
+      <h2>Import the file into MyStrow</h2>
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Open the 3D lighting plan</h3>
+            <p>In MyStrow, open the <strong>3D lighting plan</strong>. The right-hand panel contains the <strong>SET</strong> section.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Choose "No set"</h3>
+            <p>Click the <strong>No set</strong> card. Otherwise, the trusses of the built-in set stay visible under yours.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Import the .glb</h3>
+            <p>Further down, under <strong>IMPORT SCENE</strong>, click <strong>↓ GLTF / GLB</strong> and pick the file from the AI. The set appears on the floor, centred, with your fixtures on top.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Adjust by chatting with the AI</h3>
+            <p>Something's off? Just tell the AI: "move the stage back one metre", "put the truss at 5 m", "the stage is backwards, turn it 180°". It regenerates the file, you import it again: it replaces the old one.</p>
+          </div>
+        </div>
+      </div>
+      <div class="lock-box">
+        <p><strong>⚠ Don't move the file.</strong> MyStrow remembers where the .glb is and reloads it every time the 3D plan opens. Put it in a fixed folder (for example next to your show) before importing it. To remove the set, click <strong>✕ Clear import</strong>.</p>
+      </div>
+      <div class="callout">
+        <p><strong>A video screen in your set?</strong> The screen drawn by the AI is just a black object. To see your video on it, open the <strong>VIDEO SCREENS</strong> section of the same panel, click <strong>Add a video screen</strong> and set its position and size so it covers the one in the set.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Troubleshooting</div>
+      <h2>Frequently asked questions</h2>
+      <div class="step-list" style="gap:22px;">
+        <div class="step-body"><h3>My object looks huge, why?</h3><p>MyStrow always scales the largest dimension of the imported file to 12 metres. So a 2 m DJ booth on its own becomes a 12 m booth. The fix: include a 12 m wide floor in the file, as the prompt in this article does. The set then keeps its real size.</p></div>
+        <div class="step-body"><h3>Can I import several objects one by one?</h3><p>No: a new import replaces the previous one. Put all your objects in the same file. If you want to add an object later, ask the AI to reuse its script and regenerate the complete file.</p></div>
+        <div class="step-body"><h3>The AI answers with code or a hand-written .gltf file, does that work?</h3><p>Code yes, as long as the AI runs it and gives you the .glb file to download. A hand-typed .gltf, no: the shapes are stored as encoded binary data that an AI can&#x27;t write from memory without mistakes.</p></div>
+        <div class="step-body"><h3>My set is backwards (the audience is behind the stage).</h3><p>Ask the AI: &quot;Turn the whole stage 180° around the vertical axis and regenerate the file.&quot; In MyStrow, the audience is on the negative Z side and the back of the stage on the positive Z side.</p></div>
+        <div class="step-body"><h3>My screen doesn&#x27;t show the video.</h3><p>A screen drawn in the file is just an object. To show your video on it, use the VIDEO SCREENS section of the 3D lighting plan panel (Add a video screen) and line it up with the screen in your set.</p></div>
+        <div class="step-body"><h3>Can I use a model found online or made in Blender?</h3><p>Yes. Any GLTF or GLB file works: Blender (File › Export › glTF 2.0), SketchUp (glTF Export extension), Vectorworks, or a model downloaded from Sketchfab. Just avoid files compressed with Draco or meshopt, which MyStrow can&#x27;t read.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">Your turn</div>
+      <h2>Your venue, your fixtures, in 3D</h2>
+      <p>Download MyStrow for free, import your set and prepare your show before you even get there.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-primary" target="_blank" rel="noopener noreferrer">Download MyStrow ↓</a>
+        <a href="stage-plot" class="btn-outline">Discover the lighting plan →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES LIÉS -->
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Keep reading</div>
+      <h2>Related articles and resources</h2>
+      <div class="related-grid">
+        <a href="creer-fixture-dmx-ia-15-secondes" class="related-card">
+          <div class="rc-tag">Guide · AI</div>
+          <h3>Create a DMX fixture in under 15 seconds with AI</h3>
+          <p>Your fixture isn't in the library? The manual, a prompt, and the fixture is ready.</p>
+        </a>
+        <a href="stage-plot" class="related-card">
+          <div class="rc-tag">Feature</div>
+          <h3>2D and 3D lighting plan</h3>
+          <p>Place your fixtures and see their beams in real time, haze and gobos included.</p>
+        </a>
+        <a href="ai-lighting" class="related-card">
+          <div class="rc-tag">Feature · AI</div>
+          <h3>MyStrow's lighting AI</h3>
+          <p>Your DMX fixtures react to the music on their own, no programming needed.</p>
+        </a>
+        <a href="tutoriel-debuter-mystrow" class="related-card">
+          <div class="rc-tag">Tutorial · Beginner</div>
+          <h3>Getting started with MyStrow</h3>
+          <p>Patch, groups and first show: the step-by-step guide to light up your first DMX fixtures.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="download">Download</a><a href="whats-new">What's new</a><a href="/activate?lang=en">Activate a product</a><a href="./#pricing">Pricing</a><a href="terms">Terms</a><a href="legal-notice">Legal Notice</a><a href="privacy">Privacy</a><a href="contact">Contact</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · All rights reserved</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Welcome!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Something went wrong.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Something went wrong.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Copied'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=6"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+
