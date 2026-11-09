@@ -20,6 +20,13 @@ RewriteRule ^tarifs(\.html)?/?$ /shop#formules [R=301,NE,L]
 # 28/10/2026 : 404 relevées dans Search Console
 # lien tronqué (copié coupé quelque part) → article OBS/vMix
 RewriteRule ^regie-video-obs-?/?$ /regie-video-obs-vmix-mystrow [R=301,L]
+# 09/11/2026 : lien court mystrow.fr/app (bio Insta/TikTok, QR codes) → le bon store selon l'appareil.
+# 302 (pas 301) : la destination dépend du visiteur, il ne faut pas que le navigateur la mémorise.
+RewriteCond %{HTTP_USER_AGENT} (iPhone|iPad|iPod) [NC]
+RewriteRule ^app/?$ https://apps.apple.com/app/id6760429882 [R=302,L]
+RewriteCond %{HTTP_USER_AGENT} Android [NC]
+RewriteRule ^app/?$ https://play.google.com/store/apps/details?id=fr.mystrow.app [R=302,L]
+RewriteRule ^app/?$ /application-tablette [R=302,L]
 # pages auteur de l'ancien site WordPress : supprimées définitivement (410)
 RewriteRule ^author(/.*)?$ - [G,L]
 
