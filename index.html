@@ -1078,7 +1078,7 @@
       </div>
     </div>
       <a href="https://mystrow.fr/compte" class="nav-signin nav-desktop" target="_blank" rel="noopener noreferrer">Connexion</a>
-      <a href="#telecharger" id="dl-btn-nav" class="btn-nav-cta">Télécharger ↓</a>
+      <a href="telecharger" id="dl-btn-nav" class="btn-nav-cta">Télécharger →</a>
     </div>
   </nav>
 </header>
@@ -2353,19 +2353,15 @@ requestAnimationFrame(tick);
 /* DÉTECTION OS — lien de téléchargement */
 (function() {
   const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
-  const url   = isMac
-    ? 'telecharger.html'
-    : 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
-  const label = isMac ? 'Télécharger pour macOS ↗' : 'Télécharger pour Windows ↗';
+  const url   = 'telecharger.html';  // 09/11/2026 : tout le monde passe par la page de téléchargement
+  const label = isMac ? 'Télécharger pour macOS →' : 'Télécharger pour Windows →';
   document.querySelectorAll('#dl-btn-hero, #dl-btn-cta').forEach(btn => {
     btn.href = url;
     btn.textContent = label;
-    if (!isMac) { btn.target = '_blank'; btn.rel = 'noopener noreferrer'; }
   });
   const navBtn = document.getElementById('dl-btn-nav');
   if (navBtn) {
     navBtn.href = url;
-    if (!isMac) { navBtn.target = '_blank'; navBtn.rel = 'noopener noreferrer'; }
   }
 })();
 

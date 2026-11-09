@@ -656,7 +656,7 @@
       </div>
     </div>
       <a href="https://mystrow.fr/compte" class="nav-signin nav-desktop" target="_blank" rel="noopener noreferrer">Entrar</a>
-      <a href="#download" class="btn-nav-cta">Transferir ↓</a>
+      <a href="download" class="btn-nav-cta">Transferir →</a>
     </div>
   </nav>
 </header>
@@ -1708,12 +1708,10 @@ requestAnimationFrame(tick);
 /* OS DETECTION — download link */
 (function() {
   const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
-  const url   = isMac
-    ? 'download.html'
-    : 'https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win';
-  const label = isMac ? 'Download for macOS ↗' : 'Download for Windows ↗';
+  const url   = 'download.html';  // 09/11/2026 : everyone goes through the download page
+  const label = isMac ? 'Download for macOS →' : 'Download for Windows →';
   document.querySelectorAll('#dl-btn-hero, #dl-btn-cta').forEach(btn => {
-    btn.href = url; btn.textContent = label; btn.target = '_blank'; btn.rel = 'noopener noreferrer';
+    btn.href = url; btn.textContent = label;
   });
 })();
 
