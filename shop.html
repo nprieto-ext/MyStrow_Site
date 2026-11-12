@@ -610,6 +610,41 @@
       .compare-table th, .compare-table td { padding: 10px; font-size: 12px; }
       .volume-card { padding: 30px 20px; }
     }
+    /* ═══ Aiguillage : quel achat pour moi ? ═══ */
+    .choix { padding: 28px 0 8px; }
+    .choix-h { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; line-height: 1.1; margin-bottom: 4px; }
+    .choix-lead { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+    .choix-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .choix-card { display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); color: var(--text); text-decoration: none; transition: border-color .2s, transform .2s; min-width: 0; }
+    .choix-card:hover, .choix-card:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+    .choix-card.top { border-color: rgba(226,206,22,0.45); }
+    .choix-ico { font-size: 24px; line-height: 1; }
+    .choix-card { position: relative; }
+    .choix-badge { position: absolute; top: -9px; right: 12px;font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #111; background: var(--accent); border-radius: 99px; padding: 2px 8px; }
+    .choix-name { font-family: 'Barlow Condensed', sans-serif; font-size: 21px; font-weight: 800; line-height: 1.1; }
+    .choix-who { font-size: 13px; color: var(--muted); line-height: 1.45; }
+    .choix-price { margin-top: auto; padding-top: 6px; font-size: 14px; font-weight: 600; color: var(--accent); line-height: 1.4; }
+    .choix-price small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+    .choix-go { font-size: 13px; font-weight: 600; }
+    .choix-note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+    .choix-note b { color: var(--text); }
+    @media (max-width: 900px) { .choix-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 480px) { .choix-grid { grid-template-columns: 1fr; } }
+    /* ═══ Appli tablette seule ═══ */
+    .appt { padding: 8px 0 40px; scroll-margin-top: 80px; }
+    .appt-card { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 32px 36px; }
+    .appt-card h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(26px, 3.6vw, 38px); font-weight: 800; line-height: 1.05; margin-bottom: 10px; }
+    .appt-steps { list-style: none; display: grid; gap: 10px; margin: 14px 0 0; padding: 0; }
+    .appt-steps li { display: flex; gap: 12px; align-items: baseline; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .appt-steps b { color: var(--text); }
+    .appt-steps .n { flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; color: var(--accent); font-size: 18px; }
+    .appt-price { font-family: 'Barlow Condensed', sans-serif; font-size: 46px; font-weight: 800; color: var(--accent); line-height: 1; }
+    .appt-price small { font-size: 16px; color: var(--muted); font-family: 'Inter', sans-serif; font-weight: 400; }
+    .appt-stores { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 10px; }
+    .appt-store { flex: 1 1 140px; text-align: center; padding: 12px 14px; border-radius: 10px; font-weight: 700; font-size: 14px; text-decoration: none; background: var(--accent); color: #111; }
+    .appt-store.alt { background: transparent; color: var(--accent); border: 1px solid rgba(226,206,22,0.4); }
+    .appt-fine { font-size: 12px; color: var(--muted); line-height: 1.55; }
+    @media (max-width: 820px) { .appt-card { grid-template-columns: 1fr; padding: 26px 22px; } }
   </style>
 <link rel="stylesheet" href="mobile-nav.css?v=6">
 </head>
@@ -618,6 +653,46 @@
 
 
 <main>
+  <!-- ═══ AIGUILLAGE : les 4 façons d'acheter MyStrow ═══ -->
+  <section class="choix" id="choisir">
+    <div class="wrap">
+      <h2 class="choix-h">Que voulez-vous acheter&nbsp;?</h2>
+      <p class="choix-lead">Quatre façons d'utiliser MyStrow. Choisissez celle qui correspond à votre matériel.</p>
+      <div class="choix-grid">
+        <a class="choix-card top" href="#pack-mystrow" data-pick="pack_1a" data-ga-event="shop_choix_pack">
+          <span class="choix-badge">Pour démarrer</span>
+          <span class="choix-ico" aria-hidden="true">📦</span>
+          <span class="choix-name">Le Pack</span>
+          <span class="choix-who">Je n'ai rien : l'interface DMX + la licence, pour l'ordinateur <b>et</b> la tablette.</span>
+          <span class="choix-price">dès 99 € TTC<small>livraison offerte</small></span>
+          <span class="choix-go">Voir le Pack →</span>
+        </a>
+        <a class="choix-card" href="#formules" data-ga-event="shop_choix_licence">
+          <span class="choix-ico" aria-hidden="true">💻</span>
+          <span class="choix-name">La licence seule</span>
+          <span class="choix-who">J'ai déjà une interface DMX ou un node Art-Net. Valable sur PC, Mac et tablette.</span>
+          <span class="choix-price">dès 11,99 € TTC/mois<small>essai gratuit 15 jours</small></span>
+          <span class="choix-go">Voir les formules →</span>
+        </a>
+        <a class="choix-card" href="#appli-tablette" data-ga-event="shop_choix_appli">
+          <span class="choix-ico" aria-hidden="true">📱</span>
+          <span class="choix-name">L'appli tablette seule</span>
+          <span class="choix-who">Je veux juste piloter depuis ma tablette Android ou mon iPad.</span>
+          <span class="choix-price">49 € une fois<small>appli gratuite à essayer</small></span>
+          <span class="choix-go">Voir l'appli →</span>
+        </a>
+        <a class="choix-card" href="#pack-mystrow" data-pick="boitier" data-ga-event="shop_choix_interface">
+          <span class="choix-ico" aria-hidden="true">🔌</span>
+          <span class="choix-name">L'interface seule</span>
+          <span class="choix-who">J'ai déjà ma licence (ou un autre logiciel) : il me manque le boîtier.</span>
+          <span class="choix-price">69 € TTC<small>sans licence · France métropolitaine</small></span>
+          <span class="choix-go">Commander l'interface →</span>
+        </a>
+      </div>
+      <p class="choix-note">💡 Une licence MyStrow (Pack ou formule) <b>débloque aussi l'appli tablette</b> : pas besoin de payer les 49&nbsp;€ en plus.</p>
+    </div>
+  </section>
+
   <!-- ═══ PACK MYSTROW — produit phare, commande directe ═══
        Commander → Payment Link Stripe → stripe_webhook → expédition Amazon MCF
        depuis le stock FBA. Date de livraison et stock : CF livraison_estimation.
@@ -853,6 +928,32 @@
     </div>
   </section>
 
+  <!-- ═══ APPLI TABLETTE SEULE : achat intégré unique (App Store / Google Play) ═══ -->
+  <section class="appt" id="appli-tablette">
+    <div class="wrap">
+      <div class="appt-card">
+        <div>
+          <div class="section-tag">Sans ordinateur</div>
+          <h2>L'appli tablette seule</h2>
+          <p class="choix-who">La console MyStrow sur votre tablette Android ou votre iPad. Branchez une interface USB-DMX ou un node Art-Net, et pilotez vos projecteurs du bout des doigts.</p>
+          <ul class="appt-steps">
+            <li><span class="n">1</span><span><b>Téléchargez l'appli gratuitement</b> et essayez tout : la sortie DMX tourne 10 minutes à chaque lancement.</span></li>
+            <li><span class="n">2</span><span><b>Débloquez-la pour 49 €, une seule fois</b>, directement dans l'appli. Pas d'abonnement, c'est à vous pour toujours.</span></li>
+            <li><span class="n">3</span><span><b>Ou utilisez votre licence MyStrow</b> : connectez votre compte dans l'appli, elle est débloquée sans rien payer de plus.</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="appt-price">49 € <small>une fois, TTC</small></div>
+          <div class="appt-stores">
+            <a class="appt-store" href="https://play.google.com/store/apps/details?id=fr.mystrow.app" target="_blank" rel="noopener" data-ga-event="shop_store_android">Google Play ↗</a>
+            <a class="appt-store alt" href="https://apps.apple.com/app/id6760429882" target="_blank" rel="noopener" data-ga-event="shop_store_ios">App Store ↗</a>
+          </div>
+          <p class="appt-fine">Payé auprès de Google ou d'Apple, sur votre compte : retrouvez-le sur une nouvelle tablette avec « Restaurer mes achats ». L'achat dans l'appli ne débloque que la tablette, pas le logiciel sur ordinateur. <a class="pk-lnk" href="application-tablette">Tout savoir sur l'appli →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ SECTION TARIFS ═══ -->
   <section class="pricing-section" id="formules">
     <div class="wrap">
@@ -945,6 +1046,7 @@
           <tr><td>Activation sur 2 machines</td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
           <tr><td>Mises à jour incluses</td><td><span class="cross">✕</span></td><td><span class="check">✓ Illimitées</span></td><td><span class="check">✓ À vie</span></td></tr>
           <tr><td>Support par email</td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Appli tablette débloquée (Android, iPad)</td><td><span class="cross">✕</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
           <tr><td>Durée</td><td>15 jours</td><td>Mensuel / Annuel</td><td>À vie</td></tr>
         </tbody>
       </table>
@@ -977,6 +1079,14 @@
         <div class="faq-item">
           <div class="faq-q">Quelle est la différence entre Mensuel et Annuel ?<span class="faq-arrow">+</span></div>
           <div class="faq-a">Le plan Mensuel est à 19,99 € HT/mois (23,99 € TTC en France), sans engagement — résiliable à tout moment. Le plan Annuel est à 9,99 € HT/mois (11,99 € TTC en France), facturé 119,88 € HT/an en une fois, soit 50% d'économie. Les deux plans incluent exactement les mêmes fonctionnalités.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">L'appli tablette est-elle payante ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Le téléchargement est gratuit sur Google Play et l'App Store, et vous pouvez tout essayer : la sortie DMX fonctionne 10 minutes à chaque lancement. Pour l'utiliser sans limite, deux possibilités : un achat unique de 49 € dans l'appli, ou votre licence MyStrow (Pack ou formule), qui débloque la tablette sans supplément.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">J'ai acheté l'appli tablette à 49 €, puis-je utiliser le logiciel sur ordinateur ?<span class="faq-arrow">+</span></div>
+          <div class="faq-a">Non : l'achat dans l'appli est payé à Google ou Apple et ne débloque que la tablette. Pour le logiciel PC et Mac, il faut une licence MyStrow (Pack ou formule), qui elle débloque l'ordinateur ET la tablette.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Que se passe-t-il à la fin de mon abonnement ?<span class="faq-arrow">+</span></div>
@@ -1345,6 +1455,15 @@ function handleNewsletter(e) {
   /* FAQ licences : accordéon */
   document.querySelectorAll('.faq-q').forEach(function (q) {
     q.addEventListener('click', function () { this.parentElement.classList.toggle('open'); });
+  });
+</script>
+<script>
+  /* Aiguillage en haut de page : « Le Pack » / « L'interface seule » présélectionnent l'option du Pack */
+  document.querySelectorAll('.choix-card[data-pick]').forEach(function (c) {
+    c.addEventListener('click', function () {
+      var o = document.querySelector('.pk-opt[data-plan="' + c.dataset.pick + '"]');
+      if (o && !o.classList.contains('on')) o.click();
+    });
   });
 </script>
 </body>
