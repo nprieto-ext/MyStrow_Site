@@ -96,6 +96,21 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "A app para tablet é paga?",
+        "acceptedAnswer": { "@type": "Answer", "text": "O download é gratuito no Google Play e na App Store, e pode experimentar tudo: a saída DMX funciona 10 minutos em cada arranque. Para usar sem limite: uma compra única de 49 € na app, ou uma licença MyStrow (Pro, Lifetime ou Pack), que desbloqueia o computador E o tablet sem custo adicional. Atenção: a compra de 49 € só desbloqueia o tablet, não o software para computador." }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso usar o MyStrow no mesmo computador que o Virtual DJ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. O MyStrow e o seu software de DJ (Virtual DJ, Rekordbox, Serato…) funcionam ao mesmo tempo no mesmo computador. O MyStrow não usa o seu controlador de DJ: apenas recebe o tempo, pelo relógio MIDI do software de DJ ou pelo som, para sincronizar as luzes com a música. Pode ainda usar o tablet como comando à distância." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quantos universos DMX o tablet consegue controlar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sozinho, sem computador, o tablet controla 1 universo de 512 canais, através da nossa interface USB-DMX ou de um node Art-Net. Para vários universos (até 4, ou seja 2.048 canais), instale o MyStrow no seu computador e use o tablet como comando à distância: mantém o conforto tátil e toda a potência do software." }
+      },
+      {
+        "@type": "Question",
         "name": "Que equipamento preciso para usar o MyStrow?",
         "acceptedAnswer": { "@type": "Answer", "text": "Um PC com Windows 10/11 ou macOS (Intel 11+, Apple Silicon 13+) com uma porta USB ou de rede, um nó DMX Art-Net ligado ao PC via cabo ethernet, e os seus projetores DMX. O controlador AKAI APC mini mk2 é recomendado para uso em direto — um simulador integrado torna-o completamente opcional." }
       },
@@ -348,6 +363,16 @@
     .price-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .price-features li.off { color: rgba(122,117,112,0.6); }
     .price-features li.off::before { content: '✕'; color: rgba(122,117,112,0.5); }
+    .price-features li { text-align: left; }
+    .price-features li.app-incl { color: var(--text); font-weight: 600; }
+    .price-features li.app-incl a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .app-only { max-width: 880px; margin: 14px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; text-align: left; background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px 26px; }
+    .app-only-txt { flex: 1; min-width: 240px; }
+    .app-only-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.5px; }
+    .app-only-desc { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 4px; }
+    .app-only-price { font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1; white-space: nowrap; }
+    .app-only-price small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .app-only .btn-full { width: auto; padding: 12px 22px; }
     .btn-full { width: 100%; padding: 12px; border-radius: 7px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center; text-decoration: none; display: block; transition: opacity 0.2s; }
     .btn-full.primary { background: var(--accent); color: #0c0b00; border: none; }
     .btn-full.outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
@@ -1120,6 +1145,7 @@
           <li>IA de iluminação avançada</li>
           <li>Programação de luz</li>
           <li class="off">Sem saída DMX</li>
+          <li>App tablet: 10 min por arranque</li>
         </ul>
         <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-full outline" target="_blank" rel="noopener noreferrer">Baixar MyStrow</a>
       </div>
@@ -1146,6 +1172,7 @@
           <li>Programação de luz</li>
           <li>Saída DMX</li>
           <li>Ativação em 2 máquinas</li>
+          <li class="app-incl"><span><a href="application-tablette">App tablet incluída</a> (Android, iPad)</span></li>
           <li>Atualizações incluídas</li>
         </ul>
         <a id="pro-cta" href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" class="btn-full primary" target="_blank" rel="noopener noreferrer">Assinar MyStrow PRO</a>
@@ -1165,12 +1192,23 @@
           <li>Programação de luz</li>
           <li>Saída DMX</li>
           <li>Ativação em 2 máquinas</li>
+          <li class="app-incl"><span><a href="application-tablette">App tablet incluída</a> (Android, iPad)</span></li>
           <li>Atualizações vitalícias incluídas</li>
           <li>Sem subscrição · nunca</li>
         </ul>
         <a href="https://buy.stripe.com/9B6dR19t38JieNqaIY08g09" class="btn-full outline" target="_blank" rel="noopener noreferrer">Comprar Lifetime</a>
       </div>
 
+    </div>
+
+    <!-- APPLI TABLETTE SEULE -->
+    <div class="app-only">
+      <div class="app-only-txt">
+        <div class="app-only-name">📱 Só a app para tablet?</div>
+        <div class="app-only-desc">Sem computador: o seu tablet Android ou iPad controla diretamente os seus projetores. Grátis para experimentar, depois desbloqueada de uma vez por todas na app. Já tem uma licença Pro ou Lifetime? A app está incluída, sem custo adicional.</div>
+      </div>
+      <div class="app-only-price">49 €<small>IVA incl. · pagamento único</small></div>
+      <a href="application-tablette" class="btn-full outline">Ver a app</a>
     </div>
     <!-- PACK MYSTROW : interface USB-DMX + licence (vendu sur /shop) -->
     <div class="pack-card" id="pack">
@@ -1223,6 +1261,18 @@
       <div class="faq-item">
         <div class="faq-q">Quais os formatos de áudio e vídeo suportados?<span class="faq-arrow" aria-hidden="true">+</span></div>
         <div class="faq-a">Áudio: MP3, WAV, FLAC, AAC, OGG. Vídeo: MP4, MOV, AVI, MKV — projetados em ecrã completo num segundo monitor. Também pode inserir pausas manuais ou tempos cronometrados na sua lista de reprodução.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">A app para tablet é paga?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">O download é gratuito no Google Play e na App Store, e pode experimentar tudo: a saída DMX funciona 10 minutos em cada arranque. Para usar sem limite: uma compra única de 49 € na app, ou uma licença MyStrow (Pro, Lifetime ou Pack), que desbloqueia o computador <b>E</b> o tablet sem custo adicional. Atenção: a compra de 49 € só desbloqueia o tablet, não o software para computador. <a href="application-tablette" style="color:var(--accent)">Tudo sobre a app →</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Posso usar o MyStrow no mesmo computador que o Virtual DJ?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Sim. O MyStrow e o seu software de DJ (Virtual DJ, Rekordbox, Serato…) funcionam ao mesmo tempo no mesmo computador. O MyStrow não usa o seu controlador de DJ: apenas recebe o tempo, pelo relógio MIDI do software de DJ ou pelo som, para sincronizar as luzes com a música. Pode ainda usar o tablet como comando à distância. <a href="synchroniser-mystrow-logiciel-dj" style="color:var(--accent)">Ver o guia →</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quantos universos DMX o tablet consegue controlar?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Sozinho, sem computador, o tablet controla 1 universo de 512 canais, através da nossa interface USB-DMX ou de um node Art-Net. Para vários universos (até 4, ou seja 2.048 canais), instale o MyStrow no seu computador e use o tablet como comando à distância: mantém o conforto tátil e toda a potência do software. <a href="controler-mystrow-tablette-telephone" style="color:var(--accent)">Controlar a partir do tablet →</a></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">O controlador AKAI APC mini é obrigatório?<span class="faq-arrow" aria-hidden="true">+</span></div>

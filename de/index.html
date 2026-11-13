@@ -96,6 +96,21 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Ist die Tablet-App kostenpflichtig?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Der Download bei Google Play und im App Store ist kostenlos, und Sie können alles ausprobieren: Der DMX-Ausgang läuft bei jedem Start 10 Minuten. Für die unbegrenzte Nutzung: ein einmaliger In-App-Kauf für 49 € oder eine MyStrow-Lizenz (Pro, Lifetime oder Pack), die Computer UND Tablet ohne Aufpreis freischaltet. Achtung: Der Kauf für 49 € schaltet nur das Tablet frei, nicht die Computer-Software." }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich MyStrow auf demselben Computer wie Virtual DJ nutzen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ja. MyStrow und Ihre DJ-Software (Virtual DJ, Rekordbox, Serato…) laufen gleichzeitig auf demselben Computer. MyStrow belegt Ihren DJ-Controller nicht: Es übernimmt nur das Tempo, über die MIDI-Clock der DJ-Software oder über den Ton, um das Licht mit der Musik zu synchronisieren. Zusätzlich können Sie das Tablet als Fernbedienung nutzen." }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viele DMX-Universen kann das Tablet steuern?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Allein, ohne Computer, steuert das Tablet 1 Universum mit 512 Kanälen, über unser USB-DMX-Interface oder einen Art-Net-Node. Für mehrere Universen (bis zu 4, also 2.048 Kanäle) installieren Sie MyStrow auf Ihrem Computer und nutzen das Tablet als Fernbedienung: Sie behalten die Touch-Bedienung und die volle Leistung der Software." }
+      },
+      {
+        "@type": "Question",
         "name": "Welche Hardware benötige ich für MyStrow?",
         "acceptedAnswer": { "@type": "Answer", "text": "Einen Windows 10/11 oder macOS (Intel 11+, Apple Silicon 13+) PC mit einem USB- oder Netzwerkanschluss, einen Art-Net-DMX-Node (auf IP 2.0.0.15 konfiguriert), der über ein Ethernet-Kabel mit dem PC verbunden ist, sowie Ihre DMX-Scheinwerfer. Der AKAI APC mini mk2 Controller wird für den Live-Einsatz empfohlen — ein integrierter Simulator macht ihn vollständig optional." }
       },
@@ -348,6 +363,16 @@
     .price-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .price-features li.off { color: rgba(122,117,112,0.6); }
     .price-features li.off::before { content: '✕'; color: rgba(122,117,112,0.5); }
+    .price-features li { text-align: left; }
+    .price-features li.app-incl { color: var(--text); font-weight: 600; }
+    .price-features li.app-incl a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .app-only { max-width: 880px; margin: 14px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; text-align: left; background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px 26px; }
+    .app-only-txt { flex: 1; min-width: 240px; }
+    .app-only-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.5px; }
+    .app-only-desc { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 4px; }
+    .app-only-price { font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1; white-space: nowrap; }
+    .app-only-price small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .app-only .btn-full { width: auto; padding: 12px 22px; }
     .btn-full { width: 100%; padding: 12px; border-radius: 7px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center; text-decoration: none; display: block; transition: opacity 0.2s; }
     .btn-full.primary { background: var(--accent); color: #0c0b00; border: none; }
     .btn-full.outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
@@ -1120,6 +1145,7 @@
           <li>Erweiterte KI-Beleuchtung</li>
           <li>Lichtprogrammierung</li>
           <li class="off">Kein DMX-Ausgang</li>
+          <li>Tablet-App: 10 Min. pro Start</li>
         </ul>
         <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-full outline" target="_blank" rel="noopener noreferrer">MyStrow herunterladen</a>
       </div>
@@ -1146,6 +1172,7 @@
           <li>Lichtprogrammierung</li>
           <li>DMX-Ausgang</li>
           <li>Aktivierung auf 2 Geräten</li>
+          <li class="app-incl"><span><a href="application-tablette">Tablet-App inklusive</a> (Android, iPad)</span></li>
           <li>Updates inklusive</li>
         </ul>
         <a id="pro-cta" href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" class="btn-full primary" target="_blank" rel="noopener noreferrer">MyStrow PRO abonnieren</a>
@@ -1165,12 +1192,23 @@
           <li>Lichtprogrammierung</li>
           <li>DMX-Ausgang</li>
           <li>Aktivierung auf 2 Geräten</li>
+          <li class="app-incl"><span><a href="application-tablette">Tablet-App inklusive</a> (Android, iPad)</span></li>
           <li>Lebenslange Updates inklusive</li>
           <li>Kein Abonnement · nie</li>
         </ul>
         <a href="https://buy.stripe.com/9B6dR19t38JieNqaIY08g09" class="btn-full outline" target="_blank" rel="noopener noreferrer">Lebenslang kaufen</a>
       </div>
 
+    </div>
+
+    <!-- APPLI TABLETTE SEULE -->
+    <div class="app-only">
+      <div class="app-only-txt">
+        <div class="app-only-name">📱 Nur die Tablet-App?</div>
+        <div class="app-only-desc">Ohne Computer: Ihr Android-Tablet oder iPad steuert Ihre Scheinwerfer direkt. Kostenlos testen, dann einmalig in der App freischalten. Sie haben bereits eine Pro- oder Lifetime-Lizenz? Die App ist inklusive, ohne Aufpreis.</div>
+      </div>
+      <div class="app-only-price">49 €<small>inkl. MwSt. · einmalig</small></div>
+      <a href="application-tablette" class="btn-full outline">Zur App</a>
     </div>
     <!-- PACK MYSTROW : interface USB-DMX + licence (vendu sur /shop) -->
     <div class="pack-card" id="pack">
@@ -1223,6 +1261,18 @@
       <div class="faq-item">
         <div class="faq-q">Welche Audio- und Videoformate werden unterstützt?<span class="faq-arrow" aria-hidden="true">+</span></div>
         <div class="faq-a">Audio: MP3, WAV, FLAC, AAC, OGG. Video: MP4, MOV, AVI, MKV – im Vollbild auf einem zweiten Monitor projiziert. Sie können auch manuelle Pausen oder zeitgesteuerte Tempos in Ihre Playlist einfügen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Ist die Tablet-App kostenpflichtig?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Der Download bei Google Play und im App Store ist kostenlos, und Sie können alles ausprobieren: Der DMX-Ausgang läuft bei jedem Start 10 Minuten. Für die unbegrenzte Nutzung: ein einmaliger In-App-Kauf für 49 € oder eine MyStrow-Lizenz (Pro, Lifetime oder Pack), die Computer <b>UND</b> Tablet ohne Aufpreis freischaltet. Achtung: Der Kauf für 49 € schaltet nur das Tablet frei, nicht die Computer-Software. <a href="application-tablette" style="color:var(--accent)">Alles zur App →</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Kann ich MyStrow auf demselben Computer wie Virtual DJ nutzen?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Ja. MyStrow und Ihre DJ-Software (Virtual DJ, Rekordbox, Serato…) laufen gleichzeitig auf demselben Computer. MyStrow belegt Ihren DJ-Controller nicht: Es übernimmt nur das Tempo, über die MIDI-Clock der DJ-Software oder über den Ton, um das Licht mit der Musik zu synchronisieren. Zusätzlich können Sie das Tablet als Fernbedienung nutzen. <a href="synchroniser-mystrow-logiciel-dj" style="color:var(--accent)">Zur Anleitung →</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Wie viele DMX-Universen kann das Tablet steuern?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Allein, ohne Computer, steuert das Tablet 1 Universum mit 512 Kanälen, über unser USB-DMX-Interface oder einen Art-Net-Node. Für mehrere Universen (bis zu 4, also 2.048 Kanäle) installieren Sie MyStrow auf Ihrem Computer und nutzen das Tablet als Fernbedienung: Sie behalten die Touch-Bedienung und die volle Leistung der Software. <a href="controler-mystrow-tablette-telephone" style="color:var(--accent)">Mit dem Tablet steuern →</a></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Ist der AKAI APC mini Controller erforderlich?<span class="faq-arrow" aria-hidden="true">+</span></div>

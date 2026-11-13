@@ -96,6 +96,21 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "L'app per tablet è a pagamento?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Il download è gratuito su Google Play e sull'App Store, e puoi provare tutto: l'uscita DMX funziona 10 minuti a ogni avvio. Per usarla senza limiti: un acquisto unico di 49 € nell'app, oppure una licenza MyStrow (Pro, Lifetime o Pack), che sblocca il computer E il tablet senza costi aggiuntivi. Attenzione: l'acquisto da 49 € sblocca solo il tablet, non il software per computer." }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso usare MyStrow sullo stesso computer di Virtual DJ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sì. MyStrow e il tuo software DJ (Virtual DJ, Rekordbox, Serato…) funzionano insieme sullo stesso computer. MyStrow non usa il tuo controller DJ: riceve semplicemente il tempo, tramite il MIDI clock del software DJ o tramite il suono, per sincronizzare le luci con la musica. Puoi anche usare il tablet come telecomando." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanti universi DMX può controllare il tablet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Da solo, senza computer, il tablet controlla 1 universo di 512 canali, tramite la nostra interfaccia USB-DMX o un nodo Art-Net. Per più universi (fino a 4, cioè 2.048 canali), installa MyStrow sul computer e usa il tablet come telecomando: mantieni la comodità del touch e tutta la potenza del software." }
+      },
+      {
+        "@type": "Question",
         "name": "Che hardware serve per usare MyStrow?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -363,6 +378,16 @@
     .price-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
     .price-features li.off { color: rgba(122,117,112,0.6); }
     .price-features li.off::before { content: '✕'; color: rgba(122,117,112,0.5); }
+    .price-features li { text-align: left; }
+    .price-features li.app-incl { color: var(--text); font-weight: 600; }
+    .price-features li.app-incl a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .app-only { max-width: 880px; margin: 14px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; text-align: left; background: var(--card); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px 26px; }
+    .app-only-txt { flex: 1; min-width: 240px; }
+    .app-only-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: 0.5px; }
+    .app-only-desc { color: var(--muted); font-size: 13px; line-height: 1.6; margin-top: 4px; }
+    .app-only-price { font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1; white-space: nowrap; }
+    .app-only-price small { display: block; font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .app-only .btn-full { width: auto; padding: 12px 22px; }
     .btn-full { width: 100%; padding: 12px; border-radius: 7px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center; text-decoration: none; display: block; transition: opacity 0.2s; }
     .btn-full.primary { background: var(--accent); color: #0c0b00; border: none; }
     .btn-full.outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.14); }
@@ -1135,6 +1160,7 @@
           <li>Luci IA avanzate</li>
           <li>Programmazione luci</li>
           <li class="off">Nessuna uscita DMX</li>
+          <li>App tablet: 10 min per avvio</li>
         </ul>
         <a href="https://us-central1-mystrow-907be.cloudfunctions.net/download_redirect?p=win" class="btn-full outline" target="_blank" rel="noopener noreferrer">Scarica MyStrow</a>
       </div>
@@ -1161,6 +1187,7 @@
           <li>Programmazione luci</li>
           <li>Uscita DMX</li>
           <li>Attivazione su 2 computer</li>
+          <li class="app-incl"><span><a href="../en/application-tablette">App tablet inclusa</a> (Android, iPad)</span></li>
           <li>Aggiornamenti inclusi</li>
         </ul>
         <a id="pro-cta" href="https://buy.stripe.com/dRm4greNn0cM48MbN208g05" class="btn-full primary" target="_blank" rel="noopener noreferrer">Abbonati a MyStrow PRO</a>
@@ -1180,12 +1207,23 @@
           <li>Programmazione luci</li>
           <li>Uscita DMX</li>
           <li>Attivazione su 2 computer</li>
+          <li class="app-incl"><span><a href="../en/application-tablette">App tablet inclusa</a> (Android, iPad)</span></li>
           <li>Aggiornamenti a vita inclusi</li>
           <li>Nessun abbonamento · mai</li>
         </ul>
         <a href="https://buy.stripe.com/9B6dR19t38JieNqaIY08g09" class="btn-full outline" target="_blank" rel="noopener noreferrer">Acquista Lifetime</a>
       </div>
 
+    </div>
+
+    <!-- APPLI TABLETTE SEULE -->
+    <div class="app-only">
+      <div class="app-only-txt">
+        <div class="app-only-name">📱 Solo l'app per tablet?</div>
+        <div class="app-only-desc">Senza computer: il tuo tablet Android o iPad controlla direttamente i tuoi proiettori. Gratis da provare, poi sbloccata una volta per tutte nell'app. Hai già una licenza Pro o Lifetime? L'app è inclusa, nessun costo aggiuntivo.</div>
+      </div>
+      <div class="app-only-price">49 €<small>IVA incl. · una tantum</small></div>
+      <a href="../en/application-tablette" class="btn-full outline">Scopri l'app</a>
     </div>
     <!-- PACK MYSTROW : interface USB-DMX + licence (vendu sur /shop) -->
     <div class="pack-card" id="pack">
@@ -1238,6 +1276,18 @@
       <div class="faq-item">
         <div class="faq-q">Quali formati audio e video sono supportati?<span class="faq-arrow" aria-hidden="true">+</span></div>
         <div class="faq-a">Audio: MP3, WAV, FLAC, AAC, OGG. Video: MP4, MOV, AVI, MKV, proiettati a schermo intero su un secondo monitor. Puoi anche inserire pause manuali o tempi cronometrati nella playlist.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">L'app per tablet è a pagamento?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Il download è gratuito su Google Play e sull'App Store, e puoi provare tutto: l'uscita DMX funziona 10 minuti a ogni avvio. Per usarla senza limiti: un acquisto unico di 49 € nell'app, oppure una licenza MyStrow (Pro, Lifetime o Pack), che sblocca il computer <b>E</b> il tablet senza costi aggiuntivi. Attenzione: l'acquisto da 49 € sblocca solo il tablet, non il software per computer. <a href="../en/application-tablette" style="color:var(--accent)">Tutto sull'app →</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Posso usare MyStrow sullo stesso computer di Virtual DJ?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Sì. MyStrow e il tuo software DJ (Virtual DJ, Rekordbox, Serato…) funzionano insieme sullo stesso computer. MyStrow non usa il tuo controller DJ: riceve semplicemente il tempo, tramite il MIDI clock del software DJ o tramite il suono, per sincronizzare le luci con la musica. Puoi anche usare il tablet come telecomando. <a href="../en/synchroniser-mystrow-logiciel-dj" style="color:var(--accent)">Vedi la guida →</a></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quanti universi DMX può controllare il tablet?<span class="faq-arrow" aria-hidden="true">+</span></div>
+        <div class="faq-a">Da solo, senza computer, il tablet controlla 1 universo di 512 canali, tramite la nostra interfaccia USB-DMX o un nodo Art-Net. Per più universi (fino a 4, cioè 2.048 canali), installa MyStrow sul computer e usa il tablet come telecomando: mantieni la comodità del touch e tutta la potenza del software. <a href="../en/controler-mystrow-tablette-telephone" style="color:var(--accent)">Controlla dal tablet →</a></div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Il controller AKAI APC mini è obbligatorio?<span class="faq-arrow" aria-hidden="true">+</span></div>
