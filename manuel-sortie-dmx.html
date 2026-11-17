@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Manuel MyStrow · Sortie DMX : brancher une interface USB ou un node Art-Net | MyStrow</title>
+  <meta name="description" content="Chapitre 1 du manuel MyStrow : choisir et connecter une interface USB-DMX ou un node Art-Net, régler le réseau, gérer jusqu&#x27;à 4 univers, tester la sortie et diagnostiquer une sortie muette.">
+  <meta name="keywords" content="sortie DMX MyStrow, interface USB DMX, node Art-Net, ENTTEC, Eurolite, Open DMX, univers DMX, DMX Tester, diagnostic DMX">
+  <link rel="canonical" href="https://mystrow.fr/manuel-sortie-dmx">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-sortie-dmx">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-sortie-dmx">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/manuel-sortie-dmx">
+  <meta property="og:title" content="Manuel MyStrow · Sortie DMX : brancher une interface USB ou un node Art-Net">
+  <meta property="og:description" content="Chapitre 1 du manuel MyStrow : choisir et connecter une interface USB-DMX ou un node Art-Net, régler le réseau, gérer jusqu&#x27;à 4 univers, tester la sortie et diagnostiquer une sortie muette.">
+  <meta property="og:image" content="https://mystrow.fr/og-image.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manuel MyStrow · Sortie DMX : brancher une interface USB ou un node Art-Net">
+  <meta name="twitter:description" content="Chapitre 1 du manuel MyStrow : choisir et connecter une interface USB-DMX ou un node Art-Net, régler le réseau, gérer jusqu&#x27;à 4 univers, tester la sortie et diagnostiquer une sortie muette.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Manuel MyStrow · Sortie DMX : brancher une interface USB ou un node Art-Net",
+  "description": "Chapitre 1 du manuel MyStrow : choisir et connecter une interface USB-DMX ou un node Art-Net, régler le réseau, gérer jusqu'à 4 univers, tester la sortie et diagnostiquer une sortie muette.",
+  "image": "https://mystrow.fr/og-image.webp",
+  "inLanguage": "fr",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-17",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Manuel MyStrow",
+    "url": "https://mystrow.fr/manuel"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/manuel-sortie-dmx"
+  },
+  "url": "https://mystrow.fr/manuel-sortie-dmx"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle interface DMX acheter pour MyStrow ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "N'importe quelle interface USB-DMX ou node Art-Net du commerce fonctionne. Le plus simple est le Pack MyStrow (interface + licence) : MyStrow la reconnaît et la règle tout seul. Pour plus d'un univers, prenez un node Art-Net."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de projecteurs puis-je piloter ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un univers fait 512 canaux, et MyStrow gère jusqu'à 4 univers (2 048 canaux). Le nombre de projecteurs dépend du nombre de canaux de chacun : un PAR en 7 canaux en prend 7, une lyre en 16 canaux en prend 16."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le Wi-Fi suffit-il pour un node Art-Net ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C'est possible mais déconseillé : le Wi-Fi ajoute des coupures et de la latence. Reliez le node en câble Ethernet, directement ou via un switch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon interface est reconnue mais rien ne s'allume.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ouvrez Édition › 🔬 DMX Tester et montez les canaux du projecteur. S'il s'allume, la sortie fonctionne : c'est l'adresse ou le mode DMX du patch qui ne correspond pas au projecteur. S'il reste éteint, vérifiez le câble DMX et lancez Connexion › 🩺 Diagnostic."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://mystrow.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Manuel",
+      "item": "https://mystrow.fr/manuel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Sortie DMX",
+      "item": "https://mystrow.fr/manuel-sortie-dmx"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .toc a { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    .qa { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 16px; scroll-margin-top: 90px; }
+    .qa h3 { font-size: 19px; margin-bottom: 10px; }
+    .qa h3 a { color: inherit; text-decoration: none; }
+    .qa .prose { font-size: 14.5px; line-height: 1.75; }
+    .qa .prose p { margin-bottom: 10px; }
+    .qa .prose p:last-child { margin-bottom: 0; }
+    .prose ol, .prose ul { margin: 0 0 12px 20px; }
+    .prose li { margin-bottom: 6px; }
+    .param-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .param-table th, .param-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .param-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+    .param-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .param-table td { color: var(--muted); }
+    .table-scroll { overflow-x: auto; }
+    .recipe { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .recipe h3 { color: var(--accent); }
+    .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .recipe li strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="./">Accueil</a> &nbsp;/&nbsp; <a href="manuel">Manuel</a> &nbsp;/&nbsp; <span>Sortie DMX</span>
+      </nav>
+      <div class="hero-badge">🌐 Manuel · Chapitre 1</div>
+      <h1>Sortie DMX :<br><em>relier MyStrow aux projecteurs</em></h1>
+      <p class="hero-sub">Pour que MyStrow pilote de vrais projecteurs, il lui faut une <strong>interface DMX</strong> entre l'ordinateur et le premier projecteur. Ce chapitre couvre tout ce qui se passe dans <strong>Connexion › 🌐 Sortie DMX</strong> et dans les outils de test.</p>
+      <div class="hero-meta"><span>Par <strong>MyStrow</strong></span><span>·</span><span>Mis à jour le <strong>17 novembre 2026</strong></span></div>
+      <div class="toc"><a href="#principe">Le principe : ordinateur → interface → projecteurs</a><a href="#ouvrir">Ouvrir la fenêtre Sortie DMX</a><a href="#usb">Interface USB-DMX (onglet Sortie DMX USB)</a><a href="#node">Node Art-Net (onglet Sortie Node)</a><a href="#univers">Plusieurs univers et plusieurs nodes</a><a href="#tester">Tester la sortie : DMX Tester et Moniteur DMX</a><a href="#diagnostic">Diagnostic d&#x27;une sortie muette</a></div>
+    </div>
+  </section>
+
+  <section id="principe" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Le principe : ordinateur → interface → projecteurs</h2>
+      <div class="prose"><p>L'ordinateur ne sort pas de DMX tout seul. On branche une <strong>interface</strong> :</p><ul><li><strong>en USB</strong> : un boîtier USB-DMX (ENTTEC, Eurolite, Open DMX…) ;</li><li><strong>en réseau</strong> : un <strong>node Art-Net</strong> relié par câble Ethernet (RJ45), directement ou via un switch.</li></ul><p>De l'interface part un câble DMX (XLR) vers le premier projecteur, puis de projecteur en projecteur. Une ligne DMX = un <strong>univers</strong> = 512 canaux. MyStrow gère <strong>jusqu'à 4 univers</strong>.</p><p>Pendant les 15 jours d'essai, la sortie DMX fonctionne. Après l'essai, elle demande une licence active.</p></div>
+    </div>
+  </section>
+
+  <section id="ouvrir" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Ouvrir la fenêtre Sortie DMX</h2>
+      <div class="prose"><p>Menu <strong>Connexion › 🌐 Sortie DMX</strong>. La fenêtre commence par <strong>« Quel boîtier avez-vous ? »</strong>, avec trois choix reconnaissables à l'emplacement du logo jaune :</p><ul><li><strong>Logo MyStrow sur la face avant</strong> : c'est le <strong>USB NODE DMX</strong> (ElectroConcept), le boîtier du Pack MyStrow. Il se branche en USB mais parle Art-Net : MyStrow le règle tout seul dans la <strong>Sortie Node</strong>, sans adresse IP à toucher.</li><li><strong>Logo MyStrow sur le dessus</strong> : c'est le <strong>MyStrow USB-DMX (MS-DMY)</strong>. Branchez-le en USB, MyStrow le trouve tout seul. S'il vient d'être branché, cliquez sur <strong>🔌 Connecter</strong>.</li><li><strong>Autre interface</strong> : l'écran complet, avec deux onglets, <strong>🌐 Sortie Node</strong> et <strong>🔌 Sortie DMX USB</strong>.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="usb" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Interface USB-DMX (onglet Sortie DMX USB)</h2>
+      <div class="prose"><ol><li>Branchez l'interface en USB (de préférence directement sur l'ordinateur, sans hub).</li><li>Dans <strong>Interface</strong>, choisissez votre modèle : MyStrow USB-DMX (MS-DMY), Eurolite USB-DMX512 PRO (MK2), ENTTEC DMX USB Pro, ENTTEC Open DMX USB, OPTO OPEN DMX (ElectroConcept), DMXKing UltraDMX Micro, ou <strong>Autre interface USB-DMX</strong>.</li><li>Choisissez le <strong>Port COM</strong> qui apparaît quand l'interface est branchée.</li><li>Cliquez sur <strong>🔌 Connecter</strong>. Sur la plupart des interfaces, une LED passe au vert quand la sortie DMX est active.</li></ol><p><strong>Votre boîtier porte la mention Art-Net, Node ou RDM ?</strong> Même s'il se branche en USB, il ne se règle pas ici : passez par l'onglet <strong>Sortie Node</strong>. C'est le cas du USB NODE DMX.</p><p><strong>« Port inaccessible »</strong> : un autre logiciel (QLC+, Freestyler, Chataigne…) occupe l'interface. Fermez-le : un seul logiciel à la fois peut l'utiliser.</p><p>Une interface USB ne transporte qu'<strong>un seul univers</strong>. Brancher plusieurs interfaces USB ne donne pas plusieurs univers : pour cela, il faut des nodes Art-Net.</p><p>Pour un Open DMX ou une interface à puce FTDI, installez le <strong>pilote FTDI</strong> si MyStrow le propose.</p></div>
+    </div>
+  </section>
+
+  <section id="node" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Node Art-Net (onglet Sortie Node)</h2>
+      <div class="prose"><ol><li>Reliez le node à l'ordinateur en câble Ethernet (évitez le Wi-Fi pour le DMX).</li><li>Dans <strong>Carte réseau</strong>, vérifiez la carte reliée au node.</li><li>Dans <strong>Node Art-Net</strong>, choisissez votre node dans la liste des appareils qui ont répondu, ou tapez son adresse IP. <strong>Rechercher à nouveau sur le réseau</strong> relance la détection.</li><li>Cliquez sur <strong>🔌 Connecter</strong>.</li></ol><p><strong>Le réseau doit être dans la même plage que le node.</strong> Beaucoup de nodes Art-Net sont en 2.x.x.x (les boîtiers ElectroConcept sont réglés d'usine sur <code>2.0.0.15</code>), d'autres en 192.168.x.x. Le bouton <strong>⚙️ Configurer la connexion réseau</strong> lance un assistant qui :</p><ul><li>vous fait choisir la carte réseau reliée au boîtier (pas la Wi-Fi) ;</li><li>règle l'ordinateur en <code>2.0.0.1</code> / masque <code>255.0.0.0</code>, soit avec <strong>Configurer automatiquement</strong> (demande les droits administrateur : <strong>🔑 Relancer en administrateur</strong>), soit à la main avec <strong>Je configure moi-même</strong>, qui affiche les étapes Windows ;</li><li>teste la connexion et confirme <strong>« Boîtier connecté ! »</strong>.</li></ul><p>Si MyStrow trouve le boîtier à une autre adresse que celle qu'il cherche, il le dit et propose un bouton <strong>Utiliser [adresse]</strong> : un clic suffit, rien n'est à changer sur le réseau.</p><p>Au premier lancement, <strong>autorisez MyStrow dans le pare-feu</strong> quand Windows le demande : sans cela, le node n'est pas trouvé.</p></div>
+    </div>
+  </section>
+
+  <section id="univers" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Plusieurs univers et plusieurs nodes</h2>
+      <div class="prose"><p>Dans l'onglet Sortie Node, <strong>Options avancées › Aiguillage des sorties</strong> indique, pour chaque ligne DMX, quel univers part dessus et vers quel node.</p><ul><li><strong>Node à 2 ou 4 sorties</strong> : un seul boîtier suffit, chaque sortie porte son univers.</li><li><strong>Plusieurs nodes à 1 sortie</strong> : donnez à chaque node sa propre adresse IP et son univers Art-Net (avec l'utilitaire du fabricant), puis choisissez le bon node sur chaque ligne du tableau.</li><li>Deux lignes peuvent porter <strong>le même univers</strong> : c'est le miroir, pour doubler une ligne à l'autre bout de la salle sans splitter.</li><li>Une ligne peut être <strong>Désactivée</strong> ou servir d'<strong>Entrée DMX (pupitre)</strong>, pour piloter MyStrow depuis une console.</li></ul><p>Ensuite, dans le patch, placez chaque projecteur dans l'univers de la ligne où il est câblé (les adresses repartent de 1 dans chaque univers). Pas à pas complet : <a href="plusieurs-univers-nodes-artnet-mystrow">plusieurs univers avec plusieurs nodes Art-Net</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="tester" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Tester la sortie : DMX Tester et Moniteur DMX</h2>
+      <div class="prose"><p><strong>Édition › 🔬 DMX Tester</strong> envoie des valeurs directement sur les canaux, sans passer par le patch. C'est l'outil pour savoir si un projecteur reçoit bien le DMX :</p><ul><li>choisissez l'<strong>Univers DMX</strong>, cliquez-glissez sur les canaux pour régler leur valeur (Ctrl = plusieurs canaux, Maj = une plage, molette = ±5) ;</li><li>des boutons montent ou descendent les 512 canaux d'un coup ;</li><li><strong>TEST PAR GROUPE</strong> allume les canaux par paquets (réglez <strong>Canaux par groupe</strong>, puis <strong>▶▶ Envoyer les suivants</strong>) pour retrouver l'adresse d'un projecteur ;</li><li>les faders du contrôleur MIDI pilotent 9 canaux à la fois ;</li><li>à la fermeture, le show est restauré tel qu'il était.</li></ul><p><strong>Édition › 📡 Moniteur DMX</strong> montre en direct ce qui part réellement sur chaque univers : canaux actifs, images par seconde, interface utilisée, et un avertissement si un univers n'est pas émis (par exemple l'univers 2 sur une interface USB, qui ne transporte que l'univers 1).</p></div>
+    </div>
+  </section>
+
+  <section id="diagnostic" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Diagnostic d&#x27;une sortie muette</h2>
+      <div class="prose"><p>Menu <strong>Connexion › 🩺 Diagnostic</strong> :</p><ul><li><strong>🌐 Test RJ45 (réseau / Node Art-Net)</strong> : vérifie câble, carte réseau, adresse IP et réponse du boîtier, et propose de corriger ce qui cloche ;</li><li><strong>🔌 Test USB (interface DMX)</strong> : vérifie l'interface USB et son port ;</li><li><strong>🩺 Diagnostic complet (BRAD)</strong> : enchaîne tous les tests de la sortie Art-Net. Le bouton <strong>📋 Copier le rapport</strong> ou <strong>✉️ Envoyer au support</strong> nous transmet le résultat.</li></ul><p>Les causes les plus fréquentes, dans l'ordre :</p><ol><li>un autre logiciel lumière ouvert, qui occupe l'interface ;</li><li>une interface USB Art-Net (USB NODE) cherchée dans l'onglet USB au lieu de la Sortie Node ;</li><li>ordinateur et node pas dans la même plage d'adresses IP, ou pare-feu qui bloque ;</li><li>le projecteur n'est pas à l'adresse ni dans le mode DMX du patch (le DMX sort, mais le projecteur écoute ailleurs) : le DMX Tester le révèle tout de suite ;</li><li>câble USB, port ou câble DMX défectueux.</li></ol><p>Sur Mac, si la sortie est restée sur « USB » alors que vous utilisez un node, rouvrez la Sortie DMX et choisissez Art-Net.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Questions fréquentes</div>
+      <div class="step-list" style="gap:22px;">
+        <div class="step-body"><h3>Quelle interface DMX acheter pour MyStrow ?</h3><p>N&#x27;importe quelle interface USB-DMX ou node Art-Net du commerce fonctionne. Le plus simple est le Pack MyStrow (interface + licence) : MyStrow la reconnaît et la règle tout seul. Pour plus d&#x27;un univers, prenez un node Art-Net.</p></div>
+        <div class="step-body"><h3>Combien de projecteurs puis-je piloter ?</h3><p>Un univers fait 512 canaux, et MyStrow gère jusqu&#x27;à 4 univers (2 048 canaux). Le nombre de projecteurs dépend du nombre de canaux de chacun : un PAR en 7 canaux en prend 7, une lyre en 16 canaux en prend 16.</p></div>
+        <div class="step-body"><h3>Le Wi-Fi suffit-il pour un node Art-Net ?</h3><p>C&#x27;est possible mais déconseillé : le Wi-Fi ajoute des coupures et de la latence. Reliez le node en câble Ethernet, directement ou via un switch.</p></div>
+        <div class="step-body"><h3>Mon interface est reconnue mais rien ne s&#x27;allume.</h3><p>Ouvrez Édition › 🔬 DMX Tester et montez les canaux du projecteur. S&#x27;il s&#x27;allume, la sortie fonctionne : c&#x27;est l&#x27;adresse ou le mode DMX du patch qui ne correspond pas au projecteur. S&#x27;il reste éteint, vérifiez le câble DMX et lancez Connexion › 🩺 Diagnostic.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-bg">
+    <div class="wrap">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px"><a href="manuel" class="btn-outline">Sommaire du manuel</a><a href="creer-effet-lumiere-mystrow" class="btn-primary">7. Éditeur d'effets →</a></div>
+      <div class="section-tag">Pour aller plus loin</div>
+      <div class="related-grid"><a href="configurer-node-usb-artnet-dmx-mystrow" class="related-card"><div class="rc-tag">Tutoriel · Matériel</div><h3>Configurer un node Art-Net ou une interface USB</h3><p>Le réglage pas à pas, modèle par modèle.</p></a><a href="plusieurs-univers-nodes-artnet-mystrow" class="related-card"><div class="rc-tag">Tutoriel · Univers</div><h3>Plusieurs univers avec plusieurs nodes</h3><p>Adresses IP, univers Art-Net et aiguillage des sorties.</p></a><a href="aide" class="related-card"><div class="rc-tag">Aide</div><h3>Aide MyStrow : comment faire</h3><p>Les réponses courtes aux questions les plus fréquentes.</p></a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="telecharger">Téléchargement</a><a href="nouveautes">Nouveautés</a><a href="/activate">Activer un produit</a>
+      <a href="shop">Shop</a>
+      <a href="blog">Tutoriels</a>
+      <a href="cgv">CGV</a><a href="mentions-legales">Mentions légales</a><a href="confidentialite">Confidentialité</a>
+      <a href="contact">Contact</a><a href="shop">Shop</a>
+    </nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+    <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a><a href="https://www.linkedin.com/company/mystrow/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#70B5F9'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 4.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true; btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: 'fr' })
+  }).then(function(r) { return r.json(); }).then(function(d) {
+    if (d.ok) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = d.error || 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Copié'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="nav.js?v=5" defer></script>
+<script src="mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+

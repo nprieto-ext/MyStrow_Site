@@ -31,6 +31,12 @@
 - [Aide : comment faire](https://mystrow.fr/aide) : réponses courtes et menus exacts pour brancher ses projecteurs, patcher, créer un effet, enregistrer une mémoire, faire un REC Lumière, piloter depuis une tablette, et dépanner une sortie DMX muette.
 - [Créer un effet lumière](https://mystrow.fr/creer-effet-lumiere-mystrow) : l'éditeur d'effets colonne par colonne (couches, formes, vitesse, décalage), avec des recettes (chenillard, vague, pair/impair, cercle de lyres).
 
+## Manuel complet
+
+- [Manuel MyStrow : sommaire](https://mystrow.fr/manuel)
+- [Chapitre 1 — Sortie DMX](https://mystrow.fr/manuel-sortie-dmx)
+- [Chapitre 7 — Éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow)
+
 ## Fonctionnalités
 
 - [IA Lumière](https://mystrow.fr/ia-lumiere) : analyse en temps réel de l'énergie, du rythme et des fréquences du son pour générer une ambiance lumineuse cohérente.
