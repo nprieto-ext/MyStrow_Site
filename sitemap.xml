@@ -4,6 +4,11 @@
 
   <!-- FR pages -->
   <url>
+    <loc>https://mystrow.fr/demarrer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://mystrow.fr/activate</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bien démarrer avec votre boîtier | MyStrow</title>
+  <meta name="description" content="Votre boîtier USB-DMX MyStrow en 3 étapes : installer l'appli, brancher le boîtier, accepter l'activation automatique de la licence incluse.">
+  <!-- Page visée par le QR code imprimé sur le carton : son adresse ne doit
+       jamais changer. Indexable pour qu'un client retombe dessus sans le carton. -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mystrow.fr/demarrer">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.12);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column; }
+
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+
+    main { flex: 1; padding: 48px 28px 80px; max-width: 760px; margin: 0 auto; width: 100%; }
+
+    .lang-switch { text-align: right; margin-bottom: 18px; font-size: 11px; letter-spacing: 1.5px; font-weight: 700; font-family: 'Barlow Condensed', sans-serif; }
+    .lang-switch button { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px 7px; font: inherit; letter-spacing: inherit; }
+    .lang-switch button.on, .lang-switch button:hover { color: var(--accent); }
+
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 64px); line-height: 1; letter-spacing: 1px; margin-bottom: 12px; }
+    .page-title em { font-style: normal; color: var(--accent); }
+    .page-sub { font-size: 15px; color: var(--muted); margin-bottom: 40px; max-width: 600px; }
+
+    /* Étapes */
+    .steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+    .step { display: grid; grid-template-columns: 52px 1fr; gap: 18px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 26px 28px; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #0c0b00; font-family: 'Bebas Neue', sans-serif; font-size: 26px; display: flex; align-items: center; justify-content: center; }
+    .step h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.3px; margin-bottom: 6px; line-height: 1.2; }
+    .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .step p strong { color: var(--text); font-weight: 600; }
+    .step-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .btn { display: inline-block; text-decoration: none; padding: 11px 22px; border-radius: 999px; font-size: 13px; font-weight: 700; transition: opacity 0.2s, background 0.2s; }
+    .btn-main { background: var(--accent); color: #0c0b00; }
+    .btn-main:hover { opacity: 0.88; }
+    .btn-alt { border: 1px solid rgba(226,206,22,0.3); color: var(--accent); }
+    .btn-alt:hover { background: rgba(226,206,22,0.08); }
+    .note { margin-top: 14px; background: var(--accent-glow); border: 1px solid var(--accent-border); border-radius: 10px; padding: 12px 16px; font-size: 13px; line-height: 1.65; color: var(--muted); }
+    .note strong { color: var(--accent); }
+
+    /* Cas particuliers */
+    .faq-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 1px; margin-bottom: 16px; }
+    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .faq-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px 20px; }
+    .faq-box h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 0.3px; margin-bottom: 7px; }
+    .faq-box p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .faq-box a { color: var(--accent); }
+    .faq-box p strong { color: var(--text); font-weight: 600; }
+
+    .thanks { text-align: center; margin-top: 48px; font-size: 14px; color: var(--muted); }
+    .thanks strong { color: var(--text); }
+    .thanks a { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      main { padding: 32px 16px 60px; }
+      .step { grid-template-columns: 1fr; gap: 12px; padding: 22px 20px; }
+      .faq { grid-template-columns: 1fr; }
+    }
+
+    /* ── Footer ─────────────────────────────────────────── */
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+    @media (max-width: 780px) {
+      .footer-main { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-nl { align-items: flex-start; }
+      .nl-form input[type="email"] { width: 150px; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="mobile-nav.css?v=6">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="./" class="nav-logo">MY<em>STROW</em></a>
+  </nav>
+</header>
+
+<main>
+  <div class="lang-switch" id="lang-switch"></div>
+
+  <div class="section-tag" data-t="tag"></div>
+  <h1 class="page-title" data-t="title"></h1>
+  <p class="page-sub" data-t="sub"></p>
+
+  <div class="steps">
+    <section class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h2 data-t="s1_t"></h2>
+        <p data-t="s1_p"></p>
+        <div class="step-actions">
+          <a class="btn btn-main" id="lnk-dl" href="/telecharger" data-t="s1_pc"></a>
+          <a class="btn btn-alt" href="/app" data-t="s1_tab"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h2 data-t="s2_t"></h2>
+        <p data-t="s2_p"></p>
+      </div>
+    </section>
+
+    <section class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h2 data-t="s3_t"></h2>
+        <p data-t="s3_p"></p>
+        <div class="note" data-t="s3_note"></div>
+      </div>
+    </section>
+  </div>
+
+  <h2 class="faq-title" data-t="faq_t"></h2>
+  <div class="faq">
+    <div class="faq-box"><h3 data-t="f1_t"></h3><p data-t="f1_p"></p></div>
+    <div class="faq-box"><h3 data-t="f2_t"></h3><p data-t="f2_p"></p></div>
+    <div class="faq-box"><h3 data-t="f3_t"></h3><p data-t="f3_p"></p></div>
+    <div class="faq-box"><h3 data-t="f4_t"></h3><p data-t="f4_p"></p></div>
+  </div>
+
+  <p class="thanks" data-t="thanks"></p>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="telecharger">Téléchargement</a><a href="nouveautes">Nouveautés</a><a href="/activate">Activer un produit</a><a href="cgv">CGV</a><a href="mentions-legales">Mentions légales</a><a href="confidentialite">Confidentialité</a><a href="contact">Contact</a><a href="shop">Shop</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Votre adresse email" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  <a href="https://www.youtube.com/@MyStrow-x7t" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a><a href="https://www.linkedin.com/company/mystrow/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#70B5F9'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 4.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  <a href="https://discord.gg/SZWNgGRc7K" target="_blank" rel="noopener noreferrer" aria-label="Discord" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#5865F2'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.012.121.072.237.158.325a19.882 19.882 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg> Discord</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tous droits réservés</div>
+</footer>
+
+<script>
+// ───────────────────────────────────────────────────────────────────────────
+// Page de démarrage visée par le QR code du carton (boîtier MS-DMY).
+// Le boîtier maison n'a ni carte ni numéro à saisir : l'appli le reconnaît
+// au branchement et propose d'activer la licence incluse (boitier_detect).
+// Les anciens boîtiers MS-DMX livrés avec une carte restent sur /activate.
+// Un seul fichier pour les cinq langues, comme activate.html : le QR imprimé
+// envoie tout le monde ici.
+// ───────────────────────────────────────────────────────────────────────────
+const P = (l) => (l === 'fr' ? '' : '/' + l);
+const LINKS = (l) => ({
+  dl:      l === 'fr' ? '/telecharger' : '/' + l + '/download',
+  shop:    P(l) + '/shop',
+  contact: P(l) + '/contact'
+});
+
+const T = {
+  fr: {
+    doc_title: "Bien démarrer avec votre boîtier | MyStrow",
+    tag:   "Boîtier USB-DMX MyStrow",
+    title: 'Merci, et <em>bienvenue&nbsp;!</em>',
+    sub:   "Trois étapes et vos lumières s'allument. Pas de code à taper : MyStrow reconnaît votre boîtier tout seul.",
+    s1_t:  "Installez MyStrow",
+    s1_p:  "Sur votre ordinateur (Windows ou Mac) ou sur votre tablette (iPad ou Android). Le téléchargement est gratuit.",
+    s1_pc: "Ordinateur — Télécharger →",
+    s1_tab:"Tablette — App Store / Google Play →",
+    s2_t:  "Branchez le boîtier",
+    s2_p:  "Reliez le boîtier en <strong>USB</strong> à l'ordinateur ou à la tablette, et sa sortie <strong>XLR</strong> à votre premier projecteur. Ouvrez MyStrow : il trouve le boîtier en quelques secondes.",
+    s3_t:  "Acceptez l'activation",
+    s3_p:  "Une fenêtre <strong>« Boîtier MyStrow détecté »</strong> s'ouvre et vous propose d'activer la licence incluse. Cliquez sur <strong>Activer</strong>, indiquez votre adresse email si vous n'êtes pas connecté : c'est fait. La sortie DMX se règle aussi toute seule sur le boîtier.",
+    s3_note: "<strong>Nouveau compte ?</strong> Votre mot de passe part par email. Pensez à vos indésirables : selon votre fournisseur (SFR, Orange…), il peut mettre jusqu'à 3 heures à arriver.",
+    faq_t: "Cas particuliers",
+    f1_t:  "Aucune fenêtre d'activation ?",
+    f1_p:  "Vérifiez qu'Internet est disponible (une seule fois suffit) et que le câble USB transporte bien les données. Sinon, ouvrez le menu <strong>À propos › J'ai déjà un boîtier</strong>. Si vous avez pris l'interface seule, sans licence, c'est normal : profitez des <strong>15 jours d'essai gratuits</strong>, puis choisissez une formule sur le <a href=\"{shop}\">shop</a>.",
+    f2_t:  "Vous n'avez qu'un iPad ou un iPhone ?",
+    f2_p:  "Le boîtier fonctionne sur iPad, mais l'activation automatique de la licence n'y est pas possible. Branchez-le une fois sur un ordinateur ou une tablette Android pour l'activer, puis connectez-vous sur l'iPad avec la même adresse email. Ou <a href=\"{contact}\">écrivez-nous</a>, on s'en occupe.",
+    f3_t:  "Votre boîte contenait une carte avec un code ?",
+    f3_p:  "Votre boîtier commence alors par MS-DMX : activez-le avec le numéro de série et le code de la carte sur <a href=\"/activate?lang=fr\">mystrow.fr/activate</a>.",
+    f4_t:  "Besoin d'un coup de main ?",
+    f4_p:  "Tutos, guides et réponses aux questions courantes dans l'<a href=\"/aide\">aide en ligne</a>. Pour tout le reste, <a href=\"{contact}\">contactez-nous</a> : on répond vite.",
+    thanks: "Merci d'avoir choisi <strong>MyStrow</strong>. Bon show&nbsp;!"
+  },
+  en: {
+    doc_title: "Getting started with your interface | MyStrow",
+    tag:   "MyStrow USB-DMX interface",
+    title: 'Thank you, and <em>welcome!</em>',
+    sub:   "Three steps and your lights are on. No code to type: MyStrow recognises your interface on its own.",
+    s1_t:  "Install MyStrow",
+    s1_p:  "On your computer (Windows or Mac) or your tablet (iPad or Android). The download is free.",
+    s1_pc: "Computer — Download →",
+    s1_tab:"Tablet — App Store / Google Play →",
+    s2_t:  "Plug in the interface",
+    s2_p:  "Connect the interface over <strong>USB</strong> to the computer or tablet, and its <strong>XLR</strong> output to your first light. Open MyStrow: it finds the interface within a few seconds.",
+    s3_t:  "Accept the activation",
+    s3_p:  "A <strong>“MyStrow interface detected”</strong> window opens and offers to activate the included licence. Click <strong>Activate</strong>, enter your email address if you are not signed in: done. DMX output is also set to the interface automatically.",
+    s3_note: "<strong>New account?</strong> Your password is sent by email. Check your spam folder: depending on your provider it can take up to 3 hours to arrive.",
+    faq_t: "Special cases",
+    f1_t:  "No activation window?",
+    f1_p:  "Make sure you are online (once is enough) and that your USB cable carries data. Otherwise open <strong>About › I already have an interface</strong>. If you bought the interface on its own, without a licence, that's expected: enjoy the <strong>15-day free trial</strong>, then pick a plan in the <a href=\"{shop}\">shop</a>.",
+    f2_t:  "Only an iPad or iPhone?",
+    f2_p:  "The interface works on iPad, but automatic licence activation isn't possible there. Plug it once into a computer or an Android tablet to activate it, then sign in on the iPad with the same email address. Or <a href=\"{contact}\">write to us</a> and we'll sort it out.",
+    f3_t:  "Did your box contain a card with a code?",
+    f3_p:  "Then your interface starts with MS-DMX: activate it with the serial number and the card's code at <a href=\"/activate?lang=en\">mystrow.fr/activate</a>.",
+    f4_t:  "Need a hand?",
+    f4_p:  "Tutorials and guides are on our <a href=\"{dl}\">download page</a> and YouTube channel. For anything else, <a href=\"{contact}\">contact us</a>: we answer fast.",
+    thanks: "Thank you for choosing <strong>MyStrow</strong>. Have a great show!"
+  },
+  de: {
+    doc_title: "Erste Schritte mit Ihrem Interface | MyStrow",
+    tag:   "MyStrow USB-DMX-Interface",
+    title: 'Danke und <em>willkommen!</em>',
+    sub:   "Drei Schritte und Ihr Licht geht an. Kein Code einzugeben: MyStrow erkennt Ihr Interface von selbst.",
+    s1_t:  "MyStrow installieren",
+    s1_p:  "Auf Ihrem Computer (Windows oder Mac) oder Ihrem Tablet (iPad oder Android). Der Download ist kostenlos.",
+    s1_pc: "Computer — Herunterladen →",
+    s1_tab:"Tablet — App Store / Google Play →",
+    s2_t:  "Interface anschließen",
+    s2_p:  "Verbinden Sie das Interface per <strong>USB</strong> mit dem Computer oder Tablet und seinen <strong>XLR</strong>-Ausgang mit Ihrem ersten Scheinwerfer. Öffnen Sie MyStrow: Das Interface wird in wenigen Sekunden gefunden.",
+    s3_t:  "Aktivierung bestätigen",
+    s3_p:  "Ein Fenster <strong>„MyStrow-Interface erkannt“</strong> öffnet sich und bietet an, die enthaltene Lizenz zu aktivieren. Klicken Sie auf <strong>Aktivieren</strong> und geben Sie Ihre E-Mail-Adresse ein, falls Sie nicht angemeldet sind: fertig. Der DMX-Ausgang wird ebenfalls automatisch auf das Interface gelegt.",
+    s3_note: "<strong>Neues Konto?</strong> Ihr Passwort kommt per E-Mail. Sehen Sie auch im Spam-Ordner nach: je nach Anbieter kann es bis zu 3 Stunden dauern.",
+    faq_t: "Sonderfälle",
+    f1_t:  "Kein Aktivierungsfenster?",
+    f1_p:  "Prüfen Sie, ob Internet verfügbar ist (einmal genügt) und ob Ihr USB-Kabel Daten überträgt. Sonst öffnen Sie <strong>Über › Ich habe bereits ein Interface</strong>. Haben Sie das Interface allein ohne Lizenz gekauft, ist das normal: Nutzen Sie die <strong>15 Tage kostenlose Testphase</strong> und wählen Sie dann ein Angebot im <a href=\"{shop}\">Shop</a>.",
+    f2_t:  "Nur ein iPad oder iPhone?",
+    f2_p:  "Das Interface funktioniert am iPad, die automatische Lizenzaktivierung ist dort aber nicht möglich. Schließen Sie es einmal an einen Computer oder ein Android-Tablet an, um es zu aktivieren, und melden Sie sich dann am iPad mit derselben E-Mail-Adresse an. Oder <a href=\"{contact}\">schreiben Sie uns</a>, wir kümmern uns darum.",
+    f3_t:  "Lag eine Karte mit Code in der Schachtel?",
+    f3_p:  "Dann beginnt Ihre Seriennummer mit MS-DMX: Aktivieren Sie sie mit der Seriennummer und dem Code der Karte auf <a href=\"/activate?lang=de\">mystrow.fr/activate</a>.",
+    f4_t:  "Brauchen Sie Hilfe?",
+    f4_p:  "Anleitungen finden Sie auf unserer <a href=\"{dl}\">Download-Seite</a> und unserem YouTube-Kanal. Für alles andere <a href=\"{contact}\">kontaktieren Sie uns</a>: Wir antworten schnell.",
+    thanks: "Danke, dass Sie sich für <strong>MyStrow</strong> entschieden haben. Gute Show!"
+  },
+  es: {
+    doc_title: "Empezar con tu interfaz | MyStrow",
+    tag:   "Interfaz USB-DMX MyStrow",
+    title: '¡Gracias y <em>bienvenido!</em>',
+    sub:   "Tres pasos y tus luces se encienden. Ningún código que teclear: MyStrow reconoce tu interfaz por sí solo.",
+    s1_t:  "Instala MyStrow",
+    s1_p:  "En tu ordenador (Windows o Mac) o en tu tableta (iPad o Android). La descarga es gratuita.",
+    s1_pc: "Ordenador — Descargar →",
+    s1_tab:"Tableta — App Store / Google Play →",
+    s2_t:  "Conecta la interfaz",
+    s2_p:  "Conecta la interfaz por <strong>USB</strong> al ordenador o a la tableta, y su salida <strong>XLR</strong> a tu primer foco. Abre MyStrow: encuentra la interfaz en unos segundos.",
+    s3_t:  "Acepta la activación",
+    s3_p:  "Se abre una ventana <strong>«Interfaz MyStrow detectada»</strong> que te propone activar la licencia incluida. Pulsa <strong>Activar</strong> e introduce tu email si no has iniciado sesión: listo. La salida DMX también se configura sola en la interfaz.",
+    s3_note: "<strong>¿Cuenta nueva?</strong> Tu contraseña llega por email. Revisa el correo no deseado: según tu proveedor puede tardar hasta 3 horas.",
+    faq_t: "Casos particulares",
+    f1_t:  "¿No aparece la ventana de activación?",
+    f1_p:  "Comprueba que tienes Internet (basta una vez) y que tu cable USB transmite datos. Si no, abre <strong>Acerca de › Ya tengo una interfaz</strong>. Si compraste la interfaz sola, sin licencia, es normal: disfruta de los <strong>15 días de prueba gratuita</strong> y luego elige una fórmula en la <a href=\"{shop}\">tienda</a>.",
+    f2_t:  "¿Solo tienes un iPad o un iPhone?",
+    f2_p:  "La interfaz funciona en iPad, pero allí no es posible la activación automática de la licencia. Conéctala una vez a un ordenador o a una tableta Android para activarla y luego inicia sesión en el iPad con el mismo email. O <a href=\"{contact}\">escríbenos</a> y nos encargamos.",
+    f3_t:  "¿Tu caja traía una tarjeta con un código?",
+    f3_p:  "Entonces tu número empieza por MS-DMX: actívala con el número de serie y el código de la tarjeta en <a href=\"/activate?lang=es\">mystrow.fr/activate</a>.",
+    f4_t:  "¿Necesitas ayuda?",
+    f4_p:  "Tienes tutoriales en nuestra <a href=\"{dl}\">página de descarga</a> y en nuestro canal de YouTube. Para todo lo demás, <a href=\"{contact}\">contáctanos</a>: respondemos rápido.",
+    thanks: "Gracias por elegir <strong>MyStrow</strong>. ¡Buen show!"
+  },
+  pt: {
+    doc_title: "Começar com a sua interface | MyStrow",
+    tag:   "Interface USB-DMX MyStrow",
+    title: 'Obrigado e <em>bem-vindo!</em>',
+    sub:   "Três passos e as suas luzes acendem-se. Nenhum código a escrever: o MyStrow reconhece a sua interface sozinho.",
+    s1_t:  "Instale o MyStrow",
+    s1_p:  "No seu computador (Windows ou Mac) ou no seu tablet (iPad ou Android). A transferência é gratuita.",
+    s1_pc: "Computador — Transferir →",
+    s1_tab:"Tablet — App Store / Google Play →",
+    s2_t:  "Ligue a interface",
+    s2_p:  "Ligue a interface por <strong>USB</strong> ao computador ou ao tablet, e a saída <strong>XLR</strong> ao seu primeiro projetor. Abra o MyStrow: encontra a interface em poucos segundos.",
+    s3_t:  "Aceite a ativação",
+    s3_p:  "Abre-se uma janela <strong>«Interface MyStrow detetada»</strong> que propõe ativar a licença incluída. Clique em <strong>Ativar</strong> e indique o seu email se não tiver sessão iniciada: está feito. A saída DMX também passa sozinha para a interface.",
+    s3_note: "<strong>Conta nova?</strong> A sua palavra-passe segue por email. Verifique o spam: consoante o fornecedor, pode demorar até 3 horas.",
+    faq_t: "Casos particulares",
+    f1_t:  "Nenhuma janela de ativação?",
+    f1_p:  "Verifique se tem Internet (basta uma vez) e se o cabo USB transmite dados. Caso contrário, abra <strong>Sobre › Já tenho uma interface</strong>. Se comprou só a interface, sem licença, é normal: aproveite os <strong>15 dias de teste gratuito</strong> e depois escolha uma fórmula na <a href=\"{shop}\">loja</a>.",
+    f2_t:  "Só tem um iPad ou iPhone?",
+    f2_p:  "A interface funciona no iPad, mas aí a ativação automática da licença não é possível. Ligue-a uma vez a um computador ou a um tablet Android para a ativar e depois inicie sessão no iPad com o mesmo email. Ou <a href=\"{contact}\">escreva-nos</a> e tratamos disso.",
+    f3_t:  "A sua caixa trazia um cartão com um código?",
+    f3_p:  "Então o seu número começa por MS-DMX: ative-a com o número de série e o código do cartão em <a href=\"/activate?lang=pt\">mystrow.fr/activate</a>.",
+    f4_t:  "Precisa de ajuda?",
+    f4_p:  "Tem tutoriais na nossa <a href=\"{dl}\">página de transferência</a> e no nosso canal de YouTube. Para tudo o resto, <a href=\"{contact}\">contacte-nos</a>: respondemos depressa.",
+    thanks: "Obrigado por escolher o <strong>MyStrow</strong>. Bom espetáculo!"
+  }
+};
+
+const ORDER = ['fr', 'en', 'de', 'es', 'pt'];
+
+// ?lang= d'abord, puis la langue du navigateur, sinon le français.
+const _q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+const _nav = (navigator.language || 'fr').slice(0, 2).toLowerCase();
+let LANG = ORDER.includes(_q) ? _q : (ORDER.includes(_nav) ? _nav : 'fr');
+
+document.getElementById('lang-switch').innerHTML = ORDER.map(
+  l => `<button id="lang-${l}" onclick="setLang('${l}')">${l.toUpperCase()}</button>`
+).join('');
+
+function setLang(l) {
+  LANG = ORDER.includes(l) ? l : 'fr';
+  const t = T[LANG], k = LINKS(LANG);
+  document.documentElement.lang = LANG;
+  document.title = t.doc_title;
+  ORDER.forEach(x => {
+    document.getElementById('lang-' + x).className = (x === LANG) ? 'on' : '';
+  });
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const v = t[el.dataset.t];
+    if (v !== undefined) el.innerHTML = v.replace(/\{(dl|shop|contact)\}/g, (_, n) => k[n]);
+  });
+  document.getElementById('lnk-dl').href = k.dl;
+}
+
+setLang(LANG);
+</script>
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Bienvenue !'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Une erreur est survenue.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script src="nav.js?v=5" defer></script>
+<script src="mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
