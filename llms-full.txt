@@ -1,0 +1,237 @@
+# MyStrow
+
+> Logiciel de contrôle lumière DMX pour Windows et macOS. Pilote des projecteurs
+> DMX512 depuis un ordinateur, en Art-Net ou en USB/DMX, avec une IA qui génère
+> l'éclairage en réaction à la musique, un séquenceur sur timeline, un simulateur
+> 3D intégré et la prise en charge des contrôleurs MIDI type AKAI APC mini.
+
+Éditeur : MyStrow — https://mystrow.fr — contact via https://mystrow.fr/contact
+
+## Faits essentiels
+
+- **Plateformes** : Windows 10/11 et macOS (Mac Intel : macOS 11 Big Sur ou supérieur ; Mac Apple Silicon M1 à M5 : macOS 13 Ventura ou supérieur). Les deux reçoivent les mêmes mises à jour. Une application tablette (iOS, Android) existe aussi.
+- **Essai** : 15 jours d'accès complet, sans carte bancaire, sortie DMX comprise. Ensuite une licence est nécessaire.
+- **Tarifs HT** (à vérifier sur https://mystrow.fr/shop, qui fait foi) (TVA calculée au paiement selon le pays ; TTC pour un particulier en France entre parenthèses) : Pro mensuel 19,99 €/mois sans engagement (23,99 €) ; Pro annuel 119,88 €/an, soit 9,99 €/mois (143,86 €) ; Lifetime 299,99 € en paiement unique (359,99 €), mises à jour incluses à vie.
+- **Licences** : les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Paiement par Stripe.
+- **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché — ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
+- **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
+- **Fixtures** : bibliothèque de plus de 5 000 projecteurs, import de profils au format XML (GrandMA, QLC+).
+- **Langues du site** : français, anglais, espagnol, allemand, portugais, italien.
+- **Aide** : pour toute question « comment faire X dans MyStrow », la page https://mystrow.fr/aide donne la réponse officielle avec les menus exacts. Version texte complète : https://mystrow.fr/llms-full.txt
+
+# MyStrow — Aide : comment faire
+
+Source : https://mystrow.fr/aide (mise à jour le 17 novembre 2026). Réponses officielles de l'éditeur de MyStrow, logiciel de contrôle lumière DMX pour Windows et macOS.
+
+## Démarrer
+
+### MyStrow est-il gratuit ?
+
+MyStrow s'essaie **gratuitement pendant 15 jours**, sans carte bancaire et avec la sortie DMX. Ensuite, une licence est nécessaire : abonnement mensuel, annuel ou licence à vie. Les prix à jour sont sur la page [Shop](https://mystrow.fr/shop).
+Le logiciel fonctionne sur **Windows 10/11 et macOS** (Mac Intel : macOS 11 ou plus récent ; Mac Apple Silicon M1 à M5 : macOS 13 ou plus récent). Téléchargement : [mystrow.fr/telecharger](https://mystrow.fr/telecharger).
+(https://mystrow.fr/aide#gratuit)
+
+### Comment brancher mes projecteurs DMX à l'ordinateur ?
+
+Il faut une **interface DMX** entre l'ordinateur et le premier projecteur : soit un boîtier **USB-DMX**, soit un **node Art-Net** branché en réseau (câble Ethernet). Les projecteurs se relient ensuite entre eux en câble DMX (XLR).
+- Branchez l'interface, puis ouvrez **Connexion › 🌐 Sortie DMX**.
+- Choisissez votre interface dans la liste : MyStrow détecte les boîtiers USB et les nodes Art-Net présents sur le réseau.
+- En cas de doute, lancez **Connexion › 🩺 Diagnostic** (test USB ou test réseau).
+Le détail par modèle d'interface : [configurer un node Art-Net ou une interface USB-DMX](https://mystrow.fr/configurer-node-usb-artnet-dmx-mystrow).
+(https://mystrow.fr/aide#brancher)
+
+### Comment ajouter mes projecteurs dans MyStrow (le patch DMX) ?
+
+Ouvrez **Édition › 🔌 Patch DMX**. Le « patch » indique à MyStrow quels projecteurs vous avez et à quelle adresse DMX chacun écoute.
+- Choisissez **🧙 Assistant** (guidé étape par étape) ou **📄 Patch vide**.
+- Cherchez la marque et le modèle de chaque projecteur dans la bibliothèque (plus de 5 000 fiches).
+- Sélectionnez **le même mode DMX** que celui réglé sur le projecteur (son nombre de canaux, visible dans son menu ou ses dipswitchs).
+- Vérifiez que **l'adresse DMX** du patch est celle réglée sur le projecteur.
+Pour les lyres : [patcher et programmer des lyres](https://mystrow.fr/patcher-programmer-lyres-mystrow).
+(https://mystrow.fr/aide#patch)
+
+### Mon projecteur n'est pas dans la bibliothèque. Comment le créer ?
+
+Faites-le créer par une IA à partir du manuel : dans **Patch DMX**, menu **🛠 Créer votre fixture › ✦ Créer votre fixture via IA**.
+- Cliquez sur **📋 Copier le prompt**.
+- Collez-le dans ChatGPT, Gemini ou Claude et joignez le manuel du projecteur (PDF ou photo du tableau des canaux DMX).
+- Recollez la réponse de l'IA dans MyStrow et cliquez sur **✦ Créer la fixture**.
+Guide complet : [créer une fixture DMX avec l'IA](https://mystrow.fr/creer-fixture-dmx-ia-15-secondes). On peut aussi importer un fichier ou la créer à la main : [importer une fixture DMX](https://mystrow.fr/importer-fixture-dmx-mystrow).
+(https://mystrow.fr/aide#fixture-absente)
+
+## Jouer en direct
+
+### Comment allumer mes projecteurs dans une couleur ?
+
+Cliquez sur un **pad de couleur** dans la colonne du groupe voulu, puis montez le **fader** de ce groupe. Chaque colonne de pads correspond à un groupe de projecteurs (face, contre, latéraux…), chaque pad à une couleur.
+Avec un contrôleur **AKAI APC mini**, c'est la même grille, en physique. Sans contrôleur, tout se fait à la souris ou depuis une [tablette](https://mystrow.fr/controler-mystrow-tablette-telephone). Pour démarrer de zéro : [débuter avec MyStrow](https://mystrow.fr/tutoriel-debuter-mystrow).
+(https://mystrow.fr/aide#couleur)
+
+### Comment enregistrer une ambiance (une mémoire) et la rappeler ?
+
+Réglez l'ambiance voulue, cliquez sur le bouton **🔴 REC Mémoire**, puis cliquez sur le **pad mémoire** où l'enregistrer. Un appui sur ce pad rappelle ensuite l'ambiance.
+- Le **clic droit** sur un pad mémoire ouvre ses réglages : temps de fondu et **🎛️ Comportement** : **Interrupteur** (l'appui pose la mémoire), **Flash** (elle ne reste que tant qu'on tient le pad) ou **Flash solo** (pareil, en coupant les autres mémoires pendant l'appui).
+- Pour démarrer avec des mémoires toutes prêtes : **Fichier › 🏠 Charger les mémoires par défaut**.
+(https://mystrow.fr/aide#memoire)
+
+### Comment créer un effet lumière (chenillard, vague, strobe, mouvement de lyres) ?
+
+Ouvrez **Édition › 🎨 Editeur d'effets**. Partez d'un effet d'usine de la liste ou cliquez sur **＋ Ajouter un effet › Créer l'effet moi-même**.
+- Un effet est fait de **couches**. Chaque couche anime un **CANAL** (intensité, couleur, Pan/Tilt…) selon une **FORME** (Sinus, Flash, Un par un…).
+- Réglez la vitesse (**VIT**), l'amplitude (**AMP**) et le décalage entre projecteurs (**DÉC**, c'est lui qui crée le chenillard).
+- Activez **⏺ Sortie live** pour voir l'effet sur vos vrais projecteurs pendant le réglage.
+- Dans **ASSIGNER**, cliquez sur un bouton **E1 à E8** pour le mettre sur un bouton d'effet de la fenêtre principale, puis **Sauvegarder l'effet**.
+Le tuto détaillé, avec des recettes prêtes à reproduire : [créer un effet lumière dans MyStrow](https://mystrow.fr/creer-effet-lumiere-mystrow).
+(https://mystrow.fr/aide#effet)
+
+### Comment faire bouger mes lyres ?
+
+Deux façons : à la main depuis le **plan de feu** (on déplace le point de la lyre), ou avec un **effet** dont la couche porte sur le canal **Pan/Tilt** (formes Cercle, Huit, Infini, Balancier, Pendule, Carré).
+Pour des positions fixes rappelables (chanteur, public, batterie…), enregistrez-les avec **🔴 REC Mémoire** sur un pad **POS**. Pensez à définir les limites de mouvement dans le patch. Guide : [patcher et programmer des lyres](https://mystrow.fr/patcher-programmer-lyres-mystrow). On peut aussi les piloter [à la manette de jeu](https://mystrow.fr/manette-jeu-lyres-mystrow).
+(https://mystrow.fr/aide#lyres)
+
+### Comment faire réagir les lumières à la musique, sans rien programmer ?
+
+Deux modes font tout seuls :
+- **IA Lumière** : dans la playlist, passez un morceau en mode **💡 IA Lumière**. MyStrow analyse le son (énergie, rythme, BPM) et génère couleurs et intensités en direct. Réglages : **Édition › 💡 IA Lumière**.
+- **Mode Live** (**Affichage › Mode Live**) : MyStrow écoute une source audio (Spotify, logiciel DJ, micro) et suit le beat, les montées et les drops.
+En savoir plus : [l'IA Lumière](https://mystrow.fr/ia-lumiere) · [lumières sur Spotify](https://mystrow.fr/synchroniser-lumieres-spotify) · [avec un logiciel DJ](https://mystrow.fr/synchroniser-mystrow-logiciel-dj).
+(https://mystrow.fr/aide#musique)
+
+## Créer un show automatique
+
+### Comment enregistrer un show lumière sur une musique (REC Lumière) ?
+
+Ajoutez le morceau à la playlist, faites un **clic droit › 🔴 REC Lumière**, puis jouez les lumières en direct pendant la lecture : MyStrow enregistre tout ce que vous faites.
+- Ajoutez le morceau : **📁 Ajouter un média** dans la playlist.
+- Clic droit sur le morceau › **🔴 REC Lumière**, et lancez la lecture.
+- Jouez couleurs, mémoires et effets en rythme. Arrêtez à la fin du morceau.
+- Passez le morceau en mode **▶ Séquence lumière** : à chaque lecture, le show est rejoué à l'identique.
+Guides : [automatiser ses lumières avec le REC Lumière](https://mystrow.fr/automatisation-lumieres-dmx-mystrow) · [créer des séquences lumière](https://mystrow.fr/creer-sequences-lumiere-mystrow).
+(https://mystrow.fr/aide#rec-lumiere)
+
+### Comment corriger une séquence enregistrée ?
+
+Ouvrez la **timeline** du morceau : chaque action enregistrée y est un clip que l'on peut déplacer, raccourcir, couper ou supprimer, avec la forme d'onde de la musique en dessous pour se caler sur les temps forts.
+Une séquence peut aussi être exportée et réimportée (**⬆ Exporter le REC lumière** / **⬇ Importer un REC lumière**, fichiers `.lrec`). Détails : [la timeline de programmation lumière](https://mystrow.fr/programmation-lumiere).
+(https://mystrow.fr/aide#modifier-sequence)
+
+### Comment préparer et lancer tout un spectacle ?
+
+Mettez tous vos médias dans la playlist, dans l'ordre, chacun avec son mode lumière (**🎛 Manuel**, **💡 IA Lumière** ou **▶ Séquence lumière**), puis enregistrez le show : **Fichier › 💾 Enregistrer Show** (fichier `.tui`, qui contient playlist, patch et séquences).
+- Clic droit sur un média : boucle, fondu d'entrée/sortie, « lancer avec le son précédent », pause.
+- Démarrage à heure fixe : **Fichier › Départ programmé**.
+- Audio et vidéo sont joués par MyStrow : [player audio et vidéo](https://mystrow.fr/player-audio-video).
+(https://mystrow.fr/aide#spectacle)
+
+## Contrôleurs, tablette et assistant
+
+### Comment utiliser un contrôleur MIDI (AKAI APC mini, Launchpad) ?
+
+Branchez-le en USB : MyStrow le reconnaît tout seul. Pour vérifier ou le régler : **Connexion › 🎮 Contrôle › 🎹 Contrôleur MIDI**, et **⚙️ Paramètres contrôleur** pour changer ce que fait chaque pad.
+L'AKAI APC mini mk2 est le modèle recommandé (grille de pads et faders déjà assignés). Le contrôleur est facultatif. Matériel : [Shop](https://mystrow.fr/shop).
+(https://mystrow.fr/aide#akai)
+
+### Comment piloter MyStrow depuis une tablette ou un téléphone ?
+
+Ouvrez **Connexion › 🎮 Contrôle › 📱 Entrée Externe**, cliquez sur **Activer** et scannez le QR code avec la tablette, connectée au **même Wi-Fi** que l'ordinateur. Rien à installer.
+Guide : [contrôler MyStrow depuis une tablette](https://mystrow.fr/controler-mystrow-tablette-telephone). Il existe aussi une [application tablette](https://mystrow.fr/application-tablette) qui fonctionne sans PC.
+(https://mystrow.fr/aide#tablette)
+
+### Peut-on piloter MyStrow en parlant à une IA ?
+
+Oui. Avec **Claude Desktop** et l'extension MyStrow, on demande en français (« passe la face en bleu », « lance l'effet stroboscope ») et MyStrow exécute. Installation : [piloter ses lumières avec l'assistant IA](https://mystrow.fr/piloter-lumieres-assistant-ia-claude).
+(https://mystrow.fr/aide#assistant-ia)
+
+## Dépannage
+
+### Mes projecteurs ne s'allument pas. Que vérifier ?
+
+- **Sortie DMX** : dans **Connexion › 🌐 Sortie DMX**, votre interface doit être sélectionnée et connectée.
+- **Un seul logiciel à la fois** : fermez QLC+, Freestyler ou tout autre logiciel lumière qui occupe l'interface.
+- **Adresse et mode** : l'adresse DMX et le mode (nombre de canaux) réglés sur le projecteur doivent être ceux du patch.
+- **Câble et port** : changez de câble USB ou de port (évitez les hubs), vérifiez le câble DMX.
+- Lancez **Connexion › 🩺 Diagnostic** : il teste l'interface USB ou le réseau.
+Pendant les 15 jours d'essai, la sortie DMX fonctionne. Une fois l'essai terminé, elle demande une licence active.
+(https://mystrow.fr/aide#rien-ne-sallume)
+
+### Mes projecteurs changent de couleur ou bougent tout seuls.
+
+Presque toujours, le **mode DMX** réglé sur le projecteur n'est pas celui du patch. Exemple : projecteur en 7 canaux, patché en 9 canaux : les canaux se décalent et l'un tombe sur « auto » ou « son ».
+Regardez le mode affiché sur le projecteur, choisissez le même dans **Édition › 🔌 Patch DMX** et vérifiez l'adresse. Si les couleurs ou gobos ne correspondent pas, la fiche n'est pas la bonne : reprenez la fiche exacte du modèle, ou calibrez la roue de couleurs dans le patch.
+(https://mystrow.fr/aide#bouge-tout-seul)
+
+### Mon node Art-Net n'est pas trouvé.
+
+- Le node et l'ordinateur doivent être sur le même réseau, de préférence en câble Ethernet plutôt qu'en Wi-Fi.
+- Leurs adresses IP doivent être dans la même plage (souvent 2.x.x.x ou 192.168.x.x : voir l'écran ou la notice du node).
+- Autorisez MyStrow dans le pare-feu (Windows le demande au premier lancement).
+- Dans **Connexion › 🌐 Sortie DMX**, choisissez Art-Net et sélectionnez le node.
+Plusieurs nodes : [plusieurs univers DMX](https://mystrow.fr/plusieurs-univers-nodes-artnet-mystrow).
+(https://mystrow.fr/aide#artnet)
+
+### Le strobe ne marche pas sur un projecteur.
+
+La fiche du projecteur n'a pas le bon canal strobe/shutter, ou le projecteur n'est pas dans le mode du patch. Vérifiez le mode dans le patch et mettez MyStrow à jour (plusieurs fiches ont été corrigées). Sinon, envoyez-nous la notice du projecteur via la page [Contact](https://mystrow.fr/contact) : on corrige la fiche.
+(https://mystrow.fr/aide#strobe)
+
+### La tablette ne se connecte pas.
+
+- La tablette et l'ordinateur doivent être sur le même Wi-Fi (pas le réseau invité, pas la 4G).
+- Autorisez MyStrow dans le pare-feu de l'ordinateur.
+- Sur Mac, si la page affiche une erreur 403 ou 401 : désactivez le récepteur AirPlay (Réglages Système › Général › AirDrop et Handoff › Récepteur AirPlay), qui occupe le même port.
+- Relancez **📱 Entrée Externe** et rescannez le QR code.
+(https://mystrow.fr/aide#tablette-ko)
+
+### MyStrow ne s'ouvre pas, ou mon antivirus le bloque.
+
+**Antivirus** (Trend Micro, AVG, Avast…) : c'est une fausse alerte, MyStrow est signé numériquement. Restaurez-le de la quarantaine, ajoutez une exception pour son dossier, puis réinstallez-le depuis [mystrow.fr](https://mystrow.fr/telecharger).
+**Sur Mac**, si l'icône rebondit puis disparaît : vérifiez votre version de macOS (Apple Silicon : macOS 13 minimum ; Intel : macOS 11 minimum) et retéléchargez le bon fichier (Apple Silicon ou Intel).
+Le message « L'intégrité de l'application n'a pas pu être vérifiée » se règle en réinstallant la dernière version par-dessus : shows et réglages sont conservés.
+(https://mystrow.fr/aide#mac-antivirus)
+
+### Je n'ai pas reçu ma licence ou mon mot de passe.
+
+Regardez dans les spams (et l'onglet Promotions sur Gmail), puis vérifiez l'adresse tapée au paiement : une faute de frappe et le mail part dans le vide. Mot de passe oublié : bouton **🔑 Mot de passe oublié ?** dans la fenêtre de connexion de MyStrow. Toujours rien : [contactez-nous](https://mystrow.fr/contact).
+(https://mystrow.fr/aide#licence)
+
+
+## Tutoriel : créer un effet lumière (https://mystrow.fr/creer-effet-lumiere-mystrow)
+
+Un effet = des couches. Chaque couche anime un canal (intensité, couleur, Pan/Tilt…) sur une sélection de projecteurs, selon une forme qui se répète. Le décalage (DÉC) entre projecteurs crée le chenillard.
+
+1. **Ouvrir l'éditeur d'effets** : Menu **Édition › 🎨 Editeur d'effets**. À gauche, la liste des effets (les effets d'usine et **MES EFFETS**), au centre le tableau des couches, à droite le plan de feu qui joue l'aperçu.
+2. **Partir d'un effet existant… ou de zéro** : Le plus rapide : cliquez sur un effet d'usine proche de ce que vous voulez, puis **Dupliquer** pour travailler sur une copie. Pour partir de rien : **＋ Ajouter un effet › Créer l'effet moi-même** (une couche vierge est créée).
+3. **Activer la sortie live** : Cliquez sur **⏺ Sortie live** : vos vrais projecteurs jouent l'effet pendant que vous le réglez. Désactivée, l'éditeur ne touche pas au DMX et seul le plan de feu montre l'aperçu.
+4. **Régler la couche** : Chaque ligne du tableau est une **couche** : choisissez la **CIBLE** (quels projecteurs), le **CANAL** (ce qui bouge) et la **FORME** (comment ça bouge), puis la vitesse, l'amplitude et le décalage. Le détail de chaque colonne est juste en dessous.
+5. **Empiler des couches** : **＋ Ajouter une couche** pour animer un autre canal en même temps : par exemple l'intensité en vague et la couleur qui tourne, ou un cercle de lyres et un dimmer qui respire.
+6. **Choisir la lecture** : Sous **LECTURE** : **🔁 En boucle** (le cas courant) ou **1× Une fois** (un seul passage, utile pour un tir ou un coup de flash).
+7. **Assigner et sauvegarder** : Sous **ASSIGNER**, cliquez sur un bouton **E1 à E8** : l'effet arrive sur ce bouton d'effet de la fenêtre principale. Terminez par **Sauvegarder l'effet**. Il rejoint **MES EFFETS**.
+
+Colonnes du tableau des couches :
+- **CIBLE** : Quels projecteurs jouent la couche : **Tous**, **Pair**, **Impair**, ou des groupes précis. Astuce : cliquez des projecteurs sur le plan (1, 2, 3…) puis **Sél.** pour figer une sélection dans cet ordre.
+- **CANAL** : Le paramètre animé : intensité (Dimmer), couleur, Pan/Tilt, roue de couleurs… Seuls les projecteurs du patch qui ont ce canal réagissent.
+- **FORME** : La courbe suivie : **Sinus** (respiration douce), **Flash** (coups secs), **Triangle**, **Montée**, **Descente**, **Un par un** (un seul projecteur allumé à la fois), **Aléatoire**, **Fixe**, **Off**. Sur Pan/Tilt : la trajectoire (Cercle, Huit, Infini, Balancier, Pendule, Carré).
+- **VIT** : Vitesse du cycle, de 0 (très lent) à 100 (très rapide). La molette règle au dixième : 29,8 correspond à peu près à 128 BPM.
+- **AMP** : Amplitude : intensité maximale atteinte. Sur Pan/Tilt, c'est la largeur du mouvement.
+- **DÉC** : Décalage entre projecteurs : c'est lui qui crée le chenillard. 0 = tous ensemble, 180 = répartis sur un cycle.
+- **GROUPER** : Nombre de projecteurs qui partent ensemble, par paquets. 1 = un par un (chenillard classique).
+- **SENS** : Ordre de parcours : direct (1, 2, 3…), inverse, ou aller-retour.
+- **FONDU** : Adoucit la forme : 0 = transitions franches, 100 = fondu doux. Avec la forme Descente, c'est ce qui donne une traînée.
+- **DÉPART** : Décale le démarrage de cette couche dans le cycle, par rapport aux autres couches.
+- **MIN / MAX** : Plancher et plafond de l'effet. MIN au-dessus de 0 : les projecteurs ne s'éteignent plus complètement.
+- **COUL.** : La ou les couleurs de la couche (canaux couleur uniquement).
+- **POSITION / SYM** : Pour les lyres : le point autour duquel tourne le mouvement (une position enregistrée), et la symétrie (Pan inversé, Tilt inversé) pour que les lyres de droite partent en miroir de celles de gauche.
+
+Recettes :
+- **Chenillard** (Un projecteur s'allume après l'autre, en boucle.) : CANAL Dimmer ; FORME Un par un ; SENS direct, ou aller-retour pour un effet K2000 ; VIT selon le tempo
+- **Vague douce** (L'intensité ondule d'un bout à l'autre du plateau.) : CANAL Dimmer ; FORME Sinus ; DÉC 180 (répartie sur un cycle) ; MIN 20 pour ne jamais tomber au noir
+- **Pairs / impairs** (Une moitié des projecteurs flashe, puis l'autre.) : Couche 1 CIBLE Pair, CANAL Dimmer, FORME Flash ; Couche 2 CIBLE Impair, même réglage, DÉPART à 50 (un demi-cycle plus tard)
+- **Cercle de lyres en miroir** (Les lyres dessinent un cercle, côté jardin et côté cour en symétrie.) : CANAL Pan/Tilt ; FORME Cercle ; POSITION votre position « public » ou « scène » ; SYM Pan inversé ; AMP petit pour commencer, puis élargir
+
+Questions fréquentes :
+- **L'effet tourne dans l'éditeur mais mes projecteurs ne bougent pas.** Activez ⏺ Sortie live dans l'éditeur. Vérifiez aussi que vos projecteurs ont bien le canal animé (un PAR sans Pan/Tilt n'exécutera jamais un cercle) et que la CIBLE les inclut.
+- **Comment lancer l'effet pendant le show ?** Assignez-le à un bouton E1 à E8 depuis l'éditeur (section ASSIGNER), puis appuyez sur ce bouton dans la fenêtre principale ou sur le contrôleur. Un clic droit sur un bouton d'effet permet de le configurer.
+- **J'ai abîmé un effet d'usine.** Sélectionnez-le et cliquez sur ↺ Revenir à la version d'usine. Le bouton ↺ Remettre TOUS les effets d'usine fait de même pour toute la liste.
+- **Peut-on partager un effet ?** Oui : Exporter crée un fichier .mystrow_effect, que l'autre personne ajoute avec ＋ Ajouter un effet › Importer un effet.
+- **Je veux caler l'effet sur le tempo de la musique.** Réglez VIT à la molette : un cran = un dixième, et 29,8 correspond à environ 128 BPM. Le bouton TAP du contrôleur permet aussi de taper le tempo.
