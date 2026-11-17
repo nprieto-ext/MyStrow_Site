@@ -100,20 +100,20 @@ En savoir plus : [l'IA Lumière](https://mystrow.fr/ia-lumiere) · [lumières su
 
 ## Créer un show automatique
 
-### Comment enregistrer un show lumière sur une musique (REC Lumière) ?
+### Comment programmer un show lumière sur une musique (REC Lumière) ?
 
-Ajoutez le morceau à la playlist, faites un **clic droit › 🔴 REC Lumière**, puis jouez les lumières en direct pendant la lecture : MyStrow enregistre tout ce que vous faites.
-- Ajoutez le morceau : **📁 Ajouter un média** dans la playlist.
-- Clic droit sur le morceau › **🔴 REC Lumière**, et lancez la lecture.
-- Jouez couleurs, mémoires et effets en rythme. Arrêtez à la fin du morceau.
-- Passez le morceau en mode **▶ Séquence lumière** : à chaque lecture, le show est rejoué à l'identique.
-Guides : [automatiser ses lumières avec le REC Lumière](https://mystrow.fr/automatisation-lumieres-dmx-mystrow) · [créer des séquences lumière](https://mystrow.fr/creer-sequences-lumiere-mystrow).
+Ajoutez le morceau à la playlist, puis **clic droit › 🔴 REC Lumière** : l'éditeur de timeline du morceau s'ouvre, avec une piste par groupe de projecteurs et la forme d'onde de la musique.
+- Glissez des **couleurs**, **mémoires**, **effets** ou **positions de lyres** depuis la bibliothèque sur les pistes, en vous calant sur la forme d'onde.
+- Ou laissez **Outils › ✨ Génération par IA** poser une première version, puis retouchez.
+- Cliquez sur **💾 Sauvegarder** : le morceau passe en mode **▶ Séquence lumière** et rejoue le show à l'identique à chaque lecture.
+- Enregistrez le show (**Fichier › 💾 Enregistrer Show**).
+Tout le détail : [manuel, chapitre Playlist et REC Lumière](https://mystrow.fr/manuel-playlist-rec-lumiere).
 (https://mystrow.fr/aide#rec-lumiere)
 
-### Comment corriger une séquence enregistrée ?
+### Comment corriger une séquence déjà faite ?
 
-Ouvrez la **timeline** du morceau : chaque action enregistrée y est un clip que l'on peut déplacer, raccourcir, couper ou supprimer, avec la forme d'onde de la musique en dessous pour se caler sur les temps forts.
-Une séquence peut aussi être exportée et réimportée (**⬆ Exporter le REC lumière** / **⬇ Importer un REC lumière**, fichiers `.lrec`). Détails : [la timeline de programmation lumière](https://mystrow.fr/programmation-lumiere).
+Rouvrez-la par **clic droit sur le morceau › 🔴 REC Lumière**. Chaque bloc se déplace, s'étire, se coupe (**✂️ Couper en 2**, outil `C`) ou se supprime ; le clic droit sur un bloc règle son intensité, sa couleur, ses fondus.
+Une séquence peut aussi être exportée et réimportée (**⬆ Exporter le REC lumière** / **⬇ Importer un REC lumière**, fichiers `.lrec`).
 (https://mystrow.fr/aide#modifier-sequence)
 
 ### Comment préparer et lancer tout un spectacle ?
@@ -439,7 +439,7 @@ Une mémoire **sans niveau** ne règle que ce qu'elle contient (une couleur, un 
 - **✏️ Renommer**, **🎨 Couleur du pad** (ou Auto : la couleur dominante de la mémoire), **↔️ Déplacer vers** un autre pad.
 - **ℹ️ Contenu séquence** : le tableau de ce que la mémoire envoie, projecteur par projecteur, où l'on peut retirer un projecteur ou un paramètre.
 - **⬆️ Exporter le cue** / **⬇️ Importer un cue** : partager une mémoire avec un autre show.
-- **⏹ Éteindre** et **🗑 Effacer**.
+- **🗑 Effacer**.
 
 ### Les cues : plusieurs étapes dans une mémoire
 
@@ -487,3 +487,79 @@ Brancher et vérifier un contrôleur MIDI : **Connexion › 🎮 Contrôle › �
 - **Quelle différence entre une mémoire et un cue ?** La mémoire est le pad. Elle contient un cue (une étape) ou plusieurs, joués à la suite à la main ou en enchaînement automatique depuis le panneau 📋 Cues.
 - **Peut-on jouer sans contrôleur ?** Oui. Toute la surface se joue à la souris, à l'écran tactile ou depuis une tablette (Connexion › 🎮 Contrôle › 📱 Entrée Externe). Un contrôleur MIDI comme l'AKAI APC mini ajoute simplement des pads et des faders physiques.
 - **Comment dérouler un spectacle mémoire après mémoire ?** Enregistrez vos mémoires dans l'ordre (MEM 1.1, 1.2, 1.3…), réglez le bouton bas-droite sur GO, puis appuyez sur GO à chaque changement. Pour un enchaînement minuté, utilisez plutôt les cues d'une mémoire, ou le REC Lumière sur la musique.
+
+## Chapitre 8 — Playlist et REC Lumière (https://mystrow.fr/manuel-playlist-rec-lumiere)
+
+La **playlist** joue vos sons, vidéos et images. Chaque média a son **mode lumière** : à la main, en IA, ou en rejouant une séquence écrite dans l'éditeur **REC Lumière**, calée sur la musique à la milliseconde.
+
+### La playlist : ajouter ses médias
+
+Un **clic droit** dans la playlist ouvre le menu d'ajout :
+- **📁 Ajouter un média** : sons (MP3, WAV…), vidéos, images.
+- **⏸ Ajouter une pause** : une durée fixe, ou **♾ Indéfini** (attente manuelle jusqu'à ce que vous relanciez).
+- **🌐 Ajouter un site internet** : une page web affichée sur la sortie vidéo.
+Les colonnes indiquent le **Titre**, la **Durée**, le **Vol %** et le mode lumière. Le clic droit sur un média donne aussi : **🔊 Volume**, **⏱ Définir la durée** (pour une image), **🔁 Jouer en boucle**, **🎚 Fondu d'entrée / sortie**, **🔗 Lancer avec le son précédent** (une image ou vidéo affichée pendant le son du dessus), **⧉ Dupliquer (avec REC Lumière)** et **🗑️ Supprimer**.
+Si un fichier a été déplacé, MyStrow le signale et propose **Localiser le fichier…**.
+
+### Le mode lumière de chaque média
+
+Le bouton de mode, sur chaque ligne de la playlist, choisit ce que fait la lumière pendant ce média :
+- **🎛 Manuel** : la lumière reste à vous (pads, faders, mémoires).
+- **💡 IA Lumière** : MyStrow analyse le morceau et génère la lumière tout seul. **⚙ Réglages IA de ce média** ajuste le comportement pour ce morceau. Voir l'[IA Lumière](https://mystrow.fr/ia-lumiere).
+- **▶ Séquence lumière** (ou **🎞 Programme**) : le média rejoue la séquence écrite dans le REC Lumière. Ce mode apparaît une fois une séquence enregistrée.
+Le même menu donne accès à **REC Lumière**, pour écrire ou modifier la séquence du média.
+
+### Le REC Lumière : écrire la lumière sur la musique
+
+**Clic droit sur un média › 🔴 REC Lumière** ouvre l'éditeur de timeline de ce média. Au premier passage, MyStrow analyse l'audio (forme d'onde, beats). L'analyse est mémorisée : la fois suivante, l'ouverture est instantanée.
+L'éditeur montre :
+- une **piste par groupe** de projecteurs (Face, Contre, Lyres…), et sur demande une piste par projecteur (**Affichage › Pistes par projecteur**) ;
+- des **pistes Effet** (**＋ Ajouter une piste Effet**, pour superposer plusieurs effets) et des **pistes Séquence** ;
+- la **forme d'onde** du morceau, pour caler les changements sur les temps forts ;
+- la **BIBLIOTHÈQUE** : COULEUR, BICOULEUR, MÉMOIRE, POSITIONS LYRE, EFFETS et MES EFFETS ;
+- un **plan de feu 2D** (ou 3D) qui montre en direct ce que joue la timeline.
+**Espace** lance et arrête la lecture, `Shift` + molette zoome, `Ctrl+S` sauvegarde.
+
+### Poser et modifier des blocs
+
+- Glissez un élément de la bibliothèque (une couleur, une mémoire, un effet, une position de lyres) sur une piste, à l'endroit voulu.
+- Étirez le bloc par ses bords pour régler sa durée, déplacez-le en le faisant glisser.
+- Le mode **Peinture** pose un bloc à chaque clic, avec la durée par défaut choisie dans la barre d'outils : pratique pour suivre un rythme.
+Clic droit sur un bloc : **📊 Intensité**, **🎨 Couleur**, **🎯 Mouvement**, **🎬 Fade In** / **Fade Out**, **↔ Fondu enchaîné** entre deux blocs, **✂️ Couper en 2**, **📋 Copier vers** une autre piste, **🔀 Changer l'effet** ou **Changer de mémoire**, **🔒 Bloquer** (pour ne plus le déplacer par erreur), **🗑️ Supprimer**. Clic droit dans le vide : **⇤ Supprimer le vide** pour recoller les blocs.
+Les raccourcis classiques fonctionnent : copier, couper, coller, tout sélectionner, annuler (`Ctrl+Z`), rétablir (`Ctrl+Y`), et **✂ Outil couper** (`C`). **Effet › 🎚 Vitesse de l'effet** change la vitesse des blocs d'effet sélectionnés. **⧉ Dupliquer une piste sur une autre** recopie tout le contenu d'une piste de groupe.
+**Hors de ses blocs, la timeline vous laisse la main** : votre éclairage manuel reste allumé. Pour forcer le noir à un endroit, posez un bloc **Noir**.
+
+### Les pistes Séquence : enregistrer un état du plan de feu
+
+Pour un état précis (quelques projecteurs dans des couleurs différentes, un réglage de lyres), composez-le directement :
+- Placez le curseur à l'endroit voulu.
+- Sur le plan de feu de l'éditeur, faites un **clic droit sur vos projecteurs** pour leur donner un état.
+- Cliquez sur **● REC** : l'état est ajouté comme bloc dans la ligne Séquence. **Enregistrer un blackout** ajoute une étape noire.
+**ℹ️ Contenu séquence** (clic droit sur un bloc Séquence ou Mémoire) affiche le tableau de ce qu'il envoie, projecteur par projecteur : on y change une valeur, ou on retire un projecteur ou un canal.
+
+### Générer une première version automatiquement
+
+**Outils › ✨ Génération par IA** remplit la timeline à partir de l'analyse du morceau : choisissez une **dominante de couleur** (ou arc-en-ciel) et les **pistes à générer**, puis **✨ Générer**. MyStrow détecte les beats et pose les blocs. Il ne reste qu'à retoucher.
+**Outils › 🔄 Relancer l'analyse audio** recalcule l'analyse si le fichier a changé.
+
+### Sauvegarder, rejouer, partager
+
+- **💾 Sauvegarder** dans l'éditeur : la séquence est liée au média et celui-ci passe en mode **▶ Séquence lumière**. Désormais, à chaque lecture, le show est rejoué à l'identique.
+- Enregistrez ensuite le show : **Fichier › 💾 Enregistrer Show** (fichier `.tui`). **Attention :** un REC Lumière est enregistré avec son média. Si la playlist est vide, MyStrow prévient que le REC Lumière ne sera pas sauvegardé.
+- **Fichier › ⬆ Exporter le REC lumière** / **⬇ Importer un REC lumière** (fichiers `.lrec`) : réutiliser une séquence dans un autre show ou l'envoyer à quelqu'un.
+Tutoriels vidéo : [automatiser ses lumières](https://mystrow.fr/automatisation-lumieres-dmx-mystrow) · [créer des séquences](https://mystrow.fr/creer-sequences-lumiere-mystrow).
+
+### Dérouler le spectacle
+
+- **Édition › ⏭ Lumière entre deux médias** : **Clear** (tout revient au repos à chaque nouveau média, comme le bouton CLEAR) ou **Enchaîné** (pas de noir entre les médias).
+- **Fichier › Départ programmé** : **Lancer le show automatiquement** chaque jour à l'heure dite, depuis le début de la playlist (MyStrow doit rester ouvert avec le show chargé), ou simple décompte affiché à la place de l'horloge.
+- **Affichage › Cartouches** : des emplacements de lancement rapide pour des sons ou vidéos ponctuels (jingle, bruitage). Par défaut, une cartouche coupe la playlist ; cochez **Superposer par-dessus la playlist** pour qu'elle joue par-dessus.
+- **Connexion › 🖥️ Sortie Vidéo** : choisir l'écran ou le vidéoprojecteur, avec **📐 Paramétrer la sortie vidéo** pour cadrer l'image.
+- **Édition › 🎬 Synchro lumière / vidéo** : si, sur une vidéo, la lumière part légèrement en avance sur le son, ce décalage (en millisecondes) la recale. Réglage par ordinateur, il ne concerne que les vidéos.
+
+### Questions fréquentes
+
+- **Mon REC Lumière ne se lance pas quand je lis le morceau.** Vérifiez que le média est bien en mode ▶ Séquence lumière (bouton de mode sur sa ligne) et que la séquence a été sauvegardée dans l'éditeur. Mettez aussi MyStrow à jour : plusieurs cas de lecture ont été corrigés.
+- **J'ai perdu mon REC Lumière en rouvrant le show.** Le REC Lumière est enregistré avec le média de la playlist dans le fichier .tui. Enregistrez le show après avoir sauvegardé l'éditeur, et gardez le fichier audio au même endroit (sinon, utilisez « Localiser le fichier… »). Pour plus de sécurité, exportez la séquence en .lrec.
+- **Puis-je réutiliser le même REC Lumière sur plusieurs morceaux ?** Oui : Fichier › ⬆ Exporter le REC lumière depuis l'éditeur, puis ⬇ Importer un REC lumière sur l'autre média. Pour dupliquer un média avec sa séquence : clic droit › ⧉ Dupliquer (avec REC Lumière).
+- **Les lumières sont en avance sur une vidéo.** Réglez le décalage dans Édition › 🎬 Synchro lumière / vidéo. La latence vient de la lecture vidéo de l'ordinateur : le réglage s'applique à toutes les vidéos, pas aux fichiers audio.
