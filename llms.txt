@@ -36,6 +36,7 @@
 - [Manuel MyStrow : sommaire](https://mystrow.fr/manuel)
 - [Chapitre 1 — Sortie DMX](https://mystrow.fr/manuel-sortie-dmx)
 - [Chapitre 2 — Patch et fixtures](https://mystrow.fr/manuel-patch-dmx)
+- [Chapitre 5 — Jeu en direct](https://mystrow.fr/manuel-jeu-en-direct)
 - [Chapitre 7 — Éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow)
 
 ## Fonctionnalités

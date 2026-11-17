@@ -399,3 +399,91 @@ Le patch est aussi enregistré dans le fichier de show (`.tui`) et suit votre co
 - **Quelle adresse donner à mes projecteurs ?** N'importe laquelle, tant que l'adresse du patch et celle réglée sur le projecteur sont identiques et que deux appareils différents ne se chevauchent pas. Le plus simple : ⚡ Auto Adresse, puis recopier les adresses sur les projecteurs.
 - **Je ne connais pas le mode de mon projecteur.** Il s'affiche dans le menu du projecteur (souvent « 7CH », « d7 », « CH 9 »…) ou dans sa notice. Faute de mieux, prenez le mode le plus complet et vérifiez avec Édition › 🔬 DMX Tester.
 - **Puis-je reprendre mon patch QLC+ ?** Oui : 📁 Fichier › 📂 Importer le patch lit un espace de travail QLC+ (.qxw). La fenêtre de relecture indique quels appareils ont été reconnus et lesquels sont à vérifier.
+
+## Chapitre 5 — Jeu en direct (https://mystrow.fr/manuel-jeu-en-direct)
+
+La fenêtre principale de MyStrow est une **surface de jeu** : une grille de pads et des faders, la même que sur un contrôleur AKAI APC mini. Ce chapitre explique chaque type de colonne et chaque bouton, à la souris comme au contrôleur.
+
+### La surface de pads : colonnes et faders
+
+La surface est faite de **8 colonnes**, chacune avec ses pads et son fader. Chaque colonne a un rôle :
+- **Colonne de groupe** : pilote un groupe de projecteurs du patch (Face, Contre, Latéraux, Douches…). Chaque pad pose une **couleur** sur le groupe, le **fader** règle son niveau.
+- **Colonne de mémoires (MEM)** : chaque pad rappelle une ambiance enregistrée.
+- **Colonne d'effets (FX)** : chaque pad lance un effet. Le fader de la colonne règle l'amplitude de l'effet.
+- **Colonne de positions (POS)** : chaque pad envoie les lyres vers une position enregistrée.
+À droite, une rangée de **boutons d'effet E1 à E8** lance les effets assignés depuis l'[éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow). Un clic droit sur un bouton d'effet le configure.
+Le rôle des colonnes se règle dans **Connexion › 🎮 Contrôle › ⚙️ Paramètres contrôleur** (voir plus bas). Avec un contrôleur MIDI branché, la grille et les faders physiques font exactement la même chose qu'à l'écran. Au démarrage, tous les faders sont à 0 : rien ne s'allume tout seul.
+
+### Allumer un groupe dans une couleur
+
+- Cliquez sur un pad de couleur dans la colonne du groupe.
+- Montez le fader de cette colonne : le groupe s'allume dans la couleur choisie.
+Chaque colonne garde sa couleur : on peut avoir la face en blanc, le contre en bleu et les douches en ambre en même temps. Le bouton **Remettre à zéro** (CLEAR) remet tous les faders à 0 et les pads en blanc.
+Option utile dans les Paramètres contrôleur : **« Pad couleur sur fader baissé = flash »**. Fader baissé, tenir un pad couleur allume le groupe à 100 % dans cette couleur, et le relâcher rend l'état d'avant. Décochée, le pad prépare la couleur sans rien allumer.
+
+### Enregistrer une mémoire
+
+Une **mémoire** enregistre l'état de la scène (niveaux, couleurs, gobos, positions des lyres) pour le rappeler d'un seul pad.
+- Réglez l'ambiance voulue.
+- Cliquez sur **🔴 REC Mémoire** (« REC actif »).
+- Cliquez sur un pad d'une colonne de mémoires. MyStrow confirme « Rec MEM 1.3 OK » (colonne 1, pad 3).
+On ne peut pas enregistrer sur un pad de groupe ni sur un pad FX : REC Mémoire vise une colonne de mémoires (ou de positions, voir plus bas). Pour démarrer avec des mémoires toutes faites : **Fichier › 🏠 Charger les mémoires par défaut** (une colonne par groupe, une couleur par pad).
+Une mémoire **sans niveau** ne règle que ce qu'elle contient (une couleur, un gobo, une position) : on la lève par-dessus un look existant. Le fader d'une colonne de mémoires règle le niveau des mémoires de cette colonne.
+
+### Le menu d'un pad mémoire (clic droit)
+
+- **💾 Enregistrer l'état courant** / **🔄 Remplacer par l'état courant**.
+- **⏱️ Fondu** : le temps que met la mémoire à s'installer quand on pose son pad (0 = instantané).
+- **🎛️ Comportement** : **Interrupteur** (l'appui pose la mémoire, un autre pad de la même colonne la remplace), **Flash** (la mémoire n'est là que tant qu'on tient le pad) ou **Flash solo** (pareil, en coupant les autres mémoires pendant l'appui). Un pad momentané est dessiné avec une bordure en pointillés.
+- **⚡ Ajouter un effet** : la mémoire lance aussi un effet quand on la pose.
+- **✏️ Renommer**, **🎨 Couleur du pad** (ou Auto : la couleur dominante de la mémoire), **↔️ Déplacer vers** un autre pad.
+- **ℹ️ Contenu séquence** : le tableau de ce que la mémoire envoie, projecteur par projecteur, où l'on peut retirer un projecteur ou un paramètre.
+- **⬆️ Exporter le cue** / **⬇️ Importer un cue** : partager une mémoire avec un autre show.
+- **⏹ Éteindre** et **🗑 Effacer**.
+
+### Les cues : plusieurs étapes dans une mémoire
+
+Une mémoire peut contenir **plusieurs cues**, joués l'un après l'autre. Pour en ajouter un : refaites **🔴 REC Mémoire** sur un pad qui contient déjà quelque chose. MyStrow propose **Ajouter cue 2** ou **Remplacer le cue actuel**.
+Le panneau **📋 Cues** (depuis le menu du pad mémoire) liste les cues avec leur **Durée**, leur fondu et leur effet :
+- réorganisez-les (**⬆ Monter**, **⬇ Descendre**, **⏫ En premier**, **⏬ En dernier**) ;
+- donnez une durée à chaque cue et lancez l'**enchaînement automatique** (▶), en **Boucle** si vous voulez, avec pause possible ;
+- un fondu plus long que la durée du cue est permis : MyStrow le signale, le fondu suivant repart de l'état atteint.
+Posez d'abord la mémoire (appui sur son pad) pour jouer ou enchaîner ses cues.
+
+### Positions des lyres (colonne POS)
+
+- Placez les lyres où vous voulez (plan de feu, manette, effet…).
+- **🔴 REC Mémoire**, puis cliquez sur un pad **POS** : la position est enregistrée et nommée.
+- Un appui sur ce pad renvoie les lyres à cette position.
+Si une lyre a été ajoutée au patch après l'enregistrement, MyStrow le signale : réenregistrez la position pour l'inclure. Un clic droit sur un pad POS vide le configure. Voir aussi [programmer des lyres](https://mystrow.fr/patcher-programmer-lyres-mystrow).
+
+### Lancer des effets en direct
+
+- Appuyez sur un **bouton d'effet E1 à E8** ou sur un **pad FX** : l'effet démarre ; un nouvel appui l'arrête.
+- Par défaut, les effets sont **exclusifs** : en lancer un coupe le précédent. Cochez **Superposition d'effets** dans les Paramètres contrôleur pour en jouer plusieurs à la fois.
+- Un effet d'intensité (Dim, Strobe) a besoin d'une couleur sur les projecteurs : posez d'abord une couleur.
+- **Fichier › ⚡ Charger les effets par défaut** remet un jeu d'effets de base sur les boutons E.
+Créer ses propres effets : [l'éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow).
+
+### TAP, GO, FLASH, FLASH KILL : le bouton en bas à droite
+
+Le bouton en bas à droite de la surface (et du contrôleur) change de fonction par **clic droit**, ou dans **Paramètres contrôleur › Bouton bas-droite** :
+- **TAP BPM** : tapez plusieurs fois en rythme pour caler la vitesse des effets sur la musique.
+- **GO** : avance à la mémoire suivante enregistrée (MEM 1.1 → 1.2 → … → 2.1…). Pratique pour dérouler un spectacle au théâtre.
+- **FLASH** : tant qu'il est tenu, toutes les mémoires actives passent à 100 %. Un pad couleur appuyé pendant ce temps ne pose sa couleur que le temps de l'appui.
+- **FLASH KILL** : tenez-le, puis appuyez sur un pad couleur : seul ce groupe reste allumé, tout le reste est coupé. Le relâcher rend tout.
+- **PAGE +1** : passe à la page de layout suivante.
+
+### Pages et Paramètres contrôleur
+
+La surface a **20 pages**. Chaque page est une disposition complète des 8 colonnes (par exemple : page 1 pour les groupes et couleurs, page 2 pour les mémoires d'un spectacle, page 3 pour les effets). On change de page avec les flèches **◀ x/20 ▶** au-dessus des pads, `Ctrl+PageDown` / `Ctrl+PageUp`, ou le bouton bas-droite réglé sur PAGE +1.
+**Changer de page ne change jamais la lumière** : seuls les pads et les faders sont réaffectés, et ils se recalent sur l'état actuel de la scène.
+**Connexion › 🎮 Contrôle › ⚙️ Paramètres contrôleur** ouvre la **Configuration du contrôleur** : rôle de chaque colonne, page par page, presets de layout (intégrés ou à vous : **💾 Sauvegarder le layout actuel**), et options (Superposition d'effets, Pad couleur sur fader baissé = flash, Bouton bas-droite, luminosité des LED).
+Brancher et vérifier un contrôleur MIDI : **Connexion › 🎮 Contrôle › 🎹 Contrôleur MIDI**. Les raccourcis clavier se règlent dans **Connexion › ⌨️ Raccourci Clavier**.
+
+### Questions fréquentes
+
+- **Je monte le fader mais rien ne s'allume.** Vérifiez qu'une couleur est posée sur la colonne (un pad allumé) et que la sortie DMX est connectée (Connexion › 🌐 Sortie DMX). Si l'écran montre la lumière mais pas les projecteurs, voir le chapitre Sortie DMX et le patch.
+- **Quelle différence entre une mémoire et un cue ?** La mémoire est le pad. Elle contient un cue (une étape) ou plusieurs, joués à la suite à la main ou en enchaînement automatique depuis le panneau 📋 Cues.
+- **Peut-on jouer sans contrôleur ?** Oui. Toute la surface se joue à la souris, à l'écran tactile ou depuis une tablette (Connexion › 🎮 Contrôle › 📱 Entrée Externe). Un contrôleur MIDI comme l'AKAI APC mini ajoute simplement des pads et des faders physiques.
+- **Comment dérouler un spectacle mémoire après mémoire ?** Enregistrez vos mémoires dans l'ordre (MEM 1.1, 1.2, 1.3…), réglez le bouton bas-droite sur GO, puis appuyez sur GO à chaque changement. Pour un enchaînement minuté, utilisez plutôt les cues d'une mémoire, ou le REC Lumière sur la musique.
