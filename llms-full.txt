@@ -321,3 +321,81 @@ Sur Mac, si la sortie est restée sur « USB » alors que vous utilisez un node,
 - **Combien de projecteurs puis-je piloter ?** Un univers fait 512 canaux, et MyStrow gère jusqu'à 4 univers (2 048 canaux). Le nombre de projecteurs dépend du nombre de canaux de chacun : un PAR en 7 canaux en prend 7, une lyre en 16 canaux en prend 16.
 - **Le Wi-Fi suffit-il pour un node Art-Net ?** C'est possible mais déconseillé : le Wi-Fi ajoute des coupures et de la latence. Reliez le node en câble Ethernet, directement ou via un switch.
 - **Mon interface est reconnue mais rien ne s'allume.** Ouvrez Édition › 🔬 DMX Tester et montez les canaux du projecteur. S'il s'allume, la sortie fonctionne : c'est l'adresse ou le mode DMX du patch qui ne correspond pas au projecteur. S'il reste éteint, vérifiez le câble DMX et lancez Connexion › 🩺 Diagnostic.
+
+## Chapitre 2 — Patch et fixtures (https://mystrow.fr/manuel-patch-dmx)
+
+Le **patch** dit à MyStrow quels projecteurs vous avez, à quelle **adresse DMX** chacun écoute et dans quel **groupe** il joue. Tout se passe dans **Édition › 🔌 Patch DMX**.
+
+### La fenêtre Patch DMX
+
+Menu **Édition › 🔌 Patch DMX**. À gauche, la liste des appareils (triable par **Adresse**, **Nom** ou **Groupe**, avec un champ **🔍 Filtrer**). À droite, la fiche de l'appareil sélectionné. Un onglet **🎭 Plan de feu** montre les projecteurs placés sur la scène.
+La barre du haut regroupe : **📁 Fichier** (nouveau patch, enregistrer, importer, exporter), **✏️ Edition** (annuler `Ctrl+Z`, rétablir `Ctrl+Y`, **⚡ Auto Adresse**), **🛠 Créer votre fixture** et **➕ Ajouter**. Pensez à **💾 Sauvegarder** avant de fermer : MyStrow prévient s'il reste des modifications non enregistrées.
+
+### Partir de zéro : l'assistant
+
+**📁 Fichier › ✨ Nouveau Patch** propose deux départs :
+- **🧙 Assistant** : il demande, étape par étape, combien de projecteurs vous avez en face, en contre-jour, en latéraux, en douche, combien de lyres, de machines à fumée, à brouillard, à étincelles et de lance-flammes. Pour chaque catégorie, vous choisissez la fixture (**Choisir fixture…**). Il construit le patch et le plan de feu, puis **Configurer** l'applique.
+- **📄 Patch vide** : on ajoute les appareils un par un.
+**🏠 Patch par défaut** recharge le patch de démonstration.
+
+### Ajouter un projecteur depuis la bibliothèque
+
+- Cliquez sur **➕ Ajouter** : la **Bibliothèque de fixtures** s'ouvre (plus de 5 000 modèles).
+- Tapez la marque ou le modèle dans **🔍 Rechercher une fixture ou un fabricant**, ou filtrez par fabricant.
+- Choisissez le **Mode DMX** : **exactement le même** que celui réglé sur le projecteur (son nombre de canaux, dans son menu ou sa notice). Le détail des canaux du mode s'affiche pour vérifier.
+- Indiquez la **Quantité** et, si vous voulez, un **Nom personnalisé**, puis **Ajouter**. Les appareils sont numérotés et placés à la suite.
+L'onglet **Mes projecteurs** de la bibliothèque contient les fixtures que vous avez créées ou importées.
+**Les barres LED et matrices à pixels** s'ajoutent de la même façon. Leur fiche gagne une section **Disposition des pixels** : lignes × colonnes, câblage **par lignes** ou en **serpentin**, **⇄ Inverser l'ordre** (barre accrochée à l'envers) et taille réelle pour le plan 2D et 3D.
+
+### La fiche d'un appareil : nom, groupe, univers, adresse
+
+- **Identité** : nom et type de l'appareil.
+- **Groupe** : les appareils d'un même groupe sont pilotés ensemble, par la même colonne de pads et le même fader. Les groupes de base sont **A = Face**, **B = Latéraux**, **C = Contre**, **D, E, F = Douches 1 à 3**, plus **G** et **H** libres, et des familles dédiées (lyres, barres, strobos, fumée, public).
+- **Univers** : la ligne DMX où l'appareil est câblé (512 adresses par univers). Avec peu de projecteurs, gardez tout sur l'univers 1. Voir le [chapitre Sortie DMX](https://mystrow.fr/manuel-sortie-dmx) pour les univers multiples.
+- **Patch DMX** : l'adresse de départ. Elle doit être identique à celle réglée sur le projecteur. Pour un projecteur à dipswitchs, la section **Dipswitch** (dans les canaux avancés) dessine les interrupteurs 1 à 9 à mettre sur ON pour cette adresse.
+- **Profil DMX** : la liste des canaux dans l'ordre, issue de la fixture.
+Sélection multiple (Ctrl / Maj) : **✏ Renommer** en série (« PAR Face » donne « PAR Face 1 », « PAR Face 2 »…), **⬡ Groupe** pour tout changer de groupe d'un coup, **🔄 Remplacer** par une autre fixture de la bibliothèque, **🗑 Supprimer**. **🎯 Localiser** sélectionne l'appareil sur le plan de feu.
+
+### Adresses DMX : Auto Adresse et chevauchements
+
+Chaque appareil occupe autant d'adresses que son mode a de canaux : un PAR en 7 canaux à l'adresse 1 occupe 1 à 7, le suivant commence à 8 au plus tôt.
+Si deux appareils se chevauchent, MyStrow l'affiche (« fixtures avec des canaux DMX qui se chevauchent »). **✏️ Edition › ⚡ Auto Adresse** recalcule toutes les adresses à la suite, sans trous. Pensez ensuite à reporter les nouvelles adresses sur les projecteurs.
+Deux projecteurs identiques **à la même adresse** font exactement la même chose : c'est voulu quand on veut les piloter comme un seul.
+
+### Réglages des lyres et des appareils à mouvement
+
+- **Limites de mouvement** : la zone où la lyre a le droit d'aller (pour ne pas éblouir le public ou viser un mur). Glissez le point pour tester en direct. **Appliquer à toutes les lyres du modèle** ou **à toutes les lyres** évite de le refaire.
+- **Débattement mécanique** : les degrés couverts par toute la course Pan et Tilt (540° / 270° sur la plupart des lyres, voir la notice). Il sert au plan 3D et à la forme des effets de cercle.
+- **↔ Pan inversé**, **↕ Tilt inversé**, **⇄ Swap Pan/Tilt** : pour une lyre accrochée tête en bas ou tournée.
+- **🎨 Calibrer la roue de couleurs** et **🎯 Calibrer la roue de gobos** : associer chaque couleur ou gobo à sa vraie valeur DMX, puis **Copier cette roue vers…** les autres machines du même modèle. MyStrow propose la calibration quand on ajoute des lyres à roue de couleurs.
+Pas à pas : [patcher et programmer des lyres](https://mystrow.fr/patcher-programmer-lyres-mystrow).
+
+### Canaux avancés : plage utile, strobe, couronne
+
+- **Plage utile** : bride un canal à une partie de sa course. Utile quand le haut d'un canal lance un programme automatique (laser, Pan/Tilt de certains appareils) : toute la course du fader est ramenée dans la plage autorisée. Double-clic : course complète.
+- **Bande strobe** : quand un appareil n'a pas de canal strobe dédié et que c'est le **Shutter** qui le porte, réglez ici la plage DMX du strobe (souvent autour de 64-95, voir la notice). **⚡ Tester** fait strober l'appareil pour vérifier.
+- **💫 Couronne : suit le show** : la couronne LED d'une lyre prend la couleur, le niveau et le strobe du faisceau. Décochez pour la piloter à la main.
+- Un **clic droit** sur un canal avancé règle sa valeur par défaut.
+Pour un laser : [piloter un laser DMX](https://mystrow.fr/piloter-laser-dmx-mystrow).
+
+### Projecteur absent de la bibliothèque
+
+Trois solutions, dans l'ordre de rapidité :
+- **Avec une IA** : **🛠 Créer votre fixture › ✦ Créer votre fixture via IA**, copiez le prompt, donnez-le à ChatGPT, Gemini ou Claude avec le manuel du projecteur, recollez la réponse. Guide : [une fixture en 15 secondes](https://mystrow.fr/creer-fixture-dmx-ia-15-secondes).
+- **En important un fichier** : dans la bibliothèque, **📥 Importer** accepte les formats MyStrow (`.mft`, `.json`, `.mystrow`), XML GrandMA (`.xml`, téléchargeable sur FixtureShare) et QLC+ (`.qxf`). Si le fichier contient plusieurs modes, MyStrow demande lequel importer.
+- **À la main** : **🛠 Créer votre fixture manuellement**, puis déclarez les canaux un par un. Guide : [importer ou créer une fixture](https://mystrow.fr/importer-fixture-dmx-mystrow).
+Une fixture créée rejoint **Mes projecteurs**. Dans la liste du patch, un appareil peut aussi être **⧉ Dupliqué** ou **📤 Exporté** pour le partager.
+
+### Importer, exporter et imprimer le patch
+
+- **📂 Importer le patch** lit un patch MyStrow (`.msp`, `.json`), un espace de travail **QLC+** (`.qxw`) ou un **tableau** (`.csv`, `.tsv`, `.txt`, `.xlsx`, colonnes Nom, Marque, Modèle, Mode, Univers, Adresse, Canaux, Groupe). Une fenêtre de relecture montre chaque appareil (reconnu, approché, générique) avant d'importer, en remplaçant le patch actuel ou en l'ajoutant.
+- **📤 Exporter le patch** (`.msp`) pour le réutiliser sur un autre ordinateur.
+- **📊 Exporter en Excel** et **🖨️ Exporter le plan de feu (PDF)** : la feuille de patch à donner aux techniciens, avec les conflits d'adresses signalés.
+Le patch est aussi enregistré dans le fichier de show (`.tui`) et suit votre compte MyStrow d'un ordinateur à l'autre.
+
+### Questions fréquentes
+
+- **Mon projecteur change de couleur ou bouge tout seul.** Le mode DMX réglé sur le projecteur n'est pas celui du patch : les canaux sont décalés et l'un tombe sur « auto » ou « son ». Choisissez dans le patch le même mode que celui affiché sur le projecteur, et vérifiez l'adresse.
+- **Quelle adresse donner à mes projecteurs ?** N'importe laquelle, tant que l'adresse du patch et celle réglée sur le projecteur sont identiques et que deux appareils différents ne se chevauchent pas. Le plus simple : ⚡ Auto Adresse, puis recopier les adresses sur les projecteurs.
+- **Je ne connais pas le mode de mon projecteur.** Il s'affiche dans le menu du projecteur (souvent « 7CH », « d7 », « CH 9 »…) ou dans sa notice. Faute de mieux, prenez le mode le plus complet et vérifiez avec Édition › 🔬 DMX Tester.
+- **Puis-je reprendre mon patch QLC+ ?** Oui : 📁 Fichier › 📂 Importer le patch lit un espace de travail QLC+ (.qxw). La fenêtre de relecture indique quels appareils ont été reconnus et lesquels sont à vérifier.
