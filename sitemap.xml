@@ -2262,4 +2262,40 @@
     <priority>0.7</priority>
     <lastmod>2026-11-17</lastmod>
   </url>
+  <url>
+    <loc>https://mystrow.fr/manuel-installation-licence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/manuel-plan-de-feu-2d-3d</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/manuel-lyres</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/manuel-controleurs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/manuel-tablette-integrations</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/manuel-depannage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+  </url>
 </urlset>

@@ -36,10 +36,16 @@
 - [Manuel MyStrow : sommaire](https://mystrow.fr/manuel)
 - [Chapitre 1 — Sortie DMX](https://mystrow.fr/manuel-sortie-dmx)
 - [Chapitre 2 — Patch et fixtures](https://mystrow.fr/manuel-patch-dmx)
+- [Chapitre 3 — Installation, licence et compte](https://mystrow.fr/manuel-installation-licence)
+- [Chapitre 4 — Plan de feu 2D et 3D](https://mystrow.fr/manuel-plan-de-feu-2d-3d)
 - [Chapitre 5 — Jeu en direct](https://mystrow.fr/manuel-jeu-en-direct)
+- [Chapitre 6 — Lyres et mouvements](https://mystrow.fr/manuel-lyres)
 - [Chapitre 7 — Éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow)
 - [Chapitre 8 — Playlist et REC Lumière](https://mystrow.fr/manuel-playlist-rec-lumiere)
 - [Chapitre 9 — IA Lumière et mode Live](https://mystrow.fr/manuel-ia-lumiere-mode-live)
+- [Chapitre 10 — Contrôleurs et raccourcis](https://mystrow.fr/manuel-controleurs)
+- [Chapitre 11 — Tablette, OBS, vMix et assistant IA](https://mystrow.fr/manuel-tablette-integrations)
+- [Chapitre 12 — Dépannage](https://mystrow.fr/manuel-depannage)
 
 ## Fonctionnalités
 
