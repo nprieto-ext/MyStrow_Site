@@ -39,6 +39,7 @@
 - [Chapitre 5 — Jeu en direct](https://mystrow.fr/manuel-jeu-en-direct)
 - [Chapitre 7 — Éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow)
 - [Chapitre 8 — Playlist et REC Lumière](https://mystrow.fr/manuel-playlist-rec-lumiere)
+- [Chapitre 9 — IA Lumière et mode Live](https://mystrow.fr/manuel-ia-lumiere-mode-live)
 
 ## Fonctionnalités
 

@@ -563,3 +563,62 @@ Tutoriels vidéo : [automatiser ses lumières](https://mystrow.fr/automatisation
 - **J'ai perdu mon REC Lumière en rouvrant le show.** Le REC Lumière est enregistré avec le média de la playlist dans le fichier .tui. Enregistrez le show après avoir sauvegardé l'éditeur, et gardez le fichier audio au même endroit (sinon, utilisez « Localiser le fichier… »). Pour plus de sécurité, exportez la séquence en .lrec.
 - **Puis-je réutiliser le même REC Lumière sur plusieurs morceaux ?** Oui : Fichier › ⬆ Exporter le REC lumière depuis l'éditeur, puis ⬇ Importer un REC lumière sur l'autre média. Pour dupliquer un média avec sa séquence : clic droit › ⧉ Dupliquer (avec REC Lumière).
 - **Les lumières sont en avance sur une vidéo.** Réglez le décalage dans Édition › 🎬 Synchro lumière / vidéo. La latence vient de la lecture vidéo de l'ordinateur : le réglage s'applique à toutes les vidéos, pas aux fichiers audio.
+
+## Chapitre 9 — IA Lumière et mode Live (https://mystrow.fr/manuel-ia-lumiere-mode-live)
+
+MyStrow sait jouer la lumière tout seul en écoutant la musique. Deux façons : l'**IA Lumière** sur un média de la playlist, et le **mode Live**, qui écoute n'importe quelle source (Spotify, logiciel DJ, micro, table de mixage).
+
+### IA Lumière ou mode Live ?
+
+- **IA Lumière** : la musique est dans la **playlist de MyStrow**. MyStrow analyse le fichier à l'avance et cale la lumière sur les beats, les montées et les drops.
+- **Mode Live** : la musique vient d'**ailleurs** (Spotify, un DJ, un groupe sur scène, un téléphone). MyStrow l'écoute en direct par une entrée audio ou reçoit le tempo du logiciel DJ.
+Dans les deux cas, il faut un patch avec des groupes renseignés : l'IA choisit quoi allumer selon les groupes (face, contre, lyres, barres…).
+
+### IA Lumière sur un média de la playlist
+
+- Ajoutez le morceau à la playlist.
+- Sur sa ligne, réglez le mode lumière sur **💡 IA Lumière**.
+- Lancez la lecture : MyStrow génère couleurs, intensités, mouvements de lyres et strobe en suivant le morceau.
+**Réglages propres à ce média** : cliquez sur le carré de couleur de la ligne, ou **⚙ Réglages IA de ce média**. Ils ne valent que pour ce morceau :
+- **COULEURS** : une seule couleur tenue tout le morceau, ou une palette dans laquelle l'IA pioche (**À la fois** : combien de couleurs en même temps) ;
+- **LYRES** : **Vitesse** (lent → rapide) et **Amplitude** (serré → large) ;
+- **AMBIANCE** : **Nervosité** (posé → nerveux), **Changement** (souvent → rarement) et **Strobe** (Auto : sur les drops ; Continu : toute la durée).
+
+### Réglages généraux de l'IA Lumière
+
+**Édition › 💡 IA Lumière** ouvre les paramètres communs à tous les médias :
+- **💥 Effet DROP** : ce qui se passe sur un drop. Flash Blanc, Color Explosion, Blackout Punch (un noir très court puis un flash blanc), Stroboscope, Laser Scan (lyres en turbo) ou Strobe Sync.
+- **🎚 Niveaux maximum par groupe** : un plafond d'intensité par groupe en mode IA, par exemple pour ne pas éblouir avec la face.
+
+### Le mode Live : ouvrir et choisir la source
+
+**Affichage › Mode Live** ouvre le panneau Live. Cliquez sur la carte **INPUT** pour choisir d'où vient le son :
+- **Micro / Line In** : table de mixage, micro, entrée ligne ou interface audio. Sous Windows, la liste **Périphériques** propose aussi les sorties précédées de 🔊 : MyStrow écoute alors directement ce que joue l'ordinateur (Spotify, YouTube…).
+- **MIDI Clock** : le logiciel DJ (Traktor, VirtualDJ, Rekordbox, Serato, Ableton) envoie son BPM et ses beats. Sous Windows, il faut le petit utilitaire gratuit **loopMIDI** (MyStrow propose de l'installer et crée le port). Le **Guide MIDI Clock** donne les étapes pour chaque logiciel.
+- Quand le morceau joue dans la playlist de MyStrow, le Live peut aussi s'appuyer sur la **pré-analyse IA du fichier** : les beats sont alors parfaitement calés.
+**Sur Mac**, pour écouter la musique jouée sur l'ordinateur, installez le pilote audio virtuel gratuit **BlackHole** et créez un périphérique à sortie multiple (pas à pas dans [l'article Spotify](https://mystrow.fr/synchroniser-lumieres-spotify)).
+La jauge **Niveau audio** montre le son reçu : glissez le marqueur blanc pour régler le **seuil de sensibilité**. Si la lumière ne réagit pas, le son est trop faible ou le seuil trop haut.
+
+### MUSICAL IA, AMBIANCE IA, MANUEL
+
+- **MUSICAL IA** : réagit à la musique. MyStrow détecte le BPM et la structure du morceau, et l'indicateur passe par CALME, BEAT, MONTÉE, DROP ! et PEAK ; la lumière suit.
+- **AMBIANCE IA** : une lumière d'ambiance douce qui évolue lentement, idéale pour un apéritif ou un début de soirée.
+- **MANUEL** : vous reprenez la main, pour une annonce ou un discours.
+On passe d'un mode à l'autre à tout moment, en un clic.
+
+### Les onglets du Live : ce que l'IA a le droit de faire
+
+- **COULEURS** : les couleurs autorisées (simples ou bicolores comme R+B, V+O), le nombre de **COULEURS SIMULTANÉES**, et les couleurs **📌 ÉPINGLÉES** à garder en tête de liste.
+- **MOUVEMENT** : les figures des lyres (AUTO, VAGUE, CERCLE, DIAGONALE, SPIRALE, BOUNCE, HUIT), avec **VITESSE** et **TAILLE**.
+- **DIMMER**, **GOBO** : intensités et gobos autorisés (avec ou sans **ROTATION**).
+- **STROB** : **RAPIDE** (strobe sur le beat), **LENT** (pendant les montées) ou **Pas de Strobe**.
+- **SPÉCIAL** : des gestes immédiats : **STROBE** blanc qui suit le BPM, **STROBE COULEUR**, **FIXE BLANC** (plein blanc à 100 %).
+- **SÉQUENCE** : faire tourner vos mémoires enregistrées sur les pads, avec leur **DURÉE** et leur intensité. Décochez **POSITIONS** pour que les lyres continuent de bouger au lieu de prendre la position de la mémoire.
+**⚙ PARAMÈTRES LIVE** règle le reste. On peut aussi limiter les **groupes** que l'IA pilote : par exemple lui confier les lyres et les barres LED et garder l'éclairage de la salle à la main. Les onglets MOUVEMENT et GOBO n'apparaissent que si le patch contient des lyres.
+
+### Questions fréquentes
+
+- **La lumière ne réagit pas à la musique.** Vérifiez la source dans la carte INPUT et regardez la jauge Niveau audio : si elle ne bouge pas, MyStrow ne reçoit pas le son (mauvais périphérique, ou BlackHole non configuré sur Mac). Si elle bouge mais que rien ne se passe, abaissez le seuil de sensibilité (marqueur blanc).
+- **Faut-il Spotify Premium ?** Non. MyStrow écoute le son qui sort de l'ordinateur, quel que soit le lecteur : Spotify gratuit, YouTube, Deezer, Apple Music…
+- **Le BPM affiché est faux ou instable.** Avec un logiciel DJ, préférez la source MIDI Clock : le tempo vient directement du logiciel. Avec Micro / Line In, rapprochez le micro des enceintes ou utilisez une entrée ligne.
+- **Puis-je garder certains projecteurs à la main pendant que l'IA joue ?** Oui : dans les réglages du Live, limitez les groupes que l'IA pilote. Les autres restent sur les pads et les faders.
