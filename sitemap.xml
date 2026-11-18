@@ -2219,6 +2219,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/aide"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/aide"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/aide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/aide"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/aide"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2229,6 +2230,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/aide"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/aide"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/aide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/aide"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/aide"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2239,6 +2241,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/aide"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/aide"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/aide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/aide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/aide"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/aide</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/aide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/aide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/aide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/aide"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/aide"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2249,6 +2263,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2259,6 +2274,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2269,6 +2285,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2279,6 +2307,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2289,6 +2318,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2299,6 +2329,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/creer-effet-lumiere-mystrow</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-effet-lumiere-mystrow"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/creer-effet-lumiere-mystrow"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-effet-lumiere-mystrow"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2309,6 +2351,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-sortie-dmx"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2319,6 +2362,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-sortie-dmx"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2329,6 +2373,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-sortie-dmx"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-sortie-dmx</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-sortie-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-sortie-dmx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-sortie-dmx"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2339,6 +2395,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-patch-dmx"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2349,6 +2406,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-patch-dmx"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2359,6 +2417,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-patch-dmx"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-patch-dmx</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-patch-dmx"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-patch-dmx"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-patch-dmx"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2369,6 +2439,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-installation-licence"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2379,6 +2450,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-installation-licence"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2389,6 +2461,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-installation-licence"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-installation-licence</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-installation-licence"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-installation-licence"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-installation-licence"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2399,6 +2483,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2409,6 +2494,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2419,6 +2505,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-plan-de-feu-2d-3d</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-plan-de-feu-2d-3d"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-plan-de-feu-2d-3d"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-plan-de-feu-2d-3d"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2429,6 +2527,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-jeu-en-direct"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2439,6 +2538,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-jeu-en-direct"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2449,6 +2549,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-jeu-en-direct"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-jeu-en-direct</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-jeu-en-direct"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-jeu-en-direct"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-jeu-en-direct"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2459,6 +2571,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-lyres"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2469,6 +2582,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-lyres"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2479,6 +2593,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-lyres"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-lyres</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-lyres"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-lyres"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-lyres"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2489,6 +2615,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2499,6 +2626,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2509,6 +2637,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-playlist-rec-lumiere</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-playlist-rec-lumiere"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-playlist-rec-lumiere"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-playlist-rec-lumiere"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2519,6 +2659,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2529,6 +2670,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2539,6 +2681,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-ia-lumiere-mode-live</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-ia-lumiere-mode-live"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-ia-lumiere-mode-live"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-ia-lumiere-mode-live"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2549,6 +2703,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-controleurs"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2559,6 +2714,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-controleurs"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2569,6 +2725,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-controleurs"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-controleurs</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-controleurs"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-controleurs"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-controleurs"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2579,6 +2747,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-tablette-integrations"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2589,6 +2758,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-tablette-integrations"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2599,6 +2769,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-tablette-integrations"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-tablette-integrations</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-tablette-integrations"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-tablette-integrations"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-tablette-integrations"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2609,6 +2791,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-depannage"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2619,6 +2802,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-depannage"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2629,6 +2813,18 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-depannage"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/es/manuel-depannage</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-depannage"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-depannage"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-depannage"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

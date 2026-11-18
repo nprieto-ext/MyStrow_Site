@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Manual de MyStrow · Directo: pads, faders, memorias, cues, flash y efectos | MyStrow</title>
+  <meta name="description" content="Capítulo 5 del manual de MyStrow: tocar la luz en directo con la cuadrícula de pads y los faders, grabar y recuperar memorias, encadenar cues, usar FLASH, FLASH KILL, GO y TAP, pads de efectos, de posiciones y páginas.">
+  <meta name="keywords" content="luces en directo, pads de color, faders DMX, memoria de luz, cue DMX, flash kill, tap tempo, AKAI APC mini MyStrow, páginas del controlador">
+  <link rel="canonical" href="https://mystrow.fr/es/manuel-jeu-en-direct">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-jeu-en-direct">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-jeu-en-direct">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-jeu-en-direct">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-jeu-en-direct">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-jeu-en-direct">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/es/manuel-jeu-en-direct">
+  <meta property="og:title" content="Manual de MyStrow · Directo: pads, faders, memorias, cues, flash y efectos">
+  <meta property="og:description" content="Capítulo 5 del manual de MyStrow: tocar la luz en directo con la cuadrícula de pads y los faders, grabar y recuperar memorias, encadenar cues, usar FLASH, FLASH KILL, GO y TAP, pads de efectos, de posiciones y páginas.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-es.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manual de MyStrow · Directo: pads, faders, memorias, cues, flash y efectos">
+  <meta name="twitter:description" content="Capítulo 5 del manual de MyStrow: tocar la luz en directo con la cuadrícula de pads y los faders, grabar y recuperar memorias, encadenar cues, usar FLASH, FLASH KILL, GO y TAP, pads de efectos, de posiciones y páginas.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-es.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Manual de MyStrow · Directo: pads, faders, memorias, cues, flash y efectos",
+  "description": "Capítulo 5 del manual de MyStrow: tocar la luz en directo con la cuadrícula de pads y los faders, grabar y recuperar memorias, encadenar cues, usar FLASH, FLASH KILL, GO y TAP, pads de efectos, de posiciones y páginas.",
+  "inLanguage": "es",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/es/manuel-jeu-en-direct"
+  },
+  "url": "https://mystrow.fr/es/manuel-jeu-en-direct",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Manual de MyStrow",
+    "url": "https://mystrow.fr/es/manuel"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Subo el fader pero no se enciende nada.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comprueba que hay un color puesto en la columna (un pad encendido) y que la salida DMX está conectada (Conexión › 🌐 Salida DMX). Si la pantalla muestra luz pero los focos no, mira el capítulo Salida DMX y el patch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre una memoria y un cue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La memoria es el pad. Contiene un cue (un paso) o varios, que se tocan seguidos a mano o en encadenamiento automático desde el panel 📋 Cues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo tocar sin controlador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Toda la superficie se toca con el ratón, una pantalla táctil o una tableta (Conexión › 🎮 Control › 📱 Entrada externa). Un controlador MIDI como el AKAI APC mini solo añade pads y faders físicos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo llevo un espectáculo memoria tras memoria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Graba tus memorias en orden (MEM 1.1, 1.2, 1.3…), pon el botón de abajo a la derecha en GO y pulsa GO en cada cambio. Para un encadenamiento con tiempos, usa mejor los cues de una memoria o el REC Luz sobre la música."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://mystrow.fr/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Manual",
+      "item": "https://mystrow.fr/es/manuel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tocar en directo",
+      "item": "https://mystrow.fr/es/manuel-jeu-en-direct"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .toc a { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    .qa { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 16px; scroll-margin-top: 90px; }
+    .qa h3 { font-size: 19px; margin-bottom: 10px; }
+    .qa h3 a { color: inherit; text-decoration: none; }
+    .qa .prose { font-size: 14.5px; line-height: 1.75; }
+    .qa .prose p { margin-bottom: 10px; }
+    .qa .prose p:last-child { margin-bottom: 0; }
+    .prose ol, .prose ul { margin: 0 0 12px 20px; }
+    .prose li { margin-bottom: 6px; }
+    .param-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .param-table th, .param-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .param-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+    .param-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .param-table td { color: var(--muted); }
+    .table-scroll { overflow-x: auto; }
+    .recipe { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .recipe h3 { color: var(--accent); }
+    .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .recipe li strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="./">Inicio</a> &nbsp;/&nbsp; <a href="manuel">Manual</a> &nbsp;/&nbsp; <span>Tocar en directo</span>
+      </nav>
+      <div class="hero-badge">🎹 Manual · Capítulo 5</div>
+      <h1>Tocar en directo:<br><em>pads, faders y memorias</em></h1>
+      <p class="hero-sub">La ventana principal de MyStrow es una <strong>superficie de juego</strong>: una cuadrícula de pads y faders, la misma que en un controlador AKAI APC mini. Este capítulo explica cada tipo de columna y cada botón, con el ratón o con el controlador.</p>
+      <div class="hero-meta"><span>Por <strong>MyStrow</strong></span><span>·</span><span>Actualizado el <strong>18 de noviembre de 2026</strong></span></div>
+      <div class="toc"><a href="#surface">La superficie de pads: columnas y faders</a><a href="#couleur">Encender un grupo de un color</a><a href="#memoires">Grabar una memoria</a><a href="#menu-memoire">El menú de un pad de memoria (clic derecho)</a><a href="#cues">Los cues: varios pasos en una memoria</a><a href="#positions">Posiciones de las cabezas móviles (columna POS)</a><a href="#effets">Lanzar efectos en directo</a><a href="#bouton">TAP, GO, FLASH, FLASH KILL: el botón de abajo a la derecha</a><a href="#pages">Páginas y ajustes del controlador</a></div>
+    </div>
+  </section>
+
+  <section id="surface" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>La superficie de pads: columnas y faders</h2>
+      <div class="prose"><p>La superficie tiene <strong>8 columnas</strong>, cada una con sus pads y su fader. Cada columna tiene una función:</p><ul><li><strong>Columna de grupo</strong>: controla un grupo de focos del patch (Frontal, Contra, Laterales, Cenitales…). Cada pad pone un <strong>color</strong> en el grupo y el <strong>fader</strong> ajusta su nivel.</li><li><strong>Columna de memorias (MEM)</strong>: cada pad recupera un ambiente grabado.</li><li><strong>Columna de efectos (FX)</strong>: cada pad lanza un efecto. El fader de la columna ajusta la amplitud del efecto.</li><li><strong>Columna de posiciones (POS)</strong>: cada pad envía las cabezas móviles a una posición grabada.</li></ul><p>A la derecha, una fila de <strong>botones de efecto E1 a E8</strong> lanza los efectos asignados desde el <a href="creer-effet-lumiere-mystrow">editor de efectos</a>. Un clic derecho en un botón de efecto lo configura.</p><p>La función de las columnas se ajusta en <strong>Conexión › 🎮 Control › ⚙️ Ajustes del controlador</strong> (ver más abajo). Con un controlador MIDI conectado, la cuadrícula y los faders físicos hacen exactamente lo mismo que en pantalla. Al arrancar, todos los faders están a 0: nada se enciende solo.</p></div>
+    </div>
+  </section>
+
+  <section id="couleur" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Encender un grupo de un color</h2>
+      <div class="prose"><ol><li>Haz clic en un pad de color en la columna del grupo.</li><li>Sube el fader de esa columna: el grupo se enciende del color elegido.</li></ol><p>Cada columna conserva su color: puedes tener el frontal en blanco, el contra en azul y los cenitales en ámbar a la vez. El botón de reinicio (CLEAR) pone todos los faders a 0 y los pads en blanco.</p><p>Opción útil en los ajustes del controlador: <strong>«Pad de color con fader bajado = flash»</strong>. Con el fader abajo, mantener un pad de color enciende el grupo al 100 % de ese color, y al soltarlo vuelve el estado anterior. Desmarcada, el pad prepara el color sin encender nada.</p></div>
+    </div>
+  </section>
+
+  <section id="memoires" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Grabar una memoria</h2>
+      <div class="prose"><p>Una <strong>memoria</strong> graba el estado del escenario (niveles, colores, gobos, posiciones de las cabezas) para recuperarlo con un solo pad.</p><ol><li>Ajusta el ambiente que quieras.</li><li>Haz clic en <strong>🔴 REC Memoria</strong> («REC activo»).</li><li>Haz clic en un pad de una columna de memorias. MyStrow confirma «Rec MEM 1.3 OK» (columna 1, pad 3).</li></ol><p>No se puede grabar en un pad de grupo ni en un pad FX: REC Memoria apunta a una columna de memorias (o de posiciones, ver más abajo). Para empezar con memorias hechas: <strong>Archivo › 🏠 Cargar memorias por defecto</strong> (una columna por grupo, un color por pad).</p><p>Una memoria <strong>sin nivel</strong> solo ajusta lo que contiene (un color, un gobo, una posición): se sube por encima de un ambiente existente. El fader de una columna de memorias ajusta el nivel de sus memorias.</p></div>
+    </div>
+  </section>
+
+  <section id="menu-memoire" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>El menú de un pad de memoria (clic derecho)</h2>
+      <div class="prose"><ul><li><strong>💾 Guardar el estado actual</strong> / <strong>🔄 Reemplazar por el estado actual</strong>.</li><li><strong>⏱️ Fundido</strong>: el tiempo que tarda la memoria en instalarse al pulsar su pad (0 = instantáneo).</li><li><strong>🎛️ Comportamiento</strong>: <strong>Interruptor</strong> (al pulsar se pone la memoria, otro pad de la misma columna la reemplaza), <strong>Flash</strong> (la memoria solo está mientras mantienes el pad) o <strong>Flash solo</strong> (igual, cortando las demás memorias mientras lo mantienes). Un pad momentáneo se dibuja con borde punteado.</li><li><strong>⚡ Añadir un efecto</strong>: la memoria también lanza un efecto al ponerse.</li><li><strong>✏️ Renombrar</strong>, <strong>🎨 Color del pad</strong> (o Auto: el color dominante de la memoria), <strong>↔️ Mover a</strong> otro pad.</li><li><strong>ℹ️ Contenido de la secuencia</strong>: la tabla de lo que envía la memoria, foco a foco, donde puedes quitar un foco o un parámetro.</li><li><strong>⬆️ Exportar el cue</strong> / <strong>⬇️ Importar un cue</strong>: compartir una memoria con otro show.</li><li><strong>🗑 Borrar</strong>.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="cues" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Los cues: varios pasos en una memoria</h2>
+      <div class="prose"><p>Una memoria puede contener <strong>varios cues</strong>, que se tocan uno tras otro. Para añadir uno: vuelve a hacer <strong>🔴 REC Memoria</strong> sobre un pad que ya tiene algo. MyStrow propone añadir el cue 2 o <strong>Reemplazar el cue actual</strong>.</p><p>El panel <strong>📋 Cues</strong> (desde el menú del pad de memoria) lista los cues con su <strong>Duración</strong>, su fundido y su efecto:</p><ul><li>reordénalos (<strong>⬆ Subir</strong>, <strong>⬇ Bajar</strong>, <strong>⏫ Al principio</strong>, <strong>⏬ Al final</strong>);</li><li>da una duración a cada cue y lanza el <strong>encadenamiento automático</strong> (▶), en <strong>Bucle</strong> si quieres, con pausa posible;</li><li>se permite un fundido más largo que la duración del cue: MyStrow lo señala, y el fundido siguiente parte del estado alcanzado.</li></ul><p>Pon primero la memoria (pulsa su pad) para tocar o encadenar sus cues.</p></div>
+    </div>
+  </section>
+
+  <section id="positions" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Posiciones de las cabezas móviles (columna POS)</h2>
+      <div class="prose"><ol><li>Coloca las cabezas donde quieras (plano de luces, mando, efecto…).</li><li><strong>🔴 REC Memoria</strong> y luego clic en un pad <strong>POS</strong>: la posición se graba y se nombra.</li><li>Al pulsar ese pad, las cabezas vuelven a esa posición.</li></ol><p>Si se añadió una cabeza al patch después de grabar, MyStrow lo indica: vuelve a grabar la posición para incluirla. Un clic derecho en un pad POS vacío lo configura. Ver también <a href="patcher-programmer-lyres-mystrow">programar cabezas móviles</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="effets" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Lanzar efectos en directo</h2>
+      <div class="prose"><ul><li>Pulsa un <strong>botón de efecto E1 a E8</strong> o un <strong>pad FX</strong>: el efecto arranca; al volver a pulsar, se para.</li><li>Por defecto, los efectos son <strong>exclusivos</strong>: lanzar uno para el anterior. Marca <strong>Superposición de efectos</strong> en los ajustes del controlador para tocar varios a la vez.</li><li>Un efecto de intensidad (Dim, Estrobo) necesita un color en los focos: pon un color primero.</li><li><strong>Archivo › ⚡ Cargar efectos por defecto</strong> vuelve a poner un juego de efectos básicos en los botones E.</li></ul><p>Crear tus propios efectos: <a href="creer-effet-lumiere-mystrow">el editor de efectos</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="bouton" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>TAP, GO, FLASH, FLASH KILL: el botón de abajo a la derecha</h2>
+      <div class="prose"><p>El botón de abajo a la derecha de la superficie (y del controlador) cambia de función con un <strong>clic derecho</strong> o en <strong>⚙️ Ajustes del controlador › Botón inferior derecho</strong>:</p><ul><li><strong>TAP BPM</strong>: toca varias veces al ritmo para ajustar la velocidad de los efectos a la música.</li><li><strong>GO</strong>: pasa a la siguiente memoria grabada (MEM 1.1 → 1.2 → … → 2.1…). Práctico para llevar una obra de teatro.</li><li><strong>FLASH</strong>: mientras lo mantienes, todas las memorias activas van al 100 %. Un pad de color pulsado mientras tanto solo pone su color durante la pulsación.</li><li><strong>FLASH KILL</strong>: mantenlo y pulsa un pad de color: solo ese grupo queda encendido, todo lo demás se corta. Al soltarlo, vuelve todo.</li><li><strong>PÁGINA +1</strong>: pasa a la siguiente página de layout.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="pages" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Páginas y ajustes del controlador</h2>
+      <div class="prose"><p>La superficie tiene <strong>20 páginas</strong>. Cada página es una disposición completa de las 8 columnas (por ejemplo: página 1 para grupos y colores, página 2 para las memorias de un espectáculo, página 3 para los efectos). Se cambia de página con las flechas <strong>◀ x/20 ▶</strong> sobre los pads, <code>Ctrl+AvPág</code> / <code>Ctrl+RePág</code>, o el botón de abajo a la derecha en PÁGINA +1.</p><p><strong>Cambiar de página nunca cambia la luz</strong>: solo se reasignan los pads y faders, que se ajustan al estado actual del escenario.</p><p><strong>Conexión › 🎮 Control › ⚙️ Ajustes del controlador</strong> abre la <strong>Configuración del controlador</strong>: función de cada columna, página a página, presets de layout (integrados o tuyos: <strong>💾 Guardar el layout actual</strong>) y opciones (Superposición de efectos, Pad de color con fader bajado = flash, Botón inferior derecho, brillo de los LED).</p><p>Conectar y comprobar un controlador MIDI: <strong>Conexión › 🎮 Control › 🎹 Controlador MIDI</strong>. Los atajos de teclado se ajustan en <strong>Conexión › ⌨️ Atajos de teclado</strong>.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Preguntas frecuentes</div>
+      <div class="step-list" style="gap:22px;">
+        <div class="step-body"><h3>Subo el fader pero no se enciende nada.</h3><p>Comprueba que hay un color puesto en la columna (un pad encendido) y que la salida DMX está conectada (Conexión › 🌐 Salida DMX). Si la pantalla muestra luz pero los focos no, mira el capítulo Salida DMX y el patch.</p></div>
+        <div class="step-body"><h3>¿Qué diferencia hay entre una memoria y un cue?</h3><p>La memoria es el pad. Contiene un cue (un paso) o varios, que se tocan seguidos a mano o en encadenamiento automático desde el panel 📋 Cues.</p></div>
+        <div class="step-body"><h3>¿Puedo tocar sin controlador?</h3><p>Sí. Toda la superficie se toca con el ratón, una pantalla táctil o una tableta (Conexión › 🎮 Control › 📱 Entrada externa). Un controlador MIDI como el AKAI APC mini solo añade pads y faders físicos.</p></div>
+        <div class="step-body"><h3>¿Cómo llevo un espectáculo memoria tras memoria?</h3><p>Graba tus memorias en orden (MEM 1.1, 1.2, 1.3…), pon el botón de abajo a la derecha en GO y pulsa GO en cada cambio. Para un encadenamiento con tiempos, usa mejor los cues de una memoria o el REC Luz sobre la música.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-bg">
+    <div class="wrap">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px"><a href="manuel-plan-de-feu-2d-3d" class="btn-outline">← 4. Plano de luces 2D y 3D</a><a href="manuel" class="btn-outline">Índice del manual</a><a href="manuel-lyres" class="btn-primary">6. Cabezas móviles y movimiento →</a></div>
+      <div class="section-tag">Para ir más lejos</div>
+      <div class="related-grid"><a href="tutoriel-debuter-mystrow" class="related-card"><div class="rc-tag">Tutorial · Principiante</div><h3>Empezar con MyStrow</h3><p>Patch, grupos y primer show, paso a paso en vídeo.</p></a><a href="controler-mystrow-tablette-telephone" class="related-card"><div class="rc-tag">Guía · Tableta</div><h3>Tocar desde una tableta</h3><p>La misma superficie de pads, en la pantalla táctil.</p></a><a href="aide" class="related-card"><div class="rc-tag">Ayuda</div><h3>Ayuda de MyStrow: cómo hacer</h3><p>Respuestas cortas a las preguntas más frecuentes.</p></a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="download">Descargar</a><a href="whats-new">Novedades</a><a href="/activate?lang=es">Activar un producto</a><a href="./#pricing">Precios</a><a href="terms">Condiciones</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidad</a><a href="contact">Contacto</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Tu dirección de email" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Todos los derechos reservados</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ ¡Bienvenido!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Copiado'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Manual de MyStrow · Patch DMX: focos, direcciones, grupos y perfiles | MyStrow</title>
+  <meta name="description" content="Capítulo 2 del manual de MyStrow: añadir focos desde la biblioteca de más de 5.000 perfiles, elegir el modo DMX, ajustar direcciones, universos y grupos, importar un patch, crear un fixture que falta y configurar cabezas móviles, estrobo y ruedas.">
+  <meta name="keywords" content="patch DMX MyStrow, dirección DMX, modo DMX foco, biblioteca de fixtures, importar patch QLC+, grupos de focos, calibrar rueda de colores, interruptores DIP DMX">
+  <link rel="canonical" href="https://mystrow.fr/es/manuel-patch-dmx">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-patch-dmx">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-patch-dmx">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-patch-dmx">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-patch-dmx">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-patch-dmx">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/es/manuel-patch-dmx">
+  <meta property="og:title" content="Manual de MyStrow · Patch DMX: focos, direcciones, grupos y perfiles">
+  <meta property="og:description" content="Capítulo 2 del manual de MyStrow: añadir focos desde la biblioteca de más de 5.000 perfiles, elegir el modo DMX, ajustar direcciones, universos y grupos, importar un patch, crear un fixture que falta y configurar cabezas móviles, estrobo y ruedas.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-es.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manual de MyStrow · Patch DMX: focos, direcciones, grupos y perfiles">
+  <meta name="twitter:description" content="Capítulo 2 del manual de MyStrow: añadir focos desde la biblioteca de más de 5.000 perfiles, elegir el modo DMX, ajustar direcciones, universos y grupos, importar un patch, crear un fixture que falta y configurar cabezas móviles, estrobo y ruedas.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-es.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Manual de MyStrow · Patch DMX: focos, direcciones, grupos y perfiles",
+  "description": "Capítulo 2 del manual de MyStrow: añadir focos desde la biblioteca de más de 5.000 perfiles, elegir el modo DMX, ajustar direcciones, universos y grupos, importar un patch, crear un fixture que falta y configurar cabezas móviles, estrobo y ruedas.",
+  "inLanguage": "es",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/es/manuel-patch-dmx"
+  },
+  "url": "https://mystrow.fr/es/manuel-patch-dmx",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Manual de MyStrow",
+    "url": "https://mystrow.fr/es/manuel"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mi foco cambia de color o se mueve solo.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El modo DMX del foco no es el del patch: los canales están desplazados y uno cae en «auto» o «sonido». Elige en el patch el mismo modo que muestra el foco y comprueba la dirección."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué dirección doy a mis focos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La que quieras, mientras la del patch y la del foco coincidan y dos aparatos distintos no se solapen. Lo más fácil: ⚡ Auto dirección, y luego copiar las direcciones en los focos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "No sé el modo de mi foco.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aparece en el menú del foco (a menudo «7CH», «d7», «CH 9»…) o en su manual. Si no, toma el modo más completo y compruébalo con Edición › 🔬 Tester DMX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo recuperar mi patch de QLC+?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí: 📁 Archivo › 📂 Importar el patch lee un workspace de QLC+ (.qxw). La ventana de revisión indica qué aparatos se han reconocido y cuáles hay que revisar."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://mystrow.fr/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Manual",
+      "item": "https://mystrow.fr/es/manuel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Patch y fixtures",
+      "item": "https://mystrow.fr/es/manuel-patch-dmx"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .toc a { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    .qa { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 16px; scroll-margin-top: 90px; }
+    .qa h3 { font-size: 19px; margin-bottom: 10px; }
+    .qa h3 a { color: inherit; text-decoration: none; }
+    .qa .prose { font-size: 14.5px; line-height: 1.75; }
+    .qa .prose p { margin-bottom: 10px; }
+    .qa .prose p:last-child { margin-bottom: 0; }
+    .prose ol, .prose ul { margin: 0 0 12px 20px; }
+    .prose li { margin-bottom: 6px; }
+    .param-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .param-table th, .param-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .param-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+    .param-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .param-table td { color: var(--muted); }
+    .table-scroll { overflow-x: auto; }
+    .recipe { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .recipe h3 { color: var(--accent); }
+    .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .recipe li strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="./">Inicio</a> &nbsp;/&nbsp; <a href="manuel">Manual</a> &nbsp;/&nbsp; <span>Patch y fixtures</span>
+      </nav>
+      <div class="hero-badge">🔌 Manual · Capítulo 2</div>
+      <h1>Patch DMX:<br><em>declarar tus focos</em></h1>
+      <p class="hero-sub">El <strong>patch</strong> le dice a MyStrow qué focos tienes, en qué <strong>dirección DMX</strong> escucha cada uno y en qué <strong>grupo</strong> juega. Todo pasa en <strong>Edición › 🔌 Patch DMX</strong>.</p>
+      <div class="hero-meta"><span>Por <strong>MyStrow</strong></span><span>·</span><span>Actualizado el <strong>18 de noviembre de 2026</strong></span></div>
+      <div class="toc"><a href="#fenetre">La ventana Patch DMX</a><a href="#nouveau">Empezar de cero: el asistente</a><a href="#ajouter">Añadir un foco desde la biblioteca</a><a href="#fiche">La ficha de un aparato: nombre, grupo, universo, dirección</a><a href="#adresses">Direcciones DMX: Auto dirección y solapamientos</a><a href="#lyres">Ajustes de cabezas móviles y aparatos con movimiento</a><a href="#avances">Canales avanzados: rango útil, estrobo, corona</a><a href="#creer">Un foco que no está en la biblioteca</a><a href="#import-export">Importar, exportar e imprimir el patch</a></div>
+    </div>
+  </section>
+
+  <section id="fenetre" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>La ventana Patch DMX</h2>
+      <div class="prose"><p>Menú <strong>Edición › 🔌 Patch DMX</strong>. A la izquierda, la lista de aparatos (ordenable por <strong>Dirección</strong>, <strong>Nombre</strong> o <strong>Grupo</strong>, con un campo de filtro). A la derecha, la ficha del aparato seleccionado. Una pestaña <strong>🎭 Plano de luces</strong> muestra los focos colocados en el escenario.</p><p>La barra superior reúne: <strong>📁 Archivo</strong> (nuevo patch, guardar, importar, exportar), <strong>✏️ Edición</strong> (deshacer <code>Ctrl+Z</code>, rehacer <code>Ctrl+Y</code>, <strong>⚡ Auto dirección</strong>), <strong>🛠 Crear su fixture</strong> y <strong>➕ Añadir</strong>. Acuérdate de <strong>💾 Guardar</strong> antes de cerrar: MyStrow avisa si quedan cambios sin guardar.</p></div>
+    </div>
+  </section>
+
+  <section id="nouveau" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Empezar de cero: el asistente</h2>
+      <div class="prose"><p><strong>📁 Archivo › ✨ Nuevo patch</strong> ofrece dos inicios:</p><ul><li><strong>🧙 Asistente</strong>: te pregunta paso a paso cuántos focos tienes de frente, de contraluz, laterales y cenitales, cuántas cabezas móviles, máquinas de humo, de niebla, de chispas y lanzallamas. Para cada categoría eliges el fixture (<strong>Elegir fixture…</strong>). Construye el patch y el plano de luces, y <strong>Configurar</strong> lo aplica.</li><li><strong>📄 Patch vacío</strong>: se añaden los aparatos uno a uno.</li></ul><p><strong>🏠 Patch por defecto</strong> recarga el patch de demostración.</p></div>
+    </div>
+  </section>
+
+  <section id="ajouter" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Añadir un foco desde la biblioteca</h2>
+      <div class="prose"><ol><li>Haz clic en <strong>➕ Añadir</strong>: se abre la <strong>Biblioteca de fixtures</strong> (más de 5.000 modelos).</li><li>Escribe la marca o el modelo en el buscador, o filtra por fabricante.</li><li>Elige el <strong>modo DMX</strong>: <strong>exactamente el mismo</strong> que el del foco (su número de canales, en su menú o en su manual). La lista de canales del modo se muestra para comprobarlo.</li><li>Indica la <strong>cantidad</strong> y, si quieres, un <strong>nombre personalizado</strong>, y luego <strong>Añadir</strong>. Los aparatos se numeran y se colocan uno tras otro.</li></ol><p>La pestaña <strong>Mis proyectores</strong> de la biblioteca contiene los fixtures que has creado o importado.</p><p><strong>Las barras LED y matrices de píxeles</strong> se añaden igual. Su ficha incluye una sección <strong>Disposición de píxeles</strong>: filas × columnas, cableado <strong>por filas</strong> o en <strong>serpentín</strong>, <strong>⇄ Invertir el orden</strong> (barra colgada al revés) y tamaño real para el plano 2D y 3D.</p></div>
+    </div>
+  </section>
+
+  <section id="fiche" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>La ficha de un aparato: nombre, grupo, universo, dirección</h2>
+      <div class="prose"><ul><li><strong>Identidad</strong>: nombre y tipo del aparato.</li><li><strong>Grupo</strong>: los aparatos de un mismo grupo se controlan juntos, con la misma columna de pads y el mismo fader. Los grupos base son <strong>A = Frontal</strong>, <strong>B = Laterales</strong>, <strong>C = Contra</strong>, <strong>D, E, F = Cenitales 1 a 3</strong>, más los grupos libres <strong>G</strong> y <strong>H</strong> y familias propias (cabezas móviles, barras, estrobos, humo, público).</li><li><strong>Universo</strong>: la línea DMX en la que está cableado el aparato (512 direcciones por universo). Con pocos focos, deja todo en el universo 1. Consulta el <a href="manuel-sortie-dmx">capítulo Salida DMX</a> para varios universos.</li><li><strong>Patch DMX</strong>: la dirección de inicio. Debe coincidir con la configurada en el foco. Para un foco con interruptores DIP, la sección <strong>Interruptores DIP</strong> (en los canales avanzados) dibuja los interruptores 1 a 9 que deben estar en ON para esa dirección.</li><li><strong>Perfil DMX</strong>: la lista de canales en orden, tomada del fixture.</li></ul><p>Selección múltiple (Ctrl / Mayús): <strong>✏ Renombrar</strong> en serie («PAR Frontal» da «PAR Frontal 1», «PAR Frontal 2»…), <strong>⬡ Grupo</strong> para cambiar el grupo de todos a la vez, <strong>🔄 Reemplazar</strong> por otro fixture de la biblioteca, <strong>🗑 Eliminar</strong>. <strong>🎯 Localizar</strong> selecciona el aparato en el plano de luces.</p></div>
+    </div>
+  </section>
+
+  <section id="adresses" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Direcciones DMX: Auto dirección y solapamientos</h2>
+      <div class="prose"><p>Cada aparato ocupa tantas direcciones como canales tiene su modo: un PAR de 7 canales en la dirección 1 ocupa de 1 a 7, el siguiente empieza como pronto en 8.</p><p>Si dos aparatos se solapan, MyStrow lo indica. <strong>✏️ Edición › ⚡ Auto dirección</strong> recalcula todas las direcciones seguidas, sin huecos. Después, acuérdate de poner las nuevas direcciones en los focos.</p><p>Dos focos idénticos <strong>en la misma dirección</strong> hacen exactamente lo mismo: es lo buscado cuando quieres manejarlos como uno solo.</p></div>
+    </div>
+  </section>
+
+  <section id="lyres" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Ajustes de cabezas móviles y aparatos con movimiento</h2>
+      <div class="prose"><ul><li><strong>Límites de movimiento</strong>: la zona a la que la cabeza tiene derecho a ir (para no deslumbrar al público ni apuntar a una pared). Arrastra el punto para probar en directo. <strong>Aplicar a todas las cabezas móviles de este modelo</strong> o a todas las cabezas te evita repetirlo.</li><li><strong>Recorrido mecánico</strong>: los grados que cubre todo el recorrido Pan y Tilt (540° / 270° en la mayoría de cabezas, mira el manual). Sirve para el plano 3D y la forma de los efectos de círculo.</li><li><strong>↔ Pan invertido</strong>, <strong>↕ Tilt invertido</strong>, <strong>⇄ Intercambiar Pan/Tilt</strong>: para una cabeza colgada boca abajo o girada.</li><li><strong>🎨 Calibrar la rueda de colores</strong> y <strong>🎯 Calibrar la rueda de gobos</strong>: asociar cada color o gobo a su valor DMX real, y luego <strong>Copiar esta rueda a…</strong> los demás aparatos del mismo modelo. MyStrow propone la calibración al añadir cabezas con rueda de colores.</li></ul><p>Paso a paso: <a href="patcher-programmer-lyres-mystrow">patchear y programar cabezas móviles</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="avances" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Canales avanzados: rango útil, estrobo, corona</h2>
+      <div class="prose"><ul><li><strong>Rango útil</strong>: limita un canal a una parte de su recorrido. Útil cuando la parte alta de un canal lanza un programa automático (láser, Pan/Tilt de algunos aparatos): todo el recorrido del fader se lleva al rango permitido. Doble clic: recorrido completo.</li><li><strong>Banda estrobo</strong>: cuando un aparato no tiene canal de estrobo propio y es el <strong>Shutter</strong> el que lo lleva, ajusta aquí el rango DMX del estrobo (a menudo hacia 64-95, mira el manual). <strong>⚡ Probar</strong> hace que el aparato haga estrobo para comprobarlo.</li><li><strong>💫 Corona: sigue el show</strong>: la corona LED de una cabeza toma el color, el nivel y el estrobo del haz. Desmárcalo para manejarla a mano.</li><li>Un <strong>clic derecho</strong> en un canal avanzado fija su valor por defecto.</li></ul><p>Para un láser: <a href="piloter-laser-dmx-mystrow">controlar un láser DMX</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="creer" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Un foco que no está en la biblioteca</h2>
+      <div class="prose"><p>Tres soluciones, de la más rápida a la más lenta:</p><ol><li><strong>Con una IA</strong>: <strong>🛠 Crear su fixture › ✦ Crear su fixture con IA</strong>, copia el prompt, dáselo a ChatGPT, Gemini o Claude con el manual del foco y pega la respuesta. Guía: <a href="creer-fixture-dmx-ia-15-secondes">un fixture en 15 segundos</a>.</li><li><strong>Importando un archivo</strong>: en la biblioteca, <strong>📥 Importar</strong> acepta los formatos de MyStrow (<code>.mft</code>, <code>.json</code>, <code>.mystrow</code>), XML de GrandMA (<code>.xml</code>, descargable en FixtureShare) y QLC+ (<code>.qxf</code>). Si el archivo tiene varios modos, MyStrow pregunta cuál importar.</li><li><strong>A mano</strong>: <strong>🛠 Crear su fixture manualmente</strong> y declara los canales uno a uno. Guía: <a href="importer-fixture-dmx-mystrow">importar o crear un fixture</a>.</li></ol><p>Un fixture creado pasa a <strong>Mis proyectores</strong>. En la lista del patch, un aparato también se puede duplicar o exportar para compartirlo.</p></div>
+    </div>
+  </section>
+
+  <section id="import-export" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Importar, exportar e imprimir el patch</h2>
+      <div class="prose"><ul><li><strong>📂 Importar el patch</strong> lee un patch de MyStrow (<code>.msp</code>, <code>.json</code>), un workspace de <strong>QLC+</strong> (<code>.qxw</code>) o una <strong>hoja de cálculo</strong> (<code>.csv</code>, <code>.tsv</code>, <code>.txt</code>, <code>.xlsx</code>, columnas Nombre, Marca, Modelo, Modo, Universo, Dirección, Canales, Grupo). Una ventana de revisión muestra cada aparato (reconocido, aproximado, genérico) antes de importar, reemplazando el patch actual o añadiéndolo.</li><li><strong>📤 Exportar el patch</strong> (<code>.msp</code>) para usarlo en otro ordenador.</li><li><strong>📊 Exportar a Excel</strong> y <strong>🖨️ Exportar el plano de luces (PDF)</strong>: la hoja de patch para los técnicos, con los conflictos de dirección señalados.</li></ul><p>El patch también se guarda en el archivo del show (<code>.tui</code>) y sigue a tu cuenta de MyStrow de un ordenador a otro.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Preguntas frecuentes</div>
+      <div class="step-list" style="gap:22px;">
+        <div class="step-body"><h3>Mi foco cambia de color o se mueve solo.</h3><p>El modo DMX del foco no es el del patch: los canales están desplazados y uno cae en «auto» o «sonido». Elige en el patch el mismo modo que muestra el foco y comprueba la dirección.</p></div>
+        <div class="step-body"><h3>¿Qué dirección doy a mis focos?</h3><p>La que quieras, mientras la del patch y la del foco coincidan y dos aparatos distintos no se solapen. Lo más fácil: ⚡ Auto dirección, y luego copiar las direcciones en los focos.</p></div>
+        <div class="step-body"><h3>No sé el modo de mi foco.</h3><p>Aparece en el menú del foco (a menudo «7CH», «d7», «CH 9»…) o en su manual. Si no, toma el modo más completo y compruébalo con Edición › 🔬 Tester DMX.</p></div>
+        <div class="step-body"><h3>¿Puedo recuperar mi patch de QLC+?</h3><p>Sí: 📁 Archivo › 📂 Importar el patch lee un workspace de QLC+ (.qxw). La ventana de revisión indica qué aparatos se han reconocido y cuáles hay que revisar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-bg">
+    <div class="wrap">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px"><a href="manuel-sortie-dmx" class="btn-outline">← 1. Salida DMX</a><a href="manuel" class="btn-outline">Índice del manual</a><a href="manuel-installation-licence" class="btn-primary">3. Instalación, licencia y cuenta →</a></div>
+      <div class="section-tag">Para ir más lejos</div>
+      <div class="related-grid"><a href="patcher-programmer-lyres-mystrow" class="related-card"><div class="rc-tag">Tutorial · Cabezas móviles</div><h3>Patchear y programar cabezas móviles</h3><p>Límites, rueda de colores, simetría y efectos.</p></a><a href="creer-fixture-dmx-ia-15-secondes" class="related-card"><div class="rc-tag">Guía · IA</div><h3>Crear un fixture con IA</h3><p>El manual del foco + ChatGPT, Gemini o Claude.</p></a><a href="aide" class="related-card"><div class="rc-tag">Ayuda</div><h3>Ayuda de MyStrow: cómo hacer</h3><p>Respuestas cortas a las preguntas más frecuentes.</p></a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="download">Descargar</a><a href="whats-new">Novedades</a><a href="/activate?lang=es">Activar un producto</a><a href="./#pricing">Precios</a><a href="terms">Condiciones</a><a href="legal-notice">Aviso legal</a><a href="privacy">Privacidad</a><a href="contact">Contacto</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Tu dirección de email" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Todos los derechos reservados</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ ¡Bienvenido!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ocurrió un error.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Copiado'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+
