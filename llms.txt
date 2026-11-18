@@ -47,6 +47,8 @@
 - [Chapitre 11 — Tablette, OBS, vMix et assistant IA](https://mystrow.fr/manuel-tablette-integrations)
 - [Chapitre 12 — Dépannage](https://mystrow.fr/manuel-depannage)
 
+Aide et manuel dans les autres langues : [EN](https://mystrow.fr/en/manuel). Full English text: https://mystrow.fr/llms-full-en.txt
+
 ## Fonctionnalités
 
 - [IA Lumière](https://mystrow.fr/ia-lumiere) : analyse en temps réel de l'énergie, du rythme et des fréquences du son pour générer une ambiance lumineuse cohérente.
