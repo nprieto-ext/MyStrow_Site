@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Manuale di MyStrow · Patch DMX: proiettori, indirizzi, gruppi e profili | MyStrow</title>
+  <meta name="description" content="Capitolo 2 del manuale di MyStrow: aggiungere proiettori dalla libreria di oltre 5000 profili, scegliere la modalità DMX, impostare indirizzi, universi e gruppi, importare un patch, creare una fixture mancante e regolare teste mobili, strobo e ruote.">
+  <meta name="keywords" content="patch DMX MyStrow, indirizzo DMX, modalità DMX proiettore, libreria di fixture, importare patch QLC+, gruppi di proiettori, calibrare ruota colori, dipswitch DMX">
+  <link rel="canonical" href="https://mystrow.fr/it/manuel-patch-dmx">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/manuel-patch-dmx">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/manuel-patch-dmx">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/manuel-patch-dmx">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/manuel-patch-dmx">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/manuel-patch-dmx">
+  <link rel="alternate" hreflang="it" href="https://mystrow.fr/it/manuel-patch-dmx">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/manuel-patch-dmx">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/it/manuel-patch-dmx">
+  <meta property="og:title" content="Manuale di MyStrow · Patch DMX: proiettori, indirizzi, gruppi e profili">
+  <meta property="og:description" content="Capitolo 2 del manuale di MyStrow: aggiungere proiettori dalla libreria di oltre 5000 profili, scegliere la modalità DMX, impostare indirizzi, universi e gruppi, importare un patch, creare una fixture mancante e regolare teste mobili, strobo e ruote.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-en.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manuale di MyStrow · Patch DMX: proiettori, indirizzi, gruppi e profili">
+  <meta name="twitter:description" content="Capitolo 2 del manuale di MyStrow: aggiungere proiettori dalla libreria di oltre 5000 profili, scegliere la modalità DMX, impostare indirizzi, universi e gruppi, importare un patch, creare una fixture mancante e regolare teste mobili, strobo e ruote.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-en.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Manuale di MyStrow · Patch DMX: proiettori, indirizzi, gruppi e profili",
+  "description": "Capitolo 2 del manuale di MyStrow: aggiungere proiettori dalla libreria di oltre 5000 profili, scegliere la modalità DMX, impostare indirizzi, universi e gruppi, importare un patch, creare una fixture mancante e regolare teste mobili, strobo e ruote.",
+  "inLanguage": "it",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/it/manuel-patch-dmx"
+  },
+  "url": "https://mystrow.fr/it/manuel-patch-dmx",
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "Manuale di MyStrow",
+    "url": "https://mystrow.fr/it/manuel"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Il mio proiettore cambia colore o si muove da solo.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La modalità DMX del proiettore non è quella del patch: i canali sono sfasati e uno finisce in «auto» o «sound». Scegli nel patch la stessa modalità indicata sul proiettore e controlla l'indirizzo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Che indirizzo do ai miei proiettori?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quello che vuoi, purché quello del patch e quello del proiettore coincidano e due apparecchi diversi non si sovrappongano. La cosa più semplice: ⚡ Indirizzo auto, poi riportare gli indirizzi sui proiettori."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Non conosco la modalità del mio proiettore.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compare nel menu del proiettore (spesso «7CH», «d7», «CH 9»…) o nel manuale. In mancanza, scegli la modalità più completa e verifica con Modifica › 🔬 Tester DMX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso recuperare il mio patch da QLC+?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì: 📁 File › 📂 Importa il patch legge un workspace QLC+ (.qxw). La finestra di revisione indica quali apparecchi sono stati riconosciuti e quali devi controllare."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mystrow.fr/it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Manuale",
+      "item": "https://mystrow.fr/it/manuel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Patch e fixture",
+      "item": "https://mystrow.fr/it/manuel-patch-dmx"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .toc a { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    .qa { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 16px; scroll-margin-top: 90px; }
+    .qa h3 { font-size: 19px; margin-bottom: 10px; }
+    .qa h3 a { color: inherit; text-decoration: none; }
+    .qa .prose { font-size: 14.5px; line-height: 1.75; }
+    .qa .prose p { margin-bottom: 10px; }
+    .qa .prose p:last-child { margin-bottom: 0; }
+    .prose ol, .prose ul { margin: 0 0 12px 20px; }
+    .prose li { margin-bottom: 6px; }
+    .param-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .param-table th, .param-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .param-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+    .param-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .param-table td { color: var(--muted); }
+    .table-scroll { overflow-x: auto; }
+    .recipe { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .recipe h3 { color: var(--accent); }
+    .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .recipe li strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Percorso di navigazione">
+        <a href="./">Home</a> &nbsp;/&nbsp; <a href="manuel">Manuale</a> &nbsp;/&nbsp; <span>Patch e fixture</span>
+      </nav>
+      <div class="hero-badge">🔌 Manuale · Capitolo 2</div>
+      <h1>Patch DMX:<br><em>dichiarare i tuoi proiettori</em></h1>
+      <p class="hero-sub">Il <strong>patch</strong> dice a MyStrow quali proiettori hai, su quale <strong>indirizzo DMX</strong> ascolta ciascuno e in quale <strong>gruppo</strong> suona. Tutto avviene in <strong>Modifica › 🔌 Patch DMX</strong>.</p>
+      <div class="hero-meta"><span>Di <strong>MyStrow</strong></span><span>·</span><span>Aggiornato il <strong>18 novembre 2026</strong></span></div>
+      <div class="toc"><a href="#fenetre">La finestra Patch DMX</a><a href="#nouveau">Partire da zero: la procedura guidata</a><a href="#ajouter">Aggiungere un proiettore dalla libreria</a><a href="#fiche">La scheda di un apparecchio: nome, gruppo, universo, indirizzo</a><a href="#adresses">Indirizzi DMX: Indirizzo auto e sovrapposizioni</a><a href="#lyres">Regolazioni delle teste mobili e degli apparecchi in movimento</a><a href="#avances">Canali avanzati: intervallo utile, strobo, corona</a><a href="#creer">Proiettore assente dalla libreria</a><a href="#import-export">Importare, esportare e stampare il patch</a></div>
+    </div>
+  </section>
+
+  <section id="fenetre" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>La finestra Patch DMX</h2>
+      <div class="prose"><p>Menu <strong>Modifica › 🔌 Patch DMX</strong>. A sinistra l'elenco degli apparecchi (ordinabile per <strong>Indirizzo</strong>, <strong>Nome</strong> o <strong>Gruppo</strong>, con un campo filtro). A destra la scheda dell'apparecchio selezionato. Una scheda <strong>🎭 Pianta luci</strong> mostra i proiettori posizionati sul palco.</p><p>La barra in alto raccoglie: <strong>📁 File</strong> (nuovo patch, salva, importa, esporta), <strong>✏️ Modifica</strong> (annulla <code>Ctrl+Z</code>, ripeti <code>Ctrl+Y</code>, <strong>⚡ Indirizzo auto</strong>), <strong>🛠 Crea la tua fixture</strong> e <strong>➕ Aggiungi</strong>. Non dimenticare <strong>💾 Salva</strong> prima di chiudere: MyStrow ti avvisa se ci sono modifiche non salvate.</p></div>
+    </div>
+  </section>
+
+  <section id="nouveau" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Partire da zero: la procedura guidata</h2>
+      <div class="prose"><p><strong>📁 File › ✨ Nuovo patch</strong> propone due partenze:</p><ul><li><strong>🧙 Procedura guidata</strong>: chiede, passo per passo, quanti proiettori hai di fronte, controluce, laterali e piazzati dall'alto, quante teste mobili, macchine del fumo, hazer, macchine a scintille e sparafiamme. Per ogni categoria scegli la fixture (<strong>Scegli fixture…</strong>). Costruisce patch e pianta luci, e <strong>Configura</strong> li applica.</li><li><strong>📄 Patch vuoto</strong>: aggiungi gli apparecchi uno per uno.</li></ul><p><strong>🏠 Patch predefinito</strong> ricarica il patch dimostrativo.</p></div>
+    </div>
+  </section>
+
+  <section id="ajouter" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Aggiungere un proiettore dalla libreria</h2>
+      <div class="prose"><ol><li>Clicca su <strong>➕ Aggiungi</strong>: si apre la <strong>Libreria di fixture</strong> (oltre 5000 modelli).</li><li>Scrivi marca o modello nella ricerca, oppure filtra per produttore.</li><li>Scegli la <strong>modalità DMX</strong>: <strong>esattamente la stessa</strong> impostata sul proiettore (il numero di canali, nel menu o nel manuale). L'elenco dei canali della modalità viene mostrato per conferma.</li><li>Indica la <strong>quantità</strong> e, se vuoi, un <strong>nome personalizzato</strong>, poi <strong>Aggiungi</strong>. Gli apparecchi vengono numerati e messi uno dopo l'altro.</li></ol><p>La scheda <strong>I miei proiettori</strong> della libreria contiene le fixture che hai creato o importato.</p><p><strong>Barre LED e matrici di pixel</strong> si aggiungono allo stesso modo. La scheda guadagna una sezione <strong>Disposizione dei pixel</strong>: righe × colonne, cablaggio <strong>per righe</strong> o a <strong>serpentina</strong>, <strong>⇄ Inverti l'ordine</strong> (barra appesa al contrario) e dimensione reale per la pianta 2D e 3D.</p></div>
+    </div>
+  </section>
+
+  <section id="fiche" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>La scheda di un apparecchio: nome, gruppo, universo, indirizzo</h2>
+      <div class="prose"><ul><li><strong>Identità</strong>: nome e tipo dell'apparecchio.</li><li><strong>Gruppo</strong>: gli apparecchi dello stesso gruppo si comandano insieme, dalla stessa colonna di pad e dallo stesso fader. I gruppi di base sono <strong>A = Fronte</strong>, <strong>B = Laterali</strong>, <strong>C = Controluce</strong>, <strong>D, E, F = Dall'alto 1-3</strong>, più i gruppi liberi <strong>G</strong> e <strong>H</strong> e famiglie proprie (teste mobili, barre, strobo, fumo, pubblico).</li><li><strong>Universo</strong>: la linea DMX a cui è collegato l'apparecchio (512 indirizzi per universo). Con pochi proiettori, lascia tutto sull'universo 1. Vedi il <a href="manuel-sortie-dmx">capitolo Uscita DMX</a> per più universi.</li><li><strong>Patch DMX</strong>: l'indirizzo iniziale. Deve corrispondere a quello impostato sul proiettore. Per un proiettore con dipswitch, la sezione <strong>Dipswitch</strong> (nei canali avanzati) disegna gli interruttori da 1 a 9 da mettere su ON per quell'indirizzo.</li><li><strong>Profilo DMX</strong>: l'elenco dei canali in ordine, preso dalla fixture.</li></ul><p>Selezione multipla (Ctrl / Shift): <strong>✏ Rinomina</strong> in serie («PAR Fronte» diventa «PAR Fronte 1», «PAR Fronte 2»…), <strong>⬡ Gruppo</strong> per cambiare il gruppo a tutti insieme, <strong>🔄 Sostituisci</strong> con un'altra fixture della libreria, <strong>🗑 Elimina</strong>. <strong>🎯 Individua</strong> seleziona l'apparecchio nella pianta luci.</p></div>
+    </div>
+  </section>
+
+  <section id="adresses" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Indirizzi DMX: Indirizzo auto e sovrapposizioni</h2>
+      <div class="prose"><p>Ogni apparecchio occupa tanti indirizzi quanti sono i canali della sua modalità: un PAR a 7 canali all'indirizzo 1 occupa da 1 a 7, il successivo parte almeno da 8.</p><p>Se due apparecchi si sovrappongono, MyStrow lo segnala. <strong>✏️ Modifica › ⚡ Indirizzo auto</strong> ricalcola tutti gli indirizzi di seguito, senza buchi. Dopo, non dimenticare di riportare i nuovi indirizzi sui proiettori.</p><p>Due proiettori uguali <strong>sullo stesso indirizzo</strong> fanno esattamente la stessa cosa: è quello che vuoi quando li vuoi comandare come uno solo.</p></div>
+    </div>
+  </section>
+
+  <section id="lyres" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Regolazioni delle teste mobili e degli apparecchi in movimento</h2>
+      <div class="prose"><ul><li><strong>Limiti di movimento</strong>: la zona dove la testa mobile può andare (per non accecare mai il pubblico né puntare un muro). Trascina il punto per provare dal vivo. <strong>Applica a tutte le teste mobili del modello</strong> o a tutte le teste mobili evita di ripetere.</li><li><strong>Escursione meccanica</strong>: i gradi coperti dall'intera corsa Pan e Tilt (540° / 270° sulla maggior parte delle teste mobili, vedi il manuale). Serve alla pianta 3D e alla forma degli effetti cerchio.</li><li><strong>↔ Pan invertito</strong>, <strong>↕ Tilt invertito</strong>, <strong>⇄ Scambia Pan/Tilt</strong>: per una testa mobile appesa a testa in giù o ruotata.</li><li><strong>🎨 Calibra la ruota colori</strong> e <strong>🎯 Calibra la ruota gobo</strong>: associare ogni colore o gobo al suo vero valore DMX, poi <strong>Copia questa ruota su…</strong> gli altri apparecchi dello stesso modello. MyStrow propone la calibrazione quando aggiungi teste mobili con ruota colori.</li></ul><p>Passo per passo: <a href="../en/patcher-programmer-lyres-mystrow">fare il patch e programmare le teste mobili</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="avances" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Canali avanzati: intervallo utile, strobo, corona</h2>
+      <div class="prose"><ul><li><strong>Intervallo utile</strong>: limita un canale a una parte della sua corsa. Utile quando la cima di un canale avvia un programma automatico (laser, Pan/Tilt di alcuni apparecchi): tutta la corsa del fader viene riportata sull'intervallo permesso. Doppio clic: corsa completa.</li><li><strong>Banda strobo</strong>: quando un apparecchio non ha un canale strobo proprio ed è lo <strong>Shutter</strong> a portarlo, imposta qui la gamma DMX dello strobo (spesso intorno a 64-95, vedi il manuale). <strong>⚡ Testa</strong> fa lampeggiare l'apparecchio per verificare.</li><li><strong>💫 Corona: segue lo show</strong>: la corona LED di una testa mobile prende colore, livello e strobo del fascio. Togli la spunta per guidarla a mano.</li><li>Un <strong>clic destro</strong> su un canale avanzato ne imposta il valore predefinito.</li></ul><p>Per un laser: <a href="../en/piloter-laser-dmx-mystrow">guidare un laser DMX</a>.</p></div>
+    </div>
+  </section>
+
+  <section id="creer" class="section" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Proiettore assente dalla libreria</h2>
+      <div class="prose"><p>Tre soluzioni, dalla più veloce alla più lenta:</p><ol><li><strong>Con un'IA</strong>: <strong>🛠 Crea la tua fixture › ✦ Crea la tua fixture con l'IA</strong>, copia il prompt, dallo a ChatGPT, Gemini o Claude con il manuale del proiettore e incolla la risposta. Guida: <a href="../en/creer-fixture-dmx-ia-15-secondes">una fixture in 15 secondi</a>.</li><li><strong>Importando un file</strong>: nella libreria, <strong>📥 Importa</strong> accetta i formati MyStrow (<code>.mft</code>, <code>.json</code>, <code>.mystrow</code>), XML GrandMA (<code>.xml</code>, scaricabile su FixtureShare) e QLC+ (<code>.qxf</code>). Se il file ha più modalità, MyStrow chiede quale importare.</li><li><strong>A mano</strong>: <strong>🛠 Crea la tua fixture manualmente</strong> e dichiara i canali uno per uno. Guida: <a href="../en/importer-fixture-dmx-mystrow">importare o creare una fixture</a>.</li></ol><p>Una fixture creata finisce in <strong>I miei proiettori</strong>. Nell'elenco del patch un apparecchio si può anche duplicare o esportare per condividerlo.</p></div>
+    </div>
+  </section>
+
+  <section id="import-export" class="section-bg" style="padding:56px 0">
+    <div class="wrap-narrow">
+      <h2>Importare, esportare e stampare il patch</h2>
+      <div class="prose"><ul><li><strong>📂 Importa il patch</strong> legge un patch MyStrow (<code>.msp</code>, <code>.json</code>), un workspace <strong>QLC+</strong> (<code>.qxw</code>) o una <strong>tabella</strong> (<code>.csv</code>, <code>.tsv</code>, <code>.txt</code>, <code>.xlsx</code>, colonne Nome, Marca, Modello, Modalità, Universo, Indirizzo, Canali, Gruppo). Una finestra di revisione mostra ogni apparecchio (riconosciuto, approssimato, generico) prima di importare, sostituendo il patch attuale o aggiungendolo.</li><li><strong>📤 Esporta il patch</strong> (<code>.msp</code>) per usarlo su un altro computer.</li><li><strong>📊 Esporta in Excel</strong> e <strong>🖨️ Esporta la pianta luci (PDF)</strong>: il foglio di patch per i tecnici, con i conflitti di indirizzo segnalati.</li></ul><p>Il patch viene salvato anche nel file dello show (<code>.tui</code>) e segue il tuo account MyStrow da un computer all'altro.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Domande frequenti</div>
+      <div class="step-list" style="gap:22px;">
+        <div class="step-body"><h3>Il mio proiettore cambia colore o si muove da solo.</h3><p>La modalità DMX del proiettore non è quella del patch: i canali sono sfasati e uno finisce in «auto» o «sound». Scegli nel patch la stessa modalità indicata sul proiettore e controlla l&#x27;indirizzo.</p></div>
+        <div class="step-body"><h3>Che indirizzo do ai miei proiettori?</h3><p>Quello che vuoi, purché quello del patch e quello del proiettore coincidano e due apparecchi diversi non si sovrappongano. La cosa più semplice: ⚡ Indirizzo auto, poi riportare gli indirizzi sui proiettori.</p></div>
+        <div class="step-body"><h3>Non conosco la modalità del mio proiettore.</h3><p>Compare nel menu del proiettore (spesso «7CH», «d7», «CH 9»…) o nel manuale. In mancanza, scegli la modalità più completa e verifica con Modifica › 🔬 Tester DMX.</p></div>
+        <div class="step-body"><h3>Posso recuperare il mio patch da QLC+?</h3><p>Sì: 📁 File › 📂 Importa il patch legge un workspace QLC+ (.qxw). La finestra di revisione indica quali apparecchi sono stati riconosciuti e quali devi controllare.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-bg">
+    <div class="wrap">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:48px"><a href="manuel-sortie-dmx" class="btn-outline">← 1. Uscita DMX</a><a href="manuel" class="btn-outline">Indice del manuale</a><a href="manuel-installation-licence" class="btn-primary">3. Installazione, licenza e account →</a></div>
+      <div class="section-tag">Per approfondire</div>
+      <div class="related-grid"><a href="../en/patcher-programmer-lyres-mystrow" class="related-card"><div class="rc-tag">Tutorial · Teste mobili</div><h3>Fare il patch e programmare le teste mobili</h3><p>Limiti, ruota colori, simmetria ed effetti.</p></a><a href="../en/creer-fixture-dmx-ia-15-secondes" class="related-card"><div class="rc-tag">Guida · IA</div><h3>Creare una fixture con l'IA</h3><p>Il manuale del proiettore + ChatGPT, Gemini o Claude.</p></a><a href="aide" class="related-card"><div class="rc-tag">Aiuto</div><h3>Aiuto MyStrow: come fare</h3><p>Risposte brevi alle domande più frequenti.</p></a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Piè di pagina"><a href="download">Download</a><a href="../en/whats-new">Novità</a><a href="/activate?lang=en">Attiva un prodotto</a><a href="#pricing">Prezzi</a><a href="../en/blog">Tutorial</a><a href="../en/terms">Condizioni di vendita</a><a href="../en/legal-notice">Note legali</a><a href="../en/privacy">Privacy</a><a href="../en/contact">Contatti</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Il tuo indirizzo email" required>
+        <button type="submit">Iscriviti</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tutti i diritti riservati</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Welcome!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Something went wrong.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Something went wrong.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Copied'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+

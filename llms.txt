@@ -47,7 +47,7 @@
 - [Chapitre 11 — Tablette, OBS, vMix et assistant IA](https://mystrow.fr/manuel-tablette-integrations)
 - [Chapitre 12 — Dépannage](https://mystrow.fr/manuel-depannage)
 
-Aide et manuel dans les autres langues : [EN](https://mystrow.fr/en/manuel) · [DE](https://mystrow.fr/de/manuel) · [ES](https://mystrow.fr/es/manuel) · [PT](https://mystrow.fr/pt/manuel). Full English text: https://mystrow.fr/llms-full-en.txt
+Aide et manuel dans les autres langues : [EN](https://mystrow.fr/en/manuel) · [DE](https://mystrow.fr/de/manuel) · [ES](https://mystrow.fr/es/manuel) · [PT](https://mystrow.fr/pt/manuel) · [IT](https://mystrow.fr/it/manuel). Full English text: https://mystrow.fr/llms-full-en.txt
 
 ## Fonctionnalités
 

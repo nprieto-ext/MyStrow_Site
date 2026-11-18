@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Aiuto MyStrow: come fare (patch, effetti, REC Luci, risoluzione dei problemi) | MyStrow</title>
+  <meta name="description" content="Come collegare i proiettori, creare un effetto, programmare uno show su una canzone o sistemare un&#x27;uscita DMX muta in MyStrow: risposte brevi, menu per menu.">
+  <meta name="keywords" content="aiuto MyStrow, come fare MyStrow, creare effetto luci, patch DMX, REC Luci, proiettore non si accende, tutorial software DMX">
+  <link rel="canonical" href="https://mystrow.fr/it/aide">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/aide">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/aide">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/aide">
+  <link rel="alternate" hreflang="es" href="https://mystrow.fr/es/aide">
+  <link rel="alternate" hreflang="pt" href="https://mystrow.fr/pt/aide">
+  <link rel="alternate" hreflang="it" href="https://mystrow.fr/it/aide">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/aide">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mystrow.fr/it/aide">
+  <meta property="og:title" content="Aiuto MyStrow: come fare (patch, effetti, REC Luci, risoluzione dei problemi)">
+  <meta property="og:description" content="Come collegare i proiettori, creare un effetto, programmare uno show su una canzone o sistemare un&#x27;uscita DMX muta in MyStrow: risposte brevi, menu per menu.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-en.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aiuto MyStrow: come fare (patch, effetti, REC Luci, risoluzione dei problemi)">
+  <meta name="twitter:description" content="Come collegare i proiettori, creare un effetto, programmare uno show su una canzone o sistemare un&#x27;uscita DMX muta in MyStrow: risposte brevi, menu per menu.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-en.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "MyStrow è gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puoi provare MyStrow gratis per 15 giorni, senza carta e con l'uscita DMX. Dopo serve una licenza: abbonamento mensile o annuale, oppure licenza a vita. I prezzi aggiornati sono nello Shop.\nIl software funziona su Windows 10/11 e macOS (Mac Intel: macOS 11 o successivo; Mac Apple Silicon da M1 a M5: macOS 13 o successivo). Download: pagina di download."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come collego i miei proiettori DMX al computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Serve un'interfaccia DMX tra il computer e il primo proiettore: un box USB-DMX o un node Art-Net collegato alla rete (cavo Ethernet). Poi i proiettori si collegano l'uno all'altro con cavo DMX (XLR).\n- Collega l'interfaccia e apri Connessione › 🌐 Uscita DMX.\n- Scegli la tua interfaccia nell'elenco: MyStrow rileva i box USB e i node Art-Net della rete.\n- Nel dubbio, avvia Connessione › 🩺 Diagnostica (test USB o test di rete).\nDettagli per modello di interfaccia: configurare un node Art-Net o un'interfaccia USB-DMX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come aggiungo i miei proiettori a MyStrow (il patch DMX)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apri Modifica › 🔌 Patch DMX. Il «patch» dice a MyStrow quali proiettori hai e su quale indirizzo DMX ascolta ciascuno.\n- Scegli 🧙 Procedura guidata (passo per passo) o 📄 Patch vuoto.\n- Cerca marca e modello di ogni proiettore nella libreria (oltre 5000 profili).\n- Seleziona la stessa modalità DMX impostata sul proiettore (il numero di canali, nel menu o sui dipswitch).\n- Controlla che l'indirizzo DMX del patch sia quello impostato sul proiettore.\nPer le teste mobili: fare il patch e programmare le teste mobili."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Il mio proiettore non è nella libreria. Come lo creo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fallo creare a un'IA partendo dal manuale: nel Patch DMX, menu 🛠 Crea la tua fixture › ✦ Crea la tua fixture con l'IA.\n- Clicca su 📋 Copia il prompt.\n- Incollalo in ChatGPT, Gemini o Claude e allega il manuale del proiettore (PDF o foto della tabella dei canali DMX).\n- Incolla la risposta dell'IA in MyStrow e clicca su ✦ Crea la fixture.\nGuida completa: creare una fixture DMX con l'IA. Puoi anche importare un file o crearla a mano: importare una fixture DMX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come accendo i proiettori di un colore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clicca su un pad colore nella colonna del gruppo che vuoi e alza il fader di quel gruppo. Ogni colonna di pad è un gruppo di proiettori (fronte, controluce, laterali…), ogni pad un colore.\nCon un controller AKAI APC mini è la stessa griglia, fisica. Senza controller fai tutto col mouse o da un tablet. Per partire da zero: iniziare con MyStrow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come registro un'atmosfera (una memoria) e la richiamo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prepara l'atmosfera che vuoi, clicca su 🔴 REC Memoria e poi sul pad memoria in cui salvarla. Premendo quel pad l'atmosfera torna.\n- Il clic destro su un pad memoria apre le sue impostazioni: tempo di dissolvenza e 🎛️ Comportamento: Interruttore (premi e la memoria resta), Flash (resta solo finché tieni premuto il pad) o Flash solo (uguale, ma spegne le altre memorie finché premi).\n- Per partire con memorie pronte: File › 🏠 Carica le memorie predefinite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come creo un effetto luci (chase, onda, strobo, movimento delle teste mobili)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apri Modifica › 🎨 Editor effetti. Parti da un effetto di fabbrica dell'elenco o clicca su ＋ Aggiungi un effetto › Crea l'effetto io stesso.\n- Un effetto è fatto di livelli. Ogni livello anima un CANALE (intensità, colore, Pan/Tilt…) secondo una FORMA (Seno, Flash, Uno alla volta…).\n- Regola la velocità (VEL), l'ampiezza (AMP) e lo sfasamento tra proiettori (SFAS: è lui che crea il chase).\n- Attiva ⏺ Uscita live per vedere l'effetto sui proiettori veri mentre lo regoli.\n- In ASSEGNA, clicca su un pulsante da E1 a E8 per metterlo su un pulsante effetto della finestra principale, poi su Salva l'effetto.\nIl tutorial dettagliato, con ricette pronte: creare un effetto luci in MyStrow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come muovo le mie teste mobili?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Due modi: a mano dalla pianta luci (trascinando il punto della testa mobile) oppure con un effetto il cui livello usa il canale Pan/Tilt (forme Cerchio, Otto, Infinito, Bilanciere, Pendolo, Quadrato).\nPer le posizioni fisse da richiamare (cantante, pubblico, batteria…), registrale con 🔴 REC Memoria su un pad POS. Non dimenticare di impostare i limiti di movimento nel patch. Guida: fare il patch e programmare le teste mobili. Puoi anche guidarle con un gamepad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come faccio reagire le luci alla musica senza programmare niente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Due modalità lo fanno da sole:\n- IA Luci: nella playlist, metti un brano in modalità 💡 IA Luci. MyStrow analizza il suono (energia, ritmo, BPM) e genera colori e intensità dal vivo. Impostazioni: Modifica › 💡 IA Luci.\n- Modalità Live (Visualizza › Modalità Live): MyStrow ascolta una sorgente audio (Spotify, software DJ, microfono) e segue il beat, le salite e i drop.\nDi più: IA Luci · luci sincronizzate con Spotify · con un software DJ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come programmo uno show luci su una canzone (REC Luci)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aggiungi il brano alla playlist, poi clic destro › 🔴 REC Luci: si apre l'editor timeline del brano, con una traccia per gruppo di proiettori e la forma d'onda della musica.\n- Trascina colori, memorie, effetti o posizioni delle teste mobili dalla libreria sulle tracce, allineandoli alla forma d'onda.\n- Oppure lascia che Strumenti › ✨ Generazione con IA crei una prima versione e poi ritoccala.\n- Clicca su 💾 Salva: il brano passa in modalità ▶ Sequenza luci e ripete lo show identico a ogni riproduzione.\n- Salva lo show (File › 💾 Salva show).\nTutti i dettagli: manuale, capitolo Playlist e REC Luci."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come correggo una sequenza già fatta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Riaprila con clic destro sul brano › 🔴 REC Luci. Ogni blocco si può spostare, allungare, tagliare (✂️ Taglia in 2, strumento C) o cancellare; il clic destro su un blocco regola intensità, colore e dissolvenze.\nUna sequenza si può anche esportare e reimportare (⬆ Esporta il REC Luci / ⬇ Importa un REC Luci, file .lrec)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come preparo e lancio uno show completo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metti tutti i tuoi media nella playlist, in ordine, ognuno con la sua modalità luci (🎛 Manuale, 💡 IA Luci o ▶ Sequenza luci), e salva lo show: File › 💾 Salva show (file .tui con playlist, patch e sequenze).\n- Clic destro su un media: loop, dissolvenza in entrata/uscita, «avvia con il suono precedente», pausa.\n- Partenza a un'ora fissa: File › Avvio programmato.\n- Audio e video li riproduce MyStrow: lettore audio e video."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come uso un controller MIDI (AKAI APC mini, Launchpad)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Collegalo via USB: MyStrow lo riconosce da solo. Per controllarlo o configurarlo: Connessione › 🎮 Controllo › 🎹 Controller MIDI, e ⚙️ Impostazioni controller per cambiare cosa fa ogni pad.\nL'AKAI APC mini mk2 è il modello consigliato (griglia di pad e fader già assegnati). Il controller è facoltativo. Materiale: Shop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come controllo MyStrow da un tablet o da un telefono?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apri Connessione › 🎮 Controllo › 📱 Ingresso esterno, clicca su Attiva e inquadra il codice QR con il tablet, collegato alla stessa rete Wi-Fi del computer. Niente da installare.\nGuida: controllare MyStrow da un tablet. Esiste anche un'app per tablet che funziona senza PC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso guidare MyStrow parlando con un'IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Con Claude Desktop e l'estensione MyStrow chiedi con parole tue («metti il fronte in blu», «lancia l'effetto strobo») e MyStrow esegue. Installazione: guidare le luci con l'assistente IA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I miei proiettori non si accendono. Cosa controllo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "- Uscita DMX: in Connessione › 🌐 Uscita DMX la tua interfaccia deve essere selezionata e collegata.\n- Un solo programma alla volta: chiudi QLC+, Freestyler o qualsiasi altro software luci che stia usando l'interfaccia.\n- Indirizzo e modalità: l'indirizzo DMX e la modalità (numero di canali) del proiettore devono corrispondere al patch.\n- Cavo e porta: prova un altro cavo o un'altra porta USB (evita gli hub) e controlla il cavo DMX.\n- Avvia Connessione › 🩺 Diagnostica: testa l'interfaccia USB o la rete.\nDurante i 15 giorni di prova l'uscita DMX funziona. Finita la prova, serve una licenza attiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I miei proiettori cambiano colore o si muovono da soli.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quasi sempre la modalità DMX impostata sul proiettore non è quella del patch. Esempio: proiettore in modalità 7 canali, nel patch a 9 canali: i canali slittano e uno finisce in «auto» o «sound».\nGuarda la modalità indicata sul proiettore, scegli la stessa in Modifica › 🔌 Patch DMX e controlla l'indirizzo. Se colori o gobo non corrispondono, il profilo non è quello giusto: usa il profilo esatto del modello o calibra la ruota colori nel patch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Il mio node Art-Net non viene trovato.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "- Il node e il computer devono essere sulla stessa rete, meglio via cavo Ethernet che in Wi-Fi.\n- Gli indirizzi IP devono essere nella stessa gamma (spesso 2.x.x.x o 192.168.x.x: guarda il display o il manuale del node).\n- Autorizza MyStrow nel firewall (Windows lo chiede al primo avvio).\n- In Connessione › 🌐 Uscita DMX, scegli Art-Net e seleziona il node.\nPiù node: più universi DMX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Lo strobo non funziona su un proiettore.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il profilo del proiettore non ha il canale strobe/shutter giusto, oppure il proiettore non è nella modalità del patch. Controlla la modalità nel patch e aggiorna MyStrow (diversi profili sono stati corretti). Altrimenti mandaci il manuale del proiettore dalla pagina Contatti e correggiamo il profilo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Il tablet non si collega.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "- Tablet e computer devono essere sulla stessa rete Wi-Fi (non la rete ospiti, non il 4G).\n- Autorizza MyStrow nel firewall del computer.\n- Su Mac, se la pagina mostra un errore 403 o 401: disattiva il ricevitore AirPlay (Impostazioni di Sistema › Generali › AirDrop e Handoff › Ricevitore AirPlay), che usa la stessa porta.\n- Rilancia 📱 Ingresso esterno e inquadra di nuovo il codice QR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MyStrow non si apre, oppure l'antivirus lo blocca.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Antivirus (Trend Micro, AVG, Avast…): è un falso allarme, MyStrow ha la firma digitale. Toglilo dalla quarantena, aggiungi un'eccezione per la cartella e reinstallalo dalla pagina di download.\nSu Mac, se l'icona rimbalza e sparisce: controlla la versione di macOS (Apple Silicon: almeno macOS 13; Intel: almeno macOS 11) e scarica di nuovo il file giusto (Apple Silicon o Intel).\nIl messaggio «Impossibile verificare l'integrità dell'applicazione» si risolve installando l'ultima versione sopra quella vecchia: show e impostazioni restano."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Non ho ricevuto la licenza o la password.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guarda nello spam (e nella scheda Promozioni di Gmail) e controlla l'indirizzo inserito al pagamento: basta un errore di battitura e l'email si perde. Password dimenticata: pulsante 🔑 Password dimenticata? nella finestra di accesso di MyStrow. Se ancora niente: contattaci."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mystrow.fr/it/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aiuto",
+      "item": "https://mystrow.fr/it/aide"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .toc a { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    .qa { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 16px; scroll-margin-top: 90px; }
+    .qa h3 { font-size: 19px; margin-bottom: 10px; }
+    .qa h3 a { color: inherit; text-decoration: none; }
+    .qa .prose { font-size: 14.5px; line-height: 1.75; }
+    .qa .prose p { margin-bottom: 10px; }
+    .qa .prose p:last-child { margin-bottom: 0; }
+    .prose ol, .prose ul { margin: 0 0 12px 20px; }
+    .prose li { margin-bottom: 6px; }
+    .param-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .param-table th, .param-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .param-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+    .param-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .param-table td { color: var(--muted); }
+    .table-scroll { overflow-x: auto; }
+    .recipe { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .recipe h3 { color: var(--accent); }
+    .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .recipe li strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Percorso di navigazione">
+        <a href="./">Home</a> &nbsp;/&nbsp; <span>Aiuto</span>
+      </nav>
+      <div class="hero-badge">❓ Aiuto · Come fare</div>
+      <h1>Aiuto MyStrow:<br><em>come fare</em></h1>
+      <p class="hero-sub">Risposte brevi alle domande che ci fate più spesso: collegare i proiettori, creare un effetto, programmare uno show su una canzone e cosa fare quando non si accende niente.</p>
+      <div class="hero-meta"><span>Di <strong>MyStrow</strong></span><span>·</span><span>Aggiornato il <strong>18 novembre 2026</strong></span></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="#demarrer" class="btn-primary">Vedi le risposte →</a><a href="manuel" class="btn-outline">📖 Manuale completo</a></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap-narrow">
+      <div class="toc"><a href="#demarrer">Primi passi</a><a href="#live">Suonare dal vivo</a><a href="#show">Creare uno show automatico</a><a href="#controle">Controller, tablet e assistente</a><a href="#depannage">Risoluzione dei problemi</a></div>
+      <div class="callout"><p><strong>Preferisci chiedere a ChatGPT, Gemini o Claude?</strong> Dagli l'indirizzo di questa pagina (<code>mystrow.fr/it/aide</code>) insieme alla tua domanda: qui trova i menu esatti di MyStrow.</p></div>
+    </div>
+  </section>
+
+  <section id="demarrer" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Primi passi</div>
+      <div class="qa" id="gratuit"><h3><a href="#gratuit">MyStrow è gratuito?</a></h3><div class="prose"><p>Puoi provare MyStrow <strong>gratis per 15 giorni</strong>, senza carta e con l'uscita DMX. Dopo serve una licenza: abbonamento mensile o annuale, oppure licenza a vita. I prezzi aggiornati sono nello <a href="../en/shop">Shop</a>.</p><p>Il software funziona su <strong>Windows 10/11 e macOS</strong> (Mac Intel: macOS 11 o successivo; Mac Apple Silicon da M1 a M5: macOS 13 o successivo). Download: <a href="download">pagina di download</a>.</p></div></div>
+      <div class="qa" id="brancher"><h3><a href="#brancher">Come collego i miei proiettori DMX al computer?</a></h3><div class="prose"><p>Serve un'<strong>interfaccia DMX</strong> tra il computer e il primo proiettore: un box <strong>USB-DMX</strong> o un <strong>node Art-Net</strong> collegato alla rete (cavo Ethernet). Poi i proiettori si collegano l'uno all'altro con cavo DMX (XLR).</p><ol><li>Collega l'interfaccia e apri <strong>Connessione › 🌐 Uscita DMX</strong>.</li><li>Scegli la tua interfaccia nell'elenco: MyStrow rileva i box USB e i node Art-Net della rete.</li><li>Nel dubbio, avvia <strong>Connessione › 🩺 Diagnostica</strong> (test USB o test di rete).</li></ol><p>Dettagli per modello di interfaccia: <a href="../en/configurer-node-usb-artnet-dmx-mystrow">configurare un node Art-Net o un'interfaccia USB-DMX</a>.</p></div></div>
+      <div class="qa" id="patch"><h3><a href="#patch">Come aggiungo i miei proiettori a MyStrow (il patch DMX)?</a></h3><div class="prose"><p>Apri <strong>Modifica › 🔌 Patch DMX</strong>. Il «patch» dice a MyStrow quali proiettori hai e su quale indirizzo DMX ascolta ciascuno.</p><ol><li>Scegli <strong>🧙 Procedura guidata</strong> (passo per passo) o <strong>📄 Patch vuoto</strong>.</li><li>Cerca marca e modello di ogni proiettore nella libreria (oltre 5000 profili).</li><li>Seleziona <strong>la stessa modalità DMX</strong> impostata sul proiettore (il numero di canali, nel menu o sui dipswitch).</li><li>Controlla che <strong>l'indirizzo DMX</strong> del patch sia quello impostato sul proiettore.</li></ol><p>Per le teste mobili: <a href="../en/patcher-programmer-lyres-mystrow">fare il patch e programmare le teste mobili</a>.</p></div></div>
+      <div class="qa" id="fixture-absente"><h3><a href="#fixture-absente">Il mio proiettore non è nella libreria. Come lo creo?</a></h3><div class="prose"><p>Fallo creare a un'IA partendo dal manuale: nel <strong>Patch DMX</strong>, menu <strong>🛠 Crea la tua fixture › ✦ Crea la tua fixture con l'IA</strong>.</p><ol><li>Clicca su <strong>📋 Copia il prompt</strong>.</li><li>Incollalo in ChatGPT, Gemini o Claude e allega il manuale del proiettore (PDF o foto della tabella dei canali DMX).</li><li>Incolla la risposta dell'IA in MyStrow e clicca su <strong>✦ Crea la fixture</strong>.</li></ol><p>Guida completa: <a href="../en/creer-fixture-dmx-ia-15-secondes">creare una fixture DMX con l'IA</a>. Puoi anche importare un file o crearla a mano: <a href="../en/importer-fixture-dmx-mystrow">importare una fixture DMX</a>.</p></div></div>
+    </div>
+  </section>
+
+  <section id="live" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Suonare dal vivo</div>
+      <div class="qa" id="couleur"><h3><a href="#couleur">Come accendo i proiettori di un colore?</a></h3><div class="prose"><p>Clicca su un <strong>pad colore</strong> nella colonna del gruppo che vuoi e alza il <strong>fader</strong> di quel gruppo. Ogni colonna di pad è un gruppo di proiettori (fronte, controluce, laterali…), ogni pad un colore.</p><p>Con un controller <strong>AKAI APC mini</strong> è la stessa griglia, fisica. Senza controller fai tutto col mouse o da un <a href="../en/controler-mystrow-tablette-telephone">tablet</a>. Per partire da zero: <a href="../en/tutoriel-debuter-mystrow">iniziare con MyStrow</a>.</p></div></div>
+      <div class="qa" id="memoire"><h3><a href="#memoire">Come registro un&#x27;atmosfera (una memoria) e la richiamo?</a></h3><div class="prose"><p>Prepara l'atmosfera che vuoi, clicca su <strong>🔴 REC Memoria</strong> e poi sul <strong>pad memoria</strong> in cui salvarla. Premendo quel pad l'atmosfera torna.</p><ul><li>Il <strong>clic destro</strong> su un pad memoria apre le sue impostazioni: tempo di dissolvenza e <strong>🎛️ Comportamento</strong>: <strong>Interruttore</strong> (premi e la memoria resta), <strong>Flash</strong> (resta solo finché tieni premuto il pad) o <strong>Flash solo</strong> (uguale, ma spegne le altre memorie finché premi).</li><li>Per partire con memorie pronte: <strong>File › 🏠 Carica le memorie predefinite</strong>.</li></ul></div></div>
+      <div class="qa" id="effet"><h3><a href="#effet">Come creo un effetto luci (chase, onda, strobo, movimento delle teste mobili)?</a></h3><div class="prose"><p>Apri <strong>Modifica › 🎨 Editor effetti</strong>. Parti da un effetto di fabbrica dell'elenco o clicca su <strong>＋ Aggiungi un effetto › Crea l'effetto io stesso</strong>.</p><ol><li>Un effetto è fatto di <strong>livelli</strong>. Ogni livello anima un <strong>CANALE</strong> (intensità, colore, Pan/Tilt…) secondo una <strong>FORMA</strong> (Seno, Flash, Uno alla volta…).</li><li>Regola la velocità (<strong>VEL</strong>), l'ampiezza (<strong>AMP</strong>) e lo sfasamento tra proiettori (<strong>SFAS</strong>: è lui che crea il chase).</li><li>Attiva <strong>⏺ Uscita live</strong> per vedere l'effetto sui proiettori veri mentre lo regoli.</li><li>In <strong>ASSEGNA</strong>, clicca su un pulsante <strong>da E1 a E8</strong> per metterlo su un pulsante effetto della finestra principale, poi su <strong>Salva l'effetto</strong>.</li></ol><p>Il tutorial dettagliato, con ricette pronte: <a href="creer-effet-lumiere-mystrow">creare un effetto luci in MyStrow</a>.</p></div></div>
+      <div class="qa" id="lyres"><h3><a href="#lyres">Come muovo le mie teste mobili?</a></h3><div class="prose"><p>Due modi: a mano dalla <strong>pianta luci</strong> (trascinando il punto della testa mobile) oppure con un <strong>effetto</strong> il cui livello usa il canale <strong>Pan/Tilt</strong> (forme Cerchio, Otto, Infinito, Bilanciere, Pendolo, Quadrato).</p><p>Per le posizioni fisse da richiamare (cantante, pubblico, batteria…), registrale con <strong>🔴 REC Memoria</strong> su un pad <strong>POS</strong>. Non dimenticare di impostare i limiti di movimento nel patch. Guida: <a href="../en/patcher-programmer-lyres-mystrow">fare il patch e programmare le teste mobili</a>. Puoi anche guidarle <a href="../en/manette-jeu-lyres-mystrow">con un gamepad</a>.</p></div></div>
+      <div class="qa" id="musique"><h3><a href="#musique">Come faccio reagire le luci alla musica senza programmare niente?</a></h3><div class="prose"><p>Due modalità lo fanno da sole:</p><ul><li><strong>IA Luci</strong>: nella playlist, metti un brano in modalità <strong>💡 IA Luci</strong>. MyStrow analizza il suono (energia, ritmo, BPM) e genera colori e intensità dal vivo. Impostazioni: <strong>Modifica › 💡 IA Luci</strong>.</li><li><strong>Modalità Live</strong> (<strong>Visualizza › Modalità Live</strong>): MyStrow ascolta una sorgente audio (Spotify, software DJ, microfono) e segue il beat, le salite e i drop.</li></ul><p>Di più: <a href="../en/ai-lighting">IA Luci</a> · <a href="../en/synchroniser-lumieres-spotify">luci sincronizzate con Spotify</a> · <a href="../en/synchroniser-mystrow-logiciel-dj">con un software DJ</a>.</p></div></div>
+    </div>
+  </section>
+
+  <section id="show" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Creare uno show automatico</div>
+      <div class="qa" id="rec-lumiere"><h3><a href="#rec-lumiere">Come programmo uno show luci su una canzone (REC Luci)?</a></h3><div class="prose"><p>Aggiungi il brano alla playlist, poi <strong>clic destro › 🔴 REC Luci</strong>: si apre l'editor timeline del brano, con una traccia per gruppo di proiettori e la forma d'onda della musica.</p><ol><li>Trascina <strong>colori</strong>, <strong>memorie</strong>, <strong>effetti</strong> o <strong>posizioni delle teste mobili</strong> dalla libreria sulle tracce, allineandoli alla forma d'onda.</li><li>Oppure lascia che <strong>Strumenti › ✨ Generazione con IA</strong> crei una prima versione e poi ritoccala.</li><li>Clicca su <strong>💾 Salva</strong>: il brano passa in modalità <strong>▶ Sequenza luci</strong> e ripete lo show identico a ogni riproduzione.</li><li>Salva lo show (<strong>File › 💾 Salva show</strong>).</li></ol><p>Tutti i dettagli: <a href="manuel-playlist-rec-lumiere">manuale, capitolo Playlist e REC Luci</a>.</p></div></div>
+      <div class="qa" id="modifier-sequence"><h3><a href="#modifier-sequence">Come correggo una sequenza già fatta?</a></h3><div class="prose"><p>Riaprila con <strong>clic destro sul brano › 🔴 REC Luci</strong>. Ogni blocco si può spostare, allungare, tagliare (<strong>✂️ Taglia in 2</strong>, strumento <code>C</code>) o cancellare; il clic destro su un blocco regola intensità, colore e dissolvenze.</p><p>Una sequenza si può anche esportare e reimportare (<strong>⬆ Esporta il REC Luci</strong> / <strong>⬇ Importa un REC Luci</strong>, file <code>.lrec</code>).</p></div></div>
+      <div class="qa" id="spectacle"><h3><a href="#spectacle">Come preparo e lancio uno show completo?</a></h3><div class="prose"><p>Metti tutti i tuoi media nella playlist, in ordine, ognuno con la sua modalità luci (<strong>🎛 Manuale</strong>, <strong>💡 IA Luci</strong> o <strong>▶ Sequenza luci</strong>), e salva lo show: <strong>File › 💾 Salva show</strong> (file <code>.tui</code> con playlist, patch e sequenze).</p><ul><li>Clic destro su un media: loop, dissolvenza in entrata/uscita, «avvia con il suono precedente», pausa.</li><li>Partenza a un'ora fissa: <strong>File › Avvio programmato</strong>.</li><li>Audio e video li riproduce MyStrow: <a href="../en/audio-video-player">lettore audio e video</a>.</li></ul></div></div>
+    </div>
+  </section>
+
+  <section id="controle" class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Controller, tablet e assistente</div>
+      <div class="qa" id="akai"><h3><a href="#akai">Come uso un controller MIDI (AKAI APC mini, Launchpad)?</a></h3><div class="prose"><p>Collegalo via USB: MyStrow lo riconosce da solo. Per controllarlo o configurarlo: <strong>Connessione › 🎮 Controllo › 🎹 Controller MIDI</strong>, e <strong>⚙️ Impostazioni controller</strong> per cambiare cosa fa ogni pad.</p><p>L'AKAI APC mini mk2 è il modello consigliato (griglia di pad e fader già assegnati). Il controller è facoltativo. Materiale: <a href="../en/shop">Shop</a>.</p></div></div>
+      <div class="qa" id="tablette"><h3><a href="#tablette">Come controllo MyStrow da un tablet o da un telefono?</a></h3><div class="prose"><p>Apri <strong>Connessione › 🎮 Controllo › 📱 Ingresso esterno</strong>, clicca su <strong>Attiva</strong> e inquadra il codice QR con il tablet, collegato alla <strong>stessa rete Wi-Fi</strong> del computer. Niente da installare.</p><p>Guida: <a href="../en/controler-mystrow-tablette-telephone">controllare MyStrow da un tablet</a>. Esiste anche un'<a href="../en/application-tablette">app per tablet</a> che funziona senza PC.</p></div></div>
+      <div class="qa" id="assistant-ia"><h3><a href="#assistant-ia">Posso guidare MyStrow parlando con un&#x27;IA?</a></h3><div class="prose"><p>Sì. Con <strong>Claude Desktop</strong> e l'estensione MyStrow chiedi con parole tue («metti il fronte in blu», «lancia l'effetto strobo») e MyStrow esegue. Installazione: <a href="/piloter-lumieres-assistant-ia-claude">guidare le luci con l'assistente IA</a>.</p></div></div>
+    </div>
+  </section>
+
+  <section id="depannage" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Risoluzione dei problemi</div>
+      <div class="qa" id="rien-ne-sallume"><h3><a href="#rien-ne-sallume">I miei proiettori non si accendono. Cosa controllo?</a></h3><div class="prose"><ol><li><strong>Uscita DMX</strong>: in <strong>Connessione › 🌐 Uscita DMX</strong> la tua interfaccia deve essere selezionata e collegata.</li><li><strong>Un solo programma alla volta</strong>: chiudi QLC+, Freestyler o qualsiasi altro software luci che stia usando l'interfaccia.</li><li><strong>Indirizzo e modalità</strong>: l'indirizzo DMX e la modalità (numero di canali) del proiettore devono corrispondere al patch.</li><li><strong>Cavo e porta</strong>: prova un altro cavo o un'altra porta USB (evita gli hub) e controlla il cavo DMX.</li><li>Avvia <strong>Connessione › 🩺 Diagnostica</strong>: testa l'interfaccia USB o la rete.</li></ol><p>Durante i 15 giorni di prova l'uscita DMX funziona. Finita la prova, serve una licenza attiva.</p></div></div>
+      <div class="qa" id="bouge-tout-seul"><h3><a href="#bouge-tout-seul">I miei proiettori cambiano colore o si muovono da soli.</a></h3><div class="prose"><p>Quasi sempre la <strong>modalità DMX</strong> impostata sul proiettore non è quella del patch. Esempio: proiettore in modalità 7 canali, nel patch a 9 canali: i canali slittano e uno finisce in «auto» o «sound».</p><p>Guarda la modalità indicata sul proiettore, scegli la stessa in <strong>Modifica › 🔌 Patch DMX</strong> e controlla l'indirizzo. Se colori o gobo non corrispondono, il profilo non è quello giusto: usa il profilo esatto del modello o calibra la ruota colori nel patch.</p></div></div>
+      <div class="qa" id="artnet"><h3><a href="#artnet">Il mio node Art-Net non viene trovato.</a></h3><div class="prose"><ol><li>Il node e il computer devono essere sulla stessa rete, meglio via cavo Ethernet che in Wi-Fi.</li><li>Gli indirizzi IP devono essere nella stessa gamma (spesso 2.x.x.x o 192.168.x.x: guarda il display o il manuale del node).</li><li>Autorizza MyStrow nel firewall (Windows lo chiede al primo avvio).</li><li>In <strong>Connessione › 🌐 Uscita DMX</strong>, scegli Art-Net e seleziona il node.</li></ol><p>Più node: <a href="../en/plusieurs-univers-nodes-artnet-mystrow">più universi DMX</a>.</p></div></div>
+      <div class="qa" id="strobe"><h3><a href="#strobe">Lo strobo non funziona su un proiettore.</a></h3><div class="prose"><p>Il profilo del proiettore non ha il canale strobe/shutter giusto, oppure il proiettore non è nella modalità del patch. Controlla la modalità nel patch e aggiorna MyStrow (diversi profili sono stati corretti). Altrimenti mandaci il manuale del proiettore dalla pagina <a href="../en/contact">Contatti</a> e correggiamo il profilo.</p></div></div>
+      <div class="qa" id="tablette-ko"><h3><a href="#tablette-ko">Il tablet non si collega.</a></h3><div class="prose"><ol><li>Tablet e computer devono essere sulla stessa rete Wi-Fi (non la rete ospiti, non il 4G).</li><li>Autorizza MyStrow nel firewall del computer.</li><li>Su Mac, se la pagina mostra un errore 403 o 401: disattiva il ricevitore AirPlay (Impostazioni di Sistema › Generali › AirDrop e Handoff › Ricevitore AirPlay), che usa la stessa porta.</li><li>Rilancia <strong>📱 Ingresso esterno</strong> e inquadra di nuovo il codice QR.</li></ol></div></div>
+      <div class="qa" id="mac-antivirus"><h3><a href="#mac-antivirus">MyStrow non si apre, oppure l&#x27;antivirus lo blocca.</a></h3><div class="prose"><p><strong>Antivirus</strong> (Trend Micro, AVG, Avast…): è un falso allarme, MyStrow ha la firma digitale. Toglilo dalla quarantena, aggiungi un'eccezione per la cartella e reinstallalo dalla <a href="download">pagina di download</a>.</p><p><strong>Su Mac</strong>, se l'icona rimbalza e sparisce: controlla la versione di macOS (Apple Silicon: almeno macOS 13; Intel: almeno macOS 11) e scarica di nuovo il file giusto (Apple Silicon o Intel).</p><p>Il messaggio «Impossibile verificare l'integrità dell'applicazione» si risolve installando l'ultima versione sopra quella vecchia: show e impostazioni restano.</p></div></div>
+      <div class="qa" id="licence"><h3><a href="#licence">Non ho ricevuto la licenza o la password.</a></h3><div class="prose"><p>Guarda nello spam (e nella scheda Promozioni di Gmail) e controlla l'indirizzo inserito al pagamento: basta un errore di battitura e l'email si perde. Password dimenticata: pulsante <strong>🔑 Password dimenticata?</strong> nella finestra di accesso di MyStrow. Se ancora niente: <a href="../en/contact">contattaci</a>.</p></div></div>
+    </div>
+  </section>
+
+  <section class="cta-block">
+    <div class="wrap-narrow">
+      <div class="section-tag">Non hai trovato?</div>
+      <h2>Chiedi a noi</h2>
+      <p>Bastano uno screenshot e due righe: ti rispondiamo e aggiungiamo la risposta qui.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="../en/contact" class="btn-primary">Contattaci →</a>
+        <a href="../en/blog" class="btn-outline">Tutti i tutorial</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Piè di pagina"><a href="download">Download</a><a href="../en/whats-new">Novità</a><a href="/activate?lang=en">Attiva un prodotto</a><a href="#pricing">Prezzi</a><a href="../en/blog">Tutorial</a><a href="../en/terms">Condizioni di vendita</a><a href="../en/legal-notice">Note legali</a><a href="../en/privacy">Privacy</a><a href="../en/contact">Contatti</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Il tuo indirizzo email" required>
+        <button type="submit">Iscriviti</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Tutti i diritti riservati</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Welcome!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Something went wrong.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Something went wrong.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Copied'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+
