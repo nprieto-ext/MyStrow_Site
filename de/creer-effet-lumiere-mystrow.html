@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Einen Lichteffekt in MyStrow erstellen: Lauflicht, Welle, Strobe, Moving Heads | MyStrow</title>
+  <meta name="description" content="Das Tutorial zum Effekt-Editor von MyStrow: Ebenen, Formen, Tempo, Versatz, Live-Ausgang und Zuweisung zu den Tasten E1 bis E8, mit 4 fertigen Rezepten.">
+  <meta name="keywords" content="Lichteffekt erstellen, DMX Effekt, DMX Lauflicht, MyStrow Effekt-Editor, Moving Head Kreis, DMX Strobe, Lichtsoftware Effekte">
+  <link rel="canonical" href="https://mystrow.fr/de/creer-effet-lumiere-mystrow">
+  <link rel="alternate" hreflang="fr" href="https://mystrow.fr/creer-effet-lumiere-mystrow">
+  <link rel="alternate" hreflang="en" href="https://mystrow.fr/en/creer-effet-lumiere-mystrow">
+  <link rel="alternate" hreflang="de" href="https://mystrow.fr/de/creer-effet-lumiere-mystrow">
+  <link rel="alternate" hreflang="x-default" href="https://mystrow.fr/creer-effet-lumiere-mystrow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mystrow.fr/de/creer-effet-lumiere-mystrow">
+  <meta property="og:title" content="Einen Lichteffekt in MyStrow erstellen: Lauflicht, Welle, Strobe, Moving Heads">
+  <meta property="og:description" content="Das Tutorial zum Effekt-Editor von MyStrow: Ebenen, Formen, Tempo, Versatz, Live-Ausgang und Zuweisung zu den Tasten E1 bis E8, mit 4 fertigen Rezepten.">
+  <meta property="og:image" content="https://mystrow.fr/og-image-de.webp">
+  <meta property="og:site_name" content="MyStrow">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Einen Lichteffekt in MyStrow erstellen: Lauflicht, Welle, Strobe, Moving Heads">
+  <meta name="twitter:description" content="Das Tutorial zum Effekt-Editor von MyStrow: Ebenen, Formen, Tempo, Versatz, Live-Ausgang und Zuweisung zu den Tasten E1 bis E8, mit 4 fertigen Rezepten.">
+  <meta name="twitter:image" content="https://mystrow.fr/og-image-de.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Einen Lichteffekt in MyStrow erstellen: Lauflicht, Welle, Strobe, Moving Heads",
+  "description": "Das Tutorial zum Effekt-Editor von MyStrow: Ebenen, Formen, Tempo, Versatz, Live-Ausgang und Zuweisung zu den Tasten E1 bis E8, mit 4 fertigen Rezepten.",
+  "inLanguage": "de",
+  "image": "https://mystrow.fr/og-image.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "url": "https://mystrow.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MyStrow",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mystrow.fr/favicon.ico"
+    }
+  },
+  "datePublished": "2026-11-17",
+  "dateModified": "2026-11-18",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mystrow.fr/de/creer-effet-lumiere-mystrow"
+  },
+  "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Einen Lichteffekt in MyStrow erstellen: Lauflicht, Welle, Strobe, Moving Heads",
+  "description": "Das Tutorial zum Effekt-Editor von MyStrow: Ebenen, Formen, Tempo, Versatz, Live-Ausgang und Zuweisung zu den Tasten E1 bis E8, mit 4 fertigen Rezepten.",
+  "inLanguage": "de",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Den Effekt-Editor öffnen",
+      "text": "Menü Bearbeiten › 🎨 Effekt-Editor. Links die Liste der Effekte (Werkseffekte und MEINE EFFEKTE), in der Mitte die Ebenentabelle, rechts der Lichtplan mit der Vorschau.",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-1"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Von einem bestehenden Effekt ausgehen… oder bei null",
+      "text": "Am schnellsten: Klicken Sie auf einen Werkseffekt, der Ihrem Ziel nahekommt, dann Duplizieren, um an einer Kopie zu arbeiten. Bei null beginnen: ＋ Effekt hinzufügen › Effekt selbst erstellen (eine leere Ebene wird angelegt).",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-2"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Den Live-Ausgang aktivieren",
+      "text": "Klicken Sie auf ⏺ Live-Ausgang: Ihre echten Scheinwerfer spielen den Effekt, während Sie ihn einstellen. Ausgeschaltet berührt der Editor den DMX-Ausgang nicht, nur der Lichtplan zeigt die Vorschau.",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-3"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Die Ebene einstellen",
+      "text": "Jede Zeile der Tabelle ist eine Ebene: Wählen Sie das ZIEL (welche Scheinwerfer), den KANAL (was sich bewegt) und die FORM (wie es sich bewegt), dann Tempo, Amplitude und Versatz. Jede Spalte wird unten erklärt.",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-4"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Ebenen stapeln",
+      "text": "＋ Ebene hinzufügen, um gleichzeitig einen weiteren Kanal zu animieren: zum Beispiel die Intensität als Welle und eine wechselnde Farbe, oder einen Moving-Head-Kreis und einen atmenden Dimmer.",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-5"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Die Wiedergabe wählen",
+      "text": "Unter WIEDERGABE: 🔁 Schleife (der Normalfall) oder 1× Einmal (ein einziger Durchlauf, nützlich für einen Schuss oder einen einzelnen Blitz).",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-6"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Zuweisen und speichern",
+      "text": "Unter ZUWEISEN klicken Sie auf eine Taste E1 bis E8: Der Effekt liegt dann auf dieser Effekttaste des Hauptfensters. Abschließend Effekt speichern. Er erscheint unter MEINE EFFEKTE.",
+      "url": "https://mystrow.fr/de/creer-effet-lumiere-mystrow#etape-7"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Der Effekt läuft im Editor, aber meine Scheinwerfer bewegen sich nicht.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aktivieren Sie ⏺ Live-Ausgang im Editor. Prüfen Sie auch, dass Ihre Scheinwerfer den animierten Kanal haben (ein PAR ohne Pan/Tilt spielt nie einen Kreis) und dass das ZIEL sie einschließt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie starte ich den Effekt während der Show?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weisen Sie ihn im Editor einer Taste E1 bis E8 zu (Bereich ZUWEISEN) und drücken Sie diese Taste im Hauptfenster oder am Controller. Ein Rechtsklick auf eine Effekttaste konfiguriert sie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ich habe einen Werkseffekt verstellt.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wählen Sie ihn aus und klicken Sie auf ↺ Werksversion wiederherstellen. Die Schaltfläche zum Zurücksetzen ALLER Werkseffekte macht dasselbe für die ganze Liste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich einen Effekt teilen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja: Exportieren erzeugt eine .mystrow_effect-Datei, die die andere Person mit ＋ Effekt hinzufügen › Effekt importieren hinzufügt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ich möchte den Effekt auf das Tempo der Musik abstimmen.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stellen Sie TMP mit dem Mausrad ein: eine Rastung = ein Zehntel, 29,8 entspricht etwa 128 BPM. Mit der TAP-Taste des Controllers kann man das Tempo auch eintippen."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://mystrow.fr/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Handbuch",
+      "item": "https://mystrow.fr/de/manuel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Effekt erstellen",
+      "item": "https://mystrow.fr/de/creer-effet-lumiere-mystrow"
+    }
+  ]
+}
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080807; --bg2: #0e0d09; --bg3: #141310;
+      --accent: #E2CE16; --accent-glow: rgba(226,206,22,0.16);
+      --accent-border: rgba(226,206,22,0.22);
+      --text: #f4f1e8; --muted: #7a7570;
+      --card: rgba(255,255,255,0.03); --border: rgba(226,206,22,0.14);
+      --green: #22c55e;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: rgba(6,6,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    nav { display: flex; align-items: center; height: 68px; padding: 0 40px; max-width: 1280px; margin: 0 auto; gap: 32px; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); letter-spacing: 1px; }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 32px; align-items: center; flex: 1; justify-content: center; }
+    .nav-links a { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.18s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+    .btn-primary { background: var(--accent); color: #0c0b00; border: none; padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: opacity 0.2s; display: inline-block; }
+    .btn-primary:hover { opacity: 0.86; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 999px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .section-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 68px); line-height: 0.95; letter-spacing: 1px; margin-bottom: 24px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(26px, 4vw, 40px); margin-bottom: 16px; line-height: 1.05; }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 10px; color: var(--text); }
+    .hero-section { padding: 80px 0 60px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(226,206,22,0.08); border: 1px solid rgba(226,206,22,0.2); border-radius: 999px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 20px; }
+    .hero-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; }
+    .hero-meta span { font-size: 12px; color: var(--muted); }
+    .hero-meta strong { color: var(--accent); }
+    .hero-sub { font-size: 17px; color: var(--muted); max-width: 640px; margin-bottom: 36px; line-height: 1.65; }
+    .section { padding: 72px 0; }
+    .section-bg { background: var(--bg2); padding: 72px 0; }
+    .prose { color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .prose p { margin-bottom: 20px; }
+    .prose strong { color: var(--text); font-weight: 600; }
+    .prose a { color: var(--accent); text-decoration: none; }
+    .prose a:hover { text-decoration: underline; }
+    .breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .feat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+    .feat-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+    .feat-icon { font-size: 26px; margin-bottom: 10px; }
+    .step-list { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--accent); color: #000; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { margin-bottom: 6px; font-size: 17px; }
+    .step-body p { color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .check-list li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .highlight-box { background: rgba(226,206,22,0.05); border: 1px solid var(--accent-border); border-radius: 12px; padding: 28px 32px; margin-top: 32px; }
+    .highlight-box h3 { color: var(--accent); margin-bottom: 12px; font-size: 17px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; padding: 4px 14px; font-size: 12px; color: var(--muted); }
+    .cta-block { text-align: center; padding: 80px 0; }
+    .cta-block h2 { margin-bottom: 16px; }
+    .cta-block p { color: var(--muted); margin-bottom: 32px; font-size: 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+    .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; text-decoration: none; transition: border-color 0.2s; display: block; }
+    .related-card:hover { border-color: var(--accent); }
+    .related-card .rc-tag { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .related-card h3 { font-size: 15px; color: var(--text); margin-bottom: 6px; }
+    .related-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .info-chip { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+    .stat-row { display: flex; gap: 32px; margin: 40px 0; flex-wrap: wrap; }
+    .stat-block { flex: 1; min-width: 120px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px 16px; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--accent); line-height: 1; }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .callout { background: rgba(226,206,22,0.06); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+    .callout p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+    .callout strong { color: var(--text); }
+    .lock-box { background: rgba(255,50,50,0.04); border: 1px solid rgba(255,80,80,0.18); border-radius: 12px; padding: 22px 26px; margin-top: 24px; }
+    .lock-box p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
+    .lock-box strong { color: #ff8080; }
+
+    /* Nav dropdown */
+    .nav-dropdown-wrap { position: relative; }
+    .nav-dropdown-wrap > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown-wrap > a .nav-chevron { font-size: 9px; opacity: 0.5; transition: transform 0.22s, opacity 0.22s; display: inline-block; }
+    .nav-dropdown-wrap:hover > a .nav-chevron { transform: rotate(180deg); opacity: 1; }
+    .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-8px); width: 700px; padding: 10px; background: #0c0b08; border: 1px solid rgba(226,206,22,0.16); border-radius: 14px; display: grid; grid-template-columns: repeat(3,1fr); gap: 4px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 300; box-shadow: 0 24px 64px rgba(0,0,0,0.7); }
+    .nav-mega::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+    .nav-mega::after { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 9px; height: 9px; background: #0c0b08; border-left: 1px solid rgba(226,206,22,0.16); border-top: 1px solid rgba(226,206,22,0.16); }
+    .nav-dropdown-wrap:hover .nav-mega { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(10px); }
+    .mega-item { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border-radius: 9px; text-decoration: none; color: var(--text); transition: background 0.15s; text-transform: none; letter-spacing: 0; font-size: 13px; }
+    .mega-item:hover { background: rgba(226,206,22,0.06); }
+    .mega-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; line-height: 1; }
+    .mega-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.3px; color: var(--text); margin-bottom: 3px; line-height: 1.2; }
+    .mega-desc { font-size: 11px; color: var(--muted); line-height: 1.45; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 32px 20px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text); text-decoration: none; letter-spacing: 1px; flex-shrink: 0; }
+    .footer-logo em { font-style: normal; color: var(--accent); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { color: var(--muted); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-nl { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .nl-form { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color .2s; }
+    .nl-form:focus-within { border-color: var(--accent); }
+    .nl-form input[type="email"] { background: #111; border: none; padding: 10px 16px; color: var(--text); font-size: 13px; outline: none; width: 200px; }
+    .nl-form input[type="email"]::placeholder { color: #555; }
+    .nl-form button { background: var(--accent); color: #000; border: none; padding: 10px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; letter-spacing: .5px; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background .18s; }
+    .nl-form button:hover { background: #ffd700; }
+    .nl-msg { font-size: 11px; min-height: 14px; }
+    .nl-msg.ok  { color: var(--accent); }
+    .nl-msg.err { color: #ff5555; }
+    .footer-copy { color: var(--muted); font-size: 11px; text-align: center; border-top: 1px solid var(--border); padding-top: 16px; }
+
+    @media (max-width: 680px) {
+      nav { padding: 0 14px; gap: 8px; }
+      .nav-links { display: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .stat-row { gap: 16px; }
+    }
+
+    .short-embed { position: relative; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 36px auto; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .short-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .prompt-box { position: relative; background: #0b0b09; border: 1px solid var(--accent-border); border-radius: 12px; margin: 24px 0; }
+    .prompt-box pre { margin: 0; padding: 22px 24px; padding-top: 50px; white-space: pre-wrap; word-break: break-word; font-family: Consolas, 'Courier New', monospace; font-size: 13px; line-height: 1.6; color: #d8d4c8; }
+    .prompt-box .copy-btn { position: absolute; top: 10px; right: 10px; background: var(--accent); color: #000; border: none; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; }
+    .prompt-box .pb-label { position: absolute; top: 14px; left: 24px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); }
+    .prose code, .step-body code, .check-list code { font-family: Consolas, 'Courier New', monospace; font-size: 0.92em; background: rgba(255,255,255,0.06); border-radius: 4px; padding: 1px 6px; color: var(--text); }
+    .ai-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+    .ai-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .ai-card h3 { font-size: 17px; margin-bottom: 6px; }
+    .ai-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    @media (max-width: 680px) { .ai-row { grid-template-columns: 1fr; } }
+
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .toc a { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    .qa { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-top: 16px; scroll-margin-top: 90px; }
+    .qa h3 { font-size: 19px; margin-bottom: 10px; }
+    .qa h3 a { color: inherit; text-decoration: none; }
+    .qa .prose { font-size: 14.5px; line-height: 1.75; }
+    .qa .prose p { margin-bottom: 10px; }
+    .qa .prose p:last-child { margin-bottom: 0; }
+    .prose ol, .prose ul { margin: 0 0 12px 20px; }
+    .prose li { margin-bottom: 6px; }
+    .param-table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 14px; }
+    .param-table th, .param-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .param-table th { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+    .param-table td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .param-table td { color: var(--muted); }
+    .table-scroll { overflow-x: auto; }
+    .recipe { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .recipe h3 { color: var(--accent); }
+    .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
+    .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .recipe li strong { color: var(--text); }
+  </style>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("consent","default",{"analytics_storage":"denied","ad_storage":"denied","wait_for_update":500});
+    gtag("js", new Date());
+    gtag("config", "G-4G9MXM0ENS");
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9MXM0ENS"></script>
+  <script src="/cookie-consent.js?v=3" defer></script>
+<link rel="stylesheet" href="../mobile-nav.css?v=6">
+</head>
+<body>
+
+<main>
+
+  <section class="hero-section">
+    <div class="wrap-narrow">
+      <nav class="breadcrumb" aria-label="Brotkrumen">
+        <a href="./">Startseite</a> &nbsp;/&nbsp; <a href="manuel">Handbuch</a> &nbsp;/&nbsp; <span>Effekt erstellen</span>
+      </nav>
+      <div class="hero-badge">🎨 Handbuch · Kapitel 7</div>
+      <h1>Einen <em>Lichteffekt</em><br>in MyStrow erstellen</h1>
+      <p class="hero-sub">Lauflicht, Welle, Gerade/Ungerade-Blitz, Moving-Head-Kreis: Alles entsteht im Effekt-Editor durch das Stapeln von Ebenen. So geht's, Spalte für Spalte, mit Rezepten zum Nachbauen.</p>
+      <div class="hero-meta"><span>Von <strong>MyStrow</strong></span><span>·</span><span>Aktualisiert am <strong>18. November 2026</strong></span></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="#etapes" class="btn-primary">Zu den Schritten →</a><a href="aide" class="btn-outline">Die ganze Hilfe ›</a></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap-narrow prose">
+      <div class="section-tag">Das Prinzip</div>
+      <h2 style="color:var(--text)">Ein Effekt = Ebenen</h2>
+      <p>Jede <strong>Ebene</strong> animiert <strong>einen Kanal</strong> (Intensität, Farbe, Pan/Tilt…) auf <strong>einer Auswahl von Scheinwerfern</strong>, nach <strong>einer Form</strong>, die sich in einem bestimmten Tempo wiederholt. Der <strong>Versatz</strong> zwischen den Scheinwerfern macht aus einem einfachen Blinken ein Lauflicht oder eine Welle.</p><p>Ein Effekt kann mehrere Ebenen enthalten, die zusammen spielen. Gespeicherte Effekte bleiben unter <strong>MEINE EFFEKTE</strong> verfügbar.</p>
+    </div>
+  </section>
+
+  <section id="etapes" class="section-bg">
+    <div class="wrap-narrow">
+      <div class="section-tag">Schritt für Schritt</div>
+      <h2>7 Schritte zum eigenen Effekt</h2>
+      <div class="step-list">
+        <div class="step" id="etape-1"><div class="step-num">1</div><div class="step-body"><h3>Den Effekt-Editor öffnen</h3><p>Menü <strong>Bearbeiten › 🎨 Effekt-Editor</strong>. Links die Liste der Effekte (Werkseffekte und <strong>MEINE EFFEKTE</strong>), in der Mitte die Ebenentabelle, rechts der Lichtplan mit der Vorschau.</p></div></div>
+        <div class="step" id="etape-2"><div class="step-num">2</div><div class="step-body"><h3>Von einem bestehenden Effekt ausgehen… oder bei null</h3><p>Am schnellsten: Klicken Sie auf einen Werkseffekt, der Ihrem Ziel nahekommt, dann <strong>Duplizieren</strong>, um an einer Kopie zu arbeiten. Bei null beginnen: <strong>＋ Effekt hinzufügen › Effekt selbst erstellen</strong> (eine leere Ebene wird angelegt).</p></div></div>
+        <div class="step" id="etape-3"><div class="step-num">3</div><div class="step-body"><h3>Den Live-Ausgang aktivieren</h3><p>Klicken Sie auf <strong>⏺ Live-Ausgang</strong>: Ihre echten Scheinwerfer spielen den Effekt, während Sie ihn einstellen. Ausgeschaltet berührt der Editor den DMX-Ausgang nicht, nur der Lichtplan zeigt die Vorschau.</p></div></div>
+        <div class="step" id="etape-4"><div class="step-num">4</div><div class="step-body"><h3>Die Ebene einstellen</h3><p>Jede Zeile der Tabelle ist eine <strong>Ebene</strong>: Wählen Sie das <strong>ZIEL</strong> (welche Scheinwerfer), den <strong>KANAL</strong> (was sich bewegt) und die <strong>FORM</strong> (wie es sich bewegt), dann Tempo, Amplitude und Versatz. Jede Spalte wird unten erklärt.</p></div></div>
+        <div class="step" id="etape-5"><div class="step-num">5</div><div class="step-body"><h3>Ebenen stapeln</h3><p><strong>＋ Ebene hinzufügen</strong>, um gleichzeitig einen weiteren Kanal zu animieren: zum Beispiel die Intensität als Welle <em>und</em> eine wechselnde Farbe, oder einen Moving-Head-Kreis <em>und</em> einen atmenden Dimmer.</p></div></div>
+        <div class="step" id="etape-6"><div class="step-num">6</div><div class="step-body"><h3>Die Wiedergabe wählen</h3><p>Unter <strong>WIEDERGABE</strong>: <strong>🔁 Schleife</strong> (der Normalfall) oder <strong>1× Einmal</strong> (ein einziger Durchlauf, nützlich für einen Schuss oder einen einzelnen Blitz).</p></div></div>
+        <div class="step" id="etape-7"><div class="step-num">7</div><div class="step-body"><h3>Zuweisen und speichern</h3><p>Unter <strong>ZUWEISEN</strong> klicken Sie auf eine Taste <strong>E1 bis E8</strong>: Der Effekt liegt dann auf dieser Effekttaste des Hauptfensters. Abschließend <strong>Effekt speichern</strong>. Er erscheint unter <strong>MEINE EFFEKTE</strong>.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Die Ebenentabelle</div>
+      <h2>Was jede Spalte macht</h2>
+      <div class="prose"><p>Tipp: Ein Klick auf den <strong>Titel einer Spalte</strong> wählt sie aus. Eine Einstellung in einer Zelle gilt dann für alle Ebenen.</p></div>
+      <div class="table-scroll"><table class="param-table"><thead><tr><th>Spalte</th><th>Funktion</th></tr></thead><tbody>
+        <tr><td>ZIEL</td><td>Welche Scheinwerfer die Ebene spielen: <strong>Alle</strong>, <strong>Gerade</strong>, <strong>Ungerade</strong> oder bestimmte Gruppen. Tipp: Klicken Sie Scheinwerfer auf dem Plan an (1, 2, 3…), dann <strong>Ausw.</strong>, um eine Auswahl in dieser Reihenfolge festzuhalten.</td></tr>
+        <tr><td>KANAL</td><td>Der animierte Parameter: Intensität (Dimmer), Farbe, Pan/Tilt, Farbrad… Nur die Scheinwerfer im Patch mit diesem Kanal reagieren.</td></tr>
+        <tr><td>FORM</td><td>Die Kurve: <strong>Sinus</strong> (sanftes Atmen), <strong>Blitz</strong> (harte Schläge), <strong>Dreieck</strong>, <strong>Anstieg</strong>, <strong>Abfall</strong>, <strong>Einzeln</strong> (immer nur ein Scheinwerfer an), <strong>Zufällig</strong>, <strong>Fest</strong>, <strong>Aus</strong>. Bei Pan/Tilt: die Bahn (Kreis, Acht, Unendlich, Schwingen, Pendel, Quadrat).</td></tr>
+        <tr><td>TMP</td><td>Zyklustempo, von 0 (sehr langsam) bis 100 (sehr schnell). Das Mausrad stellt in Zehnteln ein: 29,8 entspricht etwa 128 BPM.</td></tr>
+        <tr><td>AMP</td><td>Amplitude: die maximal erreichte Intensität. Bei Pan/Tilt ist es die Breite der Bewegung.</td></tr>
+        <tr><td>VERS</td><td>Versatz zwischen den Scheinwerfern: Er erzeugt das Lauflicht. 0 = alle gleichzeitig, 180 = über einen Zyklus verteilt.</td></tr>
+        <tr><td>GRUPPE</td><td>Anzahl der Scheinwerfer, die gemeinsam starten, in Paketen. 1 = einzeln (klassisches Lauflicht).</td></tr>
+        <tr><td>RICHTUNG</td><td>Laufrichtung: vorwärts (1, 2, 3…), rückwärts oder hin und her.</td></tr>
+        <tr><td>BLENDE</td><td>Glättet die Form: 0 = harte Übergänge, 100 = weiche Blende. Mit der Form Abfall entsteht so ein Nachleuchten.</td></tr>
+        <tr><td>START</td><td>Verschiebt den Start dieser Ebene im Zyklus gegenüber den anderen Ebenen.</td></tr>
+        <tr><td>MIN / MAX</td><td>Untergrenze und Obergrenze des Effekts. MIN über 0: Die Scheinwerfer gehen nie ganz aus.</td></tr>
+        <tr><td>FARBE</td><td>Die Farbe(n) der Ebene (nur Farbkanäle).</td></tr>
+        <tr><td>POSITION / SYM</td><td>Für Moving Heads: der Punkt, um den sich die Bewegung dreht (eine gespeicherte Position), und die Symmetrie (Pan invertiert, Tilt invertiert), damit die rechten Köpfe die linken spiegeln.</td></tr>
+      </tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Rezepte</div>
+      <h2>4 Effekte zum Nachbauen</h2>
+      <div class="feat-grid">
+        <div class="recipe"><h3>Lauflicht</h3><p style="color:var(--muted);font-size:14px">Ein Scheinwerfer nach dem anderen leuchtet auf, in Schleife.</p><ul><li><strong>KANAL</strong>: Dimmer</li><li><strong>FORM</strong>: Einzeln</li><li><strong>RICHTUNG</strong>: vorwärts, oder hin und her für einen Scanner-Look</li><li><strong>TMP</strong>: passend zum Tempo</li></ul></div>
+        <div class="recipe"><h3>Sanfte Welle</h3><p style="color:var(--muted);font-size:14px">Die Intensität wogt von einer Bühnenseite zur anderen.</p><ul><li><strong>KANAL</strong>: Dimmer</li><li><strong>FORM</strong>: Sinus</li><li><strong>VERS</strong>: 180 (über einen Zyklus verteilt)</li><li><strong>MIN</strong>: 20, damit es nie ganz dunkel wird</li></ul></div>
+        <div class="recipe"><h3>Gerade / ungerade</h3><p style="color:var(--muted);font-size:14px">Die eine Hälfte der Scheinwerfer blitzt, dann die andere.</p><ul><li><strong>Ebene 1</strong>: ZIEL Gerade, KANAL Dimmer, FORM Blitz</li><li><strong>Ebene 2</strong>: ZIEL Ungerade, gleiche Einstellung, START auf 50 (einen halben Zyklus später)</li></ul></div>
+        <div class="recipe"><h3>Gespiegelter Moving-Head-Kreis</h3><p style="color:var(--muted);font-size:14px">Die Köpfe zeichnen einen Kreis, links und rechts symmetrisch.</p><ul><li><strong>KANAL</strong>: Pan/Tilt</li><li><strong>FORM</strong>: Kreis</li><li><strong>POSITION</strong>: Ihre Position „Publikum“ oder „Bühne“</li><li><strong>SYM</strong>: Pan invertiert</li><li><strong>AMP</strong>: zunächst klein, dann weiter</li></ul></div>
+      </div>
+      <div class="callout"><p><strong>Einen Strobe</strong> muss man nicht bauen: Die Werkseffekte enthalten einen („Strobe Classique“), den man dupliziert und anpasst. Datei › ⚡ Standardeffekte laden legt die Grundeffekte wieder auf die E-Tasten.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap-narrow">
+      <div class="section-tag">Fehlerbehebung</div>
+      <h2>Häufige Fragen</h2>
+      <div class="step-list" style="gap:22px;">
+        <div class="step-body"><h3>Der Effekt läuft im Editor, aber meine Scheinwerfer bewegen sich nicht.</h3><p>Aktivieren Sie ⏺ Live-Ausgang im Editor. Prüfen Sie auch, dass Ihre Scheinwerfer den animierten Kanal haben (ein PAR ohne Pan/Tilt spielt nie einen Kreis) und dass das ZIEL sie einschließt.</p></div>
+        <div class="step-body"><h3>Wie starte ich den Effekt während der Show?</h3><p>Weisen Sie ihn im Editor einer Taste E1 bis E8 zu (Bereich ZUWEISEN) und drücken Sie diese Taste im Hauptfenster oder am Controller. Ein Rechtsklick auf eine Effekttaste konfiguriert sie.</p></div>
+        <div class="step-body"><h3>Ich habe einen Werkseffekt verstellt.</h3><p>Wählen Sie ihn aus und klicken Sie auf ↺ Werksversion wiederherstellen. Die Schaltfläche zum Zurücksetzen ALLER Werkseffekte macht dasselbe für die ganze Liste.</p></div>
+        <div class="step-body"><h3>Kann ich einen Effekt teilen?</h3><p>Ja: Exportieren erzeugt eine .mystrow_effect-Datei, die die andere Person mit ＋ Effekt hinzufügen › Effekt importieren hinzufügt.</p></div>
+        <div class="step-body"><h3>Ich möchte den Effekt auf das Tempo der Musik abstimmen.</h3><p>Stellen Sie TMP mit dem Mausrad ein: eine Rastung = ein Zehntel, 29,8 entspricht etwa 128 BPM. Mit der TAP-Taste des Controllers kann man das Tempo auch eintippen.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-bg">
+    <div class="wrap">
+      <div class="section-tag">Weiterführend</div>
+      <div class="related-grid"><a href="aide" class="related-card"><div class="rc-tag">Hilfe</div><h3>MyStrow-Hilfe: so geht's</h3><p>Kurze Antworten: Patch, Speicher, REC Licht, Fehlerbehebung.</p></a><a href="manuel-lyres" class="related-card"><div class="rc-tag">Handbuch · Moving Heads</div><h3>Moving Heads und Bewegung</h3><p>Positionen, Symmetrie, Bewegungseffekte und Gamepad.</p></a><a href="manuel-playlist-rec-lumiere" class="related-card"><div class="rc-tag">Handbuch · REC Licht</div><h3>Playlist und REC Licht</h3><p>Effekte auf die Musik legen, MyStrow spielt sie ab.</p></a><a href="manuel-jeu-en-direct" class="related-card"><div class="rc-tag">Handbuch · Live spielen</div><h3>Pads, Speicher und Effekte live</h3><p>Effekte E1 bis E8 starten, FX-Pads, Überlagerung.</p></a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <a href="./" class="footer-logo">MY<em>STROW</em></a>
+    <nav class="footer-links" aria-label="Footer"><a href="download">Download</a><a href="whats-new">Neuigkeiten</a><a href="/activate?lang=de">Produkt aktivieren</a><a href="./#pricing">Preise</a><a href="terms">AGB</a><a href="legal-notice">Impressum</a><a href="privacy">Datenschutz</a><a href="contact">Kontakt</a></nav>
+    <div class="footer-nl">
+      <form class="nl-form" onsubmit="handleNewsletter(event)">
+        <input type="email" id="nl-email" placeholder="Ihre E-Mail-Adresse" required>
+        <button type="submit">Abonnieren</button>
+      </form>
+      <div class="nl-msg" id="nl-msg"></div>
+    </div>
+  </div>
+  <div style="display:flex;gap:20px;align-items:center;justify-content:center;padding:10px 0;">
+    <a href="https://www.instagram.com/niko_mystrow_dmx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> Instagram</a>
+    <a href="https://www.tiktok.com/@niko_mystrow" target="_blank" rel="noopener noreferrer" aria-label="TikTok" style="color:#888;display:flex;align-items:center;gap:7px;font-size:12px;text-decoration:none;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:color .18s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.2 8.2 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z"/></svg> TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 MyStrow · Alle Rechte vorbehalten</div>
+</footer>
+
+<script>
+function handleNewsletter(e) {
+  e.preventDefault();
+  var email = document.getElementById('nl-email').value;
+  if (!email) return;
+  var btn = e.target.querySelector('button');
+  var msg = document.getElementById('nl-msg');
+  btn.disabled = true;
+  btn.style.opacity = '0.6';
+  fetch('https://us-central1-mystrow-907be.cloudfunctions.net/subscribe_newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, lang: (document.documentElement.lang || 'fr').slice(0, 2) })
+  }).then(function(r) {
+    if (r.ok || r.status === 204) { msg.textContent = '✓ Willkommen!'; msg.className = 'nl-msg ok'; }
+    else { msg.textContent = 'Ein Fehler ist aufgetreten.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; }
+  }).catch(function() { msg.textContent = 'Ein Fehler ist aufgetreten.'; msg.className = 'nl-msg err'; btn.disabled = false; btn.style.opacity = ''; });
+}
+</script>
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(b){
+  b.addEventListener('click', function(){
+    var t = b.parentElement.querySelector('pre').innerText;
+    navigator.clipboard.writeText(t).then(function(){ var o=b.textContent; b.textContent='✓ Kopiert'; setTimeout(function(){b.textContent=o;},1800); });
+  });
+});
+</script>
+<script src="../nav.js?v=5" defer></script>
+<script src="../mobile-nav.js?v=9"></script>
+<script src="/lang-suggest.js" defer></script>
+</body>
+</html>
+
