@@ -163,6 +163,12 @@ def main():
         return 1
 
     status, body = submit(urls)
+    for _ in range(3):  # cle toute fraiche : IndexNow met parfois une minute a la valider
+        if status != 403:
+            break
+        print("HTTP 403, nouvel essai dans 60 s...")
+        time.sleep(60)
+        status, body = submit(urls)
     print(f"IndexNow : HTTP {status} - {MESSAGES.get(status, body[:300])}")
     return 0 if status in (200, 202) else 1
 
