@@ -90,6 +90,11 @@ AddType application/octet-stream .mcpb
   </FilesMatch>
 </IfModule>
 
+# Scripts locaux du depot (indexnow.py...) : jamais servis
+<FilesMatch "\.py$">
+  Require all denied
+</FilesMatch>
+
 # -------------------------------------------------------
 # Page 404 custom
 # -------------------------------------------------------
