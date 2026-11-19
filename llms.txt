@@ -29,6 +29,7 @@
 ## Aide et tutoriels pas à pas
 
 - [Aide : comment faire](https://mystrow.fr/aide) : réponses courtes et menus exacts pour brancher ses projecteurs, patcher, créer un effet, enregistrer une mémoire, faire un REC Lumière, piloter depuis une tablette, et dépanner une sortie DMX muette.
+- [Le manuel de MyStrow dans ChatGPT, Claude ou Gemini](https://mystrow.fr/manuel-mystrow-chatgpt-claude-gemini) : télécharger le manuel complet en un fichier texte et le joindre à une IA pour obtenir des réponses avec les menus exacts, consigne prête à copier.
 - [Créer un effet lumière](https://mystrow.fr/creer-effet-lumiere-mystrow) : l'éditeur d'effets colonne par colonne (couches, formes, vitesse, décalage), avec des recettes (chenillard, vague, pair/impair, cercle de lyres).
 
 ## Manuel complet
