@@ -365,7 +365,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/blog"/>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-11-19</lastmod>
   </url>
 
   <url>
@@ -805,6 +805,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://mystrow.fr/api-mystrow-domotique-stream-deck</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://mystrow.fr/api-mystrow-domotique-stream-deck"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mystrow.fr/api-mystrow-domotique-stream-deck"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-19</lastmod>
   </url>
   <url>
     <loc>https://mystrow.fr/piloter-lumieres-assistant-ia-claude</loc>
