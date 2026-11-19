@@ -360,6 +360,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -395,7 +401,7 @@
     <div class="wrap-narrow prose">
       <div class="section-tag">O princípio</div>
       <h2 style="color:var(--text)">Um efeito = camadas</h2>
-      <p>Cada <strong>camada</strong> anima <strong>um canal</strong> (intensidade, cor, Pan/Tilt…) numa <strong>seleção de projetores</strong>, segundo <strong>uma forma</strong> que se repete a uma certa velocidade. O <strong>desfasamento</strong> entre projetores transforma um simples piscar numa perseguição ou numa onda.</p><p>Um efeito pode conter várias camadas que tocam em conjunto. Depois de guardados, os efeitos ficam disponíveis em <strong>MEUS EFEITOS</strong>.</p>
+      <p>Cada <strong>camada</strong> anima <strong>um canal</strong> (intensidade, cor, Pan/Tilt…) numa <strong>seleção de projetores</strong>, segundo <strong>uma forma</strong> que se repete a uma certa velocidade. O <strong>desfasamento</strong> entre projetores transforma um simples piscar numa perseguição ou numa onda.</p><p>Um efeito pode conter várias camadas que tocam em conjunto. Depois de guardados, os efeitos ficam disponíveis em <strong>MEUS EFEITOS</strong>.</p><figure class="shot"><img src="/img-manuel/pt/editeur-effets.webp" width="1400" height="821" alt="Editor de efeitos do MyStrow: lista de efeitos, tabela de camadas (alvo, canal, forma, velocidade, desfasamento) e pré-visualização no mapa de luz" loading="lazy"><figcaption>O <strong>editor de efeitos</strong>: os efeitos à esquerda, a tabela de camadas ao centro, a pré-visualização no mapa de luz à direita.</figcaption></figure>
     </div>
   </section>
 

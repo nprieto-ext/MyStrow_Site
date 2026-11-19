@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="2d" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Le plan de feu 2D</h2>
-      <div class="prose"><p>Dans la fenêtre principale, le plan de feu affiche chaque projecteur du patch avec sa couleur et son intensité en direct, la face en bas (<strong>FACE / BAS</strong>) et le contre en haut (<strong>CONTRE / HAUT</strong>).</p><ul><li><strong>Molette</strong> : zoom ; <strong>clic milieu</strong> ou <strong>Alt + glisser</strong> : déplacer la vue ; <code>0</code> : plan entier.</li><li>La disposition (déplacer, aligner, répartir) se modifie dans <strong>Édition › 🔌 Patch DMX</strong>, onglet <strong>🎭 Plan de feu</strong> : glisser pour déplacer, <code>Shift</code> + glisser pour aimanter, <strong>Aligner</strong> et <strong>Répartir</strong> pour ranger une rangée. Voir le <a href="manuel-patch-dmx">chapitre Patch</a>.</li></ul></div>
+      <div class="prose"><p>Dans la fenêtre principale, le plan de feu affiche chaque projecteur du patch avec sa couleur et son intensité en direct, la face en bas (<strong>FACE / BAS</strong>) et le contre en haut (<strong>CONTRE / HAUT</strong>).</p><ul><li><strong>Molette</strong> : zoom ; <strong>clic milieu</strong> ou <strong>Alt + glisser</strong> : déplacer la vue ; <code>0</code> : plan entier.</li><li>La disposition (déplacer, aligner, répartir) se modifie dans <strong>Édition › 🔌 Patch DMX</strong>, onglet <strong>🎭 Plan de feu</strong> : glisser pour déplacer, <code>Shift</code> + glisser pour aimanter, <strong>Aligner</strong> et <strong>Répartir</strong> pour ranger une rangée. Voir le <a href="manuel-patch-dmx">chapitre Patch</a>.</li></ul><figure class="shot"><img src="img-manuel/fr/plan-2d-fenetre-principale.webp" width="1400" height="806" alt="Fenêtre principale de MyStrow : le plan de feu 2D en haut à droite affiche la couleur de chaque projecteur en direct" loading="lazy"><figcaption>Le <strong>plan de feu 2D</strong>, en haut à droite de la fenêtre principale : chaque rond est un projecteur, dans sa couleur du moment.</figcaption></figure></div>
     </div>
   </section>
 
@@ -344,7 +350,7 @@
   <section id="3d" class="section" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>La visualisation 3D</h2>
-      <div class="prose"><p><strong>Affichage › Plan 3D</strong>, ou le bouton <strong>Afficher le plan de feu en 3D</strong>, ouvre une fenêtre 3D qui rejoue le show en temps réel, faisceaux compris. On peut y préparer tout un spectacle chez soi, sans projecteurs.</p><ul><li><strong>Caméra</strong> : glisser pour tourner, molette pour zoomer, double-clic pour revenir ; vues <strong>FACE</strong>, <strong>DESSUS</strong>, <strong>CÔTÉ</strong>.</li><li><strong>Ambiance salle</strong> : la lumière ambiante, de la nuit noire au plein jour.</li><li><strong>Qualité de rendu</strong> (Bas, Moyen, Haut) : baissez si l'affichage saccade avec beaucoup de projecteurs.</li><li><strong>Garder la fenêtre au premier plan</strong> : pour la laisser sur un deuxième écran.</li></ul></div>
+      <div class="prose"><p><strong>Affichage › Plan 3D</strong>, ou le bouton <strong>Afficher le plan de feu en 3D</strong>, ouvre une fenêtre 3D qui rejoue le show en temps réel, faisceaux compris. On peut y préparer tout un spectacle chez soi, sans projecteurs.</p><ul><li><strong>Caméra</strong> : glisser pour tourner, molette pour zoomer, double-clic pour revenir ; vues <strong>FACE</strong>, <strong>DESSUS</strong>, <strong>CÔTÉ</strong>.</li><li><strong>Ambiance salle</strong> : la lumière ambiante, de la nuit noire au plein jour.</li><li><strong>Qualité de rendu</strong> (Bas, Moyen, Haut) : baissez si l'affichage saccade avec beaucoup de projecteurs.</li><li><strong>Garder la fenêtre au premier plan</strong> : pour la laisser sur un deuxième écran.</li></ul><figure class="shot"><img src="img-manuel/fr/plan-3d.webp" width="1400" height="821" alt="Visualisation 3D de MyStrow : scène de festival éclairée, faisceaux colorés et choix du point de vue" loading="lazy"><figcaption>La <strong>visualisation 3D</strong> rejoue le show en temps réel. À droite : les points de vue ISO, FACE, DESSUS, CÔTÉ.</figcaption></figure></div>
     </div>
   </section>
 

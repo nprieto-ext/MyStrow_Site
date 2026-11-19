@@ -360,6 +360,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -395,7 +401,7 @@
     <div class="wrap-narrow prose">
       <div class="section-tag">Das Prinzip</div>
       <h2 style="color:var(--text)">Ein Effekt = Ebenen</h2>
-      <p>Jede <strong>Ebene</strong> animiert <strong>einen Kanal</strong> (Intensität, Farbe, Pan/Tilt…) auf <strong>einer Auswahl von Scheinwerfern</strong>, nach <strong>einer Form</strong>, die sich in einem bestimmten Tempo wiederholt. Der <strong>Versatz</strong> zwischen den Scheinwerfern macht aus einem einfachen Blinken ein Lauflicht oder eine Welle.</p><p>Ein Effekt kann mehrere Ebenen enthalten, die zusammen spielen. Gespeicherte Effekte bleiben unter <strong>MEINE EFFEKTE</strong> verfügbar.</p>
+      <p>Jede <strong>Ebene</strong> animiert <strong>einen Kanal</strong> (Intensität, Farbe, Pan/Tilt…) auf <strong>einer Auswahl von Scheinwerfern</strong>, nach <strong>einer Form</strong>, die sich in einem bestimmten Tempo wiederholt. Der <strong>Versatz</strong> zwischen den Scheinwerfern macht aus einem einfachen Blinken ein Lauflicht oder eine Welle.</p><p>Ein Effekt kann mehrere Ebenen enthalten, die zusammen spielen. Gespeicherte Effekte bleiben unter <strong>MEINE EFFEKTE</strong> verfügbar.</p><figure class="shot"><img src="/img-manuel/de/editeur-effets.webp" width="1400" height="821" alt="MyStrow-Effekt-Editor: Effektliste, Ebenentabelle (Ziel, Kanal, Form, Tempo, Versatz) und Vorschau auf dem Lichtplan" loading="lazy"><figcaption>Der <strong>Effekt-Editor</strong>: links die Effekte, in der Mitte die Ebenentabelle, rechts die Vorschau auf dem Lichtplan.</figcaption></figure>
     </div>
   </section>
 

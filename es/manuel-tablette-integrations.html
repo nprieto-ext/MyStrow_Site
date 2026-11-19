@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="tablette" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Tableta o móvil como mando a distancia</h2>
-      <div class="prose"><ol><li>Pon la tableta (o el móvil) en la <strong>misma Wi-Fi</strong> que el ordenador.</li><li>Abre <strong>Conexión › 🎮 Control › 📱 Entrada externa</strong> y haz clic en <strong>Activar</strong>.</li><li>Escanea el <strong>código QR</strong> con la cámara: la interfaz se abre en el navegador, sin instalar nada.</li><li>Comprueba el indicador de arriba a la derecha y pasa a pantalla completa.</li></ol><p>La tableta reproduce la superficie de pads (colores, memorias, efectos, posiciones, páginas): el PC sigue al mando, la tableta es solo un mando a distancia. Un aparato emparejado se reconoce las siguientes veces.</p><p>Si la tableta no se conecta: misma Wi-Fi (no la de invitados ni 4G), MyStrow autorizado en el cortafuegos y, en Mac, el <strong>receptor AirPlay</strong> desactivado (usa el mismo puerto). <strong>Conexión › 🩺 Diagnóstico › 📱 Prueba de tableta</strong> lo comprueba todo. Guía completa: <a href="controler-mystrow-tablette-telephone">controlar MyStrow desde una tableta</a>.</p></div>
+      <div class="prose"><ol><li>Pon la tableta (o el móvil) en la <strong>misma Wi-Fi</strong> que el ordenador.</li><li>Abre <strong>Conexión › 🎮 Control › 📱 Entrada externa</strong> y haz clic en <strong>Activar</strong>.</li><li>Escanea el <strong>código QR</strong> con la cámara: la interfaz se abre en el navegador, sin instalar nada.</li><li>Comprueba el indicador de arriba a la derecha y pasa a pantalla completa.</li></ol><p>La tableta reproduce la superficie de pads (colores, memorias, efectos, posiciones, páginas): el PC sigue al mando, la tableta es solo un mando a distancia. Un aparato emparejado se reconoce las siguientes veces.</p><p>Si la tableta no se conecta: misma Wi-Fi (no la de invitados ni 4G), MyStrow autorizado en el cortafuegos y, en Mac, el <strong>receptor AirPlay</strong> desactivado (usa el mismo puerto). <strong>Conexión › 🩺 Diagnóstico › 📱 Prueba de tableta</strong> lo comprueba todo. Guía completa: <a href="controler-mystrow-tablette-telephone">controlar MyStrow desde una tableta</a>.</p><figure class="shot tall"><img src="/img-manuel/es/tablette-entree-externe.webp" width="568" height="1314" alt="Ventana Entrada externa de MyStrow activada: código QR, dirección y código de emparejamiento para la tableta" loading="lazy"><figcaption><strong>Entrada externa</strong> activada: escanea el código QR con la tableta, en la misma Wi-Fi.</figcaption></figure></div>
     </div>
   </section>
 

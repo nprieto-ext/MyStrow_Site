@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="fenetre" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>A janela Patch DMX</h2>
-      <div class="prose"><p>Menu <strong>Editar › 🔌 Patch DMX</strong>. À esquerda, a lista de aparelhos (ordenável por <strong>Endereço</strong>, <strong>Nome</strong> ou <strong>Grupo</strong>, com um campo de filtro). À direita, a ficha do aparelho selecionado. Um separador <strong>🎭 Mapa de luz</strong> mostra os projetores colocados no palco.</p><p>A barra de cima reúne: <strong>📁 Arquivo</strong> (novo patch, guardar, importar, exportar), <strong>✏️ Edição</strong> (anular <code>Ctrl+Z</code>, refazer <code>Ctrl+Y</code>, <strong>⚡ Auto Endereço</strong>), <strong>🛠 Criar sua fixture</strong> e <strong>➕ Adicionar</strong>. Não se esqueça de <strong>💾 Salvar</strong> antes de fechar: o MyStrow avisa se houver alterações por guardar.</p></div>
+      <div class="prose"><p>Menu <strong>Editar › 🔌 Patch DMX</strong>. À esquerda, a lista de aparelhos (ordenável por <strong>Endereço</strong>, <strong>Nome</strong> ou <strong>Grupo</strong>, com um campo de filtro). À direita, a ficha do aparelho selecionado. Um separador <strong>🎭 Mapa de luz</strong> mostra os projetores colocados no palco.</p><p>A barra de cima reúne: <strong>📁 Arquivo</strong> (novo patch, guardar, importar, exportar), <strong>✏️ Edição</strong> (anular <code>Ctrl+Z</code>, refazer <code>Ctrl+Y</code>, <strong>⚡ Auto Endereço</strong>), <strong>🛠 Criar sua fixture</strong> e <strong>➕ Adicionar</strong>. Não se esqueça de <strong>💾 Salvar</strong> antes de fechar: o MyStrow avisa se houver alterações por guardar.</p><figure class="shot"><img src="/img-manuel/pt/patch-fenetre.webp" width="1400" height="807" alt="Janela Patch DMX do MyStrow: lista de aparelhos à esquerda, ficha do aparelho à direita, botão Adicionar" loading="lazy"><figcaption>A janela <strong>Patch DMX</strong>: a lista de aparelhos à esquerda, a ficha do aparelho selecionado à direita.</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="ajouter" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Adicionar um projetor da biblioteca</h2>
-      <div class="prose"><ol><li>Clique em <strong>➕ Adicionar</strong>: abre a <strong>Biblioteca de fixtures</strong> (mais de 5000 modelos).</li><li>Escreva a marca ou o modelo na pesquisa, ou filtre por fabricante.</li><li>Escolha o <strong>modo DMX</strong>: <strong>exatamente o mesmo</strong> que está configurado no projetor (o número de canais, no menu ou no manual). A lista de canais do modo é mostrada para confirmar.</li><li>Indique a <strong>quantidade</strong> e, se quiser, um <strong>nome personalizado</strong>, e depois <strong>Adicionar</strong>. Os aparelhos são numerados e colocados uns a seguir aos outros.</li></ol><p>O separador <strong>Meus refletores</strong> da biblioteca contém as fixtures que criou ou importou.</p><p><strong>As barras LED e as matrizes de píxeis</strong> adicionam-se da mesma forma. A ficha ganha uma secção <strong>Disposição dos pixels</strong>: linhas × colunas, cablagem <strong>por linhas</strong> ou em <strong>serpentina</strong>, <strong>⇄ Inverter a ordem</strong> (barra pendurada ao contrário) e tamanho real para o mapa 2D e 3D.</p></div>
+      <div class="prose"><ol><li>Clique em <strong>➕ Adicionar</strong>: abre a <strong>Biblioteca de fixtures</strong> (mais de 5000 modelos).</li><li>Escreva a marca ou o modelo na pesquisa, ou filtre por fabricante.</li><li>Escolha o <strong>modo DMX</strong>: <strong>exatamente o mesmo</strong> que está configurado no projetor (o número de canais, no menu ou no manual). A lista de canais do modo é mostrada para confirmar.</li><li>Indique a <strong>quantidade</strong> e, se quiser, um <strong>nome personalizado</strong>, e depois <strong>Adicionar</strong>. Os aparelhos são numerados e colocados uns a seguir aos outros.</li></ol><p>O separador <strong>Meus refletores</strong> da biblioteca contém as fixtures que criou ou importou.</p><p><strong>As barras LED e as matrizes de píxeis</strong> adicionam-se da mesma forma. A ficha ganha uma secção <strong>Disposição dos pixels</strong>: linhas × colunas, cablagem <strong>por linhas</strong> ou em <strong>serpentina</strong>, <strong>⇄ Inverter a ordem</strong> (barra pendurada ao contrário) e tamanho real para o mapa 2D e 3D.</p><figure class="shot"><img src="/img-manuel/pt/patch-bibliotheque.webp" width="1400" height="1041" alt="Biblioteca de fixtures do MyStrow: pesquisa de um modelo e perfil DMX dos seus canais" loading="lazy"><figcaption>A <strong>biblioteca de fixtures</strong>: escreva o modelo, verifique os canais do perfil e depois <strong>Adicionar</strong>.</figcaption></figure></div>
     </div>
   </section>
 

@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="fenetre" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Das Fenster DMX-Patch</h2>
-      <div class="prose"><p>Menü <strong>Bearbeiten › 🔌 DMX-Patch</strong>. Links die Liste der Geräte (sortierbar nach <strong>Adresse</strong>, <strong>Name</strong> oder <strong>Gruppe</strong>, mit Filterfeld). Rechts das Blatt des gewählten Geräts. Eine Registerkarte <strong>🎭 Lichtplan</strong> zeigt die Scheinwerfer auf der Bühne.</p><p>Die obere Leiste enthält: <strong>📁 Datei</strong> (neuer Patch, speichern, importieren, exportieren), <strong>✏️ Bearbeiten</strong> (rückgängig <code>Strg+Z</code>, wiederherstellen <code>Strg+Y</code>, <strong>⚡ Auto-Adresse</strong>), <strong>🛠 Eigene Fixture erstellen</strong> und <strong>➕ Hinzufügen</strong>. Denken Sie vor dem Schließen an <strong>💾 Speichern</strong>: MyStrow warnt bei ungespeicherten Änderungen.</p></div>
+      <div class="prose"><p>Menü <strong>Bearbeiten › 🔌 DMX-Patch</strong>. Links die Liste der Geräte (sortierbar nach <strong>Adresse</strong>, <strong>Name</strong> oder <strong>Gruppe</strong>, mit Filterfeld). Rechts das Blatt des gewählten Geräts. Eine Registerkarte <strong>🎭 Lichtplan</strong> zeigt die Scheinwerfer auf der Bühne.</p><p>Die obere Leiste enthält: <strong>📁 Datei</strong> (neuer Patch, speichern, importieren, exportieren), <strong>✏️ Bearbeiten</strong> (rückgängig <code>Strg+Z</code>, wiederherstellen <code>Strg+Y</code>, <strong>⚡ Auto-Adresse</strong>), <strong>🛠 Eigene Fixture erstellen</strong> und <strong>➕ Hinzufügen</strong>. Denken Sie vor dem Schließen an <strong>💾 Speichern</strong>: MyStrow warnt bei ungespeicherten Änderungen.</p><figure class="shot"><img src="/img-manuel/de/patch-fenetre.webp" width="1400" height="807" alt="MyStrow-Fenster DMX-Patch: Geräteliste links, Gerätedatenblatt rechts, Schaltfläche Hinzufügen" loading="lazy"><figcaption>Das Fenster <strong>DMX-Patch</strong>: links die Geräteliste, rechts das Datenblatt des gewählten Geräts.</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="ajouter" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Einen Scheinwerfer aus der Bibliothek hinzufügen</h2>
-      <div class="prose"><ol><li>Klicken Sie auf <strong>➕ Hinzufügen</strong>: Die <strong>Fixture-Bibliothek</strong> öffnet sich (über 5.000 Modelle).</li><li>Geben Sie Marke oder Modell in das Suchfeld ein oder filtern Sie nach Hersteller.</li><li>Wählen Sie den <strong>DMX-Modus</strong>: <strong>genau denselben</strong> wie am Scheinwerfer eingestellt (seine Kanalzahl, im Menü oder in der Anleitung). Die Kanalliste des Modus wird zur Kontrolle angezeigt.</li><li>Geben Sie die <strong>Menge</strong> und auf Wunsch einen <strong>eigenen Namen</strong> ein, dann <strong>Hinzufügen</strong>. Die Geräte werden nummeriert und hintereinander platziert.</li></ol><p>Die Registerkarte <strong>Meine Scheinwerfer</strong> der Bibliothek enthält die Fixtures, die Sie erstellt oder importiert haben.</p><p><strong>LED-Bars und Pixel-Matrizen</strong> fügt man genauso hinzu. Ihr Blatt erhält einen Bereich <strong>Pixel-Anordnung</strong>: Zeilen × Spalten, Verkabelung <strong>zeilenweise</strong> oder <strong>serpentinenförmig</strong>, <strong>⇄ Reihenfolge umkehren</strong> (umgekehrt aufgehängte Bar) und reale Größe für den 2D- und 3D-Plan.</p></div>
+      <div class="prose"><ol><li>Klicken Sie auf <strong>➕ Hinzufügen</strong>: Die <strong>Fixture-Bibliothek</strong> öffnet sich (über 5.000 Modelle).</li><li>Geben Sie Marke oder Modell in das Suchfeld ein oder filtern Sie nach Hersteller.</li><li>Wählen Sie den <strong>DMX-Modus</strong>: <strong>genau denselben</strong> wie am Scheinwerfer eingestellt (seine Kanalzahl, im Menü oder in der Anleitung). Die Kanalliste des Modus wird zur Kontrolle angezeigt.</li><li>Geben Sie die <strong>Menge</strong> und auf Wunsch einen <strong>eigenen Namen</strong> ein, dann <strong>Hinzufügen</strong>. Die Geräte werden nummeriert und hintereinander platziert.</li></ol><p>Die Registerkarte <strong>Meine Scheinwerfer</strong> der Bibliothek enthält die Fixtures, die Sie erstellt oder importiert haben.</p><p><strong>LED-Bars und Pixel-Matrizen</strong> fügt man genauso hinzu. Ihr Blatt erhält einen Bereich <strong>Pixel-Anordnung</strong>: Zeilen × Spalten, Verkabelung <strong>zeilenweise</strong> oder <strong>serpentinenförmig</strong>, <strong>⇄ Reihenfolge umkehren</strong> (umgekehrt aufgehängte Bar) und reale Größe für den 2D- und 3D-Plan.</p><figure class="shot"><img src="/img-manuel/de/patch-bibliotheque.webp" width="1400" height="1041" alt="MyStrow-Fixture-Bibliothek: Suche nach einem Modell und DMX-Profil seiner Kanäle" loading="lazy"><figcaption>Die <strong>Fixture-Bibliothek</strong>: Modell eintippen, Kanäle des Profils prüfen, dann <strong>Hinzufügen</strong>.</figcaption></figure></div>
     </div>
   </section>
 

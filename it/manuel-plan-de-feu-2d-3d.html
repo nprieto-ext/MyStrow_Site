@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="2d" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>La pianta luci 2D</h2>
-      <div class="prose"><p>Nella finestra principale, la pianta luci mostra ogni proiettore del patch con il suo colore e la sua intensità dal vivo, il fronte in basso (<strong>FRONTALE / BASSO</strong>) e il controluce in alto (<strong>CONTROLUCE / ALTO</strong>).</p><ul><li><strong>Rotella del mouse</strong>: zoom; <strong>clic centrale</strong> o <strong>Alt + trascina</strong>: sposta la vista; <code>0</code>: pianta intera.</li><li>La disposizione (spostare, allineare, distribuire) si modifica in <strong>Modifica › 🔌 Patch DMX</strong>, scheda <strong>🎭 Pianta luci</strong>: trascina per spostare, <code>Shift</code> + trascina per agganciare, allinea e distribuisci per mettere in fila. Vedi il <a href="manuel-patch-dmx">capitolo Patch</a>.</li></ul></div>
+      <div class="prose"><p>Nella finestra principale, la pianta luci mostra ogni proiettore del patch con il suo colore e la sua intensità dal vivo, il fronte in basso (<strong>FRONTALE / BASSO</strong>) e il controluce in alto (<strong>CONTROLUCE / ALTO</strong>).</p><ul><li><strong>Rotella del mouse</strong>: zoom; <strong>clic centrale</strong> o <strong>Alt + trascina</strong>: sposta la vista; <code>0</code>: pianta intera.</li><li>La disposizione (spostare, allineare, distribuire) si modifica in <strong>Modifica › 🔌 Patch DMX</strong>, scheda <strong>🎭 Pianta luci</strong>: trascina per spostare, <code>Shift</code> + trascina per agganciare, allinea e distribuisci per mettere in fila. Vedi il <a href="manuel-patch-dmx">capitolo Patch</a>.</li></ul><figure class="shot"><img src="/img-manuel/it/plan-2d-fenetre-principale.webp" width="1400" height="806" alt="Finestra principale di MyStrow: la pianta luci 2D in alto a destra mostra il colore di ogni proiettore in diretta" loading="lazy"><figcaption>La <strong>pianta luci 2D</strong>, in alto a destra della finestra principale: ogni cerchio è un proiettore, nel suo colore del momento.</figcaption></figure></div>
     </div>
   </section>
 
@@ -344,7 +350,7 @@
   <section id="3d" class="section" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>La visualizzazione 3D</h2>
-      <div class="prose"><p><strong>Visualizza › Pianta 3D</strong>, o il pulsante <strong>Mostra la pianta luci in 3D</strong>, apre una finestra 3D che riproduce lo show in tempo reale, fasci compresi. Puoi preparare uno show intero a casa, senza proiettori.</p><ul><li><strong>Camera</strong>: trascina per ruotare, rotella per lo zoom, doppio clic per reimpostare; viste <strong>FRONTE</strong>, <strong>DALL'ALTO</strong>, <strong>LATO</strong>.</li><li><strong>Atmosfera della sala</strong>: la luce ambiente, dalla notte fonda al pieno giorno.</li><li><strong>Qualità di rendering</strong> (Bassa, Media, Alta): abbassala se l'immagine scatta con molti proiettori.</li><li><strong>Tieni la finestra in primo piano</strong>: per lasciarla su un secondo schermo.</li></ul></div>
+      <div class="prose"><p><strong>Visualizza › Pianta 3D</strong>, o il pulsante <strong>Mostra la pianta luci in 3D</strong>, apre una finestra 3D che riproduce lo show in tempo reale, fasci compresi. Puoi preparare uno show intero a casa, senza proiettori.</p><ul><li><strong>Camera</strong>: trascina per ruotare, rotella per lo zoom, doppio clic per reimpostare; viste <strong>FRONTE</strong>, <strong>DALL'ALTO</strong>, <strong>LATO</strong>.</li><li><strong>Atmosfera della sala</strong>: la luce ambiente, dalla notte fonda al pieno giorno.</li><li><strong>Qualità di rendering</strong> (Bassa, Media, Alta): abbassala se l'immagine scatta con molti proiettori.</li><li><strong>Tieni la finestra in primo piano</strong>: per lasciarla su un secondo schermo.</li></ul><figure class="shot"><img src="/img-manuel/it/plan-3d.webp" width="1400" height="840" alt="Vista 3D di MyStrow: palco da festival illuminato, fasci colorati e scelta del punto di vista" loading="lazy"><figcaption>La <strong>vista 3D</strong> riproduce lo show in tempo reale. A destra: i punti di vista.</figcaption></figure></div>
     </div>
   </section>
 

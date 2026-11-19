@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="playlist" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Die Playlist: Medien hinzufügen</h2>
-      <div class="prose"><p>Ein <strong>Rechtsklick</strong> in die Playlist öffnet das Hinzufügen-Menü:</p><ul><li><strong>📁 Medium hinzufügen</strong>: Töne (MP3, WAV…), Videos, Bilder.</li><li><strong>⏸ Pause hinzufügen</strong>: eine feste Dauer oder <strong>♾ Unbegrenzt</strong> (Warten, bis Sie von Hand fortsetzen).</li><li><strong>🌐 Webseite hinzufügen</strong>: eine Webseite auf dem Video-Ausgang.</li></ul><p>Die Spalten zeigen <strong>Titel</strong>, Dauer, <strong>Vol %</strong> und den Lichtmodus. Ein Rechtsklick auf ein Medium bietet außerdem: <strong>🔊 Lautstärke</strong>, <strong>⏱ Dauer festlegen</strong> (für ein Bild), <strong>🔁 In Schleife abspielen</strong>, <strong>🎚 Ein-/Ausblenden</strong>, <strong>🔗 Mit vorherigem Ton starten</strong> (ein Bild oder Video während des Tons darüber), <strong>⧉ Duplizieren (mit REC Licht)</strong> und <strong>🗑️ Löschen</strong>.</p><p>Wurde eine Datei verschoben, meldet MyStrow das und bietet an, sie neu zu suchen.</p></div>
+      <div class="prose"><p>Ein <strong>Rechtsklick</strong> in die Playlist öffnet das Hinzufügen-Menü:</p><ul><li><strong>📁 Medium hinzufügen</strong>: Töne (MP3, WAV…), Videos, Bilder.</li><li><strong>⏸ Pause hinzufügen</strong>: eine feste Dauer oder <strong>♾ Unbegrenzt</strong> (Warten, bis Sie von Hand fortsetzen).</li><li><strong>🌐 Webseite hinzufügen</strong>: eine Webseite auf dem Video-Ausgang.</li></ul><p>Die Spalten zeigen <strong>Titel</strong>, Dauer, <strong>Vol %</strong> und den Lichtmodus. Ein Rechtsklick auf ein Medium bietet außerdem: <strong>🔊 Lautstärke</strong>, <strong>⏱ Dauer festlegen</strong> (für ein Bild), <strong>🔁 In Schleife abspielen</strong>, <strong>🎚 Ein-/Ausblenden</strong>, <strong>🔗 Mit vorherigem Ton starten</strong> (ein Bild oder Video während des Tons darüber), <strong>⧉ Duplizieren (mit REC Licht)</strong> und <strong>🗑️ Löschen</strong>.</p><p>Wurde eine Datei verschoben, meldet MyStrow das und bietet an, sie neu zu suchen.</p><figure class="shot"><img src="/img-manuel/de/playlist-fenetre-principale.webp" width="1400" height="770" alt="MyStrow-Playlist in der Mitte des Hauptfensters: ein Titel mit Dauer, Lautstärke und Lichtmodus" loading="lazy"><figcaption>Die <strong>Playlist</strong> in der Mitte des Hauptfensters: Jedes Medium hat seine Dauer, Lautstärke und seinen Lichtmodus (Spalte DMX).</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="rec" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>REC Licht: das Licht auf die Musik schreiben</h2>
-      <div class="prose"><p><strong>Rechtsklick auf ein Medium › 🔴 REC Licht</strong> öffnet den Timeline-Editor dieses Mediums. Beim ersten Öffnen analysiert MyStrow das Audio (Wellenform, Beats). Die Analyse wird gespeichert: Beim nächsten Mal öffnet er sofort.</p><p>Der Editor zeigt:</p><ul><li><strong>eine Spur pro Scheinwerfergruppe</strong> (Front, Contre, Moving Heads…) und auf Wunsch eine Spur pro Scheinwerfer (<strong>Ansicht › Spuren pro Scheinwerfer</strong>);</li><li><strong>Effektspuren</strong> (<strong>＋ Effektspur hinzufügen</strong>, um mehrere Effekte zu stapeln) und <strong>Sequenzspuren</strong>;</li><li>die <strong>Wellenform</strong> des Songs, um Wechsel auf die starken Zeiten zu legen;</li><li>die <strong>BIBLIOTHEK</strong>: FARBE, ZWEIFARBIG, SPEICHER, MOVING-HEAD-POSITIONEN, EFFEKTE und MEINE EFFEKTE;</li><li>einen <strong>2D-Lichtplan</strong> (oder 3D), der live zeigt, was die Timeline spielt.</li></ul><p>Die <strong>Leertaste</strong> startet und stoppt die Wiedergabe, <code>Umschalt</code> + Mausrad zoomt, <code>Strg+S</code> speichert.</p></div>
+      <div class="prose"><p><strong>Rechtsklick auf ein Medium › 🔴 REC Licht</strong> öffnet den Timeline-Editor dieses Mediums. Beim ersten Öffnen analysiert MyStrow das Audio (Wellenform, Beats). Die Analyse wird gespeichert: Beim nächsten Mal öffnet er sofort.</p><p>Der Editor zeigt:</p><ul><li><strong>eine Spur pro Scheinwerfergruppe</strong> (Front, Contre, Moving Heads…) und auf Wunsch eine Spur pro Scheinwerfer (<strong>Ansicht › Spuren pro Scheinwerfer</strong>);</li><li><strong>Effektspuren</strong> (<strong>＋ Effektspur hinzufügen</strong>, um mehrere Effekte zu stapeln) und <strong>Sequenzspuren</strong>;</li><li>die <strong>Wellenform</strong> des Songs, um Wechsel auf die starken Zeiten zu legen;</li><li>die <strong>BIBLIOTHEK</strong>: FARBE, ZWEIFARBIG, SPEICHER, MOVING-HEAD-POSITIONEN, EFFEKTE und MEINE EFFEKTE;</li><li>einen <strong>2D-Lichtplan</strong> (oder 3D), der live zeigt, was die Timeline spielt.</li></ul><p>Die <strong>Leertaste</strong> startet und stoppt die Wiedergabe, <code>Umschalt</code> + Mausrad zoomt, <code>Strg+S</code> speichert.</p><figure class="shot"><img src="/img-manuel/de/rec-lumiere-editeur.webp" width="1400" height="807" alt="MyStrow-Editor REC Licht: Wellenform des Titels, erkannte Beats und Spuren mit Farbblöcken pro Gruppe" loading="lazy"><figcaption>Der Editor <strong>REC Licht</strong>: links die Bibliothek, oben der Lichtplan, unten Wellenform und Blockspuren.</figcaption></figure></div>
     </div>
   </section>
 

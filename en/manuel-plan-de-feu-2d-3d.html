@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="2d" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>The 2D lighting plan</h2>
-      <div class="prose"><p>In the main window, the lighting plan shows each patched fixture with its live colour and intensity, the front at the bottom (<strong>FRONT / BOTTOM</strong>) and the back at the top (<strong>BACK / TOP</strong>).</p><ul><li><strong>Mouse wheel</strong>: zoom; <strong>middle click</strong> or <strong>Alt + drag</strong>: move the view; <code>0</code>: whole plan.</li><li>The layout (move, align, spread) is edited in <strong>Edit › 🔌 DMX Patch</strong>, <strong>🎭 Lighting plan</strong> tab: drag to move, <code>Shift</code> + drag to snap, align and spread to tidy a row. See the <a href="manuel-patch-dmx">Patch chapter</a>.</li></ul></div>
+      <div class="prose"><p>In the main window, the lighting plan shows each patched fixture with its live colour and intensity, the front at the bottom (<strong>FRONT / BOTTOM</strong>) and the back at the top (<strong>BACK / TOP</strong>).</p><ul><li><strong>Mouse wheel</strong>: zoom; <strong>middle click</strong> or <strong>Alt + drag</strong>: move the view; <code>0</code>: whole plan.</li><li>The layout (move, align, spread) is edited in <strong>Edit › 🔌 DMX Patch</strong>, <strong>🎭 Lighting plan</strong> tab: drag to move, <code>Shift</code> + drag to snap, align and spread to tidy a row. See the <a href="manuel-patch-dmx">Patch chapter</a>.</li></ul><figure class="shot"><img src="/img-manuel/en/plan-2d-fenetre-principale.webp" width="1400" height="806" alt="MyStrow main window: the 2D lighting plan at the top right shows each fixture's colour live" loading="lazy"><figcaption>The <strong>2D lighting plan</strong>, top right of the main window: each circle is a fixture, in its current colour.</figcaption></figure></div>
     </div>
   </section>
 
@@ -344,7 +350,7 @@
   <section id="3d" class="section" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>The 3D visualisation</h2>
-      <div class="prose"><p><strong>View › 3D plan</strong>, or the <strong>Show the lighting plan in 3D</strong> button, opens a 3D window that replays the show in real time, beams included. You can prepare a whole show at home, with no fixtures.</p><ul><li><strong>Camera</strong>: drag to orbit, mouse wheel to zoom, double-click to reset; <strong>FRONT</strong>, <strong>TOP</strong>, <strong>SIDE</strong> views.</li><li><strong>Room ambience</strong>: the ambient light, from pitch dark to daylight.</li><li><strong>Render quality</strong> (Low, Medium, High): lower it if the display stutters with many fixtures.</li><li><strong>Keep the window on top</strong>: to leave it on a second screen.</li></ul></div>
+      <div class="prose"><p><strong>View › 3D plan</strong>, or the <strong>Show the lighting plan in 3D</strong> button, opens a 3D window that replays the show in real time, beams included. You can prepare a whole show at home, with no fixtures.</p><ul><li><strong>Camera</strong>: drag to orbit, mouse wheel to zoom, double-click to reset; <strong>FRONT</strong>, <strong>TOP</strong>, <strong>SIDE</strong> views.</li><li><strong>Room ambience</strong>: the ambient light, from pitch dark to daylight.</li><li><strong>Render quality</strong> (Low, Medium, High): lower it if the display stutters with many fixtures.</li><li><strong>Keep the window on top</strong>: to leave it on a second screen.</li></ul><figure class="shot"><img src="/img-manuel/en/plan-3d.webp" width="1400" height="840" alt="MyStrow 3D view: lit festival stage, coloured beams and viewpoint choice" loading="lazy"><figcaption>The <strong>3D view</strong> replays the show in real time. On the right: the viewpoints.</figcaption></figure></div>
     </div>
   </section>
 

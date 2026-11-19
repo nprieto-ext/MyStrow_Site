@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="playlist" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>La playlist: aggiungere i tuoi media</h2>
-      <div class="prose"><p>Un <strong>clic destro</strong> nella playlist apre il menu di aggiunta:</p><ul><li><strong>📁 Aggiungi un media</strong>: suoni (MP3, WAV…), video, immagini.</li><li><strong>⏸ Aggiungi una pausa</strong>: una durata fissa oppure <strong>♾ Indefinita</strong> (aspetta che tu riparta a mano).</li><li><strong>🌐 Aggiungi un sito web</strong>: una pagina web mostrata sull'uscita video.</li></ul><p>Le colonne indicano <strong>Titolo</strong>, durata, <strong>Vol %</strong> e modalità luci. Il clic destro su un media offre anche: <strong>🔊 Volume</strong>, <strong>⏱ Imposta la durata</strong> (per un'immagine), <strong>🔁 Riproduci in loop</strong>, <strong>🎚 Dissolvenza in entrata / uscita</strong>, <strong>🔗 Avvia con il suono precedente</strong> (un'immagine o un video mostrato durante il suono sopra), <strong>⧉ Duplica (con REC Luci)</strong> e <strong>🗑️ Elimina</strong>.</p><p>Se un file è stato spostato, MyStrow lo segnala e propone di ritrovarlo.</p></div>
+      <div class="prose"><p>Un <strong>clic destro</strong> nella playlist apre il menu di aggiunta:</p><ul><li><strong>📁 Aggiungi un media</strong>: suoni (MP3, WAV…), video, immagini.</li><li><strong>⏸ Aggiungi una pausa</strong>: una durata fissa oppure <strong>♾ Indefinita</strong> (aspetta che tu riparta a mano).</li><li><strong>🌐 Aggiungi un sito web</strong>: una pagina web mostrata sull'uscita video.</li></ul><p>Le colonne indicano <strong>Titolo</strong>, durata, <strong>Vol %</strong> e modalità luci. Il clic destro su un media offre anche: <strong>🔊 Volume</strong>, <strong>⏱ Imposta la durata</strong> (per un'immagine), <strong>🔁 Riproduci in loop</strong>, <strong>🎚 Dissolvenza in entrata / uscita</strong>, <strong>🔗 Avvia con il suono precedente</strong> (un'immagine o un video mostrato durante il suono sopra), <strong>⧉ Duplica (con REC Luci)</strong> e <strong>🗑️ Elimina</strong>.</p><p>Se un file è stato spostato, MyStrow lo segnala e propone di ritrovarlo.</p><figure class="shot"><img src="/img-manuel/it/playlist-fenetre-principale.webp" width="1400" height="806" alt="Playlist di MyStrow al centro della finestra principale: un brano con durata, volume e modalità luci" loading="lazy"><figcaption>La <strong>playlist</strong>, al centro della finestra principale: ogni media ha la sua durata, il suo volume e la sua modalità luci (colonna DMX).</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="rec" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Il REC Luci: scrivere le luci sulla musica</h2>
-      <div class="prose"><p><strong>Clic destro su un media › 🔴 REC Luci</strong> apre l'editor timeline di quel media. La prima volta MyStrow analizza l'audio (forma d'onda, beat). L'analisi resta in memoria: la volta dopo si apre subito.</p><p>L'editor mostra:</p><ul><li><strong>una traccia per gruppo</strong> di proiettori (Fronte, Controluce, Teste mobili…) e, se lo chiedi, una traccia per proiettore (<strong>Visualizza › Tracce per proiettore</strong>);</li><li><strong>tracce Effetto</strong> (<strong>＋ Aggiungi una traccia Effetto</strong>, per sovrapporre più effetti) e <strong>tracce Sequenza</strong>;</li><li>la <strong>forma d'onda</strong> della musica, per allineare i cambi sui tempi forti;</li><li>la <strong>LIBRERIA</strong>: COLORE, BICOLORE, MEMORIA, POSIZIONI TESTE MOBILI, EFFETTI e I MIEI EFFETTI;</li><li>una <strong>pianta luci 2D</strong> (o 3D) che mostra dal vivo cosa suona la timeline.</li></ul><p>Lo <strong>Spazio</strong> avvia e ferma la riproduzione, <code>Shift</code> + rotella zooma, <code>Ctrl+S</code> salva.</p></div>
+      <div class="prose"><p><strong>Clic destro su un media › 🔴 REC Luci</strong> apre l'editor timeline di quel media. La prima volta MyStrow analizza l'audio (forma d'onda, beat). L'analisi resta in memoria: la volta dopo si apre subito.</p><p>L'editor mostra:</p><ul><li><strong>una traccia per gruppo</strong> di proiettori (Fronte, Controluce, Teste mobili…) e, se lo chiedi, una traccia per proiettore (<strong>Visualizza › Tracce per proiettore</strong>);</li><li><strong>tracce Effetto</strong> (<strong>＋ Aggiungi una traccia Effetto</strong>, per sovrapporre più effetti) e <strong>tracce Sequenza</strong>;</li><li>la <strong>forma d'onda</strong> della musica, per allineare i cambi sui tempi forti;</li><li>la <strong>LIBRERIA</strong>: COLORE, BICOLORE, MEMORIA, POSIZIONI TESTE MOBILI, EFFETTI e I MIEI EFFETTI;</li><li>una <strong>pianta luci 2D</strong> (o 3D) che mostra dal vivo cosa suona la timeline.</li></ul><p>Lo <strong>Spazio</strong> avvia e ferma la riproduzione, <code>Shift</code> + rotella zooma, <code>Ctrl+S</code> salva.</p><figure class="shot"><img src="/img-manuel/it/rec-lumiere-editeur.webp" width="1400" height="807" alt="Editor REC Luci di MyStrow: forma d'onda del brano, beat rilevati e tracce di blocchi di colore per gruppo" loading="lazy"><figcaption>L'editor <strong>REC Luci</strong>: la libreria a sinistra, la pianta luci in alto, la forma d'onda e le tracce di blocchi in basso.</figcaption></figure></div>
     </div>
   </section>
 

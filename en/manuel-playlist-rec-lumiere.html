@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="playlist" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>The playlist: adding your media</h2>
-      <div class="prose"><p>A <strong>right-click</strong> in the playlist opens the add menu:</p><ul><li><strong>📁 Add a media</strong>: sounds (MP3, WAV…), videos, images.</li><li><strong>⏸ Add a pause</strong>: a fixed duration, or <strong>♾ Indefinite</strong> (wait until you restart manually).</li><li><strong>🌐 Add a website</strong>: a web page shown on the video output.</li></ul><p>The columns show the <strong>Title</strong>, the duration, <strong>Vol %</strong> and the light mode. Right-clicking a media item also gives: <strong>🔊 Volume</strong>, <strong>⏱ Set duration</strong> (for an image), <strong>🔁 Play in a loop</strong>, <strong>🎚 Fade in / out</strong>, <strong>🔗 Launch with previous sound</strong> (an image or video shown during the sound above), <strong>⧉ Duplicate (with Light REC)</strong> and <strong>🗑️ Delete</strong>.</p><p>If a file has been moved, MyStrow says so and offers to locate it.</p></div>
+      <div class="prose"><p>A <strong>right-click</strong> in the playlist opens the add menu:</p><ul><li><strong>📁 Add a media</strong>: sounds (MP3, WAV…), videos, images.</li><li><strong>⏸ Add a pause</strong>: a fixed duration, or <strong>♾ Indefinite</strong> (wait until you restart manually).</li><li><strong>🌐 Add a website</strong>: a web page shown on the video output.</li></ul><p>The columns show the <strong>Title</strong>, the duration, <strong>Vol %</strong> and the light mode. Right-clicking a media item also gives: <strong>🔊 Volume</strong>, <strong>⏱ Set duration</strong> (for an image), <strong>🔁 Play in a loop</strong>, <strong>🎚 Fade in / out</strong>, <strong>🔗 Launch with previous sound</strong> (an image or video shown during the sound above), <strong>⧉ Duplicate (with Light REC)</strong> and <strong>🗑️ Delete</strong>.</p><p>If a file has been moved, MyStrow says so and offers to locate it.</p><figure class="shot"><img src="/img-manuel/en/playlist-fenetre-principale.webp" width="1400" height="806" alt="MyStrow playlist in the middle of the main window: a track with its duration, volume and light mode" loading="lazy"><figcaption>The <strong>playlist</strong>, in the middle of the main window: each media has its duration, volume and light mode (DMX column).</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="rec" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>REC Light: writing the light on the music</h2>
-      <div class="prose"><p><strong>Right-click a media item › 🔴 REC Light</strong> opens that item's timeline editor. On first opening, MyStrow analyses the audio (waveform, beats). The analysis is cached: next time, it opens instantly.</p><p>The editor shows:</p><ul><li><strong>one track per fixture group</strong> (Front, Back, Moving heads…), and on request one track per fixture (<strong>View › Per-projector tracks</strong>);</li><li><strong>Effect tracks</strong> (<strong>＋ Add an Effect track</strong>, to stack several effects) and <strong>Sequence tracks</strong>;</li><li>the song's <strong>waveform</strong>, to line changes up with the strong beats;</li><li>the <strong>LIBRARY</strong>: COLOR, BICOLOR, MEMORY, LYRE POSITIONS, EFFECTS and MY EFFECTS;</li><li>a <strong>2D lighting plan</strong> (or 3D) showing live what the timeline plays.</li></ul><p><strong>Space</strong> starts and stops playback, <code>Shift</code> + wheel zooms, <code>Ctrl+S</code> saves.</p></div>
+      <div class="prose"><p><strong>Right-click a media item › 🔴 REC Light</strong> opens that item's timeline editor. On first opening, MyStrow analyses the audio (waveform, beats). The analysis is cached: next time, it opens instantly.</p><p>The editor shows:</p><ul><li><strong>one track per fixture group</strong> (Front, Back, Moving heads…), and on request one track per fixture (<strong>View › Per-projector tracks</strong>);</li><li><strong>Effect tracks</strong> (<strong>＋ Add an Effect track</strong>, to stack several effects) and <strong>Sequence tracks</strong>;</li><li>the song's <strong>waveform</strong>, to line changes up with the strong beats;</li><li>the <strong>LIBRARY</strong>: COLOR, BICOLOR, MEMORY, LYRE POSITIONS, EFFECTS and MY EFFECTS;</li><li>a <strong>2D lighting plan</strong> (or 3D) showing live what the timeline plays.</li></ul><p><strong>Space</strong> starts and stops playback, <code>Shift</code> + wheel zooms, <code>Ctrl+S</code> saves.</p><figure class="shot"><img src="/img-manuel/en/rec-lumiere-editeur.webp" width="1400" height="807" alt="MyStrow REC Light editor: track waveform, detected beats and colour block lanes per group" loading="lazy"><figcaption>The <strong>REC Light</strong> editor: the library on the left, the lighting plan at the top, the waveform and block lanes at the bottom.</figcaption></figure></div>
     </div>
   </section>
 

@@ -183,6 +183,7 @@ Check your spam folder (and the Promotions tab in Gmail), then check the address
 
 Each **layer** animates **one channel** (intensity, colour, Pan/Tilt…) on **a selection of fixtures**, following **a shape** that repeats at a given speed. The **offset** between fixtures turns a simple blink into a chase or a wave.
 An effect can contain several layers playing together. Once saved, effects stay available in **MY EFFECTS**.
+The **Effect editor**: effects on the left, the layer table in the middle, the preview on the lighting plan on the right.
 
 1. **Open the effect editor** : Menu **Edit › 🎨 Effect editor**. On the left, the list of effects (factory effects and **MY EFFECTS**), in the middle the layer table, on the right the lighting plan playing the preview.
 2. **Start from an existing effect… or from scratch** : The quickest way: click a factory effect close to what you want, then **Duplicate** to work on a copy. To start from nothing: **＋ Add an effect › Create the effect myself** (a blank layer is created).
@@ -233,10 +234,10 @@ During the 15-day trial, DMX output works. After the trial, it requires an activ
 
 ### Opening the DMX Output window
 
-Menu **Connection › 🌐 DMX Output**. The window starts by asking **which interface you have**, with three choices you can tell apart by where the yellow logo is:
-- **MyStrow logo on the front**: this is the **USB NODE DMX** (ElectroConcept), the box in the MyStrow Pack. It plugs in over USB but speaks Art-Net: MyStrow sets it up on its own in the **Node output**, with no IP address to touch.
-- **MyStrow logo on top**: this is the **MyStrow USB-DMX (MS-DMY)**. Plug it in over USB, MyStrow finds it on its own. If you've just plugged it in, click **🔌 Connect**.
-- **Other interface**: the full screen, with two tabs, **🌐 Node output** and **🔌 USB DMX output**.
+Menu **Connection › 🌐 DMX Output**. The **« Set up the DMX output »** window has two tabs:
+- **🌐 Node output**: Art-Net nodes on the network, and boxes that plug in over USB but speak Art-Net, such as the **USB NODE DMX** from the MyStrow Pack;
+- **🔌 USB DMX output**: serial USB-DMX interfaces (MyStrow USB-DMX MS-DMY, ENTTEC, Eurolite, OPTO, DMXKing…).
+The **Read the guide** link at the top of the window opens the hardware connection help. When you plug in the **MyStrow USB-DMX box**, MyStrow recognises it on its own and offers to connect it.
 
 ### USB-DMX interface (USB DMX output tab)
 
@@ -248,6 +249,7 @@ Menu **Connection › 🌐 DMX Output**. The window starts by asking **which int
 **“Port unavailable”**: another program (QLC+, Freestyler, Chataigne…) is using the interface. Close it: only one program at a time can use it.
 A USB interface carries **only one universe**. Plugging in several USB interfaces doesn't give you several universes: for that, you need Art-Net nodes.
 For an Open DMX or an FTDI-chip interface, install the **FTDI driver** if MyStrow offers it.
+The **USB DMX output** tab: the interface, the COM port, then **Connect**.
 
 ### Art-Net node (Node output tab)
 
@@ -261,6 +263,7 @@ For an Open DMX or an FTDI-chip interface, install the **FTDI driver** if MyStro
 - tests the connection and confirms that the box is connected.
 If MyStrow finds the box at a different address from the one it's looking for, it says so and offers a **Use [address]** button: one click is enough, nothing to change on the network.
 On first launch, **allow MyStrow through the firewall** when Windows asks: otherwise the node won't be found.
+The **Node output** tab: if the network card isn't set up, the **Set up the network connection** wizard takes care of it.
 
 ### Several universes and several nodes
 
@@ -270,6 +273,7 @@ In the Node output tab, **Advanced options › Output routing** shows, for each 
 - Two lines can carry **the same universe**: that's mirroring, to duplicate a line at the other end of the venue without a splitter.
 - A line can be **Disabled** or used as a **DMX input (console)**, to drive MyStrow from a lighting desk.
 Then, in the patch, put each fixture in the universe of the line it's cabled on (addresses restart at 1 in each universe). Full walkthrough: [several universes with several Art-Net nodes](https://mystrow.fr/en/plusieurs-univers-nodes-artnet-mystrow).
+**Advanced options › Output routing**: one universe and one node per DMX line.
 
 ### Testing the output: DMX Tester and DMX Monitor
 
@@ -280,6 +284,7 @@ Then, in the patch, put each fixture in the universe of the line it's cabled on 
 - the MIDI controller's faders drive 9 channels at a time;
 - when you close it, the show is restored as it was.
 **Edit › 📡 DMX Monitor** shows live what actually goes out on each universe: active channels, frames per second, interface used, and a warning if a universe isn't being sent (for example universe 2 on a USB interface, which only carries universe 1).
+The **DMX Tester**: channels on the left, group test and universe on the right.
 
 ### Diagnosing a silent output
 
@@ -310,6 +315,7 @@ The **patch** tells MyStrow which fixtures you have, which **DMX address** each 
 
 Menu **Edit › 🔌 DMX Patch**. On the left, the list of devices (sortable by **Address**, **Name** or **Group**, with a filter field). On the right, the selected device's sheet. A **🎭 Lighting plan** tab shows the fixtures placed on stage.
 The top bar holds: **📁 File** (new patch, save, import, export), **✏️ Edit** (undo `Ctrl+Z`, redo `Ctrl+Y`, **⚡ Auto address**), **🛠 Create your fixture** and **➕ Add**. Remember to **💾 Save** before closing: MyStrow warns you if changes are unsaved.
+The **DMX Patch** window: the fixture list on the left, the selected fixture's sheet on the right.
 
 ### Starting from scratch: the wizard
 
@@ -326,6 +332,7 @@ The top bar holds: **📁 File** (new patch, save, import, export), **✏️ Edi
 - Enter the **Quantity** and, if you want, a **custom name**, then **Add**. Devices are numbered and placed one after another.
 The library's **My projectors** tab contains the fixtures you've created or imported.
 **LED bars and pixel matrices** are added the same way. Their sheet gains a **Pixel layout** section: rows × columns, wiring **by rows** or **serpentine**, **⇄ Reverse the order** (bar hung the other way round) and real size for the 2D and 3D plan.
+The **Fixture Library**: type the model, check the profile's channels, then **Add**.
 
 ### A device's sheet: name, group, universe, address
 
@@ -448,6 +455,7 @@ The **lighting plan** shows your fixtures where they are on stage, and what they
 In the main window, the lighting plan shows each patched fixture with its live colour and intensity, the front at the bottom (**FRONT / BOTTOM**) and the back at the top (**BACK / TOP**).
 - **Mouse wheel**: zoom; **middle click** or **Alt + drag**: move the view; `0`: whole plan.
 - The layout (move, align, spread) is edited in **Edit › 🔌 DMX Patch**, **🎭 Lighting plan** tab: drag to move, `Shift` + drag to snap, align and spread to tidy a row. See the [Patch chapter](https://mystrow.fr/en/manuel-patch-dmx).
+The **2D lighting plan**, top right of the main window: each circle is a fixture, in its current colour.
 
 ### Selecting and adjusting fixtures by hand
 
@@ -469,6 +477,7 @@ For LED bars and matrices, the **BAR / MATRIX EFFECTS** section offers Chase, Wa
 - **Room ambience**: the ambient light, from pitch dark to daylight.
 - **Render quality** (Low, Medium, High): lower it if the display stutters with many fixtures.
 - **Keep the window on top**: to leave it on a second screen.
+The **3D view** replays the show in real time. On the right: the viewpoints.
 
 ### Sets, trusses and imported scene
 
@@ -636,6 +645,7 @@ A **right-click** in the playlist opens the add menu:
 - **🌐 Add a website**: a web page shown on the video output.
 The columns show the **Title**, the duration, **Vol %** and the light mode. Right-clicking a media item also gives: **🔊 Volume**, **⏱ Set duration** (for an image), **🔁 Play in a loop**, **🎚 Fade in / out**, **🔗 Launch with previous sound** (an image or video shown during the sound above), **⧉ Duplicate (with Light REC)** and **🗑️ Delete**.
 If a file has been moved, MyStrow says so and offers to locate it.
+The **playlist**, in the middle of the main window: each media has its duration, volume and light mode (DMX column).
 
 ### Each media item's light mode
 
@@ -655,6 +665,7 @@ The editor shows:
 - the **LIBRARY**: COLOR, BICOLOR, MEMORY, LYRE POSITIONS, EFFECTS and MY EFFECTS;
 - a **2D lighting plan** (or 3D) showing live what the timeline plays.
 **Space** starts and stops playback, `Shift` + wheel zooms, `Ctrl+S` saves.
+The **REC Light** editor: the library on the left, the lighting plan at the top, the waveform and block lanes at the bottom.
 
 ### Placing and editing blocks
 
@@ -815,6 +826,7 @@ MyStrow opens up to other devices and software: a **tablet** as a remote, **OBS*
 - Check the indicator at the top right, then go full screen.
 The tablet mirrors the pad surface (colours, memories, effects, positions, pages): the PC stays in charge, the tablet is just a remote. A paired device is recognised the next times.
 If the tablet won't connect: same Wi-Fi (not the guest network or 4G), MyStrow allowed through the firewall, and on Mac the **AirPlay Receiver** turned off (it uses the same port). **Connection › 🩺 Diagnostics › 📱 Tablet test** checks all this. Full guide: [controlling MyStrow from a tablet](https://mystrow.fr/en/controler-mystrow-tablette-telephone).
+**External Input** activated: scan the QR code with the tablet, on the same Wi-Fi.
 
 ### The tablet app, without a computer
 

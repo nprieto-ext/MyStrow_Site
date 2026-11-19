@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="playlist" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>A playlist: adicionar as suas mídias</h2>
-      <div class="prose"><p>Um <strong>clique direito</strong> na playlist abre o menu de adição:</p><ul><li><strong>📁 Adicionar uma mídia</strong>: sons (MP3, WAV…), vídeos, imagens.</li><li><strong>⏸ Adicionar uma pausa</strong>: uma duração fixa ou <strong>♾ Indefinido</strong> (espera até relançar à mão).</li><li><strong>🌐 Adicionar um site</strong>: uma página web mostrada na saída de vídeo.</li></ul><p>As colunas indicam o <strong>Título</strong>, a duração, o <strong>Vol %</strong> e o modo de luz. O clique direito numa mídia também dá: <strong>🔊 Volume</strong>, <strong>⏱ Definir a duração</strong> (para uma imagem), <strong>🔁 Tocar em loop</strong>, <strong>🎚 Fade de entrada / saída</strong>, <strong>🔗 Iniciar com o som anterior</strong> (uma imagem ou vídeo mostrado durante o som de cima), <strong>⧉ Duplicar (com REC Luz)</strong> e <strong>🗑️ Excluir</strong>.</p><p>Se um ficheiro foi movido, o MyStrow indica-o e propõe localizá-lo.</p></div>
+      <div class="prose"><p>Um <strong>clique direito</strong> na playlist abre o menu de adição:</p><ul><li><strong>📁 Adicionar uma mídia</strong>: sons (MP3, WAV…), vídeos, imagens.</li><li><strong>⏸ Adicionar uma pausa</strong>: uma duração fixa ou <strong>♾ Indefinido</strong> (espera até relançar à mão).</li><li><strong>🌐 Adicionar um site</strong>: uma página web mostrada na saída de vídeo.</li></ul><p>As colunas indicam o <strong>Título</strong>, a duração, o <strong>Vol %</strong> e o modo de luz. O clique direito numa mídia também dá: <strong>🔊 Volume</strong>, <strong>⏱ Definir a duração</strong> (para uma imagem), <strong>🔁 Tocar em loop</strong>, <strong>🎚 Fade de entrada / saída</strong>, <strong>🔗 Iniciar com o som anterior</strong> (uma imagem ou vídeo mostrado durante o som de cima), <strong>⧉ Duplicar (com REC Luz)</strong> e <strong>🗑️ Excluir</strong>.</p><p>Se um ficheiro foi movido, o MyStrow indica-o e propõe localizá-lo.</p><figure class="shot"><img src="/img-manuel/pt/playlist-fenetre-principale.webp" width="1400" height="806" alt="Playlist do MyStrow ao centro da janela principal: uma faixa com a sua duração, volume e modo de luz" loading="lazy"><figcaption>A <strong>playlist</strong>, ao centro da janela principal: cada média tem a sua duração, o seu volume e o seu modo de luz (coluna DMX).</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="rec" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>O REC Luz: escrever a luz na música</h2>
-      <div class="prose"><p><strong>Clique direito numa mídia › 🔴 REC Luz</strong> abre o editor de linha do tempo dessa mídia. Na primeira vez, o MyStrow analisa o áudio (forma de onda, beats). A análise fica guardada: da vez seguinte, abre de imediato.</p><p>O editor mostra:</p><ul><li><strong>uma pista por grupo</strong> de projetores (Frente, Contra, Moving heads…) e, se pedir, uma pista por projetor (<strong>Exibir › Faixas por refletor</strong>);</li><li><strong>pistas Efeito</strong> (<strong>＋ Adicionar uma faixa Efeito</strong>, para sobrepor vários efeitos) e <strong>pistas Sequência</strong>;</li><li>a <strong>forma de onda</strong> da música, para acertar as mudanças nos tempos fortes;</li><li>a <strong>BIBLIOTECA</strong>: COR, BICOLOR, MEMÓRIA, POSIÇÕES DE MOVING HEAD, EFEITOS e MEUS EFEITOS;</li><li>um <strong>mapa de luz 2D</strong> (ou 3D) que mostra ao vivo o que a linha do tempo toca.</li></ul><p>O <strong>Espaço</strong> lança e para a reprodução, <code>Shift</code> + roda faz zoom, <code>Ctrl+S</code> guarda.</p></div>
+      <div class="prose"><p><strong>Clique direito numa mídia › 🔴 REC Luz</strong> abre o editor de linha do tempo dessa mídia. Na primeira vez, o MyStrow analisa o áudio (forma de onda, beats). A análise fica guardada: da vez seguinte, abre de imediato.</p><p>O editor mostra:</p><ul><li><strong>uma pista por grupo</strong> de projetores (Frente, Contra, Moving heads…) e, se pedir, uma pista por projetor (<strong>Exibir › Faixas por refletor</strong>);</li><li><strong>pistas Efeito</strong> (<strong>＋ Adicionar uma faixa Efeito</strong>, para sobrepor vários efeitos) e <strong>pistas Sequência</strong>;</li><li>a <strong>forma de onda</strong> da música, para acertar as mudanças nos tempos fortes;</li><li>a <strong>BIBLIOTECA</strong>: COR, BICOLOR, MEMÓRIA, POSIÇÕES DE MOVING HEAD, EFEITOS e MEUS EFEITOS;</li><li>um <strong>mapa de luz 2D</strong> (ou 3D) que mostra ao vivo o que a linha do tempo toca.</li></ul><p>O <strong>Espaço</strong> lança e para a reprodução, <code>Shift</code> + roda faz zoom, <code>Ctrl+S</code> guarda.</p><figure class="shot"><img src="/img-manuel/pt/rec-lumiere-editeur.webp" width="1400" height="807" alt="Editor REC Luz do MyStrow: forma de onda da faixa, beats detetados e pistas de blocos de cor por grupo" loading="lazy"><figcaption>O editor <strong>REC Luz</strong>: a biblioteca à esquerda, o mapa de luz em cima, a forma de onda e as pistas de blocos em baixo.</figcaption></figure></div>
     </div>
   </section>
 

@@ -297,6 +297,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -331,7 +337,7 @@
   <section id="fenetre" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>The DMX Patch window</h2>
-      <div class="prose"><p>Menu <strong>Edit › 🔌 DMX Patch</strong>. On the left, the list of devices (sortable by <strong>Address</strong>, <strong>Name</strong> or <strong>Group</strong>, with a filter field). On the right, the selected device's sheet. A <strong>🎭 Lighting plan</strong> tab shows the fixtures placed on stage.</p><p>The top bar holds: <strong>📁 File</strong> (new patch, save, import, export), <strong>✏️ Edit</strong> (undo <code>Ctrl+Z</code>, redo <code>Ctrl+Y</code>, <strong>⚡ Auto address</strong>), <strong>🛠 Create your fixture</strong> and <strong>➕ Add</strong>. Remember to <strong>💾 Save</strong> before closing: MyStrow warns you if changes are unsaved.</p></div>
+      <div class="prose"><p>Menu <strong>Edit › 🔌 DMX Patch</strong>. On the left, the list of devices (sortable by <strong>Address</strong>, <strong>Name</strong> or <strong>Group</strong>, with a filter field). On the right, the selected device's sheet. A <strong>🎭 Lighting plan</strong> tab shows the fixtures placed on stage.</p><p>The top bar holds: <strong>📁 File</strong> (new patch, save, import, export), <strong>✏️ Edit</strong> (undo <code>Ctrl+Z</code>, redo <code>Ctrl+Y</code>, <strong>⚡ Auto address</strong>), <strong>🛠 Create your fixture</strong> and <strong>➕ Add</strong>. Remember to <strong>💾 Save</strong> before closing: MyStrow warns you if changes are unsaved.</p><figure class="shot"><img src="/img-manuel/en/patch-fenetre.webp" width="1400" height="807" alt="MyStrow DMX Patch window: fixture list on the left, fixture sheet on the right, Add button" loading="lazy"><figcaption>The <strong>DMX Patch</strong> window: the fixture list on the left, the selected fixture's sheet on the right.</figcaption></figure></div>
     </div>
   </section>
 
@@ -345,7 +351,7 @@
   <section id="ajouter" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Adding a fixture from the library</h2>
-      <div class="prose"><ol><li>Click <strong>➕ Add</strong>: the <strong>Fixture Library</strong> opens (more than 5,000 models).</li><li>Type the brand or model in the search field, or filter by manufacturer.</li><li>Choose the <strong>DMX mode</strong>: <strong>exactly the same</strong> as the one set on the fixture (its channel count, in its menu or manual). The mode's channel list is shown so you can check.</li><li>Enter the <strong>Quantity</strong> and, if you want, a <strong>custom name</strong>, then <strong>Add</strong>. Devices are numbered and placed one after another.</li></ol><p>The library's <strong>My projectors</strong> tab contains the fixtures you've created or imported.</p><p><strong>LED bars and pixel matrices</strong> are added the same way. Their sheet gains a <strong>Pixel layout</strong> section: rows × columns, wiring <strong>by rows</strong> or <strong>serpentine</strong>, <strong>⇄ Reverse the order</strong> (bar hung the other way round) and real size for the 2D and 3D plan.</p></div>
+      <div class="prose"><ol><li>Click <strong>➕ Add</strong>: the <strong>Fixture Library</strong> opens (more than 5,000 models).</li><li>Type the brand or model in the search field, or filter by manufacturer.</li><li>Choose the <strong>DMX mode</strong>: <strong>exactly the same</strong> as the one set on the fixture (its channel count, in its menu or manual). The mode's channel list is shown so you can check.</li><li>Enter the <strong>Quantity</strong> and, if you want, a <strong>custom name</strong>, then <strong>Add</strong>. Devices are numbered and placed one after another.</li></ol><p>The library's <strong>My projectors</strong> tab contains the fixtures you've created or imported.</p><p><strong>LED bars and pixel matrices</strong> are added the same way. Their sheet gains a <strong>Pixel layout</strong> section: rows × columns, wiring <strong>by rows</strong> or <strong>serpentine</strong>, <strong>⇄ Reverse the order</strong> (bar hung the other way round) and real size for the 2D and 3D plan.</p><figure class="shot"><img src="/img-manuel/en/patch-bibliotheque.webp" width="1400" height="1041" alt="MyStrow fixture library: searching for a model and viewing its DMX channel profile" loading="lazy"><figcaption>The <strong>Fixture Library</strong>: type the model, check the profile's channels, then <strong>Add</strong>.</figcaption></figure></div>
     </div>
   </section>
 

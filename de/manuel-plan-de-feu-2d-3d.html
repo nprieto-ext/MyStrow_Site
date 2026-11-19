@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="2d" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Der 2D-Lichtplan</h2>
-      <div class="prose"><p>Im Hauptfenster zeigt der Lichtplan jeden gepatchten Scheinwerfer mit seiner aktuellen Farbe und Intensität, die Front unten (<strong>FACE / UNTEN</strong>) und das Gegenlicht oben (<strong>CONTRE / OBEN</strong>).</p><ul><li><strong>Mausrad</strong>: Zoom; <strong>mittlere Maustaste</strong> oder <strong>Alt + Ziehen</strong>: Ansicht verschieben; <code>0</code>: ganzer Plan.</li><li>Die Anordnung (verschieben, ausrichten, verteilen) wird in <strong>Bearbeiten › 🔌 DMX-Patch</strong>, Registerkarte <strong>🎭 Lichtplan</strong> bearbeitet: Ziehen zum Verschieben, <code>Umschalt</code> + Ziehen zum Einrasten, Ausrichten und Verteilen für eine ordentliche Reihe. Siehe <a href="manuel-patch-dmx">Kapitel Patch</a>.</li></ul></div>
+      <div class="prose"><p>Im Hauptfenster zeigt der Lichtplan jeden gepatchten Scheinwerfer mit seiner aktuellen Farbe und Intensität, die Front unten (<strong>FACE / UNTEN</strong>) und das Gegenlicht oben (<strong>CONTRE / OBEN</strong>).</p><ul><li><strong>Mausrad</strong>: Zoom; <strong>mittlere Maustaste</strong> oder <strong>Alt + Ziehen</strong>: Ansicht verschieben; <code>0</code>: ganzer Plan.</li><li>Die Anordnung (verschieben, ausrichten, verteilen) wird in <strong>Bearbeiten › 🔌 DMX-Patch</strong>, Registerkarte <strong>🎭 Lichtplan</strong> bearbeitet: Ziehen zum Verschieben, <code>Umschalt</code> + Ziehen zum Einrasten, Ausrichten und Verteilen für eine ordentliche Reihe. Siehe <a href="manuel-patch-dmx">Kapitel Patch</a>.</li></ul><figure class="shot"><img src="/img-manuel/de/plan-2d-fenetre-principale.webp" width="1400" height="770" alt="MyStrow-Hauptfenster: Der 2D-Lichtplan oben rechts zeigt die Farbe jedes Scheinwerfers live" loading="lazy"><figcaption>Der <strong>2D-Lichtplan</strong> oben rechts im Hauptfenster: Jeder Kreis ist ein Scheinwerfer, in seiner aktuellen Farbe.</figcaption></figure></div>
     </div>
   </section>
 
@@ -344,7 +350,7 @@
   <section id="3d" class="section" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>Die 3D-Visualisierung</h2>
-      <div class="prose"><p><strong>Ansicht › 3D-Plan</strong> oder die Schaltfläche <strong>Den Lichtplan in 3D anzeigen</strong> öffnet ein 3D-Fenster, das die Show in Echtzeit abspielt, Strahlen inklusive. So lässt sich eine ganze Show zu Hause vorbereiten, ohne Scheinwerfer.</p><ul><li><strong>Kamera</strong>: Ziehen zum Drehen, Mausrad zum Zoomen, Doppelklick zum Zurücksetzen; Ansichten <strong>FRONT</strong>, <strong>OBEN</strong>, <strong>SEITE</strong>.</li><li><strong>Raumstimmung</strong>: das Umgebungslicht, von stockdunkel bis Tageslicht.</li><li><strong>Renderqualität</strong> (Niedrig, Mittel, Hoch): senken, wenn die Anzeige bei vielen Scheinwerfern ruckelt.</li><li><strong>Das Fenster im Vordergrund halten</strong>: um es auf einem zweiten Bildschirm zu lassen.</li></ul></div>
+      <div class="prose"><p><strong>Ansicht › 3D-Plan</strong> oder die Schaltfläche <strong>Den Lichtplan in 3D anzeigen</strong> öffnet ein 3D-Fenster, das die Show in Echtzeit abspielt, Strahlen inklusive. So lässt sich eine ganze Show zu Hause vorbereiten, ohne Scheinwerfer.</p><ul><li><strong>Kamera</strong>: Ziehen zum Drehen, Mausrad zum Zoomen, Doppelklick zum Zurücksetzen; Ansichten <strong>FRONT</strong>, <strong>OBEN</strong>, <strong>SEITE</strong>.</li><li><strong>Raumstimmung</strong>: das Umgebungslicht, von stockdunkel bis Tageslicht.</li><li><strong>Renderqualität</strong> (Niedrig, Mittel, Hoch): senken, wenn die Anzeige bei vielen Scheinwerfern ruckelt.</li><li><strong>Das Fenster im Vordergrund halten</strong>: um es auf einem zweiten Bildschirm zu lassen.</li></ul><figure class="shot"><img src="/img-manuel/de/plan-3d.webp" width="1400" height="821" alt="MyStrow-3D-Ansicht: beleuchtete Festivalbühne, farbige Strahlen und Wahl der Ansicht" loading="lazy"><figcaption>Die <strong>3D-Ansicht</strong> spielt die Show in Echtzeit nach. Rechts: die Blickwinkel.</figcaption></figure></div>
     </div>
   </section>
 

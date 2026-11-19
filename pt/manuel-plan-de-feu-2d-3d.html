@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="2d" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>O mapa de luz 2D</h2>
-      <div class="prose"><p>Na janela principal, o mapa de luz mostra cada projetor do patch com a sua cor e intensidade ao vivo, a frente em baixo (<strong>FACE / BAIXO</strong>) e a contraluz em cima (<strong>CONTRE / CIMA</strong>).</p><ul><li><strong>Roda do rato</strong>: zoom; <strong>clique do meio</strong> ou <strong>Alt + arrastar</strong>: mover a vista; <code>0</code>: mapa inteiro.</li><li>A disposição (mover, alinhar, distribuir) edita-se em <strong>Editar › 🔌 Patch DMX</strong>, separador <strong>🎭 Mapa de luz</strong>: arraste para mover, <code>Shift</code> + arrastar para encaixar, alinhar e distribuir para arrumar uma fila. Veja o <a href="manuel-patch-dmx">capítulo Patch</a>.</li></ul></div>
+      <div class="prose"><p>Na janela principal, o mapa de luz mostra cada projetor do patch com a sua cor e intensidade ao vivo, a frente em baixo (<strong>FACE / BAIXO</strong>) e a contraluz em cima (<strong>CONTRE / CIMA</strong>).</p><ul><li><strong>Roda do rato</strong>: zoom; <strong>clique do meio</strong> ou <strong>Alt + arrastar</strong>: mover a vista; <code>0</code>: mapa inteiro.</li><li>A disposição (mover, alinhar, distribuir) edita-se em <strong>Editar › 🔌 Patch DMX</strong>, separador <strong>🎭 Mapa de luz</strong>: arraste para mover, <code>Shift</code> + arrastar para encaixar, alinhar e distribuir para arrumar uma fila. Veja o <a href="manuel-patch-dmx">capítulo Patch</a>.</li></ul><figure class="shot"><img src="/img-manuel/pt/plan-2d-fenetre-principale.webp" width="1400" height="806" alt="Janela principal do MyStrow: o mapa de luz 2D em cima à direita mostra a cor de cada projetor em direto" loading="lazy"><figcaption>O <strong>mapa de luz 2D</strong>, em cima à direita da janela principal: cada círculo é um projetor, na sua cor do momento.</figcaption></figure></div>
     </div>
   </section>
 
@@ -344,7 +350,7 @@
   <section id="3d" class="section" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>A visualização 3D</h2>
-      <div class="prose"><p><strong>Exibir › Plano 3D</strong>, ou o botão <strong>Mostrar o mapa de luz em 3D</strong>, abre uma janela 3D que reproduz o espetáculo em tempo real, feixes incluídos. Pode preparar um espetáculo inteiro em casa, sem projetores.</p><ul><li><strong>Câmara</strong>: arraste para rodar, roda do rato para o zoom, duplo clique para repor; vistas <strong>FRENTE</strong>, <strong>TOPO</strong>, <strong>LADO</strong>.</li><li><strong>Ambiente da sala</strong>: a luz ambiente, da noite cerrada ao dia pleno.</li><li><strong>Qualidade de renderização</strong> (Baixa, Média, Alta): baixe-a se a imagem engasgar com muitos projetores.</li><li><strong>Manter a janela sempre visível</strong>: para a deixar num segundo ecrã.</li></ul></div>
+      <div class="prose"><p><strong>Exibir › Plano 3D</strong>, ou o botão <strong>Mostrar o mapa de luz em 3D</strong>, abre uma janela 3D que reproduz o espetáculo em tempo real, feixes incluídos. Pode preparar um espetáculo inteiro em casa, sem projetores.</p><ul><li><strong>Câmara</strong>: arraste para rodar, roda do rato para o zoom, duplo clique para repor; vistas <strong>FRENTE</strong>, <strong>TOPO</strong>, <strong>LADO</strong>.</li><li><strong>Ambiente da sala</strong>: a luz ambiente, da noite cerrada ao dia pleno.</li><li><strong>Qualidade de renderização</strong> (Baixa, Média, Alta): baixe-a se a imagem engasgar com muitos projetores.</li><li><strong>Manter a janela sempre visível</strong>: para a deixar num segundo ecrã.</li></ul><figure class="shot"><img src="/img-manuel/pt/plan-3d.webp" width="1400" height="840" alt="Vista 3D do MyStrow: palco de festival iluminado, feixes coloridos e escolha do ponto de vista" loading="lazy"><figcaption>A <strong>vista 3D</strong> reproduz o espetáculo em tempo real. À direita: os pontos de vista.</figcaption></figure></div>
     </div>
   </section>
 

@@ -200,6 +200,7 @@ Regardez dans les spams (et l'onglet Promotions sur Gmail), puis vérifiez l'adr
 
 Chaque **couche** anime **un canal** (l'intensité, la couleur, le Pan/Tilt…) sur **une sélection de projecteurs**, en suivant **une forme** qui se répète à une certaine vitesse. Le **décalage** entre projecteurs transforme un simple clignotement en chenillard ou en vague.
 Un effet peut contenir plusieurs couches qui jouent ensemble. Une fois sauvegardés, les effets restent disponibles dans **MES EFFETS**.
+L'**éditeur d'effets** : les effets à gauche, le tableau des couches au centre, l'aperçu sur le plan de feu à droite.
 
 1. **Ouvrir l'éditeur d'effets** : Menu **Édition › 🎨 Editeur d'effets**. À gauche, la liste des effets (les effets d'usine et **MES EFFETS**), au centre le tableau des couches, à droite le plan de feu qui joue l'aperçu.
 2. **Partir d'un effet existant… ou de zéro** : Le plus rapide : cliquez sur un effet d'usine proche de ce que vous voulez, puis **Dupliquer** pour travailler sur une copie. Pour partir de rien : **＋ Ajouter un effet › Créer l'effet moi-même** (une couche vierge est créée).
@@ -250,10 +251,10 @@ Pendant les 15 jours d'essai, la sortie DMX fonctionne. Après l'essai, elle dem
 
 ### Ouvrir la fenêtre Sortie DMX
 
-Menu **Connexion › 🌐 Sortie DMX**. La fenêtre commence par **« Quel boîtier avez-vous ? »**, avec trois choix reconnaissables à l'emplacement du logo jaune :
-- **Logo MyStrow sur la face avant** : c'est le **USB NODE DMX** (ElectroConcept), le boîtier du Pack MyStrow. Il se branche en USB mais parle Art-Net : MyStrow le règle tout seul dans la **Sortie Node**, sans adresse IP à toucher.
-- **Logo MyStrow sur le dessus** : c'est le **MyStrow USB-DMX (MS-DMY)**. Branchez-le en USB, MyStrow le trouve tout seul. S'il vient d'être branché, cliquez sur **🔌 Connecter**.
-- **Autre interface** : l'écran complet, avec deux onglets, **🌐 Sortie Node** et **🔌 Sortie DMX USB**.
+Menu **Connexion › 🌐 Sortie DMX**. La fenêtre **« Paramétrer la sortie DMX »** a deux onglets :
+- **🌐 Sortie Node** : les nodes Art-Net reliés en réseau, et les boîtiers qui se branchent en USB mais parlent Art-Net, comme le **USB NODE DMX** du Pack MyStrow ;
+- **🔌 Sortie DMX USB** : les interfaces USB-DMX série (MyStrow USB-DMX MS-DMY, ENTTEC, Eurolite, OPTO, DMXKing…).
+Le lien **Consulter le guide**, en haut de la fenêtre, ouvre l'aide au branchement. Quand vous branchez le **boîtier USB-DMX MyStrow**, MyStrow le reconnaît tout seul et propose de le connecter.
 
 ### Interface USB-DMX (onglet Sortie DMX USB)
 
@@ -265,6 +266,7 @@ Menu **Connexion › 🌐 Sortie DMX**. La fenêtre commence par **« Quel boît
 **« Port inaccessible »** : un autre logiciel (QLC+, Freestyler, Chataigne…) occupe l'interface. Fermez-le : un seul logiciel à la fois peut l'utiliser.
 Une interface USB ne transporte qu'**un seul univers**. Brancher plusieurs interfaces USB ne donne pas plusieurs univers : pour cela, il faut des nodes Art-Net.
 Pour un Open DMX ou une interface à puce FTDI, installez le **pilote FTDI** si MyStrow le propose.
+L'onglet **Sortie DMX USB** : l'interface, le port COM, puis **Connecter**.
 
 ### Node Art-Net (onglet Sortie Node)
 
@@ -278,6 +280,7 @@ Pour un Open DMX ou une interface à puce FTDI, installez le **pilote FTDI** si 
 - teste la connexion et confirme **« Boîtier connecté ! »**.
 Si MyStrow trouve le boîtier à une autre adresse que celle qu'il cherche, il le dit et propose un bouton **Utiliser [adresse]** : un clic suffit, rien n'est à changer sur le réseau.
 Au premier lancement, **autorisez MyStrow dans le pare-feu** quand Windows le demande : sans cela, le node n'est pas trouvé.
+L'onglet **Sortie Node** : si la carte réseau n'est pas configurée, l'assistant **Configurer la connexion réseau** s'en charge.
 
 ### Plusieurs univers et plusieurs nodes
 
@@ -287,6 +290,7 @@ Dans l'onglet Sortie Node, **Options avancées › Aiguillage des sorties** indi
 - Deux lignes peuvent porter **le même univers** : c'est le miroir, pour doubler une ligne à l'autre bout de la salle sans splitter.
 - Une ligne peut être **Désactivée** ou servir d'**Entrée DMX (pupitre)**, pour piloter MyStrow depuis une console.
 Ensuite, dans le patch, placez chaque projecteur dans l'univers de la ligne où il est câblé (les adresses repartent de 1 dans chaque univers). Pas à pas complet : [plusieurs univers avec plusieurs nodes Art-Net](https://mystrow.fr/plusieurs-univers-nodes-artnet-mystrow).
+**Options avancées › Aiguillage des sorties** : un univers et un node par ligne DMX.
 
 ### Tester la sortie : DMX Tester et Moniteur DMX
 
@@ -297,6 +301,7 @@ Ensuite, dans le patch, placez chaque projecteur dans l'univers de la ligne où 
 - les faders du contrôleur MIDI pilotent 9 canaux à la fois ;
 - à la fermeture, le show est restauré tel qu'il était.
 **Édition › 📡 Moniteur DMX** montre en direct ce qui part réellement sur chaque univers : canaux actifs, images par seconde, interface utilisée, et un avertissement si un univers n'est pas émis (par exemple l'univers 2 sur une interface USB, qui ne transporte que l'univers 1).
+Le **DMX Tester** : les canaux à gauche, le test par groupe et l'univers à droite.
 
 ### Diagnostic d'une sortie muette
 
@@ -327,6 +332,7 @@ Le **patch** dit à MyStrow quels projecteurs vous avez, à quelle **adresse DMX
 
 Menu **Édition › 🔌 Patch DMX**. À gauche, la liste des appareils (triable par **Adresse**, **Nom** ou **Groupe**, avec un champ **🔍 Filtrer**). À droite, la fiche de l'appareil sélectionné. Un onglet **🎭 Plan de feu** montre les projecteurs placés sur la scène.
 La barre du haut regroupe : **📁 Fichier** (nouveau patch, enregistrer, importer, exporter), **✏️ Edition** (annuler `Ctrl+Z`, rétablir `Ctrl+Y`, **⚡ Auto Adresse**), **🛠 Créer votre fixture** et **➕ Ajouter**. Pensez à **💾 Sauvegarder** avant de fermer : MyStrow prévient s'il reste des modifications non enregistrées.
+La fenêtre **Patch DMX** : la liste des appareils à gauche, la fiche de l'appareil sélectionné à droite.
 
 ### Partir de zéro : l'assistant
 
@@ -343,6 +349,7 @@ La barre du haut regroupe : **📁 Fichier** (nouveau patch, enregistrer, import
 - Indiquez la **Quantité** et, si vous voulez, un **Nom personnalisé**, puis **Ajouter**. Les appareils sont numérotés et placés à la suite.
 L'onglet **Mes projecteurs** de la bibliothèque contient les fixtures que vous avez créées ou importées.
 **Les barres LED et matrices à pixels** s'ajoutent de la même façon. Leur fiche gagne une section **Disposition des pixels** : lignes × colonnes, câblage **par lignes** ou en **serpentin**, **⇄ Inverser l'ordre** (barre accrochée à l'envers) et taille réelle pour le plan 2D et 3D.
+La **bibliothèque de fixtures** : tapez le modèle, vérifiez les canaux du profil, puis **Ajouter**.
 
 ### La fiche d'un appareil : nom, groupe, univers, adresse
 
@@ -465,6 +472,7 @@ Le **plan de feu** montre vos projecteurs à leur place sur la scène, et ce qu'
 Dans la fenêtre principale, le plan de feu affiche chaque projecteur du patch avec sa couleur et son intensité en direct, la face en bas (**FACE / BAS**) et le contre en haut (**CONTRE / HAUT**).
 - **Molette** : zoom ; **clic milieu** ou **Alt + glisser** : déplacer la vue ; `0` : plan entier.
 - La disposition (déplacer, aligner, répartir) se modifie dans **Édition › 🔌 Patch DMX**, onglet **🎭 Plan de feu** : glisser pour déplacer, `Shift` + glisser pour aimanter, **Aligner** et **Répartir** pour ranger une rangée. Voir le [chapitre Patch](https://mystrow.fr/manuel-patch-dmx).
+Le **plan de feu 2D**, en haut à droite de la fenêtre principale : chaque rond est un projecteur, dans sa couleur du moment.
 
 ### Sélectionner et régler des projecteurs à la main
 
@@ -486,6 +494,7 @@ Pour les barres LED et matrices, la section **EFFETS BARRE / MATRICE** propose C
 - **Ambiance salle** : la lumière ambiante, de la nuit noire au plein jour.
 - **Qualité de rendu** (Bas, Moyen, Haut) : baissez si l'affichage saccade avec beaucoup de projecteurs.
 - **Garder la fenêtre au premier plan** : pour la laisser sur un deuxième écran.
+La **visualisation 3D** rejoue le show en temps réel. À droite : les points de vue ISO, FACE, DESSUS, CÔTÉ.
 
 ### Décors, trusses et scène importée
 
@@ -653,6 +662,7 @@ Un **clic droit** dans la playlist ouvre le menu d'ajout :
 - **🌐 Ajouter un site internet** : une page web affichée sur la sortie vidéo.
 Les colonnes indiquent le **Titre**, la **Durée**, le **Vol %** et le mode lumière. Le clic droit sur un média donne aussi : **🔊 Volume**, **⏱ Définir la durée** (pour une image), **🔁 Jouer en boucle**, **🎚 Fondu d'entrée / sortie**, **🔗 Lancer avec le son précédent** (une image ou vidéo affichée pendant le son du dessus), **⧉ Dupliquer (avec REC Lumière)** et **🗑️ Supprimer**.
 Si un fichier a été déplacé, MyStrow le signale et propose **Localiser le fichier…**.
+La **playlist**, au centre de la fenêtre principale : chaque média a sa durée, son volume et son mode lumière (colonne DMX).
 
 ### Le mode lumière de chaque média
 
@@ -672,6 +682,7 @@ L'éditeur montre :
 - la **BIBLIOTHÈQUE** : COULEUR, BICOULEUR, MÉMOIRE, POSITIONS LYRE, EFFETS et MES EFFETS ;
 - un **plan de feu 2D** (ou 3D) qui montre en direct ce que joue la timeline.
 **Espace** lance et arrête la lecture, `Shift` + molette zoome, `Ctrl+S` sauvegarde.
+L'éditeur **REC Lumière** : la bibliothèque à gauche, le plan de feu en haut, la forme d'onde et les pistes de blocs en bas.
 
 ### Poser et modifier des blocs
 
@@ -832,6 +843,7 @@ MyStrow s'ouvre à d'autres appareils et logiciels : une **tablette** comme tél
 - Vérifiez le voyant en haut à droite, puis passez en plein écran.
 La tablette reprend la surface de pads (couleurs, mémoires, effets, positions, pages) : le PC reste aux commandes, la tablette n'est qu'une télécommande. Un appareil appairé est reconnu les fois suivantes.
 Si la tablette ne se connecte pas : même Wi-Fi (pas le réseau invité ni la 4G), MyStrow autorisé dans le pare-feu, et sur Mac le **Récepteur AirPlay** désactivé (il occupe le même port). **Connexion › 🩺 Diagnostic › 📱 Test tablette** vérifie tout ça. Guide complet : [contrôler MyStrow depuis une tablette](https://mystrow.fr/controler-mystrow-tablette-telephone).
+**Entrée Externe** activée : scannez le QR code avec la tablette, sur le même Wi-Fi.
 
 ### L'application tablette, sans ordinateur
 

@@ -289,6 +289,12 @@
     .recipe ul { list-style: none; margin: 10px 0 0; padding: 0; }
     .recipe li { color: var(--muted); font-size: 14px; padding: 4px 0; border-bottom: 1px dashed rgba(255,255,255,0.06); }
     .recipe li strong { color: var(--text); }
+    .shot { margin: 22px 0 6px; text-align: center; }
+    .shot img { max-width: min(100%, 520px); height: auto; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 12px 36px rgba(0,0,0,0.45); }
+    .shot img[width="1400"] { max-width: 100%; }
+    .shot figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+    .shot.tall img { max-width: 280px; }
+
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
   <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
@@ -323,7 +329,7 @@
   <section id="2d" class="section-bg" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>El plano de luces 2D</h2>
-      <div class="prose"><p>En la ventana principal, el plano de luces muestra cada foco del patch con su color e intensidad en directo, el frontal abajo (<strong>FRONTAL / ABAJO</strong>) y el contraluz arriba (<strong>CONTRA / ARRIBA</strong>).</p><ul><li><strong>Rueda del ratón</strong>: zoom; <strong>clic central</strong> o <strong>Alt + arrastrar</strong>: mover la vista; <code>0</code>: plano entero.</li><li>La disposición (mover, alinear, repartir) se edita en <strong>Edición › 🔌 Patch DMX</strong>, pestaña <strong>🎭 Plano de luces</strong>: arrastra para mover, <code>Mayús</code> + arrastrar para imantar, alinear y repartir para ordenar una fila. Consulta el <a href="manuel-patch-dmx">capítulo Patch</a>.</li></ul></div>
+      <div class="prose"><p>En la ventana principal, el plano de luces muestra cada foco del patch con su color e intensidad en directo, el frontal abajo (<strong>FRONTAL / ABAJO</strong>) y el contraluz arriba (<strong>CONTRA / ARRIBA</strong>).</p><ul><li><strong>Rueda del ratón</strong>: zoom; <strong>clic central</strong> o <strong>Alt + arrastrar</strong>: mover la vista; <code>0</code>: plano entero.</li><li>La disposición (mover, alinear, repartir) se edita en <strong>Edición › 🔌 Patch DMX</strong>, pestaña <strong>🎭 Plano de luces</strong>: arrastra para mover, <code>Mayús</code> + arrastrar para imantar, alinear y repartir para ordenar una fila. Consulta el <a href="manuel-patch-dmx">capítulo Patch</a>.</li></ul><figure class="shot"><img src="/img-manuel/es/plan-2d-fenetre-principale.webp" width="1400" height="770" alt="Ventana principal de MyStrow: el plano de luces 2D arriba a la derecha muestra el color de cada foco en directo" loading="lazy"><figcaption>El <strong>plano de luces 2D</strong>, arriba a la derecha de la ventana principal: cada círculo es un foco, con su color del momento.</figcaption></figure></div>
     </div>
   </section>
 
@@ -344,7 +350,7 @@
   <section id="3d" class="section" style="padding:56px 0">
     <div class="wrap-narrow">
       <h2>La visualización 3D</h2>
-      <div class="prose"><p><strong>Vista › Plano 3D</strong>, o el botón <strong>Mostrar el plano de luces en 3D</strong>, abre una ventana 3D que reproduce el show en tiempo real, haces incluidos. Puedes preparar un espectáculo entero en casa, sin focos.</p><ul><li><strong>Cámara</strong>: arrastra para girar, rueda para el zoom, doble clic para volver; vistas <strong>FRENTE</strong>, <strong>ARRIBA</strong>, <strong>LADO</strong>.</li><li><strong>Ambiente de sala</strong>: la luz ambiente, de noche cerrada a pleno día.</li><li><strong>Calidad de render</strong> (Baja, Media, Alta): bájala si la imagen va a tirones con muchos focos.</li><li><strong>Mantener la ventana en primer plano</strong>: para dejarla en una segunda pantalla.</li></ul></div>
+      <div class="prose"><p><strong>Vista › Plano 3D</strong>, o el botón <strong>Mostrar el plano de luces en 3D</strong>, abre una ventana 3D que reproduce el show en tiempo real, haces incluidos. Puedes preparar un espectáculo entero en casa, sin focos.</p><ul><li><strong>Cámara</strong>: arrastra para girar, rueda para el zoom, doble clic para volver; vistas <strong>FRENTE</strong>, <strong>ARRIBA</strong>, <strong>LADO</strong>.</li><li><strong>Ambiente de sala</strong>: la luz ambiente, de noche cerrada a pleno día.</li><li><strong>Calidad de render</strong> (Baja, Media, Alta): bájala si la imagen va a tirones con muchos focos.</li><li><strong>Mantener la ventana en primer plano</strong>: para dejarla en una segunda pantalla.</li></ul><figure class="shot"><img src="/img-manuel/es/plan-3d.webp" width="1400" height="821" alt="Vista 3D de MyStrow: escenario de festival iluminado, haces de colores y elección del punto de vista" loading="lazy"><figcaption>La <strong>vista 3D</strong> reproduce el show en tiempo real. A la derecha: los puntos de vista.</figcaption></figure></div>
     </div>
   </section>
 
