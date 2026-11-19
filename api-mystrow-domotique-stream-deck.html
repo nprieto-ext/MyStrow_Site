@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <title>L'API de MyStrow : piloter ses lumières depuis la domotique, un Stream Deck ou un script | MyStrow</title>
-  <meta name="description" content="MyStrow ouvre une API HTTP locale : déclenchez une mémoire, un effet, une couleur ou un noir depuis KNX (via Node-RED), un Stream Deck, un script ou le planificateur de tâches. Liste des commandes et exemples prêts à copier.">
-  <meta name="keywords" content="API MyStrow, API lumière DMX, KNX DMX, domotique éclairage DMX, Node-RED DMX, Stream Deck DMX, commande HTTP lumière, installation fixe DMX, REST JSON DMX">
+  <meta name="description" content="MyStrow ouvre une API HTTP : déclenchez une mémoire, un effet, une couleur ou un noir depuis Home Assistant, KNX, un Stream Deck, un script ou le planificateur de tâches, sur le PC ou par le réseau local avec une clé. Commandes et exemples prêts à copier.">
+  <meta name="keywords" content="API MyStrow, API lumière DMX, KNX DMX, Home Assistant DMX, domotique éclairage DMX, Node-RED DMX, Stream Deck DMX, commande HTTP lumière, installation fixe DMX, REST JSON DMX">
   <link rel="canonical" href="https://mystrow.fr/api-mystrow-domotique-stream-deck">
 
   <!-- hreflang -->
@@ -41,7 +41,7 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "L'API de MyStrow : piloter ses lumières depuis la domotique, un Stream Deck ou un script",
-    "description": "MyStrow ouvre une API HTTP locale : déclenchez une mémoire, un effet, une couleur ou un noir depuis KNX (via Node-RED), un Stream Deck, un script ou le planificateur de tâches. Liste des commandes et exemples prêts à copier.",
+    "description": "MyStrow ouvre une API HTTP : déclenchez une mémoire, un effet, une couleur ou un noir depuis Home Assistant, KNX, un Stream Deck, un script ou le planificateur de tâches, sur le PC ou par le réseau local avec une clé. Commandes et exemples prêts à copier.",
     "image": "https://mystrow.fr/og-image.webp",
     "author": { "@type": "Organization", "name": "MyStrow", "url": "https://mystrow.fr" },
     "publisher": { "@type": "Organization", "name": "MyStrow", "logo": { "@type": "ImageObject", "url": "https://mystrow.fr/favicon.ico" } },
@@ -49,7 +49,7 @@
     "dateModified": "2026-11-19",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mystrow.fr/api-mystrow-domotique-stream-deck" },
     "url": "https://mystrow.fr/api-mystrow-domotique-stream-deck",
-    "keywords": ["API", "HTTP", "REST", "KNX", "domotique", "Node-RED", "Stream Deck", "lumière DMX", "MyStrow"]
+    "keywords": ["API", "HTTP", "REST", "KNX", "Home Assistant", "domotique", "Node-RED", "Stream Deck", "lumière DMX", "MyStrow"]
   }
   </script>
 
@@ -67,12 +67,12 @@
       {
         "@type": "Question",
         "name": "Peut-on piloter MyStrow depuis KNX ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Oui, par l'intermédiaire d'une passerelle installée sur le même ordinateur que MyStrow, par exemple Node-RED avec un module KNX/IP. Node-RED écoute le bus KNX et envoie la commande HTTP correspondante à MyStrow." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. À partir de MyStrow 3.2.20, activez l'accès réseau (Connexion › Contrôle › API réseau) : votre serveur domotique (Home Assistant, serveur logique KNX…) envoie directement ses requêtes HTTP à MyStrow, avec la clé affichée dans cette fenêtre. Sur une version plus ancienne, passez par une passerelle installée sur le PC de MyStrow, comme Node-RED." }
       },
       {
         "@type": "Question",
-        "name": "L'API est-elle accessible depuis le réseau ou Internet ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Non. Elle n'écoute que sur l'ordinateur lui-même (127.0.0.1). Un appareil du réseau doit passer par un programme installé sur ce même ordinateur, comme Node-RED. Personne ne peut piloter vos projecteurs depuis l'extérieur." }
+        "name": "L'API est-elle accessible depuis le réseau local ou Internet ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Par défaut, elle n'écoute que sur l'ordinateur lui-même (127.0.0.1). À partir de MyStrow 3.2.20, vous pouvez l'ouvrir au réseau local : chaque appareil doit alors présenter une clé secrète, que vous pouvez changer à tout moment. Elle n'est pas accessible depuis Internet, sauf si vous ouvrez vous-même un port sur votre box, ce qui est déconseillé." }
       },
       {
         "@type": "Question",
@@ -304,12 +304,13 @@
         <p>Au démarrage, MyStrow ouvre une petite porte d'entrée sur l'ordinateur : <code>http://127.0.0.1:8765/api/</code>. N'importe quel programme installé sur ce même ordinateur peut y envoyer une commande, et MyStrow l'exécute exactement comme si vous aviez appuyé sur le pad de l'AKAI.</p>
         <p>Les commandes tiennent dans l'adresse elle-même. Pour lancer la mémoire 1.1 : une requête <code>POST</code> vers <code>/api/memory/1.1</code>. Pour faire le noir : <code>POST /api/blackout</code>. Les réponses sont en <strong>JSON</strong>, ce que savent lire tous les outils d'automatisation.</p>
         <p><strong>Il n'y a rien à activer.</strong> MyStrow doit simplement être ouvert, avec votre show chargé.</p>
+        <p><strong>Nouveau dans la 3.2.20 : l'accès par le réseau local.</strong> Une case dans <strong>Connexion › Contrôle › API réseau</strong> rend l'API joignable depuis les autres appareils du réseau (box domotique, serveur, tablette), protégée par une clé. <a href="#reseau">Voir plus bas</a>.</p>
       </div>
 
       <div class="badge-row" style="margin-top:32px;">
         <span class="badge">💻 Windows et Mac</span>
         <span class="badge">🎛 MyStrow 3.2.9 et supérieur</span>
-        <span class="badge">🔒 Reste sur votre ordinateur</span>
+        <span class="badge">🌐 Réseau local avec clé : 3.2.20</span>
       </div>
     </div>
   </section>
@@ -350,7 +351,7 @@
       <div class="section-tag">Référence</div>
       <h2>Les commandes</h2>
       <div class="prose">
-        <p>Toutes les adresses commencent par <code>http://127.0.0.1:8765</code>. Les commandes qui <strong>agissent</strong> sont en <code>POST</code>, celles qui <strong>lisent</strong> l'état sont en <code>GET</code>.</p>
+        <p>Toutes les adresses commencent par <code>http://127.0.0.1:8765</code> sur le PC lui-même, ou par <code>http://&lt;IP-du-PC&gt;:8765</code> depuis le réseau (avec la clé). Les commandes qui <strong>agissent</strong> sont en <code>POST</code>, celles qui <strong>lisent</strong> l'état sont en <code>GET</code>.</p>
       </div>
 
       <div class="cmp-wrap">
@@ -438,42 +439,70 @@
       <h2>Un « mode fête » sur un bouton KNX</h2>
       <div class="prose">
         <p>Le cas typique : un intégrateur équipe une salle ou une maison de projecteurs DMX, pilotés par MyStrow sur un mini-PC. Le client, lui, veut seulement appuyer sur un bouton de sa domotique pour passer en mode fête, choisir une couleur ou tout éteindre.</p>
-        <p>L'API de MyStrow n'écoute que sur l'ordinateur lui-même. Il faut donc un traducteur installé <strong>sur le même PC</strong>, qui écoute la domotique et envoie la commande HTTP. <strong>Node-RED</strong>, gratuit, est parfait pour ça : il existe des modules KNX/IP prêts à l'emploi (par exemple <code>node-red-contrib-knx-ultimate</code>).</p>
+        <p>Dans tous les cas, commencez par <strong>enregistrer une mémoire par scénario</strong> dans MyStrow : 1.1 = mode fête, 1.2 = ambiance douce, 1.3 = blanc chaud… La domotique n'aura qu'à appeler la bonne mémoire, ou <code>/api/blackout</code> pour tout éteindre. Faites aussi démarrer MyStrow avec Windows (raccourci dans le dossier Démarrage) : le PC redémarre, les lumières restent pilotables.</p>
       </div>
 
-      <div class="step-list" style="margin-top:36px;">
+      <h3 id="reseau" style="font-size:22px;margin-top:40px;">Méthode directe : l'API réseau (MyStrow 3.2.20 et plus)</h3>
+
+      <div class="step-list" style="margin-top:24px;">
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-body">
-            <h3>Préparer les ambiances dans MyStrow</h3>
-            <p>Enregistrez une mémoire par scénario : 1.1 = mode fête, 1.2 = ambiance douce, 1.3 = blanc chaud, etc. Faites démarrer MyStrow avec Windows (raccourci dans le dossier Démarrage) : le PC redémarre, les lumières restent pilotables.</p>
+            <h3>Ouvrir l'API au réseau local</h3>
+            <p>Dans MyStrow : <strong>Connexion › Contrôle › API réseau</strong>, cochez <strong>« Autoriser l'accès depuis le réseau local »</strong>. La fenêtre affiche l'adresse à utiliser (par exemple <code>http://192.168.1.50:8765/api/</code>) et la <strong>clé</strong>. Si Windows demande l'autorisation du pare-feu, acceptez pour les réseaux privés.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-body">
-            <h3>Installer Node-RED sur le même PC</h3>
-            <p>Ajoutez-y un module KNX, configuré sur votre passerelle KNX/IP. Créez une adresse de groupe par scénario dans ETS.</p>
+            <h3>Envoyer la clé avec chaque requête</h3>
+            <p>Au choix : l'en-tête <code>Authorization: Bearer &lt;clé&gt;</code>, l'en-tête <code>X-API-Key: &lt;clé&gt;</code>, ou <code>?key=&lt;clé&gt;</code> à la fin de l'adresse. Sans la bonne clé, MyStrow répond <code>401</code> et n'exécute rien.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-body">
-            <h3>Relier chaque adresse à une commande</h3>
-            <p>Pour chaque scénario : un nœud KNX qui écoute l'adresse de groupe, suivi d'un nœud <strong>http request</strong> en <code>POST</code> vers <code>http://127.0.0.1:8765/api/memory/1.1</code>. Pour l'arrêt, la même chose vers <code>/api/blackout</code>.</p>
+            <h3>Exemple avec Home Assistant</h3>
+            <p>Dans <code>configuration.yaml</code>, une commande par scénario :<br><code>rest_command:<br>&nbsp;&nbsp;mystrow_fete:<br>&nbsp;&nbsp;&nbsp;&nbsp;url: "http://192.168.1.50:8765/api/memory/1.1"<br>&nbsp;&nbsp;&nbsp;&nbsp;method: POST<br>&nbsp;&nbsp;&nbsp;&nbsp;headers:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authorization: "Bearer VOTRE_CLÉ"</code><br>Appelez ensuite <code>rest_command.mystrow_fete</code> depuis une automatisation, un bouton du tableau de bord ou un appui KNX remonté dans Home Assistant.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-body">
             <h3>Tester depuis le bouton</h3>
-            <p>Un appui sur l'interrupteur KNX, et l'ambiance part. Le retour d'état (une LED sur le bouton, par exemple) peut se faire en lisant <code>GET /api/memories</code>.</p>
+            <p>Un appui, et l'ambiance part. Le retour d'état (une LED sur le bouton, par exemple) peut se faire en lisant <code>GET /api/memories</code>, avec la clé lui aussi.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Une clé compromise ?</strong> Le bouton <strong>« Nouvelle clé »</strong> de la même fenêtre en crée une autre : l'ancienne cesse aussitôt de fonctionner. Sur le PC lui-même, aucune clé n'est demandée : le Stream Deck et l'extension Claude continuent de marcher sans rien changer.</p>
+      </div>
+
+      <h3 style="font-size:22px;margin-top:40px;">Autre méthode : Node-RED sur le PC de MyStrow</h3>
+      <div class="prose" style="margin-top:12px;">
+        <p>Avec une version de MyStrow antérieure à la 3.2.20, ou si vous préférez garder l'API fermée au réseau, installez un traducteur <strong>sur le même PC</strong> que MyStrow. <strong>Node-RED</strong>, gratuit, est parfait pour ça : il existe des modules KNX/IP prêts à l'emploi (par exemple <code>node-red-contrib-knx-ultimate</code>).</p>
+      </div>
+
+      <div class="step-list" style="margin-top:36px;">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Installer Node-RED sur le même PC</h3>
+            <p>Ajoutez-y un module KNX, configuré sur votre passerelle KNX/IP. Créez une adresse de groupe par scénario dans ETS.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Relier chaque adresse à une commande</h3>
+            <p>Pour chaque scénario : un nœud KNX qui écoute l'adresse de groupe, suivi d'un nœud <strong>http request</strong> en <code>POST</code> vers <code>http://127.0.0.1:8765/api/memory/1.1</code>. Pour l'arrêt, la même chose vers <code>/api/blackout</code>.</p>
           </div>
         </div>
       </div>
 
       <div class="prose" style="margin-top:28px;">
-        <p>Le principe est le même avec <strong>Home Assistant</strong>, Jeedom ou un serveur logique : si la box est sur une autre machine, Node-RED sur le PC de MyStrow sert de relais entre les deux.</p>
+        <p>Si votre box (Home Assistant, Jeedom, serveur logique) est sur une autre machine, Node-RED sur le PC de MyStrow sert de relais : un nœud <strong>http in</strong> reçoit la requête de la box par le réseau, un nœud <strong>http request</strong> la transmet à MyStrow.</p>
       </div>
 
       <div class="lock-box">
@@ -506,7 +535,7 @@
       <div class="section-tag">À savoir</div>
       <h2>Ce que l'API ne fait pas</h2>
       <ul class="check-list">
-        <li><span><strong>Elle n'est pas sur Internet.</strong> Elle n'écoute que sur l'ordinateur (127.0.0.1) : personne ne peut piloter vos projecteurs depuis l'extérieur, ni même depuis un autre appareil du réseau sans relais installé sur ce PC.</span></li>
+        <li><span><strong>Elle n'est pas sur Internet.</strong> Par défaut, elle n'écoute que sur l'ordinateur (127.0.0.1). Ouverte au réseau local (3.2.20), elle exige une clé de chaque appareil. Ne l'exposez pas sur Internet en ouvrant un port de votre box.</span></li>
         <li><span><strong>Une page web ne peut pas faire le noir.</strong> Les commandes sensibles (noir, projecteurs, vitesse, arrêt des effets) sont refusées quand elles viennent d'un navigateur.</span></li>
         <li><span><strong>Elle ne modifie pas votre show.</strong> Aucune commande n'efface une mémoire, ne touche au patch ou à vos réglages : seulement des commandes de jeu.</span></li>
         <li><span><strong>MyStrow doit être ouvert.</strong> Si le logiciel est fermé, la commande n'aboutit pas : votre automate reçoit une erreur de connexion.</span></li>
