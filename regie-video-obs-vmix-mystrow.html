@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Piloter ses lumières depuis OBS ou vMix — Guide MyStrow | MyStrow</title>
+  <title>Piloter ses lumières depuis OBS ou vMix - Guide MyStrow | MyStrow</title>
   <meta name="description" content="Vos lumières DMX suivent OBS ou vMix : quand une scène passe à l'antenne, MyStrow déclenche la mémoire, l'effet ou la cartouche choisie.">
   <meta name="keywords" content="OBS lumière DMX, vMix lumière DMX, obs-websocket MyStrow, vMix TCP API, tally lumière, régie vidéo éclairage, scène OBS déclenche lumière, streaming lumière automatique">
   <link rel="canonical" href="https://mystrow.fr/regie-video-obs-vmix-mystrow">
@@ -246,7 +246,7 @@
     .note-box strong { color: var(--text); }
   </style>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -274,7 +274,7 @@
       </nav>
       <div class="hero-badge">🎬 Guide pratique · Régie vidéo</div>
       <h1>Vos lumières suivent<br>la régie <em>vidéo</em></h1>
-      <p class="hero-sub">Quand une scène passe à l'antenne dans OBS, ou une caméra au programme dans vMix, MyStrow envoie la lumière qui va avec. Le réalisateur mène, l'éclairage suit — sans personne derrière la console.</p>
+      <p class="hero-sub">Quand une scène passe à l'antenne dans OBS, ou une caméra au programme dans vMix, MyStrow envoie la lumière qui va avec. Le réalisateur mène, l'éclairage suit - sans personne derrière la console.</p>
       <div class="hero-meta">
         <span>Par <strong>MyStrow</strong></span>
         <span>·</span>
@@ -295,7 +295,7 @@
       <div class="section-tag">Le principe</div>
       <h2>Un événement vidéo, une action lumière</h2>
       <div class="prose">
-        <p>OBS ou vMix, le principe est identique — et MyStrow s'y raccorde de la même façon. Votre régie signale en permanence <strong>ce qui est à l'antenne</strong> : une scène active dans OBS, une entrée au programme dans vMix. MyStrow écoute ce signal et déclenche l'action que vous avez associée à cette source.</p>
+        <p>OBS ou vMix, le principe est identique - et MyStrow s'y raccorde de la même façon. Votre régie signale en permanence <strong>ce qui est à l'antenne</strong> : une scène active dans OBS, une entrée au programme dans vMix. MyStrow écoute ce signal et déclenche l'action que vous avez associée à cette source.</p>
         <p>Concrètement : le plan large passe à l'antenne → la face monte. Vous coupez sur la caméra du batteur → les contres passent en bleu. Le générique démarre → la cartouche « fin de set » part toute seule. Rien à cliquer pendant le direct.</p>
       </div>
 
@@ -315,7 +315,7 @@
       </div>
 
       <div class="prose">
-        <p>La liaison va <strong>dans un seul sens</strong> : la régie pilote MyStrow, jamais l'inverse. C'est un choix de conception. Le réalisateur mène le direct, et une liaison à double sens ouvrirait une boucle de retour — MyStrow change une mémoire, la régie renvoie un événement, MyStrow rejoue l'action — qu'il faudrait ensuite dompter.</p>
+        <p>La liaison va <strong>dans un seul sens</strong> : la régie pilote MyStrow, jamais l'inverse. C'est un choix de conception. Le réalisateur mène le direct, et une liaison à double sens ouvrirait une boucle de retour - MyStrow change une mémoire, la régie renvoie un événement, MyStrow rejoue l'action - qu'il faudrait ensuite dompter.</p>
         <p>Tout passe par le réseau. Si votre régie et MyStrow tournent sur le même ordinateur, il n'y a strictement rien à brancher.</p>
       </div>
 
@@ -346,7 +346,7 @@
         <div class="feat-item">
           <div class="feat-icon">🔊</div>
           <h3>Une cartouche</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Un son, lancé en même temps que le plan. Jingle d'ouverture, virgule sonore, tapis d'ambiance — déclenché par la vidéo, sans quitter la lumière des yeux.</p>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Un son, lancé en même temps que le plan. Jingle d'ouverture, virgule sonore, tapis d'ambiance - déclenché par la vidéo, sans quitter la lumière des yeux.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">⏸</div>
@@ -356,7 +356,7 @@
       </div>
 
       <div class="callout" style="margin-top:36px;">
-        <p><strong>Le déclenchement se fait au front montant.</strong> L'action ne part qu'au moment où la source <em>devient</em> active. Tant qu'elle reste à l'antenne, rien n'est rejoué — vous pouvez donc reprendre la main sur la console pendant le plan sans que MyStrow vous écrase la seconde d'après.</p>
+        <p><strong>Le déclenchement se fait au front montant.</strong> L'action ne part qu'au moment où la source <em>devient</em> active. Tant qu'elle reste à l'antenne, rien n'est rejoué - vous pouvez donc reprendre la main sur la console pendant le plan sans que MyStrow vous écrase la seconde d'après.</p>
       </div>
     </div>
   </section>
@@ -382,7 +382,7 @@
           <div class="step-num">2</div>
           <div class="step-body">
             <h3>Relever le mot de passe</h3>
-            <p>Dans la même fenêtre, cliquez sur <strong>« Afficher les informations de connexion »</strong>. OBS y affiche un mot de passe généré automatiquement. Copiez-le. Si vous préférez vous en passer, décochez <strong>« Activer l'authentification »</strong> — sur un réseau de régie fermé, c'est un choix défendable.</p>
+            <p>Dans la même fenêtre, cliquez sur <strong>« Afficher les informations de connexion »</strong>. OBS y affiche un mot de passe généré automatiquement. Copiez-le. Si vous préférez vous en passer, décochez <strong>« Activer l'authentification »</strong> - sur un réseau de régie fermé, c'est un choix défendable.</p>
           </div>
         </div>
         <div class="step">
@@ -396,14 +396,14 @@
           <div class="step-num">4</div>
           <div class="step-body">
             <h3>Tester la connexion</h3>
-            <p>Cliquez sur <strong>Tester la connexion</strong>. Le tableau se remplit avec la liste de vos scènes OBS, dans le même ordre que dans OBS. Si rien n'apparaît, allez voir le tableau de dépannage plus bas — le message affiché désigne la cause.</p>
+            <p>Cliquez sur <strong>Tester la connexion</strong>. Le tableau se remplit avec la liste de vos scènes OBS, dans le même ordre que dans OBS. Si rien n'apparaît, allez voir le tableau de dépannage plus bas - le message affiché désigne la cause.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">5</div>
           <div class="step-body">
             <h3>Associer scènes et actions</h3>
-            <p>Pour chaque scène, choisissez le type d'action puis sa cible : la mémoire <code>3.2</code>, l'effet <code>E4</code>, la cartouche 1… Les scènes que vous ne voulez pas voir agir restent sur <strong>« — Rien — »</strong>.</p>
+            <p>Pour chaque scène, choisissez le type d'action puis sa cible : la mémoire <code>3.2</code>, l'effet <code>E4</code>, la cartouche 1… Les scènes que vous ne voulez pas voir agir restent sur <strong>« - Rien - »</strong>.</p>
           </div>
         </div>
         <div class="step">
@@ -416,7 +416,7 @@
       </div>
 
       <div class="lock-box">
-        <p><strong>💡 L'adresse affichée par OBS n'est pas celle à recopier.</strong> La fenêtre d'informations de connexion montre une adresse du type <code>192.168.1.x</code> : elle est destinée à un <em>autre</em> appareil, un téléphone ou un second poste. Depuis le même ordinateur, <code>127.0.0.1</code> mène au même OBS — et cette adresse-là ne changera pas quand votre box redistribuera les siennes.</p>
+        <p><strong>💡 L'adresse affichée par OBS n'est pas celle à recopier.</strong> La fenêtre d'informations de connexion montre une adresse du type <code>192.168.1.x</code> : elle est destinée à un <em>autre</em> appareil, un téléphone ou un second poste. Depuis le même ordinateur, <code>127.0.0.1</code> mène au même OBS - et cette adresse-là ne changera pas quand votre box redistribuera les siennes.</p>
       </div>
     </div>
   </section>
@@ -450,7 +450,7 @@
           <div class="step-num">3</div>
           <div class="step-body">
             <h3>Associer entrées et actions</h3>
-            <p>Même principe que pour OBS : pour chaque entrée, un type d'action et une cible. MyStrow suit le <strong>tally programme</strong> — l'action part quand l'entrée passe à l'antenne, pas quand elle arrive en preview.</p>
+            <p>Même principe que pour OBS : pour chaque entrée, un type d'action et une cible. MyStrow suit le <strong>tally programme</strong> - l'action part quand l'entrée passe à l'antenne, pas quand elle arrive en preview.</p>
           </div>
         </div>
         <div class="step">
@@ -479,11 +479,11 @@
 
       <div class="two-col" style="margin-top:32px;">
         <div class="highlight-box">
-          <h3>OBS — identifiée par son NOM</h3>
-          <p>Réorganiser vos scènes ne casse rien : déplacez-les comme vous voulez. En revanche, <strong>renommer une scène rompt la correspondance</strong> — l'action ne partira plus. Refaites simplement l'association dans le tableau.</p>
+          <h3>OBS - identifiée par son NOM</h3>
+          <p>Réorganiser vos scènes ne casse rien : déplacez-les comme vous voulez. En revanche, <strong>renommer une scène rompt la correspondance</strong> - l'action ne partira plus. Refaites simplement l'association dans le tableau.</p>
         </div>
         <div class="highlight-box">
-          <h3>vMix — identifiée par son NUMÉRO</h3>
+          <h3>vMix - identifiée par son NUMÉRO</h3>
           <p>C'est l'inverse : renommez vos entrées librement. Mais <strong>changer leur ordre décale les correspondances</strong>, et la lumière du plan large partira sur la caméra 2. Vérifiez le tableau après tout remaniement du plateau.</p>
         </div>
       </div>
@@ -581,12 +581,12 @@
         </a>
         <a href="automatisation-lumieres-dmx-mystrow" class="related-card">
           <div class="rc-tag">Tutoriel · Intermédiaire</div>
-          <h3>Automatiser ses lumières DMX — REC Lumière</h3>
+          <h3>Automatiser ses lumières DMX - REC Lumière</h3>
           <p>Enregistrez vos actions en direct et transformez-les en séquences reproductibles à l'infini.</p>
         </a>
         <a href="tutoriel-debuter-mystrow" class="related-card">
           <div class="rc-tag">Tutoriel · Débutant</div>
-          <h3>Débuter avec MyStrow — Patch, groupes et premier show</h3>
+          <h3>Débuter avec MyStrow - Patch, groupes et premier show</h3>
           <p>Guide pas à pas pour allumer vos premiers projecteurs DMX, de l'installation à la première ambiance.</p>
         </a>
         <a href="programmation-lumiere" class="related-card">

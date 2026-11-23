@@ -5,7 +5,7 @@
 > l'éclairage en réaction à la musique, un séquenceur sur timeline, un simulateur
 > 3D intégré et la prise en charge des contrôleurs MIDI type AKAI APC mini.
 
-Éditeur : MyStrow — https://mystrow.fr — contact via https://mystrow.fr/contact
+Éditeur : MyStrow - https://mystrow.fr - contact via https://mystrow.fr/contact
 
 ## Faits essentiels
 
@@ -13,7 +13,7 @@
 - **Essai** : 15 jours d'accès complet, sans carte bancaire, sortie DMX comprise. Ensuite une licence est nécessaire.
 - **Tarifs HT** (à vérifier sur https://mystrow.fr/shop, qui fait foi) (TVA calculée au paiement selon le pays ; TTC pour un particulier en France entre parenthèses) : Pro mensuel 19,99 €/mois sans engagement (23,99 €) ; Pro annuel 119,88 €/an, soit 9,99 €/mois (143,86 €) ; Lifetime 299,99 € en paiement unique (359,99 €), mises à jour incluses à vie.
 - **Licences** : les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Paiement par Stripe.
-- **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché — ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
+- **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché - ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
 - **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
 - **Fixtures** : bibliothèque de plus de 5 000 projecteurs, import de profils au format XML (GrandMA, QLC+).
 - **Langues du site** : français, anglais, espagnol, allemand, portugais, italien.
@@ -35,18 +35,18 @@
 ## Manuel complet
 
 - [Manuel MyStrow : sommaire](https://mystrow.fr/manuel)
-- [Chapitre 1 — Sortie DMX](https://mystrow.fr/manuel-sortie-dmx)
-- [Chapitre 2 — Patch et fixtures](https://mystrow.fr/manuel-patch-dmx)
-- [Chapitre 3 — Installation, licence et compte](https://mystrow.fr/manuel-installation-licence)
-- [Chapitre 4 — Plan de feu 2D et 3D](https://mystrow.fr/manuel-plan-de-feu-2d-3d)
-- [Chapitre 5 — Jeu en direct](https://mystrow.fr/manuel-jeu-en-direct)
-- [Chapitre 6 — Lyres et mouvements](https://mystrow.fr/manuel-lyres)
-- [Chapitre 7 — Éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow)
-- [Chapitre 8 — Playlist et REC Lumière](https://mystrow.fr/manuel-playlist-rec-lumiere)
-- [Chapitre 9 — IA Lumière et mode Live](https://mystrow.fr/manuel-ia-lumiere-mode-live)
-- [Chapitre 10 — Contrôleurs et raccourcis](https://mystrow.fr/manuel-controleurs)
-- [Chapitre 11 — Tablette, OBS, vMix et assistant IA](https://mystrow.fr/manuel-tablette-integrations)
-- [Chapitre 12 — Dépannage](https://mystrow.fr/manuel-depannage)
+- [Chapitre 1 - Sortie DMX](https://mystrow.fr/manuel-sortie-dmx)
+- [Chapitre 2 - Patch et fixtures](https://mystrow.fr/manuel-patch-dmx)
+- [Chapitre 3 - Installation, licence et compte](https://mystrow.fr/manuel-installation-licence)
+- [Chapitre 4 - Plan de feu 2D et 3D](https://mystrow.fr/manuel-plan-de-feu-2d-3d)
+- [Chapitre 5 - Jeu en direct](https://mystrow.fr/manuel-jeu-en-direct)
+- [Chapitre 6 - Lyres et mouvements](https://mystrow.fr/manuel-lyres)
+- [Chapitre 7 - Éditeur d'effets](https://mystrow.fr/creer-effet-lumiere-mystrow)
+- [Chapitre 8 - Playlist et REC Lumière](https://mystrow.fr/manuel-playlist-rec-lumiere)
+- [Chapitre 9 - IA Lumière et mode Live](https://mystrow.fr/manuel-ia-lumiere-mode-live)
+- [Chapitre 10 - Contrôleurs et raccourcis](https://mystrow.fr/manuel-controleurs)
+- [Chapitre 11 - Tablette, OBS, vMix et assistant IA](https://mystrow.fr/manuel-tablette-integrations)
+- [Chapitre 12 - Dépannage](https://mystrow.fr/manuel-depannage)
 
 Aide et manuel dans les autres langues : [EN](https://mystrow.fr/en/manuel) · [DE](https://mystrow.fr/de/manuel) · [ES](https://mystrow.fr/es/manuel) · [PT](https://mystrow.fr/pt/manuel) · [IT](https://mystrow.fr/it/manuel). Full English text: https://mystrow.fr/llms-full-en.txt
 

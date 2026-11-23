@@ -236,7 +236,7 @@
     }
 
     /* Systeme detecte : la carte de l'OS du visiteur passe en avant, l'autre
-       s'efface. Pose par le script de bas de page — sans JS les deux cartes
+       s'efface. Pose par le script de bas de page - sans JS les deux cartes
        restent a egalite, soit exactement le rendu d'origine. */
     .os-card { position: relative; transition: border-color .25s, opacity .25s, box-shadow .25s; }
     .os-card.is-mine { border-color: var(--accent-border); box-shadow: 0 0 0 1px var(--accent-border), 0 14px 38px rgba(0,0,0,0.34); }
@@ -247,7 +247,7 @@
     .os-hint:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
     /* Encart SmartScreen : les DEUX ecrans que Windows affiche reellement, dans
-       l'ordre. Le premier ne propose PAS « Executer quand meme » — il faut
+       l'ordre. Le premier ne propose PAS « Executer quand meme » - il faut
        d'abord cliquer sur « Informations complementaires », et c'est justement
        ce clic-la que personne ne trouve. L'illustration ne montrait que le
        second ecran : le visiteur ne reconnaissait donc pas sa propre fenetre.
@@ -322,7 +322,7 @@
     }
   }
   </script>
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -438,12 +438,12 @@
         </div>
       </div>
       <!-- Encart SmartScreen : les DEUX ecrans, dans l'ordre ou Windows les
-           montre. Le premier n'a NI l'editeur, NI « Executer quand meme » —
+           montre. Le premier n'a NI l'editeur, NI « Executer quand meme » -
            les deux n'apparaissent qu'apres le clic sur « Informations
            complementaires ». Boutons et liens sont des <span> INERTES : c'est
            une illustration. Ancre stable #windows-smartscreen. -->
       <div class="ss-note" id="windows-smartscreen">
-        <p class="ss-intro">Au premier lancement, Windows peut afficher un écran bleu <strong>« Windows a protégé votre ordinateur »</strong>. C'est normal et sans danger : MyStrow est signé électroniquement à notre nom — c'est d'ailleurs pour ça que Windows affiche notre identité à l'étape 2. Cet avertissement disparaît de lui-même une fois qu'une version a été téléchargée assez souvent. Voici les deux écrans, et où cliquer :</p>
+        <p class="ss-intro">Au premier lancement, Windows peut afficher un écran bleu <strong>« Windows a protégé votre ordinateur »</strong>. C'est normal et sans danger : MyStrow est signé électroniquement à notre nom - c'est d'ailleurs pour ça que Windows affiche notre identité à l'étape 2. Cet avertissement disparaît de lui-même une fois qu'une version a été téléchargée assez souvent. Voici les deux écrans, et où cliquer :</p>
         <div class="ss-flow">
           <div class="ss-step">
             <div class="ss-cap"><b>1</b><span>Cliquez sur <strong>Informations complémentaires</strong></span></div>
@@ -554,7 +554,7 @@ function handleNewsletter(e) {
 <script src="/lang-suggest.js" defer></script>
 <script>
 /* Systeme du visiteur : on met en avant la carte qui le concerne, l'autre
-   s'efface (et revient au survol). Sans JS les deux restent a egalite — c'est
+   s'efface (et revient au survol). Sans JS les deux restent a egalite - c'est
    le rendu d'origine, rien n'est casse. On ne fait defiler QUE si la carte
    n'est pas deja a l'ecran : une page qui bouge toute seule alors qu'on voyait
    deja le bouton passe pour un bug. */

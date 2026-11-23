@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Den DMX-Ausgang mit MyStrow anschließen — Art-Net-Node &amp; USB/DMX-Interfaces | MyStrow</title>
+  <title>Den DMX-Ausgang mit MyStrow anschließen - Art-Net-Node &amp; USB/DMX-Interfaces | MyStrow</title>
   <meta name="description" content="Wähle dein Interface (Art-Net-Node, ENTTEC Pro, Open DMX), gib Windows oder macOS an: die genaue Vorgehensweise erscheint, Schritt für Schritt.">
   <meta name="keywords" content="DMX-Ausgang MyStrow, Art-Net-Node, USB-DMX-Interface, ENTTEC DMX USB Pro, ENTTEC Open DMX USB, Eurolite USB-DMX512 PRO MK2, DMXKing UltraDMX Micro, OPTO OPEN DMX, DMX TOOLS ElectroConcept, Art-Net 2.0.0.15, DMX Mac, DMX512-Universum">
   <link rel="canonical" href="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow">
@@ -19,7 +19,7 @@
 <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://mystrow.fr/de/configurer-node-usb-artnet-dmx-mystrow">
-  <meta property="og:title" content="Den DMX-Ausgang mit MyStrow anschließen — Art-Net-Node & USB/DMX-Interfaces">
+  <meta property="og:title" content="Den DMX-Ausgang mit MyStrow anschließen - Art-Net-Node & USB/DMX-Interfaces">
   <meta property="og:description" content="Dein Interface + dein System = die genaue Vorgehensweise. Art-Net-Node, ENTTEC Pro, Open DMX, unter Windows wie unter macOS.">
   <meta property="og:image" content="https://mystrow.fr/img-blog/node-usb-dmx-de.webp">
   <meta property="og:site_name" content="MyStrow">
@@ -30,7 +30,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Den DMX-Ausgang mit MyStrow anschließen — Art-Net-Node & USB/DMX">
+  <meta name="twitter:title" content="Den DMX-Ausgang mit MyStrow anschließen - Art-Net-Node & USB/DMX">
   <meta name="twitter:description" content="Wähle dein Gerät und dein System: die Schritte erscheinen, ohne Umwege.">
   <meta name="twitter:image" content="https://mystrow.fr/img-blog/node-usb-dmx-de.webp">
 
@@ -44,7 +44,7 @@
   {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Den DMX-Ausgang mit MyStrow anschließen — Art-Net-Node und USB/DMX-Interfaces",
+  "headline": "Den DMX-Ausgang mit MyStrow anschließen - Art-Net-Node und USB/DMX-Interfaces",
   "description": "Anleitung zum DMX-Ausgang von MyStrow: die genaue Vorgehensweise für jedes Interface (Art-Net-Node, ENTTEC Pro, Open DMX) unter Windows und macOS.",
   "image": "https://mystrow.fr/img-blog/node-usb-dmx-de.webp",
   "author": {
@@ -371,7 +371,7 @@
     }
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -624,7 +624,7 @@
                         <dt>DMX Parameters</dt><dd>DMX Mode: OUT · Universe OUT: 0 · Universe IN: 1 · OUT Mode: Fixed · FPS Fixed: 40</dd>
                         <dt>Network Parameters</dt><dd>Node IP: 2.0.0.15 · DHCP IP: 2.0.0.2 · Netmask: 255.0.0.0</dd>
                       </dl>
-                      <p>Bestätige, dann <strong>USB abziehen und wieder einstecken</strong>&nbsp;: der Node startet mit seiner neuen Adresse. Ab Werk hat er 2.0.0.1, und 2.0.0.15 ist die Adresse, die MyStrow standardmäßig anspricht — hältst du dich daran, musst du in der Software gar nichts eingeben.</p>
+                      <p>Bestätige, dann <strong>USB abziehen und wieder einstecken</strong>&nbsp;: der Node startet mit seiner neuen Adresse. Ab Werk hat er 2.0.0.1, und 2.0.0.15 ist die Adresse, die MyStrow standardmäßig anspricht - hältst du dich daran, musst du in der Software gar nichts eingeben.</p>
                       <p>Bei einem anderen Node (ENTTEC ODE, DMXKing eDMX …) heißt das Tool anders, die Einstellungen sind aber dieselben&nbsp;: <strong>Art-Net-Protokoll</strong>, Ausgang auf OUT, Universum 0, IP 2.0.0.15 / Maske 255.0.0.0.</p>
                       <div class="shot-row">
                         <figure class="shot">
@@ -643,7 +643,7 @@
                     <div class="step-body">
                       <h4>Die Netzwerkkarte des PC auf 2.0.0.1 setzen</h4>
                       <p>In MyStrow&nbsp;: <span class="path">Verbindung ▸ 🌐 DMX-Ausgang ▸ ⚙️ Ausgang einrichten</span>, Reiter <strong>🌐 Node-Ausgang</strong>, Schaltfläche <strong>⚙️ Netzwerkverbindung konfigurieren</strong>. Der Assistent prüft die Kabel, listet die Ethernet-Karten auf, und die Schaltfläche <strong>Automatisch konfigurieren ✓</strong> setzt 2.0.0.1 / 255.0.0.0 auf der von dir gewählten Karte.</p>
-                      <p>Die automatische Konfiguration verlangt <strong>Administratorrechte</strong>. Schlägt sie fehl, wechselt der Assistent auf die manuelle Seite&nbsp;: Schaltfläche <strong>🔑 Als Administrator neu starten</strong>, oder Einstellung von Hand — Rechtsklick auf die Karte ▸ Eigenschaften ▸ <strong>TCP/IPv4</strong> ▸ Eigenschaften ▸ „Folgende IP-Adresse verwenden“ ▸ <strong>2.0.0.1</strong>, Maske <strong>255.0.0.0</strong>, Gateway leer.</p>
+                      <p>Die automatische Konfiguration verlangt <strong>Administratorrechte</strong>. Schlägt sie fehl, wechselt der Assistent auf die manuelle Seite&nbsp;: Schaltfläche <strong>🔑 Als Administrator neu starten</strong>, oder Einstellung von Hand - Rechtsklick auf die Karte ▸ Eigenschaften ▸ <strong>TCP/IPv4</strong> ▸ Eigenschaften ▸ „Folgende IP-Adresse verwenden“ ▸ <strong>2.0.0.1</strong>, Maske <strong>255.0.0.0</strong>, Gateway leer.</p>
                       <div class="note warn"><strong>Die Reihenfolge zählt.</strong> Führen Sie Schritt 2 <em>vor</em> diesem aus : der Node kommt ab Werk auf <strong>2.0.0.1</strong>, genau der Adresse, die der Assistent Ihrem PC gleich geben will. Beide würden sie zugleich beanspruchen, und Windows kann die Karte dann mit der Meldung einer doppelten Adresse deaktivieren.</div>
                       <div class="shot-row">
                         <figure class="shot">
@@ -675,7 +675,7 @@
                   </div>
                 </div>
                 <div class="callout">
-                  <p><strong>WLAN&nbsp;: besser vermeiden.</strong> Art-Net verträgt Paketverluste und die schwankende Latenz eines Funknetzes schlecht — das Licht „hakt“. Node per Kabel, WLAN für das Steuertablet.</p>
+                  <p><strong>WLAN&nbsp;: besser vermeiden.</strong> Art-Net verträgt Paketverluste und die schwankende Latenz eines Funknetzes schlecht - das Licht „hakt“. Node per Kabel, WLAN für das Steuertablet.</p>
                 </div>
               </div>
             </article>
@@ -738,7 +738,7 @@
                     <div class="step-body">
                       <h4>MyStrow im lokalen Netzwerk zulassen</h4>
                       <p><span class="path">Systemeinstellungen ▸ Datenschutz &amp; Sicherheit ▸ Lokales Netzwerk</span> ▸ aktiviere <strong>MyStrow</strong>. macOS stellt die Frage beim ersten Start&nbsp;; wurde sie abgelehnt, holst du sie hier nach.</p>
-                      <div class="note warn"><strong>Die Stolperfalle Nr. 1 auf dem Mac.</strong> Ohne diese Freigabe blockiert macOS Art-Net <strong>lautlos</strong>&nbsp;: keine Fehlermeldung, keine Meldung — der Node antwortet einfach nie und der Ausgang bleibt stumm. Nach dem Aktivieren MyStrow beenden und neu starten.</div>
+                      <div class="note warn"><strong>Die Stolperfalle Nr. 1 auf dem Mac.</strong> Ohne diese Freigabe blockiert macOS Art-Net <strong>lautlos</strong>&nbsp;: keine Fehlermeldung, keine Meldung - der Node antwortet einfach nie und der Ausgang bleibt stumm. Nach dem Aktivieren MyStrow beenden und neu starten.</div>
                     </div>
                   </div>
                   <div class="step">
@@ -751,7 +751,7 @@
                   </div>
                 </div>
                 <div class="callout">
-                  <p><strong>WLAN&nbsp;: besser vermeiden</strong> für den Node selbst — Paketverluste und schwankende Latenz lassen das Licht „haken“. Kabel für DMX, WLAN für das Steuertablet.</p>
+                  <p><strong>WLAN&nbsp;: besser vermeiden</strong> für den Node selbst - Paketverluste und schwankende Latenz lassen das Licht „haken“. Kabel für DMX, WLAN für das Steuertablet.</p>
                 </div>
               </div>
             </article>
@@ -775,7 +775,7 @@
                     <div class="step-body">
                       <h4>USB-Kabel anschließen, dann warten</h4>
                       <p>Ein einziges Kabel, vom PC zum Gerät. Windows muss anschließend die darin enthaltene Netzwerkkarte installieren&nbsp;: rechnen Sie mit <strong>etwa zehn Sekunden</strong>, beim allerersten Anschluss auch länger.</p>
-                      <div class="note">Sie erscheint unter einem Namen, der vom verwendeten Treiber abhängt — «&nbsp;<strong>Electroconcept USB Node</strong>&nbsp;» oder «&nbsp;<strong>UsbNcm Host Device</strong>&nbsp;». Das ist normal, beide meinen Ihr Gerät.</div>
+                      <div class="note">Sie erscheint unter einem Namen, der vom verwendeten Treiber abhängt - «&nbsp;<strong>Electroconcept USB Node</strong>&nbsp;» oder «&nbsp;<strong>UsbNcm Host Device</strong>&nbsp;». Das ist normal, beide meinen Ihr Gerät.</div>
                     </div>
                   </div>
                   <div class="step">
@@ -805,7 +805,7 @@
                     <div class="step-body">
                       <h4>Lassen Sie die Netzwerkkarte unberührt</h4>
                       <p>Anders als bei einem RJ45-Node gibt es hier <strong>nichts einzurichten</strong>&nbsp;: das Gerät weist Ihrem PC selbst eine Adresse zu (2.0.0.2), und sie ist bereits die richtige. Lassen Sie die Karte auf «&nbsp;IP-Adresse automatisch beziehen&nbsp;».</p>
-                      <div class="note warn"><strong>Starten Sie «&nbsp;Automatisch einrichten&nbsp;» nicht vor Schritt 2.</strong> Dieser Assistent weist Ihrem PC <strong>2.0.0.1</strong> zu — die Werksadresse des Geräts selbst. Solange der Node nicht auf 2.0.0.15 umgezogen ist, beanspruchen beide dieselbe Adresse, und Windows kann die Karte deaktivieren. Nach Schritt 2 gibt es keinen Konflikt mehr&nbsp;: der Assistent ist wieder harmlos, nur eben überflüssig.</div>
+                      <div class="note warn"><strong>Starten Sie «&nbsp;Automatisch einrichten&nbsp;» nicht vor Schritt 2.</strong> Dieser Assistent weist Ihrem PC <strong>2.0.0.1</strong> zu - die Werksadresse des Geräts selbst. Solange der Node nicht auf 2.0.0.15 umgezogen ist, beanspruchen beide dieselbe Adresse, und Windows kann die Karte deaktivieren. Nach Schritt 2 gibt es keinen Konflikt mehr&nbsp;: der Assistent ist wieder harmlos, nur eben überflüssig.</div>
                     </div>
                   </div>
                   <div class="step">
@@ -821,7 +821,7 @@
                     <div class="step-body">
                       <h4>Verbinden</h4>
                       <p>In MyStrow&nbsp;: <span class="path">Verbindung ▸ 🌐 DMX-Ausgang ▸ ⚙️ Ausgang einrichten</span>, Registerkarte <strong>🌐 Node-Ausgang</strong>. Der Status wird grün, sobald das Gerät antwortet, dann auf <strong>🔌 Verbinden</strong> klicken.</p>
-                      <div class="note ok"><strong>Die DMX-Anzeige des Geräts</strong> ist Ihr bester Zeuge&nbsp;: sie leuchtet nur, wenn wirklich Daten ankommen. Dunkel, während MyStrow «&nbsp;verbunden&nbsp;» meldet, heißt: die Pakete gehen an die falsche Adresse — zurück zu Schritt 2.</div>
+                      <div class="note ok"><strong>Die DMX-Anzeige des Geräts</strong> ist Ihr bester Zeuge&nbsp;: sie leuchtet nur, wenn wirklich Daten ankommen. Dunkel, während MyStrow «&nbsp;verbunden&nbsp;» meldet, heißt: die Pakete gehen an die falsche Adresse - zurück zu Schritt 2.</div>
                     </div>
                   </div>
                 </div>
@@ -905,7 +905,7 @@
                     <div class="step-num">2</div>
                     <div class="step-body">
                       <h4>Den Treiber prüfen</h4>
-                      <p>Diese Geräte nutzen einen FTDI-Chip&nbsp;: Windows installiert den Treiber in der überwiegenden Mehrheit der Fälle von allein. Zum Prüfen&nbsp;: <span class="path">Geräte-Manager ▸ Anschlüsse (COM &amp; LPT)</span> — dort sollte eine Zeile stehen wie <code>USB Serial Port (COM4)</code>.</p>
+                      <p>Diese Geräte nutzen einen FTDI-Chip&nbsp;: Windows installiert den Treiber in der überwiegenden Mehrheit der Fälle von allein. Zum Prüfen&nbsp;: <span class="path">Geräte-Manager ▸ Anschlüsse (COM &amp; LPT)</span> - dort sollte eine Zeile stehen wie <code>USB Serial Port (COM4)</code>.</p>
                       <p>Nichts zu sehen, oder ein gelbes Ausrufezeichen&nbsp;? Installiere den Treiber <strong>VCP FTDI</strong> (ftdichip.com) oder den des Herstellers und stecke das Gerät neu ein.</p>
                     </div>
                   </div>
@@ -916,7 +916,7 @@
                       <p><span class="path">Verbindung ▸ 🌐 DMX-Ausgang ▸ ⚙️ Ausgang einrichten</span>, Reiter <strong>🔌 USB-DMX-Ausgang</strong>&nbsp;:</p>
                       <ul>
                         <li><strong>Interface</strong>&nbsp;: „ENTTEC DMX USB Pro“ oder „Eurolite USB-DMX512 PRO (MK2)“.</li>
-                        <li><strong>COM-Port</strong>&nbsp;: der des Interfaces — FTDI-Chips sind mit einem <strong>★</strong>markiert. Die Schaltfläche <strong>↺</strong> startet die Erkennung neu.</li>
+                        <li><strong>COM-Port</strong>&nbsp;: der des Interfaces - FTDI-Chips sind mit einem <strong>★</strong>markiert. Die Schaltfläche <strong>↺</strong> startet die Erkennung neu.</li>
                         <li><strong>🔌 Verbinden</strong>&nbsp;: Diese Schaltfläche, und nur sie, schaltet den Ausgang der Software tatsächlich um. Den Reiter zu öffnen genügt nicht.</li>
                       </ul>
                       <div class="note">Beim Protokoll gibt es nichts zu wählen&nbsp;: MyStrow spricht mit diesen Geräten über ein Paketprotokoll, und der interne Mikrocontroller erzeugt die DMX-Frames. Genau das macht sie so stabil.</div>
@@ -926,7 +926,7 @@
                     <div class="step-num">4</div>
                     <div class="step-body">
                       <h4>Prüfen</h4>
-                      <p>Die <strong>LED des Geräts wird grün</strong> , wenn der Ausgang aktiv ist. Für mehr&nbsp;: <span class="path">Verbindung ▸ 🩺 Diagnose ▸ 🔌 USB-Test (DMX-Interface)</span> — der Assistent bietet <strong>▶ Diagnose starten</strong> (Port, Treiber, tatsächliches Senden) und <strong>💡 100&nbsp;%-Test</strong>, der Vollgas auf alle Kanäle schickt.</p>
+                      <p>Die <strong>LED des Geräts wird grün</strong> , wenn der Ausgang aktiv ist. Für mehr&nbsp;: <span class="path">Verbindung ▸ 🩺 Diagnose ▸ 🔌 USB-Test (DMX-Interface)</span> - der Assistent bietet <strong>▶ Diagnose starten</strong> (Port, Treiber, tatsächliches Senden) und <strong>💡 100&nbsp;%-Test</strong>, der Vollgas auf alle Kanäle schickt.</p>
                       <div class="note warn"><strong>Immer nur eine Software auf dem Gerät.</strong> Ein Hersteller-Tool oder eine andere Lichtsoftware, die den Port hält, macht den Ausgang unberechenbar (Flackern, „port not open“). Schließe alles andere, bevor du verbindest.</div>
                     </div>
                   </div>
@@ -967,7 +967,7 @@
                       <ul>
                         <li><strong>Interface</strong>&nbsp;: „ENTTEC DMX USB Pro“ oder „Eurolite USB-DMX512 PRO (MK2)“.</li>
                         <li><strong>COM-Port</strong>&nbsp;: der Eintrag <code>/dev/cu.usbserial-…</code> (markiert mit <strong>★</strong> bei FTDI-Chips). Die Schaltfläche <strong>↺</strong> startet die Erkennung neu. Die Bezeichnung „COM-Port“ stammt aus der Windows-Version&nbsp;; auf dem Mac meint sie tatsächlich die Ports namens <code>cu.*</code>.</li>
-                        <li><strong>🔌 Verbinden</strong> — diese Schaltfläche schaltet den Ausgang tatsächlich um.</li>
+                        <li><strong>🔌 Verbinden</strong> - diese Schaltfläche schaltet den Ausgang tatsächlich um.</li>
                       </ul>
                     </div>
                   </div>
@@ -1017,7 +1017,7 @@
                     <div class="step-body">
                       <h4>Gerät stumm, obwohl alles grün ist&nbsp;? Der RTS/DTR-Test</h4>
                       <p><span class="path">Verbindung ▸ 🩺 Diagnose ▸ 🔌 USB-Test (DMX-Interface)</span> ▸ <strong>🔌 RTS/DTR-Test</strong>.</p>
-                      <p>Bei diesen Adaptern ist der Pin, der das RS485-Senden <em>freigibt</em> , manchmal auf die Steuerleitungen RTS oder DTR gelegt — und die werden beim Öffnen des Ports standardmäßig aktiviert, was den Ausgang völlig stumm lässt, ohne Fehlermeldung. Der Test geht alle vier Kombinationen durch, fragt dich, welche die Scheinwerfer zum Leuchten bringt, und merkt sich die Einstellung.</p>
+                      <p>Bei diesen Adaptern ist der Pin, der das RS485-Senden <em>freigibt</em> , manchmal auf die Steuerleitungen RTS oder DTR gelegt - und die werden beim Öffnen des Ports standardmäßig aktiviert, was den Ausgang völlig stumm lässt, ohne Fehlermeldung. Der Test geht alle vier Kombinationen durch, fragt dich, welche die Scheinwerfer zum Leuchten bringt, und merkt sich die Einstellung.</p>
                       <div class="note ok">Mach vorher die üblichen Checks&nbsp;: <strong>💡 100&nbsp;%-Test</strong> um Vollgas zu senden, Master und Fader oben, und ein 120&nbsp;Ω-Abschlusswiderstand am Leitungsende.</div>
                     </div>
                   </div>
@@ -1046,8 +1046,8 @@
                     <div class="step-num">2</div>
                     <div class="step-body">
                       <h4>Was MyStrow auf dem Mac macht</h4>
-                      <p>Unter macOS ist der Direktzugriff auf den Chip (D2XX) nicht verfügbar&nbsp;: MyStrow geht über den seriellen Port und erzeugt das DMX-Synchronisationssignal durch Umschalten der Baudrate. Das ist die Methode, die auf dem Mac wirklich funktioniert — der Standard-Break-Befehl gelingt dort fehlerfrei, erzeugt aber kein gültiges elektrisches Signal, was ein vollkommen stummes Gerät und eine vollkommen grüne Software ergibt.</p>
-                      <div class="note">Nichts einzustellen&nbsp;: es läuft automatisch. Merke dir nur, dass bei dieser Art Gerät <strong>die Bildrate vom Rechner abhängt</strong> — im Einsatz bleibt ein Pro-Interface die sicherere Wahl.</div>
+                      <p>Unter macOS ist der Direktzugriff auf den Chip (D2XX) nicht verfügbar&nbsp;: MyStrow geht über den seriellen Port und erzeugt das DMX-Synchronisationssignal durch Umschalten der Baudrate. Das ist die Methode, die auf dem Mac wirklich funktioniert - der Standard-Break-Befehl gelingt dort fehlerfrei, erzeugt aber kein gültiges elektrisches Signal, was ein vollkommen stummes Gerät und eine vollkommen grüne Software ergibt.</p>
+                      <div class="note">Nichts einzustellen&nbsp;: es läuft automatisch. Merke dir nur, dass bei dieser Art Gerät <strong>die Bildrate vom Rechner abhängt</strong> - im Einsatz bleibt ein Pro-Interface die sicherere Wahl.</div>
                     </div>
                   </div>
                   <div class="step">
@@ -1084,7 +1084,7 @@
           <div class="section-tag">Mehrere Ausgänge</div>
           <h2><span class="h2-num">02</span> Universen und Zuordnung der Ausgänge</h2>
           <div class="prose">
-            <p>Ein Universum = 512 Kanäle = eine XLR-Leitung. Darüber hinaus — typischerweise beim Hinzufügen von Moving Heads — musst du die Scheinwerfer auf mehrere Universen verteilen, also einen Node mit mehreren Ausgängen.</p>
+            <p>Ein Universum = 512 Kanäle = eine XLR-Leitung. Darüber hinaus - typischerweise beim Hinzufügen von Moving Heads - musst du die Scheinwerfer auf mehrere Universen verteilen, also einen Node mit mehreren Ausgängen.</p>
             <p>Bei verbundenem Node zeigt das DMX-Ausgangsfenster die Tabelle <strong>Zuordnung der Ausgänge</strong>&nbsp;: für jede physische Buchse des Geräts (DMX&nbsp;1 bis DMX&nbsp;4) wählst du, <strong>welches Universum</strong> dorthin gesendet wird, oder <strong>Deaktiviert</strong>.</p>
           </div>
 
@@ -1115,11 +1115,11 @@
 
           <figure class="shot" style="max-width:478px;">
             <img src="../aiguillage-sorties-node-mystrow.webp" alt="Tabelle zur Zuordnung der DMX-Ausgänge eines Node in MyStrow" width="478" height="210" loading="lazy">
-            <figcaption>Jede physische Buchse des Node bekommt das Universum deiner Wahl — oder gar nichts.</figcaption>
+            <figcaption>Jede physische Buchse des Node bekommt das Universum deiner Wahl - oder gar nichts.</figcaption>
           </figure>
 
           <div class="callout">
-            <p><strong>Der Patch bleibt maßgeblich.</strong> Die Zuordnung ändert die Adressierung nicht&nbsp;: im Patch bekommt jeder Scheinwerfer sein Universum und seine Startadresse. Zwei Geräte, deren Bereiche sich überschneiden, reagieren in jedem Fall gemeinsam — die Funktion <strong>⚡ Auto-Adressierung</strong> im Patch löst das mit einem Klick.</p>
+            <p><strong>Der Patch bleibt maßgeblich.</strong> Die Zuordnung ändert die Adressierung nicht&nbsp;: im Patch bekommt jeder Scheinwerfer sein Universum und seine Startadresse. Zwei Geräte, deren Bereiche sich überschneiden, reagieren in jedem Fall gemeinsam - die Funktion <strong>⚡ Auto-Adressierung</strong> im Patch löst das mit einem Klick.</p>
           </div>
         </section>
 

@@ -1,4 +1,4 @@
-/* MyStrow — Cookie Consent (RGPD / GDPR) */
+/* MyStrow - Cookie Consent (RGPD / GDPR) */
 (function () {
   'use strict';
   var KEY = 'mystrow_consent';
@@ -177,7 +177,7 @@
     _grantAll();
     _enableAnalytics();
   } else if (stored === 'denied') {
-    /* rester en denied — déjà configuré en default */
+    /* rester en denied - déjà configuré en default */
   } else {
     /* aucun choix → afficher la bannière */
     if (document.readyState === 'loading') {

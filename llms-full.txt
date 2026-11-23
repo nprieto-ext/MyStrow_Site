@@ -5,7 +5,7 @@
 > l'éclairage en réaction à la musique, un séquenceur sur timeline, un simulateur
 > 3D intégré et la prise en charge des contrôleurs MIDI type AKAI APC mini.
 
-Éditeur : MyStrow — https://mystrow.fr — contact via https://mystrow.fr/contact
+Éditeur : MyStrow - https://mystrow.fr - contact via https://mystrow.fr/contact
 
 ## Faits essentiels
 
@@ -13,13 +13,13 @@
 - **Essai** : 15 jours d'accès complet, sans carte bancaire, sortie DMX comprise. Ensuite une licence est nécessaire.
 - **Tarifs HT** (à vérifier sur https://mystrow.fr/shop, qui fait foi) (TVA calculée au paiement selon le pays ; TTC pour un particulier en France entre parenthèses) : Pro mensuel 19,99 €/mois sans engagement (23,99 €) ; Pro annuel 119,88 €/an, soit 9,99 €/mois (143,86 €) ; Lifetime 299,99 € en paiement unique (359,99 €), mises à jour incluses à vie.
 - **Licences** : les plans Pro et Lifetime autorisent l'activation sur 2 machines simultanément. Paiement par Stripe.
-- **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché — ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
+- **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché - ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
 - **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
 - **Fixtures** : bibliothèque de plus de 5 000 projecteurs, import de profils au format XML (GrandMA, QLC+).
 - **Langues du site** : français, anglais, espagnol, allemand, portugais, italien.
 - **Aide** : pour toute question « comment faire X dans MyStrow », la page https://mystrow.fr/aide donne la réponse officielle avec les menus exacts. Version texte complète : https://mystrow.fr/llms-full.txt
 
-# MyStrow — Aide : comment faire
+# MyStrow - Aide : comment faire
 
 Source : https://mystrow.fr/aide (mise à jour le 18 novembre 2026). Réponses officielles de l'éditeur de MyStrow, logiciel de contrôle lumière DMX pour Windows et macOS.
 
@@ -196,7 +196,7 @@ Regardez dans les spams (et l'onglet Promotions sur Gmail), puis vérifiez l'adr
 (https://mystrow.fr/aide#licence)
 
 
-## Chapitre 7 — Éditeur d'effets : créer un effet lumière (https://mystrow.fr/creer-effet-lumiere-mystrow)
+## Chapitre 7 - Éditeur d'effets : créer un effet lumière (https://mystrow.fr/creer-effet-lumiere-mystrow)
 
 Chaque **couche** anime **un canal** (l'intensité, la couleur, le Pan/Tilt…) sur **une sélection de projecteurs**, en suivant **une forme** qui se répète à une certaine vitesse. Le **décalage** entre projecteurs transforme un simple clignotement en chenillard ou en vague.
 Un effet peut contenir plusieurs couches qui jouent ensemble. Une fois sauvegardés, les effets restent disponibles dans **MES EFFETS**.
@@ -237,7 +237,7 @@ L'**éditeur d'effets** : les effets à gauche, le tableau des couches au centre
 
 # Manuel MyStrow (https://mystrow.fr/manuel)
 
-## Chapitre 1 — Sortie DMX (https://mystrow.fr/manuel-sortie-dmx)
+## Chapitre 1 - Sortie DMX (https://mystrow.fr/manuel-sortie-dmx)
 
 Pour que MyStrow pilote de vrais projecteurs, il lui faut une **interface DMX** entre l'ordinateur et le premier projecteur. Ce chapitre couvre tout ce qui se passe dans **Connexion › 🌐 Sortie DMX** et dans les outils de test.
 
@@ -324,7 +324,7 @@ Sur Mac, si la sortie est restée sur « USB » alors que vous utilisez un node,
 - **Le Wi-Fi suffit-il pour un node Art-Net ?** C'est possible mais déconseillé : le Wi-Fi ajoute des coupures et de la latence. Reliez le node en câble Ethernet, directement ou via un switch.
 - **Mon interface est reconnue mais rien ne s'allume.** Ouvrez Édition › 🔬 DMX Tester et montez les canaux du projecteur. S'il s'allume, la sortie fonctionne : c'est l'adresse ou le mode DMX du patch qui ne correspond pas au projecteur. S'il reste éteint, vérifiez le câble DMX et lancez Connexion › 🩺 Diagnostic.
 
-## Chapitre 2 — Patch et fixtures (https://mystrow.fr/manuel-patch-dmx)
+## Chapitre 2 - Patch et fixtures (https://mystrow.fr/manuel-patch-dmx)
 
 Le **patch** dit à MyStrow quels projecteurs vous avez, à quelle **adresse DMX** chacun écoute et dans quel **groupe** il joue. Tout se passe dans **Édition › 🔌 Patch DMX**.
 
@@ -404,7 +404,7 @@ Le patch est aussi enregistré dans le fichier de show (`.tui`) et suit votre co
 - **Je ne connais pas le mode de mon projecteur.** Il s'affiche dans le menu du projecteur (souvent « 7CH », « d7 », « CH 9 »…) ou dans sa notice. Faute de mieux, prenez le mode le plus complet et vérifiez avec Édition › 🔬 DMX Tester.
 - **Puis-je reprendre mon patch QLC+ ?** Oui : 📁 Fichier › 📂 Importer le patch lit un espace de travail QLC+ (.qxw). La fenêtre de relecture indique quels appareils ont été reconnus et lesquels sont à vérifier.
 
-## Chapitre 3 — Installation, licence et compte (https://mystrow.fr/manuel-installation-licence)
+## Chapitre 3 - Installation, licence et compte (https://mystrow.fr/manuel-installation-licence)
 
 Tout ce qui se passe autour du logiciel : l'installation, l'essai, la licence, le compte qui suit vos réglages d'un ordinateur à l'autre, et les mises à jour.
 
@@ -463,7 +463,7 @@ Si une mise à jour ne passe pas, téléchargez la dernière version sur le site
 - **Mon essai est terminé, je perds mes shows ?** Non. Vos shows, votre patch et vos réglages restent sur l'ordinateur et dans votre compte. Prenez une licence et tout est là.
 - **Sur Mac, MyStrow ne s'ouvre pas.** Vérifiez la version de macOS (Apple Silicon : macOS 13 minimum ; Intel : macOS 11 minimum) et retéléchargez la bonne version. Si MyStrow se ferme une trentaine de secondes après l'ouverture, un antivirus est souvent en cause.
 
-## Chapitre 4 — Plan de feu 2D et 3D (https://mystrow.fr/manuel-plan-de-feu-2d-3d)
+## Chapitre 4 - Plan de feu 2D et 3D (https://mystrow.fr/manuel-plan-de-feu-2d-3d)
 
 Le **plan de feu** montre vos projecteurs à leur place sur la scène, et ce qu'ils font en temps réel. On s'en sert pour sélectionner et régler des projecteurs à la main, et pour préparer un show sans matériel grâce à la **3D**.
 
@@ -516,7 +516,7 @@ Le menu **DÉCOR** propose des scènes toutes prêtes : Scène de concert, Scèn
 - **La 3D saccade.** Baissez la Qualité de rendu (Bas ou Moyen) et fermez les autres logiciels lourds. La finesse des faisceaux volumétriques est ce qui coûte le plus.
 - **Mes lyres visent dans le mauvais sens en 3D.** Vérifiez leur accroche dans Positionnement des projecteurs (RX = 0° au plafond, 180° au sol, ↕ Retourner pour basculer) et l'orientation RY. Côté DMX, Pan/Tilt inversés se règlent dans le patch.
 
-## Chapitre 5 — Jeu en direct (https://mystrow.fr/manuel-jeu-en-direct)
+## Chapitre 5 - Jeu en direct (https://mystrow.fr/manuel-jeu-en-direct)
 
 La fenêtre principale de MyStrow est une **surface de jeu** : une grille de pads et des faders, la même que sur un contrôleur AKAI APC mini. Ce chapitre explique chaque type de colonne et chaque bouton, à la souris comme au contrôleur.
 
@@ -604,7 +604,7 @@ Brancher et vérifier un contrôleur MIDI : **Connexion › 🎮 Contrôle › �
 - **Peut-on jouer sans contrôleur ?** Oui. Toute la surface se joue à la souris, à l'écran tactile ou depuis une tablette (Connexion › 🎮 Contrôle › 📱 Entrée Externe). Un contrôleur MIDI comme l'AKAI APC mini ajoute simplement des pads et des faders physiques.
 - **Comment dérouler un spectacle mémoire après mémoire ?** Enregistrez vos mémoires dans l'ordre (MEM 1.1, 1.2, 1.3…), réglez le bouton bas-droite sur GO, puis appuyez sur GO à chaque changement. Pour un enchaînement minuté, utilisez plutôt les cues d'une mémoire, ou le REC Lumière sur la musique.
 
-## Chapitre 6 — Lyres et mouvements (https://mystrow.fr/manuel-lyres)
+## Chapitre 6 - Lyres et mouvements (https://mystrow.fr/manuel-lyres)
 
 Les **lyres** (moving heads) bougent, changent de couleur et de gobo. Ce chapitre rassemble tout ce qui les concerne : réglages, déplacements, positions mémorisées et mouvements.
 
@@ -650,7 +650,7 @@ Une DualShock 3 sous Windows demande un pilote dédié (DsHidMini). Guide comple
 - **Un cercle ressemble à un ovale ou à un huit.** Renseignez le débattement mécanique Pan/Tilt de la lyre dans le patch (540°/270° sur la plupart, voir sa notice) : il sert à donner la bonne forme aux mouvements.
 - **Comment faire un miroir jardin / cour ?** Activez ⇄ SYM sur le plan de feu, ou la colonne SYM (Pan inversé) dans une couche Pan/Tilt de l'éditeur d'effets.
 
-## Chapitre 8 — Playlist et REC Lumière (https://mystrow.fr/manuel-playlist-rec-lumiere)
+## Chapitre 8 - Playlist et REC Lumière (https://mystrow.fr/manuel-playlist-rec-lumiere)
 
 La **playlist** joue vos sons, vidéos et images. Chaque média a son **mode lumière** : à la main, en IA, ou en rejouant une séquence écrite dans l'éditeur **REC Lumière**, calée sur la musique à la milliseconde.
 
@@ -728,7 +728,7 @@ Tutoriels vidéo : [automatiser ses lumières](https://mystrow.fr/automatisation
 - **Puis-je réutiliser le même REC Lumière sur plusieurs morceaux ?** Oui : Fichier › ⬆ Exporter le REC lumière depuis l'éditeur, puis ⬇ Importer un REC lumière sur l'autre média. Pour dupliquer un média avec sa séquence : clic droit › ⧉ Dupliquer (avec REC Lumière).
 - **Les lumières sont en avance sur une vidéo.** Réglez le décalage dans Édition › 🎬 Synchro lumière / vidéo. La latence vient de la lecture vidéo de l'ordinateur : le réglage s'applique à toutes les vidéos, pas aux fichiers audio.
 
-## Chapitre 9 — IA Lumière et mode Live (https://mystrow.fr/manuel-ia-lumiere-mode-live)
+## Chapitre 9 - IA Lumière et mode Live (https://mystrow.fr/manuel-ia-lumiere-mode-live)
 
 MyStrow sait jouer la lumière tout seul en écoutant la musique. Deux façons : l'**IA Lumière** sur un média de la playlist, et le **mode Live**, qui écoute n'importe quelle source (Spotify, logiciel DJ, micro, table de mixage).
 
@@ -787,7 +787,7 @@ On passe d'un mode à l'autre à tout moment, en un clic.
 - **Le BPM affiché est faux ou instable.** Avec un logiciel DJ, préférez la source MIDI Clock : le tempo vient directement du logiciel. Avec Micro / Line In, rapprochez le micro des enceintes ou utilisez une entrée ligne.
 - **Puis-je garder certains projecteurs à la main pendant que l'IA joue ?** Oui : dans les réglages du Live, limitez les groupes que l'IA pilote. Les autres restent sur les pads et les faders.
 
-## Chapitre 10 — Contrôleurs et raccourcis (https://mystrow.fr/manuel-controleurs)
+## Chapitre 10 - Contrôleurs et raccourcis (https://mystrow.fr/manuel-controleurs)
 
 MyStrow se joue à la souris, mais il est plus agréable sous les doigts. Ce chapitre couvre tous les moyens de le piloter : contrôleurs MIDI et DJ, Stream Deck, console lumière et clavier. La manette de jeu est dans le [chapitre Lyres](https://mystrow.fr/manuel-lyres), la tablette dans le chapitre suivant.
 
@@ -831,7 +831,7 @@ Quelques raccourcis fixes à connaître : **Espace** pour lecture / pause, `Ctrl
 - **Mon contrôleur n'est pas dans la liste.** Utilisez l'assistant « Mon contrôleur n'est pas reconnu » : il suffit d'appuyer sur chaque pad et de bouger chaque fader. Le profil est ensuite permanent sur cet ordinateur.
 - **Puis-je utiliser deux contrôleurs à la fois ?** Un contrôleur MIDI pilote la surface de pads ; vous pouvez y ajouter une tablette, une manette de jeu, un Stream Deck et le clavier, qui fonctionnent en parallèle.
 
-## Chapitre 11 — Tablette, OBS, vMix et assistant IA (https://mystrow.fr/manuel-tablette-integrations)
+## Chapitre 11 - Tablette, OBS, vMix et assistant IA (https://mystrow.fr/manuel-tablette-integrations)
 
 MyStrow s'ouvre à d'autres appareils et logiciels : une **tablette** comme télécommande, **OBS** ou **vMix** qui déclenchent la lumière au changement de plan, et un **assistant IA** à qui l'on parle.
 
@@ -875,7 +875,7 @@ Et pour toute question « comment faire X dans MyStrow », donnez à votre IA l'
 - **Faut-il une application pour piloter depuis la tablette ?** Non pour la télécommande : tout passe par le navigateur après le QR code. L'application tablette sert à piloter sans ordinateur.
 - **OBS ne se connecte pas.** Activez le serveur WebSocket dans OBS (Outils › Paramètres du serveur WebSocket), recopiez son port et son mot de passe dans MyStrow, et vérifiez que les deux logiciels sont sur le même réseau.
 
-## Chapitre 12 — Dépannage (https://mystrow.fr/manuel-depannage)
+## Chapitre 12 - Dépannage (https://mystrow.fr/manuel-depannage)
 
 Les problèmes que l'on nous signale le plus, avec leur solution, classés par symptôme. Commencez toujours par les **outils de diagnostic** : ils trouvent la cause dans la plupart des cas.
 

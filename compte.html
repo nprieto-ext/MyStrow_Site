@@ -296,7 +296,7 @@
     .oauth-row .btn-apple { width: auto; padding: 7px 16px; font-size: 12px; }
     .oauth-note { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
     </style>
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -313,7 +313,7 @@
 <!-- Barre du haut : son markup avait disparu de la page alors que showNav() et
      logout() continuaient de l'adresser par id. Résultat : TypeError juste
      APRÈS une connexion réussie, attrapée par le catch du formulaire, donc
-     affichée comme « Connexion impossible » — plus personne ne pouvait entrer
+     affichée comme « Connexion impossible » - plus personne ne pouvait entrer
      dans son compte. C'était aussi le seul endroit d'où se déconnecter. -->
 <header>
   <nav>
@@ -377,15 +377,15 @@
       <div class="card-title">Licence</div>
       <div class="card-row">
         <span class="row-label">Statut</span>
-        <span class="row-value" id="lic-status">—</span>
+        <span class="row-value" id="lic-status">-</span>
       </div>
       <div class="card-row">
         <span class="row-label">Plan</span>
-        <span class="row-value" id="lic-plan">—</span>
+        <span class="row-value" id="lic-plan">-</span>
       </div>
       <div class="card-row">
         <span class="row-label">Expiration</span>
-        <span class="row-value" id="lic-expiry">—</span>
+        <span class="row-value" id="lic-expiry">-</span>
       </div>
     </div>
 
@@ -409,7 +409,7 @@
       <div id="invoices-list"><span class="no-invoices">Chargement…</span></div>
     </div>
 
-    <!-- FACTURATION PRO : SIRET / TVA — facture électronique (obligatoire au 01/09/2027) -->
+    <!-- FACTURATION PRO : SIRET / TVA - facture électronique (obligatoire au 01/09/2027) -->
     <div class="card" id="card-pro">
       <div class="card-title">Facturation professionnelle</div>
 
@@ -417,15 +417,15 @@
       <div id="pro-view" style="display:none">
         <div class="card-row">
           <span class="row-label">Entreprise</span>
-          <span class="row-value" id="pro-v-name">—</span>
+          <span class="row-value" id="pro-v-name">-</span>
         </div>
         <div class="card-row" id="pro-v-siret-row">
           <span class="row-label">SIRET</span>
-          <span class="row-value" id="pro-v-siret">—</span>
+          <span class="row-value" id="pro-v-siret">-</span>
         </div>
         <div class="card-row" id="pro-v-vat-row">
           <span class="row-label">N° de TVA</span>
-          <span class="row-value" id="pro-v-vat">—</span>
+          <span class="row-value" id="pro-v-vat">-</span>
         </div>
         <div class="pro-actions" style="margin-top:16px">
           <button class="btn-ghost" onclick="proEdit()">Modifier</button>
@@ -452,7 +452,7 @@
         <p class="billing-note" style="margin:-4px 0 14px">Micro-entrepreneur en franchise de TVA : le SIRET suffit. Entreprise hors de France : le numéro de TVA seul suffit.</p>
 
         <div class="pro-found" id="pro-found" style="display:none">
-          <div class="pro-found-q">Nous avons trouvé cette entreprise — c'est bien vous ?</div>
+          <div class="pro-found-q">Nous avons trouvé cette entreprise - c'est bien vous ?</div>
           <div class="pro-found-name" id="pro-found-name"></div>
           <div class="pro-found-addr" id="pro-found-addr"></div>
         </div>
@@ -470,13 +470,13 @@
     <div class="card" id="card-billing" style="display:none">
       <div class="card-title">Abonnement &amp; Facturation</div>
       <div class="upgrade-hint" id="upgrade-hint">
-        💡 Vous êtes sur le plan <strong>mensuel</strong>. Passez à l'<strong>annuel</strong> pour économiser jusqu'à 30 % — gérable directement depuis le portail Stripe.
+        💡 Vous êtes sur le plan <strong>mensuel</strong>. Passez à l'<strong>annuel</strong> pour économiser jusqu'à 30 % - gérable directement depuis le portail Stripe.
       </div>
       <div class="billing-actions">
         <button class="btn-portal" id="btn-portal" onclick="openPortal()">
           Gérer mon abonnement →
         </button>
-        <p class="billing-note">Modifier votre plan, consulter vos factures, résilier votre abonnement — tout se passe dans le portail Stripe sécurisé.</p>
+        <p class="billing-note">Modifier votre plan, consulter vos factures, résilier votre abonnement - tout se passe dans le portail Stripe sécurisé.</p>
       </div>
     </div>
   </div>
@@ -626,7 +626,7 @@ async function login() {
     // de la protection contre l'énumération d'emails. Il a REMPLACÉ
     // INVALID_PASSWORD et EMAIL_NOT_FOUND, que Firebase n'envoie plus.
     // Sans lui, un simple mot de passe erroné tombait dans le message
-    // générique « Connexion impossible » — qui laisse croire à une panne du
+    // générique « Connexion impossible » - qui laisse croire à une panne du
     // site alors qu'il suffit de réinitialiser son mot de passe.
     // L'application desktop gère déjà ce code (firebase_client.py) : c'est le
     // site qui n'avait pas suivi.
@@ -642,7 +642,7 @@ async function login() {
       : code === 'INVALID_EMAIL'
       ? 'Adresse email invalide.'
       : code === 'Failed to fetch'
-      ? 'Serveur injoignable — vérifiez votre connexion internet.'
+      ? 'Serveur injoignable - vérifiez votre connexion internet.'
       // Tout code inattendu est AFFICHÉ tel quel : un message générique rend
       // le diagnostic impossible, aussi bien pour l'utilisateur que pour nous.
       : `Connexion impossible (${code || 'erreur inconnue'}).`;
@@ -807,7 +807,7 @@ async function oauthUnlink(provider, btn) {
 
 // ── Mot de passe oublié ──────────────────────────────────────────────────────
 // Passe par la Cloud Function `send_reset_email`, qui RENVOIE les identifiants
-// (email + mot de passe) au lieu d'un lien à cliquer — c'est ce que le client a
+// (email + mot de passe) au lieu d'un lien à cliquer - c'est ce que le client a
 // perdu. Surtout, elle remonte les échecs : `accounts:sendOobCode` répond 200
 // quoi qu'il arrive (protection anti-énumération activée sur le projet), et
 // cette fonction-ci ignorait de toute façon la réponse. La page affichait donc
@@ -841,7 +841,7 @@ async function sendReset() {
     if (!res.ok || !data.ok) {
       throw new Error(data.error || `Envoi impossible (erreur ${res.status}).`);
     }
-    okEl.textContent = 'Identifiants envoyés ✓ — pensez à regarder dans vos spams.';
+    okEl.textContent = 'Identifiants envoyés ✓ - pensez à regarder dans vos spams.';
   } catch (e) {
     okEl.style.display = 'none';
     errEl.textContent = (e && e.message ? e.message : 'Envoi impossible.') +
@@ -898,10 +898,10 @@ async function loadInvoices() {
     listEl.innerHTML = docs.map(inv => {
       const dateStr = inv.date
         ? new Date(inv.date + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
-        : '—';
+        : '-';
       const amountStr = inv.amount_eur != null
         ? inv.amount_eur.toFixed(2).replace('.', ',') + ' €'
-        : '—';
+        : '-';
       const planLabel = planLabels[inv.plan] || (inv.plan || '');
       const linkHtml = inv.invoice_url
         ? `<a class="btn-invoice" href="${inv.invoice_url}" target="_blank" rel="noopener">Voir →</a>`
@@ -956,7 +956,7 @@ function renderAccount(d) {
     expiryEl.textContent = diff > 0 ? `${dateStr} (dans ${diff} j)` : dateStr;
     if (!active) expiryEl.style.color = '#f87171';
   } else {
-    expiryEl.textContent = '—';
+    expiryEl.textContent = '-';
   }
 
   // Machines
@@ -1058,7 +1058,7 @@ function renderPro(d) {
   document.getElementById('pro-view').style.display = has ? 'block' : 'none';
   document.getElementById('pro-form').style.display = has ? 'none' : 'block';
   if (!has) return;
-  document.getElementById('pro-v-name').textContent  = d.billing_company_name || '—';
+  document.getElementById('pro-v-name').textContent  = d.billing_company_name || '-';
   document.getElementById('pro-v-siret').textContent = fmtSiret(d.billing_siret);
   document.getElementById('pro-v-vat').textContent   = d.vat_number || '';
   document.getElementById('pro-v-siret-row').style.display = d.billing_siret ? '' : 'none';
@@ -1115,7 +1115,7 @@ async function proCheck() {
     if (c.siret) {
       document.getElementById('pro-found-name').textContent = c.name || '';
       document.getElementById('pro-found-addr').textContent =
-        `${c.address || ''} — SIRET ${fmtSiret(c.siret)}`;
+        `${c.address || ''} - SIRET ${fmtSiret(c.siret)}`;
       document.getElementById('pro-found').style.display = 'block';
       document.getElementById('btn-pro-check').style.display = 'none';
       document.getElementById('btn-pro-save').style.display = '';
@@ -1147,7 +1147,7 @@ async function proSave() {
     });
     proReset();
     renderPro(_userData);
-    proMsg('Enregistré ✓ — ces informations figureront sur vos prochaines factures.', 'ok');
+    proMsg('Enregistré ✓ - ces informations figureront sur vos prochaines factures.', 'ok');
   } catch (e) {
     proMsg(e.message, 'err');
   } finally {

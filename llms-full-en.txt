@@ -1,8 +1,8 @@
-# MyStrow — full English documentation (help + manual)
+# MyStrow - full English documentation (help + manual)
 
-> MyStrow is DMX lighting control software for Windows and macOS: it drives DMX512 fixtures from a computer through Art-Net or a USB-DMX interface, with an AI that lights to the music, a timeline sequencer (REC Light), a 3D visualiser and MIDI controller support (AKAI APC mini). Website: https://mystrow.fr/en/ — 15-day free trial with DMX output; prices on https://mystrow.fr/en/shop
+> MyStrow is DMX lighting control software for Windows and macOS: it drives DMX512 fixtures from a computer through Art-Net or a USB-DMX interface, with an AI that lights to the music, a timeline sequencer (REC Light), a 3D visualiser and MIDI controller support (AKAI APC mini). Website: https://mystrow.fr/en/ - 15-day free trial with DMX output; prices on https://mystrow.fr/en/shop
 
-# MyStrow — Help: how to
+# MyStrow - Help: how to
 
 Source: https://mystrow.fr/en/aide (updated 18 November 2026). Official answers from the publisher of MyStrow, DMX lighting control software for Windows and macOS. Menu names are those of the English interface.
 
@@ -179,7 +179,7 @@ Check your spam folder (and the Promotions tab in Gmail), then check the address
 (https://mystrow.fr/en/aide#licence)
 
 
-## Chapter 7 — Effect editor: creating a lighting effect (https://mystrow.fr/en/creer-effet-lumiere-mystrow)
+## Chapter 7 - Effect editor: creating a lighting effect (https://mystrow.fr/en/creer-effet-lumiere-mystrow)
 
 Each **layer** animates **one channel** (intensity, colour, Pan/Tilt…) on **a selection of fixtures**, following **a shape** that repeats at a given speed. The **offset** between fixtures turns a simple blink into a chase or a wave.
 An effect can contain several layers playing together. Once saved, effects stay available in **MY EFFECTS**.
@@ -220,7 +220,7 @@ The **Effect editor**: effects on the left, the layer table in the middle, the p
 
 # MyStrow Manual (https://mystrow.fr/en/manuel)
 
-## Chapter 1 — DMX output (https://mystrow.fr/en/manuel-sortie-dmx)
+## Chapter 1 - DMX output (https://mystrow.fr/en/manuel-sortie-dmx)
 
 For MyStrow to drive real fixtures, it needs a **DMX interface** between the computer and the first fixture. This chapter covers everything in **Connection › 🌐 DMX Output** and the test tools.
 
@@ -307,7 +307,7 @@ On Mac, if the output stayed on “USB” while you're using a node, reopen DMX 
 - **Is Wi-Fi enough for an Art-Net node?** It's possible but not recommended: Wi-Fi adds dropouts and latency. Connect the node with an Ethernet cable, directly or through a switch.
 - **My interface is detected but nothing lights up.** Open Edit › 🔬 DMX Tester and raise the fixture's channels. If it lights, the output works: the patch address or DMX mode doesn't match the fixture. If it stays dark, check the DMX cable and run Connection › 🩺 Diagnostics.
 
-## Chapter 2 — Patch and fixtures (https://mystrow.fr/en/manuel-patch-dmx)
+## Chapter 2 - Patch and fixtures (https://mystrow.fr/en/manuel-patch-dmx)
 
 The **patch** tells MyStrow which fixtures you have, which **DMX address** each one listens to and which **group** it plays in. Everything happens in **Edit › 🔌 DMX Patch**.
 
@@ -387,7 +387,7 @@ The patch is also saved in the show file (`.tui`) and follows your MyStrow accou
 - **I don't know my fixture's mode.** It's shown in the fixture's menu (often “7CH”, “d7”, “CH 9”…) or in its manual. Failing that, take the fullest mode and check with Edit › 🔬 DMX Tester.
 - **Can I bring in my QLC+ patch?** Yes: 📁 File › 📂 Import patch reads a QLC+ workspace (.qxw). The review window shows which devices were recognised and which need checking.
 
-## Chapter 3 — Installation, license and account (https://mystrow.fr/en/manuel-installation-licence)
+## Chapter 3 - Installation, license and account (https://mystrow.fr/en/manuel-installation-licence)
 
 Everything around the software: installation, the trial, the license, the account that carries your settings from one computer to another, and updates.
 
@@ -446,7 +446,7 @@ If an update doesn't go through, download the latest version from the website an
 - **My trial is over, do I lose my shows?** No. Your shows, patch and settings stay on the computer and in your account. Get a license and everything is there.
 - **On Mac, MyStrow won't open.** Check your macOS version (Apple Silicon: macOS 13 minimum; Intel: macOS 11 minimum) and download the right version again. If MyStrow closes about thirty seconds after opening, an antivirus is often the cause.
 
-## Chapter 4 — 2D and 3D lighting plan (https://mystrow.fr/en/manuel-plan-de-feu-2d-3d)
+## Chapter 4 - 2D and 3D lighting plan (https://mystrow.fr/en/manuel-plan-de-feu-2d-3d)
 
 The **lighting plan** shows your fixtures where they are on stage, and what they're doing in real time. You use it to select and adjust fixtures by hand, and to prepare a show without any hardware thanks to the **3D** view.
 
@@ -499,7 +499,7 @@ The **SET** menu offers ready-made scenes: concert stage, 6×5 m stage, outdoor 
 - **The 3D view stutters.** Lower the Render quality (Low or Medium) and close other heavy programs. The volumetric beam detail is what costs the most.
 - **My moving heads point the wrong way in 3D.** Check their hanging in Fixture positioning (RX = 0° on the ceiling, 180° on the floor, ↕ Flip to switch) and the RY orientation. On the DMX side, inverted Pan/Tilt is set in the patch.
 
-## Chapter 5 — Live playing (https://mystrow.fr/en/manuel-jeu-en-direct)
+## Chapter 5 - Live playing (https://mystrow.fr/en/manuel-jeu-en-direct)
 
 MyStrow's main window is a **playing surface**: a grid of pads and faders, the same as on an AKAI APC mini controller. This chapter explains each column type and each button, with the mouse or on the controller.
 
@@ -587,7 +587,7 @@ Connecting and checking a MIDI controller: **Connection › 🎮 Control › �
 - **Can I play without a controller?** Yes. The whole surface can be played with the mouse, a touch screen or a tablet (Connection › 🎮 Control › 📱 External Input). A MIDI controller like the AKAI APC mini simply adds physical pads and faders.
 - **How do I run a show memory after memory?** Record your memories in order (MEM 1.1, 1.2, 1.3…), set the bottom-right button to GO, then press GO at each change. For timed chaining, use a memory's cues instead, or REC Light on the music.
 
-## Chapter 6 — Moving heads and movement (https://mystrow.fr/en/manuel-lyres)
+## Chapter 6 - Moving heads and movement (https://mystrow.fr/en/manuel-lyres)
 
 **Moving heads** move, change colour and gobo. This chapter gathers everything about them: settings, movement, stored positions and motion effects.
 
@@ -633,7 +633,7 @@ A DualShock 3 on Windows needs a dedicated driver (DsHidMini). Full guide: [driv
 - **A circle looks like an oval or a figure eight.** Enter the head's mechanical Pan/Tilt range in the patch (540°/270° on most, see its manual): it's used to give movements the right shape.
 - **How do I make a stage-left / stage-right mirror?** Turn on ⇄ SYM on the lighting plan, or the SYM column (Pan inverted) in a Pan/Tilt layer of the effect editor.
 
-## Chapter 8 — Playlist and REC Light (https://mystrow.fr/en/manuel-playlist-rec-lumiere)
+## Chapter 8 - Playlist and REC Light (https://mystrow.fr/en/manuel-playlist-rec-lumiere)
 
 The **playlist** plays your sounds, videos and images. Each media item has its **light mode**: by hand, AI, or replaying a sequence written in the **REC Light** editor, locked to the music to the millisecond.
 
@@ -711,7 +711,7 @@ Video tutorials: [automating your lights](https://mystrow.fr/en/automatisation-l
 - **Can I reuse the same REC Light on several tracks?** Yes: File › ⬆ Export REC Light from the editor, then ⬇ Import REC Light on the other media item. To duplicate a media item with its sequence: right-click › ⧉ Duplicate (with Light REC).
 - **The lights are ahead of a video.** Set the offset in Edit › 🎬 Light / video sync. The latency comes from the computer's video playback: the setting applies to all videos, not to audio files.
 
-## Chapter 9 — AI Light and Live mode (https://mystrow.fr/en/manuel-ia-lumiere-mode-live)
+## Chapter 9 - AI Light and Live mode (https://mystrow.fr/en/manuel-ia-lumiere-mode-live)
 
 MyStrow can play the light on its own by listening to the music. Two ways: **AI Light** on a playlist item, and **Live mode**, which listens to any source (Spotify, DJ software, microphone, mixing desk).
 
@@ -770,7 +770,7 @@ You can switch between modes at any time, in one click.
 - **The BPM shown is wrong or unstable.** With DJ software, prefer the MIDI Clock source: the tempo comes straight from the software. With Micro / Line In, move the microphone closer to the speakers or use a line input.
 - **Can I keep some fixtures in my hands while the AI plays?** Yes: in the Live settings, limit the groups the AI drives. The others stay on the pads and faders.
 
-## Chapter 10 — Controllers and shortcuts (https://mystrow.fr/en/manuel-controleurs)
+## Chapter 10 - Controllers and shortcuts (https://mystrow.fr/en/manuel-controleurs)
 
 MyStrow can be played with the mouse, but it's nicer under your fingers. This chapter covers every way to drive it: MIDI and DJ controllers, Stream Deck, lighting console and keyboard. The game controller is in the [Moving heads chapter](https://mystrow.fr/en/manuel-lyres), the tablet in the next chapter.
 
@@ -814,7 +814,7 @@ A few fixed shortcuts worth knowing: **Space** for play / pause, `Ctrl+PageDown`
 - **My controller isn't in the list.** Use the “My controller isn't recognised” wizard: you just press each pad and move each fader. The profile is then permanent on that computer.
 - **Can I use two controllers at once?** A MIDI controller drives the pad surface; you can add a tablet, a game controller, a Stream Deck and the keyboard, which all work in parallel.
 
-## Chapter 11 — Tablet, OBS, vMix and AI assistant (https://mystrow.fr/en/manuel-tablette-integrations)
+## Chapter 11 - Tablet, OBS, vMix and AI assistant (https://mystrow.fr/en/manuel-tablette-integrations)
 
 MyStrow opens up to other devices and software: a **tablet** as a remote, **OBS** or **vMix** triggering the light when the shot changes, and an **AI assistant** you talk to.
 
@@ -858,7 +858,7 @@ And for any “how do I do X in MyStrow” question, give your AI the address `m
 - **Do I need an app to control from a tablet?** Not for the remote: everything goes through the browser after scanning the QR code. The tablet app is for driving fixtures without a computer.
 - **OBS won't connect.** Enable the WebSocket server in OBS (Tools › WebSocket Server Settings), copy its port and password into MyStrow, and check that both programs are on the same network.
 
-## Chapter 12 — Troubleshooting (https://mystrow.fr/en/manuel-depannage)
+## Chapter 12 - Troubleshooting (https://mystrow.fr/en/manuel-depannage)
 
 The problems reported to us most often, with their solution, sorted by symptom. Always start with the **diagnostic tools**: they find the cause in most cases.
 

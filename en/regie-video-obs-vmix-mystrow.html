@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Control your lights from OBS or vMix — MyStrow guide | MyStrow</title>
+  <title>Control your lights from OBS or vMix - MyStrow guide | MyStrow</title>
   <meta name="description" content="Make your DMX lights follow OBS or vMix: when a scene or input goes live, MyStrow triggers the memory, effect or cart you chose.">
   <meta name="keywords" content="OBS DMX lighting, vMix DMX lighting, obs-websocket MyStrow, vMix TCP API, lighting tally, video production lighting, OBS scene triggers lights, automatic streaming lighting">
   <link rel="canonical" href="https://mystrow.fr/en/regie-video-obs-vmix-mystrow">
@@ -246,7 +246,7 @@
     .note-box strong { color: var(--text); }
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -274,7 +274,7 @@
       </nav>
       <div class="hero-badge">🎬 Practical guide · Video production</div>
       <h1>Your lights follow<br>the <em>video</em> mix</h1>
-      <p class="hero-sub">When a scene goes live in OBS, or a camera goes to program in vMix, MyStrow sends the matching light. The director leads, the lighting follows — with nobody behind the console.</p>
+      <p class="hero-sub">When a scene goes live in OBS, or a camera goes to program in vMix, MyStrow sends the matching light. The director leads, the lighting follows - with nobody behind the console.</p>
       <div class="hero-meta">
         <span>By <strong>MyStrow</strong></span>
         <span>·</span>
@@ -295,7 +295,7 @@
       <div class="section-tag">How it works</div>
       <h2>One video event, one lighting action</h2>
       <div class="prose">
-        <p>OBS or vMix, the principle is the same — and MyStrow connects to both in the same way. Your video mixer constantly reports <strong>what is on air</strong>: the active scene in OBS, the input on program in vMix. MyStrow listens to that signal and triggers the action you have assigned to that source.</p>
+        <p>OBS or vMix, the principle is the same - and MyStrow connects to both in the same way. Your video mixer constantly reports <strong>what is on air</strong>: the active scene in OBS, the input on program in vMix. MyStrow listens to that signal and triggers the action you have assigned to that source.</p>
         <p>In practice: the wide shot goes live → the front light comes up. You cut to the drummer's camera → the backlights turn blue. The credits start → the “end of set” cart plays by itself. Nothing to click during the show.</p>
       </div>
 
@@ -315,7 +315,7 @@
       </div>
 
       <div class="prose">
-        <p>The link is <strong>one-way</strong>: the video mixer drives MyStrow, never the other way round. That's a design choice. The director runs the show, and a two-way link would open a feedback loop — MyStrow changes a memory, the mixer sends back an event, MyStrow replays the action — that you would then have to tame.</p>
+        <p>The link is <strong>one-way</strong>: the video mixer drives MyStrow, never the other way round. That's a design choice. The director runs the show, and a two-way link would open a feedback loop - MyStrow changes a memory, the mixer sends back an event, MyStrow replays the action - that you would then have to tame.</p>
         <p>Everything goes over the network. If your video mixer and MyStrow run on the same computer, there is absolutely nothing to plug in.</p>
       </div>
 
@@ -346,7 +346,7 @@
         <div class="feat-item">
           <div class="feat-icon">🔊</div>
           <h3>A cart</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">A sound, played at the same time as the shot. Opening jingle, sound sting, ambient bed — triggered by the video, without taking your eyes off the lights.</p>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">A sound, played at the same time as the shot. Opening jingle, sound sting, ambient bed - triggered by the video, without taking your eyes off the lights.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">⏸</div>
@@ -356,7 +356,7 @@
       </div>
 
       <div class="callout" style="margin-top:36px;">
-        <p><strong>Triggering happens on the rising edge.</strong> The action only fires at the moment the source <em>becomes</em> active. As long as it stays on air, nothing is replayed — so you can take over on the console during the shot without MyStrow overwriting you a second later.</p>
+        <p><strong>Triggering happens on the rising edge.</strong> The action only fires at the moment the source <em>becomes</em> active. As long as it stays on air, nothing is replayed - so you can take over on the console during the shot without MyStrow overwriting you a second later.</p>
       </div>
     </div>
   </section>
@@ -382,7 +382,7 @@
           <div class="step-num">2</div>
           <div class="step-body">
             <h3>Get the password</h3>
-            <p>In the same window, click <strong>“Show Connect Info”</strong>. OBS shows an automatically generated password. Copy it. If you'd rather do without, untick <strong>“Enable Authentication”</strong> — on a closed production network, that's a reasonable choice.</p>
+            <p>In the same window, click <strong>“Show Connect Info”</strong>. OBS shows an automatically generated password. Copy it. If you'd rather do without, untick <strong>“Enable Authentication”</strong> - on a closed production network, that's a reasonable choice.</p>
           </div>
         </div>
         <div class="step">
@@ -396,14 +396,14 @@
           <div class="step-num">4</div>
           <div class="step-body">
             <h3>Test the connection</h3>
-            <p>Click <strong>Test connection</strong>. The table fills up with the list of your OBS scenes, in the same order as in OBS. If nothing appears, check the troubleshooting table below — the message shown points to the cause.</p>
+            <p>Click <strong>Test connection</strong>. The table fills up with the list of your OBS scenes, in the same order as in OBS. If nothing appears, check the troubleshooting table below - the message shown points to the cause.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">5</div>
           <div class="step-body">
             <h3>Map scenes to actions</h3>
-            <p>For each scene, choose the action type and then its target: memory <code>3.2</code>, effect <code>E4</code>, cart 1… Scenes you don't want to trigger anything stay on <strong>“— Nothing —”</strong>.</p>
+            <p>For each scene, choose the action type and then its target: memory <code>3.2</code>, effect <code>E4</code>, cart 1… Scenes you don't want to trigger anything stay on <strong>“- Nothing -”</strong>.</p>
           </div>
         </div>
         <div class="step">
@@ -416,7 +416,7 @@
       </div>
 
       <div class="lock-box">
-        <p><strong>💡 The address shown by OBS is not the one to copy.</strong> The connect info window shows an address like <code>192.168.1.x</code>: it's meant for <em>another</em> device, a phone or a second machine. From the same computer, <code>127.0.0.1</code> leads to the same OBS — and that address won't change when your router hands out new ones.</p>
+        <p><strong>💡 The address shown by OBS is not the one to copy.</strong> The connect info window shows an address like <code>192.168.1.x</code>: it's meant for <em>another</em> device, a phone or a second machine. From the same computer, <code>127.0.0.1</code> leads to the same OBS - and that address won't change when your router hands out new ones.</p>
       </div>
     </div>
   </section>
@@ -450,7 +450,7 @@
           <div class="step-num">3</div>
           <div class="step-body">
             <h3>Map inputs to actions</h3>
-            <p>Same principle as with OBS: for each input, an action type and a target. MyStrow follows the <strong>program tally</strong> — the action fires when the input goes live, not when it reaches preview.</p>
+            <p>Same principle as with OBS: for each input, an action type and a target. MyStrow follows the <strong>program tally</strong> - the action fires when the input goes live, not when it reaches preview.</p>
           </div>
         </div>
         <div class="step">
@@ -479,11 +479,11 @@
 
       <div class="two-col" style="margin-top:32px;">
         <div class="highlight-box">
-          <h3>OBS — identified by its NAME</h3>
-          <p>Reordering your scenes breaks nothing: move them around as you like. However, <strong>renaming a scene breaks the mapping</strong> — the action won't fire any more. Simply redo the assignment in the table.</p>
+          <h3>OBS - identified by its NAME</h3>
+          <p>Reordering your scenes breaks nothing: move them around as you like. However, <strong>renaming a scene breaks the mapping</strong> - the action won't fire any more. Simply redo the assignment in the table.</p>
         </div>
         <div class="highlight-box">
-          <h3>vMix — identified by its NUMBER</h3>
+          <h3>vMix - identified by its NUMBER</h3>
           <p>It's the opposite: rename your inputs freely. But <strong>changing their order shifts the mappings</strong>, and the wide-shot lighting will fire on camera 2. Check the table after any change to the set.</p>
         </div>
       </div>
@@ -500,7 +500,7 @@
       <div class="section-tag">Troubleshooting</div>
       <h2>It won't connect</h2>
       <div class="prose">
-        <p>MyStrow shows a specific message under the connection fields. In the app these messages are in French — here is what each one means.</p>
+        <p>MyStrow shows a specific message under the connection fields. In the app these messages are in French - here is what each one means.</p>
       </div>
 
       <div class="cmp-wrap">
@@ -581,12 +581,12 @@
         </a>
         <a href="automatisation-lumieres-dmx-mystrow" class="related-card">
           <div class="rc-tag">Tutorial · Intermediate</div>
-          <h3>Automate your DMX lights — Light REC</h3>
+          <h3>Automate your DMX lights - Light REC</h3>
           <p>Record your live actions and turn them into sequences you can replay endlessly.</p>
         </a>
         <a href="tutoriel-debuter-mystrow" class="related-card">
           <div class="rc-tag">Tutorial · Beginner</div>
-          <h3>Getting started with MyStrow — Patch, groups and first show</h3>
+          <h3>Getting started with MyStrow - Patch, groups and first show</h3>
           <p>A step-by-step guide to lighting up your first DMX fixtures, from installation to your first look.</p>
         </a>
         <a href="light-programming" class="related-card">

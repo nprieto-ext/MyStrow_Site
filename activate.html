@@ -320,7 +320,7 @@
        règle, le display de .form-group / .recap-row l'emporte sur [hidden]. */
     #grp-code[hidden], #row-code[hidden] { display: none; }
 </style>
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -345,7 +345,7 @@
 
     <div class="lang-switch" id="lang-switch"></div>
 
-    <!-- ÉTAPE 1 — saisie -->
+    <!-- ÉTAPE 1 - saisie -->
     <section id="view-form">
       <div class="section-tag" data-t="tag"></div>
       <h1 class="page-title" data-t="title"></h1>
@@ -393,7 +393,7 @@
       </div>
     </section>
 
-    <!-- ÉTAPE 2 — confirmation de l'adresse -->
+    <!-- ÉTAPE 2 - confirmation de l'adresse -->
     <section id="view-confirm" hidden>
       <div class="section-tag" data-t="tag"></div>
       <h1 class="page-title" data-t="c_title"></h1>
@@ -412,7 +412,7 @@
       </div>
     </section>
 
-    <!-- ÉTAPE 3 — c'est fait -->
+    <!-- ÉTAPE 3 - c'est fait -->
     <section id="view-done" hidden>
       <div class="login-card act-card">
         <div class="done-mark">&#10003;</div>
@@ -466,7 +466,7 @@
 // ───────────────────────────────────────────────────────────────────────────
 const CF_ACTIVATE = 'https://us-central1-mystrow-907be.cloudfunctions.net/activate_code';
 
-// Alphabet des codes : ni 1, ni I, ni L, ni O, ni U — aucune paire ambiguë
+// Alphabet des codes : ni 1, ni I, ni L, ni O, ni U - aucune paire ambiguë
 // à la lecture sur l'étiquette. Doit rester identique au générateur et à la
 // Cloud Function, le caractère de contrôle en dépend.
 const ALPHABET = '023456789ABCDEFGHJKMNPQRSTVWXYZ';
@@ -480,8 +480,8 @@ const T = {
     tag:   "Boîtier USB-DMX",
     title: 'Activer <em>votre licence</em>',
     sub:   "Votre boîtier MyStrow est livré avec une licence incluse. Commencez par le numéro de série, sous le boîtier. S'il commence par MS-DMX, on vous demandera aussi le code en bas de la carte glissée dans la boîte.",
-    l_code:   'Code d\'activation <span class="hint">— en bas de la carte</span>',
-    l_serial: 'Numéro de série <span class="hint">— sous le boîtier</span>',
+    l_code:   'Code d\'activation <span class="hint">- en bas de la carte</span>',
+    l_serial: 'Numéro de série <span class="hint">- sous le boîtier</span>',
     l_email:  'Votre adresse email',
     btn_next: 'Continuer →',
     legal:    'En activant votre licence, vous acceptez les <a href="/cgv">conditions générales</a>.',
@@ -490,7 +490,7 @@ const T = {
     w2_t: "Le numéro de série",
     w2_p: "Sous le boîtier : retournez-le. Il commence par MS-DMX (autocollant) ou MS-DMY (gravé).",
     c_title: 'Vérifiez <em>votre adresse</em>',
-    c_sub:   "Votre licence sera créée sur cette adresse et le mot de passe y sera envoyé. Une erreur ici et le code est perdu — relisez-la bien.",
+    c_sub:   "Votre licence sera créée sur cette adresse et le mot de passe y sera envoyé. Une erreur ici et le code est perdu - relisez-la bien.",
     r_code:   "Code",
     r_serial: "Boîtier",
     c_note:   "C'est bien votre adresse ?",
@@ -516,8 +516,8 @@ const T = {
     tag:   "USB-DMX interface",
     title: 'Activate <em>your licence</em>',
     sub:   "Your MyStrow interface comes with an included licence. Start with the serial number, under the interface. If it starts with MS-DMX, you will also be asked for the code at the bottom of the card inside the box.",
-    l_code:   'Activation code <span class="hint">— at the bottom of the card</span>',
-    l_serial: 'Serial number <span class="hint">— under the interface</span>',
+    l_code:   'Activation code <span class="hint">- at the bottom of the card</span>',
+    l_serial: 'Serial number <span class="hint">- under the interface</span>',
     l_email:  'Your email address',
     btn_next: 'Continue →',
     legal:    'By activating your licence you accept the <a href="/en/terms">terms and conditions</a>.',
@@ -526,7 +526,7 @@ const T = {
     w2_t: "The serial number",
     w2_p: "Under the interface: turn it over. It starts with MS-DMX (sticker) or MS-DMY (engraved).",
     c_title: 'Check <em>your address</em>',
-    c_sub:   "Your licence will be created on this address and the password sent there. A typo here and the code is lost — read it carefully.",
+    c_sub:   "Your licence will be created on this address and the password sent there. A typo here and the code is lost - read it carefully.",
     r_code:   "Code",
     r_serial: "Interface",
     c_note:   "Is this your address?",
@@ -552,8 +552,8 @@ const T = {
     tag:   "USB-DMX-Interface",
     title: 'Ihre Lizenz <em>aktivieren</em>',
     sub:   "Ihr MyStrow-Interface wird mit einer inklusiven Lizenz geliefert. Beginnen Sie mit der Seriennummer auf der Unterseite des Interface. Beginnt sie mit MS-DMX, brauchen Sie zusätzlich den Code unten auf der Karte in der Schachtel.",
-    l_code:   'Aktivierungscode <span class="hint">— unten auf der Karte</span>',
-    l_serial: 'Seriennummer <span class="hint">— unter dem Interface</span>',
+    l_code:   'Aktivierungscode <span class="hint">- unten auf der Karte</span>',
+    l_serial: 'Seriennummer <span class="hint">- unter dem Interface</span>',
     l_email:  'Ihre E-Mail-Adresse',
     btn_next: 'Weiter →',
     legal:    'Mit der Aktivierung akzeptieren Sie die <a href="/de/terms">Allgemeinen Geschäftsbedingungen</a>.',
@@ -562,7 +562,7 @@ const T = {
     w2_t: "Die Seriennummer",
     w2_p: "Unter dem Interface: umdrehen. Sie beginnt mit MS-DMX (Aufkleber) oder MS-DMY (graviert).",
     c_title: 'Adresse <em>prüfen</em>',
-    c_sub:   "Ihre Lizenz wird auf diese Adresse angelegt, das Passwort geht dorthin. Ein Tippfehler hier und der Code ist verloren — bitte genau lesen.",
+    c_sub:   "Ihre Lizenz wird auf diese Adresse angelegt, das Passwort geht dorthin. Ein Tippfehler hier und der Code ist verloren - bitte genau lesen.",
     r_code:   "Code",
     r_serial: "Interface",
     c_note:   "Ist das Ihre Adresse?",
@@ -588,8 +588,8 @@ const T = {
     tag:   "Interfaz USB-DMX",
     title: 'Activa <em>tu licencia</em>',
     sub:   "Tu interfaz MyStrow incluye una licencia. Empieza por el número de serie, bajo la interfaz. Si empieza por MS-DMX, también te pediremos el código en la parte inferior de la tarjeta que va dentro de la caja.",
-    l_code:   'Código de activación <span class="hint">— abajo en la tarjeta</span>',
-    l_serial: 'Número de serie <span class="hint">— bajo la interfaz</span>',
+    l_code:   'Código de activación <span class="hint">- abajo en la tarjeta</span>',
+    l_serial: 'Número de serie <span class="hint">- bajo la interfaz</span>',
     l_email:  'Tu dirección de email',
     btn_next: 'Continuar →',
     legal:    'Al activar tu licencia aceptas las <a href="/es/terms">condiciones generales</a>.',
@@ -598,7 +598,7 @@ const T = {
     w2_t: "El número de serie",
     w2_p: "Bajo la interfaz: dale la vuelta. Empieza por MS-DMX (pegatina) o MS-DMY (grabado).",
     c_title: 'Comprueba <em>tu dirección</em>',
-    c_sub:   "Tu licencia se creará en esta dirección y allí se enviará la contraseña. Un error aquí y el código se pierde — léela con atención.",
+    c_sub:   "Tu licencia se creará en esta dirección y allí se enviará la contraseña. Un error aquí y el código se pierde - léela con atención.",
     r_code:   "Código",
     r_serial: "Interfaz",
     c_note:   "¿Es tu dirección?",
@@ -624,8 +624,8 @@ const T = {
     tag:   "Interface USB-DMX",
     title: 'Ativar <em>a sua licença</em>',
     sub:   "A sua interface MyStrow inclui uma licença. Comece pelo número de série, sob a interface. Se começar por MS-DMX, também lhe pediremos o código na parte de baixo do cartão que vem na caixa.",
-    l_code:   'Código de ativação <span class="hint">— em baixo no cartão</span>',
-    l_serial: 'Número de série <span class="hint">— sob a interface</span>',
+    l_code:   'Código de ativação <span class="hint">- em baixo no cartão</span>',
+    l_serial: 'Número de série <span class="hint">- sob a interface</span>',
     l_email:  'O seu endereço de email',
     btn_next: 'Continuar →',
     legal:    'Ao ativar a sua licença aceita as <a href="/pt/terms">condições gerais</a>.',
@@ -634,7 +634,7 @@ const T = {
     w2_t: "O número de série",
     w2_p: "Sob a interface: vire-a ao contrário. Começa por MS-DMX (autocolante) ou MS-DMY (gravado).",
     c_title: 'Verifique <em>o seu endereço</em>',
-    c_sub:   "A sua licença será criada neste endereço e a palavra-passe enviada para lá. Um erro aqui e o código perde-se — releia com atenção.",
+    c_sub:   "A sua licença será criada neste endereço e a palavra-passe enviada para lá. Um erro aqui e o código perde-se - releia com atenção.",
     r_code:   "Código",
     r_serial: "Interface",
     c_note:   "É este o seu endereço?",

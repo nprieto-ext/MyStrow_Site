@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════
-   Mobile hamburger nav — menu plein écran soigné (sombre + or)
+   Mobile hamburger nav - menu plein écran soigné (sombre + or)
    ══════════════════════════════════════════════════════════════════ */
 
 /* ── Bouton hamburger ── */
@@ -33,7 +33,7 @@
    ordre de tabulation logique. Mais `.nav-right` porte lui aussi
    `margin-left:auto` : deux marges automatiques concurrentes se partagent
    l'espace libre à parts égales, et le hamburger tombait au MILIEU de la barre.
-   On le renvoie visuellement en dernier avec `order` — le DOM, lui, ne bouge
+   On le renvoie visuellement en dernier avec `order` - le DOM, lui, ne bouge
    pas. `.nav-right` est vide sur mobile (socials, langue, connexion et CTA sont
    tous masqués), il ne prend donc aucune place à gauche du bouton. */
 @media (max-width: 680px) {

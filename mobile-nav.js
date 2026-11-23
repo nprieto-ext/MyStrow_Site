@@ -17,7 +17,7 @@
       links.push({ href: href, text: text });
     }
 
-    // index.html style — .nav-center top-level children
+    // index.html style - .nav-center top-level children
     var center = nav.querySelector('.nav-center');
     if (center) {
       Array.from(center.children).forEach(function (child) {
@@ -30,7 +30,7 @@
       });
     }
 
-    // other pages — .nav-links / ul.nav-links
+    // other pages - .nav-links / ul.nav-links
     if (!center) {
       var nl = nav.querySelector('.nav-links, ul.nav-links');
       if (nl) {
@@ -181,7 +181,7 @@
 
     function open() {
       overlay.classList.add('nb-open');
-      // Bloquer le scroll sur <html> (pas <body>) — iOS Safari fixe position: fixed sur body
+      // Bloquer le scroll sur <html> (pas <body>) - iOS Safari fixe position: fixed sur body
       document.documentElement.style.overflow = 'hidden';
       burger.setAttribute('aria-expanded', 'true');
     }

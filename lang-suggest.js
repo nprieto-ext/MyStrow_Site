@@ -1,4 +1,4 @@
-/* MyStrow — Suggestion de langue (toutes les pages, toutes les langues).
+/* MyStrow - Suggestion de langue (toutes les pages, toutes les langues).
 
    Ce script NE REDIRIGE JAMAIS automatiquement : il propose. C'est volontaire.
    Googlebot rend le JS avec navigator.language = "en-US" ; une redirection

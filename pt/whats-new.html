@@ -226,7 +226,7 @@
     }
 
     /* Systeme detecte : la carte de l'OS du visiteur passe en avant, l'autre
-       s'efface. Pose par le script de bas de page — sans JS les deux cartes
+       s'efface. Pose par le script de bas de page - sans JS les deux cartes
        restent a egalite, soit exactement le rendu d'origine. */
     .os-card { position: relative; transition: border-color .25s, opacity .25s, box-shadow .25s; }
     .os-card.is-mine { border-color: var(--accent-border); box-shadow: 0 0 0 1px var(--accent-border), 0 14px 38px rgba(0,0,0,0.34); }
@@ -237,7 +237,7 @@
     .os-hint:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
     /* Encart SmartScreen : les DEUX ecrans que Windows affiche reellement, dans
-       l'ordre. Le premier ne propose PAS « Executer quand meme » — il faut
+       l'ordre. Le premier ne propose PAS « Executer quand meme » - il faut
        d'abord cliquer sur « Informations complementaires », et c'est justement
        ce clic-la que personne ne trouve. L'illustration ne montrait que le
        second ecran : le visiteur ne reconnaissait donc pas sa propre fenetre.
@@ -299,7 +299,7 @@
     @media (max-width: 680px) { .cl-item { padding-left: 20px; } .cl-item li { padding: 11px 13px; font-size: 14px; } .tag { display: table; margin: 0 0 6px; } }
     </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -562,7 +562,7 @@ function handleNewsletter(e) {
 <script src="/lang-suggest.js" defer></script>
 <script>
 /* Systeme du visiteur : on met en avant la carte qui le concerne, l'autre
-   s'efface (et revient au survol). Sans JS les deux restent a egalite — c'est
+   s'efface (et revient au survol). Sans JS les deux restent a egalite - c'est
    le rendu d'origine, rien n'est casse. On ne fait defiler QUE si la carte
    n'est pas deja a l'ecran : une page qui bouge toute seule alors qu'on voyait
    deja le bouton passe pour un bug. */

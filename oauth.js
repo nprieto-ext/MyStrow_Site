@@ -1,4 +1,4 @@
-// Connexion « Continuer avec Google / Apple » — partagé par compte.html et
+// Connexion « Continuer avec Google / Apple » - partagé par compte.html et
 // connexion-app.html (relais de l'appli PC et de la tablette).
 //
 // Les fournisseurs ne sont PAS activés dans Firebase Auth : on récupère un
@@ -133,7 +133,7 @@
   // Messages communs (le cas NO_ACCOUNT est rédigé par chaque page).
   function errorText(code) {
     switch (code) {
-      case 'NETWORK':        return 'Serveur injoignable — vérifiez votre connexion internet.';
+      case 'NETWORK':        return 'Serveur injoignable - vérifiez votre connexion internet.';
       case 'INVALID_TOKEN':  return 'La connexion n\'a pas pu être vérifiée. Réessayez.';
       case 'USER_DISABLED':  return 'Ce compte a été désactivé. Contactez le support.';
       case 'ALREADY_LINKED': return 'Ce compte est déjà lié à un autre compte MyStrow.';

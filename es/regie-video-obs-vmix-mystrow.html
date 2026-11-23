@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
-  <title>Controlar tus luces desde OBS o vMix — Guía MyStrow | MyStrow</title>
+  <title>Controlar tus luces desde OBS o vMix - Guía MyStrow | MyStrow</title>
   <meta name="description" content="Tus luces DMX siguen a OBS o vMix: cuando una escena o una entrada sale al aire, MyStrow lanza la memoria, el efecto o el cartucho que elijas.">
   <meta name="keywords" content="OBS luz DMX, vMix luz DMX, obs-websocket MyStrow, vMix TCP API, tally de luz, realización de vídeo iluminación, escena de OBS lanza luz, iluminación automática streaming">
   <link rel="canonical" href="https://mystrow.fr/es/regie-video-obs-vmix-mystrow">
@@ -246,7 +246,7 @@
     .note-box strong { color: var(--text); }
   </style>
   <link rel="icon" href="../favicon.ico" type="image/x-icon">
-  <!-- Google tag (gtag.js) — Consent Mode v2 RGPD -->
+  <!-- Google tag (gtag.js) - Consent Mode v2 RGPD -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -274,7 +274,7 @@
       </nav>
       <div class="hero-badge">🎬 Guía práctica · Realización de vídeo</div>
       <h1>Tus luces siguen<br>a la realización de <em>vídeo</em></h1>
-      <p class="hero-sub">Cuando una escena sale al aire en OBS, o una cámara pasa a programa en vMix, MyStrow envía la luz que le corresponde. El realizador manda, la iluminación sigue — sin nadie detrás de la mesa.</p>
+      <p class="hero-sub">Cuando una escena sale al aire en OBS, o una cámara pasa a programa en vMix, MyStrow envía la luz que le corresponde. El realizador manda, la iluminación sigue - sin nadie detrás de la mesa.</p>
       <div class="hero-meta">
         <span>Por <strong>MyStrow</strong></span>
         <span>·</span>
@@ -295,7 +295,7 @@
       <div class="section-tag">El principio</div>
       <h2>Un evento de vídeo, una acción de luz</h2>
       <div class="prose">
-        <p>OBS o vMix, el principio es el mismo — y MyStrow se conecta a los dos de la misma manera. Tu realización indica en todo momento <strong>lo que está al aire</strong>: la escena activa en OBS, la entrada en programa en vMix. MyStrow escucha esa señal y lanza la acción que hayas asociado a esa fuente.</p>
+        <p>OBS o vMix, el principio es el mismo - y MyStrow se conecta a los dos de la misma manera. Tu realización indica en todo momento <strong>lo que está al aire</strong>: la escena activa en OBS, la entrada en programa en vMix. MyStrow escucha esa señal y lanza la acción que hayas asociado a esa fuente.</p>
         <p>En la práctica: el plano general sale al aire → sube la luz frontal. Cortas a la cámara del batería → los contras pasan a azul. Empiezan los créditos → el cartucho «fin del set» arranca solo. Nada que pulsar durante el directo.</p>
       </div>
 
@@ -315,7 +315,7 @@
       </div>
 
       <div class="prose">
-        <p>El enlace va <strong>en un solo sentido</strong>: la realización controla MyStrow, nunca al revés. Es una decisión de diseño. El realizador manda en el directo, y un enlace en los dos sentidos abriría un bucle de retorno — MyStrow cambia una memoria, la realización devuelve un evento, MyStrow repite la acción — que luego habría que domar.</p>
+        <p>El enlace va <strong>en un solo sentido</strong>: la realización controla MyStrow, nunca al revés. Es una decisión de diseño. El realizador manda en el directo, y un enlace en los dos sentidos abriría un bucle de retorno - MyStrow cambia una memoria, la realización devuelve un evento, MyStrow repite la acción - que luego habría que domar.</p>
         <p>Todo pasa por la red. Si tu realización y MyStrow funcionan en el mismo ordenador, no hay absolutamente nada que conectar.</p>
       </div>
 
@@ -346,7 +346,7 @@
         <div class="feat-item">
           <div class="feat-icon">🔊</div>
           <h3>Un cartucho</h3>
-          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Un sonido, lanzado a la vez que el plano. Sintonía de apertura, ráfaga sonora, fondo de ambiente — lanzado por el vídeo, sin quitarle el ojo a la luz.</p>
+          <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Un sonido, lanzado a la vez que el plano. Sintonía de apertura, ráfaga sonora, fondo de ambiente - lanzado por el vídeo, sin quitarle el ojo a la luz.</p>
         </div>
         <div class="feat-item">
           <div class="feat-icon">⏸</div>
@@ -356,7 +356,7 @@
       </div>
 
       <div class="callout" style="margin-top:36px;">
-        <p><strong>El disparo se hace en el flanco de subida.</strong> La acción solo arranca en el momento en que la fuente <em>pasa a estar</em> activa. Mientras siga al aire, no se repite nada — así que puedes retomar el control de la mesa durante el plano sin que MyStrow te lo pise un segundo después.</p>
+        <p><strong>El disparo se hace en el flanco de subida.</strong> La acción solo arranca en el momento en que la fuente <em>pasa a estar</em> activa. Mientras siga al aire, no se repite nada - así que puedes retomar el control de la mesa durante el plano sin que MyStrow te lo pise un segundo después.</p>
       </div>
     </div>
   </section>
@@ -382,7 +382,7 @@
           <div class="step-num">2</div>
           <div class="step-body">
             <h3>Copiar la contraseña</h3>
-            <p>En la misma ventana, haz clic en <strong>«Mostrar información de conexión»</strong>. OBS muestra una contraseña generada automáticamente. Cópiala. Si prefieres prescindir de ella, desmarca <strong>«Activar autenticación»</strong> — en una red de realización cerrada, es una opción razonable.</p>
+            <p>En la misma ventana, haz clic en <strong>«Mostrar información de conexión»</strong>. OBS muestra una contraseña generada automáticamente. Cópiala. Si prefieres prescindir de ella, desmarca <strong>«Activar autenticación»</strong> - en una red de realización cerrada, es una opción razonable.</p>
           </div>
         </div>
         <div class="step">
@@ -396,14 +396,14 @@
           <div class="step-num">4</div>
           <div class="step-body">
             <h3>Probar la conexión</h3>
-            <p>Haz clic en <strong>Probar la conexión</strong>. La tabla se llena con la lista de tus escenas de OBS, en el mismo orden que en OBS. Si no aparece nada, consulta la tabla de solución de problemas más abajo — el mensaje que aparece indica la causa.</p>
+            <p>Haz clic en <strong>Probar la conexión</strong>. La tabla se llena con la lista de tus escenas de OBS, en el mismo orden que en OBS. Si no aparece nada, consulta la tabla de solución de problemas más abajo - el mensaje que aparece indica la causa.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">5</div>
           <div class="step-body">
             <h3>Asociar escenas y acciones</h3>
-            <p>Para cada escena, elige el tipo de acción y luego su destino: la memoria <code>3.2</code>, el efecto <code>E4</code>, el cartucho 1… Las escenas que no quieras que actúen se quedan en <strong>«— Nada —»</strong>.</p>
+            <p>Para cada escena, elige el tipo de acción y luego su destino: la memoria <code>3.2</code>, el efecto <code>E4</code>, el cartucho 1… Las escenas que no quieras que actúen se quedan en <strong>«- Nada -»</strong>.</p>
           </div>
         </div>
         <div class="step">
@@ -416,7 +416,7 @@
       </div>
 
       <div class="lock-box">
-        <p><strong>💡 La dirección que muestra OBS no es la que hay que copiar.</strong> La ventana de información de conexión muestra una dirección del tipo <code>192.168.1.x</code>: está pensada para <em>otro</em> aparato, un móvil o un segundo equipo. Desde el mismo ordenador, <code>127.0.0.1</code> lleva al mismo OBS — y esa dirección no cambiará cuando tu router reparta otras nuevas.</p>
+        <p><strong>💡 La dirección que muestra OBS no es la que hay que copiar.</strong> La ventana de información de conexión muestra una dirección del tipo <code>192.168.1.x</code>: está pensada para <em>otro</em> aparato, un móvil o un segundo equipo. Desde el mismo ordenador, <code>127.0.0.1</code> lleva al mismo OBS - y esa dirección no cambiará cuando tu router reparta otras nuevas.</p>
       </div>
     </div>
   </section>
@@ -450,7 +450,7 @@
           <div class="step-num">3</div>
           <div class="step-body">
             <h3>Asociar entradas y acciones</h3>
-            <p>Mismo principio que con OBS: para cada entrada, un tipo de acción y un destino. MyStrow sigue el <strong>tally de programa</strong> — la acción arranca cuando la entrada sale al aire, no cuando llega a preview.</p>
+            <p>Mismo principio que con OBS: para cada entrada, un tipo de acción y un destino. MyStrow sigue el <strong>tally de programa</strong> - la acción arranca cuando la entrada sale al aire, no cuando llega a preview.</p>
           </div>
         </div>
         <div class="step">
@@ -479,11 +479,11 @@
 
       <div class="two-col" style="margin-top:32px;">
         <div class="highlight-box">
-          <h3>OBS — identificada por su NOMBRE</h3>
-          <p>Reorganizar tus escenas no rompe nada: muévelas como quieras. En cambio, <strong>renombrar una escena rompe la correspondencia</strong> — la acción ya no arrancará. Basta con volver a asociarla en la tabla.</p>
+          <h3>OBS - identificada por su NOMBRE</h3>
+          <p>Reorganizar tus escenas no rompe nada: muévelas como quieras. En cambio, <strong>renombrar una escena rompe la correspondencia</strong> - la acción ya no arrancará. Basta con volver a asociarla en la tabla.</p>
         </div>
         <div class="highlight-box">
-          <h3>vMix — identificada por su NÚMERO</h3>
+          <h3>vMix - identificada por su NÚMERO</h3>
           <p>Es lo contrario: renombra tus entradas libremente. Pero <strong>cambiar su orden desplaza las correspondencias</strong>, y la luz del plano general saldrá con la cámara 2. Revisa la tabla después de cualquier cambio en el plató.</p>
         </div>
       </div>
@@ -500,7 +500,7 @@
       <div class="section-tag">Solución de problemas</div>
       <h2>No se conecta</h2>
       <div class="prose">
-        <p>MyStrow muestra un mensaje preciso bajo los campos de conexión. En la app, estos mensajes están en francés — esto es lo que significa cada uno.</p>
+        <p>MyStrow muestra un mensaje preciso bajo los campos de conexión. En la app, estos mensajes están en francés - esto es lo que significa cada uno.</p>
       </div>
 
       <div class="cmp-wrap">
@@ -581,12 +581,12 @@
         </a>
         <a href="automatisation-lumieres-dmx-mystrow" class="related-card">
           <div class="rc-tag">Tutorial · Intermedio</div>
-          <h3>Automatizar tus luces DMX — REC de luz</h3>
+          <h3>Automatizar tus luces DMX - REC de luz</h3>
           <p>Graba tus acciones en directo y conviértelas en secuencias que puedes repetir sin fin.</p>
         </a>
         <a href="tutoriel-debuter-mystrow" class="related-card">
           <div class="rc-tag">Tutorial · Principiante</div>
-          <h3>Empezar con MyStrow — Patch, grupos y primer show</h3>
+          <h3>Empezar con MyStrow - Patch, grupos y primer show</h3>
           <p>Guía paso a paso para encender tus primeros focos DMX, desde la instalación hasta el primer ambiente.</p>
         </a>
         <a href="light-programming" class="related-card">

@@ -1,4 +1,4 @@
-/* MyStrow — barre de navigation centralisée (toutes les pages, toutes les langues).
+/* MyStrow - barre de navigation centralisée (toutes les pages, toutes les langues).
    Injecte le CSS + le header. Doit être chargé AVANT mobile-nav.js (qui lit la nav). */
 (function () {
   "use strict";
