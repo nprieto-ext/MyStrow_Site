@@ -34,6 +34,9 @@
     opt.dataset.price = String(PRIX);
     var p = opt.querySelector('.pk-opt-price');
     if (p) p.innerHTML = '<s class="bf-old">' + AVANT + '€</s>' + p.innerHTML.replace(String(AVANT), String(PRIX));
+    /* 199 € − licence 1 an seule (119,88 € HT = 143,86 € TTC) = ~55 € ; à 159 € : ~15 €. */
+    var hint = opt.querySelector('.pk-opt-hint');
+    if (hint) hint.innerHTML = hint.innerHTML.replace('55', '15');
     var b = opt.querySelector('.pk-opt-badge');
     if (b) { b.textContent = L.badge; b.classList.add('bf-badge'); }
   }
