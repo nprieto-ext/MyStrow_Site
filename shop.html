@@ -321,6 +321,8 @@
     .pk-opt-name { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85; }
     .pk-opt-price { font-size: 34px; font-weight: 800; line-height: 1.05; }
     .pk-opt-hint { font-family: 'Inter', sans-serif; font-size: 11px; color: var(--muted); }
+    .pk-opt.hz { opacity: .45; border-style: dashed; }
+    .pk-opt.hz:hover { transform: none; border-color: rgba(255,255,255,0.1); }
     .pk-opt-badge { position: absolute; top: -10px; right: 12px; background: var(--accent); color: #0c0b00; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; }
     .pk-ship { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 12px; background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.18); }
     .pk-ship-ico { font-size: 22px; line-height: 1.2; }
@@ -685,7 +687,7 @@
           <span class="choix-ico" aria-hidden="true">🔌</span>
           <span class="choix-name">L'interface seule</span>
           <span class="choix-who">J'ai déjà ma licence (ou un autre logiciel) : il me manque le boîtier.</span>
-          <span class="choix-price">69 € TTC<small>sans licence · France métropolitaine</small></span>
+          <span class="choix-price">79 € TTC<small>sans licence · France métropolitaine</small></span>
           <span class="choix-go">Commander l'interface →</span>
         </a>
       </div>
@@ -750,9 +752,9 @@
           </button>
           <!-- Interface seule : stock chez Fanny, expédiée par nos soins (stripe_webhook → boitier_expedie) -->
           <button type="button" class="pk-opt" role="radio" aria-checked="false" data-plan="boitier" data-suffix="2mois" data-solo="1"
-                  data-price="69" data-href="https://buy.stripe.com/bJe7sD34F8Ji8p28AQ08g0d">
+                  data-price="79" data-href="https://buy.stripe.com/dRmcMXeNnbVueNq5oE08g0f">
             <span class="pk-opt-name">Interface seule</span>
-            <span class="pk-opt-price">69€<small class="pk-ttc">TTC</small></span>
+            <span class="pk-opt-price">79€<small class="pk-ttc">TTC</small></span>
             <span class="pk-opt-hint">Sans licence</span>
           </button>
         </div>
@@ -1195,7 +1197,7 @@ function handleNewsletter(e) {
 (function () {
   var API = 'https://us-central1-mystrow-907be.cloudfunctions.net/livraison_estimation';
   var P = '';
-  var T = {"alt": "Pack MyStrow : interface USB-DMX 512 et sa boîte, ", "out": "Bientôt de retour - dispo sur Amazon", "soldout": "Momentanément épuisé", "order": "Commander", "left": "Plus que {n} en stock", "instock": "En stock · expédié depuis la France", "dom": "Outre-mer : commandez ce pack sur <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a>", "domvie": "Outre-mer : pack à vie indisponible, <a href='{amz}' target='_blank' rel='noopener'><b>pack 1 an sur Amazon</b> ↗</a>", "perso": "Livré au {cp} d'ici ", "badcp": "Code postal non reconnu", "nozone": "Pas de livraison vers ce code postal", "change": "changer", "locale": "fr-FR", "ttc": "TTC", "def": "Commandez maintenant, livré d'ici ", "solo": "Expédiée sous <b>2 jours ouvrés</b> depuis la France", "solofr": "Interface seule : livraison en <b>France métropolitaine</b> uniquement", "soloh1": "L'interface seule.", "solosub": "L'interface USB-DMX sans licence."};
+  var T = {"alt": "Pack MyStrow : interface USB-DMX 512 et sa boîte, ", "out": "Bientôt de retour - dispo sur Amazon", "soldout": "Momentanément épuisé", "order": "Commander", "left": "Plus que {n} en stock", "instock": "En stock · expédié depuis la France", "dom": "Outre-mer : commandez ce pack sur <a href='{amz}' target='_blank' rel='noopener'><b>Amazon</b> ↗</a>", "domvie": "Outre-mer : pack à vie indisponible, <a href='{amz}' target='_blank' rel='noopener'><b>pack 1 an sur Amazon</b> ↗</a>", "perso": "Livré au {cp} d'ici ", "badcp": "Code postal non reconnu", "nozone": "Pas de livraison vers ce code postal", "change": "changer", "locale": "fr-FR", "ttc": "TTC", "def": "Commandez maintenant, livré d'ici ", "solo": "Expédiée sous <b>2 jours ouvrés</b> depuis la France", "solofr": "Interface seule : livraison en <b>France métropolitaine</b> uniquement", "solohz": "France uniquement", "solobascule": "Interface seule livrée en France uniquement. Hors France, choisissez un <b>pack</b> : la même interface est dedans.", "soloh1": "L'interface seule.", "solosub": "L'interface USB-DMX sans licence."};
   var opts = document.querySelectorAll('.pk-opt');
   var thumbs = document.querySelectorAll('.pk-thumb');
   var cta = document.getElementById('pk-cta');
@@ -1215,6 +1217,30 @@ function handleNewsletter(e) {
   var h1Pack = h1.textContent, subPack = sub.textContent;
   var shipHtml = shipMain.innerHTML;   // dernier encart livraison des packs (Amazon)
   var paysLivr = 'FR';
+  /* Interface seule = France métro. uniquement (lien Stripe FR) : hors France,
+     l'option est grisée et un clic bascule sur le Pack 2 mois. */
+  var soloOpt = document.querySelector('.pk-opt[data-solo]');
+  /* Pack de repli : le 2 mois, ou le 1 an si le 2 mois est épuisé. */
+  function packRepli() {
+    var p = stock && stock.pack_2m === 0 ? 'pack_1a' : 'pack_2m';
+    return document.querySelector('.pk-opt[data-plan="' + p + '"]');
+  }
+  var soloHint = soloOpt ? soloOpt.querySelector('.pk-opt-hint') : null;
+  var soloHintTxt = soloHint ? soloHint.textContent : '';
+  var bascule = false;
+  function horsFrance() { return paysLivr !== 'FR' || outreMer; }
+  function choisir(b) {
+    opts.forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-checked', 'false'); });
+    b.classList.add('on'); b.setAttribute('aria-checked', 'true');
+  }
+  function zoneSolo() {
+    if (!soloOpt) return;
+    var hz = horsFrance();
+    soloOpt.classList.toggle('hz', hz);
+    soloOpt.setAttribute('aria-disabled', hz ? 'true' : 'false');
+    if (soloHint) soloHint.textContent = hz ? T.solohz : soloHintTxt;
+    if (hz && current() === soloOpt) { choisir(packRepli()); bascule = true; }
+  }
 
   function shipDom() {
     var o = current();
@@ -1222,7 +1248,11 @@ function handleNewsletter(e) {
   }
   /* Encart livraison : l'interface seule part de chez nous (France métro.), pas d'Amazon. */
   function ship() {
-    if (current().dataset.solo) shipMain.innerHTML = (paysLivr === 'FR' && !outreMer) ? T.solo : T.solofr;
+    if (bascule && !current().dataset.solo) {
+      if (outreMer) shipDom(); else shipMain.innerHTML = shipHtml;
+      shipMain.innerHTML = T.solobascule + '<br>' + shipMain.innerHTML;
+    }
+    else if (current().dataset.solo) shipMain.innerHTML = (paysLivr === 'FR' && !outreMer) ? T.solo : T.solofr;
     else if (outreMer) shipDom();
     else shipMain.innerHTML = shipHtml;
   }
@@ -1244,6 +1274,7 @@ function handleNewsletter(e) {
   }
 
   function render() {
+    zoneSolo();
     var o = current();
     var suf = o.dataset.suffix;
     img.src = P + 'img-shop/pack-mystrow-' + suf + '.webp';
@@ -1285,8 +1316,8 @@ function handleNewsletter(e) {
 
   opts.forEach(function (b) {
     b.addEventListener('click', function () {
-      opts.forEach(function (x) { x.classList.remove('on'); x.setAttribute('aria-checked', 'false'); });
-      b.classList.add('on'); b.setAttribute('aria-checked', 'true');
+      bascule = b === soloOpt && horsFrance();
+      choisir(bascule ? packRepli() : b);
       render();
     });
   });
@@ -1414,7 +1445,7 @@ function handleNewsletter(e) {
         if (d.raison === 'outre-mer' && !outreMer) shipHtml = T.nozone;
         else if (d.ok && d.latest) shipHtml = (perso ? T.perso.replace('{cp}', libelle(cp, p)) : T.def) + '<b>' + jour(d.latest) + '</b>';
         else if (perso) shipHtml = T.badcp;
-        ship();
+        render();
       })
       .catch(function () { /* on garde « 72 h » */ });
   }
