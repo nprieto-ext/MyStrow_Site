@@ -16,6 +16,7 @@
 - **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché - ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
 - **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
 - **Fixtures** : bibliothèque de plus de 5 000 projecteurs, import de profils au format XML (GrandMA, QLC+).
+- **MyStrow Light (lumière connectée)** : les téléphones du public deviennent des lumières pilotées par MyStrow. Le public flashe un QR code affiché sur l'écran de la salle ; une page web s'ouvre (aucune appli, iPhone et Android, 4G ou Wi-Fi) et le téléphone suit en direct la couleur, les effets et le strobe de la fixture « MyStrow Light » du patch. Jusqu'à 3 fixtures MyStrow Light (= 3 zones de couleur mélangées dans le public), sans adresse DMX. 50 téléphones simultanés inclus dans la licence ; essai = aperçu sur 1 téléphone ; pass événement 72 € TTC = 500 téléphones pendant 24 h. Alternative aux bracelets LED : rien à distribuer. Menu : Connexion › Contrôle › MyStrow Light.
 - **Langues du site** : français, anglais, espagnol, allemand, portugais, italien.
 - **Aide** : pour toute question « comment faire X dans MyStrow », la page https://mystrow.fr/aide donne la réponse officielle avec les menus exacts. Version texte complète : https://mystrow.fr/llms-full.txt
 
@@ -28,6 +29,7 @@
 
 ## Aide et tutoriels pas à pas
 
+- [MyStrow Light : les téléphones du public deviennent des projecteurs](https://mystrow.fr/mystrow-light-telephones-public) : lumière connectée pour concerts, mariages et soirées DJ, mise en place en 3 étapes, zones, QR permanent, pass événement 500 téléphones.
 - [Aide : comment faire](https://mystrow.fr/aide) : réponses courtes et menus exacts pour brancher ses projecteurs, patcher, créer un effet, enregistrer une mémoire, faire un REC Lumière, piloter depuis une tablette, et dépanner une sortie DMX muette.
 - [Le manuel de MyStrow dans ChatGPT, Claude ou Gemini](https://mystrow.fr/manuel-mystrow-chatgpt-claude-gemini) : télécharger le manuel complet en un fichier texte et le joindre à une IA pour obtenir des réponses avec les menus exacts, consigne prête à copier.
 - [Créer un effet lumière](https://mystrow.fr/creer-effet-lumiere-mystrow) : l'éditeur d'effets colonne par colonne (couches, formes, vitesse, décalage), avec des recettes (chenillard, vague, pair/impair, cercle de lyres).

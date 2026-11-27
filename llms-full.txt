@@ -16,6 +16,7 @@
 - **Sortie DMX** : protocole Art-Net (standard ouvert, UDP port 6454) ou interface USB/DMX. Compatible avec tout node Art-Net du marché - ENTTEC ODE, DMXking eDMX, Luminex, Eurolite, entre autres.
 - **Contrôleurs MIDI** : AKAI APC mini mk2 (recommandé, conçu pour MyStrow) et Novation Launchpad Mini MK3. Le contrôleur est optionnel : un simulateur est intégré à l'interface.
 - **Fixtures** : bibliothèque de plus de 5 000 projecteurs, import de profils au format XML (GrandMA, QLC+).
+- **MyStrow Light (lumière connectée)** : les téléphones du public deviennent des lumières pilotées par MyStrow. Le public flashe un QR code affiché sur l'écran de la salle ; une page web s'ouvre (aucune appli, iPhone et Android, 4G ou Wi-Fi) et le téléphone suit en direct la couleur, les effets et le strobe de la fixture « MyStrow Light » du patch. Jusqu'à 3 fixtures MyStrow Light (= 3 zones de couleur mélangées dans le public), sans adresse DMX. 50 téléphones simultanés inclus dans la licence ; essai = aperçu sur 1 téléphone ; pass événement 72 € TTC = 500 téléphones pendant 24 h. Alternative aux bracelets LED : rien à distribuer. Menu : Connexion › Contrôle › MyStrow Light.
 - **Langues du site** : français, anglais, espagnol, allemand, portugais, italien.
 - **Aide** : pour toute question « comment faire X dans MyStrow », la page https://mystrow.fr/aide donne la réponse officielle avec les menus exacts. Version texte complète : https://mystrow.fr/llms-full.txt
 
@@ -234,6 +235,25 @@ L'**éditeur d'effets** : les effets à gauche, le tableau des couches au centre
 - **J'ai abîmé un effet d'usine.** Sélectionnez-le et cliquez sur ↺ Revenir à la version d'usine. Le bouton ↺ Remettre TOUS les effets d'usine fait de même pour toute la liste.
 - **Peut-on partager un effet ?** Oui : Exporter crée un fichier .mystrow_effect, que l'autre personne ajoute avec ＋ Ajouter un effet › Importer un effet.
 - **Je veux caler l'effet sur le tempo de la musique.** Réglez VIT à la molette : un cran = un dixième, et 29,8 correspond à environ 128 BPM. Le bouton TAP du contrôleur permet aussi de taper le tempo.
+
+## MyStrow Light : les téléphones du public deviennent des projecteurs (https://mystrow.fr/mystrow-light-telephones-public)
+
+MyStrow Light transforme les smartphones du public en lumières pilotées par MyStrow (« lumière connectée »). Aucune application à installer : le QR code ouvre une page web.
+
+Mise en place :
+1. Patch DMX : ajouter la fixture « MyStrow Light » (rubrique MyStrow Light). Elle arrive nommée « Zone 1 », se range dans un groupe comme un PAR LED et n'occupe aucune adresse DMX (« Sans adresse DMX »). Jusqu'à 3 : Zone 1, Zone 2, Zone 3.
+2. Menu Connexion › Contrôle › MyStrow Light, puis « Démarrer une session ». Le QR code s'affiche ; « QR en grand » pour l'écran de la salle, « Télécharger le QR » pour l'imprimer.
+3. Le public flashe le QR : chaque téléphone suit en direct la couleur, le niveau, les pads, les effets et le strobe de la fixture MyStrow Light.
+
+Zones : les téléphones sont répartis au hasard entre les zones à leur arrivée (pas de position dans la salle) : une couleur par zone = mosaïque mélangée, chenillard sur les zones = scintillement. Pas d'effet « gauche / droite ».
+
+Capacité : 50 téléphones simultanés avec une licence active ; essai gratuit = aperçu sur 1 téléphone ; pass événement (72 € TTC, paiement unique, depuis la fenêtre MyStrow Light ou la boutique) = 500 téléphones pendant 24 h à partir du lancement de la session suivante. Le 51e téléphone (ou 501e) reçoit « le show est complet ».
+
+QR code : avec une licence, permanent (toujours le même, imprimable sur flyers ou cartons de table ; scanné avant le show, le téléphone patiente puis s'allume au démarrage). Pendant l'essai, il change à chaque session.
+
+Public : page dans la langue du téléphone, avertissement épilepsie, jamais plus de 3 flashs par seconde, écran maintenu allumé, bouton « Quitter ». iPhone : pas de plein écran possible pour une page web (la couleur remplit la page et teinte les barres). La luminosité du téléphone ne peut pas être réglée à distance : demander au public de la monter.
+
+Prérequis : un compte MyStrow, Internet sur l'ordinateur et les téléphones.
 
 # Manuel MyStrow (https://mystrow.fr/manuel)
 
